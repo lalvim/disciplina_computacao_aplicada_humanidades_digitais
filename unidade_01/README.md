@@ -31,8 +31,10 @@ jupyter lab unidade_01
 ```
 
 Também é possível abrir os arquivos individualmente no VS Code. Execute as
-células na ordem. As atividades possuem valores como `Edite aqui`; substitua-os
-pelas respostas do projeto.
+células na ordem. Nas atividades de escrita, entre no modo de edição das células
+Markdown e substitua `Escreva aqui` por suas respostas. As células Python são
+experimentos: execute-as, altere os parâmetros quando solicitado e interprete
+os resultados no texto.
 
 ## Produto da unidade
 

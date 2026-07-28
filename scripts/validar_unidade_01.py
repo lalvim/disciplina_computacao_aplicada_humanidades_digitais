@@ -38,6 +38,9 @@ def validar_notebook(caminho: Path) -> tuple[int, int]:
                 textos += 1
             elif tipo == "code":
                 codigos += 1
+                assert "Escreva aqui" not in fonte and "Edite aqui" not in fonte, (
+                    f"célula {numero} usa Python como formulário"
+                )
                 exec(
                     compile(fonte, f"{caminho.name}:célula-{numero}", "exec"),
                     ambiente,
@@ -79,6 +82,8 @@ def main() -> None:
     total_codigos = 0
     for caminho in notebooks:
         textos, codigos = validar_notebook(caminho)
+        if caminho.name == "04_oficina_projeto_de_pesquisa.ipynb":
+            assert codigos == 0, "a oficina deve ser integralmente discursiva"
         total_textos += textos
         total_codigos += codigos
         print(f"OK {caminho.name}: {textos} células de texto, {codigos} de código")

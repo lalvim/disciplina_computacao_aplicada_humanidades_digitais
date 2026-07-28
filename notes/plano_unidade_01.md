@@ -56,8 +56,8 @@ unidade_01/
 - Humanidades Digitais e pesquisa orientada por dados;
 - perguntas descritivas, comparativas, associativas, explicativas e preditivas;
 - diferença entre pergunta humanística, pergunta de pesquisa e tarefa computacional;
-- representação de perguntas com listas, dicionários e tabelas;
-- classificação, filtragem e contagem de exemplos com Python;
+- organização de exemplos em uma pequena base;
+- filtragem e contagem de tipos de pergunta com Python;
 - reformulação progressiva de uma questão ampla.
 
 **Produto parcial:** três versões progressivamente mais tratáveis de uma pergunta.
@@ -90,6 +90,7 @@ unidade_01/
 
 ### Notebook 04 — Oficina do projeto de pesquisa
 
+- roteiro integralmente preenchível em células Markdown;
 - definição do fenômeno e do contexto;
 - formulação e revisão da pergunta;
 - identificação do tipo de pergunta;
@@ -111,14 +112,20 @@ Os notebooks seguirão uma estrutura recorrente:
 1. situação-problema;
 2. explicação conceitual;
 3. exemplo em Humanidades;
-4. representação ou exploração em Python;
+4. experimento em Python, quando houver dados a manipular ou comparar;
 5. interpretação da saída;
 6. atividade guiada;
 7. atividade autônoma;
 8. reflexão crítica;
 9. síntese e produto parcial.
 
-O código será introdutório, comentado e executável célula por célula. A programação será usada para tornar explícitas as decisões de pesquisa, sem tratar os resultados computacionais como interpretações autossuficientes.
+Será adotado o princípio **Markdown para pensar, argumentar e interpretar;
+Python para experimentar, transformar e observar**. Respostas discursivas,
+justificativas e a proposta de pesquisa serão escritas em células Markdown. O
+código será introdutório, comentado e executável célula por célula, aparecendo
+somente quando uma operação sobre dados tornar uma decisão ou consequência
+observável. A programação não será usada como formulário e os resultados
+computacionais não serão tratados como interpretações autossuficientes.
 
 ## 6. Cronograma sugerido
 
@@ -152,8 +159,9 @@ necessárias para responder às perguntas propostas.
 2. criar a estrutura de diretórios da unidade;
 3. produzir dados didáticos pequenos, transparentes e contextualizados;
 4. redigir os conteúdos conceituais em células Markdown;
-5. implementar exemplos em Python;
-6. incluir exercícios guiados e autônomos;
+5. implementar em Python somente os experimentos com dados;
+6. incluir exercícios guiados e autônomos, usando Markdown para respostas
+   discursivas;
 7. criar a oficina preenchível do projeto;
 8. preparar instruções de uso;
 9. executar todos os notebooks em sequência;

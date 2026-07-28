@@ -205,18 +205,23 @@ def guia() -> list[dict]:
             o que ficou fora da representação?**
             """
         ),
-        codigo(
+        texto(
             """
-            # Diagnóstico: edite as respostas. Não há resposta certa.
-            diagnostico = {
-                "tema_de_interesse": "Ex.: memória pública e monumentos",
-                "experiencia_com_python": "nenhuma / inicial / intermediária",
-                "tipo_de_fonte": "Ex.: jornais, entrevistas, imagens, legislação",
-                "maior_duvida": "Ex.: como transformar meu tema em dados?",
-            }
+            ## Diagnóstico inicial
 
-            for item, resposta in diagnostico.items():
-                print(f"{item}: {resposta}")
+            Responda diretamente nesta célula Markdown. Não há respostas certas.
+
+            **Tema de interesse:**
+            Escreva aqui.
+
+            **Experiência com Python:**
+            Escreva aqui.
+
+            **Tipos de fonte com que gostaria de trabalhar:**
+            Escreva aqui.
+
+            **Maior dúvida sobre a transformação de uma questão em dados:**
+            Escreva aqui.
             """
         ),
         texto(
@@ -277,17 +282,17 @@ def perguntas() -> list[dict]:
             """
             ## 2. Cinco tipos de pergunta
 
-            - **Descritiva:** caracteriza ocorrências ou distribuições.  
+            - **Descritiva:** caracteriza ocorrências ou distribuições.
               Ex.: quais temas aparecem nos editoriais da coleção?
-            - **Comparativa:** procura diferenças ou semelhanças.  
+            - **Comparativa:** procura diferenças ou semelhanças.
               Ex.: os temas diferem entre Capital e Interior?
-            - **Associativa:** investiga se características variam juntas.  
+            - **Associativa:** investiga se características variam juntas.
               Ex.: gênero documental e tema aparecem associados?
             - **Explicativa:** pergunta por mecanismos ou fatores relacionados a um
-              resultado, exigindo uma teoria e cautela causal.  
+              resultado, exigindo uma teoria e cautela causal.
               Ex.: que condições ajudam a explicar mudanças no debate educacional?
             - **Preditiva:** busca estimar um resultado desconhecido a partir de
-              características disponíveis.  
+              características disponíveis.
               Ex.: metadados permitem prever o gênero de um documento?
 
             Uma mesma temática comporta perguntas diferentes. O verbo usado oferece
@@ -353,24 +358,23 @@ def perguntas() -> list[dict]:
             produção, às categorias adotadas e à historiografia pertinente.
             """
         ),
-        codigo(
+        texto(
             """
-            niveis = {
-                "questao_ampla": "Como ideias de progresso participaram da vida social?",
-                "pergunta_delimitada": (
-                    "Como o tema 'progresso' aparece em editoriais de três periódicos "
-                    "da coleção didática entre 1890 e 1905?"
-                ),
-                "tarefa_computacional": (
-                    "Selecionar editoriais, contar temas atribuídos e comparar períodos."
-                ),
-                "interpretacao_necessaria": (
-                    "Reler os documentos e contextualizar o sentido de 'progresso'."
-                ),
-            }
+            ### Exemplo completo
 
-            for nivel, formulacao in niveis.items():
-                print(f"{nivel}:\\n  {formulacao}\\n")
+            **Questão ampla:** Como ideias de progresso participaram da vida social?
+
+            **Pergunta delimitada:** Como o tema “progresso” aparece em editoriais de
+            três periódicos da coleção didática entre 1890 e 1905?
+
+            **Tarefa computacional:** Selecionar editoriais, contar temas atribuídos e
+            comparar períodos.
+
+            **Interpretação necessária:** Reler os documentos selecionados e
+            contextualizar os diferentes sentidos de “progresso”.
+
+            Observe que apenas a terceira formulação descreve uma operação. As demais
+            registram o problema substantivo e o trabalho interpretativo.
             """
         ),
         texto(
@@ -392,26 +396,21 @@ def perguntas() -> list[dict]:
             responsabilidade interpretativa.
             """
         ),
-        codigo(
+        texto(
             """
-            # Uma pequena função para revisar, e não decidir automaticamente, uma pergunta.
-            def checklist_pergunta(pergunta, contexto, unidade, fonte, periodo):
-                itens = {
-                    "pergunta preenchida": bool(pergunta.strip()),
-                    "contexto informado": bool(contexto.strip()),
-                    "unidade de análise indicada": bool(unidade.strip()),
-                    "fonte possível indicada": bool(fonte.strip()),
-                    "recorte temporal indicado": bool(periodo.strip()),
-                }
-                return pd.Series(itens, name="atende?")
+            ### Checklist de revisão
 
-            checklist_pergunta(
-                pergunta="Como varia o tema educação entre gêneros documentais?",
-                contexto="Três periódicos da coleção didática",
-                unidade="Documento",
-                fonte="Registros catalográficos e textos",
-                periodo="1890–1905",
-            )
+            Releia sua pergunta e marque:
+
+            - [ ] o fenômeno de interesse está explícito;
+            - [ ] o contexto está informado;
+            - [ ] é possível identificar o que será observado;
+            - [ ] há ao menos uma fonte plausível;
+            - [ ] o recorte é compatível com o tempo da disciplina;
+            - [ ] a pergunta não promete mais do que os dados podem sustentar.
+
+            Este checklist apoia uma decisão argumentativa. Ele não pode decidir
+            automaticamente se uma pergunta é relevante ou teoricamente adequada.
             """
         ),
         texto(
@@ -429,16 +428,20 @@ def perguntas() -> list[dict]:
             Depois, edite e execute a célula seguinte.
             """
         ),
-        codigo(
+        texto(
             """
-            minhas_classificacoes = [
-                {"numero": 1, "tipo": "descritiva", "justificativa": "Caracteriza a coleção."},
-                {"numero": 2, "tipo": "comparativa", "justificativa": "Compara períodos."},
-                {"numero": 3, "tipo": "associativa", "justificativa": "Relaciona características."},
-                {"numero": 4, "tipo": "explicativa", "justificativa": "Busca mecanismos."},
-                {"numero": 5, "tipo": "preditiva", "justificativa": "Estima uma classe desconhecida."},
-            ]
-            pd.DataFrame(minhas_classificacoes)
+            ### Minhas classificações
+
+            1. **Tipo:** Escreva aqui.
+               **Justificativa:** Escreva aqui.
+            2. **Tipo:** Escreva aqui.
+               **Justificativa:** Escreva aqui.
+            3. **Tipo:** Escreva aqui.
+               **Justificativa:** Escreva aqui.
+            4. **Tipo:** Escreva aqui.
+               **Justificativa:** Escreva aqui.
+            5. **Tipo:** Escreva aqui.
+               **Justificativa:** Escreva aqui.
             """
         ),
         texto(
@@ -454,16 +457,24 @@ def perguntas() -> list[dict]:
             Em seguida, registre o que a tarefa **não** será capaz de responder.
             """
         ),
-        codigo(
+        texto(
             """
-            meu_produto_parcial = {
-                "questao_ampla": "Edite aqui",
-                "pergunta_delimitada": "Edite aqui",
-                "tipo_predominante": "Edite aqui",
-                "tarefa_computacional": "Edite aqui",
-                "o_que_fica_de_fora": "Edite aqui",
-            }
-            pd.Series(meu_produto_parcial, name="formulação")
+            ### Meu produto parcial
+
+            **Questão ampla:**
+            Escreva aqui.
+
+            **Pergunta delimitada:**
+            Escreva aqui.
+
+            **Tipo predominante e justificativa:**
+            Escreva aqui.
+
+            **Tarefa computacional inicial:**
+            Escreva aqui.
+
+            **O que essa tarefa deixa de fora:**
+            Escreva aqui.
             """
         ),
         texto(
@@ -501,29 +512,17 @@ def operacionalizacao() -> list[dict]:
             aponta para o conceito, mas não é idêntico a ele.
             """
         ),
-        codigo(
+        texto(
             """
-            import pandas as pd
+            ### Exemplo de mapa de operacionalização
 
-            mapa_exemplo = pd.DataFrame([
-                {
-                    "conceito": "centralidade do tema educação",
-                    "dimensão": "presença no documento",
-                    "indicador": "tema dominante atribuído",
-                    "variável": "tema",
-                    "valores": "educação, trabalho, progresso",
-                    "limitação": "um único tema apaga ambiguidades",
-                },
-                {
-                    "conceito": "centralidade do tema educação",
-                    "dimensão": "extensão da discussão",
-                    "indicador": "número de palavras do trecho pertinente",
-                    "variável": "palavras_sobre_educacao",
-                    "valores": "inteiros não negativos",
-                    "limitação": "extensão não equivale a importância",
-                },
-            ])
-            mapa_exemplo
+            | Conceito | Dimensão | Indicador | Variável | Limitação |
+            |---|---|---|---|---|
+            | Centralidade do tema educação | Presença no documento | Tema dominante atribuído | `tema` | Um único tema apaga ambiguidades |
+            | Centralidade do tema educação | Extensão da discussão | Palavras no trecho pertinente | `palavras_sobre_educacao` | Extensão não equivale a importância |
+
+            A tabela serve para documentar uma decisão conceitual. Ela não precisa ser
+            criada em Python, pois ainda não contém observações a serem processadas.
             """
         ),
         texto(
@@ -545,6 +544,8 @@ def operacionalizacao() -> list[dict]:
         ),
         codigo(
             """
+            import pandas as pd
+
             registros = [
                 {"id": "D001", "ano": 1890, "genero": "editorial", "tema": "progresso"},
                 {"id": "D002", "ano": 1891, "genero": "carta", "tema": "trabalho"},
@@ -574,17 +575,21 @@ def operacionalizacao() -> list[dict]:
             análise — por exemplo, data, autoria, local e gênero documental.
             """
         ),
-        codigo(
+        texto(
             """
-            classificacao_campos = pd.DataFrame([
-                {"campo": "id", "papel": "identificador", "exemplo": "D001"},
-                {"campo": "ano", "papel": "variável temporal", "exemplo": 1890},
-                {"campo": "genero", "papel": "categoria documental", "exemplo": "editorial"},
-                {"campo": "tema", "papel": "categoria analítica", "exemplo": "progresso"},
-                {"campo": "texto", "papel": "conteúdo documental", "exemplo": "trecho integral"},
-                {"campo": "arquivo_origem", "papel": "metadado de proveniência", "exemplo": "caixa_03.pdf"},
-            ])
-            classificacao_campos
+            ### Exemplos de campos e papéis
+
+            | Campo | Papel | Exemplo |
+            |---|---|---|
+            | `id` | Identificador | D001 |
+            | `ano` | Variável temporal | 1890 |
+            | `genero` | Categoria documental | editorial |
+            | `tema` | Categoria analítica | progresso |
+            | `texto` | Conteúdo documental | trecho integral |
+            | `arquivo_origem` | Metadado de proveniência | caixa_03.pdf |
+
+            A tabela documenta o esquema. O código passa a ser relevante quando há
+            registros concretos a inspecionar, transformar ou comparar.
             """
         ),
         texto(
@@ -645,25 +650,19 @@ def operacionalizacao() -> list[dict]:
             Precisão numérica não compensa uma definição conceitual inadequada.
             """
         ),
-        codigo(
+        texto(
             """
-            def avaliar_operacionalizacao(conceito, indicador, regra, fonte, limitacao):
-                campos = {
-                    "conceito explícito": conceito,
-                    "indicador observável": indicador,
-                    "regra de registro": regra,
-                    "fonte da observação": fonte,
-                    "limitação reconhecida": limitacao,
-                }
-                return pd.Series(campos, name="descrição")
+            ### Exemplo de avaliação
 
-            avaliar_operacionalizacao(
-                conceito="presença temática",
-                indicador="tema dominante anotado",
-                regra="atribuir uma categoria após leitura integral",
-                fonte="documento digitalizado",
-                limitacao="discordâncias e temas secundários não aparecem",
-            )
+            - **Conceito:** presença temática.
+            - **Indicador:** tema dominante anotado.
+            - **Regra:** atribuir uma categoria após a leitura integral.
+            - **Fonte:** documento digitalizado.
+            - **Limitação:** discordâncias e temas secundários não aparecem.
+
+            A avaliação depende de justificativa teórica, leitura das fontes e
+            comparação entre alternativas; uma função Python apenas verificaria se os
+            campos foram preenchidos, não se a operacionalização é válida.
             """
         ),
         texto(
@@ -674,33 +673,20 @@ def operacionalizacao() -> list[dict]:
             operacionalizações. Compare o que cada uma permite observar e o que perde.
             """
         ),
-        codigo(
+        texto(
             """
-            meu_mapa = pd.DataFrame([
-                {
-                    "conceito": "Edite aqui",
-                    "dimensão": "Edite aqui",
-                    "indicador": "Edite aqui",
-                    "unidade_de_analise": "Edite aqui",
-                    "variavel": "Edite aqui",
-                    "valores_ou_categorias": "Edite aqui",
-                    "fonte": "Edite aqui",
-                    "regra": "Edite aqui",
-                    "limitacao": "Edite aqui",
-                },
-                {
-                    "conceito": "Mesmo conceito",
-                    "dimensão": "Outra dimensão",
-                    "indicador": "Indicador alternativo",
-                    "unidade_de_analise": "Edite aqui",
-                    "variavel": "Edite aqui",
-                    "valores_ou_categorias": "Edite aqui",
-                    "fonte": "Edite aqui",
-                    "regra": "Edite aqui",
-                    "limitacao": "Edite aqui",
-                },
-            ])
-            meu_mapa
+            ### Meu mapa de operacionalização
+
+            Preencha a tabela diretamente nesta célula:
+
+            | Conceito | Dimensão | Indicador | Unidade de análise | Variável ou categoria | Fonte | Regra | Limitação |
+            |---|---|---|---|---|---|---|---|
+            | Escreva | Escreva | Escreva | Escreva | Escreva | Escreva | Escreva | Escreva |
+            | Mesmo conceito | Alternativa | Indicador alternativo | Escreva | Escreva | Escreva | Escreva | Escreva |
+
+            Compare as duas linhas em um pequeno parágrafo:
+
+            Escreva aqui.
             """
         ),
         texto(
@@ -941,20 +927,30 @@ def corpus() -> list[dict]:
             6. a que conjunto uma conclusão poderá se referir?
             """
         ),
-        codigo(
+        texto(
             """
-            minha_ficha = pd.Series({
-                "universo_de_interesse": "Edite aqui",
-                "tipo_do_conjunto": "amostra / corpus / coleção de conveniência",
-                "unidade_de_analise": "Edite aqui",
-                "criterios_de_inclusao": "Edite aqui",
-                "criterios_de_exclusao": "Edite aqui",
-                "formatos": "Edite aqui",
-                "metadados_necessarios": "Edite aqui",
-                "ausencias_e_silencios": "Edite aqui",
-                "alcance_da_conclusao": "Edite aqui",
-            }, name="ficha do corpus")
-            minha_ficha
+            ### Minha ficha do corpus
+
+            **Universo de interesse:**
+            Escreva aqui.
+
+            **O conjunto é amostra, corpus ou coleção de conveniência? Por quê?**
+            Escreva aqui.
+
+            **Unidade de análise:**
+            Escreva aqui.
+
+            **Critérios de inclusão e exclusão:**
+            Escreva aqui.
+
+            **Formatos e metadados necessários:**
+            Escreva aqui.
+
+            **Ausências e silêncios documentais:**
+            Escreva aqui.
+
+            **Alcance possível das conclusões:**
+            Escreva aqui.
             """
         ),
         texto(
@@ -976,22 +972,31 @@ def oficina() -> list[dict]:
             """
             # Oficina — formulação inicial do projeto
 
-            Este notebook produz o trabalho da Unidade 1. Substitua os exemplos por
-            suas respostas. O objetivo é construir uma versão inicial que possa ser
-            revista à medida que novas fontes e métodos forem estudados.
+            Este notebook produz o trabalho da Unidade 1. Edite as células Markdown
+            indicadas e escreva com liberdade. O objetivo é construir uma versão
+            inicial que possa ser revista à medida que novas fontes e métodos forem
+            estudados.
+
+            Não há código neste notebook: formular, justificar e interpretar são
+            atividades de escrita. Os experimentos computacionais dos notebooks
+            anteriores devem informar suas decisões, não substituir sua argumentação.
             """
         ),
-        codigo(
+        texto(
             """
-            import pandas as pd
+            ## Identificação
 
-            projeto = {
-                "nome": "Seu nome",
-                "titulo_provisorio": "Título provisório do projeto",
-                "fenomeno": "Fenômeno histórico, social, linguístico ou cultural",
-                "contexto": "Contexto espacial, temporal e institucional",
-            }
-            pd.Series(projeto, name="identificação")
+            **Nome:**
+            Escreva aqui.
+
+            **Título provisório:**
+            Escreva aqui.
+
+            **Fenômeno histórico, social, linguístico ou cultural:**
+            Escreva aqui.
+
+            **Contexto espacial, temporal e institucional:**
+            Escreva aqui.
             """
         ),
         texto(
@@ -1003,19 +1008,24 @@ def oficina() -> list[dict]:
             “aplicar uma técnica”; o método será escolhido em função da pergunta.
             """
         ),
-        codigo(
+        texto(
             """
-            formulacao = {
-                "motivacao_humanistica": "Edite aqui",
-                "questao_ampla": "Edite aqui",
-                "pergunta_delimitada": "Edite aqui",
-                "tipo_predominante": (
-                    "descritiva / comparativa / associativa / explicativa / preditiva"
-                ),
-                "justificativa_do_tipo": "Edite aqui",
-                "tarefa_computacional_inicial": "Edite aqui",
-            }
-            pd.Series(formulacao, name="pergunta")
+            ### Minha formulação
+
+            **Motivação humanística:**
+            Escreva aqui.
+
+            **Questão ampla:**
+            Escreva aqui.
+
+            **Pergunta delimitada:**
+            Escreva aqui.
+
+            **Tipo predominante da pergunta e justificativa:**
+            Escreva aqui.
+
+            **Tarefa computacional inicial possível:**
+            Escreva aqui.
             """
         ),
         texto(
@@ -1026,19 +1036,27 @@ def oficina() -> list[dict]:
             universo de interesse do conjunto que poderá ser efetivamente observado.
             """
         ),
-        codigo(
+        texto(
             """
-            delimitacao = {
-                "unidade_de_analise": "Edite aqui",
-                "fonte": "Edite aqui",
-                "populacao_ou_universo": "Edite aqui",
-                "amostra_ou_corpus": "Edite aqui",
-                "recorte_temporal": "Edite aqui",
-                "recorte_espacial": "Edite aqui",
-                "criterios_de_inclusao": "Edite aqui",
-                "criterios_de_exclusao": "Edite aqui",
-            }
-            pd.Series(delimitacao, name="delimitação")
+            ### Minha delimitação
+
+            **Unidade de análise:**
+            Escreva aqui.
+
+            **Fontes possíveis:**
+            Escreva aqui.
+
+            **População ou universo de interesse:**
+            Escreva aqui.
+
+            **Amostra, corpus ou coleção efetivamente disponível:**
+            Escreva aqui.
+
+            **Recortes temporal e espacial:**
+            Escreva aqui.
+
+            **Critérios de inclusão e exclusão:**
+            Escreva aqui.
             """
         ),
         texto(
@@ -1050,29 +1068,17 @@ def oficina() -> list[dict]:
             menos duas alternativas para o conceito central.
             """
         ),
-        codigo(
+        texto(
             """
-            operacionalizacao = pd.DataFrame([
-                {
-                    "conceito": "Conceito central",
-                    "dimensao": "Edite aqui",
-                    "indicador": "Edite aqui",
-                    "variavel_ou_categoria": "Edite aqui",
-                    "fonte": "Edite aqui",
-                    "regra": "Edite aqui",
-                    "limitacao": "Edite aqui",
-                },
-                {
-                    "conceito": "Conceito central",
-                    "dimensao": "Alternativa",
-                    "indicador": "Indicador alternativo",
-                    "variavel_ou_categoria": "Edite aqui",
-                    "fonte": "Edite aqui",
-                    "regra": "Edite aqui",
-                    "limitacao": "Edite aqui",
-                },
-            ])
-            operacionalizacao
+            ### Meu mapa de operacionalização
+
+            | Conceito | Dimensão | Indicador | Variável ou categoria | Fonte | Regra | Limitação |
+            |---|---|---|---|---|---|---|
+            | Conceito central | Escreva | Escreva | Escreva | Escreva | Escreva | Escreva |
+            | Mesmo conceito | Alternativa | Indicador alternativo | Escreva | Escreva | Escreva | Escreva |
+
+            **Por que uma alternativa parece mais adequada à pergunta?**
+            Escreva aqui.
             """
         ),
         texto(
@@ -1084,25 +1090,17 @@ def oficina() -> list[dict]:
             as decisões.
             """
         ),
-        codigo(
+        texto(
             """
-            esquema_inicial = pd.DataFrame([
-                {
-                    "campo": "identificador",
-                    "papel": "metadado",
-                    "tipo": "texto",
-                    "origem": "Edite aqui",
-                    "exemplo": "DOC001",
-                },
-                {
-                    "campo": "Edite aqui",
-                    "papel": "documento / metadado / variável / categoria",
-                    "tipo": "texto / número / data / booleano",
-                    "origem": "Edite aqui",
-                    "exemplo": "Edite aqui",
-                },
-            ])
-            esquema_inicial
+            ### Esquema inicial
+
+            | Campo | Papel | Tipo esperado | Origem | Exemplo |
+            |---|---|---|---|---|
+            | identificador | metadado | texto | Escreva | DOC001 |
+            | Escreva | documento, metadado, variável ou categoria | Escreva | Escreva | Escreva |
+
+            Acrescente quantas linhas forem necessárias. Neste momento, a tabela é uma
+            especificação; na Unidade 2 ela orientará a construção dos dados reais.
             """
         ),
         texto(
@@ -1118,18 +1116,30 @@ def oficina() -> list[dict]:
             - que conhecimento de contexto será necessário?
             """
         ),
-        codigo(
+        texto(
             """
-            cadeia_de_evidencia = {
-                "operacao_prevista": "Ex.: comparar frequências entre períodos",
-                "resultado_possivel": "Ex.: aumento de uma categoria",
-                "evidencia_para": "Edite aqui",
-                "nao_evidencia_diretamente": "Edite aqui",
-                "interpretacoes_alternativas": "Edite aqui",
-                "retorno_qualitativo": "Documentos ou casos que deverão ser relidos",
-                "contexto_necessario": "Edite aqui",
-            }
-            pd.Series(cadeia_de_evidencia, name="cadeia de evidência")
+            ### Minha cadeia de evidência
+
+            **Operação prevista:**
+            Escreva aqui.
+
+            **Resultado possível:**
+            Escreva aqui.
+
+            **De que esse resultado poderia ser evidência?**
+            Escreva aqui.
+
+            **O que ele não demonstraria diretamente?**
+            Escreva aqui.
+
+            **Interpretações alternativas:**
+            Escreva aqui.
+
+            **Casos ou documentos que precisariam ser relidos:**
+            Escreva aqui.
+
+            **Conhecimento contextual necessário:**
+            Escreva aqui.
             """
         ),
         texto(
@@ -1142,16 +1152,17 @@ def oficina() -> list[dict]:
             pesquisa. Dados públicos não são automaticamente isentos de risco.
             """
         ),
-        codigo(
+        texto(
             """
-            avaliacao_critica = pd.DataFrame([
-                {"dimensao": "seleção", "risco": "Edite aqui", "estrategia": "Edite aqui"},
-                {"dimensao": "representação", "risco": "Edite aqui", "estrategia": "Edite aqui"},
-                {"dimensao": "automação", "risco": "Edite aqui", "estrategia": "Edite aqui"},
-                {"dimensao": "ética", "risco": "Edite aqui", "estrategia": "Edite aqui"},
-                {"dimensao": "interpretação", "risco": "Edite aqui", "estrategia": "Edite aqui"},
-            ])
-            avaliacao_critica
+            ### Minha avaliação crítica
+
+            | Dimensão | Risco ou limitação | Estratégia de redução ou documentação |
+            |---|---|---|
+            | Seleção | Escreva | Escreva |
+            | Representação | Escreva | Escreva |
+            | Automação | Escreva | Escreva |
+            | Ética | Escreva | Escreva |
+            | Interpretação | Escreva | Escreva |
             """
         ),
         texto(
@@ -1166,22 +1177,23 @@ def oficina() -> list[dict]:
             - 3 — definido, coerente e criticamente justificado.
             """
         ),
-        codigo(
+        texto(
             """
-            rubrica = pd.DataFrame([
-                {"criterio": "relevância humanística", "pontuacao": 0, "comentario": "Edite"},
-                {"criterio": "delimitação da pergunta", "pontuacao": 0, "comentario": "Edite"},
-                {"criterio": "unidade de análise", "pontuacao": 0, "comentario": "Edite"},
-                {"criterio": "viabilidade dos dados", "pontuacao": 0, "comentario": "Edite"},
-                {"criterio": "operacionalização", "pontuacao": 0, "comentario": "Edite"},
-                {"criterio": "cadeia de evidência", "pontuacao": 0, "comentario": "Edite"},
-                {"criterio": "limites e ética", "pontuacao": 0, "comentario": "Edite"},
-            ])
+            ### Minha autoavaliação
 
-            total = int(rubrica["pontuacao"].sum())
-            maximo = len(rubrica) * 3
-            print(f"Pontuação de autoavaliação: {total}/{maximo}")
-            rubrica
+            | Critério | Pontuação (0–3) | O que ainda precisa ser revisto |
+            |---|---:|---|
+            | Relevância humanística |  | Escreva |
+            | Delimitação da pergunta |  | Escreva |
+            | Unidade de análise |  | Escreva |
+            | Viabilidade dos dados |  | Escreva |
+            | Operacionalização |  | Escreva |
+            | Cadeia de evidência |  | Escreva |
+            | Limites e ética |  | Escreva |
+
+            **Síntese da autoavaliação:**
+            Escreva aqui. A pontuação ajuda a localizar lacunas, mas não substitui a
+            justificativa escrita.
             """
         ),
         texto(
@@ -1192,19 +1204,20 @@ def oficina() -> list[dict]:
             ser compreendido por alguém que não acompanhou suas anotações anteriores.
             """
         ),
-        codigo(
+        texto(
             """
-            sintese = {
-                "pergunta_final_da_unidade": "Edite aqui",
-                "resumo": (
-                    "Pretendo investigar... A unidade de análise será... O corpus "
-                    "inicial incluirá... O conceito central será observado por... "
-                    "Os resultados poderão oferecer evidência sobre... Os principais "
-                    "limites são..."
-                ),
-                "proxima_decisao_necessaria": "Edite aqui",
-            }
-            pd.Series(sintese, name="entrega")
+            ### Minha entrega
+
+            **Pergunta final da unidade:**
+            Escreva aqui.
+
+            **Resumo:**
+            Pretendo investigar... A unidade de análise será... O corpus inicial
+            incluirá... O conceito central será observado por... Os resultados poderão
+            oferecer evidência sobre... Os principais limites são...
+
+            **Próxima decisão necessária:**
+            Escreva aqui.
             """
         ),
         texto(
@@ -1261,8 +1274,10 @@ jupyter lab unidade_01
 ```
 
 Também é possível abrir os arquivos individualmente no VS Code. Execute as
-células na ordem. As atividades possuem valores como `Edite aqui`; substitua-os
-pelas respostas do projeto.
+células na ordem. Nas atividades de escrita, entre no modo de edição das células
+Markdown e substitua `Escreva aqui` por suas respostas. As células Python são
+experimentos: execute-as, altere os parâmetros quando solicitado e interprete
+os resultados no texto.
 
 ## Produto da unidade
 

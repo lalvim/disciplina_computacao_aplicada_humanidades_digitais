@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 from pathlib import Path
 
 
@@ -74,6 +75,32 @@ def validar_cobertura() -> None:
     assert not ausentes, f"tópicos ausentes: {', '.join(ausentes)}"
 
 
+def validar_exercicios_html() -> None:
+    caminho = UNIDADE / "exercicios_unidade_01.html"
+    conteudo = caminho.read_text(encoding="utf-8")
+    assert "<!doctype html>" in conteudo.lower()
+    assert not re.search(r'(?:src|href)="https?://', conteudo), (
+        "o exercício deve funcionar sem recursos externos"
+    )
+    assert len(re.findall(r"^\s+enunciado:", conteudo, flags=re.MULTILINE)) == 18
+    assert len(re.findall(r"^\s+correta:", conteudo, flags=re.MULTILINE)) == 18
+
+    topicos = [
+        "Humanidades Digitais",
+        "Tipos de pergunta",
+        "Operacionalização",
+        "Unidade de análise",
+        "População, amostra e corpus",
+        "Variáveis, categorias e metadados",
+        "Formatos de dados",
+        "Evidência e interpretação",
+        "Limites da quantificação",
+        "Limites da automação",
+    ]
+    ausentes = [topico for topico in topicos if f'topico: "{topico}"' not in conteudo]
+    assert not ausentes, f"tópicos ausentes no HTML: {', '.join(ausentes)}"
+
+
 def main() -> None:
     notebooks = sorted(UNIDADE.glob("*.ipynb"))
     assert len(notebooks) == 5, f"esperados 5 notebooks; encontrados {len(notebooks)}"
@@ -90,6 +117,8 @@ def main() -> None:
 
     validar_cobertura()
     print(f"OK cobertura: 9/9 tópicos da ementa")
+    validar_exercicios_html()
+    print("OK exercícios HTML: 18 questões, 10 tópicos, funcionamento offline")
     print(
         f"OK total: {len(notebooks)} notebooks, "
         f"{total_textos} células de texto, {total_codigos} de código"

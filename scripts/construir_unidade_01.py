@@ -1253,6 +1253,7 @@ Esta pasta contém o material teórico-prático da primeira unidade da disciplin
 3. `02_representacao_e_operacionalizacao.ipynb`
 4. `03_dados_corpus_e_evidencias.ipynb`
 5. `04_oficina_projeto_de_pesquisa.ipynb`
+6. `exercicios_unidade_01.html`
 
 ## Dependências
 
@@ -1263,6 +1264,10 @@ Esta pasta contém o material teórico-prático da primeira unidade da disciplin
 Os exemplos não dependem de acesso à internet. Os dados da pasta `dados` são
 fictícios e foram criados exclusivamente para fins didáticos; não devem ser
 utilizados para produzir afirmações históricas.
+
+O arquivo `exercicios_unidade_01.html` contém 18 questões de múltipla escolha
+com correção, explicações e revisão por tópico. Ele pode ser aberto diretamente
+em um navegador e funciona sem servidor ou acesso à internet.
 
 ## Execução
 

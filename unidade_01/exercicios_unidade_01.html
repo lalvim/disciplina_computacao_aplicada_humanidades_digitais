@@ -1,0 +1,925 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Exercícios de múltipla escolha da Unidade 1 de Computação Aplicada a Problemas em Humanidades Digitais.">
+  <title>Exercícios — Unidade 1</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --fundo: #f4f1ea;
+      --superficie: #fffdf8;
+      --texto: #22201d;
+      --texto-suave: #625d55;
+      --primaria: #334e68;
+      --primaria-escura: #243b53;
+      --primaria-clara: #e8f1f8;
+      --borda: #d8d1c5;
+      --correta: #216e46;
+      --correta-fundo: #e7f5ec;
+      --incorreta: #a12b2b;
+      --incorreta-fundo: #fbeaea;
+      --foco: #d97706;
+      --sombra: 0 18px 45px rgba(56, 49, 39, 0.10);
+      --raio: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at top left, rgba(178, 208, 230, 0.45), transparent 35rem),
+        var(--fundo);
+      color: var(--texto);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    button:focus-visible,
+    input:focus-visible + span {
+      outline: 3px solid var(--foco);
+      outline-offset: 3px;
+    }
+
+    .pagina {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 40px 0 64px;
+    }
+
+    .cabecalho {
+      margin-bottom: 24px;
+    }
+
+    .rotulo {
+      margin: 0 0 6px;
+      color: var(--primaria);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2 {
+      line-height: 1.2;
+    }
+
+    h1 {
+      max-width: 760px;
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 5vw, 3.7rem);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+    }
+
+    .subtitulo {
+      max-width: 720px;
+      margin: 16px 0 0;
+      color: var(--texto-suave);
+      font-size: 1.05rem;
+    }
+
+    .painel {
+      overflow: hidden;
+      border: 1px solid var(--borda);
+      border-radius: var(--raio);
+      background: var(--superficie);
+      box-shadow: var(--sombra);
+    }
+
+    .barra-superior {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 18px;
+      align-items: center;
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--borda);
+      background: rgba(255, 255, 255, 0.55);
+    }
+
+    .progresso-texto {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 7px;
+      color: var(--texto-suave);
+      font-size: 0.9rem;
+      font-weight: 650;
+    }
+
+    .trilho {
+      height: 9px;
+      overflow: hidden;
+      border-radius: 99px;
+      background: #e4dfd7;
+    }
+
+    .progresso {
+      width: 0;
+      height: 100%;
+      border-radius: inherit;
+      background: var(--primaria);
+      transition: width 240ms ease;
+    }
+
+    .placar {
+      min-width: 105px;
+      padding: 8px 12px;
+      border-radius: 12px;
+      background: var(--primaria-clara);
+      color: var(--primaria-escura);
+      font-weight: 750;
+      text-align: center;
+    }
+
+    .conteudo {
+      padding: clamp(24px, 5vw, 48px);
+    }
+
+    .topico {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 5px 10px;
+      border-radius: 99px;
+      background: var(--primaria-clara);
+      color: var(--primaria-escura);
+      font-size: 0.82rem;
+      font-weight: 750;
+    }
+
+    .pergunta {
+      margin: 0 0 26px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.35rem, 3vw, 1.85rem);
+    }
+
+    fieldset {
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
+
+    legend {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+    }
+
+    .alternativas {
+      display: grid;
+      gap: 12px;
+    }
+
+    .alternativa {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 12px;
+      align-items: start;
+      padding: 15px 16px;
+      border: 1px solid var(--borda);
+      border-radius: 12px;
+      background: #fff;
+      cursor: pointer;
+      transition: border-color 150ms ease, background 150ms ease, transform 150ms ease;
+    }
+
+    .alternativa:hover {
+      border-color: var(--primaria);
+      transform: translateY(-1px);
+    }
+
+    .alternativa:has(input:checked) {
+      border-color: var(--primaria);
+      background: var(--primaria-clara);
+    }
+
+    .alternativa.correta {
+      border-color: var(--correta);
+      background: var(--correta-fundo);
+    }
+
+    .alternativa.incorreta {
+      border-color: var(--incorreta);
+      background: var(--incorreta-fundo);
+    }
+
+    .alternativa input {
+      width: 19px;
+      height: 19px;
+      margin-top: 3px;
+      accent-color: var(--primaria);
+    }
+
+    .letra {
+      margin-right: 6px;
+      font-weight: 800;
+    }
+
+    .feedback {
+      margin-top: 22px;
+      padding: 16px 18px;
+      border-left: 5px solid var(--primaria);
+      border-radius: 8px;
+      background: var(--primaria-clara);
+    }
+
+    .feedback[data-tipo="correta"] {
+      border-color: var(--correta);
+      background: var(--correta-fundo);
+    }
+
+    .feedback[data-tipo="incorreta"] {
+      border-color: var(--incorreta);
+      background: var(--incorreta-fundo);
+    }
+
+    .feedback strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .acoes {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .grupo-acoes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .botao {
+      min-height: 44px;
+      padding: 10px 17px;
+      border: 1px solid var(--primaria);
+      border-radius: 10px;
+      background: var(--primaria);
+      color: white;
+      font-weight: 750;
+      cursor: pointer;
+    }
+
+    .botao:hover:not(:disabled) {
+      background: var(--primaria-escura);
+    }
+
+    .botao.secundario {
+      background: transparent;
+      color: var(--primaria);
+    }
+
+    .botao.secundario:hover:not(:disabled) {
+      background: var(--primaria-clara);
+    }
+
+    .botao:disabled {
+      border-color: #aaa49a;
+      background: #d9d5ce;
+      color: #716c64;
+      cursor: not-allowed;
+    }
+
+    .resultado {
+      text-align: center;
+    }
+
+    .nota {
+      display: grid;
+      width: 150px;
+      height: 150px;
+      margin: 24px auto;
+      place-items: center;
+      border: 12px solid var(--primaria-clara);
+      border-radius: 50%;
+      color: var(--primaria-escura);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 2.6rem;
+      font-weight: 700;
+    }
+
+    .resumo-topicos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 10px;
+      margin: 28px 0;
+      padding: 0;
+      list-style: none;
+      text-align: left;
+    }
+
+    .resumo-topicos li {
+      padding: 12px 14px;
+      border: 1px solid var(--borda);
+      border-radius: 10px;
+      background: #fff;
+    }
+
+    .revisao {
+      margin-top: 30px;
+      text-align: left;
+    }
+
+    .revisao-item {
+      margin-top: 12px;
+      padding: 16px;
+      border-left: 4px solid var(--incorreta);
+      border-radius: 8px;
+      background: var(--incorreta-fundo);
+    }
+
+    .revisao-item p {
+      margin: 5px 0;
+    }
+
+    .oculto {
+      display: none !important;
+    }
+
+    .rodape {
+      margin-top: 18px;
+      color: var(--texto-suave);
+      font-size: 0.88rem;
+      text-align: center;
+    }
+
+    @media (max-width: 620px) {
+      .pagina {
+        width: min(100% - 20px, 920px);
+        padding-top: 24px;
+      }
+
+      .barra-superior {
+        grid-template-columns: 1fr;
+      }
+
+      .placar {
+        justify-self: start;
+      }
+
+      .acoes,
+      .grupo-acoes {
+        width: 100%;
+      }
+
+      .botao {
+        flex: 1;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="pagina">
+    <header class="cabecalho">
+      <p class="rotulo">Computação aplicada a problemas em Humanidades Digitais</p>
+      <h1>Exercícios da Unidade 1</h1>
+      <p class="subtitulo">
+        Dezoito questões sobre formulação de problemas, operacionalização, corpus,
+        dados, evidências e limites da automação. O exercício funciona sem internet
+        e não envia nenhuma informação.
+      </p>
+    </header>
+
+    <section class="painel" aria-labelledby="titulo-pergunta">
+      <div id="interface-quiz">
+        <div class="barra-superior">
+          <div>
+            <div class="progresso-texto">
+              <span id="contador">Questão 1 de 18</span>
+              <span id="respondidas">0 respondidas</span>
+            </div>
+            <div
+              class="trilho"
+              role="progressbar"
+              aria-label="Progresso do exercício"
+              aria-valuemin="0"
+              aria-valuemax="18"
+              aria-valuenow="0"
+            >
+              <div id="progresso" class="progresso"></div>
+            </div>
+          </div>
+          <div id="placar" class="placar" aria-live="polite">0 acertos</div>
+        </div>
+
+        <div class="conteudo">
+          <span id="topico" class="topico"></span>
+          <h2 id="titulo-pergunta" class="pergunta" tabindex="-1"></h2>
+
+          <form id="formulario">
+            <fieldset id="campo-alternativas">
+              <legend>Escolha uma alternativa</legend>
+              <div id="alternativas" class="alternativas"></div>
+            </fieldset>
+          </form>
+
+          <div id="feedback" class="feedback oculto" role="status" aria-live="polite"></div>
+
+          <div class="acoes">
+            <button id="anterior" class="botao secundario" type="button">Anterior</button>
+            <div class="grupo-acoes">
+              <button id="verificar" class="botao" type="button" disabled>
+                Verificar resposta
+              </button>
+              <button id="proxima" class="botao oculto" type="button">
+                Próxima
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="interface-resultado" class="conteudo resultado oculto" aria-live="polite">
+        <p class="rotulo">Resultado</p>
+        <h2 tabindex="-1">Revisão concluída</h2>
+        <div id="nota" class="nota"></div>
+        <p id="mensagem-final"></p>
+        <ul id="resumo-topicos" class="resumo-topicos"></ul>
+        <div id="revisao" class="revisao"></div>
+        <button id="refazer" class="botao" type="button">Refazer exercício</button>
+      </div>
+    </section>
+
+    <p class="rodape">
+      Dados e situações apresentados nas questões são exemplos didáticos.
+    </p>
+  </main>
+
+  <script>
+    "use strict";
+
+    const questoes = [
+      {
+        topico: "Humanidades Digitais",
+        enunciado: "Qual afirmação descreve melhor uma pesquisa orientada por dados em Humanidades Digitais?",
+        alternativas: [
+          "Substitui a interpretação humanística por resultados automáticos.",
+          "Articula pergunta, fontes, representação, operações e interpretação contextualizada.",
+          "Começa pela ferramenta mais sofisticada disponível e depois procura uma pergunta.",
+          "Considera dados digitais registros neutros e completos do fenômeno."
+        ],
+        correta: 1,
+        explicacao: "A pesquisa articula problema substantivo, fontes situadas, escolhas de representação, operações e interpretação. A ferramenta não substitui a pergunta nem elimina o contexto."
+      },
+      {
+        topico: "Humanidades Digitais",
+        enunciado: "Por que se afirma que dados não são o fenômeno “em estado puro”?",
+        alternativas: [
+          "Porque dados são sempre inventados pelo pesquisador.",
+          "Porque apenas fontes manuscritas podem representar fenômenos humanos.",
+          "Porque registros resultam de processos de produção, seleção, descrição e transformação.",
+          "Porque computadores não conseguem armazenar informações culturais."
+        ],
+        correta: 2,
+        explicacao: "Dados preservam traços do fenômeno, mas também materializam decisões, instituições, formatos, ausências e transformações."
+      },
+      {
+        topico: "Tipos de pergunta",
+        enunciado: "A pergunta “Os temas dos editoriais diferem entre Capital e Interior?” é predominantemente:",
+        alternativas: [
+          "Descritiva.",
+          "Comparativa.",
+          "Explicativa.",
+          "Preditiva."
+        ],
+        correta: 1,
+        explicacao: "A pergunta confronta dois grupos. Ela não busca ainda explicar a causa da diferença nem prever uma categoria desconhecida."
+      },
+      {
+        topico: "Tipos de pergunta",
+        enunciado: "Qual pergunta é predominantemente preditiva?",
+        alternativas: [
+          "Quais gêneros documentais aparecem na coleção?",
+          "Por que o sentido de progresso mudou no período?",
+          "Gênero documental e tema aparecem associados?",
+          "Os metadados permitem estimar o gênero de um documento ainda não classificado?"
+        ],
+        correta: 3,
+        explicacao: "Uma pergunta preditiva procura estimar um resultado desconhecido a partir de características disponíveis."
+      },
+      {
+        topico: "Operacionalização",
+        enunciado: "Em uma pesquisa sobre a centralidade do tema educação, qual alternativa distingue corretamente conceito e indicador?",
+        alternativas: [
+          "Conceito: número de palavras; indicador: centralidade temática.",
+          "Conceito: centralidade do tema; indicador: proporção do documento dedicada ao tema.",
+          "Conceito e indicador são sempre a mesma coisa.",
+          "Indicador: educação; conceito: arquivo CSV."
+        ],
+        correta: 1,
+        explicacao: "O conceito orienta a investigação; o indicador é uma evidência observável escolhida para representá-lo parcialmente."
+      },
+      {
+        topico: "Operacionalização",
+        enunciado: "Usar a extensão de um trecho como indicador de importância temática exige cautela porque:",
+        alternativas: [
+          "Números não podem ser usados em pesquisas das Humanidades.",
+          "Textos longos nunca possuem temas relevantes.",
+          "Extensão e importância são relações possíveis, mas não equivalentes por definição.",
+          "Todo indicador precisa ser uma categoria textual."
+        ],
+        correta: 2,
+        explicacao: "A quantidade de palavras pode ser informativa, mas a relação entre extensão e importância precisa ser teoricamente justificada e criticamente avaliada."
+      },
+      {
+        topico: "Unidade de análise",
+        enunciado: "Em um estudo no qual cada artigo de jornal corresponde a uma linha e as conclusões tratam de diferenças entre artigos, qual é a unidade de análise?",
+        alternativas: [
+          "O artigo.",
+          "O jornal como instituição.",
+          "Cada palavra.",
+          "O arquivo digital."
+        ],
+        correta: 0,
+        explicacao: "A unidade de análise é a entidade sobre a qual são feitas as afirmações. Neste desenho, cada linha e cada afirmação se referem ao artigo."
+      },
+      {
+        topico: "Unidade de análise",
+        enunciado: "O que pode acontecer se resultados medidos em parágrafos forem agregados por jornal?",
+        alternativas: [
+          "Nada muda, pois a unidade de análise não afeta resultados.",
+          "O significado das medidas e a variabilidade observada podem mudar.",
+          "Os metadados deixam automaticamente de existir.",
+          "O corpus se transforma em uma amostra probabilística."
+        ],
+        correta: 1,
+        explicacao: "Alterar o nível de agregação pode esconder variação interna e muda o sujeito das afirmações produzidas."
+      },
+      {
+        topico: "População, amostra e corpus",
+        enunciado: "Qual afirmação sobre corpus é mais adequada?",
+        alternativas: [
+          "Todo corpus digital é representativo da população.",
+          "Todo corpus é necessariamente uma amostra probabilística.",
+          "Um corpus é um conjunto delimitado para análise, cuja seleção precisa ser documentada.",
+          "Corpus é apenas outro nome para qualquer arquivo de texto."
+        ],
+        correta: 2,
+        explicacao: "Um corpus é construído segundo critérios. Ele pode ou não sustentar generalizações para uma população mais ampla."
+      },
+      {
+        topico: "População, amostra e corpus",
+        enunciado: "Uma coleção contém somente jornais preservados e digitalizados por uma instituição. Qual é a conduta metodológica adequada?",
+        alternativas: [
+          "Tratá-la automaticamente como retrato completo da imprensa.",
+          "Documentar preservação, cobertura, seleção e possíveis ausências.",
+          "Excluir os metadados para evitar interferência na análise.",
+          "Afirmar que documentos ausentes não existiram."
+        ],
+        correta: 1,
+        explicacao: "Sobrevivência, catalogação e digitalização condicionam o conjunto disponível e precisam fazer parte da avaliação do corpus."
+      },
+      {
+        topico: "Variáveis, categorias e metadados",
+        enunciado: "Qual campo funciona principalmente como metadado de proveniência?",
+        alternativas: [
+          "Número de ocorrências de uma palavra.",
+          "Sentimento atribuído ao parágrafo.",
+          "Arquivo ou coleção de origem do documento.",
+          "Resultado de uma comparação estatística."
+        ],
+        correta: 2,
+        explicacao: "A proveniência registra de onde veio o objeto ou registro e permite reconstruir parte da cadeia de produção dos dados."
+      },
+      {
+        topico: "Variáveis, categorias e metadados",
+        enunciado: "Qual é um risco de atribuir exatamente um tema dominante a cada documento?",
+        alternativas: [
+          "Impedir qualquer armazenamento em tabela.",
+          "Apagar coexistências, ambiguidades e temas secundários.",
+          "Produzir obrigatoriamente valores ausentes.",
+          "Transformar toda variável em identificador."
+        ],
+        correta: 1,
+        explicacao: "A exclusividade simplifica contagens, mas pode reduzir documentos polissêmicos a uma única categoria."
+      },
+      {
+        topico: "Formatos de dados",
+        enunciado: "Qual combinação classifica adequadamente os formatos?",
+        alternativas: [
+          "CSV: não estruturado; JSON: estruturado; TXT: semiestruturado.",
+          "CSV: estruturado; JSON: semiestruturado; TXT corrido: não estruturado.",
+          "CSV: semiestruturado; JSON: não estruturado; TXT: estruturado.",
+          "Todos os formatos são estruturados da mesma maneira."
+        ],
+        correta: 1,
+        explicacao: "CSV apresenta esquema tabular; JSON organiza chaves e hierarquias flexíveis; texto corrido não vem previamente dividido em campos regulares."
+      },
+      {
+        topico: "Formatos de dados",
+        enunciado: "Dizer que um texto é um dado “não estruturado” significa que:",
+        alternativas: [
+          "Ele não possui estrutura linguística ou documental.",
+          "Ele não tem significado interpretável.",
+          "Sua organização não está previamente expressa como campos regulares para processamento.",
+          "Ele não pode ser analisado computacionalmente."
+        ],
+        correta: 2,
+        explicacao: "A expressão descreve a ausência de um esquema computacional previamente tabulado, não a ausência de forma, gênero, linguagem ou contexto."
+      },
+      {
+        topico: "Evidência e interpretação",
+        enunciado: "Uma contagem mostra seis documentos classificados como “Capital” e seis como “Interior” em uma coleção didática. O que se pode afirmar diretamente?",
+        alternativas: [
+          "A produção jornalística real era igualmente distribuída.",
+          "A sociedade estava dividida igualmente entre Capital e Interior.",
+          "Nesta coleção, os registros estão igualmente distribuídos entre as duas categorias.",
+          "Não existe viés de seleção."
+        ],
+        correta: 2,
+        explicacao: "A operação descreve a coleção analisada. Generalizar para a produção histórica exigiria conhecer população, cobertura e processo de seleção."
+      },
+      {
+        topico: "Evidência e interpretação",
+        enunciado: "Qual sequência representa melhor a cadeia que condiciona uma evidência computacional?",
+        alternativas: [
+          "Resultado → ferramenta → verdade.",
+          "Fonte → seleção → representação → operação → resultado → interpretação.",
+          "Teoria → certeza → automação.",
+          "Digitalização → neutralidade → conclusão."
+        ],
+        correta: 1,
+        explicacao: "A evidência depende de decisões e transformações anteriores ao cálculo e adquire sentido por meio de interpretação contextualizada."
+      },
+      {
+        topico: "Limites da quantificação",
+        enunciado: "Qual situação exemplifica falsa precisão?",
+        alternativas: [
+          "Informar as regras usadas para classificar documentos.",
+          "Apresentar uma medida com muitas casas decimais apesar de categorias ambíguas e dados incompletos.",
+          "Comparar resultados de dois critérios de seleção.",
+          "Registrar casos sobre os quais os classificadores discordaram."
+        ],
+        correta: 1,
+        explicacao: "Precisão numérica aparente não resolve incerteza conceitual, problemas de cobertura ou ambiguidade na produção dos dados."
+      },
+      {
+        topico: "Limites da automação",
+        enunciado: "Automatizar uma regra de classificação garante principalmente:",
+        alternativas: [
+          "Maior velocidade e escala de aplicação da regra.",
+          "Validade conceitual da regra.",
+          "Eliminação de vieses históricos.",
+          "Interpretação correta dos resultados."
+        ],
+        correta: 0,
+        explicacao: "Automação aumenta velocidade e alcance. Se a regra ou os dados contêm problemas, eles também podem ser reproduzidos em escala."
+      }
+    ];
+
+    const estado = {
+      atual: 0,
+      respostas: Array(questoes.length).fill(null),
+      verificadas: Array(questoes.length).fill(false)
+    };
+
+    const elementos = {
+      interfaceQuiz: document.querySelector("#interface-quiz"),
+      interfaceResultado: document.querySelector("#interface-resultado"),
+      contador: document.querySelector("#contador"),
+      respondidas: document.querySelector("#respondidas"),
+      progresso: document.querySelector("#progresso"),
+      trilho: document.querySelector(".trilho"),
+      placar: document.querySelector("#placar"),
+      topico: document.querySelector("#topico"),
+      titulo: document.querySelector("#titulo-pergunta"),
+      alternativas: document.querySelector("#alternativas"),
+      campoAlternativas: document.querySelector("#campo-alternativas"),
+      feedback: document.querySelector("#feedback"),
+      anterior: document.querySelector("#anterior"),
+      verificar: document.querySelector("#verificar"),
+      proxima: document.querySelector("#proxima"),
+      nota: document.querySelector("#nota"),
+      mensagemFinal: document.querySelector("#mensagem-final"),
+      resumoTopicos: document.querySelector("#resumo-topicos"),
+      revisao: document.querySelector("#revisao"),
+      refazer: document.querySelector("#refazer")
+    };
+
+    function letra(indice) {
+      return String.fromCharCode(65 + indice);
+    }
+
+    function totalAcertos() {
+      return estado.respostas.reduce((total, resposta, indice) => {
+        return total + (estado.verificadas[indice] && resposta === questoes[indice].correta ? 1 : 0);
+      }, 0);
+    }
+
+    function totalRespondidas() {
+      return estado.verificadas.filter(Boolean).length;
+    }
+
+    function atualizarCabecalho() {
+      const respondidas = totalRespondidas();
+      const acertos = totalAcertos();
+      elementos.contador.textContent = `Questão ${estado.atual + 1} de ${questoes.length}`;
+      elementos.respondidas.textContent = `${respondidas} ${respondidas === 1 ? "respondida" : "respondidas"}`;
+      elementos.placar.textContent = `${acertos} ${acertos === 1 ? "acerto" : "acertos"}`;
+      elementos.progresso.style.width = `${(respondidas / questoes.length) * 100}%`;
+      elementos.trilho.setAttribute("aria-valuenow", String(respondidas));
+    }
+
+    function mostrarFeedback() {
+      const questao = questoes[estado.atual];
+      const resposta = estado.respostas[estado.atual];
+      const acertou = resposta === questao.correta;
+      elementos.feedback.classList.remove("oculto");
+      elementos.feedback.dataset.tipo = acertou ? "correta" : "incorreta";
+      elementos.feedback.innerHTML = `
+        <strong>${acertou ? "Resposta correta." : `Resposta incorreta. A alternativa correta é ${letra(questao.correta)}.`}</strong>
+        <span>${questao.explicacao}</span>
+      `;
+    }
+
+    function renderizarQuestao() {
+      const questao = questoes[estado.atual];
+      const verificada = estado.verificadas[estado.atual];
+      const resposta = estado.respostas[estado.atual];
+
+      elementos.topico.textContent = questao.topico;
+      elementos.titulo.textContent = questao.enunciado;
+      elementos.alternativas.replaceChildren();
+
+      questao.alternativas.forEach((textoAlternativa, indice) => {
+        const label = document.createElement("label");
+        label.className = "alternativa";
+
+        if (verificada && indice === questao.correta) {
+          label.classList.add("correta");
+        } else if (verificada && indice === resposta) {
+          label.classList.add("incorreta");
+        }
+
+        const input = document.createElement("input");
+        input.type = "radio";
+        input.name = "resposta";
+        input.value = String(indice);
+        input.checked = resposta === indice;
+        input.disabled = verificada;
+        input.addEventListener("change", () => {
+          estado.respostas[estado.atual] = indice;
+          elementos.verificar.disabled = false;
+        });
+
+        const span = document.createElement("span");
+        const marcador = document.createElement("span");
+        marcador.className = "letra";
+        marcador.textContent = `${letra(indice)}.`;
+        span.append(marcador, document.createTextNode(textoAlternativa));
+        label.append(input, span);
+        elementos.alternativas.append(label);
+      });
+
+      elementos.anterior.disabled = estado.atual === 0;
+      elementos.verificar.disabled = resposta === null || verificada;
+      elementos.verificar.classList.toggle("oculto", verificada);
+      elementos.proxima.classList.toggle("oculto", !verificada);
+      elementos.proxima.textContent =
+        estado.atual === questoes.length - 1 ? "Ver resultado" : "Próxima";
+
+      if (verificada) {
+        mostrarFeedback();
+      } else {
+        elementos.feedback.classList.add("oculto");
+        elementos.feedback.removeAttribute("data-tipo");
+        elementos.feedback.replaceChildren();
+      }
+
+      atualizarCabecalho();
+      elementos.titulo.focus({ preventScroll: true });
+    }
+
+    function verificarResposta() {
+      if (estado.respostas[estado.atual] === null) {
+        return;
+      }
+      estado.verificadas[estado.atual] = true;
+      renderizarQuestao();
+    }
+
+    function resumoPorTopico() {
+      const resumo = new Map();
+      questoes.forEach((questao, indice) => {
+        const atual = resumo.get(questao.topico) ?? { acertos: 0, total: 0 };
+        atual.total += 1;
+        if (estado.respostas[indice] === questao.correta) {
+          atual.acertos += 1;
+        }
+        resumo.set(questao.topico, atual);
+      });
+      return resumo;
+    }
+
+    function mostrarResultado() {
+      const acertos = totalAcertos();
+      const percentual = Math.round((acertos / questoes.length) * 100);
+      elementos.interfaceQuiz.classList.add("oculto");
+      elementos.interfaceResultado.classList.remove("oculto");
+      elementos.nota.textContent = `${percentual}%`;
+
+      if (percentual >= 85) {
+        elementos.mensagemFinal.textContent = "Excelente domínio dos conceitos da unidade.";
+      } else if (percentual >= 65) {
+        elementos.mensagemFinal.textContent = "Bom resultado. Revise os tópicos indicados abaixo.";
+      } else {
+        elementos.mensagemFinal.textContent = "Retome os notebooks e use as explicações para orientar a revisão.";
+      }
+
+      elementos.resumoTopicos.replaceChildren();
+      resumoPorTopico().forEach((valor, topico) => {
+        const item = document.createElement("li");
+        item.innerHTML = `<strong>${topico}</strong><br>${valor.acertos} de ${valor.total}`;
+        elementos.resumoTopicos.append(item);
+      });
+
+      const erros = questoes
+        .map((questao, indice) => ({ questao, indice }))
+        .filter(({ questao, indice }) => estado.respostas[indice] !== questao.correta);
+
+      elementos.revisao.replaceChildren();
+      const tituloRevisao = document.createElement("h2");
+      tituloRevisao.textContent = erros.length ? "Questões para revisar" : "Nenhuma questão para revisar";
+      elementos.revisao.append(tituloRevisao);
+
+      erros.forEach(({ questao, indice }) => {
+        const item = document.createElement("article");
+        item.className = "revisao-item";
+        const respostaDada = estado.respostas[indice];
+        item.innerHTML = `
+          <strong>Questão ${indice + 1} — ${questao.topico}</strong>
+          <p>${questao.enunciado}</p>
+          <p><strong>Sua resposta:</strong> ${letra(respostaDada)}. ${questao.alternativas[respostaDada]}</p>
+          <p><strong>Resposta correta:</strong> ${letra(questao.correta)}. ${questao.alternativas[questao.correta]}</p>
+          <p>${questao.explicacao}</p>
+        `;
+        elementos.revisao.append(item);
+      });
+
+      elementos.interfaceResultado.querySelector("h2").focus({ preventScroll: true });
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    function avancar() {
+      if (estado.atual === questoes.length - 1) {
+        mostrarResultado();
+        return;
+      }
+      estado.atual += 1;
+      renderizarQuestao();
+    }
+
+    function voltar() {
+      if (estado.atual > 0) {
+        estado.atual -= 1;
+        renderizarQuestao();
+      }
+    }
+
+    function refazer() {
+      estado.atual = 0;
+      estado.respostas.fill(null);
+      estado.verificadas.fill(false);
+      elementos.interfaceResultado.classList.add("oculto");
+      elementos.interfaceQuiz.classList.remove("oculto");
+      renderizarQuestao();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    elementos.verificar.addEventListener("click", verificarResposta);
+    elementos.proxima.addEventListener("click", avancar);
+    elementos.anterior.addEventListener("click", voltar);
+    elementos.refazer.addEventListener("click", refazer);
+
+    renderizarQuestao();
+  </script>
+</body>
+</html>

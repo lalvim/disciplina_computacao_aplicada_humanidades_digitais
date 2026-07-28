@@ -1,5 +1,8 @@
 # Plano de execução — Unidade 1
 
+Este plano segue as
+[diretrizes de formatação e escrita do material](diretrizes_formatacao_material.md).
+
 ## 1. Escopo
 
 **Unidade:** Como transformar uma questão das Humanidades em um problema computacional?

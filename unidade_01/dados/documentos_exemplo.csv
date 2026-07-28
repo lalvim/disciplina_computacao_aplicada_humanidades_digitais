@@ -1,0 +1,13 @@
+id,ano,periodico,genero,local,tema,palavras
+D001,1890,Jornal Aurora,editorial,Capital,progresso,860
+D002,1891,Jornal Aurora,carta,Interior,trabalho,420
+D003,1892,Gazeta Popular,notícia,Capital,educação,610
+D004,1893,Gazeta Popular,editorial,Capital,progresso,940
+D005,1894,Correio do Vale,carta,Interior,educação,380
+D006,1895,Correio do Vale,notícia,Interior,trabalho,550
+D007,1900,Jornal Aurora,notícia,Capital,educação,720
+D008,1901,Jornal Aurora,editorial,Capital,trabalho,1010
+D009,1902,Gazeta Popular,carta,Interior,progresso,460
+D010,1903,Gazeta Popular,notícia,Capital,trabalho,670
+D011,1904,Correio do Vale,editorial,Interior,educação,890
+D012,1905,Correio do Vale,carta,Interior,progresso,440

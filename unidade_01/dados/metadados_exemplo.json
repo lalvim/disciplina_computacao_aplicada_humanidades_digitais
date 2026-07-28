@@ -1,0 +1,45 @@
+{
+  "titulo": "Coleção didática de periódicos",
+  "natureza": "dados fictícios para fins de ensino",
+  "descricao": "Doze registros simulados inspirados em práticas de catalogação de periódicos, sem correspondência com documentos históricos reais.",
+  "cobertura_temporal": {
+    "inicio": 1890,
+    "fim": 1905
+  },
+  "campos": [
+    {
+      "nome": "id",
+      "descricao": "identificador do documento"
+    },
+    {
+      "nome": "ano",
+      "descricao": "ano atribuído ao documento"
+    },
+    {
+      "nome": "periodico",
+      "descricao": "título fictício do periódico"
+    },
+    {
+      "nome": "genero",
+      "descricao": "gênero documental atribuído"
+    },
+    {
+      "nome": "local",
+      "descricao": "localidade em categoria ampla"
+    },
+    {
+      "nome": "tema",
+      "descricao": "tema dominante atribuído manualmente"
+    },
+    {
+      "nome": "palavras",
+      "descricao": "extensão simulada em palavras"
+    }
+  ],
+  "limitacoes": [
+    "coleção pequena e não representativa",
+    "categorias simplificadas para fins didáticos",
+    "ausência do texto integral de cada documento",
+    "intervalos temporais descontínuos"
+  ]
+}

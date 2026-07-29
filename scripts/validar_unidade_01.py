@@ -101,6 +101,53 @@ def validar_exercicios_html() -> None:
     assert not ausentes, f"tópicos ausentes no HTML: {', '.join(ausentes)}"
 
 
+def validar_gabaritos() -> None:
+    pasta = UNIDADE / "gabaritos"
+    esperados = {
+        "README.md",
+        "gabarito_01_perguntas.md",
+        "gabarito_02_operacionalizacao.md",
+        "gabarito_03_corpus.md",
+        "gabarito_04_oficina.md",
+        "gabarito_exercicios_multipla_escolha.md",
+    }
+    encontrados = {caminho.name for caminho in pasta.glob("*.md")}
+    assert encontrados == esperados, (
+        f"gabaritos divergentes: esperados {sorted(esperados)}, "
+        f"encontrados {sorted(encontrados)}"
+    )
+
+    chave = (pasta / "gabarito_exercicios_multipla_escolha.md").read_text(
+        encoding="utf-8"
+    )
+    respostas_chave = re.findall(
+        r"^\|\s*\d+\s*\|\s*([A-D])\s*\|", chave, re.MULTILINE
+    )
+    assert len(respostas_chave) == 18, "a chave deve conter 18 respostas"
+
+    html = (UNIDADE / "exercicios_unidade_01.html").read_text(encoding="utf-8")
+    respostas_html = [
+        chr(65 + int(indice))
+        for indice in re.findall(r"^\s+correta:\s*(\d+),?$", html, re.MULTILINE)
+    ]
+    assert respostas_chave == respostas_html, (
+        "a chave do gabarito não corresponde às respostas do exercício HTML"
+    )
+
+    oficina = (pasta / "gabarito_04_oficina.md").read_text(encoding="utf-8")
+    criterios = [
+        "Relevância humanística",
+        "Delimitação",
+        "Unidade de análise",
+        "Dados e corpus",
+        "Operacionalização",
+        "Cadeia de evidência",
+        "Limites e ética",
+    ]
+    ausentes = [criterio for criterio in criterios if criterio not in oficina]
+    assert not ausentes, f"critérios ausentes da rubrica: {', '.join(ausentes)}"
+
+
 def main() -> None:
     notebooks = sorted(UNIDADE.glob("*.ipynb"))
     assert len(notebooks) == 5, f"esperados 5 notebooks; encontrados {len(notebooks)}"
@@ -119,6 +166,8 @@ def main() -> None:
     print(f"OK cobertura: 9/9 tópicos da ementa")
     validar_exercicios_html()
     print("OK exercícios HTML: 18 questões, 10 tópicos, funcionamento offline")
+    validar_gabaritos()
+    print("OK gabaritos: 5 arquivos de respostas e 1 guia docente")
     print(
         f"OK total: {len(notebooks)} notebooks, "
         f"{total_textos} células de texto, {total_codigos} de código"

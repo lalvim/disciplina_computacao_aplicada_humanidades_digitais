@@ -26,6 +26,15 @@ O arquivo `exercicios_unidade_01.html` contém 18 questões de múltipla escolha
 com correção, explicações e revisão por tópico. Ele pode ser aberto diretamente
 em um navegador e funciona sem servidor ou acesso à internet.
 
+## Material do docente
+
+A pasta `gabaritos` contém respostas objetivas, respostas-modelo e rubricas.
+Como grande parte da unidade envolve formulação e interpretação, os modelos das
+atividades abertas são referências de coerência, não respostas únicas.
+
+A pasta separa organizacionalmente o material, mas não restringe o acesso de
+quem possui o repositório.
+
 ## Execução
 
 A partir da raiz do repositório:

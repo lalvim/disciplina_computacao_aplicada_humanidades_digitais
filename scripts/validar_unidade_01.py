@@ -148,6 +148,43 @@ def validar_gabaritos() -> None:
     assert not ausentes, f"critérios ausentes da rubrica: {', '.join(ausentes)}"
 
 
+def validar_revisores() -> None:
+    pasta = UNIDADE / "revisores"
+    esperados = {
+        "README.md",
+        "00_coordenacao_da_revisao.md",
+        "01_revisor_nivel_academico.md",
+        "02_revisor_didatica.md",
+        "03_revisor_alinhamento.md",
+        "04_revisor_humanidades_digitais.md",
+        "05_revisor_referencias.md",
+        "06_revisor_tecnico_acessibilidade.md",
+        "matriz_de_avaliacao.md",
+        "modelo_de_parecer.md",
+    }
+    encontrados = {caminho.name for caminho in pasta.glob("*.md")}
+    assert encontrados == esperados, (
+        f"revisores divergentes: esperados {sorted(esperados)}, "
+        f"encontrados {sorted(encontrados)}"
+    )
+
+    conteudo = "\n".join(
+        caminho.read_text(encoding="utf-8") for caminho in sorted(pasta.glob("*.md"))
+    )
+    criterios = [
+        "nível de mestrado",
+        "progressão didática",
+        "alinhamento",
+        "Humanidades Digitais",
+        "referências acadêmicas",
+        "acessibilidade",
+        "Bloqueante",
+        "Evidência",
+    ]
+    ausentes = [criterio for criterio in criterios if criterio not in conteudo]
+    assert not ausentes, f"critérios ausentes dos revisores: {', '.join(ausentes)}"
+
+
 def main() -> None:
     notebooks = sorted(UNIDADE.glob("*.ipynb"))
     assert len(notebooks) == 5, f"esperados 5 notebooks; encontrados {len(notebooks)}"
@@ -168,6 +205,8 @@ def main() -> None:
     print("OK exercícios HTML: 18 questões, 10 tópicos, funcionamento offline")
     validar_gabaritos()
     print("OK gabaritos: 5 arquivos de respostas e 1 guia docente")
+    validar_revisores()
+    print("OK revisores: 6 especialidades, coordenação, matriz e modelo")
     print(
         f"OK total: {len(notebooks)} notebooks, "
         f"{total_textos} células de texto, {total_codigos} de código"

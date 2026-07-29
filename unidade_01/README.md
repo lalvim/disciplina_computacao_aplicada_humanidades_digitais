@@ -35,6 +35,16 @@ atividades abertas são referências de coerência, não respostas únicas.
 A pasta separa organizacionalmente o material, mas não restringe o acesso de
 quem possui o repositório.
 
+## Revisão antes da oferta
+
+A pasta `revisores` define uma banca de revisão com seis especialidades:
+nível acadêmico, didática, alinhamento, Humanidades Digitais, referências e
+qualidade técnica/acessibilidade. Ela também contém matriz de avaliação e modelo
+de parecer.
+
+Uma unidade sem referências acadêmicas verificáveis deve ser classificada como
+necessitando revisão obrigatória antes da oferta em nível de mestrado.
+
 ## Execução
 
 A partir da raiz do repositório:

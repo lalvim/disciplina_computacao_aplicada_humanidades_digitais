@@ -19,3 +19,8 @@
 Os pareceres avaliam o estado atual. Eles não registram correções futuras como
 se já estivessem implementadas.
 
+## Rodada 2
+
+Após a implementação dos achados, os seis revisores foram executados novamente.
+O resultado está em `rodada_02/parecer_consolidado.md`: **aprovada com ajustes**,
+sem achados bloqueantes ou altos.

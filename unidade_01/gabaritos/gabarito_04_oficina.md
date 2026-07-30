@@ -20,6 +20,11 @@ entre 1890 e 1905.
 e legitimar posições distintas. Comparar sua presença entre gêneros pode ajudar
 a localizar documentos para uma análise contextual aprofundada.
 
+**Conceito e autores de referência:** A noção de dados construídos será
+fundamentada em Drucker (2011) e confrontada com a proposta de dados situados de
+Lavin (2021). D'Ignazio e Klein (2020) orientarão a análise de poder e contexto
+nas categorias.
+
 **Questão ampla:** Como o progresso foi mobilizado em debates públicos sobre
 educação e trabalho?
 
@@ -137,6 +142,7 @@ Pontuar cada critério de 0 a 3:
 | Critério | 0 | 1 | 2 | 3 |
 |---|---|---|---|---|
 | Relevância humanística | Ausente | Tema citado sem justificativa | Relevância explicada | Relevância situada em problema claro |
+| Fundamentação bibliográfica | Ausente | Obras listadas sem função | Conceitos ligados a leituras | Autores comparados e mobilizados no desenho |
 | Delimitação | Ausente | Muito ampla | Recorte identificável | Recorte claro, viável e justificado |
 | Unidade de análise | Ausente | Ambígua | Identificada | Identificada e coerente com as afirmações |
 | Dados e corpus | Ausentes | Fontes genéricas | Fontes e critérios indicados | Cobertura, seleção e proveniência discutidas |
@@ -146,10 +152,9 @@ Pontuar cada critério de 0 a 3:
 
 ### Interpretação da pontuação
 
-- **0–7:** proposta ainda inicial; requer nova delimitação acompanhada;
-- **8–14:** elementos presentes, mas há relações que precisam ser justificadas;
-- **15–18:** proposta coerente e viável, com revisões localizadas;
-- **19–21:** proposta bem articulada e criticamente justificada.
+- **0–8:** proposta ainda inicial; requer nova delimitação acompanhada;
+- **9–16:** elementos presentes, mas há relações que precisam ser justificadas;
+- **17–20:** proposta coerente e viável, com revisões localizadas;
+- **21–24:** proposta bem articulada e criticamente justificada.
 
 A pontuação não deve substituir o comentário qualitativo.
-

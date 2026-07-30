@@ -1,7 +1,8 @@
-"""Gera os materiais didáticos da Unidade 1 em formato Jupyter Notebook.
+"""Gera notebooks, dados didáticos e README da Unidade 1.
 
 O script usa apenas a biblioteca padrão para que a estrutura dos notebooks
-possa ser reconstruída mesmo antes da instalação do Jupyter.
+possa ser reconstruída mesmo antes da instalação do Jupyter. Ele não gera o
+HTML, os gabaritos, as referências, os revisores ou os pareceres.
 """
 
 from __future__ import annotations
@@ -196,13 +197,44 @@ def guia() -> list[dict]:
             ## Como trabalhar com os notebooks
 
             Execute as células na ordem. Leia a explicação antes de observar a saída.
-            Quando uma célula contiver uma variável com seu nome ou sua pergunta,
-            substitua o exemplo por sua resposta. Reinicie o kernel e execute tudo
-            novamente antes de entregar.
+            Escreva respostas discursivas nas células Markdown indicadas. Nas células
+            Python, primeiro preveja o resultado, depois execute e interprete. Reinicie
+            o kernel e execute tudo novamente antes de entregar.
 
             Um resultado numérico responde apenas à operação programada. Pergunte
             sempre: **que decisão tornou esse número possível, o que ele representa e
             o que ficou fora da representação?**
+            """
+        ),
+        texto(
+            """
+            ## Carga e prioridades
+
+            A carga da unidade é de oito horas:
+
+            | Modalidade | Atividade | Tempo |
+            |---|---|---:|
+            | Preparação | Trechos de Alves (2016) | 30 min |
+            | Aula 1 | Guia, Notebook 01 e início do 02 | 3 h 30 |
+            | Preparação | Estudo de caso de Rodrigues (2020) | 40 min |
+            | Aula 2 | Conclusão do 02, Notebook 03 e oficina | 3 h |
+            | Revisão assíncrona | Quiz HTML | 20 min |
+
+            São **essenciais**: a pergunta reformulada, o mapa de operacionalização,
+            a ficha do corpus e a síntese da oficina. Leituras complementares e
+            extensões dos exercícios podem ser feitas após a unidade.
+            """
+        ),
+        texto(
+            """
+            ## Leituras essenciais
+
+            - ALVES, Daniel (2016), “As Humanidades Digitais como uma comunidade
+              de práticas”, especialmente a introdução.
+            - RODRIGUES, Aldair (2020), “Humanidades digitais e diáspora africana”,
+              como estudo de caso para a segunda aula.
+
+            As referências completas e os links estão em `referencias.md`.
             """
         ),
         texto(
@@ -259,12 +291,26 @@ def perguntas() -> list[dict]:
             """
             # Perguntas e problemas computacionais
 
+            ## Retomada
+
+            Antes de continuar:
+
+            1. Que fenômeno você registrou no guia?
+            2. Que fonte permitiria observar apenas uma parte dele?
+
             ## 1. Humanidades Digitais e pesquisa orientada por dados
 
             Humanidades Digitais não são apenas a aplicação de ferramentas digitais
             a objetos tradicionais. Elas incluem práticas de construção de acervos,
             modelagem, análise, visualização, crítica de infraestruturas e reflexão
             sobre como tecnologias participam da produção do conhecimento.
+
+            Não há uma definição única e neutra do campo. Alves (2016) propõe
+            compreendê-lo como comunidade de práticas; Burdick et al. (2012) destacam
+            formas de produção de conhecimento que incluem modelagem, curadoria,
+            visualização e construção. No Brasil, Ferla, Lima e Feitler (2020)
+            mostram como condições institucionais e pedagógicas situadas afetam sua
+            realização.
 
             Uma pesquisa orientada por dados articula:
 
@@ -274,8 +320,11 @@ def perguntas() -> list[dict]:
             - operações que geram resultados;
             - interpretação situada e crítica.
 
-            Dados não são o fenômeno em estado puro. São registros selecionados,
-            descritos e transformados segundo decisões humanas e institucionais.
+            Dados não são o fenômeno em estado puro. Drucker (2011) propõe o termo
+            *capta* para enfatizar que registros são tomados e construídos. Lavin
+            (2021) concorda com a crítica à neutralidade, mas defende “dados situados”
+            em vez de abandonar o termo *data*. A divergência é produtiva: ambos
+            exigem que seleção, descrição e transformação sejam explicitadas.
             """
         ),
         texto(
@@ -297,6 +346,19 @@ def perguntas() -> list[dict]:
 
             Uma mesma temática comporta perguntas diferentes. O verbo usado oferece
             pistas, mas o tipo depende da finalidade lógica da investigação.
+            """
+        ),
+        texto(
+            """
+            ### Como ler o primeiro experimento
+
+            `pd.DataFrame(perguntas)` transforma uma lista de registros em uma tabela.
+            Cada dicionário vira uma linha; as chaves viram colunas. Antes de executar,
+            preveja quantas linhas e colunas aparecerão.
+
+            O objetivo não é aprender toda a sintaxe de `pandas`, mas observar que uma
+            tipologia pode ser registrada e consultada — e que o código não justifica
+            as categorias por nós.
             """
         ),
         codigo(
@@ -333,6 +395,13 @@ def perguntas() -> list[dict]:
 
             tabela_perguntas = pd.DataFrame(perguntas)
             tabela_perguntas
+            """
+        ),
+        texto(
+            """
+            Na célula seguinte, a expressão entre colchetes produz uma sequência de
+            valores verdadeiros e falsos. Ela mantém somente as linhas cujo tipo é
+            “comparativa”. Preveja o número de linhas antes de executar.
             """
         ),
         codigo(
@@ -425,7 +494,7 @@ def perguntas() -> list[dict]:
             4. Que convenções literárias ajudam a explicar essas diferenças?
             5. É possível prever o período do romance por características do vocabulário?
 
-            Depois, edite e execute a célula seguinte.
+            Depois, preencha a seção seguinte.
             """
         ),
         texto(
@@ -442,6 +511,21 @@ def perguntas() -> list[dict]:
                **Justificativa:** Escreva aqui.
             5. **Tipo:** Escreva aqui.
                **Justificativa:** Escreva aqui.
+            """
+        ),
+        texto(
+            """
+            ### Casos limítrofes
+
+            Uma investigação pode ter etapas de tipos diferentes. Considere:
+
+            > Quais mudanças no vocabulário distinguem dois períodos e que processos
+            > históricos ajudam a explicá-las?
+
+            A comparação produz o padrão inicial; a explicação exige teoria, contexto
+            e confronto de mecanismos. Indique qual tipo é predominante, quais são as
+            etapas secundárias e como a pergunta mudaria se o objetivo fosse prever o
+            período de um documento.
             """
         ),
         texto(
@@ -479,6 +563,22 @@ def perguntas() -> list[dict]:
         ),
         texto(
             """
+            ## Referências e leituras
+
+            - ALVES, Daniel (2016). “As Humanidades Digitais como uma comunidade de
+              práticas”.
+            - BURDICK, Anne et al. (2012). *Digital_Humanities*.
+            - DRUCKER, Johanna (2011). “Humanities Approaches to Graphical Display”.
+            - LAVIN, Matthew (2021). “Why Digital Humanists Should Emphasize Situated
+              Data over Capta”.
+            - FERLA, Luis A.; LIMA, Luís F.; FEITLER, Bruno (2020).
+              “Novidades no front”.
+
+            Dados completos e links: `referencias.md`.
+            """
+        ),
+        texto(
+            """
             ## Síntese
 
             A boa formulação não nasce da simples tradução de uma pergunta em código.
@@ -496,6 +596,11 @@ def operacionalizacao() -> list[dict]:
             """
             # Representação e operacionalização
 
+            ## Retomada
+
+            1. Qual foi a pergunta delimitada no Notebook 01?
+            2. Que palavra ou expressão dessa pergunta ainda precisa ser definida?
+
             ## 1. Do conceito ao registro
 
             Conceitos como modernização, identidade, prestígio, violência ou
@@ -509,7 +614,9 @@ def operacionalizacao() -> list[dict]:
             - **categoria ou valor:** forma assumida por uma observação.
 
             **Operacionalizar** é construir e justificar essas relações. O indicador
-            aponta para o conceito, mas não é idêntico a ele.
+            aponta para o conceito, mas não é idêntico a ele. A crítica de Drucker
+            (2011) ajuda a perceber que a representação não apenas descreve o objeto:
+            ela produz uma forma particular de torná-lo observável.
             """
         ),
         texto(
@@ -540,6 +647,16 @@ def operacionalizacao() -> list[dict]:
 
             Um jornal pode ser a fonte, cada artigo a unidade de análise e cada parágrafo
             a unidade de observação. Trocar de unidade altera o significado das medidas.
+            """
+        ),
+        texto(
+            """
+            ### Como ler o experimento
+
+            A lista `registros` contém três observações. `pd.DataFrame(registros)`
+            organiza essas observações em linhas e os campos em colunas.
+            `len(documentos)` conta linhas, não jornais, autores ou temas. Antes de
+            executar, identifique o que cada linha representa.
             """
         ),
         codigo(
@@ -607,7 +724,17 @@ def operacionalizacao() -> list[dict]:
 
             Categorias históricas podem reproduzir classificações discriminatórias.
             Preservá-las para análise não significa adotá-las sem crítica; transformá-las
-            também exige documentação.
+            também exige documentação. D'Ignazio e Klein (2020) mostram que decidir o
+            que e como contar envolve relações de poder, trabalho e experiências que
+            podem desaparecer das estruturas formais.
+            """
+        ),
+        texto(
+            """
+            No experimento seguinte, compare duas decisões. `value_counts()` conta
+            valores exclusivos. A segunda série preserva listas, mas ainda não define
+            como cada tema contribuirá para uma contagem. Preveja qual informação se
+            perde na primeira representação.
             """
         ),
         codigo(
@@ -663,6 +790,10 @@ def operacionalizacao() -> list[dict]:
             A avaliação depende de justificativa teórica, leitura das fontes e
             comparação entre alternativas; uma função Python apenas verificaria se os
             campos foram preenchidos, não se a operacionalização é válida.
+
+            Rawson e Muñoz (2019) lembram que transformações aparentemente técnicas
+            também constroem modelos e autoridades sobre os dados. Registrar a regra é
+            parte da produção de conhecimento.
             """
         ),
         texto(
@@ -691,6 +822,17 @@ def operacionalizacao() -> list[dict]:
         ),
         texto(
             """
+            ## Referências e leituras
+
+            - D'IGNAZIO, Catherine; KLEIN, Lauren F. (2020). *Data Feminism*.
+            - DRUCKER, Johanna (2011). “Humanities Approaches to Graphical Display”.
+            - RAWSON, Katie; MUÑOZ, Trevor (2019). “Against Cleaning”.
+
+            Dados completos e links: `referencias.md`.
+            """
+        ),
+        texto(
+            """
             ## Reflexão e síntese
 
             - O que aconteceria se a unidade fosse alterada?
@@ -712,6 +854,11 @@ def corpus() -> list[dict]:
             """
             # Dados, corpus e evidências
 
+            ## Retomada
+
+            1. Qual é sua unidade de análise?
+            2. Que indicador você propôs e de qual fonte ele seria extraído?
+
             ## 1. População, amostra e corpus
 
             - **População:** conjunto de unidades sobre o qual se deseja formular uma
@@ -724,6 +871,16 @@ def corpus() -> list[dict]:
             probabilística. Uma coleção digital disponível pode resultar de preservação,
             catalogação, direitos autorais, digitalização e mecanismos de busca; sua
             existência não garante representatividade.
+            """
+        ),
+        texto(
+            """
+            ### Como ler a importação
+
+            `pd.read_csv(...)` lê o arquivo tabular e cria um `DataFrame`. O caminho é
+            relativo à pasta da unidade, para que o exemplo funcione em outros
+            computadores. Antes de executar, preveja o número de linhas a partir da
+            descrição da coleção.
             """
         ),
         codigo(
@@ -759,6 +916,14 @@ def corpus() -> list[dict]:
             como se fosse uma propriedade teórica do fenômeno.
             """
         ),
+        texto(
+            """
+            `between(1890, 1895)` testa o intervalo para cada linha; a condição entre
+            colchetes seleciona os registros verdadeiros. O segundo filtro compara a
+            coluna `genero` com “editorial”. Os dois corpus respondem a critérios
+            diferentes, portanto sustentam afirmações diferentes.
+            """
+        ),
         codigo(
             """
             # Corpus A: todos os documentos entre 1890 e 1895.
@@ -786,6 +951,29 @@ def corpus() -> list[dict]:
             A distribuição muda quando muda o critério. Isso não demonstra que um
             corpus seja “tendencioso” e o outro “neutro”; demonstra que toda conclusão
             precisa declarar a qual conjunto se refere e por que ele foi constituído.
+            """
+        ),
+        texto(
+            """
+            ## Estudo de caso brasileiro — população escravizada de Mariana
+
+            Rodrigues (2020) examina a construção de uma base sobre a população
+            escravizada de Mariana no século XVIII. O caso mostra que transpor fontes
+            produzidas sob a escravidão para uma base não é simples digitalização:
+            categorias, nomes, marcas corporais, proveniência e ausências envolvem
+            decisões éticas e metodológicas em um país racialmente desigual.
+
+            Após a leitura orientada, identifique:
+
+            1. qual problema histórico orienta a base;
+            2. quem produziu as fontes originais e com quais finalidades;
+            3. quem modela, financia e mantém os dados;
+            4. que categorias podem reproduzir violência documental;
+            5. como preservar rastreabilidade sem naturalizar classificações;
+            6. que usos públicos ou acadêmicos exigem cautela.
+
+            Compare o estudo real à coleção fictícia: quais problemas foram
+            simplificados no exemplo didático?
             """
         ),
         texto(
@@ -856,7 +1044,13 @@ def corpus() -> list[dict]:
 
             Resultados podem revelar padrões difíceis de perceber por leitura individual,
             orientar casos para leitura aprofundada e testar a extensão de uma impressão.
-            Ainda assim, não falam sozinhos.
+            Ainda assim, não falam sozinhos. D'Ignazio e Klein (2020) enfatizam que
+            números dependem de contexto, teoria e relações de poder.
+
+            O desenho é iterativo:
+
+            **pergunta → amostragem → leitura → modelagem → resultado → releitura
+            → reformulação**
             """
         ),
         codigo(
@@ -898,6 +1092,14 @@ def corpus() -> list[dict]:
             Erros sistemáticos podem ser reproduzidos em grande escala.
             """
         ),
+        texto(
+            """
+            A função seguinte resume um corpus. Cada chave nomeia uma informação e
+            cada expressão calcula seu valor. `nunique()` conta valores distintos;
+            `sorted(...unique())` organiza as categorias. A função descreve o conjunto,
+            mas não avalia sua qualidade ou representatividade.
+            """
+        ),
         codigo(
             """
             def resumo_corpus(tabela, nome):
@@ -925,6 +1127,7 @@ def corpus() -> list[dict]:
             4. quais formatos e metadados existem?
             5. que grupos, vozes ou períodos podem estar ausentes?
             6. a que conjunto uma conclusão poderá se referir?
+            7. quem produziu, classificou, financiou e mantém os dados?
             """
         ),
         texto(
@@ -951,6 +1154,21 @@ def corpus() -> list[dict]:
 
             **Alcance possível das conclusões:**
             Escreva aqui.
+
+            **Instituições, trabalho e autoridade sobre os dados:**
+            Escreva aqui.
+            """
+        ),
+        texto(
+            """
+            ## Referências e leituras
+
+            - D'IGNAZIO, Catherine; KLEIN, Lauren F. (2020). *Data Feminism*,
+              capítulo “The Numbers Don't Speak for Themselves”.
+            - RAWSON, Katie; MUÑOZ, Trevor (2019). “Against Cleaning”.
+            - RODRIGUES, Aldair (2020). “Humanidades digitais e diáspora africana”.
+
+            Dados completos e links: `referencias.md`.
             """
         ),
         texto(
@@ -980,6 +1198,10 @@ def oficina() -> list[dict]:
             Não há código neste notebook: formular, justificar e interpretar são
             atividades de escrita. Os experimentos computacionais dos notebooks
             anteriores devem informar suas decisões, não substituir sua argumentação.
+
+            Recupere os três produtos parciais. Em cada seção, registre o que foi
+            mantido, o que mudou e por quê. Revisar uma decisão diante de nova evidência
+            é parte do trabalho acadêmico.
             """
         ),
         texto(
@@ -1015,6 +1237,10 @@ def oficina() -> list[dict]:
             **Motivação humanística:**
             Escreva aqui.
 
+            **Conceito central e autores de referência:**
+            Escreva aqui. Indique ao menos duas leituras pertinentes e explique o que
+            cada uma contribui para definir o problema.
+
             **Questão ampla:**
             Escreva aqui.
 
@@ -1025,6 +1251,9 @@ def oficina() -> list[dict]:
             Escreva aqui.
 
             **Tarefa computacional inicial possível:**
+            Escreva aqui.
+
+            **O que mudou em relação ao produto do Notebook 01 e por quê?**
             Escreva aqui.
             """
         ),
@@ -1057,6 +1286,9 @@ def oficina() -> list[dict]:
 
             **Critérios de inclusão e exclusão:**
             Escreva aqui.
+
+            **O que mudou em relação à ficha do Notebook 03 e por quê?**
+            Escreva aqui.
             """
         ),
         texto(
@@ -1078,6 +1310,9 @@ def oficina() -> list[dict]:
             | Mesmo conceito | Alternativa | Indicador alternativo | Escreva | Escreva | Escreva | Escreva |
 
             **Por que uma alternativa parece mais adequada à pergunta?**
+            Escreva aqui.
+
+            **O que mudou em relação ao mapa do Notebook 02 e por quê?**
             Escreva aqui.
             """
         ),
@@ -1184,6 +1419,7 @@ def oficina() -> list[dict]:
             | Critério | Pontuação (0–3) | O que ainda precisa ser revisto |
             |---|---:|---|
             | Relevância humanística |  | Escreva |
+            | Fundamentação bibliográfica |  | Escreva |
             | Delimitação da pergunta |  | Escreva |
             | Unidade de análise |  | Escreva |
             | Viabilidade dos dados |  | Escreva |
@@ -1222,6 +1458,19 @@ def oficina() -> list[dict]:
         ),
         texto(
             """
+            ## 9. Referências utilizadas
+
+            Liste somente obras efetivamente mobilizadas na proposta e indique onde
+            cada uma fundamenta um conceito, uma escolha ou uma crítica.
+
+            1. Escreva aqui.
+            2. Escreva aqui.
+
+            A bibliografia geral da unidade está em `referencias.md`.
+            """
+        ),
+        texto(
+            """
             ## Revisão entre pares
 
             Peça a uma colega ou a um colega que responda:
@@ -1254,6 +1503,7 @@ Esta pasta contém o material teórico-prático da primeira unidade da disciplin
 4. `03_dados_corpus_e_evidencias.ipynb`
 5. `04_oficina_projeto_de_pesquisa.ipynb`
 6. `exercicios_unidade_01.html`
+7. `referencias.md`
 
 ## Dependências
 
@@ -1268,6 +1518,18 @@ utilizados para produzir afirmações históricas.
 O arquivo `exercicios_unidade_01.html` contém 18 questões de múltipla escolha
 com correção, explicações e revisão por tópico. Ele pode ser aberto diretamente
 em um navegador e funciona sem servidor ou acesso à internet.
+
+## Carga e modalidade
+
+| Modalidade | Material | Tempo |
+|---|---|---:|
+| Preparação | Alves (2016) e diagnóstico | 30 min |
+| Aula 1 | Notebooks 00, 01 e início do 02 | 3 h 30 |
+| Preparação | Rodrigues (2020) | 40 min |
+| Aula 2 | Conclusão do 02, Notebook 03 e oficina | 3 h |
+| Revisão assíncrona | Exercício HTML | 20 min |
+
+As leituras complementares e extensões não integram a carga essencial.
 
 ## Material do docente
 
@@ -1285,8 +1547,10 @@ nível acadêmico, didática, alinhamento, Humanidades Digitais, referências e
 qualidade técnica/acessibilidade. Ela também contém matriz de avaliação e modelo
 de parecer.
 
-Uma unidade sem referências acadêmicas verificáveis deve ser classificada como
-necessitando revisão obrigatória antes da oferta em nível de mestrado.
+Os pareceres executados ficam em `revisores/pareceres`. Após alterações
+acadêmicas ou didáticas, uma nova rodada deve registrar explicitamente quais
+achados foram resolvidos. A Rodada 2 aprovou a unidade com ajustes; o teste
+manual com leitor de tela permanece pendente.
 
 ## Execução
 
@@ -1324,7 +1588,7 @@ def main() -> None:
     )
     salvar_notebook("03_dados_corpus_e_evidencias.ipynb", corpus())
     salvar_notebook("04_oficina_projeto_de_pesquisa.ipynb", oficina())
-    print(f"Unidade criada em: {UNIDADE}")
+    print(f"Notebooks, dados e README reconstruídos em: {UNIDADE}")
 
 
 if __name__ == "__main__":

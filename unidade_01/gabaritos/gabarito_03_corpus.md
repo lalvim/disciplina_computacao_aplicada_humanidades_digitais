@@ -70,6 +70,11 @@ documentos que não foram preservados. As categorias são simplificadas.
 dentro da coleção. Não é possível produzir afirmações históricas sobre a
 imprensa ou a sociedade.
 
+**Instituições, trabalho e autoridade:** A coleção foi produzida pelo material
+didático, que define campos e categorias. Em uma pesquisa real, seria necessário
+registrar quem produziu as fontes, preservou, digitalizou, descreveu, anotou,
+financiou e mantém a base, além de como essas posições afetam as categorias.
+
 ## 3. Critérios de correção
 
 Uma ficha adequada:
@@ -79,5 +84,5 @@ Uma ficha adequada:
 - explicita critérios de inclusão e exclusão;
 - identifica formatos e metadados relevantes;
 - reconhece ausências, cobertura e processos de seleção;
+- identifica instituições, trabalho e autoridade classificatória;
 - limita as conclusões ao conjunto que pode sustentá-las.
-

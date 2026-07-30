@@ -36,6 +36,9 @@ unidade_01/
 ├── 02_representacao_e_operacionalizacao.ipynb
 ├── 03_dados_corpus_e_evidencias.ipynb
 ├── 04_oficina_projeto_de_pesquisa.ipynb
+├── referencias.md
+├── exercicios_unidade_01.html
+├── exercicios_unidade_01_texto.md
 ├── README.md
 └── dados/
     ├── documentos_exemplo.csv
@@ -134,23 +137,31 @@ computacionais não serão tratados como interpretações autossuficientes.
 
 ### Semana 1 — 4 horas
 
-1. apresentação, diagnóstico e Notebook 00 — 40 minutos;
-2. Notebook 01 — 1 hora e 30 minutos;
-3. Notebook 02 — 1 hora e 30 minutos;
-4. síntese e registro dos produtos parciais — 20 minutos.
+1. preparação com trecho de Alves (2016) — 30 minutos;
+2. apresentação, diagnóstico e Notebook 00 — 30 minutos;
+3. Notebook 01 — 1 hora e 30 minutos;
+4. início do Notebook 02 — 1 hora e 30 minutos.
 
 ### Semana 2 — 4 horas
 
-1. retomada — 20 minutos;
-2. Notebook 03 — 1 hora e 40 minutos;
-3. Notebook 04 — 1 hora e 30 minutos;
-4. discussão entre pares e revisão — 30 minutos.
+1. preparação com Rodrigues (2020) — 40 minutos;
+2. conclusão do Notebook 02 — 30 minutos;
+3. Notebook 03 — 1 hora e 20 minutos;
+4. Notebook 04 — 1 hora;
+5. discussão entre pares — 30 minutos.
+
+O exercício HTML será usado como revisão assíncrona de aproximadamente 20
+minutos. Leituras complementares e extensões não integram a carga essencial.
 
 ## 7. Dependências técnicas
 
 - Python 3;
 - JupyterLab, Jupyter Notebook ou VS Code com suporte a notebooks;
 - `pandas`.
+
+As referências acadêmicas completas e o plano de leitura ficam em
+`unidade_01/referencias.md`. Cada notebook deve citar localmente as obras que
+sustentam seus conceitos e debates.
 
 Visualização, processamento de linguagem, estatística e aprendizado de máquina
 serão introduzidos nas unidades posteriores, quando essas ferramentas forem

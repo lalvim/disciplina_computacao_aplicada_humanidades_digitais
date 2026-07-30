@@ -85,9 +85,11 @@ perspectiva brasileira ou latino-americana.
 
 ### Contexto brasileiro e ensino
 
-9. LUCCHESI, Anita. Novidades no front: experiências com Humanidades Digitais em
-   um curso de História na periferia da Grande São Paulo. *Estudos Históricos*,
-   v. 33, n. 69, 2020. Disponível em:
+9. FERLA, Luis Antonio Coelho; LIMA, Luís Filipe Silvério; FEITLER, Bruno.
+   Novidades no front: experiências com Humanidades Digitais em um curso de
+   História na periferia da Grande São Paulo. *Estudos Históricos*, v. 33,
+   n. 69, p. 111–132, 2020. DOI: 10.1590/S2178-14942020000100007.
+   Disponível em:
    https://www.scielo.br/j/eh/a/7NCYr98D87V834xHhHtpw7z/.
 10. Edição temática “Humanidades Digitais” de *Estudos Históricos*, v. 33,
     n. 69, 2020.
@@ -96,7 +98,7 @@ perspectiva brasileira ou latino-americana.
 
 | Notebook | Leitura essencial | Função |
 |---|---|---|
-| 00/01 | Berry e Fagerjord; Lucchesi | situar o campo e o ensino |
+| 00/01 | Berry e Fagerjord; Ferla, Lima e Feitler | situar o campo e o ensino |
 | 01/02 | Drucker; Lavin | discutir dados/capta/situação |
 | 02/03 | Rawson e Muñoz | tornar transformação e “limpeza” discutíveis |
 | 03/04 | D'Ignazio e Klein; Rodrigues | poder, contexto e ética |

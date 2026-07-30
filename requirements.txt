@@ -1,2 +1,2 @@
-jupyterlab
-pandas
+jupyterlab>=4,<5
+pandas>=2,<3

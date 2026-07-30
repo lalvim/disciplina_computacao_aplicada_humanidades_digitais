@@ -84,6 +84,8 @@ def validar_exercicios_html() -> None:
     )
     assert len(re.findall(r"^\s+enunciado:", conteudo, flags=re.MULTILINE)) == 18
     assert len(re.findall(r"^\s+correta:", conteudo, flags=re.MULTILINE)) == 18
+    assert "<noscript>" in conteudo
+    assert "exercicios_unidade_01_texto.md" in conteudo
 
     topicos = [
         "Humanidades Digitais",
@@ -99,6 +101,40 @@ def validar_exercicios_html() -> None:
     ]
     ausentes = [topico for topico in topicos if f'topico: "{topico}"' not in conteudo]
     assert not ausentes, f"tópicos ausentes no HTML: {', '.join(ausentes)}"
+
+    versao_textual = (UNIDADE / "exercicios_unidade_01_texto.md").read_text(
+        encoding="utf-8"
+    )
+    assert len(re.findall(r"^## Questão \d+", versao_textual, re.MULTILINE)) == 18
+
+
+def validar_referencias() -> None:
+    referencias = (UNIDADE / "referencias.md").read_text(encoding="utf-8")
+    autores = [
+        "ALVES, Daniel",
+        "DRUCKER, Johanna",
+        "LAVIN, Matthew",
+        "D'IGNAZIO, Catherine",
+        "RODRIGUES, Aldair",
+        "FERLA, Luis Antonio",
+    ]
+    ausentes = [autor for autor in autores if autor not in referencias]
+    assert not ausentes, f"autores ausentes: {', '.join(ausentes)}"
+    assert referencias.count("https://") >= 8
+
+    for nome in [
+        "01_perguntas_e_problemas_computacionais.ipynb",
+        "02_representacao_e_operacionalizacao.ipynb",
+        "03_dados_corpus_e_evidencias.ipynb",
+    ]:
+        conteudo = (UNIDADE / nome).read_text(encoding="utf-8")
+        assert "Referências e leituras" in conteudo, f"{nome} sem leituras"
+
+    oficina = (UNIDADE / "04_oficina_projeto_de_pesquisa.ipynb").read_text(
+        encoding="utf-8"
+    )
+    assert "Conceito central e autores de referência" in oficina
+    assert "Referências utilizadas" in oficina
 
 
 def validar_gabaritos() -> None:
@@ -209,6 +245,27 @@ def validar_revisores() -> None:
     assert "revisão obrigatória" in consolidado.lower()
     assert "64%" in consolidado
 
+    pasta_rodada_2 = pasta_pareceres / "rodada_02"
+    rodada_2_esperados = {
+        "README.md",
+        "01_nivel_academico.md",
+        "02_didatica.md",
+        "03_alinhamento.md",
+        "04_humanidades_digitais.md",
+        "05_referencias.md",
+        "06_tecnico_acessibilidade.md",
+        "parecer_consolidado.md",
+    }
+    rodada_2_encontrados = {
+        caminho.name for caminho in pasta_rodada_2.glob("*.md")
+    }
+    assert rodada_2_encontrados == rodada_2_esperados
+    consolidado_2 = (pasta_rodada_2 / "parecer_consolidado.md").read_text(
+        encoding="utf-8"
+    )
+    assert "Aprovada com ajustes" in consolidado_2
+    assert "98%" in consolidado_2
+
 
 def main() -> None:
     notebooks = sorted(UNIDADE.glob("*.ipynb"))
@@ -225,15 +282,19 @@ def main() -> None:
         print(f"OK {caminho.name}: {textos} células de texto, {codigos} de código")
 
     validar_cobertura()
-    print(f"OK cobertura: 9/9 tópicos da ementa")
+    print("OK presença textual: 9/9 tópicos da ementa")
+    validar_referencias()
+    print("OK referências: bibliografia consolidada e leituras nos notebooks")
     validar_exercicios_html()
-    print("OK exercícios HTML: 18 questões, 10 tópicos, funcionamento offline")
+    print(
+        "OK exercícios: 18 questões, 10 tópicos, HTML offline e versão textual"
+    )
     validar_gabaritos()
     print("OK gabaritos: 5 arquivos de respostas e 1 guia docente")
     validar_revisores()
     print(
         "OK revisores: 6 especialidades, coordenação, matriz, modelo e "
-        "7 pareceres executados"
+        "2 rodadas de pareceres executadas"
     )
     print(
         f"OK total: {len(notebooks)} notebooks, "

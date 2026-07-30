@@ -11,6 +11,7 @@ Esta pasta contém o material teórico-prático da primeira unidade da disciplin
 4. `03_dados_corpus_e_evidencias.ipynb`
 5. `04_oficina_projeto_de_pesquisa.ipynb`
 6. `exercicios_unidade_01.html`
+7. `referencias.md`
 
 ## Dependências
 
@@ -25,6 +26,18 @@ utilizados para produzir afirmações históricas.
 O arquivo `exercicios_unidade_01.html` contém 18 questões de múltipla escolha
 com correção, explicações e revisão por tópico. Ele pode ser aberto diretamente
 em um navegador e funciona sem servidor ou acesso à internet.
+
+## Carga e modalidade
+
+| Modalidade | Material | Tempo |
+|---|---|---:|
+| Preparação | Alves (2016) e diagnóstico | 30 min |
+| Aula 1 | Notebooks 00, 01 e início do 02 | 3 h 30 |
+| Preparação | Rodrigues (2020) | 40 min |
+| Aula 2 | Conclusão do 02, Notebook 03 e oficina | 3 h |
+| Revisão assíncrona | Exercício HTML | 20 min |
+
+As leituras complementares e extensões não integram a carga essencial.
 
 ## Material do docente
 
@@ -42,8 +55,10 @@ nível acadêmico, didática, alinhamento, Humanidades Digitais, referências e
 qualidade técnica/acessibilidade. Ela também contém matriz de avaliação e modelo
 de parecer.
 
-Uma unidade sem referências acadêmicas verificáveis deve ser classificada como
-necessitando revisão obrigatória antes da oferta em nível de mestrado.
+Os pareceres executados ficam em `revisores/pareceres`. Após alterações
+acadêmicas ou didáticas, uma nova rodada deve registrar explicitamente quais
+achados foram resolvidos. A Rodada 2 aprovou a unidade com ajustes; o teste
+manual com leitor de tela permanece pendente.
 
 ## Execução
 

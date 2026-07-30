@@ -1,0 +1,17 @@
+id_fonte,instituicao,tipo_documental,ano,local,grupo_representado,localizado,digitalizado,condicao_acesso,qualidade_metadados
+A001,Arquivo Municipal,ata,1890,Capital,elite administrativa,sim,sim,público,completo
+A002,Arquivo Municipal,ata,1891,Capital,elite administrativa,sim,sim,público,completo
+A003,Arquivo Municipal,requerimento,1892,Capital,trabalhadores,sim,não,restrito,parcial
+A004,Arquivo Municipal,requerimento,1894,Interior,trabalhadores,sim,sim,público,completo
+A005,Arquivo Municipal,ata,1901,Capital,elite administrativa,sim,sim,público,completo
+B001,Museu Comunitário,carta,1890,Interior,associação comunitária,sim,sim,mediante autorização,parcial
+B002,Museu Comunitário,carta,1893,Interior,mulheres associadas,sim,sim,mediante autorização,completo
+B003,Museu Comunitário,fotografia,1895,Interior,associação comunitária,sim,não,mediante autorização,mínimo
+B004,Museu Comunitário,carta,1902,Interior,mulheres associadas,sim,sim,mediante autorização,parcial
+C001,Biblioteca Regional,jornal,1890,Capital,público leitor,sim,sim,público,completo
+C002,Biblioteca Regional,jornal,1892,Capital,público leitor,sim,sim,público,completo
+C003,Biblioteca Regional,jornal,1895,Interior,público leitor,sim,sim,público,parcial
+C004,Biblioteca Regional,jornal,1900,Capital,público leitor,sim,sim,público,completo
+C005,Biblioteca Regional,jornal,1904,Interior,público leitor,sim,não,público,mínimo
+D001,Coleção Particular,diário,1891,Capital,família proprietária,não,não,sem autorização,mínimo
+D002,Coleção Particular,diário,1903,Interior,família proprietária,sim,não,restrito,parcial

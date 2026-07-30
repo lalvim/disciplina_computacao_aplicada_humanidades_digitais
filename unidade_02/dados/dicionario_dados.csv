@@ -1,0 +1,11 @@
+campo,descricao,tipo,regra,origem
+id_fonte,Identificador estável no catálogo didático,texto,único e não vazio,equipe docente
+instituicao,Custodiante fictício da fonte,categoria,quatro valores previstos,catálogo simulado
+tipo_documental,Gênero atribuído ao item,categoria,vocabulário controlado,catálogo simulado
+ano,Ano atribuído ao item,inteiro,1890 a 1904,catálogo simulado
+local,Recorte espacial amplo,categoria,Capital ou Interior,catálogo simulado
+grupo_representado,Grupo mais diretamente registrado,categoria,interpretação didática,equipe docente
+localizado,Item localizado no levantamento,categoria,sim ou não,levantamento simulado
+digitalizado,Representação digital disponível,categoria,sim ou não,levantamento simulado
+condicao_acesso,Condição informada pelo custodiante,categoria,não equivale a licença de uso,catálogo simulado
+qualidade_metadados,Completude descritiva aproximada,ordinal,"mínimo, parcial ou completo",equipe docente

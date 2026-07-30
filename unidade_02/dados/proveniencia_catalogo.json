@@ -1,0 +1,17 @@
+{
+  "titulo": "Catálogo didático de fontes",
+  "natureza": "dados inteiramente fictícios",
+  "criado_em": "2026-07-30",
+  "responsavel": "equipe docente",
+  "finalidade": "demonstrar seleção, cobertura, metadados e proveniência",
+  "origem": "registros simulados, sem correspondência com acervos reais",
+  "transformacoes": [
+    "atribuição manual de identificadores",
+    "normalização didática de nomes de instituições",
+    "criação deliberada de lacunas de digitalização e metadados"
+  ],
+  "restricoes": [
+    "não usar para afirmações históricas",
+    "condições de acesso são exemplos pedagógicos"
+  ]
+}

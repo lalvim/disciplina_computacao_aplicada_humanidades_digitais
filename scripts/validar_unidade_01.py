@@ -254,6 +254,7 @@ def validar_revisores() -> None:
         "04_humanidades_digitais.md",
         "05_referencias.md",
         "06_tecnico_acessibilidade.md",
+        "avaliacao_tipologia_perguntas.md",
         "parecer_consolidado.md",
     }
     rodada_2_encontrados = {
@@ -263,8 +264,8 @@ def validar_revisores() -> None:
     consolidado_2 = (pasta_rodada_2 / "parecer_consolidado.md").read_text(
         encoding="utf-8"
     )
-    assert "Aprovada com ajustes" in consolidado_2
-    assert "98%" in consolidado_2
+    assert "Aprovada com ajuste" in consolidado_2
+    assert "87%" in consolidado_2
 
 
 def main() -> None:

@@ -2,27 +2,29 @@
 
 ## Decisão
 
-**Aprovada com ajustes.**
+**Aprovada com ajuste alto obrigatório.**
 
-Não restam achados bloqueantes ou altos. A unidade pode ser ofertada, desde que
-os ajustes médios sejam registrados para acompanhamento.
+Não há achado bloqueante. Uma avaliação extraordinária identificou um achado
+alto na classificação das perguntas: o material mistura finalidades
+epistemológicas e estruturas analíticas. A versão definitiva depende desse
+ajuste.
 
 ## Resultado
 
 | Dimensão | Peso | Nota | Resultado |
 |---|---:|---:|---:|
 | Adequação ao mestrado | 3 | 3 | 9 |
-| Precisão e profundidade conceitual | 3 | 3 | 9 |
+| Precisão e profundidade conceitual | 3 | 2 | 6 |
 | Progressão didática | 3 | 3 | 9 |
-| Alinhamento à ementa e ao produto | 3 | 3 | 9 |
+| Alinhamento à ementa e ao produto | 3 | 2 | 6 |
 | Pertencimento às Humanidades Digitais | 3 | 3 | 9 |
-| Referências acadêmicas | 3 | 3 | 9 |
+| Referências acadêmicas | 3 | 2 | 6 |
 | Código e interpretação | 2 | 3 | 6 |
 | Ética, vieses e limites | 2 | 3 | 6 |
 | Avaliação e gabaritos | 2 | 3 | 6 |
 | Reprodutibilidade técnica | 2 | 3 | 6 |
 | Acessibilidade e inclusão | 2 | 2 | 4 |
-| **Total** | **28** |  | **82/84 = 98%** |
+| **Total** | **28** |  | **73/84 = 87%** |
 
 ## Bloqueios resolvidos
 
@@ -38,12 +40,13 @@ os ajustes médios sejam registrados para acompanhamento.
 
 | ID | Gravidade | Ação |
 |---|---|---|
+| TP-001 | Alta | Separar finalidade da pergunta e estrutura analítica |
 | TA2-001 | Média | Testar com leitor de tela real |
 | HD2-001 | Média | Incluir caso complementar sem ampliar carga essencial |
 | DI2-001 | Baixa | Criar orientação docente para usar o diagnóstico |
 
 ## Condição de acompanhamento
 
-Registrar o resultado do teste assistivo antes da distribuição pública. Os
-demais ajustes podem ser incorporados na manutenção da disciplina.
-
+Executar `notes/plano_ajuste_tipologia_perguntas.md` antes da versão definitiva
+e submeter o resultado aos quatro revisores indicados. Registrar o teste
+assistivo antes da distribuição pública.

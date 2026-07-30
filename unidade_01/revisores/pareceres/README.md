@@ -23,4 +23,5 @@ se já estivessem implementadas.
 
 Após a implementação dos achados, os seis revisores foram executados novamente.
 O resultado está em `rodada_02/parecer_consolidado.md`: **aprovada com ajustes**,
-sem achados bloqueantes ou altos.
+sem achado bloqueante. Uma avaliação extraordinária posterior registrou ajuste
+alto na classificação das perguntas.

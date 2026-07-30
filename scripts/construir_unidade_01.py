@@ -1549,8 +1549,9 @@ de parecer.
 
 Os pareceres executados ficam em `revisores/pareceres`. Após alterações
 acadêmicas ou didáticas, uma nova rodada deve registrar explicitamente quais
-achados foram resolvidos. A Rodada 2 aprovou a unidade com ajustes; o teste
-manual com leitor de tela permanece pendente.
+achados foram resolvidos. A Rodada 2 aprovou a unidade com ajustes. Uma
+avaliação extraordinária posterior identificou ajuste alto na classificação das
+perguntas; o teste manual com leitor de tela também permanece pendente.
 
 ## Execução
 

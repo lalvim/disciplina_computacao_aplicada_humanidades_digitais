@@ -31,6 +31,9 @@ Verificar se a unidade:
 | `matriz_de_avaliacao.md` | Reunir critérios e decisão de publicação |
 | `modelo_de_parecer.md` | Padronizar a entrega de cada revisão |
 
+Os pareceres já executados ficam em `pareceres/`. O arquivo
+`pareceres/parecer_consolidado.md` registra a decisão da rodada atual.
+
 ## Materiais que devem ser lidos
 
 Todos os revisores devem consultar:
@@ -121,4 +124,3 @@ e com qual consequência.
 Cada especialista deve produzir seu parecer antes de ler o parecer dos demais.
 Discordâncias devem ser preservadas no relatório consolidado. O coordenador não
 deve transformar diversidade de avaliação em unanimidade artificial.
-

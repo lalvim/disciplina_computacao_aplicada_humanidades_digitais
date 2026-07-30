@@ -184,6 +184,31 @@ def validar_revisores() -> None:
     ausentes = [criterio for criterio in criterios if criterio not in conteudo]
     assert not ausentes, f"critérios ausentes dos revisores: {', '.join(ausentes)}"
 
+    pasta_pareceres = pasta / "pareceres"
+    pareceres_esperados = {
+        "README.md",
+        "01_parecer_nivel_academico.md",
+        "02_parecer_didatica.md",
+        "03_parecer_alinhamento.md",
+        "04_parecer_humanidades_digitais.md",
+        "05_parecer_referencias.md",
+        "06_parecer_tecnico_acessibilidade.md",
+        "parecer_consolidado.md",
+    }
+    pareceres_encontrados = {
+        caminho.name for caminho in pasta_pareceres.glob("*.md")
+    }
+    assert pareceres_encontrados == pareceres_esperados, (
+        f"pareceres divergentes: esperados {sorted(pareceres_esperados)}, "
+        f"encontrados {sorted(pareceres_encontrados)}"
+    )
+
+    consolidado = (pasta_pareceres / "parecer_consolidado.md").read_text(
+        encoding="utf-8"
+    )
+    assert "revisão obrigatória" in consolidado.lower()
+    assert "64%" in consolidado
+
 
 def main() -> None:
     notebooks = sorted(UNIDADE.glob("*.ipynb"))
@@ -206,7 +231,10 @@ def main() -> None:
     validar_gabaritos()
     print("OK gabaritos: 5 arquivos de respostas e 1 guia docente")
     validar_revisores()
-    print("OK revisores: 6 especialidades, coordenação, matriz e modelo")
+    print(
+        "OK revisores: 6 especialidades, coordenação, matriz, modelo e "
+        "7 pareceres executados"
+    )
     print(
         f"OK total: {len(notebooks)} notebooks, "
         f"{total_textos} células de texto, {total_codigos} de código"

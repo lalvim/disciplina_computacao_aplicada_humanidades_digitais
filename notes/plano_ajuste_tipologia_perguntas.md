@@ -1,5 +1,8 @@
 # Plano de ajuste — Finalidades e estruturas das perguntas
 
+**Situação:** executado em 30 de julho de 2026. A implementação foi verificada
+na terceira rodada de pareceres da Unidade 1.
+
 ## 1. Problema identificado
 
 O Notebook 01 apresenta cinco categorias equivalentes:
@@ -170,4 +173,3 @@ Este ajuste não introduzirá testes estatísticos, regressão ou modelos
 preditivos. Esses métodos pertencem a unidades posteriores. Aqui serão
 trabalhadas somente as finalidades das perguntas e suas consequências para o
 desenho da pesquisa.
-

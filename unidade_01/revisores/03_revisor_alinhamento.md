@@ -18,7 +18,7 @@ Tratar como referência de alinhamento:
 Verificar presença e profundidade de:
 
 1. Humanidades Digitais e pesquisa orientada por dados;
-2. perguntas descritivas, comparativas, associativas, explicativas e preditivas;
+2. finalidades descritivas, explicativas e preditivas e estruturas comparativas e associativas;
 3. conceitos teóricos e operacionalização;
 4. unidade de análise;
 5. população, amostra e corpus;
@@ -34,7 +34,7 @@ o percurso permite produzir:
 
 - fenômeno e contexto;
 - pergunta delimitada;
-- tipo de pergunta;
+- finalidade e estrutura analítica da pergunta;
 - unidade de análise;
 - fontes e corpus possíveis;
 - operacionalização inicial;
@@ -79,4 +79,3 @@ Usar as situações:
 
 Usar `modelo_de_parecer.md`, anexar a matriz de cobertura e apresentar decisão
 de alinhamento.
-

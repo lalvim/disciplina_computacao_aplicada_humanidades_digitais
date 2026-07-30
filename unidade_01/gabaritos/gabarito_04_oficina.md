@@ -32,8 +32,12 @@ educação e trabalho?
 editoriais, notícias e cartas dos três periódicos da coleção didática, entre
 1890 e 1905?
 
-**Tipo predominante:** Comparativa, pois confronta gêneros documentais. A
-contagem inicial é descritiva.
+**Finalidade predominante:** Descritiva, pois a pergunta caracteriza como a
+categoria se distribui.
+
+**Estrutura analítica inicial:** Comparativa, pois confronta gêneros
+documentais. Uma associação entre gênero e tema poderia ser explorada como
+etapa secundária, sem ser tomada automaticamente como explicação causal.
 
 **Tarefa computacional:** Filtrar documentos, agrupar por gênero e calcular a
 frequência absoluta e relativa da categoria “progresso”.

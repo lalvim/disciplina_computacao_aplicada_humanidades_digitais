@@ -6,8 +6,8 @@
 |---:|:---:|---|
 | 1 | B | Humanidades Digitais |
 | 2 | C | Humanidades Digitais |
-| 3 | B | Tipos de pergunta |
-| 4 | D | Tipos de pergunta |
+| 3 | B | Finalidade e estrutura da pergunta |
+| 4 | D | Finalidade e estrutura da pergunta |
 | 5 | B | Operacionalização |
 | 6 | C | Operacionalização |
 | 7 | A | Unidade de análise |
@@ -38,13 +38,13 @@ transformação. Eles não são cópias neutras e completas do fenômeno.
 
 ### 3. B
 
-A pergunta confronta dois grupos — Capital e Interior — e é, portanto,
-predominantemente comparativa.
+A pergunta tem finalidade descritiva e estrutura comparativa: descreve uma
+possível diferença por meio do confronto entre Capital e Interior.
 
 ### 4. D
 
-Estimar o gênero desconhecido de um documento a partir de metadados caracteriza
-uma finalidade preditiva.
+Estimar o gênero desconhecido caracteriza uma finalidade preditiva; relacionar
+metadados ao resultado caracteriza uma estrutura associativa.
 
 ### 5. B
 
@@ -115,4 +115,3 @@ problemas de cobertura.
 
 Automação aumenta velocidade e escala. Ela não garante validade e pode
 reproduzir problemas sistematicamente.
-

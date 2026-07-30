@@ -18,7 +18,7 @@ Este plano segue as
 Ao concluir a unidade, o estudante deverá ser capaz de:
 
 1. reconhecer possibilidades e limites da pesquisa orientada por dados em Humanidades Digitais;
-2. diferenciar perguntas descritivas, comparativas, associativas, explicativas e preditivas;
+2. distinguir finalidades descritivas, explicativas e preditivas e estruturas analíticas comparativas e associativas;
 3. transformar uma questão humanística ampla em uma pergunta observável e computacionalmente tratável;
 4. distinguir conceito teórico, indicador, variável e categoria;
 5. definir unidade de análise, população, amostra e corpus;
@@ -60,10 +60,10 @@ unidade_01/
 ### Notebook 01 — Perguntas e problemas computacionais
 
 - Humanidades Digitais e pesquisa orientada por dados;
-- perguntas descritivas, comparativas, associativas, explicativas e preditivas;
+- finalidade da pergunta e estrutura analítica, tratadas como dimensões combináveis;
 - diferença entre pergunta humanística, pergunta de pesquisa e tarefa computacional;
 - organização de exemplos em uma pequena base;
-- filtragem e contagem de tipos de pergunta com Python;
+- filtragem e contagem de finalidades e estruturas com Python;
 - reformulação progressiva de uma questão ampla.
 
 **Produto parcial:** três versões progressivamente mais tratáveis de uma pergunta.
@@ -99,7 +99,7 @@ unidade_01/
 - roteiro integralmente preenchível em células Markdown;
 - definição do fenômeno e do contexto;
 - formulação e revisão da pergunta;
-- identificação do tipo de pergunta;
+- identificação da finalidade e da estrutura analítica da pergunta;
 - definição da unidade de análise;
 - delimitação da população, amostra ou corpus;
 - operacionalização de conceitos;

@@ -22,23 +22,23 @@ Por que se afirma que dados não são o fenômeno “em estado puro”?
 - [ ] **C.** Porque registros resultam de processos de produção, seleção, descrição e transformação.
 - [ ] **D.** Porque computadores não conseguem armazenar informações culturais.
 
-## Questão 3 — Tipos de pergunta
+## Questão 3 — Finalidade e estrutura da pergunta
 
-A pergunta “Os temas dos editoriais diferem entre Capital e Interior?” é predominantemente:
+Como classificar “Os temas dos editoriais diferem entre Capital e Interior?” nas duas dimensões adotadas pela unidade?
 
-- [ ] **A.** Descritiva.
-- [ ] **B.** Comparativa.
-- [ ] **C.** Explicativa.
-- [ ] **D.** Preditiva.
+- [ ] **A.** Finalidade explicativa; estrutura comparativa.
+- [ ] **B.** Finalidade descritiva; estrutura comparativa.
+- [ ] **C.** Finalidade comparativa; estrutura descritiva.
+- [ ] **D.** Finalidade preditiva; estrutura associativa.
 
-## Questão 4 — Tipos de pergunta
+## Questão 4 — Finalidade e estrutura da pergunta
 
-Qual pergunta é predominantemente preditiva?
+Qual alternativa distingue corretamente finalidade e estrutura analítica?
 
-- [ ] **A.** Quais gêneros documentais aparecem na coleção?
-- [ ] **B.** Por que o sentido de progresso mudou no período?
-- [ ] **C.** Gênero documental e tema aparecem associados?
-- [ ] **D.** Os metadados permitem estimar o gênero de um documento ainda não classificado?
+- [ ] **A.** Comparar grupos é sempre uma finalidade explicativa.
+- [ ] **B.** Investigar associação demonstra causalidade.
+- [ ] **C.** Predição e explicação são nomes equivalentes para a mesma finalidade.
+- [ ] **D.** Estimar o gênero por metadados tem finalidade preditiva e estrutura associativa.
 
 ## Questão 5 — Operacionalização
 

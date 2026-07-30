@@ -1,5 +1,8 @@
 # Avaliação extraordinária — Tipologia das perguntas
 
+> **Situação posterior:** achado resolvido na rodada 3 após a adoção das
+> dimensões finalidade e estrutura analítica.
+
 **Data:** 30 de julho de 2026  
 **Objeto:** Notebook 01, item 2, e materiais dependentes  
 **Decisão:** aprovada com ajuste alto obrigatório antes da versão definitiva
@@ -97,4 +100,3 @@ didática, não como consenso universal.
 Executar integralmente
 `notes/plano_ajuste_tipologia_perguntas.md`. A resolução deverá ser confirmada
 por revisão de nível acadêmico, didática, alinhamento e referências.
-

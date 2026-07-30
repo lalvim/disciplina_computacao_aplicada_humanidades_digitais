@@ -57,7 +57,7 @@ def validar_notebook(caminho: Path) -> tuple[int, int]:
 def validar_cobertura() -> None:
     termos = {
         "Humanidades Digitais": "humanidades digitais",
-        "tipos de pergunta": "descritiva",
+        "finalidade e estrutura da pergunta": "estrutura analítica",
         "operacionalização": "operacionaliza",
         "unidade de análise": "unidade de análise",
         "população, amostra e corpus": "população",
@@ -89,7 +89,7 @@ def validar_exercicios_html() -> None:
 
     topicos = [
         "Humanidades Digitais",
-        "Tipos de pergunta",
+        "Finalidade e estrutura da pergunta",
         "Operacionalização",
         "Unidade de análise",
         "População, amostra e corpus",
@@ -117,6 +117,8 @@ def validar_referencias() -> None:
         "D'IGNAZIO, Catherine",
         "RODRIGUES, Aldair",
         "FERLA, Luis Antonio",
+        "SHMUELI, Galit",
+        "DREW, Clifford",
     ]
     ausentes = [autor for autor in autores if autor not in referencias]
     assert not ausentes, f"autores ausentes: {', '.join(ausentes)}"
@@ -135,6 +137,37 @@ def validar_referencias() -> None:
     )
     assert "Conceito central e autores de referência" in oficina
     assert "Referências utilizadas" in oficina
+
+    caminho_notebook_01 = UNIDADE / "01_perguntas_e_problemas_computacionais.ipynb"
+    documento_notebook_01 = json.loads(caminho_notebook_01.read_text(encoding="utf-8"))
+    notebook_01 = "\n".join(
+        fonte_da_celula(celula) for celula in documento_notebook_01["cells"]
+    )
+    assert '"finalidade"' in notebook_01 and '"estrutura"' in notebook_01
+    assert "Shmueli (2010)" in notebook_01
+
+    materiais_ativos = [
+        RAIZ / "notes" / "contexto_disciplina.md",
+        RAIZ / "notes" / "plano_unidade_01.md",
+        UNIDADE / "00_guia_da_unidade.ipynb",
+        UNIDADE / "01_perguntas_e_problemas_computacionais.ipynb",
+        UNIDADE / "04_oficina_projeto_de_pesquisa.ipynb",
+        UNIDADE / "exercicios_unidade_01.html",
+        *sorted((UNIDADE / "gabaritos").glob("*.md")),
+    ]
+    formulacao_antiga = "cinco tipos de pergunta"
+    ocorrencias = [
+        str(caminho.relative_to(RAIZ))
+        for caminho in materiais_ativos
+        if formulacao_antiga in caminho.read_text(encoding="utf-8").lower()
+    ]
+    assert not ocorrencias, (
+        "formulação antiga encontrada em materiais ativos: "
+        + ", ".join(ocorrencias)
+    )
+
+    assert "Finalidade predominante e justificativa" in oficina
+    assert "Estrutura analítica inicial" in oficina
 
 
 def validar_gabaritos() -> None:
@@ -267,6 +300,25 @@ def validar_revisores() -> None:
     assert "Aprovada com ajuste" in consolidado_2
     assert "87%" in consolidado_2
 
+    pasta_rodada_3 = pasta_pareceres / "rodada_03"
+    rodada_3_esperados = {
+        "README.md",
+        "01_nivel_academico.md",
+        "02_didatica.md",
+        "03_alinhamento.md",
+        "05_referencias.md",
+        "parecer_consolidado.md",
+    }
+    rodada_3_encontrados = {
+        caminho.name for caminho in pasta_rodada_3.glob("*.md")
+    }
+    assert rodada_3_encontrados == rodada_3_esperados
+    consolidado_3 = (pasta_rodada_3 / "parecer_consolidado.md").read_text(
+        encoding="utf-8"
+    )
+    assert "Aprovada" in consolidado_3
+    assert "100%" in consolidado_3
+
 
 def main() -> None:
     notebooks = sorted(UNIDADE.glob("*.ipynb"))
@@ -295,7 +347,7 @@ def main() -> None:
     validar_revisores()
     print(
         "OK revisores: 6 especialidades, coordenação, matriz, modelo e "
-        "2 rodadas de pareceres executadas"
+        "3 rodadas de pareceres executadas"
     )
     print(
         f"OK total: {len(notebooks)} notebooks, "

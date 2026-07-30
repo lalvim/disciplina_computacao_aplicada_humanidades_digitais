@@ -23,7 +23,7 @@ Avaliar:
 ### Conceitos
 
 - Humanidades Digitais não são reduzidas ao uso de ferramentas;
-- tipos de pergunta são diferenciados sem simplificação excessiva;
+- finalidade e estrutura analítica são diferenciadas sem simplificação excessiva;
 - operacionalização não é apresentada como tradução neutra;
 - unidade de análise, população, amostra e corpus são distinguidos;
 - evidência computacional não é confundida com prova ou verdade;
@@ -79,4 +79,3 @@ Usar `modelo_de_parecer.md` e incluir:
 - conceitos que precisam de aprofundamento;
 - recomendação de carga ou recorte;
 - decisão.
-

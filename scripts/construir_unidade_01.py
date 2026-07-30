@@ -156,7 +156,7 @@ def guia() -> list[dict]:
 
             Ao final do percurso, você deverá ser capaz de:
 
-            1. distinguir cinco tipos de pergunta de pesquisa;
+            1. distinguir a finalidade e a estrutura analítica de uma pergunta;
             2. operacionalizar conceitos sem confundi-los com seus indicadores;
             3. definir unidade de análise, população, amostra e corpus;
             4. reconhecer dados estruturados, semiestruturados e não estruturados;
@@ -172,7 +172,7 @@ def guia() -> list[dict]:
             | Notebook | Questão central | Produto |
             |---|---|---|
             | 00 | Como a unidade está organizada? | Diagnóstico inicial |
-            | 01 | Que tipo de pergunta estamos fazendo? | Pergunta reformulada |
+            | 01 | Com que finalidade e estrutura perguntamos? | Pergunta reformulada |
             | 02 | Como representar conceitos e observações? | Mapa de operacionalização |
             | 03 | Que conjunto de dados sustenta a análise? | Ficha do corpus |
             | 04 | O projeto é coerente e viável? | Formulação inicial do projeto |
@@ -329,23 +329,30 @@ def perguntas() -> list[dict]:
         ),
         texto(
             """
-            ## 2. Cinco tipos de pergunta
+            ## 2. Duas dimensões combináveis da pergunta
 
-            - **Descritiva:** caracteriza ocorrências ou distribuições.
-              Ex.: quais temas aparecem nos editoriais da coleção?
-            - **Comparativa:** procura diferenças ou semelhanças.
-              Ex.: os temas diferem entre Capital e Interior?
-            - **Associativa:** investiga se características variam juntas.
-              Ex.: gênero documental e tema aparecem associados?
-            - **Explicativa:** pergunta por mecanismos ou fatores relacionados a um
-              resultado, exigindo uma teoria e cautela causal.
-              Ex.: que condições ajudam a explicar mudanças no debate educacional?
-            - **Preditiva:** busca estimar um resultado desconhecido a partir de
-              características disponíveis.
-              Ex.: metadados permitem prever o gênero de um documento?
+            Para evitar misturar categorias de níveis diferentes, a disciplina adota
+            uma organização didática em duas dimensões. Ela não pretende ser uma
+            taxonomia universal.
 
-            Uma mesma temática comporta perguntas diferentes. O verbo usado oferece
-            pistas, mas o tipo depende da finalidade lógica da investigação.
+            **Finalidade predominante**
+
+            - **Descritiva:** caracteriza ocorrências, distribuições ou padrões.
+            - **Explicativa:** investiga mecanismos e condições relacionados a um
+              resultado, com teoria e cautela causal.
+            - **Preditiva:** estima um resultado desconhecido em novos casos.
+
+            **Estrutura analítica inicial**
+
+            - **Sem relação inicial:** caracteriza um conjunto sem confronto explícito.
+            - **Comparativa:** confronta grupos, períodos, documentos ou contextos.
+            - **Associativa:** examina como características variam em conjunto.
+
+            As dimensões podem ser combinadas. “Os temas diferem entre Capital e
+            Interior?” tem finalidade descritiva e estrutura comparativa. Comparações
+            e associações também podem integrar uma investigação explicativa, mas não
+            demonstram causalidade por si sós. A distinção entre explicar e prever é
+            discutida por Shmueli (2010).
             """
         ),
         texto(
@@ -357,8 +364,8 @@ def perguntas() -> list[dict]:
             preveja quantas linhas e colunas aparecerão.
 
             O objetivo não é aprender toda a sintaxe de `pandas`, mas observar que uma
-            tipologia pode ser registrada e consultada — e que o código não justifica
-            as categorias por nós.
+            classificação pode ser registrada e consultada — e que o código não
+            justifica as categorias por nós.
             """
         ),
         codigo(
@@ -368,27 +375,32 @@ def perguntas() -> list[dict]:
             perguntas = [
                 {
                     "pergunta": "Quais temas aparecem nos documentos?",
-                    "tipo": "descritiva",
+                    "finalidade": "descritiva",
+                    "estrutura": "sem relação inicial",
                     "operacao_inicial": "contar ocorrências por tema",
                 },
                 {
                     "pergunta": "Os temas diferem entre Capital e Interior?",
-                    "tipo": "comparativa",
+                    "finalidade": "descritiva",
+                    "estrutura": "comparativa",
                     "operacao_inicial": "comparar distribuições",
                 },
                 {
                     "pergunta": "Gênero documental e tema variam juntos?",
-                    "tipo": "associativa",
+                    "finalidade": "descritiva",
+                    "estrutura": "associativa",
                     "operacao_inicial": "cruzar categorias",
                 },
                 {
                     "pergunta": "Que processos explicam a mudança do debate?",
-                    "tipo": "explicativa",
+                    "finalidade": "explicativa",
+                    "estrutura": "comparativa e associativa",
                     "operacao_inicial": "formular e confrontar explicações",
                 },
                 {
                     "pergunta": "É possível estimar o gênero pelos metadados?",
-                    "tipo": "preditiva",
+                    "finalidade": "preditiva",
+                    "estrutura": "associativa",
                     "operacao_inicial": "treinar e avaliar uma previsão",
                 },
             ]
@@ -400,14 +412,15 @@ def perguntas() -> list[dict]:
         texto(
             """
             Na célula seguinte, a expressão entre colchetes produz uma sequência de
-            valores verdadeiros e falsos. Ela mantém somente as linhas cujo tipo é
-            “comparativa”. Preveja o número de linhas antes de executar.
+            valores verdadeiros e falsos. Ela mantém somente as linhas cuja finalidade
+            é descritiva. Preveja o número de linhas antes de executar e compare as
+            estruturas presentes no resultado.
             """
         ),
         codigo(
             """
-            # Filtrar uma categoria é simples; justificar a categoria é parte da pesquisa.
-            tabela_perguntas[tabela_perguntas["tipo"] == "comparativa"]
+            # Filtrar é simples; justificar finalidade e estrutura é parte da pesquisa.
+            tabela_perguntas[tabela_perguntas["finalidade"] == "descritiva"]
             """
         ),
         texto(
@@ -486,7 +499,8 @@ def perguntas() -> list[dict]:
             """
             ## Atividade guiada — classifique com justificativa
 
-            Para cada pergunta abaixo, indique o tipo predominante e justifique:
+            Para cada pergunta abaixo, indique separadamente a finalidade predominante
+            e a estrutura analítica inicial. Justifique ambas:
 
             1. Quais personagens falam mais em um conjunto de romances?
             2. A presença de personagens femininas difere entre dois períodos?
@@ -501,15 +515,15 @@ def perguntas() -> list[dict]:
             """
             ### Minhas classificações
 
-            1. **Tipo:** Escreva aqui.
+            1. **Finalidade e estrutura:** Escreva aqui.
                **Justificativa:** Escreva aqui.
-            2. **Tipo:** Escreva aqui.
+            2. **Finalidade e estrutura:** Escreva aqui.
                **Justificativa:** Escreva aqui.
-            3. **Tipo:** Escreva aqui.
+            3. **Finalidade e estrutura:** Escreva aqui.
                **Justificativa:** Escreva aqui.
-            4. **Tipo:** Escreva aqui.
+            4. **Finalidade e estrutura:** Escreva aqui.
                **Justificativa:** Escreva aqui.
-            5. **Tipo:** Escreva aqui.
+            5. **Finalidade e estrutura:** Escreva aqui.
                **Justificativa:** Escreva aqui.
             """
         ),
@@ -522,10 +536,10 @@ def perguntas() -> list[dict]:
             > Quais mudanças no vocabulário distinguem dois períodos e que processos
             > históricos ajudam a explicá-las?
 
-            A comparação produz o padrão inicial; a explicação exige teoria, contexto
-            e confronto de mecanismos. Indique qual tipo é predominante, quais são as
-            etapas secundárias e como a pergunta mudaria se o objetivo fosse prever o
-            período de um documento.
+            A estrutura comparativa produz o padrão inicial; a finalidade explicativa
+            exige teoria, contexto e confronto de mecanismos. Indique a finalidade e
+            as estruturas presentes, as etapas secundárias e como a pergunta mudaria
+            se a finalidade fosse prever o período de um documento.
             """
         ),
         texto(
@@ -551,7 +565,10 @@ def perguntas() -> list[dict]:
             **Pergunta delimitada:**
             Escreva aqui.
 
-            **Tipo predominante e justificativa:**
+            **Finalidade predominante e justificativa:**
+            Escreva aqui.
+
+            **Estrutura analítica inicial e justificativa:**
             Escreva aqui.
 
             **Tarefa computacional inicial:**
@@ -573,6 +590,9 @@ def perguntas() -> list[dict]:
               Data over Capta”.
             - FERLA, Luis A.; LIMA, Luís F.; FEITLER, Bruno (2020).
               “Novidades no front”.
+            - SHMUELI, Galit (2010). “To Explain or to Predict?”.
+            - DREW, Clifford J.; HARDMAN, Michael L.; HOSP, John L. (2008).
+              *Designing and Conducting Research in Education*, cap. 2.
 
             Dados completos e links: `referencias.md`.
             """
@@ -1247,7 +1267,10 @@ def oficina() -> list[dict]:
             **Pergunta delimitada:**
             Escreva aqui.
 
-            **Tipo predominante da pergunta e justificativa:**
+            **Finalidade predominante e justificativa:**
+            Escreva aqui.
+
+            **Estrutura analítica inicial, etapas secundárias e justificativa:**
             Escreva aqui.
 
             **Tarefa computacional inicial possível:**

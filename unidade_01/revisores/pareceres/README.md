@@ -25,3 +25,9 @@ Após a implementação dos achados, os seis revisores foram executados novament
 O resultado está em `rodada_02/parecer_consolidado.md`: **aprovada com ajustes**,
 sem achado bloqueante. Uma avaliação extraordinária posterior registrou ajuste
 alto na classificação das perguntas.
+
+## Rodada 3
+
+Os quatro revisores afetados verificaram a implementação do ajuste conceitual.
+O resultado está em `rodada_03/parecer_consolidado.md`: **aprovada**, com
+resolução do achado TP-001.

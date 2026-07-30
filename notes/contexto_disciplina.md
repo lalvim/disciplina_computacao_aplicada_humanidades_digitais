@@ -24,7 +24,7 @@ Capacitar o estudante a transformar uma questão de pesquisa das Humanidades em 
 Ao final da disciplina, o estudante deverá ser capaz de:
 
 1. formular perguntas de pesquisa passíveis de investigação computacional;
-2. distinguir problemas descritivos, comparativos, associativos, classificatórios, preditivos e relacionais;
+2. distinguir finalidades descritivas, explicativas e preditivas e reconhecer estruturas analíticas comparativas, associativas, classificatórias e relacionais;
 3. definir unidade de análise, variáveis, categorias e corpus;
 4. organizar bases contendo textos, metadados e dados numéricos;
 5. realizar limpeza, transformação, integração e documentação de dados;
@@ -75,7 +75,7 @@ Como representar computacionalmente um fenômeno histórico, social, linguístic
 ### Conteúdos
 
 1. Humanidades Digitais e pesquisa orientada por dados.
-2. Perguntas descritivas, comparativas, associativas, explicativas e preditivas.
+2. Finalidades descritivas, explicativas e preditivas; estruturas analíticas comparativas e associativas.
 3. Conceitos teóricos e operacionalização.
 4. Unidade de análise.
 5. População, amostra e corpus.

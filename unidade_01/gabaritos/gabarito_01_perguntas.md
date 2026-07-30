@@ -6,7 +6,9 @@
 
 > Quais personagens falam mais em um conjunto de romances?
 
-**Tipo predominante:** descritiva.
+**Finalidade predominante:** descritiva.
+
+**Estrutura inicial:** sem relação inicial.
 
 **Justificativa:** a pergunta caracteriza uma distribuição no corpus. Uma
 operação inicial possível seria identificar personagens, atribuir falas e contar
@@ -16,7 +18,9 @@ o número de falas por personagem.
 
 > A presença de personagens femininas difere entre dois períodos?
 
-**Tipo predominante:** comparativa.
+**Finalidade predominante:** descritiva.
+
+**Estrutura inicial:** comparativa.
 
 **Justificativa:** a pergunta confronta a presença de uma categoria em dois
 grupos temporais. Antes da comparação, seria necessário definir “presença” e
@@ -26,7 +30,9 @@ grupos temporais. Antes da comparação, seria necessário definir “presença�
 
 > A posição social de uma personagem está relacionada ao número de falas?
 
-**Tipo predominante:** associativa.
+**Finalidade predominante:** descritiva.
+
+**Estrutura inicial:** associativa.
 
 **Justificativa:** a pergunta investiga se duas características variam juntas.
 Uma associação observada não demonstraria, por si, que a posição social causa
@@ -36,7 +42,10 @@ maior ou menor número de falas.
 
 > Que convenções literárias ajudam a explicar essas diferenças?
 
-**Tipo predominante:** explicativa.
+**Finalidade predominante:** explicativa.
+
+**Estrutura inicial:** comparativa, pois “essas diferenças” remetem ao
+confronto entre períodos; outras relações poderão integrar a explicação.
 
 **Justificativa:** a pergunta procura mecanismos ou condições que tornem o
 resultado compreensível. Ela exige teoria literária, contexto e leitura dos
@@ -46,7 +55,10 @@ casos, não apenas uma nova contagem.
 
 > É possível prever o período do romance por características do vocabulário?
 
-**Tipo predominante:** preditiva.
+**Finalidade predominante:** preditiva.
+
+**Estrutura inicial:** associativa, pois características do vocabulário são
+relacionadas ao período a estimar.
 
 **Justificativa:** a tarefa consiste em estimar uma categoria desconhecida — o
 período — a partir de características observadas no vocabulário.
@@ -62,8 +74,11 @@ sobre educação e trabalho?
 entre editoriais, notícias e cartas dos três periódicos da coleção didática,
 entre 1890 e 1905?
 
-**Tipo predominante:** comparativa, pois confronta a ocorrência da categoria
-entre gêneros documentais. Existe também uma etapa descritiva inicial.
+**Finalidade predominante:** descritiva, pois caracteriza a distribuição de
+uma categoria.
+
+**Estrutura inicial:** comparativa, pois confronta a ocorrência da categoria
+entre gêneros documentais.
 
 **Tarefa computacional:** selecionar os documentos da coleção, agrupar os
 registros por gênero e comparar a frequência absoluta e relativa da categoria
@@ -80,11 +95,11 @@ Uma resposta adequada:
 
 - apresenta um fenômeno humanisticamente relevante;
 - delimita contexto, fontes ou recorte;
-- identifica corretamente a finalidade predominante da pergunta;
+- identifica e justifica separadamente finalidade e estrutura;
 - propõe uma operação compatível com a pergunta;
 - diferencia operação computacional de interpretação;
 - explicita ao menos uma limitação importante.
 
-Não exigir que todas as perguntas sejam comparativas. O tipo escolhido deve ser
-coerente com a formulação e com a tarefa proposta.
-
+Não exigir uma estrutura comparativa. Finalidade e estrutura escolhidas devem
+ser coerentes com a formulação e com a tarefa proposta. Mais de uma estrutura
+pode ser aceita quando a combinação estiver bem justificada.

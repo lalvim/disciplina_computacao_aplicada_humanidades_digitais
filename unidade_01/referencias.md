@@ -41,6 +41,18 @@ https://doi.org/10.1590/S2178-14942020000100005.
 
 ## Leituras complementares
 
+### Perguntas, finalidades e desenho de pesquisa
+
+SHMUELI, Galit. To Explain or to Predict? *Statistical Science*, v. 25, n. 3,
+p. 289–310, 2010. https://doi.org/10.1214/10-STS330.
+
+DREW, Clifford J.; HARDMAN, Michael L.; HOSP, John L. *Designing and Conducting
+Research in Education*. Thousand Oaks: SAGE, 2008. O capítulo 2 distingue
+perguntas descritivas, de diferença e de relação. A unidade usa essa discussão
+como apoio para reconhecer estruturas analíticas, sem reproduzi-la como
+taxonomia universal.
+https://us.sagepub.com/sites/default/files/upm-assets/26093_book_item_26093.pdf.
+
 BERRY, David M.; FAGERJORD, Anders. *Digital Humanities: Knowledge and Critique
 in a Digital Age*. Cambridge: Polity, 2017.
 
@@ -59,6 +71,7 @@ https://dhdebates.gc.cuny.edu/read/untitled-f2acf72c-a469-49d8-be35-67f9ac1e3a60
 |---|---|---|
 | Antes da Semana 1 | Alves (2016) | Introdução e discussão de comunidade de práticas |
 | Durante o Notebook 01 | Drucker (2011) e Lavin (2021) | Comparar *capta* e dados situados |
+| Durante o Notebook 01 | Shmueli (2010) e Drew, Hardman e Hosp (2008) | Distinguir finalidade e estrutura analítica |
 | Antes da Semana 2 | Rodrigues (2020) | Estudo de caso brasileiro |
 | Durante o Notebook 03 | D'Ignazio e Klein (2020) | Capítulo “The Numbers Don’t Speak for Themselves” |
 | Aprofundamento | Rawson e Muñoz (2019) | Transformação e autoridade sobre os dados |

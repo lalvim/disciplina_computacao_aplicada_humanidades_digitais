@@ -1,0 +1,7 @@
+{
+  "arquivo": "extrato_codigos_municipios_ibge.csv",
+  "fonte": "IBGE — Códigos dos Municípios",
+  "url": "https://www.ibge.gov.br/explica/codigos-dos-municipios.php",
+  "data_de_acesso": "2026-07-31",
+  "nota": "extrato didático de quatro registros; códigos devem ser reverificados antes de reutilização"
+}

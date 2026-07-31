@@ -1,0 +1,9 @@
+id_documento;titulo;data_documento;municipio;codigo_municipio;genero;palavras
+D001; Jornal Aurora ;1890-01-05;São Paulo;3550308;Editorial;860
+D002;gazeta popular;06/02/1891;Sao paulo;3550308;notícia;610
+D003;Correio do Vale;1892;Belo Horizonte;3106200;Carta;
+D004;JORNAL AURORA;1893-03-12;São  Paulo;3550308;editorial ;940
+D005;Gazeta Popular;data desconhecida;Rio de Janeiro;3304557;Noticia;720
+D006;Correio do Vale;1900-08-20;Belo Horizonte;3106200;carta;420
+D006-copia; Correio do Vale ;20/08/1900;Belo horizonte;3106200;Carta;420
+D007;Boletim Operário;1901-04-09;Recife;2611606;manifesto;500

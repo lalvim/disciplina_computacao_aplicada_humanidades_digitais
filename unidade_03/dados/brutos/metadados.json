@@ -1,0 +1,24 @@
+[
+  {
+    "id_documento": "D001",
+    "arquivo_texto": "D001.txt",
+    "temas": [
+      "educação",
+      "progresso"
+    ]
+  },
+  {
+    "id_documento": "D002",
+    "arquivo_texto": "D002.txt",
+    "temas": [
+      "trabalho"
+    ]
+  },
+  {
+    "id_documento": "D003",
+    "arquivo_texto": null,
+    "temas": [
+      "educação"
+    ]
+  }
+]

@@ -1,0 +1,13 @@
+id_documento,ocorrencias,tema,periodo
+D001,3,educacao,1890
+D002,0,educacao,1890
+D003,2,educacao,1890
+D001,1,trabalho,1890
+D002,4,trabalho,1890
+D003,0,trabalho,1890
+D001,2,educacao,1900
+D002,1,educacao,1900
+D003,3,educacao,1900
+D001,2,trabalho,1900
+D002,5,trabalho,1900
+D003,1,trabalho,1900

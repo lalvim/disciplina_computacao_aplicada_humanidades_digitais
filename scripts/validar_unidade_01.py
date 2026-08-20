@@ -149,6 +149,17 @@ def validar_referencias() -> None:
     assert "Conceito central e autores de referência" in oficina
     assert "Referências utilizadas" in oficina
 
+    guia = json.loads(
+        (UNIDADE / "00_guia_da_unidade.ipynb").read_text(encoding="utf-8")
+    )
+    conteudo_guia = "\n".join(
+        fonte_da_celula(celula) for celula in guia["cells"]
+    )
+    assert "Atividade em dupla — compreender o interesse do colega" in conteudo_guia
+    assert conteudo_guia.index("## Diagnóstico inicial") < conteudo_guia.index(
+        "## Atividade em dupla"
+    ) < conteudo_guia.index("## Produto e avaliação")
+
     caminho_notebook_01 = UNIDADE / "01_perguntas_e_problemas_computacionais.ipynb"
     documento_notebook_01 = json.loads(caminho_notebook_01.read_text(encoding="utf-8"))
     notebook_01 = "\n".join(

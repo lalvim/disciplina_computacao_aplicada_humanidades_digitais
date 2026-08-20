@@ -261,6 +261,39 @@ def guia() -> list[dict]:
         ),
         texto(
             """
+            ## Atividade em dupla — compreender o interesse do colega
+
+            Forme uma dupla. Cada participante terá até dois minutos para apresentar
+            o tema, as fontes que imagina utilizar e sua principal dúvida. Enquanto
+            escuta, o colega deverá identificar:
+
+            1. **Fenômeno de interesse:** o que parece estar sendo investigado?
+            2. **Fonte possível:** que documento ou registro poderia guardar traços
+               desse fenômeno?
+            3. **Ponto ainda amplo ou ambíguo:** o que precisaria ser delimitado ou
+               definido com maior precisão?
+
+            Não tente formular a pergunta definitiva nem escolher uma técnica. O
+            objetivo é verificar se outra pessoa consegue compreender o interesse e
+            reconhecer decisões que ainda precisam ser tomadas.
+
+            ### Anotações sobre a proposta do colega
+
+            **Fenômeno de interesse:**
+            Escreva aqui.
+
+            **Fonte possível e justificativa:**
+            Escreva aqui.
+
+            **Ponto ainda amplo ou ambíguo:**
+            Escreva aqui.
+
+            **Comentário do colega que ajudou a rever minha própria proposta:**
+            Escreva aqui.
+            """
+        ),
+        texto(
+            """
             ## Produto e avaliação
 
             O produto final será uma formulação inicial, não uma promessa definitiva.

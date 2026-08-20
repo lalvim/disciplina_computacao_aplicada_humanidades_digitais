@@ -47,7 +47,7 @@ Antes da aula:
 |---|---:|---|---|---|
 | 0:00–0:15 | 15 min | Acolhimento, apresentação da disciplina e problema orientador | Notebook 00 | turma compreende a pergunta central da unidade |
 | 0:15–0:30 | 15 min | Diagnóstico individual | Notebook 00 | respostas iniciais registradas |
-| 0:30–0:45 | 15 min | Discussão em duplas e coleta de exemplos | quadro | interesses e expectativas tornam-se visíveis |
+| 0:30–0:45 | 15 min | Discussão em duplas e coleta de exemplos | Notebook 00, “Atividade em dupla” | interesses e expectativas tornam-se visíveis |
 | 0:45–1:05 | 20 min | Humanidades Digitais como campo e comunidade de práticas | Notebook 01 e Alves (2016) | estudante distingue campo de simples uso de ferramentas |
 | 1:05–1:25 | 20 min | Dados, *capta* e dados situados | Notebook 01 | turma identifica decisões presentes na produção dos dados |
 | 1:25–1:45 | 20 min | Finalidade e estrutura analítica da pergunta | Notebook 01 | estudante diferencia as duas dimensões |
@@ -89,10 +89,11 @@ deve ser corrigido como prova. Observe especialmente:
 - expectativa de que os dados sejam registros neutros;
 - necessidades de acessibilidade ou apoio técnico.
 
-### 0:30–0:45 — Duplas e plenária breve
+### 0:30–0:45 — Atividade em dupla e plenária breve
 
-Cada estudante explica seu interesse a um colega em dois minutos. O colega deve
-responder:
+Oriente a turma a preencher a seção **“Atividade em dupla — compreender o
+interesse do colega”** do Notebook 00. Cada estudante explica seu interesse a
+um colega em dois minutos. O colega deve responder:
 
 1. o que parece ser o fenômeno investigado?
 2. que fonte poderia guardar traços desse fenômeno?

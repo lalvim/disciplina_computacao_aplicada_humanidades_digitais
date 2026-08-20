@@ -45,6 +45,10 @@ A pasta `gabaritos` contém respostas objetivas, respostas-modelo e rubricas.
 Como grande parte da unidade envolve formulação e interpretação, os modelos das
 atividades abertas são referências de coerência, não respostas únicas.
 
+A pasta `professor` contém o roteiro cronológico para condução dos encontros.
+O arquivo `cronograma_aula_01_4h.md` organiza a primeira aula de quatro horas,
+incluindo intervalo, atividades essenciais e ajustes conforme o ritmo da turma.
+
 A pasta separa organizacionalmente o material, mas não restringe o acesso de
 quem possui o repositório.
 

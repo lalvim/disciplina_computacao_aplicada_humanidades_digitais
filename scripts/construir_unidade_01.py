@@ -229,8 +229,9 @@ def guia() -> list[dict]:
             """
             ## Leituras essenciais
 
-            - ALVES, Daniel (2016), “As Humanidades Digitais como uma comunidade
-              de práticas”, especialmente a introdução.
+            - ALVES, Daniel (2016), “As Humanidades Digitais como uma comunidade de
+              práticas dentro do formalismo académico: dos exemplos internacionais
+              ao caso português”, especialmente a introdução.
             - RODRIGUES, Aldair (2020), “Humanidades digitais e diáspora africana”,
               como estudo de caso para a segunda aula.
 
@@ -583,7 +584,8 @@ def perguntas() -> list[dict]:
             ## Referências e leituras
 
             - ALVES, Daniel (2016). “As Humanidades Digitais como uma comunidade de
-              práticas”.
+              práticas dentro do formalismo académico: dos exemplos internacionais
+              ao caso português”.
             - BURDICK, Anne et al. (2012). *Digital_Humanities*.
             - DRUCKER, Johanna (2011). “Humanities Approaches to Graphical Display”.
             - LAVIN, Matthew (2021). “Why Digital Humanists Should Emphasize Situated

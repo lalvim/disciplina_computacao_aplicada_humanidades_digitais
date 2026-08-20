@@ -123,6 +123,11 @@ def validar_referencias() -> None:
     ausentes = [autor for autor in autores if autor not in referencias]
     assert not ausentes, f"autores ausentes: {', '.join(ausentes)}"
     assert referencias.count("https://") >= 8
+    titulo_alves = (
+        "As Humanidades Digitais como uma comunidade de práticas dentro "
+        "do formalismo académico: dos exemplos internacionais ao caso português"
+    )
+    assert titulo_alves in " ".join(referencias.split())
 
     for nome in [
         "01_perguntas_e_problemas_computacionais.ipynb",
@@ -145,6 +150,7 @@ def validar_referencias() -> None:
     )
     assert '"finalidade"' in notebook_01 and '"estrutura"' in notebook_01
     assert "Shmueli (2010)" in notebook_01
+    assert titulo_alves in " ".join(notebook_01.split())
 
     materiais_ativos = [
         RAIZ / "notes" / "contexto_disciplina.md",

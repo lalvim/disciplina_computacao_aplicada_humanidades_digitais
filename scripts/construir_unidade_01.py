@@ -232,8 +232,10 @@ def guia() -> list[dict]:
             - ALVES, Daniel (2016), “As Humanidades Digitais como uma comunidade de
               práticas dentro do formalismo académico: dos exemplos internacionais
               ao caso português”, especialmente a introdução.
-            - RODRIGUES, Aldair (2020), “Humanidades digitais e diáspora africana”,
-              como estudo de caso para a segunda aula.
+            - RODRIGUES, Aldair (2020), “Humanidades digitais e diáspora africana:
+              questões éticas e metodológicas na elaboração de uma base de dados
+              sobre a população escravizada de Mariana (século XVIII)”, como estudo
+              de caso para a segunda aula.
 
             As referências completas e os links estão em `referencias.md`.
             """
@@ -1188,7 +1190,9 @@ def corpus() -> list[dict]:
             - D'IGNAZIO, Catherine; KLEIN, Lauren F. (2020). *Data Feminism*,
               capítulo “The Numbers Don't Speak for Themselves”.
             - RAWSON, Katie; MUÑOZ, Trevor (2019). “Against Cleaning”.
-            - RODRIGUES, Aldair (2020). “Humanidades digitais e diáspora africana”.
+            - RODRIGUES, Aldair (2020). “Humanidades digitais e diáspora africana:
+              questões éticas e metodológicas na elaboração de uma base de dados
+              sobre a população escravizada de Mariana (século XVIII)”.
 
             Dados completos e links: `referencias.md`.
             """

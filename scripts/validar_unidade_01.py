@@ -128,6 +128,12 @@ def validar_referencias() -> None:
         "do formalismo académico: dos exemplos internacionais ao caso português"
     )
     assert titulo_alves in " ".join(referencias.split())
+    titulo_rodrigues = (
+        "Humanidades digitais e diáspora africana: questões éticas e "
+        "metodológicas na elaboração de uma base de dados sobre a população "
+        "escravizada de Mariana (século XVIII)"
+    )
+    assert titulo_rodrigues in " ".join(referencias.split())
 
     for nome in [
         "01_perguntas_e_problemas_computacionais.ipynb",
@@ -151,6 +157,16 @@ def validar_referencias() -> None:
     assert '"finalidade"' in notebook_01 and '"estrutura"' in notebook_01
     assert "Shmueli (2010)" in notebook_01
     assert titulo_alves in " ".join(notebook_01.split())
+
+    for nome in [
+        "00_guia_da_unidade.ipynb",
+        "03_dados_corpus_e_evidencias.ipynb",
+    ]:
+        documento = json.loads((UNIDADE / nome).read_text(encoding="utf-8"))
+        conteudo = " ".join(
+            fonte_da_celula(celula) for celula in documento["cells"]
+        )
+        assert titulo_rodrigues in " ".join(conteudo.split())
 
     materiais_ativos = [
         RAIZ / "notes" / "contexto_disciplina.md",

@@ -46,7 +46,7 @@ Antes da aula:
 | Tempo | Duração | Atividade | Material | Resultado observável |
 |---|---:|---|---|---|
 | 0:00–0:15 | 15 min | Acolhimento, apresentação da disciplina e problema orientador | Notebook 00 | turma compreende a pergunta central da unidade |
-| 0:15–0:30 | 15 min | Diagnóstico individual | Notebook 00 | respostas iniciais registradas |
+| 0:15–0:30 | 15 min | Diagnóstico individual | Notebook 00, “Atividade individual — diagnóstico inicial” | respostas iniciais registradas |
 | 0:30–0:45 | 15 min | Discussão em duplas e coleta de exemplos | Notebook 00, “Atividade em dupla” | interesses e expectativas tornam-se visíveis |
 | 0:45–1:05 | 20 min | Humanidades Digitais como campo e comunidade de práticas | Notebook 01 e Alves (2016) | estudante distingue campo de simples uso de ferramentas |
 | 1:05–1:25 | 20 min | Dados, *capta* e dados situados | Notebook 01 | turma identifica decisões presentes na produção dos dados |
@@ -78,7 +78,7 @@ Markdown.
 Evite apresentar todos os conteúdos da disciplina neste momento. Mostre apenas
 o percurso da Unidade 1 e o produto esperado.
 
-### 0:15–0:30 — Diagnóstico
+### 0:15–0:30 — Atividade individual de diagnóstico
 
 Solicite respostas individuais antes da discussão coletiva. O diagnóstico não
 deve ser corrigido como prova. Observe especialmente:
@@ -134,7 +134,7 @@ Classificação orientativa: finalidade descritiva e estrutura comparativa.
 Execute as duas células Python do Notebook 01. Antes de cada saída, solicite uma
 previsão. Depois, pergunte o que o código fez e o que ele não justificou.
 
-### 2:15–3:00 — Classificação e casos limítrofes
+### 2:15–3:00 — Atividades de classificação e casos limítrofes
 
 Organize grupos de três. Para cada pergunta, o grupo deve produzir:
 

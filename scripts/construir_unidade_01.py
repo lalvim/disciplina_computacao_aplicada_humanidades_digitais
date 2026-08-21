@@ -242,9 +242,13 @@ def guia() -> list[dict]:
         ),
         texto(
             """
-            ## Diagnóstico inicial
+            ## Atividade individual — diagnóstico inicial
 
-            Responda diretamente nesta célula Markdown. Não há respostas certas.
+            **Modalidade:** individual. **Tempo sugerido:** 10 minutos.
+
+            Responda diretamente nesta célula Markdown. Não há respostas certas. O
+            produto será um registro inicial de seu tema, fontes, experiência e dúvida;
+            ele será retomado na atividade em dupla.
 
             **Tema de interesse:**
             Escreva aqui.
@@ -393,7 +397,12 @@ def perguntas() -> list[dict]:
         ),
         texto(
             """
-            ### Como ler o primeiro experimento
+            ### Experimento guiado — organizar e consultar perguntas
+
+            **Dinâmica:** faça uma previsão individual por 1 minuto, compare-a com uma
+            dupla por 2 minutos e acompanhe a execução dialogada com a turma. Registre
+            oralmente ou em suas anotações o que a saída mostra e o que ela não
+            justifica.
 
             `pd.DataFrame(perguntas)` transforma uma lista de registros em uma tabela.
             Cada dicionário vira uma linha; as chaves viram colunas. Antes de executar,
@@ -516,7 +525,10 @@ def perguntas() -> list[dict]:
         ),
         texto(
             """
-            ### Checklist de revisão
+            ### Atividade individual — checklist de revisão
+
+            **Tempo sugerido:** 5 minutos. **Produto:** pergunta anotada com os itens
+            que ainda exigem revisão.
 
             Releia sua pergunta e marque:
 
@@ -534,6 +546,14 @@ def perguntas() -> list[dict]:
         texto(
             """
             ## Atividade guiada — classifique com justificativa
+
+            **Modalidade:** trios. **Tempo sugerido:** 15 minutos de trabalho e 10
+            minutos de correção dialogada. **Produto:** cinco classificações com
+            justificativas registradas na célula seguinte.
+
+            Primeiro, cada integrante classifica ao menos uma pergunta. Depois, o trio
+            compara as respostas e negocia uma versão conjunta. Divergências bem
+            justificadas devem ser preservadas para a plenária.
 
             Para cada pergunta abaixo, indique separadamente a finalidade predominante
             e a estrutura analítica inicial. Justifique ambas:
@@ -565,7 +585,10 @@ def perguntas() -> list[dict]:
         ),
         texto(
             """
-            ### Casos limítrofes
+            ### Atividade em trio e plenária — casos limítrofes
+
+            **Tempo sugerido:** 10 minutos no trio e 5 minutos em plenária.
+            **Produto:** classificação argumentada e uma reformulação preditiva.
 
             Uma investigação pode ter etapas de tipos diferentes. Considere:
 
@@ -581,6 +604,10 @@ def perguntas() -> list[dict]:
         texto(
             """
             ## Atividade autônoma — produto parcial
+
+            **Modalidade:** individual. **Tempo sugerido:** 15 minutos.
+            **Produto:** primeira formulação documentada de sua pergunta, preenchida
+            na célula seguinte.
 
             Reformule seu interesse em três níveis:
 
@@ -856,6 +883,16 @@ def operacionalizacao() -> list[dict]:
         texto(
             """
             ## Atividade — mapa de operacionalização
+
+            **Modalidade:** produção individual seguida de comparação em dupla.
+            **Tempo sugerido:** 25 minutos individuais e 10 minutos em dupla.
+            **Produto:** duas operacionalizações alternativas e um parágrafo
+            comparativo na célula seguinte.
+
+            1. preencha individualmente as duas linhas;
+            2. troque o mapa com um colega;
+            3. o colega identifica uma perda ou ambiguidade em cada alternativa;
+            4. revise o parágrafo comparativo após a conversa.
 
             Escolha um conceito central de sua pergunta. Proponha ao menos duas
             operacionalizações. Compare o que cada uma permite observar e o que perde.
@@ -1176,6 +1213,15 @@ def corpus() -> list[dict]:
             """
             ## Atividade — ficha do corpus
 
+            **Modalidade:** produção individual seguida de revisão em dupla.
+            **Tempo sugerido:** 30 minutos individuais e 15 minutos em dupla.
+            **Produto:** ficha preenchida e uma revisão motivada pelo comentário do
+            colega.
+
+            Primeiro, responda aos sete itens com base em seu projeto. Depois, troque a
+            ficha com um colega. A revisão deve localizar um critério impreciso, uma
+            ausência pouco discutida e uma conclusão que talvez exceda o corpus.
+
             Delimite um corpus inicial e responda:
 
             1. qual população ou universo de interesse orienta a pergunta?
@@ -1253,6 +1299,11 @@ def oficina() -> list[dict]:
             indicadas e escreva com liberdade. O objetivo é construir uma versão
             inicial que possa ser revista à medida que novas fontes e métodos forem
             estudados.
+
+            **Modalidade:** elaboração individual, seguida da revisão em pares ao
+            final. **Tempo sugerido:** 60 minutos para a primeira versão e 30 minutos
+            para a revisão recíproca. **Produto:** proposta inicial completa, parecer
+            recebido e mudanças justificadas.
 
             Não há código neste notebook: formular, justificar e interpretar são
             atividades de escrita. Os experimentos computacionais dos notebooks
@@ -1533,7 +1584,16 @@ def oficina() -> list[dict]:
         ),
         texto(
             """
-            ## Revisão entre pares
+            ## Atividade — revisão entre pares
+
+            **Modalidade:** duplas, com dois turnos. **Tempo sugerido:** 15 minutos por
+            proposta. **Produto:** parecer breve recebido e registro das mudanças
+            realizadas.
+
+            No primeiro turno, o autor apresenta a proposta por até 3 minutos; o
+            revisor lê a síntese, responde às cinco perguntas e oferece um comentário
+            prioritário. Depois, invertam os papéis. Não reescreva a proposta do
+            colega: indique o ponto que precisa de decisão ou justificativa.
 
             Peça a uma colega ou a um colega que responda:
 
@@ -1545,6 +1605,14 @@ def oficina() -> list[dict]:
 
             Revise a formulação após receber o comentário. A pergunta resultante encerra
             a Unidade 1 e orientará a construção da base na Unidade 2.
+
+            ### Parecer recebido
+
+            Escreva aqui.
+
+            ### Mudanças realizadas e justificativa
+
+            Escreva aqui.
             """
         ),
     ]

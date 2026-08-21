@@ -156,9 +156,42 @@ def validar_referencias() -> None:
         fonte_da_celula(celula) for celula in guia["cells"]
     )
     assert "Atividade em dupla — compreender o interesse do colega" in conteudo_guia
-    assert conteudo_guia.index("## Diagnóstico inicial") < conteudo_guia.index(
+    assert conteudo_guia.index("## Atividade individual — diagnóstico inicial") < conteudo_guia.index(
         "## Atividade em dupla"
     ) < conteudo_guia.index("## Produto e avaliação")
+
+    dinamicas_esperadas = {
+        "00_guia_da_unidade.ipynb": [
+            "Modalidade:** individual",
+            "Atividade em dupla — compreender o interesse do colega",
+        ],
+        "01_perguntas_e_problemas_computacionais.ipynb": [
+            "Experimento guiado — organizar e consultar perguntas",
+            "Modalidade:** trios",
+            "Atividade em trio e plenária — casos limítrofes",
+            "Atividade autônoma — produto parcial",
+        ],
+        "02_representacao_e_operacionalizacao.ipynb": [
+            "produção individual seguida de comparação em dupla",
+        ],
+        "03_dados_corpus_e_evidencias.ipynb": [
+            "produção individual seguida de revisão em dupla",
+        ],
+        "04_oficina_projeto_de_pesquisa.ipynb": [
+            "Modalidade:** elaboração individual",
+            "Atividade — revisão entre pares",
+            "dois turnos",
+            "Parecer recebido",
+            "Mudanças realizadas e justificativa",
+        ],
+    }
+    for nome, marcadores in dinamicas_esperadas.items():
+        documento = json.loads((UNIDADE / nome).read_text(encoding="utf-8"))
+        conteudo = "\n".join(
+            fonte_da_celula(celula) for celula in documento["cells"]
+        )
+        ausentes = [marcador for marcador in marcadores if marcador not in conteudo]
+        assert not ausentes, f"{nome} sem dinâmica: {', '.join(ausentes)}"
 
     caminho_notebook_01 = UNIDADE / "01_perguntas_e_problemas_computacionais.ipynb"
     documento_notebook_01 = json.loads(caminho_notebook_01.read_text(encoding="utf-8"))

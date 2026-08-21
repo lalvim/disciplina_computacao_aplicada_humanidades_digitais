@@ -697,7 +697,44 @@ O foco não deve estar no domínio completo das bibliotecas, mas na capacidade d
 
 ---
 
-# 11. Delimitação do escopo
+# 11. Executar o material no Google Colab
+
+O repositório pode ser clonado no ambiente temporário do Google Colab. Em uma
+célula de código, execute:
+
+```python
+%cd /content
+!git clone https://github.com/lalvim/disciplina_computacao_aplicada_humanidades_digitais.git
+%cd /content/disciplina_computacao_aplicada_humanidades_digitais
+!python -m pip install -r requirements.txt
+```
+
+Para confirmar a clonagem e visualizar os arquivos da Unidade 1:
+
+```python
+!git status
+!ls unidade_01
+```
+
+Se o repositório já tiver sido clonado na sessão e for necessário obter
+alterações mais recentes:
+
+```python
+%cd /content/disciplina_computacao_aplicada_humanidades_digitais
+!git pull origin main
+```
+
+O primeiro notebook da Unidade 1 também pode ser aberto diretamente no Colab:
+
+[Abrir o Notebook 00 no Google Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_01/00_guia_da_unidade.ipynb)
+
+O diretório `/content` é temporário. Alterações feitas no clone desaparecem
+quando a sessão é encerrada, a menos que sejam enviadas ao GitHub, baixadas para
+o computador ou copiadas para uma pasta persistente do Google Drive.
+
+---
+
+# 12. Delimitação do escopo
 
 Para que a disciplina seja viável em quatro meses, alguns temas devem ser apresentados apenas de forma introdutória:
 
@@ -716,7 +753,7 @@ Esses assuntos podem aparecer em seminários, projetos específicos ou disciplin
 
 ---
 
-# 12. Síntese da progressão pedagógica
+# 13. Síntese da progressão pedagógica
 
 A progressão da disciplina será:
 

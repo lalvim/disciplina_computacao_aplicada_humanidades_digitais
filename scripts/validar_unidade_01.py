@@ -179,6 +179,9 @@ def validar_referencias() -> None:
             "Atividade autônoma — produto parcial",
         ],
         "02_representacao_e_operacionalizacao.ipynb": [
+            "### Exemplo de estrutura tabular",
+            "Experimento — uma decisão de representação altera a contagem",
+            "documentos_temas.explode",
             "produção individual seguida de comparação em dupla",
         ],
         "03_dados_corpus_e_evidencias.ipynb": [
@@ -291,6 +294,12 @@ def validar_gabaritos() -> None:
     ]
     ausentes = [criterio for criterio in criterios if criterio not in oficina]
     assert not ausentes, f"critérios ausentes da rubrica: {', '.join(ausentes)}"
+
+    operacionalizacao = (
+        pasta / "gabarito_02_operacionalizacao.md"
+    ).read_text(encoding="utf-8")
+    assert "| progresso | 0 | 1 |" in operacionalizacao
+    assert "a soma é cinco" in operacionalizacao
 
 
 def validar_revisores() -> None:
@@ -406,6 +415,10 @@ def main() -> None:
         textos, codigos = validar_notebook(caminho)
         if caminho.name == "04_oficina_projeto_de_pesquisa.ipynb":
             assert codigos == 0, "a oficina deve ser integralmente discursiva"
+        if caminho.name == "02_representacao_e_operacionalizacao.ipynb":
+            assert codigos == 1, (
+                "o Notebook 02 deve manter apenas o experimento comparativo"
+            )
         total_textos += textos
         total_codigos += codigos
         print(f"OK {caminho.name}: {textos} células de texto, {codigos} de código")

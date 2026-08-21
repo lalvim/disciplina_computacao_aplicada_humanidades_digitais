@@ -729,28 +729,23 @@ def operacionalizacao() -> list[dict]:
         ),
         texto(
             """
-            ### Como ler o experimento
+            ### Exemplo de estrutura tabular
 
-            A lista `registros` contém três observações. `pd.DataFrame(registros)`
-            organiza essas observações em linhas e os campos em colunas.
-            `len(documentos)` conta linhas, não jornais, autores ou temas. Antes de
-            executar, identifique o que cada linha representa.
-            """
-        ),
-        codigo(
-            """
-            import pandas as pd
+            | `id` | `ano` | `genero` | `tema` |
+            |---|---:|---|---|
+            | D001 | 1890 | editorial | progresso |
+            | D002 | 1891 | carta | trabalho |
+            | D003 | 1892 | notícia | educação |
 
-            registros = [
-                {"id": "D001", "ano": 1890, "genero": "editorial", "tema": "progresso"},
-                {"id": "D002", "ano": 1891, "genero": "carta", "tema": "trabalho"},
-                {"id": "D003", "ano": 1892, "genero": "notícia", "tema": "educação"},
-            ]
-            documentos = pd.DataFrame(registros)
+            **Neste modelo**, cada linha representa um documento e, portanto, há três
+            unidades de análise registradas. Isso não decorre naturalmente do formato
+            de tabela: é uma decisão de modelagem. Se cada linha representasse um
+            parágrafo, uma pessoa citada ou uma ocorrência temática, contar linhas não
+            equivaleria a contar documentos.
 
-            print("Número de unidades de análise:", len(documentos))
-            print("Unidade representada por cada linha: documento")
-            documentos
+            Antes de continuar, pergunte: o que cada linha representa, sobre qual
+            entidade a pesquisa fará afirmações e qual identificador permite distinguir
+            uma unidade da outra?
             """
         ),
         texto(
@@ -809,36 +804,60 @@ def operacionalizacao() -> list[dict]:
         ),
         texto(
             """
-            No experimento seguinte, compare duas decisões. `value_counts()` conta
-            valores exclusivos. A segunda série preserva listas, mas ainda não define
-            como cada tema contribuirá para uma contagem. Preveja qual informação se
-            perde na primeira representação.
+            ### Experimento — uma decisão de representação altera a contagem
+
+            Os mesmos três documentos serão representados de duas maneiras: com um
+            único tema dominante e com todos os temas atribuídos. Antes de executar,
+            preveja quais temas desaparecerão ou terão sua frequência alterada.
+
+            No segundo modelo, `explode()` cria temporariamente uma linha para cada
+            combinação documento–tema. Isso permite contar os temas sem descartar as
+            coexistências registradas em um mesmo documento.
             """
         ),
         codigo(
             """
-            # Duas representações do mesmo conjunto produzem perguntas diferentes.
-            temas_exclusivos = pd.Series(
-                ["educação", "trabalho", "educação"],
-                name="um tema dominante por documento",
-            )
-            temas_multiplos = pd.Series(
-                [["educação", "progresso"], ["trabalho"], ["educação", "trabalho"]],
-                name="múltiplos temas por documento",
+            import pandas as pd
+
+            documentos_temas = pd.DataFrame({
+                "id": ["D001", "D002", "D003"],
+                "tema_dominante": ["educação", "trabalho", "educação"],
+                "temas_atribuidos": [
+                    ["educação", "progresso"],
+                    ["trabalho"],
+                    ["educação", "trabalho"],
+                ],
+            })
+
+            contagem_dominante = documentos_temas["tema_dominante"].value_counts()
+            contagem_multipla = (
+                documentos_temas.explode("temas_atribuidos")["temas_atribuidos"]
+                .value_counts()
             )
 
-            print("Contagem exclusiva:")
-            print(temas_exclusivos.value_counts())
-            print("\\nRepresentação com múltiplos temas:")
-            print(temas_multiplos)
+            comparacao = pd.concat(
+                [contagem_dominante, contagem_multipla],
+                axis=1,
+                keys=["tema dominante", "múltiplos temas"],
+            ).fillna(0).astype(int)
+            comparacao.index.name = "tema"
+            comparacao
             """
         ),
         texto(
             """
+            Compare as duas colunas:
+
+            1. Por que “progresso” não aparece na contagem de temas dominantes?
+            2. Por que “trabalho” passa de uma para duas ocorrências?
+            3. Em qual modelo a soma das frequências pode superar o número de
+               documentos e por quê?
+            4. Qual representação seria mais adequada à sua pergunta de pesquisa?
+
             A primeira representação facilita uma contagem, mas força exclusividade. A
-            segunda preserva coexistências, porém demanda regras para comparar documentos.
-            Nenhuma estrutura é naturalmente correta: a escolha depende da pergunta, da
-            teoria, das fontes e da qualidade da anotação.
+            segunda preserva coexistências, porém demanda regras explícitas para
+            comparar documentos. Nenhuma estrutura é naturalmente correta: a escolha
+            depende da pergunta, da teoria, das fontes e da qualidade da anotação.
             """
         ),
         texto(

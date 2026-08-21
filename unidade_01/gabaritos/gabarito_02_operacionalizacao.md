@@ -1,10 +1,10 @@
 # Gabarito orientativo — Representação e operacionalização
 
-## 1. Resultados dos experimentos
+## 1. Leitura da tabela e resultado do experimento
 
 ### Unidade de análise
 
-No primeiro experimento:
+Na tabela de exemplo:
 
 - há três unidades;
 - cada linha representa um documento;
@@ -16,16 +16,24 @@ distintos apenas porque existem três linhas.
 
 ### Categorias exclusivas e múltiplas
 
-Na representação exclusiva, a contagem é:
+O experimento produz a seguinte comparação:
 
-| Tema | Documentos |
-|---|---:|
-| educação | 2 |
-| trabalho | 1 |
+| Tema | Tema dominante | Múltiplos temas |
+|---|---:|---:|
+| educação | 2 | 2 |
+| trabalho | 1 | 2 |
+| progresso | 0 | 1 |
 
-A representação permite uma contagem direta, mas não registra que um documento
-pode tratar simultaneamente de educação e progresso ou de educação e trabalho.
-A representação com múltiplos temas preserva coexistências, mas exige decidir:
+A representação dominante não registra “progresso” porque esse tema aparece
+apenas como tema secundário de D001. “Trabalho” passa de uma para duas
+ocorrências porque também foi atribuído como tema secundário de D003. Na
+representação múltipla, a soma é cinco, embora existam apenas três documentos,
+pois um documento pode contribuir para mais de uma categoria.
+
+A representação dominante permite uma contagem direta, mas não registra que um
+documento pode tratar simultaneamente de educação e progresso ou de educação e
+trabalho. A representação com múltiplos temas preserva coexistências, mas exige
+decidir:
 
 - se cada tema terá o mesmo peso;
 - como serão calculadas frequências;
@@ -88,4 +96,3 @@ Avaliar se o estudante:
 
 Não avaliar pela sofisticação da variável. Uma operacionalização simples,
 coerente e auditável é preferível a uma medida complexa sem justificativa.
-

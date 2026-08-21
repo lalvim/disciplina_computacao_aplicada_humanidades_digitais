@@ -795,11 +795,50 @@ def operacionalizacao() -> list[dict]:
             4. as categorias mudaram historicamente?
             5. quem ou o que se torna invisível?
 
-            Categorias históricas podem reproduzir classificações discriminatórias.
-            Preservá-las para análise não significa adotá-las sem crítica; transformá-las
-            também exige documentação. D'Ignazio e Klein (2020) mostram que decidir o
-            que e como contar envolve relações de poder, trabalho e experiências que
-            podem desaparecer das estruturas formais.
+            ### O que são categorias históricas?
+
+            **Categorias históricas** são termos e sistemas de classificação cujo
+            significado e uso pertencem a um contexto específico. Elas podem ter sido
+            empregadas pelos próprios atores, atribuídas por instituições — como
+            Estado, Igreja, polícia, imprensa ou arquivo — ou produzidas posteriormente
+            por pesquisadores. Não são apenas categorias “antigas”: são classificações
+            situadas no tempo, ligadas a práticas, disputas e relações de poder.
+
+            É útil distinguir três níveis:
+
+            | Nível | Quem classifica? | Exemplo | Questão crítica |
+            |---|---|---|---|
+            | Categoria presente na fonte | pessoa que fala ou escreve | alguém se identifica como “operário” | o termo expressa autodefinição, estratégia ou convenção do gênero documental? |
+            | Categoria institucional | agente ou instituição que produz o registro | condição registrada como “livre”, “liberto” ou “escravizado” | quais regras jurídicas e administrativas produziram a classificação? |
+            | Categoria analítica | pesquisador ou equipe do projeto | agrupar ocupações em setores econômicos | que diferenças históricas o agrupamento preserva ou apaga? |
+
+            Uma mesma palavra pode mudar de sentido entre períodos e lugares. Termos
+            diferentes também não devem ser tratados automaticamente como sinônimos.
+            Designações de cor, condição jurídica, ocupação, gênero, origem ou
+            pertencimento social podem ter sido impostas, negociadas, omitidas ou
+            registradas de maneira inconsistente. Algumas expressam hierarquias e
+            violências do contexto que as produziu.
+
+            Em uma base de dados, portanto, não convém substituir silenciosamente o
+            termo da fonte por uma categoria atual. Uma modelagem rastreável pode
+            manter campos separados:
+
+            | Campo | O que registra |
+            |---|---|
+            | `termo_na_fonte` | transcrição da classificação encontrada no documento |
+            | `categoria_analitica` | agrupamento criado para responder à pergunta atual |
+            | `agente_classificador` | quem atribuiu a classificação, quando isso for identificável |
+            | `regra_de_correspondencia` | justificativa para relacionar o termo histórico à categoria analítica |
+            | `incerteza` | dúvida, ambiguidade, conflito ou ausência de informação |
+
+            Preservar o termo original não significa aceitá-lo como descrição neutra;
+            normalizá-lo não significa que as diferenças desapareceram. O pesquisador
+            deve justificar quando mantém, agrupa, separa ou recusa uma categoria e
+            avaliar se a reprodução de termos ofensivos é necessária para a análise.
+            Rawson e Muñoz (2019) alertam para as perdas produzidas pela “limpeza” de
+            dados, enquanto D'Ignazio e Klein (2020) mostram que decidir o que e como
+            contar envolve poder, trabalho e experiências que podem desaparecer das
+            estruturas formais.
             """
         ),
         texto(

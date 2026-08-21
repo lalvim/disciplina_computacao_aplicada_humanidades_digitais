@@ -180,6 +180,12 @@ def validar_referencias() -> None:
         ],
         "02_representacao_e_operacionalizacao.ipynb": [
             "### Exemplo de estrutura tabular",
+            "### O que são categorias históricas?",
+            "Categoria presente na fonte",
+            "Categoria institucional",
+            "Categoria analítica",
+            "`termo_na_fonte`",
+            "`regra_de_correspondencia`",
             "Experimento — uma decisão de representação altera a contagem",
             "documentos_temas.explode",
             "produção individual seguida de comparação em dupla",

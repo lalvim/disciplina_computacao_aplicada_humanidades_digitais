@@ -179,6 +179,9 @@ def validar_referencias() -> None:
             "Atividade autônoma — produto parcial",
         ],
         "02_representacao_e_operacionalizacao.ipynb": [
+            "## Mapa do percurso",
+            "pergunta → conceito e dimensão → indicador → unidade de análise",
+            "As etapas formam um ciclo",
             "### Exemplo de estrutura tabular",
             "### O que são categorias históricas?",
             "Categoria presente na fonte",

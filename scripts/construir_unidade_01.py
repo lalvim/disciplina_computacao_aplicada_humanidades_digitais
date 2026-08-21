@@ -674,6 +674,29 @@ def operacionalizacao() -> list[dict]:
             """
             # Representação e operacionalização
 
+            ## Mapa do percurso
+
+            Este notebook responde à pergunta: **como transformar um conceito da
+            pesquisa em registros analisáveis sem confundir a representação com o
+            fenômeno?** O percurso será:
+
+            > pergunta → conceito e dimensão → indicador → unidade de análise →
+            > variável ou categoria → comparação de representações → avaliação da
+            > validade → mapa de operacionalização
+
+            | Etapa | Pergunta orientadora | Para que serve |
+            |---|---|---|
+            | Conceito e dimensão | O que a expressão central da pergunta significa e qual aspecto será examinado? | Delimitar teoricamente o fenômeno |
+            | Indicador | Que traço observável pode apontar para esse aspecto? | Construir a ponte entre conceito e fonte |
+            | Unidade de análise | Sobre que entidade serão feitas as afirmações? | Definir o que constitui um caso da pesquisa |
+            | Variável ou categoria | Como cada observação será registrada? | Tornar explícita a regra de representação |
+            | Comparação de representações | O que muda quando o mesmo material é modelado de outra maneira? | Tornar visíveis perdas e consequências das escolhas |
+            | Avaliação da validade | A representação é adequada, consistente, abrangente e rastreável? | Examinar se os dados podem sustentar a interpretação |
+            | Mapa de operacionalização | Como documentar toda a cadeia e suas limitações? | Produzir o resultado parcial do notebook |
+
+            As etapas formam um ciclo, não uma sequência irreversível. Ao descobrir
+            uma perda ou incompatibilidade, retorne às decisões anteriores e revise-as.
+
             ## Retomada
 
             1. Qual foi a pergunta delimitada no Notebook 01?

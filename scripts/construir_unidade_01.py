@@ -416,36 +416,21 @@ def perguntas() -> list[dict]:
             """
             ## 3. Da questão humanística à tarefa computacional
 
-            Compare três níveis:
+            Uma pesquisa orientada por dados articula quatro níveis. Observe o mesmo
+            exemplo em todo o percurso:
 
-            1. **Questão ampla:** como ideias de progresso participaram da vida social?
-            2. **Pergunta delimitada:** como o tema “progresso” aparece nos gêneros
-               editoriais de três periódicos entre 1890 e 1905?
-            3. **Tarefa computacional:** selecionar editoriais, contar a categoria
-               temática atribuída e comparar períodos.
+            | Nível | Função | Exemplo |
+            |---|---|---|
+            | Questão humanística ampla | Define o problema substantivo | Como ideias de progresso participaram da vida social? |
+            | Pergunta delimitada | Estabelece fenômeno, contexto, fontes e recorte | Como o tema “progresso” aparece em editoriais de três periódicos da coleção didática entre 1890 e 1905? |
+            | Tarefa computacional | Indica as operações que produzirão resultados | Selecionar editoriais, contar temas atribuídos e comparar períodos |
+            | Interpretação humanística | Relaciona os resultados aos documentos, ao contexto e à bibliografia | Reler os documentos selecionados e contextualizar os diferentes sentidos de “progresso” |
 
-            A tarefa não substitui a pergunta. Uma contagem pode indicar um padrão;
-            compreender seu sentido demanda retornar aos documentos, às condições de
-            produção, às categorias adotadas e à historiografia pertinente.
-            """
-        ),
-        texto(
-            """
-            ### Exemplo completo
-
-            **Questão ampla:** Como ideias de progresso participaram da vida social?
-
-            **Pergunta delimitada:** Como o tema “progresso” aparece em editoriais de
-            três periódicos da coleção didática entre 1890 e 1905?
-
-            **Tarefa computacional:** Selecionar editoriais, contar temas atribuídos e
-            comparar períodos.
-
-            **Interpretação necessária:** Reler os documentos selecionados e
-            contextualizar os diferentes sentidos de “progresso”.
-
-            Observe que apenas a terceira formulação descreve uma operação. As demais
-            registram o problema substantivo e o trabalho interpretativo.
+            Apenas a tarefa computacional descreve uma operação. Ela não substitui a
+            pergunta, e seu resultado não substitui a interpretação. Uma contagem pode
+            indicar um padrão; compreender seu sentido demanda retornar aos documentos,
+            às condições de produção, às categorias adotadas e à historiografia
+            pertinente.
             """
         ),
         texto(

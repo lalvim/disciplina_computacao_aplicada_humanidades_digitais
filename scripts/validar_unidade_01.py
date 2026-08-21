@@ -171,7 +171,7 @@ def validar_referencias() -> None:
             "uma forma explícita de representação:** por exemplo",
             "operações que geram resultados:** por exemplo",
             "interpretação situada e crítica:** por exemplo",
-            "Experimento guiado — organizar e consultar perguntas",
+            "| Pergunta | Finalidade | Estrutura | Operação inicial |",
             "Modalidade:** trios",
             "Atividade em trio e plenária — casos limítrofes",
             "Atividade autônoma — produto parcial",
@@ -203,7 +203,10 @@ def validar_referencias() -> None:
     notebook_01 = "\n".join(
         fonte_da_celula(celula) for celula in documento_notebook_01["cells"]
     )
-    assert '"finalidade"' in notebook_01 and '"estrutura"' in notebook_01
+    assert "| Pergunta | Finalidade | Estrutura | Operação inicial |" in notebook_01
+    assert "| Descritiva | Comparativa |" in notebook_01
+    assert "| Explicativa | Comparativa e associativa |" in notebook_01
+    assert "| Preditiva | Associativa |" in notebook_01
     assert "Shmueli (2010)" in notebook_01
     assert titulo_alves in " ".join(notebook_01.split())
 

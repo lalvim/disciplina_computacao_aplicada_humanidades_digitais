@@ -412,75 +412,13 @@ def perguntas() -> list[dict]:
         ),
         texto(
             """
-            ### Experimento guiado — organizar e consultar perguntas
-
-            **Dinâmica:** faça uma previsão individual por 1 minuto, compare-a com uma
-            dupla por 2 minutos e acompanhe a execução dialogada com a turma. Registre
-            oralmente ou em suas anotações o que a saída mostra e o que ela não
-            justifica.
-
-            `pd.DataFrame(perguntas)` transforma uma lista de registros em uma tabela.
-            Cada dicionário vira uma linha; as chaves viram colunas. Antes de executar,
-            preveja quantas linhas e colunas aparecerão.
-
-            O objetivo não é aprender toda a sintaxe de `pandas`, mas observar que uma
-            classificação pode ser registrada e consultada — e que o código não
-            justifica as categorias por nós.
-            """
-        ),
-        codigo(
-            """
-            import pandas as pd
-
-            perguntas = [
-                {
-                    "pergunta": "Quais temas aparecem nos documentos?",
-                    "finalidade": "descritiva",
-                    "estrutura": "sem relação inicial",
-                    "operacao_inicial": "contar ocorrências por tema",
-                },
-                {
-                    "pergunta": "Os temas diferem entre Capital e Interior?",
-                    "finalidade": "descritiva",
-                    "estrutura": "comparativa",
-                    "operacao_inicial": "comparar distribuições",
-                },
-                {
-                    "pergunta": "Gênero documental e tema variam juntos?",
-                    "finalidade": "descritiva",
-                    "estrutura": "associativa",
-                    "operacao_inicial": "cruzar categorias",
-                },
-                {
-                    "pergunta": "Que processos explicam a mudança do debate?",
-                    "finalidade": "explicativa",
-                    "estrutura": "comparativa e associativa",
-                    "operacao_inicial": "formular e confrontar explicações",
-                },
-                {
-                    "pergunta": "É possível estimar o gênero pelos metadados?",
-                    "finalidade": "preditiva",
-                    "estrutura": "associativa",
-                    "operacao_inicial": "treinar e avaliar uma previsão",
-                },
-            ]
-
-            tabela_perguntas = pd.DataFrame(perguntas)
-            tabela_perguntas
-            """
-        ),
-        texto(
-            """
-            Na célula seguinte, a expressão entre colchetes produz uma sequência de
-            valores verdadeiros e falsos. Ela mantém somente as linhas cuja finalidade
-            é descritiva. Preveja o número de linhas antes de executar e compare as
-            estruturas presentes no resultado.
-            """
-        ),
-        codigo(
-            """
-            # Filtrar é simples; justificar finalidade e estrutura é parte da pesquisa.
-            tabela_perguntas[tabela_perguntas["finalidade"] == "descritiva"]
+            | Pergunta | Finalidade | Estrutura | Operação inicial |
+            |---|---|---|---|
+            | Quais temas aparecem nos documentos? | Descritiva | Sem relação inicial | Contar ocorrências por tema |
+            | Os temas diferem entre Capital e Interior? | Descritiva | Comparativa | Comparar distribuições |
+            | Gênero documental e tema variam juntos? | Descritiva | Associativa | Cruzar categorias |
+            | Que processos explicam a mudança do debate? | Explicativa | Comparativa e associativa | Formular e confrontar explicações |
+            | É possível estimar o gênero pelos metadados? | Preditiva | Associativa | Treinar e avaliar uma previsão |
             """
         ),
         texto(

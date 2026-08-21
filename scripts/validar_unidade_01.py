@@ -158,7 +158,7 @@ def validar_referencias() -> None:
     assert "Atividade em dupla — compreender o interesse do colega" in conteudo_guia
     assert conteudo_guia.index("## Atividade individual — diagnóstico inicial") < conteudo_guia.index(
         "## Atividade em dupla"
-    ) < conteudo_guia.index("## Produto e avaliação")
+    ) < conteudo_guia.index("## Produto final da unidade e critérios de avaliação")
 
     dinamicas_esperadas = {
         "00_guia_da_unidade.ipynb": [

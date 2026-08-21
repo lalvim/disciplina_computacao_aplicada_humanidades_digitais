@@ -298,16 +298,50 @@ def guia() -> list[dict]:
         ),
         texto(
             """
-            ## Produto e avaliação
+            ## Produto final da unidade e critérios de avaliação
 
-            O produto final será uma formulação inicial, não uma promessa definitiva.
-            Ela deverá apresentar: fenômeno, contexto, pergunta, tipo de pergunta,
-            unidade de análise, recorte, fontes possíveis, operacionalizações,
-            evidências esperadas e limitações.
+            Ao final da unidade, cada estudante apresentará uma **proposta inicial de
+            pesquisa orientada por dados**, consolidada no Notebook 04. Não se espera
+            um artigo pronto, resultados definitivos ou um programa completo. O
+            produto é um esboço argumentado que mostra como uma questão das
+            Humanidades poderia ser investigada com apoio de dados e métodos
+            computacionais.
 
-            A avaliação valoriza a **coerência entre as escolhas** e a capacidade de
-            reconhecer limites. Uma pergunta modesta e bem delimitada é preferível a
-            uma pergunta grandiosa que os dados não podem sustentar.
+            A proposta será construída progressivamente. Os Notebooks 01, 02 e 03
+            geram produtos parciais sobre a pergunta, a representação do fenômeno e a
+            composição do corpus. No Notebook 04, o estudante revisará e reunirá essas
+            decisões em uma formulação coerente.
+
+            O produto final deverá explicitar:
+
+            - o fenômeno humanístico e seu contexto;
+            - uma pergunta de pesquisa delimitada, sua finalidade e sua estrutura;
+            - o recorte, a unidade de análise e as fontes ou o corpus possíveis;
+            - como aspectos do fenômeno poderiam ser representados como dados;
+            - quais operações computacionais poderiam produzir evidências pertinentes;
+            - como essas evidências seriam interpretadas à luz do contexto e da
+              bibliografia;
+            - limitações, vieses e questões éticas da proposta.
+
+            A avaliação não premiará a pergunta mais ambiciosa nem a maior quantidade
+            de código. Ela considerará principalmente:
+
+            1. **relevância humanística:** a proposta trata de um problema significativo
+               para a área;
+            2. **delimitação:** pergunta, contexto e recorte estão claramente definidos;
+            3. **coerência:** fontes, unidade de análise, representação, operações e
+               evidências são compatíveis com a pergunta;
+            4. **fundamentação:** as decisões dialogam com conceitos e referências da
+               unidade;
+            5. **reflexividade:** limites, escolhas interpretativas, vieses e questões
+               éticas são reconhecidos;
+            6. **viabilidade:** a proposta pode ser investigada com os dados, o tempo e
+               os recursos considerados.
+
+            Uma pergunta modesta, bem delimitada e criticamente justificada é
+            preferível a uma pergunta grandiosa que as fontes e os métodos não podem
+            sustentar. A proposta poderá mudar nas unidades seguintes: revisar escolhas
+            diante de novas evidências faz parte da pesquisa.
             """
         ),
         texto(

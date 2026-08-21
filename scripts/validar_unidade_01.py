@@ -155,15 +155,15 @@ def validar_referencias() -> None:
     conteudo_guia = "\n".join(
         fonte_da_celula(celula) for celula in guia["cells"]
     )
-    assert "Atividade em dupla — compreender o interesse do colega" in conteudo_guia
-    assert conteudo_guia.index("## Atividade individual — diagnóstico inicial") < conteudo_guia.index(
-        "## Atividade em dupla"
-    ) < conteudo_guia.index("## Produto final da unidade e critérios de avaliação")
+    assert "Atividade em dupla" not in conteudo_guia
+    assert conteudo_guia.index(
+        "## Produto final da unidade e critérios de avaliação"
+    ) < conteudo_guia.index("## Atividade individual — diagnóstico inicial")
 
     dinamicas_esperadas = {
         "00_guia_da_unidade.ipynb": [
             "Modalidade:** individual",
-            "Atividade em dupla — compreender o interesse do colega",
+            "Esta é a única atividade do guia",
         ],
         "01_perguntas_e_problemas_computacionais.ipynb": [
             "uma questão substantiva:** por exemplo",
@@ -174,6 +174,8 @@ def validar_referencias() -> None:
             "| Pergunta | Finalidade | Estrutura | Operação inicial |",
             "Modalidade:** trios",
             "Atividade em trio e plenária — casos limítrofes",
+            "Atividade em dupla — compreender e delimitar o interesse do colega",
+            "Quero compreender __________ no contexto __________",
             "Atividade autônoma — produto parcial",
         ],
         "02_representacao_e_operacionalizacao.ipynb": [

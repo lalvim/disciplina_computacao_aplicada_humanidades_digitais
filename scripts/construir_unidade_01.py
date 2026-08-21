@@ -242,62 +242,6 @@ def guia() -> list[dict]:
         ),
         texto(
             """
-            ## Atividade individual — diagnóstico inicial
-
-            **Modalidade:** individual. **Tempo sugerido:** 10 minutos.
-
-            Responda diretamente nesta célula Markdown. Não há respostas certas. O
-            produto será um registro inicial de seu tema, fontes, experiência e dúvida;
-            ele será retomado na atividade em dupla.
-
-            **Tema de interesse:**
-            Escreva aqui.
-
-            **Experiência com Python:**
-            Escreva aqui.
-
-            **Tipos de fonte com que gostaria de trabalhar:**
-            Escreva aqui.
-
-            **Maior dúvida sobre a transformação de uma questão em dados:**
-            Escreva aqui.
-            """
-        ),
-        texto(
-            """
-            ## Atividade em dupla — compreender o interesse do colega
-
-            Forme uma dupla. Cada participante terá até dois minutos para apresentar
-            o tema, as fontes que imagina utilizar e sua principal dúvida. Enquanto
-            escuta, o colega deverá identificar:
-
-            1. **Fenômeno de interesse:** o que parece estar sendo investigado?
-            2. **Fonte possível:** que documento ou registro poderia guardar traços
-               desse fenômeno?
-            3. **Ponto ainda amplo ou ambíguo:** o que precisaria ser delimitado ou
-               definido com maior precisão?
-
-            Não tente formular a pergunta definitiva nem escolher uma técnica. O
-            objetivo é verificar se outra pessoa consegue compreender o interesse e
-            reconhecer decisões que ainda precisam ser tomadas.
-
-            ### Anotações sobre a proposta do colega
-
-            **Fenômeno de interesse:**
-            Escreva aqui.
-
-            **Fonte possível e justificativa:**
-            Escreva aqui.
-
-            **Ponto ainda amplo ou ambíguo:**
-            Escreva aqui.
-
-            **Comentário do colega que ajudou a rever minha própria proposta:**
-            Escreva aqui.
-            """
-        ),
-        texto(
-            """
             ## Produto final da unidade e critérios de avaliação
 
             Ao final da unidade, cada estudante apresentará uma **proposta inicial de
@@ -346,14 +290,27 @@ def guia() -> list[dict]:
         ),
         texto(
             """
-            ## Antes de continuar
+            ## Atividade individual — diagnóstico inicial
 
-            Escreva em uma frase:
+            **Modalidade:** individual. **Tempo sugerido:** 10 minutos.
 
-            > Quero compreender __________ no contexto __________, observando
-            > inicialmente __________.
+            Esta é a única atividade do guia. Responda diretamente nesta célula
+            Markdown antes de iniciar o Notebook 01. Não há respostas certas nem
+            necessidade de formular uma pergunta de pesquisa neste momento. O
+            registro permitirá ao professor conhecer os interesses, as experiências e
+            as dúvidas iniciais da turma.
 
-            Guarde essa frase. Ela será revista nos quatro notebooks seguintes.
+            **Tema de interesse:**
+            Escreva aqui.
+
+            **Experiência com Python:**
+            Escreva aqui.
+
+            **Tipos de fonte com que gostaria de trabalhar:**
+            Escreva aqui.
+
+            **Maior dúvida sobre a transformação de uma questão em dados:**
+            Escreva aqui.
             """
         ),
     ]
@@ -590,11 +547,61 @@ def perguntas() -> list[dict]:
         ),
         texto(
             """
+            ## Atividade em dupla — compreender e delimitar o interesse do colega
+
+            **Modalidade:** duplas. **Tempo sugerido:** 10 minutos.
+            **Produto:** comentários do colega que serão usados na formulação
+            individual da pergunta.
+
+            Retome o tema e as fontes registrados no diagnóstico do Notebook 00.
+            Prepare uma apresentação breve completando oralmente:
+
+            > Quero compreender __________ no contexto __________, observando
+            > inicialmente __________.
+
+            Cada participante terá até dois minutos para apresentar sua ideia. O
+            colega deverá ouvi-la usando os conceitos estudados neste notebook e
+            identificar:
+
+            1. **fenômeno de interesse:** o que está sendo investigado;
+            2. **contexto e recorte:** onde, quando ou em que conjunto a investigação
+               se situa;
+            3. **fonte possível:** que documento ou registro poderia fornecer
+               evidências;
+            4. **ponto ainda amplo ou ambíguo:** o que precisa ser delimitado;
+            5. **promessa excessiva:** o que talvez não possa ser sustentado pelas
+               fontes ou por uma operação computacional.
+
+            Não formule a pergunta pelo colega nem escolha uma técnica em seu lugar.
+            Faça perguntas e ofereça comentários que o ajudem a justificar suas
+            próprias decisões.
+
+            ### Anotações da revisão em dupla
+
+            **Como o colega compreendeu meu fenômeno e meu contexto:**
+            Escreva aqui.
+
+            **Fonte considerada plausível e justificativa:**
+            Escreva aqui.
+
+            **Ponto ainda amplo, ambíguo ou excessivo:**
+            Escreva aqui.
+
+            **Mudança que pretendo considerar na formulação individual:**
+            Escreva aqui.
+            """
+        ),
+        texto(
+            """
             ## Atividade autônoma — produto parcial
 
             **Modalidade:** individual. **Tempo sugerido:** 15 minutos.
             **Produto:** primeira formulação documentada de sua pergunta, preenchida
             na célula seguinte.
+
+            Use o diagnóstico inicial e os comentários recebidos na dupla como ponto
+            de partida. Você não é obrigado a aceitar todas as sugestões: registre
+            escolhas que consiga justificar.
 
             Reformule seu interesse em três níveis:
 

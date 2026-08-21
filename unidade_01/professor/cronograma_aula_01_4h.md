@@ -45,19 +45,19 @@ Antes da aula:
 
 | Tempo | Duração | Atividade | Material | Resultado observável |
 |---|---:|---|---|---|
-| 0:00–0:15 | 15 min | Acolhimento, apresentação da disciplina e problema orientador | Notebook 00 | turma compreende a pergunta central da unidade |
-| 0:15–0:30 | 15 min | Diagnóstico individual | Notebook 00, “Atividade individual — diagnóstico inicial” | respostas iniciais registradas |
-| 0:30–0:45 | 15 min | Discussão em duplas e coleta de exemplos | Notebook 00, “Atividade em dupla” | interesses e expectativas tornam-se visíveis |
-| 0:45–1:05 | 20 min | Humanidades Digitais como campo e comunidade de práticas | Notebook 01 e Alves (2016) | estudante distingue campo de simples uso de ferramentas |
-| 1:05–1:25 | 20 min | Dados, *capta* e dados situados | Notebook 01 | turma identifica decisões presentes na produção dos dados |
-| 1:25–1:45 | 20 min | Finalidade e estrutura analítica da pergunta | Notebook 01 | estudante diferencia as duas dimensões |
-| 1:45–2:00 | 15 min | Experimento Python com a tabela de perguntas | Notebook 01 | código executado e saída interpretada |
+| 0:00–0:15 | 15 min | Acolhimento, percurso e produto final da unidade | Notebook 00 | turma compreende a pergunta central e o produto esperado |
+| 0:15–0:30 | 15 min | Diagnóstico individual | final do Notebook 00 | interesses, fontes, experiências e dúvidas registrados |
+| 0:30–0:55 | 25 min | Humanidades Digitais como campo e comunidade de práticas | Notebook 01 e Alves (2016) | estudante distingue campo de simples uso de ferramentas |
+| 0:55–1:20 | 25 min | Dados, *capta* e dados situados | Notebook 01 | turma identifica decisões presentes na produção dos dados |
+| 1:20–1:45 | 25 min | Finalidade e estrutura analítica da pergunta | Notebook 01 | estudante diferencia as duas dimensões |
+| 1:45–2:00 | 15 min | Leitura orientada da tabela e de exemplos | Notebook 01 | turma relaciona pergunta, finalidade, estrutura e operação inicial |
 | 2:00–2:15 | 15 min | **Intervalo** | — | pausa efetiva |
 | 2:15–2:40 | 25 min | Atividade guiada de classificação | Notebook 01 | cinco perguntas classificadas com justificativa |
 | 2:40–3:00 | 20 min | Correção dialogada e casos limítrofes | Notebook 01 e gabarito | turma reconhece combinações e desenhos híbridos |
-| 3:00–3:25 | 25 min | Da questão ampla à pergunta delimitada e tarefa computacional | Notebook 01 | três níveis distinguidos |
-| 3:25–3:40 | 15 min | Produção individual da pergunta provisória | Notebook 01 | produto parcial registrado |
-| 3:40–3:55 | 15 min | Conceito, indicador, variável e categoria | início do Notebook 02 | conceito problemático identificado |
+| 3:00–3:20 | 20 min | Da questão ampla à pergunta delimitada e tarefa computacional | Notebook 01 | três níveis distinguidos |
+| 3:20–3:30 | 10 min | Revisão em dupla do interesse de pesquisa | Notebook 01, “Atividade em dupla” | comentários para delimitação registrados |
+| 3:30–3:45 | 15 min | Produção individual da pergunta provisória | Notebook 01 | produto parcial registrado |
+| 3:45–3:55 | 10 min | Conceito, indicador, variável e categoria | início do Notebook 02 | conceito problemático identificado |
 | 3:55–4:00 | 5 min | Síntese, bilhete de saída e orientação da próxima aula | Notebook 02 | professor recolhe evidência rápida de aprendizagem |
 
 Total: **240 minutos**.
@@ -89,19 +89,7 @@ deve ser corrigido como prova. Observe especialmente:
 - expectativa de que os dados sejam registros neutros;
 - necessidades de acessibilidade ou apoio técnico.
 
-### 0:30–0:45 — Atividade em dupla e plenária breve
-
-Oriente a turma a preencher a seção **“Atividade em dupla — compreender o
-interesse do colega”** do Notebook 00. Cada estudante explica seu interesse a
-um colega em dois minutos. O colega deve responder:
-
-1. o que parece ser o fenômeno investigado?
-2. que fonte poderia guardar traços desse fenômeno?
-3. que aspecto permanece amplo ou ambíguo?
-
-Recolha de três a quatro exemplos, sem tentar reformulá-los completamente.
-
-### 0:45–1:25 — Humanidades Digitais e dados situados
+### 0:30–1:20 — Humanidades Digitais e dados situados
 
 Use Alves (2016) para apresentar Humanidades Digitais como comunidade de
 práticas, formação e investigação, não como catálogo de ferramentas.
@@ -116,7 +104,7 @@ Pergunta de controle:
 
 Resposta esperada: não; elas podem apenas ter ficado menos visíveis.
 
-### 1:25–2:00 — Finalidade, estrutura e experimento
+### 1:20–2:00 — Finalidade, estrutura e leitura da tabela
 
 Construa no quadro:
 
@@ -131,8 +119,10 @@ Use o exemplo:
 
 Classificação orientativa: finalidade descritiva e estrutura comparativa.
 
-Execute as duas células Python do Notebook 01. Antes de cada saída, solicite uma
-previsão. Depois, pergunte o que o código fez e o que ele não justificou.
+Leia com a turma a tabela de exemplos do Notebook 01. Para cada linha, peça que
+os estudantes expliquem por que a finalidade, a estrutura e a operação inicial
+são compatíveis. Destaque que a tabela organiza decisões conceituais; ela não é
+resultado de uma análise computacional.
 
 ### 2:15–3:00 — Atividades de classificação e casos limítrofes
 
@@ -147,13 +137,18 @@ Organize grupos de três. Para cada pergunta, o grupo deve produzir:
 Na correção, aceite mais de uma estrutura quando houver justificativa coerente.
 Não aceite associação ou comparação como prova automática de explicação.
 
-### 3:00–3:40 — Reformulação da pergunta
+### 3:00–3:45 — Reformulação e revisão da pergunta
 
 Modele um exemplo em três níveis:
 
 1. questão humanística ampla;
 2. pergunta delimitada;
 3. tarefa computacional inicial.
+
+Antes da escrita individual, organize a atividade em dupla do Notebook 01. Cada
+estudante apresenta o interesse por meio da frase “Quero compreender...”, recebe
+comentários sobre fenômeno, contexto, fonte, delimitação e possíveis promessas
+excessivas e registra o que pretende reconsiderar.
 
 Depois, cada estudante escreve sua própria versão. Circule pela sala e intervenha
 com perguntas, sem reescrever pelo estudante:
@@ -166,7 +161,7 @@ com perguntas, sem reescrever pelo estudante:
 - que estrutura é necessária?
 - o que a operação deixará de fora?
 
-### 3:40–3:55 — Entrada na operacionalização
+### 3:45–3:55 — Entrada na operacionalização
 
 Apresente apenas a distinção inicial:
 

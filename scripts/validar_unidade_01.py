@@ -166,6 +166,11 @@ def validar_referencias() -> None:
             "Atividade em dupla — compreender o interesse do colega",
         ],
         "01_perguntas_e_problemas_computacionais.ipynb": [
+            "uma questão substantiva:** por exemplo",
+            "fontes produzidas em contextos específicos:** por exemplo",
+            "uma forma explícita de representação:** por exemplo",
+            "operações que geram resultados:** por exemplo",
+            "interpretação situada e crítica:** por exemplo",
             "Experimento guiado — organizar e consultar perguntas",
             "Modalidade:** trios",
             "Atividade em trio e plenária — casos limítrofes",

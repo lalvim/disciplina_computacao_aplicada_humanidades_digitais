@@ -354,11 +354,26 @@ def perguntas() -> list[dict]:
 
             Uma pesquisa orientada por dados articula:
 
-            - uma questão substantiva;
-            - fontes produzidas em contextos específicos;
-            - uma forma explícita de representação;
-            - operações que geram resultados;
-            - interpretação situada e crítica.
+            - **uma questão substantiva:** por exemplo, “como o tema do progresso
+              aparece em diferentes gêneros de três periódicos entre 1890 e 1905?”;
+            - **fontes produzidas em contextos específicos:** por exemplo, editoriais,
+              notícias e cartas, considerando quem os escreveu, para qual público,
+              sob quais convenções jornalísticas e por que foram preservados;
+            - **uma forma explícita de representação:** por exemplo, registrar cada
+              documento em uma linha com ano, periódico, gênero, local e tema. A
+              categoria `tema` resulta de uma regra de anotação e não existe pronta no
+              documento;
+            - **operações que geram resultados:** por exemplo, selecionar o período,
+              agrupar documentos por gênero, contar ocorrências da categoria
+              “progresso” e localizar os registros que produziram cada contagem;
+            - **interpretação situada e crítica:** por exemplo, tratar uma diferença
+              entre gêneros como pista para releitura dos textos, considerando a
+              cobertura da coleção, as categorias adotadas e as vozes ausentes, sem
+              generalizar automaticamente para toda a imprensa do período.
+
+            Os cinco exemplos formam uma única cadeia. Alterar a pergunta, excluir uma
+            fonte, redefinir o tema ou escolher outra operação pode modificar o
+            resultado e, portanto, a interpretação possível.
 
             Dados não são o fenômeno em estado puro. Drucker (2011) propõe o termo
             *capta* para enfatizar que registros são tomados e construídos. Lavin

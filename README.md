@@ -1,4 +1,4 @@
-# disciplina_computacao_aplicada_humanidades_digitais# COMPUTAÇÃO APLICADA A PROBLEMAS EM HUMANIDADES DIGITAIS
+# COMPUTAÇÃO APLICADA A PROBLEMAS EM HUMANIDADES DIGITAIS
 
 **Carga horária:** 60 horas
 **Duração:** 4 meses

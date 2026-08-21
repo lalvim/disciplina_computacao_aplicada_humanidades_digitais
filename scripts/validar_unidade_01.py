@@ -265,6 +265,7 @@ def validar_gabaritos() -> None:
     pasta = UNIDADE / "gabaritos"
     esperados = {
         "README.md",
+        "gabarito_00_guia.md",
         "gabarito_01_perguntas.md",
         "gabarito_02_operacionalizacao.md",
         "gabarito_03_corpus.md",
@@ -276,6 +277,11 @@ def validar_gabaritos() -> None:
         f"gabaritos divergentes: esperados {sorted(esperados)}, "
         f"encontrados {sorted(encontrados)}"
     )
+
+    guia_gabaritos = (pasta / "README.md").read_text(encoding="utf-8")
+    assert "## Cobertura das atividades" in guia_gabaritos
+    assert "Notebook 00: diagnóstico inicial" in guia_gabaritos
+    assert "Notebook 04: autoavaliação e revisão entre pares" in guia_gabaritos
 
     chave = (pasta / "gabarito_exercicios_multipla_escolha.md").read_text(
         encoding="utf-8"
@@ -312,6 +318,44 @@ def validar_gabaritos() -> None:
     ).read_text(encoding="utf-8")
     assert "| progresso | 0 | 1 |" in operacionalizacao
     assert "a soma é cinco" in operacionalizacao
+
+    marcadores_detalhamento = {
+        "gabarito_00_guia.md": [
+            "Exemplo de resolução preenchida",
+            "Exemplo de leitura docente e encaminhamento",
+        ],
+        "gabarito_01_perguntas.md": [
+            "Checklist de revisão — exemplo resolvido",
+            "Casos limítrofes — exemplo de resolução",
+            "Revisão em dupla — exemplo preenchido",
+            "Linha de raciocínio da resolução",
+        ],
+        "gabarito_02_operacionalizacao.md": [
+            "Resolução das quatro perguntas do experimento",
+            "Exemplo de tratamento de uma categoria histórica",
+            "Exemplo de comparação e revisão em dupla",
+        ],
+        "gabarito_03_corpus.md": [
+            "Como acompanhar a resolução",
+            "Resumo programático do Corpus A",
+            "Revisão em dupla — exemplo de resolução",
+        ],
+        "gabarito_04_oficina.md": [
+            "Como acompanhar o exemplo de resolução",
+            "Autoavaliação — exemplo de resolução",
+            "Revisão entre pares — exemplo de resolução",
+        ],
+    }
+    for nome, marcadores in marcadores_detalhamento.items():
+        conteudo = (pasta / nome).read_text(encoding="utf-8")
+        ausentes = [marcador for marcador in marcadores if marcador not in conteudo]
+        assert not ausentes, f"{nome} sem exemplos detalhados: {', '.join(ausentes)}"
+
+    multipla_escolha = (
+        pasta / "gabarito_exercicios_multipla_escolha.md"
+    ).read_text(encoding="utf-8")
+    assert multipla_escolha.count("**Como resolver:**") == 18
+    assert multipla_escolha.count("**Por que as demais estão incorretas:**") == 18
 
 
 def validar_revisores() -> None:
@@ -444,7 +488,7 @@ def main() -> None:
         "OK exercícios: 18 questões, 10 tópicos, HTML offline e versão textual"
     )
     validar_gabaritos()
-    print("OK gabaritos: 5 arquivos de respostas e 1 guia docente")
+    print("OK gabaritos: 6 arquivos de respostas e 1 guia docente")
     validar_revisores()
     print(
         "OK revisores: 6 especialidades, coordenação, matriz, modelo e "

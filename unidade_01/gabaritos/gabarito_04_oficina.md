@@ -3,6 +3,19 @@
 Este arquivo apresenta uma resposta-modelo completa. Ela demonstra coerência
 entre as partes, mas não deve ser usada como molde temático obrigatório.
 
+## Como acompanhar o exemplo de resolução
+
+O projeto-modelo reutiliza o mesmo caso dos gabaritos anteriores. A resolução
+segue quatro movimentos:
+
+1. recuperar os produtos parciais, sem copiá-los automaticamente;
+2. verificar se pergunta, unidade, corpus e operacionalização continuam
+   compatíveis;
+3. explicitar a cadeia entre operação, resultado, evidência e interpretação;
+4. usar autoavaliação e parecer do colega para justificar uma revisão.
+
+Cada seção abaixo apresenta uma decisão e sua consequência para as demais.
+
 ## 1. Identificação
 
 **Título provisório:** Progresso em diferentes gêneros da coleção didática de
@@ -42,6 +55,11 @@ etapa secundária, sem ser tomada automaticamente como explicação causal.
 **Tarefa computacional:** Filtrar documentos, agrupar por gênero e calcular a
 frequência absoluta e relativa da categoria “progresso”.
 
+**O que mudou em relação ao Notebook 01:** a pergunta deixou de falar apenas em
+“aparecer” e passou a nomear explicitamente a atribuição categorial. A mudança
+evita sugerir que o tema existe pronto no texto e alinha a pergunta aos dados
+efetivamente disponíveis.
+
 ## 3. Delimitação
 
 **Unidade de análise:** Documento.
@@ -63,6 +81,11 @@ disponíveis.
 **Exclusão:** Registro fora do período ou sem os campos necessários. Exclusões
 por ilegibilidade deveriam ser quantificadas e discutidas em uma pesquisa real.
 
+**O que mudou em relação ao Notebook 03:** os critérios foram ligados diretamente
+aos campos necessários para a comparação por gênero. O alcance também foi
+restringido à coleção fictícia, evitando apresentar o conjunto como amostra da
+imprensa histórica.
+
 ## 4. Operacionalização
 
 | Conceito | Dimensão | Indicador | Variável | Fonte | Regra | Limitação |
@@ -73,6 +96,18 @@ por ilegibilidade deveriam ser quantificadas e discutidas em uma pesquisa real.
 Para a exploração inicial, a primeira opção é compatível com os dados
 disponíveis. Para uma investigação substantiva, a segunda precisaria ser
 combinada com leitura contextual e ampliação das categorias.
+
+**Alternativa inicialmente escolhida:** tema dominante, porque é o único indicador
+presente para todos os registros da coleção didática.
+
+**O que mudou em relação ao Notebook 02:** a presença lexical foi mantida como
+alternativa futura, mas não como medida disponível no corpus atual. A decisão
+separa o que pode ser executado agora do que exigiria textos integrais, lista de
+variantes e revisão contextual.
+
+**Raciocínio:** a alternativa escolhida não é considerada teoricamente superior;
+ela é apenas compatível com os dados existentes. Sua limitação orienta a cadeia
+de evidência e impede interpretar “tema dominante” como importância histórica.
 
 ## 5. Esquema inicial
 
@@ -139,7 +174,75 @@ redução produzida pela categoria exclusiva.
 **Próxima decisão:** Construir um guia de anotação que defina “progresso” e
 registre casos ambíguos.
 
-## 9. Rubrica do docente
+## 9. Referências utilizadas — exemplo preenchido
+
+1. **DRUCKER, Johanna (2011).** Fundamenta a afirmação de que a categoria `tema`
+   é uma construção interpretativa, não uma propriedade transparente do
+   documento.
+2. **LAVIN, Matthew (2021).** Sustenta a documentação dos dados como situados e a
+   necessidade de registrar decisões de seleção e transformação.
+3. **D'IGNAZIO, Catherine; KLEIN, Lauren F. (2020).** Orienta a análise de poder,
+   ausências e trabalho envolvido na produção da base.
+
+**Por que esta lista é adequada:** cada obra está ligada a uma decisão concreta.
+Listar uma referência sem explicar sua função não demonstraria fundamentação.
+
+## 10. Autoavaliação — exemplo de resolução
+
+| Critério | Pontuação | O que ainda precisa ser revisto |
+|---|---:|---|
+| Relevância humanística | 2 | relacionar o estudo a uma discussão historiográfica mais específica |
+| Fundamentação bibliográfica | 2 | incluir bibliografia histórica sobre imprensa, gêneros e progresso |
+| Delimitação da pergunta | 3 | manter explícito que se trata da atribuição temática na coleção |
+| Unidade de análise | 3 | nenhuma revisão imediata; documento está alinhado às afirmações |
+| Viabilidade dos dados | 2 | verificar disponibilidade de textos integrais para a alternativa lexical |
+| Operacionalização | 2 | construir e testar o guia de anotação de “progresso” |
+| Cadeia de evidência | 3 | preservar releitura de casos divergentes na execução |
+| Limites e ética | 2 | detalhar tratamento de vocabulário histórico potencialmente estigmatizante |
+
+**Total orientativo:** 19 de 24.
+
+**Síntese da autoavaliação:** a proposta é coerente para uma exploração didática,
+mas ainda não possui fundamentação histórica suficiente nem regra de anotação
+testada. A prioridade é construir o guia de categorias e verificar se os textos
+integrais permitem uma segunda operacionalização.
+
+**Como pontuar:** a nota 3 não significa perfeição; significa que o elemento está
+definido, coerente e criticamente justificado no estágio atual. Não atribuir 3 a
+um item apenas porque ele foi mencionado.
+
+## 11. Revisão entre pares — exemplo de resolução
+
+### Parecer recebido
+
+> Consigo identificar que serão observados documentos e que a comparação será por
+> gênero. Os dados permitem contar a categoria `tema`, mas a expressão “presença
+> do progresso” ainda pode ser entendida como ocorrência do conceito no texto.
+> Sugiro que a pergunta diga “atribuição do tema” e que o projeto esclareça quem
+> atribuiu a categoria. O alcance está limitado à coleção, mas a motivação ainda
+> precisa de bibliografia histórica além das leituras metodológicas.
+
+### Mudanças realizadas e justificativa
+
+1. Substituí “presença do progresso” por “atribuição do tema ‘progresso’” na
+   pergunta, para alinhar a linguagem ao indicador disponível.
+2. Registrei `tema` como categoria produzida por anotação e defini a construção de
+   um guia de anotação como próxima decisão.
+3. Mantive a conclusão limitada à coleção didática.
+4. Acrescentei como pendência a busca de bibliografia histórica sobre imprensa e
+   progresso, pois as referências metodológicas não bastam para interpretar o
+   fenômeno.
+
+### Pergunta após a revisão
+
+> Como a atribuição do tema “progresso” varia entre editoriais, notícias e cartas
+> dos três periódicos da coleção didática, entre 1890 e 1905?
+
+**Por que o parecer é adequado:** responde aos itens da atividade, identifica uma
+decisão prioritária e não reescreve todo o projeto pelo autor. O registro das
+mudanças mostra quais sugestões foram aceitas e por quê.
+
+## 12. Rubrica do docente
 
 Pontuar cada critério de 0 a 3:
 

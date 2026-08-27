@@ -15,6 +15,27 @@ preciso decidir se um documento poderá receber mais de um tema.
 A expressão escolhida é justamente o ponto em que uma decisão teórica precisará
 ser convertida em regra observável.
 
+### Como usar as referências na resolução
+
+O mapa de oito etapas do notebook é uma síntese didática. Na correção, as
+referências podem sustentar decisões diferentes, sem pressupor que uma única
+obra apresente exatamente o mesmo percurso:
+
+- Babbie (2021, cap. 5) fundamenta a passagem de conceitos a formas de
+  operacionalização;
+- Adcock e Collier (2001) ajudam a examinar se o indicador representa
+  adequadamente o conceito no contexto da pesquisa;
+- Krippendorff (2019, caps. 5, 7–8) fundamenta a explicitação das unidades, das
+  regras de codificação e das variáveis;
+- Riley (2017) apoia a identificação das funções dos metadados;
+- Bowker e Star (1999), Rodrigues (2020), Rawson e Muñoz (2019), Drucker (2011)
+  e D'Ignazio e Klein (2020) sustentam a crítica das categorias e das escolhas de
+  representação.
+
+Essas obras não fornecem uma resposta automática para o exercício. Elas oferecem
+critérios para justificar por que a cadeia conceito–indicador–registro é adequada
+e quais perdas precisam permanecer visíveis.
+
 ## 1. Leitura da tabela e resultado do experimento
 
 ### Unidade de análise

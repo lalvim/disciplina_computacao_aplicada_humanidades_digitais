@@ -119,6 +119,11 @@ def validar_referencias() -> None:
         "FERLA, Luis Antonio",
         "SHMUELI, Galit",
         "DREW, Clifford",
+        "BABBIE, Earl",
+        "ADCOCK, Robert",
+        "KRIPPENDORFF, Klaus",
+        "RILEY, Jenn",
+        "BOWKER, Geoffrey",
     ]
     ausentes = [autor for autor in autores if autor not in referencias]
     assert not ausentes, f"autores ausentes: {', '.join(ausentes)}"
@@ -134,6 +139,20 @@ def validar_referencias() -> None:
         "escravizada de Mariana (século XVIII)"
     )
     assert titulo_rodrigues in " ".join(referencias.split())
+    titulos_metodologicos = [
+        "The Practice of Social Research",
+        "Measurement Validity: A Shared Standard for Qualitative and Quantitative Research",
+        "Content Analysis: An Introduction to Its Methodology",
+        "Understanding Metadata: What Is Metadata, and What Is It For? A Primer",
+        "Sorting Things Out: Classification and Its Consequences",
+    ]
+    referencias_normalizadas = " ".join(referencias.split())
+    ausentes = [
+        titulo
+        for titulo in titulos_metodologicos
+        if titulo not in referencias_normalizadas
+    ]
+    assert not ausentes, f"títulos metodológicos ausentes: {', '.join(ausentes)}"
 
     for nome in [
         "01_perguntas_e_problemas_computacionais.ipynb",
@@ -186,6 +205,13 @@ def validar_referencias() -> None:
             "pergunta → conceito e dimensão → indicador → unidade de análise",
             "variáveis, valores, documentos e metadados → categorias históricas e",
             "As etapas formam um ciclo",
+            "síntese didática elaborada para a unidade",
+            "Babbie (2021, cap. 5)",
+            "Adcock e Collier (2001)",
+            "Krippendorff (2019, cap. 5)",
+            "Riley (2017)",
+            "Bowker e Star (1999)",
+            "Rodrigues (2020)",
             "## 1. Conceito e dimensão",
             "## 2. Indicador",
             "Exemplo — do conceito e da dimensão ao indicador",
@@ -205,6 +231,9 @@ def validar_referencias() -> None:
             "documentos_temas.explode",
             "## 7. Validade da representação",
             "## 8. Mapa de operacionalização",
+            "### De onde vêm os elementos do percurso?",
+            "| 8. Mapa de operacionalização | Síntese didática desta unidade |",
+            "os autores não empregam necessariamente os mesmos termos",
             "| Conceito | Dimensão | Indicador | Unidade de análise | Variável | Categorias ou valores | Fonte | Regra | Limitação |",
             "produção individual seguida de comparação em dupla",
         ],
@@ -225,7 +254,12 @@ def validar_referencias() -> None:
         conteudo = "\n".join(
             fonte_da_celula(celula) for celula in documento["cells"]
         )
-        ausentes = [marcador for marcador in marcadores if marcador not in conteudo]
+        conteudo_normalizado = " ".join(conteudo.split())
+        ausentes = [
+            marcador
+            for marcador in marcadores
+            if " ".join(marcador.split()) not in conteudo_normalizado
+        ]
         assert not ausentes, f"{nome} sem dinâmica: {', '.join(ausentes)}"
 
     caminho_notebook_01 = UNIDADE / "01_perguntas_e_problemas_computacionais.ipynb"
@@ -331,6 +365,8 @@ def validar_gabaritos() -> None:
     ).read_text(encoding="utf-8")
     assert "| progresso | 0 | 1 |" in operacionalizacao
     assert "a soma é cinco" in operacionalizacao
+    assert "Como usar as referências na resolução" in operacionalizacao
+    assert "mapa de oito etapas do notebook é uma síntese didática" in operacionalizacao
 
     marcadores_detalhamento = {
         "gabarito_00_guia.md": [

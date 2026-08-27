@@ -684,6 +684,16 @@ def operacionalizacao() -> list[dict]:
             As etapas formam um ciclo, não uma sequência irreversível. Ao descobrir
             uma perda ou incompatibilidade, retorne às decisões anteriores e revise-as.
 
+            **Nota de fundamentação:** este percurso de oito etapas é uma **síntese
+            didática elaborada para a unidade**, e não uma taxonomia reproduzida de
+            uma única obra. Ele articula a discussão de conceituação e
+            operacionalização de Babbie (2021), a relação entre conceitos,
+            indicadores e validade de Adcock e Collier (2001), a explicitação de
+            unidades e procedimentos de codificação de Krippendorff (2019) e os
+            debates das Humanidades Digitais sobre representação, classificação,
+            contexto e poder. As referências específicas aparecem junto a cada
+            etapa e ao final do notebook.
+
             ## Retomada
 
             1. Qual foi a pergunta delimitada no Notebook 01?
@@ -704,7 +714,11 @@ def operacionalizacao() -> list[dict]:
             a pesquisa observará, mas ainda não define como ele será reconhecido nas
             fontes.
 
-            A próxima etapa constrói essa ponte por meio de um indicador.
+            A próxima etapa constrói essa ponte por meio de um indicador. A distinção
+            entre conceito, dimensões e modos de operacionalização acompanha a
+            discussão metodológica de Babbie (2021, cap. 5); o encadeamento particular
+            usado aqui foi adaptado às necessidades de uma pesquisa em Humanidades
+            Digitais.
             """
         ),
         texto(
@@ -725,8 +739,11 @@ def operacionalizacao() -> list[dict]:
             **Operacionalizar** começa por construir e justificar a relação entre
             conceito, dimensão e indicador. Nas etapas seguintes, será necessário
             definir sobre que unidade o indicador será observado e como será registrado.
-            A crítica de Drucker (2011) ajuda a perceber que a representação não apenas
-            descreve o objeto: ela produz uma forma particular de torná-lo observável.
+            Babbie (2021, cap. 5) oferece a base para essa passagem metodológica, e
+            Adcock e Collier (2001) mostram por que a relação entre conceitos e
+            indicadores precisa ser avaliada quanto à validade. A crítica de Drucker
+            (2011) acrescenta que a representação não apenas descreve o objeto: ela
+            produz uma forma particular de torná-lo observável.
             """
         ),
         texto(
@@ -760,6 +777,10 @@ def operacionalizacao() -> list[dict]:
 
             Um jornal pode ser a fonte, cada artigo a unidade de análise e cada parágrafo
             a unidade de observação. Trocar de unidade altera o significado das medidas.
+            Krippendorff (2019, cap. 5) mostra que a definição das unidades e das
+            funções que elas exercem é uma decisão metodológica indispensável na
+            análise de conteúdo; os termos acima foram organizados aqui para tornar
+            explícita a cadeia de inferência deste curso.
             """
         ),
         texto(
@@ -804,6 +825,12 @@ def operacionalizacao() -> list[dict]:
             **Metadados** são dados que descrevem, identificam, contextualizam ou
             administram outros dados e documentos. Eles podem ser parte da própria
             análise — por exemplo, data, autoria, local e gênero documental.
+
+            Krippendorff (2019, caps. 7–8) fundamenta a necessidade de explicitar
+            regras de registro, codificação e variáveis. Para a distinção entre dados
+            e metadados e para as funções descritiva, administrativa, estrutural e de
+            preservação dos metadados, consulte Riley (2017). A tabela é apenas uma
+            forma possível de implementar essas decisões.
             """
         ),
         texto(
@@ -876,10 +903,14 @@ def operacionalizacao() -> list[dict]:
             normalizá-lo não significa que as diferenças desapareceram. O pesquisador
             deve justificar quando mantém, agrupa, separa ou recusa uma categoria e
             avaliar se a reprodução de termos ofensivos é necessária para a análise.
-            Rawson e Muñoz (2019) alertam para as perdas produzidas pela “limpeza” de
-            dados, enquanto D'Ignazio e Klein (2020) mostram que decidir o que e como
-            contar envolve poder, trabalho e experiências que podem desaparecer das
-            estruturas formais.
+            Bowker e Star (1999) mostram que classificações e infraestruturas possuem
+            consequências e não devem ser tratadas como recipientes neutros. Rodrigues
+            (2020) examina concretamente os problemas éticos e metodológicos de
+            transpor categorias de registros históricos da escravidão para uma base de
+            dados. Rawson e Muñoz (2019) alertam para as perdas produzidas pela
+            “limpeza” de dados, enquanto D'Ignazio e Klein (2020) mostram que decidir
+            o que e como contar envolve poder, trabalho e experiências que podem
+            desaparecer das estruturas formais.
             """
         ),
         texto(
@@ -940,13 +971,21 @@ def operacionalizacao() -> list[dict]:
             segunda preserva coexistências, porém demanda regras explícitas para
             comparar documentos. Nenhuma estrutura é naturalmente correta: a escolha
             depende da pergunta, da teoria, das fontes e da qualidade da anotação.
+            Comparar as duas estruturas torna observável, em escala didática, o
+            argumento de Drucker (2011) e Rawson e Muñoz (2019): organizar ou
+            transformar dados também produz um modelo interpretativo.
             """
         ),
         texto(
             """
             ## 7. Validade da representação
 
-            Uma operacionalização deve ser examinada em pelo menos quatro dimensões:
+            A lista abaixo é um **roteiro didático de verificação**, não uma taxonomia
+            retirada integralmente de uma única referência. Ela articula a validade da
+            mensuração discutida por Adcock e Collier (2001), a confiabilidade e a
+            validade na análise de conteúdo examinadas por Krippendorff (2019) e as
+            exigências de contexto e documentação destacadas pelas Humanidades
+            Digitais. Uma operacionalização será examinada em quatro dimensões:
 
             - **validade conceitual:** o indicador corresponde ao conceito?
             - **confiabilidade:** a regra seria aplicada de modo consistente?
@@ -1014,9 +1053,36 @@ def operacionalizacao() -> list[dict]:
             """
             ## Referências e leituras
 
+            ### De onde vêm os elementos do percurso?
+
+            | Etapa da unidade | Base bibliográfica | Como a referência é usada aqui |
+            |---|---|---|
+            | 1. Conceito e dimensão | Babbie (2021, cap. 5) | Apoia a conceituação e a explicitação de dimensões antes da mensuração |
+            | 2. Indicador | Babbie (2021, cap. 5); Adcock e Collier (2001) | Sustenta a passagem do conceito a observações e a avaliação de sua validade |
+            | 3. Unidade de análise | Krippendorff (2019, cap. 5) | Fundamenta a necessidade de explicitar as unidades usadas na análise |
+            | 4. Variáveis, valores, documentos e metadados | Krippendorff (2019, caps. 7–8); Riley (2017) | Apoia regras de registro, variáveis e funções dos metadados |
+            | 5. Categorias históricas e analíticas | Bowker e Star (1999); Rodrigues (2020) | Permite examinar classificações como construções situadas e suas consequências |
+            | 6. Comparação de representações | Drucker (2011); Rawson e Muñoz (2019) | Sustenta a comparação crítica entre modelos e transformações dos dados |
+            | 7. Validade da representação | Adcock e Collier (2001); Krippendorff (2019) | Apoia o exame de validade, confiabilidade e adequação das inferências |
+            | 8. Mapa de operacionalização | Síntese didática desta unidade | Reúne os elementos anteriores em um instrumento de planejamento e documentação |
+
+            A tabela indica **afinidades e usos**, não equivalência terminológica
+            perfeita: os autores não empregam necessariamente os mesmos termos nem
+            apresentam juntos este percurso de oito etapas.
+
+            - ADCOCK, Robert; COLLIER, David (2001). “Measurement Validity: A
+              Shared Standard for Qualitative and Quantitative Research”.
+            - BABBIE, Earl R. (2021). *The Practice of Social Research*, cap. 5.
+            - BOWKER, Geoffrey C.; STAR, Susan Leigh (1999). *Sorting Things Out:
+              Classification and Its Consequences*.
             - D'IGNAZIO, Catherine; KLEIN, Lauren F. (2020). *Data Feminism*.
             - DRUCKER, Johanna (2011). “Humanities Approaches to Graphical Display”.
+            - KRIPPENDORFF, Klaus (2019). *Content Analysis: An Introduction to
+              Its Methodology*, caps. 5, 7–8.
             - RAWSON, Katie; MUÑOZ, Trevor (2019). “Against Cleaning”.
+            - RILEY, Jenn (2017). *Understanding Metadata: What Is Metadata, and
+              What Is It For? A Primer*.
+            - RODRIGUES, Aldair (2020). “Humanidades digitais e diáspora africana”.
 
             Dados completos e links: `referencias.md`.
             """

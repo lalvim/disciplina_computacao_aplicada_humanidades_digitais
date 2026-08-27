@@ -53,6 +53,33 @@ como apoio para reconhecer estruturas analíticas, sem reproduzi-la como
 taxonomia universal.
 https://us.sagepub.com/sites/default/files/upm-assets/26093_book_item_26093.pdf.
 
+### Conceituação, operacionalização, unidades e validade
+
+BABBIE, Earl R. *The Practice of Social Research*. 15. ed. Boston, MA:
+Cengage, 2021. O capítulo 5 trata de conceituação, operacionalização e
+mensuração.
+https://www.cengage.uk/c/the-practice-of-social-research-15e-babbie/9780357360767/.
+
+ADCOCK, Robert; COLLIER, David. Measurement Validity: A Shared Standard for
+Qualitative and Quantitative Research. *American Political Science Review*,
+v. 95, n. 3, p. 529–546, 2001.
+https://escholarship.org/uc/item/945280s6.
+
+KRIPPENDORFF, Klaus. *Content Analysis: An Introduction to Its Methodology*.
+4. ed. Thousand Oaks, CA: SAGE, 2019. Os capítulos 5, 7 e 8 tratam,
+respectivamente, de unidades, registro/codificação e linguagens de dados.
+https://uk.sagepub.com/en-gb/asi/content-analysis/book258450.
+
+### Metadados e classificação
+
+RILEY, Jenn. *Understanding Metadata: What Is Metadata, and What Is It For? A
+Primer*. Baltimore: NISO Press, 2017.
+https://www.niso.org/publications/understanding-metadata-2017.
+
+BOWKER, Geoffrey C.; STAR, Susan Leigh. *Sorting Things Out: Classification and
+Its Consequences*. Cambridge, MA: MIT Press, 1999.
+https://mitpress.mit.edu/9780262024617/sorting-things-out/.
+
 BERRY, David M.; FAGERJORD, Anders. *Digital Humanities: Knowledge and Critique
 in a Digital Age*. Cambridge: Polity, 2017.
 
@@ -72,9 +99,12 @@ https://dhdebates.gc.cuny.edu/read/untitled-f2acf72c-a469-49d8-be35-67f9ac1e3a60
 | Antes da Semana 1 | Alves (2016) | Introdução e discussão de comunidade de práticas |
 | Durante o Notebook 01 | Drucker (2011) e Lavin (2021) | Comparar *capta* e dados situados |
 | Durante o Notebook 01 | Shmueli (2010) e Drew, Hardman e Hosp (2008) | Distinguir finalidade e estrutura analítica |
+| Durante o Notebook 02 | Babbie (2021, cap. 5) e Adcock e Collier (2001) | Relacionar conceito, dimensão, indicador e validade |
+| Consulta no Notebook 02 | Krippendorff (2019, caps. 5, 7–8) e Riley (2017) | Fundamentar unidades, codificação, variáveis e metadados |
 | Antes da Semana 2 | Rodrigues (2020) | Estudo de caso brasileiro |
 | Durante o Notebook 03 | D'Ignazio e Klein (2020) | Capítulo “The Numbers Don’t Speak for Themselves” |
-| Aprofundamento | Rawson e Muñoz (2019) | Transformação e autoridade sobre os dados |
+| Aprofundamento | Bowker e Star (1999) e Rawson e Muñoz (2019) | Classificação, transformação e autoridade sobre os dados |
 
-As leituras essenciais devem ser trabalhadas por trechos orientados, e não como
-dez textos integrais dentro da carga de oito horas.
+As leituras essenciais devem ser trabalhadas por trechos orientados; a
+bibliografia complementar funciona como consulta e aprofundamento, e não como
+um conjunto de obras integrais exigidas dentro da carga de oito horas.

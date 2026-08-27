@@ -666,8 +666,8 @@ def operacionalizacao() -> list[dict]:
             fenômeno?** O percurso será:
 
             > pergunta → conceito e dimensão → indicador → unidade de análise →
-            > variável, valores e metadados → categorias históricas e analíticas →
-            > comparação de representações → avaliação da validade → mapa de
+            > variáveis, valores, documentos e metadados → categorias históricas e
+            > analíticas → comparação de representações → validade da representação → mapa de
             > operacionalização
 
             | Etapa | Pergunta orientadora | Para que serve |
@@ -675,10 +675,10 @@ def operacionalizacao() -> list[dict]:
             | Conceito e dimensão | O que a expressão central da pergunta significa e qual aspecto será examinado? | Delimitar teoricamente o fenômeno |
             | Indicador | Que traço observável pode apontar para esse aspecto? | Construir a ponte entre conceito e fonte |
             | Unidade de análise | Sobre que entidade serão feitas as afirmações? | Definir o que constitui um caso da pesquisa |
-            | Variáveis, valores e metadados | Como cada unidade e cada observação serão registradas e contextualizadas? | Construir um esquema de dados rastreável |
+            | Variáveis, valores, documentos e metadados | Como cada unidade e cada observação serão registradas e contextualizadas? | Construir um esquema de dados rastreável |
             | Categorias históricas e analíticas | Quem classificou, em que contexto e segundo qual regra? | Evitar naturalizar ou apagar classificações |
             | Comparação de representações | O que muda quando o mesmo material é modelado de outra maneira? | Tornar visíveis perdas e consequências das escolhas |
-            | Avaliação da validade | A representação é adequada, consistente, abrangente e rastreável? | Examinar se os dados podem sustentar a interpretação |
+            | Validade da representação | A representação é adequada, consistente, abrangente e rastreável? | Examinar se os dados podem sustentar a interpretação |
             | Mapa de operacionalização | Como documentar toda a cadeia e suas limitações? | Produzir o resultado parcial do notebook |
 
             As etapas formam um ciclo, não uma sequência irreversível. Ao descobrir
@@ -689,27 +689,49 @@ def operacionalizacao() -> list[dict]:
             1. Qual foi a pergunta delimitada no Notebook 01?
             2. Que palavra ou expressão dessa pergunta ainda precisa ser definida?
 
-            ## 1. Do conceito ao indicador
+            ## 1. Conceito e dimensão
 
             Conceitos como modernização, identidade, prestígio, violência ou
             participação política não aparecem prontos em uma planilha. Para analisá-los,
-            começamos construindo relações entre:
+            começamos distinguindo:
 
             - **conceito teórico:** ideia que orienta a investigação;
-            - **dimensão:** aspecto particular do conceito;
-            - **indicador:** traço observável escolhido como evidência dessa dimensão.
+            - **dimensão:** aspecto particular do conceito que será examinado.
 
-            **Operacionalizar** começa por construir e justificar essas relações. O
-            indicador aponta para o conceito, mas não é idêntico a ele. Nas etapas
-            seguintes, será necessário definir sobre que unidade ele será observado e
-            como será registrado. A crítica de Drucker (2011) ajuda a perceber que a
-            representação não apenas descreve o objeto: ela produz uma forma particular
-            de torná-lo observável.
+            Um conceito pode possuir várias dimensões. “Centralidade”, por exemplo,
+            pode envolver presença, extensão, posição em uma rede ou destaque na
+            organização de um documento. Escolher uma dimensão delimita o aspecto que
+            a pesquisa observará, mas ainda não define como ele será reconhecido nas
+            fontes.
+
+            A próxima etapa constrói essa ponte por meio de um indicador.
             """
         ),
         texto(
             """
-            ### Primeiro passo do mapa — do conceito ao indicador
+            ## 2. Indicador
+
+            Um **indicador** é um traço observável escolhido como evidência de uma
+            dimensão do conceito. Ele pode ser uma presença, contagem, proporção,
+            relação, posição, característica textual ou classificação produzida por
+            uma regra explícita.
+
+            O indicador aponta para o conceito, mas não é idêntico a ele. Contar
+            palavras relacionadas à educação, por exemplo, pode indicar extensão da
+            discussão, mas não mede automaticamente importância histórica. Escolher um
+            indicador exige justificar por que ele é pertinente, indicar suas perdas e
+            reconhecer interpretações que ele não sustenta.
+
+            **Operacionalizar** começa por construir e justificar a relação entre
+            conceito, dimensão e indicador. Nas etapas seguintes, será necessário
+            definir sobre que unidade o indicador será observado e como será registrado.
+            A crítica de Drucker (2011) ajuda a perceber que a representação não apenas
+            descreve o objeto: ela produz uma forma particular de torná-lo observável.
+            """
+        ),
+        texto(
+            """
+            ### Exemplo — do conceito e da dimensão ao indicador
 
             | Conceito | Dimensão | Indicador | Limitação inicial |
             |---|---|---|---|
@@ -725,7 +747,7 @@ def operacionalizacao() -> list[dict]:
         ),
         texto(
             """
-            ## 2. Unidade de análise
+            ## 3. Unidade de análise
 
             A unidade de análise é a entidade sobre a qual fazemos afirmações: pessoa,
             documento, parágrafo, evento, instituição, município, imagem ou relação.
@@ -763,7 +785,7 @@ def operacionalizacao() -> list[dict]:
         ),
         texto(
             """
-            ## 3. Do caso ao registro — variáveis, valores, documentos e metadados
+            ## 4. Variáveis, valores, documentos e metadados
 
             Em uma tabela, linhas frequentemente representam unidades e colunas
             representam variáveis. Uma **variável** é um campo que registra uma
@@ -803,7 +825,7 @@ def operacionalizacao() -> list[dict]:
         ),
         texto(
             """
-            ## 4. Categorias históricas e analíticas são decisões
+            ## 5. Categorias históricas e analíticas
 
             Categorizar significa produzir equivalências e diferenças. Antes de usar
             uma categoria, pergunte:
@@ -862,7 +884,7 @@ def operacionalizacao() -> list[dict]:
         ),
         texto(
             """
-            ## 5. Comparação de representações
+            ## 6. Comparação de representações
 
             ### Experimento — uma decisão de representação altera a contagem
 
@@ -922,7 +944,7 @@ def operacionalizacao() -> list[dict]:
         ),
         texto(
             """
-            ## 6. Validade da representação
+            ## 7. Validade da representação
 
             Uma operacionalização deve ser examinada em pelo menos quatro dimensões:
 
@@ -955,9 +977,10 @@ def operacionalizacao() -> list[dict]:
         ),
         texto(
             """
-            ## Atividade — mapa de operacionalização
+            ## 8. Mapa de operacionalização
 
-            **Modalidade:** produção individual seguida de comparação em dupla.
+            **Atividade:** produção individual seguida de comparação em dupla.
+
             **Tempo sugerido:** 25 minutos individuais e 10 minutos em dupla.
             **Produto:** duas operacionalizações alternativas e um parágrafo
             comparativo na célula seguinte.

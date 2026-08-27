@@ -281,6 +281,16 @@ def validar_referencias() -> None:
     assert "Shmueli (2010)" in notebook_01
     assert titulo_alves in " ".join(notebook_01.split())
 
+    caminho_notebook_02 = UNIDADE / "02_representacao_e_operacionalizacao.ipynb"
+    documento_notebook_02 = json.loads(caminho_notebook_02.read_text(encoding="utf-8"))
+    notebook_02 = "\n".join(
+        fonte_da_celula(celula) for celula in documento_notebook_02["cells"]
+    )
+    assert notebook_02.index("## 1. Conceito e dimensão") < notebook_02.index(
+        "### Possibilidades de dimensão para o conceito do exemplo"
+    ) < notebook_02.index("## 2. Indicador")
+    assert "A última coluna apenas antecipa exemplos" in notebook_02
+
     for nome in [
         "00_guia_da_unidade.ipynb",
         "03_dados_corpus_e_evidencias.ipynb",

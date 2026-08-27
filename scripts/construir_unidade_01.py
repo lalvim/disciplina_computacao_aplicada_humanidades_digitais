@@ -723,6 +723,37 @@ def operacionalizacao() -> list[dict]:
         ),
         texto(
             """
+            ### Possibilidades de dimensão para o conceito do exemplo
+
+            Para estudar a **centralidade do tema educação**, o pesquisador pode
+            delimitar diferentes aspectos do conceito. A tabela funciona como um
+            repertório para orientar a escolha, não como uma lista que precise ser
+            aplicada integralmente.
+
+            | Dimensão possível | Pergunta que orienta a observação | Exemplo de indicador |
+            |---|---|---|
+            | Presença | O tema aparece no documento? | presença ou ausência do tema |
+            | Extensão | Quanto espaço do documento é dedicado ao tema? | proporção de palavras ou parágrafos pertinentes |
+            | Frequência | Quantas vezes o tema é mencionado? | número de ocorrências segundo uma regra explícita |
+            | Posição | Em que parte do documento o tema aparece? | título, abertura, corpo ou conclusão |
+            | Destaque editorial | Que visibilidade formal o tema recebe? | manchete, primeira página, seção ou tamanho do texto |
+            | Recorrência temporal | Com que regularidade o tema aparece na coleção? | número ou proporção de edições com o tema por período |
+            | Intensidade | Com que ênfase o tema é tratado? | escala definida por critérios linguísticos ou discursivos |
+            | Enquadramento | De que maneira o tema é apresentado? | direito, progresso, disciplina, custo ou outra categoria justificada |
+            | Valência | Que avaliação é associada ao tema? | favorável, contrária, ambivalente ou não classificável |
+            | Associação | Com quais temas ele aparece? | coocorrência com trabalho, cidadania ou progresso |
+            | Diversidade de atores | Quantos grupos participam da discussão? | número e tipos de atores mencionados ou citados |
+            | Protagonismo | Quem recebe voz ou capacidade de agir? | fala direta, autoria ou posição do ator na narrativa |
+
+            As dimensões não são universais nem intercambiáveis. “Extensão”, por
+            exemplo, mede o espaço ocupado pela discussão, mas não demonstra por si
+            só sua importância histórica. O estudante deve escolher a dimensão que
+            melhor corresponda à pergunta. A última coluna apenas antecipa exemplos
+            de **indicadores**, que serão definidos formalmente na seção seguinte.
+            """
+        ),
+        texto(
+            """
             ## 2. Indicador
 
             Um **indicador** é um traço observável escolhido como evidência de uma
@@ -1031,37 +1062,6 @@ def operacionalizacao() -> list[dict]:
 
             Escolha um conceito central de sua pergunta. Proponha ao menos duas
             operacionalizações. Compare o que cada uma permite observar e o que perde.
-            """
-        ),
-        texto(
-            """
-            ### Possibilidades de dimensão para o conceito do exemplo
-
-            Para estudar a **centralidade do tema educação**, o pesquisador pode
-            delimitar diferentes aspectos do conceito. A tabela funciona como um
-            repertório para orientar a escolha, não como uma lista que precise ser
-            aplicada integralmente.
-
-            | Dimensão possível | Pergunta que orienta a observação | Exemplo de indicador |
-            |---|---|---|
-            | Presença | O tema aparece no documento? | presença ou ausência do tema |
-            | Extensão | Quanto espaço do documento é dedicado ao tema? | proporção de palavras ou parágrafos pertinentes |
-            | Frequência | Quantas vezes o tema é mencionado? | número de ocorrências segundo uma regra explícita |
-            | Posição | Em que parte do documento o tema aparece? | título, abertura, corpo ou conclusão |
-            | Destaque editorial | Que visibilidade formal o tema recebe? | manchete, primeira página, seção ou tamanho do texto |
-            | Recorrência temporal | Com que regularidade o tema aparece na coleção? | número ou proporção de edições com o tema por período |
-            | Intensidade | Com que ênfase o tema é tratado? | escala definida por critérios linguísticos ou discursivos |
-            | Enquadramento | De que maneira o tema é apresentado? | direito, progresso, disciplina, custo ou outra categoria justificada |
-            | Valência | Que avaliação é associada ao tema? | favorável, contrária, ambivalente ou não classificável |
-            | Associação | Com quais temas ele aparece? | coocorrência com trabalho, cidadania ou progresso |
-            | Diversidade de atores | Quantos grupos participam da discussão? | número e tipos de atores mencionados ou citados |
-            | Protagonismo | Quem recebe voz ou capacidade de agir? | fala direta, autoria ou posição do ator na narrativa |
-
-            As dimensões não são universais nem intercambiáveis. “Extensão”, por
-            exemplo, mede o espaço ocupado pela discussão, mas não demonstra por si
-            só sua importância histórica. O estudante deve escolher a dimensão que
-            melhor corresponda à pergunta e, em seguida, definir indicador, fonte e
-            regra compatíveis.
             """
         ),
         texto(

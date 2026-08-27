@@ -666,15 +666,17 @@ def operacionalizacao() -> list[dict]:
             fenômeno?** O percurso será:
 
             > pergunta → conceito e dimensão → indicador → unidade de análise →
-            > variável ou categoria → comparação de representações → avaliação da
-            > validade → mapa de operacionalização
+            > variável, valores e metadados → categorias históricas e analíticas →
+            > comparação de representações → avaliação da validade → mapa de
+            > operacionalização
 
             | Etapa | Pergunta orientadora | Para que serve |
             |---|---|---|
             | Conceito e dimensão | O que a expressão central da pergunta significa e qual aspecto será examinado? | Delimitar teoricamente o fenômeno |
             | Indicador | Que traço observável pode apontar para esse aspecto? | Construir a ponte entre conceito e fonte |
             | Unidade de análise | Sobre que entidade serão feitas as afirmações? | Definir o que constitui um caso da pesquisa |
-            | Variável ou categoria | Como cada observação será registrada? | Tornar explícita a regra de representação |
+            | Variáveis, valores e metadados | Como cada unidade e cada observação serão registradas e contextualizadas? | Construir um esquema de dados rastreável |
+            | Categorias históricas e analíticas | Quem classificou, em que contexto e segundo qual regra? | Evitar naturalizar ou apagar classificações |
             | Comparação de representações | O que muda quando o mesmo material é modelado de outra maneira? | Tornar visíveis perdas e consequências das escolhas |
             | Avaliação da validade | A representação é adequada, consistente, abrangente e rastreável? | Examinar se os dados podem sustentar a interpretação |
             | Mapa de operacionalização | Como documentar toda a cadeia e suas limitações? | Produzir o resultado parcial do notebook |
@@ -687,35 +689,38 @@ def operacionalizacao() -> list[dict]:
             1. Qual foi a pergunta delimitada no Notebook 01?
             2. Que palavra ou expressão dessa pergunta ainda precisa ser definida?
 
-            ## 1. Do conceito ao registro
+            ## 1. Do conceito ao indicador
 
             Conceitos como modernização, identidade, prestígio, violência ou
             participação política não aparecem prontos em uma planilha. Para analisá-los,
-            construímos relações entre:
+            começamos construindo relações entre:
 
             - **conceito teórico:** ideia que orienta a investigação;
             - **dimensão:** aspecto particular do conceito;
-            - **indicador:** evidência observável escolhida;
-            - **variável:** campo em que registramos valores;
-            - **categoria ou valor:** forma assumida por uma observação.
+            - **indicador:** traço observável escolhido como evidência dessa dimensão.
 
-            **Operacionalizar** é construir e justificar essas relações. O indicador
-            aponta para o conceito, mas não é idêntico a ele. A crítica de Drucker
-            (2011) ajuda a perceber que a representação não apenas descreve o objeto:
-            ela produz uma forma particular de torná-lo observável.
+            **Operacionalizar** começa por construir e justificar essas relações. O
+            indicador aponta para o conceito, mas não é idêntico a ele. Nas etapas
+            seguintes, será necessário definir sobre que unidade ele será observado e
+            como será registrado. A crítica de Drucker (2011) ajuda a perceber que a
+            representação não apenas descreve o objeto: ela produz uma forma particular
+            de torná-lo observável.
             """
         ),
         texto(
             """
-            ### Exemplo de mapa de operacionalização
+            ### Primeiro passo do mapa — do conceito ao indicador
 
-            | Conceito | Dimensão | Indicador | Variável | Limitação |
-            |---|---|---|---|---|
-            | Centralidade do tema educação | Presença no documento | Tema dominante atribuído | `tema` | Um único tema apaga ambiguidades |
-            | Centralidade do tema educação | Extensão da discussão | Palavras no trecho pertinente | `palavras_sobre_educacao` | Extensão não equivale a importância |
+            | Conceito | Dimensão | Indicador | Limitação inicial |
+            |---|---|---|---|
+            | Centralidade do tema educação | Presença no documento | Tema dominante atribuído | Um único tema apaga ambiguidades |
+            | Centralidade do tema educação | Extensão da discussão | Palavras no trecho pertinente | Extensão não equivale a importância |
 
-            A tabela serve para documentar uma decisão conceitual. Ela não precisa ser
-            criada em Python, pois ainda não contém observações a serem processadas.
+            Este primeiro passo ainda não define unidade, variável, valores, fonte ou
+            regra. Ele serve apenas para comparar duas pontes possíveis entre conceito
+            e observação. O mapa completo será construído ao final do notebook. A
+            tabela não precisa ser criada em Python, pois ainda não contém observações
+            a serem processadas.
             """
         ),
         texto(
@@ -758,11 +763,17 @@ def operacionalizacao() -> list[dict]:
         ),
         texto(
             """
-            ## 3. Variáveis, categorias, documentos e metadados
+            ## 3. Do caso ao registro — variáveis, valores, documentos e metadados
 
             Em uma tabela, linhas frequentemente representam unidades e colunas
-            representam variáveis. Algumas variáveis expressam quantidades; outras,
-            categorias ou identificadores.
+            representam variáveis. Uma **variável** é um campo que registra uma
+            característica da unidade; uma **categoria ou valor** é uma forma que esse
+            campo pode assumir. Por exemplo, `genero` é a variável e `editorial` é uma
+            de suas categorias; `ano` é a variável e `1890` é um valor observado.
+
+            Um **identificador** distingue cada unidade, mas não descreve uma
+            característica substantiva. O campo `id`, por exemplo, permite relacionar
+            tabelas e reencontrar o documento sem ser uma categoria analítica.
 
             Um **documento** é um objeto de pesquisa, não apenas uma sequência de
             caracteres. Seu suporte, autoria, circulação, gênero e proveniência
@@ -775,14 +786,14 @@ def operacionalizacao() -> list[dict]:
         ),
         texto(
             """
-            ### Exemplos de campos e papéis
+            ### Exemplos de campos, valores e papéis
 
-            | Campo | Papel | Exemplo |
+            | Campo ou variável | Papel | Categoria ou valor de exemplo |
             |---|---|---|
             | `id` | Identificador | D001 |
             | `ano` | Variável temporal | 1890 |
-            | `genero` | Categoria documental | editorial |
-            | `tema` | Categoria analítica | progresso |
+            | `genero` | Variável documental categórica | editorial |
+            | `tema` | Variável analítica categórica | progresso |
             | `texto` | Conteúdo documental | trecho integral |
             | `arquivo_origem` | Metadado de proveniência | caixa_03.pdf |
 
@@ -792,7 +803,7 @@ def operacionalizacao() -> list[dict]:
         ),
         texto(
             """
-            ## 4. Categorias são decisões
+            ## 4. Categorias históricas e analíticas são decisões
 
             Categorizar significa produzir equivalências e diferenças. Antes de usar
             uma categoria, pergunte:
@@ -851,6 +862,8 @@ def operacionalizacao() -> list[dict]:
         ),
         texto(
             """
+            ## 5. Comparação de representações
+
             ### Experimento — uma decisão de representação altera a contagem
 
             Os mesmos três documentos serão representados de duas maneiras: com um
@@ -909,7 +922,7 @@ def operacionalizacao() -> list[dict]:
         ),
         texto(
             """
-            ## 5. Validade da representação
+            ## 6. Validade da representação
 
             Uma operacionalização deve ser examinada em pelo menos quatro dimensões:
 
@@ -964,10 +977,10 @@ def operacionalizacao() -> list[dict]:
 
             Preencha a tabela diretamente nesta célula:
 
-            | Conceito | Dimensão | Indicador | Unidade de análise | Variável ou categoria | Fonte | Regra | Limitação |
-            |---|---|---|---|---|---|---|---|
-            | Escreva | Escreva | Escreva | Escreva | Escreva | Escreva | Escreva | Escreva |
-            | Mesmo conceito | Alternativa | Indicador alternativo | Escreva | Escreva | Escreva | Escreva | Escreva |
+            | Conceito | Dimensão | Indicador | Unidade de análise | Variável | Categorias ou valores | Fonte | Regra | Limitação |
+            |---|---|---|---|---|---|---|---|---|
+            | Escreva | Escreva | Escreva | Escreva | Escreva | Escreva | Escreva | Escreva | Escreva |
+            | Mesmo conceito | Alternativa | Indicador alternativo | Escreva | Escreva | Escreva | Escreva | Escreva | Escreva |
 
             Compare as duas linhas em um pequeno parágrafo:
 
@@ -1469,18 +1482,18 @@ def oficina() -> list[dict]:
             ## 3. Operacionalização
 
             Liste os conceitos essenciais. Para cada um, descreva dimensão, indicador,
-            variável ou categoria, fonte da observação, regra e limitação. Inclua ao
-            menos duas alternativas para o conceito central.
+            variável, categorias ou valores possíveis, fonte da observação, regra e
+            limitação. Inclua ao menos duas alternativas para o conceito central.
             """
         ),
         texto(
             """
             ### Meu mapa de operacionalização
 
-            | Conceito | Dimensão | Indicador | Variável ou categoria | Fonte | Regra | Limitação |
-            |---|---|---|---|---|---|---|
-            | Conceito central | Escreva | Escreva | Escreva | Escreva | Escreva | Escreva |
-            | Mesmo conceito | Alternativa | Indicador alternativo | Escreva | Escreva | Escreva | Escreva |
+            | Conceito | Dimensão | Indicador | Variável | Categorias ou valores | Fonte | Regra | Limitação |
+            |---|---|---|---|---|---|---|---|
+            | Conceito central | Escreva | Escreva | Escreva | Escreva | Escreva | Escreva | Escreva |
+            | Mesmo conceito | Alternativa | Indicador alternativo | Escreva | Escreva | Escreva | Escreva | Escreva |
 
             **Por que uma alternativa parece mais adequada à pergunta?**
             Escreva aqui.
@@ -1505,7 +1518,7 @@ def oficina() -> list[dict]:
             | Campo | Papel | Tipo esperado | Origem | Exemplo |
             |---|---|---|---|---|
             | identificador | metadado | texto | Escreva | DOC001 |
-            | Escreva | documento, metadado, variável ou categoria | Escreva | Escreva | Escreva |
+            | Escreva | documento, metadado, identificador ou variável | Escreva | Escreva | Escreva |
 
             Acrescente quantas linhas forem necessárias. Neste momento, a tabela é uma
             especificação; na Unidade 2 ela orientará a construção dos dados reais.

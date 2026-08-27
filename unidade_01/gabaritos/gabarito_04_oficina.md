@@ -88,10 +88,10 @@ imprensa histórica.
 
 ## 4. Operacionalização
 
-| Conceito | Dimensão | Indicador | Variável | Fonte | Regra | Limitação |
-|---|---|---|---|---|---|---|
-| Presença do progresso | Centralidade categorial | Tema dominante atribuído | `tema` | Documento e anotação | Uma categoria principal por documento | Apaga temas secundários e ambiguidade |
-| Presença do progresso | Presença lexical | Ocorrências contextualizadas de “progresso” e variantes | `ocorrencias_progresso` | Texto integral | Localizar variantes e revisar concordâncias | A palavra pode assumir sentidos diferentes ou o conceito aparecer sem o termo |
+| Conceito | Dimensão | Indicador | Variável | Categorias ou valores | Fonte | Regra | Limitação |
+|---|---|---|---|---|---|---|---|
+| Presença do progresso | Centralidade categorial | Tema dominante atribuído | `tema` | educação, trabalho, progresso | Documento e anotação | Uma categoria principal por documento | Apaga temas secundários e ambiguidade |
+| Presença do progresso | Presença lexical | Ocorrências contextualizadas de “progresso” e variantes | `ocorrencias_progresso` | inteiro igual ou maior que zero | Texto integral | Localizar variantes e revisar concordâncias | A palavra pode assumir sentidos diferentes ou o conceito aparecer sem o termo |
 
 Para a exploração inicial, a primeira opção é compatível com os dados
 disponíveis. Para uma investigação substantiva, a segunda precisaria ser
@@ -116,8 +116,8 @@ de evidência e impede interpretar “tema dominante” como importância histó
 | `id` | identificador | texto | catálogo | D001 |
 | `ano` | metadado temporal | inteiro | catálogo | 1890 |
 | `periodico` | metadado documental | categoria | catálogo | Jornal Aurora |
-| `genero` | categoria documental | categoria | anotação/catalogação | editorial |
-| `tema` | categoria analítica | categoria | anotação | progresso |
+| `genero` | variável documental categórica | categoria | anotação/catalogação | editorial |
+| `tema` | variável analítica categórica | categoria | anotação | progresso |
 | `texto` | conteúdo documental | texto | transcrição | texto integral |
 | `arquivo_origem` | proveniência | texto | repositório | caixa_03.pdf |
 

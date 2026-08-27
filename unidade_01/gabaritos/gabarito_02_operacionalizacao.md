@@ -97,10 +97,10 @@ forçar uma equivalência.
 
 ## 2. Mapa de operacionalização — resposta-modelo
 
-| Conceito | Dimensão | Indicador | Unidade de análise | Variável ou categoria | Fonte | Regra | Limitação |
-|---|---|---|---|---|---|---|---|
-| Centralidade do tema educação | Presença temática | Tema dominante atribuído | Documento | `tema_dominante` | Texto integral | Após leitura, atribuir uma categoria principal segundo guia | Força exclusividade e perde temas secundários |
-| Centralidade do tema educação | Extensão da discussão | Proporção de palavras em trechos anotados como educação | Documento | `proporcao_educacao` | Texto integral e anotação de trechos | Dividir palavras dos trechos pertinentes pelo total do documento | Extensão não equivale a importância discursiva |
+| Conceito | Dimensão | Indicador | Unidade de análise | Variável | Categorias ou valores | Fonte | Regra | Limitação |
+|---|---|---|---|---|---|---|---|---|
+| Centralidade do tema educação | Presença temática | Tema dominante atribuído | Documento | `tema_dominante` | educação, trabalho, progresso | Texto integral | Após leitura, atribuir uma categoria principal segundo guia | Força exclusividade e perde temas secundários |
+| Centralidade do tema educação | Extensão da discussão | Proporção de palavras em trechos anotados como educação | Documento | `proporcao_educacao` | número entre 0 e 1 | Texto integral e anotação de trechos | Dividir palavras dos trechos pertinentes pelo total do documento | Extensão não equivale a importância discursiva |
 
 ### Comparação
 
@@ -118,8 +118,9 @@ centralidade adotado na pergunta.
    mas nenhum equivale automaticamente à centralidade.
 4. **Unidade:** o documento é o caso sobre o qual as duas medidas serão
    registradas, permitindo compará-las.
-5. **Variáveis:** `tema_dominante` e `proporcao_educacao` tornam a regra
-   operacional explícita.
+5. **Variáveis e valores:** `tema_dominante` é o campo, enquanto “educação” é
+   uma categoria possível; `proporcao_educacao` é outro campo, cujos valores são
+   números entre 0 e 1.
 6. **Fontes e regras:** texto integral, anotação e guia de codificação permitem
    reconstruir a produção dos valores.
 7. **Limitações:** cada alternativa registra uma perda específica, em vez da frase
@@ -177,6 +178,7 @@ Avaliar se o estudante:
 
 - diferencia conceito e indicador;
 - identifica uma unidade sobre a qual a afirmação pode ser feita;
+- diferencia a variável das categorias ou valores que ela pode assumir;
 - formula uma regra observável;
 - indica a fonte do valor;
 - compara alternativas reais;

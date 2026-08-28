@@ -1296,6 +1296,18 @@ def corpus() -> list[dict]:
             “Não estruturado” não significa sem forma ou sem contexto. Um texto possui
             estrutura linguística e documental; a expressão indica que essa estrutura
             não está previamente organizada como campos regulares para computação.
+
+            | Arquivo do exemplo | Classificação neste notebook | Por quê? |
+            |---|---|---|
+            | CSV (`documentos_exemplo.csv`) | Estruturado | Os registros seguem o mesmo esquema de linhas e colunas, com um campo definido para cada característica. |
+            | JSON (`metadados_exemplo.json`) | Semiestruturado | As informações possuem chaves e organização explícita, mas podem formar listas e objetos hierárquicos, sem depender de uma tabela regular. |
+            | TXT (`texto_exemplo.txt`) | Não estruturado | O conteúdo chega como texto contínuo, sem campos computacionais previamente marcados para tema, local ou gênero. |
+
+            A classificação descreve **como a informação está organizada neste
+            exemplo**, e não uma propriedade absoluta da extensão do arquivo. Um JSON
+            submetido a um esquema rígido, por exemplo, pode ser tratado como dado
+            estruturado. O código seguinte permite observar essas diferenças na
+            prática.
             """
         ),
         codigo(

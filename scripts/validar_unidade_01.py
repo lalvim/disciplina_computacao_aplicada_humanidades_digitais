@@ -246,6 +246,11 @@ def validar_referencias() -> None:
         ],
         "03_dados_corpus_e_evidencias.ipynb": [
             "produção individual seguida de revisão em dupla",
+            "| Arquivo do exemplo | Classificação neste notebook | Por quê? |",
+            "| CSV (`documentos_exemplo.csv`) | Estruturado |",
+            "| JSON (`metadados_exemplo.json`) | Semiestruturado |",
+            "| TXT (`texto_exemplo.txt`) | Não estruturado |",
+            "não uma propriedade absoluta da extensão do arquivo",
         ],
         "04_oficina_projeto_de_pesquisa.ipynb": [
             "Modalidade:** elaboração individual",

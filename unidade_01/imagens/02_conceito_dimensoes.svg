@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="670" viewBox="0 0 1200 670" role="img" aria-labelledby="titulo descricao">
+  <title id="titulo">Do conceito às dimensões e aos indicadores</title>
+  <desc id="descricao">O conceito centralidade do tema educação se ramifica em presença, extensão, posição, enquadramento e protagonismo. Cada dimensão conduz a um indicador diferente.</desc>
+  <defs>
+    <marker id="seta" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto"><path d="M0 0 L0 6 L9 3 z" fill="#486581"/></marker>
+    <style>
+      .titulo { font: 700 30px Arial, sans-serif; fill: #243B53; }
+      .cab { font: 700 17px Arial, sans-serif; fill: #486581; letter-spacing: 1px; }
+      .rotulo { font: 700 17px Arial, sans-serif; fill: #243B53; }
+      .texto { font: 15px Arial, sans-serif; fill: #334E68; }
+      .linha { stroke: #486581; stroke-width: 2.5; fill: none; marker-end: url(#seta); }
+    </style>
+  </defs>
+  <rect width="1200" height="670" rx="24" fill="#F7F3EA"/>
+  <text x="600" y="48" text-anchor="middle" class="titulo">Um conceito pode ser observado por diferentes dimensões</text>
+  <text x="150" y="95" text-anchor="middle" class="cab">CONCEITO</text>
+  <text x="520" y="95" text-anchor="middle" class="cab">DIMENSÃO ESCOLHIDA</text>
+  <text x="940" y="95" text-anchor="middle" class="cab">INDICADOR POSSÍVEL</text>
+
+  <rect x="35" y="240" width="230" height="160" rx="22" fill="#D9EAF7" stroke="#2B6CB0" stroke-width="3"/>
+  <text x="150" y="290" text-anchor="middle" class="rotulo"><tspan x="150">Centralidade do</tspan><tspan x="150" dy="24">tema educação</tspan></text>
+  <text x="150" y="360" text-anchor="middle" class="texto">Problema teórico</text>
+
+  <g>
+    <path class="linha" d="M265 320 C330 320 330 145 405 145"/><path class="linha" d="M265 320 C330 320 330 245 405 245"/>
+    <path class="linha" d="M265 320 H405"/><path class="linha" d="M265 320 C330 320 330 445 405 445"/><path class="linha" d="M265 320 C330 320 330 545 405 545"/>
+    <path class="linha" d="M635 145 H735"/><path class="linha" d="M635 245 H735"/><path class="linha" d="M635 345 H735"/><path class="linha" d="M635 445 H735"/><path class="linha" d="M635 545 H735"/>
+  </g>
+
+  <g class="rotulo">
+    <rect x="405" y="110" width="230" height="70" rx="14" fill="#FFFFFF" stroke="#287271" stroke-width="2"/><text x="520" y="152" text-anchor="middle">Presença</text>
+    <rect x="405" y="210" width="230" height="70" rx="14" fill="#FFFFFF" stroke="#287271" stroke-width="2"/><text x="520" y="252" text-anchor="middle">Extensão</text>
+    <rect x="405" y="310" width="230" height="70" rx="14" fill="#FFFFFF" stroke="#287271" stroke-width="2"/><text x="520" y="352" text-anchor="middle">Posição</text>
+    <rect x="405" y="410" width="230" height="70" rx="14" fill="#FFFFFF" stroke="#287271" stroke-width="2"/><text x="520" y="452" text-anchor="middle">Enquadramento</text>
+    <rect x="405" y="510" width="230" height="70" rx="14" fill="#FFFFFF" stroke="#287271" stroke-width="2"/><text x="520" y="552" text-anchor="middle">Protagonismo</text>
+  </g>
+  <g class="texto">
+    <rect x="735" y="110" width="430" height="70" rx="14" fill="#FFFFFF" stroke="#8C3D18" stroke-width="2"/><text x="950" y="152" text-anchor="middle">Presença ou ausência segundo uma regra</text>
+    <rect x="735" y="210" width="430" height="70" rx="14" fill="#FFFFFF" stroke="#8C3D18" stroke-width="2"/><text x="950" y="242" text-anchor="middle"><tspan x="950">Proporção de palavras ou parágrafos</tspan><tspan x="950" dy="20">pertinentes</tspan></text>
+    <rect x="735" y="310" width="430" height="70" rx="14" fill="#FFFFFF" stroke="#8C3D18" stroke-width="2"/><text x="950" y="352" text-anchor="middle">Título, abertura, corpo ou conclusão</text>
+    <rect x="735" y="410" width="430" height="70" rx="14" fill="#FFFFFF" stroke="#8C3D18" stroke-width="2"/><text x="950" y="442" text-anchor="middle"><tspan x="950">Direito, progresso, disciplina, custo</tspan><tspan x="950" dy="20">ou outra categoria justificada</tspan></text>
+    <rect x="735" y="510" width="430" height="70" rx="14" fill="#FFFFFF" stroke="#8C3D18" stroke-width="2"/><text x="950" y="542" text-anchor="middle"><tspan x="950">Fala direta, autoria ou capacidade</tspan><tspan x="950" dy="20">de agir na narrativa</tspan></text>
+  </g>
+  <text x="600" y="625" text-anchor="middle" class="texto">A dimensão delimita um aspecto; o indicador define como esse aspecto será observado.</text>
+</svg>

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="titulo descricao">
+  <title id="titulo">Construção da proposta inicial de pesquisa</title>
+  <desc id="descricao">Três produtos parciais — pergunta reformulada, mapa de operacionalização e ficha do corpus — convergem para uma proposta inicial. A proposta passa por revisão entre pares e retorna como versão revisada.</desc>
+  <defs>
+    <marker id="seta" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0 L0 6 L9 3 z" fill="#334E68"/></marker>
+    <style>
+      .titulo { font: 700 30px Arial, sans-serif; fill: #243B53; }
+      .rotulo { font: 700 18px Arial, sans-serif; fill: #243B53; }
+      .texto { font: 15px Arial, sans-serif; fill: #334E68; }
+      .seta { stroke: #334E68; stroke-width: 3; fill: none; marker-end: url(#seta); }
+    </style>
+  </defs>
+  <rect width="1200" height="600" rx="24" fill="#F7F3EA"/>
+  <text x="600" y="50" text-anchor="middle" class="titulo">A oficina integra, testa e revisa decisões</text>
+
+  <g transform="translate(35 105)">
+    <rect width="250" height="115" rx="16" fill="#D9EAF7" stroke="#2B6CB0" stroke-width="2"/>
+    <text x="125" y="43" text-anchor="middle" class="rotulo">Notebook 01</text>
+    <text x="125" y="78" text-anchor="middle" class="texto">Pergunta reformulada</text>
+  </g>
+  <g transform="translate(35 245)">
+    <rect width="250" height="115" rx="16" fill="#F6E8DF" stroke="#8C3D18" stroke-width="2"/>
+    <text x="125" y="43" text-anchor="middle" class="rotulo">Notebook 02</text>
+    <text x="125" y="72" text-anchor="middle" class="texto"><tspan x="125">Mapa de</tspan><tspan x="125" dy="20">operacionalização</tspan></text>
+  </g>
+  <g transform="translate(35 385)">
+    <rect width="250" height="115" rx="16" fill="#EEE7F5" stroke="#6B4C8A" stroke-width="2"/>
+    <text x="125" y="43" text-anchor="middle" class="rotulo">Notebook 03</text>
+    <text x="125" y="78" text-anchor="middle" class="texto">Ficha do corpus</text>
+  </g>
+
+  <path class="seta" d="M285 162 C360 162 370 265 450 265"/>
+  <path class="seta" d="M285 302 H450"/>
+  <path class="seta" d="M285 442 C360 442 370 335 450 335"/>
+
+  <g transform="translate(450 205)">
+    <rect width="275" height="190" rx="22" fill="#FFFFFF" stroke="#287271" stroke-width="3"/>
+    <text x="137" y="52" text-anchor="middle" class="rotulo">Proposta inicial</text>
+    <text x="137" y="90" text-anchor="middle" class="texto"><tspan x="137">Pergunta + fontes +</tspan><tspan x="137" dy="22">representação + evidência</tspan><tspan x="137" dy="22">+ limites e ética</tspan></text>
+  </g>
+  <path class="seta" d="M725 300 H790"/>
+  <g transform="translate(790 220)">
+    <rect width="175" height="160" rx="80" fill="#F6E8DF" stroke="#8C3D18" stroke-width="2"/>
+    <text x="87" y="66" text-anchor="middle" class="rotulo"><tspan x="87">Revisão</tspan><tspan x="87" dy="23">entre pares</tspan></text>
+    <text x="87" y="122" text-anchor="middle" class="texto">Parecer prioritário</text>
+  </g>
+  <path class="seta" d="M965 300 H1010"/>
+  <g transform="translate(1010 205)">
+    <rect width="160" height="190" rx="22" fill="#E6F4F1" stroke="#287271" stroke-width="3"/>
+    <text x="80" y="72" text-anchor="middle" class="rotulo"><tspan x="80">Proposta</tspan><tspan x="80" dy="23">revisada</tspan></text>
+    <text x="80" y="140" text-anchor="middle" class="texto"><tspan x="80">Mudanças</tspan><tspan x="80" dy="20">justificadas</tspan></text>
+  </g>
+  <text x="600" y="555" text-anchor="middle" class="texto">Revisar diante de comentários e evidências faz parte do trabalho acadêmico.</text>
+</svg>

@@ -262,7 +262,50 @@ Sempre que pertinente, responder:
 
 Evitar apresentar uma tabela, medida ou gráfico como conclusão autossuficiente.
 
-## 11. Acessibilidade e progressão
+## 11. Ilustrações, diagramas e fontes visuais
+
+Usar um recurso visual quando ele tornar uma relação, um processo, uma estrutura
+ou a materialidade de uma fonte mais compreensível do que apenas texto. Não
+inserir imagens somente para ocupar espaço ou decorar todas as seções.
+
+### Escolha do tipo de recurso
+
+- usar **SVG autoral** para fluxos, ciclos, matrizes, comparações e mapas
+  conceituais que exijam precisão;
+- usar **imagem histórica existente** quando a proveniência, a materialidade ou
+  a forma do documento fizer parte da aprendizagem;
+- usar **imagem gerada** apenas para aberturas ou metáforas conceituais sem valor
+  documental;
+- não gerar artificialmente documentos históricos, pessoas ou cenas que possam
+  ser confundidos com evidência;
+- não transformar tabelas legíveis em capturas rasterizadas.
+
+### Inserção e acessibilidade
+
+Toda imagem deve:
+
+- estar armazenada no repositório e ser referenciada por caminho relativo;
+- possuir texto alternativo que comunique sua função, não apenas sua aparência;
+- ser seguida por legenda, fonte e licença quando não for autoral;
+- ter sua ideia essencial retomada no texto do notebook;
+- continuar compreensível sem distinção de cores;
+- usar contraste adequado e dimensões que não produzam rolagem horizontal;
+- ser identificada como ilustração conceitual quando tiver sido gerada por IA.
+
+SVGs devem conter os elementos `<title>` e `<desc>`. Imagens históricas e
+geradas devem possuir uma ficha em `unidade_01/imagens/README.md`, com
+proveniência, licença, alterações e texto alternativo. Não incorporar imagens
+remotas: o material deve continuar funcionando offline e no Colab após a
+clonagem do repositório.
+
+### Relação com o texto
+
+Antes da imagem, explicar o que deve ser observado. Depois dela, indicar a
+conclusão pedagógica e os limites da representação. O recurso visual não deve
+substituir definições, instruções, dados necessários à atividade ou uma
+descrição textual acessível.
+
+## 12. Acessibilidade e progressão
 
 - não pressupor experiência anterior com Python quando ela ainda não tiver sido
   ensinada;
@@ -276,7 +319,7 @@ Evitar apresentar uma tabela, medida ou gráfico como conclusão autossuficiente
 - preferir uma operação simples e interpretável a uma solução sofisticada e
   opaca.
 
-## 12. Validação antes da publicação
+## 13. Validação antes da publicação
 
 Antes de considerar um notebook pronto:
 
@@ -289,11 +332,13 @@ Antes de considerar um notebook pronto:
 - conferir se resultados possuem interpretação e limites;
 - verificar a identificação de dados fictícios;
 - revisar ortografia, títulos e hierarquia das seções;
+- confirmar que imagens possuem texto alternativo, créditos e arquivos locais;
+- verificar que diagramas continuam legíveis em escala reduzida e sem cor;
 - confirmar que o notebook pode ser utilizado sem acesso à internet, salvo
   quando isso for objetivo explícito;
 - remover saídas desnecessárias e informações específicas do ambiente local.
 
-## 13. Regra de decisão rápida
+## 14. Regra de decisão rápida
 
 Antes de criar uma célula de código, perguntar:
 
@@ -302,4 +347,3 @@ Antes de criar uma célula de código, perguntar:
 
 - Se **sim**, usar Python e solicitar a interpretação do resultado.
 - Se **não**, usar Markdown.
-

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-labelledby="titulo descricao">
+  <title id="titulo">Ciclo de oito etapas da operacionalização</title>
+  <desc id="descricao">O percurso começa em conceito e dimensão, passa por indicador, unidade de análise, registro, categorias, comparação, validade e mapa de operacionalização. Uma seta tracejada retorna ao início para indicar revisão.</desc>
+  <defs>
+    <marker id="seta" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0 L0 6 L9 3 z" fill="#334E68"/></marker>
+    <style>
+      .titulo { font: 700 30px Arial, sans-serif; fill: #243B53; }
+      .numero { font: 700 22px Arial, sans-serif; fill: #FFFFFF; }
+      .rotulo { font: 700 17px Arial, sans-serif; fill: #243B53; }
+      .nota { font: 15px Arial, sans-serif; fill: #486581; }
+      .seta { stroke: #334E68; stroke-width: 3; fill: none; marker-end: url(#seta); }
+    </style>
+  </defs>
+  <rect width="1200" height="650" rx="24" fill="#F7F3EA"/>
+  <text x="600" y="50" text-anchor="middle" class="titulo">Operacionalização como ciclo de decisões</text>
+
+  <path class="seta" d="M280 170 H325"/><path class="seta" d="M565 170 H610"/><path class="seta" d="M850 170 H895"/>
+  <path class="seta" d="M1015 245 V365"/>
+  <path class="seta" d="M895 440 H850"/><path class="seta" d="M610 440 H565"/><path class="seta" d="M325 440 H280"/>
+
+  <g transform="translate(40 95)">
+    <rect width="240" height="150" rx="18" fill="#FFFFFF" stroke="#2B6CB0" stroke-width="2"/>
+    <circle cx="35" cy="35" r="24" fill="#2B6CB0"/><text x="35" y="43" text-anchor="middle" class="numero">1</text>
+    <text x="120" y="75" text-anchor="middle" class="rotulo"><tspan x="120">Conceito e</tspan><tspan x="120" dy="22">dimensão</tspan></text>
+  </g>
+  <g transform="translate(325 95)">
+    <rect width="240" height="150" rx="18" fill="#FFFFFF" stroke="#287271" stroke-width="2"/>
+    <circle cx="35" cy="35" r="24" fill="#287271"/><text x="35" y="43" text-anchor="middle" class="numero">2</text>
+    <text x="120" y="86" text-anchor="middle" class="rotulo">Indicador</text>
+  </g>
+  <g transform="translate(610 95)">
+    <rect width="240" height="150" rx="18" fill="#FFFFFF" stroke="#8C3D18" stroke-width="2"/>
+    <circle cx="35" cy="35" r="24" fill="#8C3D18"/><text x="35" y="43" text-anchor="middle" class="numero">3</text>
+    <text x="120" y="75" text-anchor="middle" class="rotulo"><tspan x="120">Unidade de</tspan><tspan x="120" dy="22">análise</tspan></text>
+  </g>
+  <g transform="translate(895 95)">
+    <rect width="265" height="150" rx="18" fill="#FFFFFF" stroke="#6B4C8A" stroke-width="2"/>
+    <circle cx="35" cy="35" r="24" fill="#6B4C8A"/><text x="35" y="43" text-anchor="middle" class="numero">4</text>
+    <text x="133" y="64" text-anchor="middle" class="rotulo"><tspan x="133">Variáveis, valores,</tspan><tspan x="133" dy="22">documentos e</tspan><tspan x="133" dy="22">metadados</tspan></text>
+  </g>
+
+  <g transform="translate(40 365)">
+    <rect width="240" height="150" rx="18" fill="#E6F4F1" stroke="#287271" stroke-width="3"/>
+    <circle cx="35" cy="35" r="24" fill="#287271"/><text x="35" y="43" text-anchor="middle" class="numero">8</text>
+    <text x="120" y="75" text-anchor="middle" class="rotulo"><tspan x="120">Mapa de</tspan><tspan x="120" dy="22">operacionalização</tspan></text>
+  </g>
+  <g transform="translate(325 365)">
+    <rect width="240" height="150" rx="18" fill="#FFFFFF" stroke="#6B4C8A" stroke-width="2"/>
+    <circle cx="35" cy="35" r="24" fill="#6B4C8A"/><text x="35" y="43" text-anchor="middle" class="numero">7</text>
+    <text x="120" y="75" text-anchor="middle" class="rotulo"><tspan x="120">Validade da</tspan><tspan x="120" dy="22">representação</tspan></text>
+  </g>
+  <g transform="translate(610 365)">
+    <rect width="240" height="150" rx="18" fill="#FFFFFF" stroke="#8C3D18" stroke-width="2"/>
+    <circle cx="35" cy="35" r="24" fill="#8C3D18"/><text x="35" y="43" text-anchor="middle" class="numero">6</text>
+    <text x="120" y="75" text-anchor="middle" class="rotulo"><tspan x="120">Comparação de</tspan><tspan x="120" dy="22">representações</tspan></text>
+  </g>
+  <g transform="translate(895 365)">
+    <rect width="265" height="150" rx="18" fill="#FFFFFF" stroke="#2B6CB0" stroke-width="2"/>
+    <circle cx="35" cy="35" r="24" fill="#2B6CB0"/><text x="35" y="43" text-anchor="middle" class="numero">5</text>
+    <text x="133" y="75" text-anchor="middle" class="rotulo"><tspan x="133">Categorias históricas</tspan><tspan x="133" dy="22">e analíticas</tspan></text>
+  </g>
+  <path d="M160 530 C160 615 160 615 160 250" class="seta" stroke-dasharray="8 7"/>
+  <text x="255" y="592" class="nota">Revisar decisões anteriores quando surgirem perdas ou incompatibilidades</text>
+</svg>

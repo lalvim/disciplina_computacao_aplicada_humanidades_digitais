@@ -23,6 +23,11 @@ Os exemplos não dependem de acesso à internet. Os dados da pasta `dados` são
 fictícios e foram criados exclusivamente para fins didáticos; não devem ser
 utilizados para produzir afirmações históricas.
 
+A pasta `imagens` reúne diagramas autorais, a ilustração conceitual de abertura
+e uma fonte histórica em domínio público. O arquivo `imagens/README.md` registra
+proveniência, licença, alterações e textos alternativos. As imagens são locais e
+continuam disponíveis em uso offline e no Colab.
+
 O arquivo `exercicios_unidade_01.html` contém 18 questões de múltipla escolha
 com correção, explicações e revisão por tópico. Ele pode ser aberto diretamente
 em um navegador e funciona sem servidor ou acesso à internet.

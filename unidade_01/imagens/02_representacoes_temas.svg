@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-labelledby="titulo descricao">
+  <title id="titulo">Comparação entre tema dominante e múltiplos temas</title>
+  <desc id="descricao">No modelo dominante, três documentos geram três atribuições: educação duas vezes e trabalho uma. No modelo múltiplo, os mesmos documentos geram cinco relações: educação duas, trabalho duas e progresso uma.</desc>
+  <defs>
+    <marker id="seta" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto"><path d="M0 0 L0 6 L9 3 z" fill="#486581"/></marker>
+    <style>
+      .titulo { font: 700 30px Arial, sans-serif; fill: #243B53; }
+      .sub { font: 700 22px Arial, sans-serif; fill: #243B53; }
+      .rotulo { font: 700 16px Arial, sans-serif; fill: #243B53; }
+      .texto { font: 15px Arial, sans-serif; fill: #334E68; }
+      .linha { stroke: #486581; stroke-width: 2; fill: none; marker-end: url(#seta); }
+    </style>
+  </defs>
+  <rect width="1200" height="650" rx="24" fill="#F7F3EA"/>
+  <text x="600" y="48" text-anchor="middle" class="titulo">Os mesmos documentos, duas representações</text>
+  <line x1="600" y1="85" x2="600" y2="590" stroke="#9FB3C8" stroke-width="2" stroke-dasharray="8 7"/>
+
+  <text x="300" y="95" text-anchor="middle" class="sub">Um tema dominante</text>
+  <text x="900" y="95" text-anchor="middle" class="sub">Múltiplos temas</text>
+
+  <g class="rotulo">
+    <rect x="35" y="145" width="95" height="55" rx="12" fill="#FFFFFF" stroke="#486581"/><text x="82" y="180" text-anchor="middle">D001</text>
+    <rect x="35" y="245" width="95" height="55" rx="12" fill="#FFFFFF" stroke="#486581"/><text x="82" y="280" text-anchor="middle">D002</text>
+    <rect x="35" y="345" width="95" height="55" rx="12" fill="#FFFFFF" stroke="#486581"/><text x="82" y="380" text-anchor="middle">D003</text>
+    <rect x="350" y="145" width="180" height="55" rx="12" fill="#D9EAF7" stroke="#2B6CB0"/><text x="440" y="180" text-anchor="middle">educação</text>
+    <rect x="350" y="245" width="180" height="55" rx="12" fill="#F6E8DF" stroke="#8C3D18"/><text x="440" y="280" text-anchor="middle">trabalho</text>
+    <rect x="350" y="345" width="180" height="55" rx="12" fill="#D9EAF7" stroke="#2B6CB0"/><text x="440" y="380" text-anchor="middle">educação</text>
+  </g>
+  <path class="linha" d="M130 172 H350"/><path class="linha" d="M130 272 H350"/><path class="linha" d="M130 372 H350"/>
+
+  <g class="rotulo">
+    <rect x="635" y="145" width="95" height="55" rx="12" fill="#FFFFFF" stroke="#486581"/><text x="682" y="180" text-anchor="middle">D001</text>
+    <rect x="635" y="265" width="95" height="55" rx="12" fill="#FFFFFF" stroke="#486581"/><text x="682" y="300" text-anchor="middle">D002</text>
+    <rect x="635" y="385" width="95" height="55" rx="12" fill="#FFFFFF" stroke="#486581"/><text x="682" y="420" text-anchor="middle">D003</text>
+    <rect x="910" y="125" width="180" height="50" rx="12" fill="#D9EAF7" stroke="#2B6CB0"/><text x="1000" y="157" text-anchor="middle">educação</text>
+    <rect x="910" y="185" width="180" height="50" rx="12" fill="#EEE7F5" stroke="#6B4C8A"/><text x="1000" y="217" text-anchor="middle">progresso</text>
+    <rect x="910" y="265" width="180" height="50" rx="12" fill="#F6E8DF" stroke="#8C3D18"/><text x="1000" y="297" text-anchor="middle">trabalho</text>
+    <rect x="910" y="365" width="180" height="50" rx="12" fill="#D9EAF7" stroke="#2B6CB0"/><text x="1000" y="397" text-anchor="middle">educação</text>
+    <rect x="910" y="425" width="180" height="50" rx="12" fill="#F6E8DF" stroke="#8C3D18"/><text x="1000" y="457" text-anchor="middle">trabalho</text>
+  </g>
+  <path class="linha" d="M730 172 C810 172 835 150 910 150"/><path class="linha" d="M730 172 C810 172 835 210 910 210"/>
+  <path class="linha" d="M730 292 H910"/><path class="linha" d="M730 412 C810 412 835 390 910 390"/><path class="linha" d="M730 412 C810 412 835 450 910 450"/>
+
+  <rect x="65" y="485" width="470" height="105" rx="16" fill="#FFFFFF" stroke="#486581"/>
+  <text x="300" y="522" text-anchor="middle" class="rotulo">3 documentos → 3 atribuições</text>
+  <text x="300" y="557" text-anchor="middle" class="texto">educação = 2 · trabalho = 1 · progresso = 0</text>
+  <rect x="665" y="485" width="470" height="105" rx="16" fill="#FFFFFF" stroke="#486581"/>
+  <text x="900" y="522" text-anchor="middle" class="rotulo">3 documentos → 5 relações documento–tema</text>
+  <text x="900" y="557" text-anchor="middle" class="texto">educação = 2 · trabalho = 2 · progresso = 1</text>
+  <text x="600" y="627" text-anchor="middle" class="texto">A estrutura escolhida altera a unidade de contagem e o resultado.</text>
+</svg>

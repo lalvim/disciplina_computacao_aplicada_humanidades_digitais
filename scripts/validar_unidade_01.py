@@ -5,6 +5,7 @@ from __future__ import annotations
 import json
 import os
 import re
+import xml.etree.ElementTree as ET
 from pathlib import Path
 
 
@@ -34,6 +35,7 @@ def validar_notebook(caminho: Path) -> tuple[int, int]:
         for numero, celula in enumerate(documento["cells"], start=1):
             tipo = celula.get("cell_type")
             fonte = fonte_da_celula(celula)
+            assert celula.get("id"), f"célula {numero} sem identificador nbformat"
             assert fonte.strip(), f"célula {numero} vazia"
             if tipo == "markdown":
                 textos += 1
@@ -106,6 +108,83 @@ def validar_exercicios_html() -> None:
         encoding="utf-8"
     )
     assert len(re.findall(r"^## Questão \d+", versao_textual, re.MULTILINE)) == 18
+
+
+def validar_imagens() -> None:
+    pasta = UNIDADE / "imagens"
+    esperados = {
+        "README.md",
+        "00_abertura_conceitual.png",
+        "00_percurso_unidade.svg",
+        "01_matriz_perguntas.svg",
+        "01_questao_tarefa_interpretacao.svg",
+        "02_ciclo_operacionalizacao.svg",
+        "02_conceito_dimensoes.svg",
+        "02_representacoes_temas.svg",
+        "03_populacao_amostra_corpus.svg",
+        "03_periodico_1890.jpg",
+        "03_cadeia_evidencia.svg",
+        "04_construcao_projeto.svg",
+    }
+    encontrados = {caminho.name for caminho in pasta.iterdir() if caminho.is_file()}
+    assert encontrados == esperados, (
+        f"imagens divergentes: esperadas {sorted(esperados)}, "
+        f"encontradas {sorted(encontrados)}"
+    )
+
+    referencias: list[tuple[str, str, str]] = []
+    for notebook in sorted(UNIDADE.glob("*.ipynb")):
+        documento = json.loads(notebook.read_text(encoding="utf-8"))
+        conteudo = "\n".join(
+            fonte_da_celula(celula)
+            for celula in documento["cells"]
+            if celula.get("cell_type") == "markdown"
+        )
+        for alt, caminho in re.findall(r"!\[([^]]*)\]\(([^)]+)\)", conteudo):
+            referencias.append((notebook.name, alt.strip(), caminho.strip()))
+
+    assert len(referencias) == len(esperados) - 1, (
+        f"esperadas {len(esperados) - 1} imagens nos notebooks; "
+        f"encontradas {len(referencias)}"
+    )
+    for notebook, alt, caminho in referencias:
+        assert alt, f"imagem sem texto alternativo em {notebook}"
+        assert not caminho.startswith(("http://", "https://")), (
+            f"imagem remota em {notebook}: {caminho}"
+        )
+        assert caminho.startswith("imagens/"), (
+            f"caminho visual fora da pasta imagens em {notebook}: {caminho}"
+        )
+        assert (UNIDADE / caminho).is_file(), (
+            f"imagem ausente em {notebook}: {caminho}"
+        )
+
+    usados = {Path(caminho).name for _, _, caminho in referencias}
+    assert usados == esperados - {"README.md"}
+
+    for caminho in sorted(pasta.glob("*.svg")):
+        raiz = ET.parse(caminho).getroot()
+        namespace = "{http://www.w3.org/2000/svg}"
+        titulo = raiz.find(f"{namespace}title")
+        descricao = raiz.find(f"{namespace}desc")
+        assert titulo is not None and (titulo.text or "").strip(), (
+            f"{caminho.name} sem title acessível"
+        )
+        assert descricao is not None and (descricao.text or "").strip(), (
+            f"{caminho.name} sem desc acessível"
+        )
+        assert raiz.get("role") == "img", f"{caminho.name} sem role=img"
+
+    assert (pasta / "00_abertura_conceitual.png").read_bytes().startswith(b"\x89PNG")
+    assert (pasta / "03_periodico_1890.jpg").read_bytes().startswith(b"\xff\xd8")
+
+    creditos = (pasta / "README.md").read_text(encoding="utf-8")
+    for nome in esperados - {"README.md"}:
+        assert nome in creditos, f"{nome} ausente dos créditos"
+    assert "Acervo da Fundação Biblioteca Nacional" in creditos
+    assert "domínio público" in creditos
+    assert "não integra a coleção fictícia" in creditos
+    assert "ilustração conceitual" in creditos.lower()
 
 
 def validar_referencias() -> None:
@@ -562,6 +641,8 @@ def main() -> None:
     print("OK presença textual: 9/9 tópicos da ementa")
     validar_referencias()
     print("OK referências: bibliografia consolidada e leituras nos notebooks")
+    validar_imagens()
+    print("OK imagens: arquivos locais, textos alternativos, créditos e SVGs acessíveis")
     validar_exercicios_html()
     print(
         "OK exercícios: 18 questões, 10 tópicos, HTML offline e versão textual"

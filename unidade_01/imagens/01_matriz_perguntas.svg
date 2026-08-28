@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="titulo descricao">
+  <title id="titulo">Matriz de finalidade e estrutura analítica das perguntas</title>
+  <desc id="descricao">Matriz com finalidades descritiva, explicativa e preditiva nas linhas e estruturas sem relação inicial, comparativa e associativa nas colunas. Exemplos mostram que as dimensões podem ser combinadas.</desc>
+  <style>
+    .titulo { font: 700 30px Arial, sans-serif; fill: #243B53; }
+    .eixo { font: 700 18px Arial, sans-serif; fill: #243B53; }
+    .celula { font: 16px Arial, sans-serif; fill: #334E68; }
+    .forte { font: 700 16px Arial, sans-serif; fill: #243B53; }
+    .nota { font: 15px Arial, sans-serif; fill: #486581; }
+  </style>
+  <rect width="1200" height="720" rx="24" fill="#F7F3EA"/>
+  <text x="600" y="48" text-anchor="middle" class="titulo">Duas dimensões que podem ser combinadas</text>
+  <text x="720" y="92" text-anchor="middle" class="eixo">Estrutura analítica inicial</text>
+  <text x="38" y="390" transform="rotate(-90 38 390)" text-anchor="middle" class="eixo">Finalidade predominante</text>
+
+  <g transform="translate(175 115)">
+    <rect x="0" y="0" width="230" height="80" rx="12" fill="#D9EAF7" stroke="#486581"/>
+    <rect x="240" y="0" width="230" height="80" rx="12" fill="#D9EAF7" stroke="#486581"/>
+    <rect x="480" y="0" width="230" height="80" rx="12" fill="#D9EAF7" stroke="#486581"/>
+    <text x="115" y="36" text-anchor="middle" class="eixo"><tspan x="115">Sem relação</tspan><tspan x="115" dy="22">inicial</tspan></text>
+    <text x="355" y="48" text-anchor="middle" class="eixo">Comparativa</text>
+    <text x="595" y="48" text-anchor="middle" class="eixo">Associativa</text>
+
+    <g transform="translate(-135 90)">
+      <rect width="125" height="130" rx="12" fill="#E6F4F1" stroke="#287271"/>
+      <text x="62" y="68" text-anchor="middle" class="eixo">Descritiva</text>
+    </g>
+    <g transform="translate(-135 230)">
+      <rect width="125" height="130" rx="12" fill="#F6E8DF" stroke="#8C3D18"/>
+      <text x="62" y="68" text-anchor="middle" class="eixo">Explicativa</text>
+    </g>
+    <g transform="translate(-135 370)">
+      <rect width="125" height="130" rx="12" fill="#EEE7F5" stroke="#6B4C8A"/>
+      <text x="62" y="68" text-anchor="middle" class="eixo">Preditiva</text>
+    </g>
+
+    <g class="celula">
+      <rect x="0" y="90" width="230" height="130" fill="#FFFFFF" stroke="#9FB3C8"/>
+      <text x="115" y="130" text-anchor="middle"><tspan x="115" class="forte">Quais temas</tspan><tspan x="115" dy="22">aparecem?</tspan><tspan x="115" dy="24">Contar temas</tspan></text>
+      <rect x="240" y="90" width="230" height="130" fill="#FFFFFF" stroke="#9FB3C8"/>
+      <text x="355" y="130" text-anchor="middle"><tspan x="355" class="forte">Os temas diferem</tspan><tspan x="355" dy="22">entre locais?</tspan><tspan x="355" dy="24">Comparar distribuições</tspan></text>
+      <rect x="480" y="90" width="230" height="130" fill="#FFFFFF" stroke="#9FB3C8"/>
+      <text x="595" y="130" text-anchor="middle"><tspan x="595" class="forte">Gênero e tema</tspan><tspan x="595" dy="22">variam juntos?</tspan><tspan x="595" dy="24">Cruzar categorias</tspan></text>
+
+      <rect x="0" y="230" width="230" height="130" fill="#FAFAF7" stroke="#9FB3C8"/>
+      <text x="115" y="298" text-anchor="middle" class="nota">Depende do desenho</text>
+      <rect x="240" y="230" width="230" height="130" fill="#FFFFFF" stroke="#9FB3C8"/>
+      <text x="355" y="270" text-anchor="middle"><tspan x="355" class="forte">Que processos</tspan><tspan x="355" dy="22">explicam mudanças?</tspan><tspan x="355" dy="24">Confrontar explicações</tspan></text>
+      <rect x="480" y="230" width="230" height="130" fill="#FFFFFF" stroke="#9FB3C8"/>
+      <text x="595" y="270" text-anchor="middle"><tspan x="595" class="forte">Que mecanismos</tspan><tspan x="595" dy="22">relacionam fatores?</tspan><tspan x="595" dy="24">Teoria e contexto</tspan></text>
+
+      <rect x="0" y="370" width="230" height="130" fill="#FAFAF7" stroke="#9FB3C8"/>
+      <text x="115" y="438" text-anchor="middle" class="nota">Depende do desenho</text>
+      <rect x="240" y="370" width="230" height="130" fill="#FAFAF7" stroke="#9FB3C8"/>
+      <text x="355" y="438" text-anchor="middle" class="nota">Comparação pode apoiar</text>
+      <rect x="480" y="370" width="230" height="130" fill="#FFFFFF" stroke="#9FB3C8"/>
+      <text x="595" y="410" text-anchor="middle"><tspan x="595" class="forte">Estimar o gênero</tspan><tspan x="595" dy="22">de novos casos?</tspan><tspan x="595" dy="24">Treinar e avaliar</tspan></text>
+    </g>
+  </g>
+  <text x="600" y="675" text-anchor="middle" class="nota">A estrutura não determina sozinha a finalidade; comparação e associação não demonstram causalidade.</text>
+</svg>

@@ -37,6 +37,8 @@ def codigo(conteudo: str) -> dict:
 
 
 def notebook(celulas: list[dict]) -> dict:
+    for indice, celula in enumerate(celulas, start=1):
+        celula.setdefault("id", f"celula-{indice:03d}")
     return {
         "cells": celulas,
         "metadata": {
@@ -140,6 +142,12 @@ def guia() -> list[dict]:
 
             ## Como transformar uma questão das Humanidades em um problema computacional?
 
+            ![Ilustração conceitual em que fontes em papel passam por anotação e organização tabular, produzem redes e gráficos e retornam às fontes por uma seta de revisão.](imagens/00_abertura_conceitual.png)
+
+            *Ilustração conceitual gerada para a unidade; não representa uma fonte
+            histórica. A seta de retorno destaca que resultados levam à releitura e à
+            revisão das decisões.*
+
             **Problema orientador:** como representar computacionalmente um fenômeno
             histórico, social, linguístico ou cultural sem reduzir indevidamente sua
             complexidade?
@@ -176,6 +184,11 @@ def guia() -> list[dict]:
             | 02 | Como representar conceitos e observações? | Mapa de operacionalização |
             | 03 | Que conjunto de dados sustenta a análise? | Ficha do corpus |
             | 04 | O projeto é coerente e viável? | Formulação inicial do projeto |
+
+            ![Fluxo dos Notebooks 00 a 04: diagnóstico, pergunta reformulada, mapa de operacionalização, ficha do corpus e proposta inicial.](imagens/00_percurso_unidade.svg)
+
+            *Cada notebook produz uma decisão ou um produto que alimenta o seguinte;
+            as escolhas podem ser revistas ao longo do percurso.*
 
             Os exemplos usam uma **coleção inteiramente fictícia** de doze registros
             de periódicos. Ela serve para tornar as decisões visíveis; não permite
@@ -399,6 +412,11 @@ def perguntas() -> list[dict]:
             e associações também podem integrar uma investigação explicativa, mas não
             demonstram causalidade por si sós. A distinção entre explicar e prever é
             discutida por Shmueli (2010).
+
+            ![Matriz com finalidades descritiva, explicativa e preditiva nas linhas e estruturas sem relação inicial, comparativa e associativa nas colunas.](imagens/01_matriz_perguntas.svg)
+
+            *Leia a finalidade e a estrutura como dimensões diferentes. A posição na
+            matriz não transforma comparação ou associação em explicação causal.*
             """
         ),
         texto(
@@ -425,6 +443,11 @@ def perguntas() -> list[dict]:
             | Pergunta delimitada | Estabelece fenômeno, contexto, fontes e recorte | Como o tema “progresso” aparece em editoriais de três periódicos da coleção didática entre 1890 e 1905? |
             | Tarefa computacional | Indica as operações que produzirão resultados | Selecionar editoriais, contar temas atribuídos e comparar períodos |
             | Interpretação humanística | Relaciona os resultados aos documentos, ao contexto e à bibliografia | Reler os documentos selecionados e contextualizar os diferentes sentidos de “progresso” |
+
+            ![Quatro blocos conectam questão humanística ampla, pergunta delimitada, tarefa computacional e interpretação, com uma seta de retorno para releitura.](imagens/01_questao_tarefa_interpretacao.svg)
+
+            *O fluxo possui retorno: resultados e releituras podem levar à revisão da
+            pergunta, do recorte ou da representação.*
 
             Apenas a tarefa computacional descreve uma operação. Ela não substitui a
             pergunta, e seu resultado não substitui a interpretação. Uma contagem pode
@@ -681,6 +704,11 @@ def operacionalizacao() -> list[dict]:
             | Validade da representação | A representação é adequada, consistente, abrangente e rastreável? | Examinar se os dados podem sustentar a interpretação |
             | Mapa de operacionalização | Como documentar toda a cadeia e suas limitações? | Produzir o resultado parcial do notebook |
 
+            ![Ciclo de oito etapas: conceito e dimensão, indicador, unidade de análise, registro, categorias, comparação, validade e mapa de operacionalização, com retorno ao início.](imagens/02_ciclo_operacionalizacao.svg)
+
+            *A seta de retorno mostra que o mapa não é uma sequência irreversível:
+            perdas ou incompatibilidades exigem revisar decisões anteriores.*
+
             As etapas formam um ciclo, não uma sequência irreversível. Ao descobrir
             uma perda ou incompatibilidade, retorne às decisões anteriores e revise-as.
 
@@ -744,6 +772,11 @@ def operacionalizacao() -> list[dict]:
             | Associação | Com quais temas ele aparece? | coocorrência com trabalho, cidadania ou progresso |
             | Diversidade de atores | Quantos grupos participam da discussão? | número e tipos de atores mencionados ou citados |
             | Protagonismo | Quem recebe voz ou capacidade de agir? | fala direta, autoria ou posição do ator na narrativa |
+
+            ![O conceito centralidade do tema educação se ramifica em presença, extensão, posição, enquadramento e protagonismo, cada qual associado a um indicador possível.](imagens/02_conceito_dimensoes.svg)
+
+            *O diagrama apresenta apenas cinco exemplos para tornar visível a
+            ramificação. A tabela mantém o repertório mais amplo de dimensões.*
 
             As dimensões não são universais nem intercambiáveis. “Extensão”, por
             exemplo, mede o espaço ocupado pela discussão, mas não demonstra por si
@@ -1002,6 +1035,13 @@ def operacionalizacao() -> list[dict]:
             segunda preserva coexistências, porém demanda regras explícitas para
             comparar documentos. Nenhuma estrutura é naturalmente correta: a escolha
             depende da pergunta, da teoria, das fontes e da qualidade da anotação.
+
+            ![Comparação dos mesmos três documentos: o modelo dominante produz três atribuições, enquanto o modelo de múltiplos temas produz cinco relações documento-tema.](imagens/02_representacoes_temas.svg)
+
+            *No primeiro modelo, a unidade contada coincide com o documento. No
+            segundo, a contagem recai sobre relações documento–tema; por isso a soma
+            pode superar o número de documentos.*
+
             Comparar as duas estruturas torna observável, em escala didática, o
             argumento de Drucker (2011) e Rawson e Muñoz (2019): organizar ou
             transformar dados também produz um modelo interpretativo.
@@ -1174,6 +1214,12 @@ def corpus() -> list[dict]:
             - **Corpus:** conjunto de materiais reunidos e delimitados para análise,
               comum em estudos documentais, linguísticos e culturais.
 
+            ![Três painéis diferenciam população como universo, amostra como subconjunto selecionado e corpus como conjunto de materiais delimitado para análise.](imagens/03_populacao_amostra_corpus.svg)
+
+            *Um corpus pode coincidir parcialmente com uma população ou ser formado
+            por seleção, preservação e acesso, mas não deve ser chamado
+            automaticamente de amostra representativa.*
+
             Os termos não são intercambiáveis. Nem todo corpus é uma amostra
             probabilística. Uma coleção digital disponível pode resultar de preservação,
             catalogação, direitos autorais, digitalização e mecanismos de busca; sua
@@ -1337,6 +1383,21 @@ def corpus() -> list[dict]:
 
             Metadados também têm história: podem conter erros, lacunas, vocabulários
             institucionais e revisões posteriores. Devem ser avaliados como fontes.
+
+            ### Materialidade documental — um periódico real
+
+            Observe a primeira página abaixo antes de reduzi-la a campos. Título, data,
+            preço, público presumido, organização da página, textos e ilustrações são
+            dimensões diferentes do objeto. Uma tabela pode registrar algumas delas,
+            mas não substitui o documento.
+
+            ![Primeira página de A Estação, de 15 de julho de 1890, com título, data, preços de assinatura, colunas de texto e ilustrações de moda.](imagens/03_periodico_1890.jpg)
+
+            *A Estação: Jornal Illustrado para a Familia*, n. 13, 15 jul. 1890.
+            Acervo da Fundação Biblioteca Nacional — Brasil, via Wikimedia Commons,
+            domínio público. Esta página **não integra a coleção fictícia** dos
+            exercícios; é apresentada apenas para discutir documento, materialidade e
+            metadados. Créditos completos em `imagens/README.md`.
             """
         ),
         codigo(
@@ -1385,6 +1446,11 @@ def corpus() -> list[dict]:
             | Operação | aplicação de `value_counts()` à coluna `local` | o que exatamente está sendo contado? |
             | Resultado | seis registros como `Capital` e seis como `Interior` | há ausências, grafias divergentes ou casos ambíguos? |
             | Interpretação | formulação de uma afirmação sobre a coleção | a conclusão permanece dentro do alcance do corpus? |
+
+            ![Cadeia em oito etapas: fonte, seleção, digitalização, descrição, transformação, operação, resultado e interpretação, com retorno para revisão.](imagens/03_cadeia_evidencia.svg)
+
+            *A operação ocupa apenas uma etapa. O valor do resultado como evidência
+            depende das decisões anteriores e do limite dado à interpretação.*
 
             Cada etapa condiciona as seguintes. Uma contagem pode estar correta em
             relação à tabela e ainda ser inadequada para uma afirmação histórica ampla.
@@ -1601,6 +1667,11 @@ def oficina() -> list[dict]:
             Recupere os três produtos parciais. Em cada seção, registre o que foi
             mantido, o que mudou e por quê. Revisar uma decisão diante de nova evidência
             é parte do trabalho acadêmico.
+
+            ![Pergunta reformulada, mapa de operacionalização e ficha do corpus convergem para uma proposta inicial, que passa por revisão entre pares e retorna como proposta revisada.](imagens/04_construcao_projeto.svg)
+
+            *A oficina não começa do zero: ela integra os produtos anteriores, testa a
+            coerência entre eles e registra mudanças motivadas pela revisão.*
             """
         ),
         texto(
@@ -1933,6 +2004,11 @@ Esta pasta contém o material teórico-prático da primeira unidade da disciplin
 Os exemplos não dependem de acesso à internet. Os dados da pasta `dados` são
 fictícios e foram criados exclusivamente para fins didáticos; não devem ser
 utilizados para produzir afirmações históricas.
+
+A pasta `imagens` reúne diagramas autorais, a ilustração conceitual de abertura
+e uma fonte histórica em domínio público. O arquivo `imagens/README.md` registra
+proveniência, licença, alterações e textos alternativos. As imagens são locais e
+continuam disponíveis em uso offline e no Colab.
 
 O arquivo `exercicios_unidade_01.html` contém 18 questões de múltipla escolha
 com correção, explicações e revisão por tópico. Ele pode ser aberto diretamente

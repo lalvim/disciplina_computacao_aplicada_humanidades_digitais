@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="titulo descricao">
+  <title id="titulo">Diferenças entre população, amostra e corpus</title>
+  <desc id="descricao">Três painéis mostram população como universo de unidades, amostra como subconjunto selecionado da população e corpus como conjunto de materiais delimitado para análise. O diagrama alerta que nem todo corpus é amostra probabilística.</desc>
+  <style>
+    .titulo { font: 700 30px Arial, sans-serif; fill: #243B53; }
+    .sub { font: 700 23px Arial, sans-serif; fill: #243B53; }
+    .texto { font: 16px Arial, sans-serif; fill: #334E68; }
+    .nota { font: 700 17px Arial, sans-serif; fill: #8C3D18; }
+  </style>
+  <rect width="1200" height="620" rx="24" fill="#F7F3EA"/>
+  <text x="600" y="50" text-anchor="middle" class="titulo">População, amostra e corpus não são sinônimos</text>
+
+  <g transform="translate(35 95)">
+    <rect width="350" height="420" rx="22" fill="#FFFFFF" stroke="#2B6CB0" stroke-width="3"/>
+    <text x="175" y="45" text-anchor="middle" class="sub">População</text>
+    <circle cx="175" cy="205" r="120" fill="#D9EAF7" stroke="#2B6CB0" stroke-width="2"/>
+    <g fill="#2B6CB0">
+      <circle cx="115" cy="145" r="8"/><circle cx="165" cy="130" r="8"/><circle cx="220" cy="145" r="8"/>
+      <circle cx="95" cy="200" r="8"/><circle cx="145" cy="190" r="8"/><circle cx="200" cy="200" r="8"/><circle cx="250" cy="190" r="8"/>
+      <circle cx="120" cy="245" r="8"/><circle cx="175" cy="255" r="8"/><circle cx="230" cy="245" r="8"/>
+    </g>
+    <text x="175" y="355" text-anchor="middle" class="texto"><tspan x="175">Universo sobre o qual se</tspan><tspan x="175" dy="22">deseja formular afirmações</tspan></text>
+  </g>
+
+  <g transform="translate(425 95)">
+    <rect width="350" height="420" rx="22" fill="#FFFFFF" stroke="#287271" stroke-width="3"/>
+    <text x="175" y="45" text-anchor="middle" class="sub">Amostra</text>
+    <circle cx="175" cy="205" r="120" fill="#EEF5F4" stroke="#9FB3C8" stroke-width="2" stroke-dasharray="7 6"/>
+    <g fill="#CBD5E0">
+      <circle cx="115" cy="145" r="8"/><circle cx="165" cy="130" r="8"/><circle cx="220" cy="145" r="8"/>
+      <circle cx="95" cy="200" r="8"/><circle cx="145" cy="190" r="8"/><circle cx="200" cy="200" r="8"/><circle cx="250" cy="190" r="8"/>
+      <circle cx="120" cy="245" r="8"/><circle cx="175" cy="255" r="8"/><circle cx="230" cy="245" r="8"/>
+    </g>
+    <g fill="#287271" stroke="#174E4D" stroke-width="2">
+      <circle cx="165" cy="130" r="12"/><circle cx="95" cy="200" r="12"/><circle cx="200" cy="200" r="12"/><circle cx="175" cy="255" r="12"/>
+    </g>
+    <text x="175" y="355" text-anchor="middle" class="texto"><tspan x="175">Subconjunto observado segundo</tspan><tspan x="175" dy="22">um procedimento de seleção</tspan></text>
+  </g>
+
+  <g transform="translate(815 95)">
+    <rect width="350" height="420" rx="22" fill="#FFFFFF" stroke="#6B4C8A" stroke-width="3"/>
+    <text x="175" y="45" text-anchor="middle" class="sub">Corpus</text>
+    <g transform="translate(82 95)">
+      <rect x="0" y="0" width="175" height="105" rx="8" fill="#EEE7F5" stroke="#6B4C8A" stroke-width="2"/>
+      <line x1="20" y1="25" x2="150" y2="25" stroke="#6B4C8A" stroke-width="5"/>
+      <line x1="20" y1="48" x2="135" y2="48" stroke="#9B83B4" stroke-width="4"/>
+      <line x1="20" y1="70" x2="145" y2="70" stroke="#9B83B4" stroke-width="4"/>
+      <rect x="22" y="75" width="175" height="105" rx="8" fill="#F6E8DF" stroke="#8C3D18" stroke-width="2"/>
+      <line x1="42" y1="100" x2="172" y2="100" stroke="#8C3D18" stroke-width="5"/>
+      <line x1="42" y1="123" x2="157" y2="123" stroke="#B9795B" stroke-width="4"/>
+      <line x1="42" y1="145" x2="167" y2="145" stroke="#B9795B" stroke-width="4"/>
+    </g>
+    <text x="175" y="355" text-anchor="middle" class="texto"><tspan x="175">Materiais reunidos e delimitados</tspan><tspan x="175" dy="22">para uma análise específica</tspan></text>
+  </g>
+  <text x="600" y="566" text-anchor="middle" class="nota">Nem todo corpus foi selecionado para representar estatisticamente uma população.</text>
+  <text x="600" y="595" text-anchor="middle" class="texto">O nome adequado depende do desenho da pesquisa e do modo de seleção.</text>
+</svg>

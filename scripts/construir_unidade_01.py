@@ -1354,22 +1354,51 @@ def corpus() -> list[dict]:
             """
             ## 5. Evidência computacional e interpretação humanística
 
-            Uma evidência computacional é um resultado produzido por operações
-            explícitas sobre uma representação: contagem, correspondência, medida,
-            classificação ou visualização. Seu alcance depende de toda a cadeia:
+            ### Objetivo da seção
 
-            **fonte → seleção → digitalização → descrição → transformação → operação
-            → resultado → interpretação**
+            Esta seção distingue o que está registrado nos dados, o que o computador
+            calcula e o que o pesquisador pode interpretar. Esses níveis se relacionam,
+            mas não são equivalentes:
 
-            Resultados podem revelar padrões difíceis de perceber por leitura individual,
-            orientar casos para leitura aprofundada e testar a extensão de uma impressão.
-            Ainda assim, não falam sozinhos. D'Ignazio e Klein (2020) enfatizam que
-            números dependem de contexto, teoria e relações de poder.
+            | Nível | Neste exemplo | Questão de controle |
+            |---|---|---|
+            | Dados registrados | valores `Capital` e `Interior` na coluna `local` | o que significa `local` e quem atribuiu essa categoria? |
+            | Operação computacional | contar quantas vezes cada valor aparece | qual regra o código aplica? |
+            | Resultado computacional | seis registros em cada categoria | o resultado está tecnicamente correto para esta tabela? |
+            | Evidência para a pesquisa | resultado mobilizado para responder a uma pergunta delimitada | que afirmação o corpus e a operação conseguem sustentar? |
+            | Interpretação humanística | explicação situada do significado e dos limites do resultado | que contexto, fontes e bibliografia são necessários? |
 
-            O desenho é iterativo:
+            Um resultado não se transforma automaticamente em evidência para qualquer
+            afirmação. Ele pode funcionar como evidência quando a pergunta, a origem
+            dos dados, as categorias, a operação e o alcance da conclusão estão
+            explicitados.
 
-            **pergunta → amostragem → leitura → modelagem → resultado → releitura
-            → reformulação**
+            ### A cadeia de produção da evidência
+
+            | Etapa | Aplicação ao exemplo didático | Pergunta crítica |
+            |---|---|---|
+            | Fonte | documentos representados pela coleção fictícia | quem produziu os documentos e em que contexto? |
+            | Seleção | doze registros incluídos na coleção | por que estes registros foram incluídos e outros não? |
+            | Digitalização | conversão ou transcrição para formato computacional, simplificada no exemplo sintético | o que foi perdido, corrigido ou normalizado? |
+            | Descrição | campos como `id`, `ano`, `local` e `tema` | quem definiu e preencheu os campos? |
+            | Transformação | organização dos registros em CSV e carregamento no pandas | valores foram agrupados ou alterados? |
+            | Operação | aplicação de `value_counts()` à coluna `local` | o que exatamente está sendo contado? |
+            | Resultado | seis registros como `Capital` e seis como `Interior` | há ausências, grafias divergentes ou casos ambíguos? |
+            | Interpretação | formulação de uma afirmação sobre a coleção | a conclusão permanece dentro do alcance do corpus? |
+
+            Cada etapa condiciona as seguintes. Uma contagem pode estar correta em
+            relação à tabela e ainda ser inadequada para uma afirmação histórica ampla.
+
+            ### Experimento — contar registros por categoria local
+
+            No código seguinte, `documentos["local"]` seleciona apenas a coluna
+            `local`. O método `value_counts()` agrupa valores iguais e conta quantas
+            linhas pertencem a cada categoria. Como cada linha representa um documento,
+            o resultado contará documentos **dentro desta coleção**.
+
+            Antes de executar, observe a tabela importada e formule uma previsão. O
+            código conhece os rótulos registrados, mas não conhece o significado
+            histórico de `Capital` e `Interior`, nem avalia como o corpus foi formado.
             """
         ),
         codigo(
@@ -1380,13 +1409,48 @@ def corpus() -> list[dict]:
         ),
         texto(
             """
-            A saída anterior permite afirmar quantos registros de cada categoria local
-            existem **nesta coleção didática**. Ela não permite concluir como era a
-            produção jornalística de uma região, porque não conhecemos a população,
-            o processo de preservação nem a cobertura documental necessária.
+            ### Como ler a saída
 
-            Uma interpretação responsável explicita o sujeito da frase: “na coleção
-            analisada”, e não “na sociedade”.
+            | Categoria registrada | Número de registros |
+            |---|---:|
+            | Capital | 6 |
+            | Interior | 6 |
+
+            A soma é doze, correspondente ao número de documentos da coleção. O
+            resultado descreve a distribuição do campo `local`; ele não explica por
+            que a distribuição é igual nem demonstra que a coleção representa uma
+            população histórica.
+
+            | Afirmação | Avaliação | Justificativa |
+            |---|---|---|
+            | “Na coleção didática, seis registros estão classificados como Capital e seis como Interior.” | Sustentada | reproduz a operação e limita o sujeito da frase ao conjunto analisado |
+            | “A coleção está numericamente equilibrada entre as duas categorias locais.” | Sustentada, com escopo explícito | descreve a distribuição sem generalizar para além da coleção |
+            | “A produção jornalística da Capital e do Interior era igual.” | Não sustentada | exigiria conhecer a população, a preservação e o procedimento de seleção |
+            | “O local explica as diferenças entre os documentos.” | Não sustentada | uma contagem descritiva não testa explicação nem causalidade |
+
+            A leitura também depende de pressupostos que precisam ser verificados:
+
+            - cada linha representa efetivamente um documento;
+            - `local` possui uma definição documentada e foi aplicado de modo
+              consistente;
+            - valores ausentes, ambíguos ou grafados de outra forma foram identificados;
+            - os critérios de seleção são compatíveis com a pergunta.
+
+            Se um desses pressupostos falhar, o Python ainda poderá produzir `6` e `6`,
+            mas o valor do resultado como evidência será reduzido. Uma interpretação
+            responsável explicita o sujeito da frase — “na coleção analisada”, e não
+            “na sociedade” — e retorna aos documentos quando encontra um padrão.
+
+            Por isso o desenho da pesquisa é iterativo:
+
+            **pergunta → amostragem → leitura → modelagem → resultado → releitura
+            → reformulação**
+
+            Neste exemplo, o equilíbrio numérico pode levar à releitura dos documentos,
+            à verificação da definição de `local` e ao cruzamento com `genero`, `tema`
+            ou `ano`. D'Ignazio e Klein (2020) ajudam a compreender por que números
+            dependem de contexto, teoria, trabalho de produção dos dados e relações de
+            poder: a operação calcula; o pesquisador constrói e limita a interpretação.
             """
         ),
         texto(

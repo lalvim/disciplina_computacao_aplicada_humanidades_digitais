@@ -699,38 +699,56 @@ O foco não deve estar no domínio completo das bibliotecas, mas na capacidade d
 
 # 11. Executar o material no Google Colab
 
-O repositório pode ser clonado no ambiente temporário do Google Colab. Em uma
-célula de código, execute:
+Cada link abaixo abre o notebook diretamente do GitHub. O link não executa
+código automaticamente. Quando o notebook utilizar arquivos da pasta `dados`,
+execute primeiro a célula **Preparação do ambiente**: ela clona o repositório
+somente se necessário e posiciona a execução na unidade correta.
 
-```python
-%cd /content
-!git clone https://github.com/lalvim/disciplina_computacao_aplicada_humanidades_digitais.git
-%cd /content/disciplina_computacao_aplicada_humanidades_digitais
-!python -m pip install -r requirements.txt
-```
+### Unidade 1
 
-Para confirmar a clonagem e visualizar os arquivos da Unidade 1:
+| Notebook | Google Colab |
+|---|---|
+| 00 — Guia da unidade | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_01/00_guia_da_unidade.ipynb) |
+| 01 — Perguntas e problemas | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_01/01_perguntas_e_problemas_computacionais.ipynb) |
+| 02 — Representação e operacionalização | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_01/02_representacao_e_operacionalizacao.ipynb) |
+| 03 — Dados, corpus e evidências | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_01/03_dados_corpus_e_evidencias.ipynb) |
+| 04 — Oficina do projeto | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_01/04_oficina_projeto_de_pesquisa.ipynb) |
 
-```python
-!git status
-!ls unidade_01
-```
+### Unidade 2
 
-Se o repositório já tiver sido clonado na sessão e for necessário obter
-alterações mais recentes:
+| Notebook | Google Colab |
+|---|---|
+| 00 — Guia da unidade | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_02/00_guia_da_unidade.ipynb) |
+| 01 — Fontes, população e seleção | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_02/01_fontes_populacao_e_selecao.ipynb) |
+| 02 — Cobertura, vieses e silêncios | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_02/02_cobertura_vieses_e_silencios.ipynb) |
+| 03 — Metadados e proveniência | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_02/03_metadados_identificadores_e_proveniencia.ipynb) |
+| 04 — Oficina do protocolo | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_02/04_oficina_protocolo_da_base.ipynb) |
 
-```python
-%cd /content/disciplina_computacao_aplicada_humanidades_digitais
-!git pull origin main
-```
+### Unidade 3
 
-O primeiro notebook da Unidade 1 também pode ser aberto diretamente no Colab:
+| Notebook | Google Colab |
+|---|---|
+| 00 — Guia da unidade | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_03/00_guia_da_unidade.ipynb) |
+| 01 — Formatos, importação e extração | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_03/01_formatos_importacao_e_extracao.ipynb) |
+| 02 — Estrutura, limpeza e qualidade | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_03/02_estrutura_limpeza_e_qualidade.ipynb) |
+| 03 — Junções e integração | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_03/03_juncoes_integracao_e_reprodutibilidade.ipynb) |
+| 04 — Oficina da base processável | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_03/04_oficina_base_processavel.ipynb) |
 
-[Abrir o Notebook 00 no Google Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_01/00_guia_da_unidade.ipynb)
+### Unidade 4
 
-O diretório `/content` é temporário. Alterações feitas no clone desaparecem
-quando a sessão é encerrada, a menos que sejam enviadas ao GitHub, baixadas para
-o computador ou copiadas para uma pasta persistente do Google Drive.
+| Notebook | Google Colab |
+|---|---|
+| 00 — Guia da unidade | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_04/00_guia_da_unidade.ipynb) |
+| 01 — Exploração quantitativa | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_04/01_exploracao_quantitativa.ipynb) |
+| 02 — Exploração textual | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_04/02_exploracao_textual.ipynb) |
+| 03 — Visualização exploratória | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_04/03_visualizacao_exploratoria.ipynb) |
+| 04 — Oficina do relatório | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_04/04_oficina_relatorio_exploratorio.ipynb) |
+
+Os notebooks discursivos não possuem célula de clonagem. Nos demais, a célula
+operacional é separada dos experimentos e não faz parte da avaliação. O
+diretório `/content` é temporário: respostas e alterações desaparecem ao fim da
+sessão, a menos que o estudante salve uma cópia no Google Drive ou baixe o
+arquivo. Consulte também as [orientações oficiais do Colab](https://research.google.com/colaboratory/faq.html).
 
 ---
 

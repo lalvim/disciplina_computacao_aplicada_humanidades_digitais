@@ -85,6 +85,25 @@ Situações adequadas:
 Toda célula de código deve responder a uma pergunta explícita ou demonstrar uma
 operação relevante para os objetivos da unidade.
 
+### Exceção: preparação do ambiente no Google Colab
+
+Uma célula exclusivamente operacional pode preceder o conteúdo quando o
+notebook precisar ler ou gravar arquivos do repositório. Essa célula deve:
+
+- ser intitulada `Preparação do ambiente` e identificada como específica do
+  Google Colab;
+- clonar o repositório somente quando ele ainda não estiver disponível;
+- posicionar o diretório de trabalho na pasta da unidade;
+- instalar apenas dependências ausentes;
+- poder ser executada novamente sem duplicar o repositório;
+- não fazer parte da atividade ou da avaliação;
+- não ser inserida em notebooks integralmente discursivos ou cujos exemplos
+  sejam autossuficientes.
+
+O link de abertura do Colab carrega o notebook, mas não executa essa preparação.
+A instrução ao estudante deve dizer explicitamente que a célula precisa ser
+executada uma vez antes dos experimentos que dependem de arquivos locais.
+
 ### Sequência recomendada
 
 1. apresentar a pergunta em Markdown;
@@ -327,7 +346,11 @@ Antes de considerar um notebook pronto:
 - confirmar que os arquivos são encontrados por caminhos relativos;
 - verificar que nenhuma resposta discursiva está implementada como formulário
   Python;
-- confirmar que todo código tem finalidade experimental ou analítica;
+- confirmar que todo código tem finalidade experimental, analítica ou, quando
+  estritamente necessário, de preparação explícita do ambiente;
+- confirmar que cada notebook possui um link direto de abertura no Colab;
+- testar a célula de preparação tanto no Colab quanto em execução local, na
+  qual ela não deve clonar nem instalar arquivos;
 - revisar a correspondência entre objetivo, atividade e produto;
 - conferir se resultados possuem interpretação e limites;
 - verificar a identificação de dados fictícios;

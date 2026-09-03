@@ -2,11 +2,15 @@
 import csv,json
 from pathlib import Path
 from textwrap import dedent
+from apoio_colab import adicionar_link_na_abertura, preparacao_colab, tabela_links_colab
 R=Path(__file__).resolve().parents[1]; U=R/"unidade_04"; D=U/"dados"
 def m(s): return {"cell_type":"markdown","metadata":{},"source":dedent(s).strip().splitlines(keepends=True)}
 def c(s): return {"cell_type":"code","execution_count":None,"metadata":{},"outputs":[],"source":dedent(s).strip().splitlines(keepends=True)}
-def nb(n,cells):
- d={"cells":cells,"metadata":{"kernelspec":{"display_name":"Python 3","language":"python","name":"python3"},"language_info":{"name":"python","version":"3"}},"nbformat":4,"nbformat_minor":5}
+def nb(n,cells,requer_repositorio=False):
+ publicadas=[adicionar_link_na_abertura(cells[0],U.name,n)]
+ if requer_repositorio: publicadas.append(c(preparacao_colab(U.name)))
+ publicadas.extend(cells[1:])
+ d={"cells":publicadas,"metadata":{"kernelspec":{"display_name":"Python 3","language":"python","name":"python3"},"language_info":{"name":"python","version":"3"}},"nbformat":4,"nbformat_minor":5}
  (U/n).write_text(json.dumps(d,ensure_ascii=False,indent=1)+"\n",encoding="utf-8")
 def dados():
  D.mkdir(parents=True,exist_ok=True); ts=["educação","trabalho","progresso","saúde"]; gs=["editorial","notícia","carta"]
@@ -87,6 +91,35 @@ Inclua quatro famílias com tabela, descrição alternativa, interpretação e l
 Escolha três documentos ou trechos que qualifiquem agregados. Escreva aqui.'''),m('''## Hipóteses provisórias
 Até três hipóteses com evidência, alternativas, dados adicionais e método futuro. Escreva aqui.'''),m('''## Rubrica e entrega
 Avalie de 0 a 2: escopo, estatística, texto, visualização/acessibilidade, casos, limites e reprodutibilidade. A Unidade 5 tratará inferência. Escreva aqui.''')]
+def readme():
+ links=tabela_links_colab(U.name,(
+  ("Guia da unidade","00_guia_da_unidade.ipynb"),
+  ("Exploração quantitativa","01_exploracao_quantitativa.ipynb"),
+  ("Exploração textual","02_exploracao_textual.ipynb"),
+  ("Visualização exploratória","03_visualizacao_exploratoria.ipynb"),
+  ("Oficina do relatório","04_oficina_relatorio_exploratorio.ipynb"),
+ ))
+ conteudo=f'''# Unidade 4 — Exploração
+
+## Ordem de estudo
+
+Execute os notebooks 00 a 04. O produto da unidade é um relatório
+exploratório; a inferência fica para a Unidade 5.
+
+## Abrir os notebooks no Google Colab
+
+{links}
+
+O link carrega o notebook diretamente do GitHub. Nos Notebooks 00 a 03,
+execute primeiro a célula **Preparação do ambiente**; ela clona o repositório
+no ambiente temporário e posiciona a execução nesta unidade. O Notebook 04 é
+discursivo e não precisa de clonagem.
+
+## Dependências e dados
+
+Requer pandas, NumPy e Jupyter. Os dados são fictícios.
+'''
+ (U/"README.md").write_text(conteudo,encoding="utf-8")
 def main():
- U.mkdir(exist_ok=True); dados(); nb("00_guia_da_unidade.ipynb",guia()); nb("01_exploracao_quantitativa.ipynb",quant()); nb("02_exploracao_textual.ipynb",texto()); nb("03_visualizacao_exploratoria.ipynb",visual()); nb("04_oficina_relatorio_exploratorio.ipynb",oficina()); (U/"README.md").write_text("# Unidade 4 — Exploração\n\nExecute notebooks 00–04. Requer pandas, NumPy e Jupyter. Dados são fictícios. Produto: relatório exploratório; inferência fica para a Unidade 5.\n",encoding="utf-8"); print("Unidade 4 construída")
+ U.mkdir(exist_ok=True); dados(); nb("00_guia_da_unidade.ipynb",guia(),True); nb("01_exploracao_quantitativa.ipynb",quant(),True); nb("02_exploracao_textual.ipynb",texto(),True); nb("03_visualizacao_exploratoria.ipynb",visual(),True); nb("04_oficina_relatorio_exploratorio.ipynb",oficina()); readme(); print("Unidade 4 construída")
 if __name__=="__main__": main()

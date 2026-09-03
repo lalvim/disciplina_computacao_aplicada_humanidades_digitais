@@ -12,6 +12,8 @@ import json
 from pathlib import Path
 from textwrap import dedent
 
+from apoio_colab import adicionar_link_na_abertura, preparacao_colab, tabela_links_colab
+
 
 RAIZ = Path(__file__).resolve().parents[1]
 UNIDADE = RAIZ / "unidade_01"
@@ -62,10 +64,18 @@ def notebook(celulas: list[dict]) -> dict:
     }
 
 
-def salvar_notebook(nome: str, celulas: list[dict]) -> None:
+def salvar_notebook(
+    nome: str,
+    celulas: list[dict],
+    requer_repositorio: bool = False,
+) -> None:
+    publicadas = [adicionar_link_na_abertura(celulas[0], UNIDADE.name, nome)]
+    if requer_repositorio:
+        publicadas.append(codigo(preparacao_colab(UNIDADE.name)))
+    publicadas.extend(celulas[1:])
     caminho = UNIDADE / nome
     caminho.write_text(
-        json.dumps(notebook(celulas), ensure_ascii=False, indent=1) + "\n",
+        json.dumps(notebook(publicadas), ensure_ascii=False, indent=1) + "\n",
         encoding="utf-8",
     )
 
@@ -1979,7 +1989,17 @@ def oficina() -> list[dict]:
 
 
 def criar_readme() -> None:
-    conteudo = """\
+    links = tabela_links_colab(
+        UNIDADE.name,
+        (
+            ("Guia da unidade", "00_guia_da_unidade.ipynb"),
+            ("Perguntas e problemas", "01_perguntas_e_problemas_computacionais.ipynb"),
+            ("Representação e operacionalização", "02_representacao_e_operacionalizacao.ipynb"),
+            ("Dados, corpus e evidências", "03_dados_corpus_e_evidencias.ipynb"),
+            ("Oficina do projeto", "04_oficina_projeto_de_pesquisa.ipynb"),
+        ),
+    )
+    conteudo = f"""\
 # Unidade 1 — Questões das Humanidades e problemas computacionais
 
 Esta pasta contém o material teórico-prático da primeira unidade da disciplina
@@ -1994,6 +2014,15 @@ Esta pasta contém o material teórico-prático da primeira unidade da disciplin
 5. `04_oficina_projeto_de_pesquisa.ipynb`
 6. `exercicios_unidade_01.html`
 7. `referencias.md`
+
+## Abrir os notebooks no Google Colab
+
+{links}
+
+O link carrega o notebook diretamente do GitHub. No Notebook 03, execute a
+célula **Preparação do ambiente** antes das demais: ela clona o repositório no
+ambiente temporário e posiciona a execução na pasta desta unidade. Os demais
+notebooks não dependem de arquivos locais para executar seu código.
 
 ## Dependências
 
@@ -2041,12 +2070,12 @@ quem possui o repositório.
 
 ## Revisão antes da oferta
 
-A pasta `revisores` define uma banca de revisão com seis especialidades:
+A pasta `notes/revisores` define uma banca de revisão com seis especialidades:
 nível acadêmico, didática, alinhamento, Humanidades Digitais, referências e
 qualidade técnica/acessibilidade. Ela também contém matriz de avaliação e modelo
 de parecer.
 
-Os pareceres executados ficam em `revisores/pareceres`. Após alterações
+Os pareceres executados ficam em `notes/revisores/pareceres`. Após alterações
 acadêmicas ou didáticas, uma nova rodada deve registrar explicitamente quais
 achados foram resolvidos. A Rodada 2 aprovou a unidade com ajustes. Uma
 avaliação extraordinária posterior identificou ajuste alto na classificação das
@@ -2086,7 +2115,11 @@ def main() -> None:
     salvar_notebook(
         "02_representacao_e_operacionalizacao.ipynb", operacionalizacao()
     )
-    salvar_notebook("03_dados_corpus_e_evidencias.ipynb", corpus())
+    salvar_notebook(
+        "03_dados_corpus_e_evidencias.ipynb",
+        corpus(),
+        requer_repositorio=True,
+    )
     salvar_notebook("04_oficina_projeto_de_pesquisa.ipynb", oficina())
     print(f"Notebooks, dados e README reconstruídos em: {UNIDADE}")
 

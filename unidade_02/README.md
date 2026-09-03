@@ -13,6 +13,21 @@ Problemas em Humanidades Digitais**.
 6. `exercicios_unidade_02.html`
 7. `referencias.md`
 
+## Abrir os notebooks no Google Colab
+
+| Material | Arquivo | Google Colab |
+|---|---|---|
+| Guia da unidade | [`00_guia_da_unidade.ipynb`](00_guia_da_unidade.ipynb) | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_02/00_guia_da_unidade.ipynb) |
+| Fontes, população e seleção | [`01_fontes_populacao_e_selecao.ipynb`](01_fontes_populacao_e_selecao.ipynb) | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_02/01_fontes_populacao_e_selecao.ipynb) |
+| Cobertura, vieses e silêncios | [`02_cobertura_vieses_e_silencios.ipynb`](02_cobertura_vieses_e_silencios.ipynb) | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_02/02_cobertura_vieses_e_silencios.ipynb) |
+| Metadados, identificadores e proveniência | [`03_metadados_identificadores_e_proveniencia.ipynb`](03_metadados_identificadores_e_proveniencia.ipynb) | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_02/03_metadados_identificadores_e_proveniencia.ipynb) |
+| Oficina do protocolo | [`04_oficina_protocolo_da_base.ipynb`](04_oficina_protocolo_da_base.ipynb) | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_02/04_oficina_protocolo_da_base.ipynb) |
+
+O link carrega o notebook diretamente do GitHub. Nos Notebooks 00 a 03,
+execute primeiro a célula **Preparação do ambiente**; ela clona o
+repositório no ambiente temporário e posiciona a execução nesta unidade. O
+Notebook 04 é discursivo e não precisa de clonagem.
+
 ## Dependências e dados
 
 Requer Python 3 e pandas. Os exemplos funcionam offline. Todos os registros

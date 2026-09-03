@@ -4,12 +4,17 @@ from __future__ import annotations
 
 import csv
 import json
+import re
+from datetime import datetime
 from pathlib import Path
 from textwrap import dedent
 from xml.etree import ElementTree as ET
+from zipfile import ZipFile, ZipInfo
 
 import pandas as pd
 from PIL import Image, ImageDraw
+
+from apoio_colab import adicionar_link_na_abertura, preparacao_colab, tabela_links_colab
 
 
 RAIZ = Path(__file__).resolve().parents[1]
@@ -17,6 +22,7 @@ UNIDADE = RAIZ / "unidade_03"
 BRUTOS = UNIDADE / "dados" / "brutos"
 INTERMEDIARIOS = UNIDADE / "dados" / "intermediarios"
 DERIVADOS = UNIDADE / "dados" / "derivados"
+DATA_ARQUIVO_DIDATICO = datetime(2026, 7, 31, 12, 0, 0)
 
 
 def md(conteudo: str) -> dict:
@@ -27,9 +33,28 @@ def code(conteudo: str) -> dict:
     return {"cell_type": "code", "execution_count": None, "metadata": {}, "outputs": [], "source": dedent(conteudo).strip().splitlines(keepends=True)}
 
 
-def salvar_notebook(nome: str, celulas: list[dict]) -> None:
+def salvar_notebook(
+    nome: str,
+    celulas: list[dict],
+    requer_repositorio: bool = False,
+) -> None:
+    publicadas = [adicionar_link_na_abertura(celulas[0], UNIDADE.name, nome)]
+    if requer_repositorio:
+        publicadas.append(
+            code(
+                preparacao_colab(
+                    UNIDADE.name,
+                    pacotes=(
+                        ("openpyxl", "openpyxl>=3.1,<4"),
+                        ("pypdf", "pypdf>=5,<6"),
+                        ("PIL", "Pillow>=11,<12"),
+                    ),
+                )
+            )
+        )
+    publicadas.extend(celulas[1:])
     doc = {
-        "cells": celulas,
+        "cells": publicadas,
         "metadata": {
             "kernelspec": {"display_name": "Python 3", "language": "python", "name": "python3"},
             "language_info": {"name": "python", "version": "3"},
@@ -38,6 +63,32 @@ def salvar_notebook(nome: str, celulas: list[dict]) -> None:
         "nbformat_minor": 5,
     }
     (UNIDADE / nome).write_text(json.dumps(doc, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+
+
+def salvar_xlsx_reprodutivel(tabela: pd.DataFrame, caminho: Path) -> None:
+    """Grava o XLSX sem datas variáveis no conteúdo ou no contêiner ZIP."""
+
+    with pd.ExcelWriter(caminho, engine="openpyxl") as escritor:
+        tabela.to_excel(escritor, index=False, sheet_name="documentos")
+        escritor.book.properties.created = DATA_ARQUIVO_DIDATICO
+        escritor.book.properties.modified = DATA_ARQUIVO_DIDATICO
+
+    temporario = caminho.with_suffix(".xlsx.tmp")
+    with ZipFile(caminho, "r") as origem, ZipFile(temporario, "w") as destino:
+        for info in origem.infolist():
+            normalizado = ZipInfo(info.filename, (2026, 7, 31, 12, 0, 0))
+            normalizado.compress_type = info.compress_type
+            normalizado.external_attr = info.external_attr
+            normalizado.create_system = info.create_system
+            conteudo = origem.read(info.filename)
+            if info.filename == "docProps/core.xml":
+                conteudo = re.sub(
+                    rb"(<dcterms:modified[^>]*>)[^<]+(</dcterms:modified>)",
+                    rb"\g<1>2026-07-31T12:00:00Z\g<2>",
+                    conteudo,
+                )
+            destino.writestr(normalizado, conteudo)
+    temporario.replace(caminho)
 
 
 def pdf_textual(caminho: Path, texto: str) -> None:
@@ -83,8 +134,20 @@ def criar_dados() -> None:
         w.writerow(["id_documento", "titulo", "data_documento", "municipio", "codigo_municipio", "genero", "palavras"])
         w.writerows(linhas)
 
-    pd.DataFrame(linhas, columns=["id_documento", "titulo", "data_documento", "municipio", "codigo_municipio", "genero", "palavras"]).to_excel(
-        BRUTOS / "catalogo_messy.xlsx", index=False, sheet_name="documentos"
+    salvar_xlsx_reprodutivel(
+        pd.DataFrame(
+            linhas,
+            columns=[
+                "id_documento",
+                "titulo",
+                "data_documento",
+                "municipio",
+                "codigo_municipio",
+                "genero",
+                "palavras",
+            ],
+        ),
+        BRUTOS / "catalogo_messy.xlsx",
     )
     metadados = [
         {"id_documento": "D001", "arquivo_texto": "D001.txt", "temas": ["educação", "progresso"]},
@@ -659,6 +722,16 @@ def oficina() -> list[dict]:
 
 
 def readme() -> None:
+    links = tabela_links_colab(
+        UNIDADE.name,
+        (
+            ("Guia da unidade", "00_guia_da_unidade.ipynb"),
+            ("Formatos, importação e extração", "01_formatos_importacao_e_extracao.ipynb"),
+            ("Estrutura, limpeza e qualidade", "02_estrutura_limpeza_e_qualidade.ipynb"),
+            ("Junções, integração e reprodutibilidade", "03_juncoes_integracao_e_reprodutibilidade.ipynb"),
+            ("Oficina da base processável", "04_oficina_base_processavel.ipynb"),
+        ),
+    )
     conteudo = """
     # Unidade 3 — Transformação de fontes em dados analisáveis
 
@@ -670,6 +743,15 @@ def readme() -> None:
     4. `03_juncoes_integracao_e_reprodutibilidade.ipynb`
     5. `04_oficina_base_processavel.ipynb`
     6. `exercicios_unidade_03.html`
+
+    ## Abrir os notebooks no Google Colab
+
+    __LINKS_COLAB__
+
+    O link carrega o notebook diretamente do GitHub. Nos Notebooks 00 a 03,
+    execute primeiro a célula **Preparação do ambiente**. Ela clona o
+    repositório, posiciona a execução nesta unidade e instala apenas alguma
+    dependência ausente. O Notebook 04 é discursivo e não precisa de clonagem.
 
     ## Dados e dependências
 
@@ -685,16 +767,29 @@ def readme() -> None:
     textual. `gabaritos/` reúne respostas-modelo e rubrica; `revisores/` contém
     seis roteiros e seus pareceres executados.
     """
-    (UNIDADE / "README.md").write_text(dedent(conteudo).strip() + "\n", encoding="utf-8")
+    conteudo = dedent(conteudo).replace("__LINKS_COLAB__", links)
+    (UNIDADE / "README.md").write_text(conteudo.strip() + "\n", encoding="utf-8")
 
 
 def main() -> None:
     UNIDADE.mkdir(exist_ok=True)
     criar_dados()
-    salvar_notebook("00_guia_da_unidade.ipynb", guia())
-    salvar_notebook("01_formatos_importacao_e_extracao.ipynb", formatos())
-    salvar_notebook("02_estrutura_limpeza_e_qualidade.ipynb", limpeza())
-    salvar_notebook("03_juncoes_integracao_e_reprodutibilidade.ipynb", integracao())
+    salvar_notebook("00_guia_da_unidade.ipynb", guia(), requer_repositorio=True)
+    salvar_notebook(
+        "01_formatos_importacao_e_extracao.ipynb",
+        formatos(),
+        requer_repositorio=True,
+    )
+    salvar_notebook(
+        "02_estrutura_limpeza_e_qualidade.ipynb",
+        limpeza(),
+        requer_repositorio=True,
+    )
+    salvar_notebook(
+        "03_juncoes_integracao_e_reprodutibilidade.ipynb",
+        integracao(),
+        requer_repositorio=True,
+    )
     salvar_notebook("04_oficina_base_processavel.ipynb", oficina())
     readme()
     print(f"Unidade 3 construída em: {UNIDADE}")

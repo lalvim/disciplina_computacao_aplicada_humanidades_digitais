@@ -13,6 +13,21 @@ Esta pasta contém o material teórico-prático da primeira unidade da disciplin
 6. `exercicios_unidade_01.html`
 7. `referencias.md`
 
+## Abrir os notebooks no Google Colab
+
+| Material | Arquivo | Google Colab |
+|---|---|---|
+| Guia da unidade | [`00_guia_da_unidade.ipynb`](00_guia_da_unidade.ipynb) | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_01/00_guia_da_unidade.ipynb) |
+| Perguntas e problemas | [`01_perguntas_e_problemas_computacionais.ipynb`](01_perguntas_e_problemas_computacionais.ipynb) | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_01/01_perguntas_e_problemas_computacionais.ipynb) |
+| Representação e operacionalização | [`02_representacao_e_operacionalizacao.ipynb`](02_representacao_e_operacionalizacao.ipynb) | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_01/02_representacao_e_operacionalizacao.ipynb) |
+| Dados, corpus e evidências | [`03_dados_corpus_e_evidencias.ipynb`](03_dados_corpus_e_evidencias.ipynb) | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_01/03_dados_corpus_e_evidencias.ipynb) |
+| Oficina do projeto | [`04_oficina_projeto_de_pesquisa.ipynb`](04_oficina_projeto_de_pesquisa.ipynb) | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_01/04_oficina_projeto_de_pesquisa.ipynb) |
+
+O link carrega o notebook diretamente do GitHub. No Notebook 03, execute a
+célula **Preparação do ambiente** antes das demais: ela clona o repositório no
+ambiente temporário e posiciona a execução na pasta desta unidade. Os demais
+notebooks não dependem de arquivos locais para executar seu código.
+
 ## Dependências
 
 - Python 3
@@ -59,12 +74,12 @@ quem possui o repositório.
 
 ## Revisão antes da oferta
 
-A pasta `revisores` define uma banca de revisão com seis especialidades:
+A pasta `notes/revisores` define uma banca de revisão com seis especialidades:
 nível acadêmico, didática, alinhamento, Humanidades Digitais, referências e
 qualidade técnica/acessibilidade. Ela também contém matriz de avaliação e modelo
 de parecer.
 
-Os pareceres executados ficam em `revisores/pareceres`. Após alterações
+Os pareceres executados ficam em `notes/revisores/pareceres`. Após alterações
 acadêmicas ou didáticas, uma nova rodada deve registrar explicitamente quais
 achados foram resolvidos. A Rodada 2 aprovou a unidade com ajustes. Uma
 avaliação extraordinária posterior identificou ajuste alto na classificação das

@@ -9,6 +9,21 @@
 5. `04_oficina_base_processavel.ipynb`
 6. `exercicios_unidade_03.html`
 
+## Abrir os notebooks no Google Colab
+
+| Material | Arquivo | Google Colab |
+|---|---|---|
+| Guia da unidade | [`00_guia_da_unidade.ipynb`](00_guia_da_unidade.ipynb) | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_03/00_guia_da_unidade.ipynb) |
+| Formatos, importação e extração | [`01_formatos_importacao_e_extracao.ipynb`](01_formatos_importacao_e_extracao.ipynb) | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_03/01_formatos_importacao_e_extracao.ipynb) |
+| Estrutura, limpeza e qualidade | [`02_estrutura_limpeza_e_qualidade.ipynb`](02_estrutura_limpeza_e_qualidade.ipynb) | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_03/02_estrutura_limpeza_e_qualidade.ipynb) |
+| Junções, integração e reprodutibilidade | [`03_juncoes_integracao_e_reprodutibilidade.ipynb`](03_juncoes_integracao_e_reprodutibilidade.ipynb) | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_03/03_juncoes_integracao_e_reprodutibilidade.ipynb) |
+| Oficina da base processável | [`04_oficina_base_processavel.ipynb`](04_oficina_base_processavel.ipynb) | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_03/04_oficina_base_processavel.ipynb) |
+
+O link carrega o notebook diretamente do GitHub. Nos Notebooks 00 a 03,
+execute primeiro a célula **Preparação do ambiente**. Ela clona o
+repositório, posiciona a execução nesta unidade e instala apenas alguma
+dependência ausente. O Notebook 04 é discursivo e não precisa de clonagem.
+
 ## Dados e dependências
 
 Dados fictícios e um extrato didático documentado do IBGE ficam separados em

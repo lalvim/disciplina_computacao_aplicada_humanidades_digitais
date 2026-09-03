@@ -517,7 +517,7 @@ def validar_gabaritos() -> None:
 
 
 def validar_revisores() -> None:
-    pasta = UNIDADE / "revisores"
+    pasta = RAIZ / "notes" / "revisores"
     esperados = {
         "README.md",
         "00_coordenacao_da_revisao.md",

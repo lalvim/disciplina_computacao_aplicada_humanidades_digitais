@@ -7,6 +7,8 @@ import json
 from pathlib import Path
 from textwrap import dedent
 
+from apoio_colab import adicionar_link_na_abertura, preparacao_colab, tabela_links_colab
+
 
 RAIZ = Path(__file__).resolve().parents[1]
 UNIDADE = RAIZ / "unidade_02"
@@ -31,9 +33,17 @@ def codigo(conteudo: str) -> dict:
     }
 
 
-def salvar_notebook(nome: str, celulas: list[dict]) -> None:
+def salvar_notebook(
+    nome: str,
+    celulas: list[dict],
+    requer_repositorio: bool = False,
+) -> None:
+    publicadas = [adicionar_link_na_abertura(celulas[0], UNIDADE.name, nome)]
+    if requer_repositorio:
+        publicadas.append(codigo(preparacao_colab(UNIDADE.name)))
+    publicadas.extend(celulas[1:])
     documento = {
-        "cells": celulas,
+        "cells": publicadas,
         "metadata": {
             "kernelspec": {
                 "display_name": "Python 3",
@@ -819,6 +829,16 @@ def oficina() -> list[dict]:
 
 
 def criar_readme() -> None:
+    links = tabela_links_colab(
+        UNIDADE.name,
+        (
+            ("Guia da unidade", "00_guia_da_unidade.ipynb"),
+            ("Fontes, população e seleção", "01_fontes_populacao_e_selecao.ipynb"),
+            ("Cobertura, vieses e silêncios", "02_cobertura_vieses_e_silencios.ipynb"),
+            ("Metadados, identificadores e proveniência", "03_metadados_identificadores_e_proveniencia.ipynb"),
+            ("Oficina do protocolo", "04_oficina_protocolo_da_base.ipynb"),
+        ),
+    )
     conteudo = """
     # Unidade 2 — Construção e documentação da base
 
@@ -834,6 +854,15 @@ def criar_readme() -> None:
     5. `04_oficina_protocolo_da_base.ipynb`
     6. `exercicios_unidade_02.html`
     7. `referencias.md`
+
+    ## Abrir os notebooks no Google Colab
+
+    __LINKS_COLAB__
+
+    O link carrega o notebook diretamente do GitHub. Nos Notebooks 00 a 03,
+    execute primeiro a célula **Preparação do ambiente**; ela clona o
+    repositório no ambiente temporário e posiciona a execução nesta unidade. O
+    Notebook 04 é discursivo e não precisa de clonagem.
 
     ## Dependências e dados
 
@@ -871,17 +900,28 @@ def criar_readme() -> None:
     Execute as células na ordem. Respostas e justificativas pertencem às células
     Markdown; Python é usado apenas para experimentos e auditorias.
     """
-    (UNIDADE / "README.md").write_text(dedent(conteudo).strip() + "\n", encoding="utf-8")
+    conteudo = dedent(conteudo).replace("__LINKS_COLAB__", links)
+    (UNIDADE / "README.md").write_text(conteudo.strip() + "\n", encoding="utf-8")
 
 
 def main() -> None:
     UNIDADE.mkdir(exist_ok=True)
     criar_dados()
-    salvar_notebook("00_guia_da_unidade.ipynb", guia())
-    salvar_notebook("01_fontes_populacao_e_selecao.ipynb", fontes_selecao())
-    salvar_notebook("02_cobertura_vieses_e_silencios.ipynb", cobertura())
+    salvar_notebook("00_guia_da_unidade.ipynb", guia(), requer_repositorio=True)
     salvar_notebook(
-        "03_metadados_identificadores_e_proveniencia.ipynb", metadados()
+        "01_fontes_populacao_e_selecao.ipynb",
+        fontes_selecao(),
+        requer_repositorio=True,
+    )
+    salvar_notebook(
+        "02_cobertura_vieses_e_silencios.ipynb",
+        cobertura(),
+        requer_repositorio=True,
+    )
+    salvar_notebook(
+        "03_metadados_identificadores_e_proveniencia.ipynb",
+        metadados(),
+        requer_repositorio=True,
     )
     salvar_notebook("04_oficina_protocolo_da_base.ipynb", oficina())
     criar_readme()

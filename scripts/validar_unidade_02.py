@@ -99,7 +99,7 @@ def validar_exercicios() -> None:
 
 def validar_referencias_e_revisao() -> None:
     referencias = (UNIDADE / "referencias.md").read_text(encoding="utf-8")
-    for termo in ["GEBRU", "RODRIGUES", "TROUILLOT", "SCHWARTZ", "CARROLL", "ANPD", "LGPD", "W3C"]:
+    for termo in ["AMERICAN HISTORICAL ASSOCIATION", "GEBRU", "RODRIGUES", "TROUILLOT", "SCHWARTZ", "CARROLL", "ANPD", "LGPD", "W3C"]:
         assert termo in referencias, f"referência ausente: {termo}"
     assert referencias.count("https://") >= 8
 

@@ -249,15 +249,40 @@ def fontes_selecao() -> list[dict]:
             """
             ## 2. Fonte primária, secundária e dado derivado
 
-            “Primária” e “secundária” descrevem a relação entre material e pergunta,
-            não uma qualidade fixa do arquivo. Um catálogo institucional pode ser
-            fonte secundária para estudar cartas, mas fonte primária para investigar
-            práticas de catalogação. Uma tabela criada por transcrição é dado derivado
-            e deve permanecer ligada ao documento e às decisões que a produziram.
+            Na prática historiográfica, a distinção pode ser formulada assim:
+
+            | Relação com a pesquisa | Definição operacional |
+            |---|---|
+            | **Fonte primária** | Documento, objeto, imagem, registro estatístico, testemunho ou outro vestígio produzido no período estudado ou por atores diretamente relacionados a ele, mobilizado como evidência sobre esse contexto. |
+            | **Fonte secundária** | Interpretação posterior que analisa o passado com base em fontes primárias e em diálogo com outras interpretações. Livros e artigos historiográficos são exemplos recorrentes. |
+
+            A American Historical Association (AHA, 2023) emprega uma noção ampla
+            de documento primário — que inclui textos, artefatos, imagens, vídeos,
+            estatísticas, relatos orais e ambientes construídos — e define a
+            literatura secundária como interpretações posteriores fundamentadas
+            nesses documentos. A própria associação adverte, contudo, que a fronteira
+            entre as duas categorias depende em grande medida da pergunta de pesquisa.
+
+            Portanto, “primária” e “secundária” descrevem uma **relação entre o
+            material, o problema e o uso analítico**, não uma qualidade fixa do
+            arquivo. Um catálogo institucional pode ser fonte secundária para estudar
+            as cartas que descreve, mas fonte primária para investigar práticas de
+            catalogação. Do mesmo modo, um artigo historiográfico é secundário para
+            estudar o período que interpreta, mas pode ser primário em uma pesquisa
+            sobre a historiografia daquele tema.
+
+            A classificação também não estabelece uma hierarquia automática de
+            verdade: fontes primárias e secundárias exigem crítica de autoria,
+            finalidade, contexto, mediação, ausências e limites. Uma tabela criada por
+            transcrição ou OCR é um **dado derivado**. Ela não substitui o documento e
+            deve permanecer ligada à fonte e às decisões que a produziram.
 
             Fontes governamentais, institucionais e documentais exigem perguntas
             distintas: quem produziu o registro, com qual finalidade, sob quais
             categorias e com que condições de acesso?
+
+            **Referência:** American Historical Association (2023), seção “Shared
+            Values of Historians”. Dados completos em `referencias.md`.
             """
         ),
         texto(

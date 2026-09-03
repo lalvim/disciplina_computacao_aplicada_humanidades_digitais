@@ -4,6 +4,11 @@
 
 ### Bases, fontes e documentação
 
+AMERICAN HISTORICAL ASSOCIATION (AHA). *Statement on Standards of Professional
+Conduct*. Washington, DC: American Historical Association, 7 jan. 2023. Seção
+“Shared Values of Historians”.
+https://www.historians.org/resource/statement-on-standards-of-professional-conduct/.
+
 GEBRU, Timnit et al. Datasheets for Datasets. *Communications of the ACM*,
 v. 64, n. 12, p. 86–92, 2021. https://doi.org/10.1145/3458723.
 
@@ -51,6 +56,7 @@ https://doi.org/10.1038/sdata.2016.18.
 | Momento | Leitura | Finalidade |
 |---|---|---|
 | Antes da Semana 1 | Rodrigues (2020) | Relacionar base histórica, método e ética |
+| Durante o Notebook 01 | AHA (2023) | Distinguir fontes primárias e secundárias em relação à pergunta |
 | Durante o Notebook 01 | Gebru et al. (2021) | Documentar motivação, composição e coleta |
 | Durante o Notebook 02 | Trouillot (1995), cap. 1 | Discutir produção de silêncios |
 | Durante o Notebook 02 | Schwartz e Cook (2002) | Relacionar arquivo, memória e poder |

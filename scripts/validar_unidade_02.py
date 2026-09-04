@@ -97,6 +97,39 @@ def validar_exercicios() -> None:
     assert len(respostas) == 18 and respostas == corretas
 
 
+def validar_gabaritos() -> None:
+    pasta = UNIDADE / "gabaritos"
+    marcadores = {
+        "gabarito_01_selecao.md": [
+            "## Exemplo de resposta — protocolo de seleção",
+            "C004, de 1900, deve ser incluído",
+            "### Por que esta resposta é defensável?",
+        ],
+        "gabarito_02_cobertura.md": [
+            "## Exemplo de resposta — matriz de cobertura",
+            "Silêncios que a ampliação da coleta talvez não resolva",
+            "### Por que esta resposta é defensável?",
+        ],
+        "gabarito_03_documentacao.md": [
+            "## Exemplo de resposta — documentação do projeto",
+            "### Exemplo de registro de proveniência",
+            "### Por que esta resposta é defensável?",
+        ],
+        "gabarito_04_protocolo.md": [
+            "## Exemplo de resposta — protocolo integrado da base",
+            "### 8. Autoavaliação — exemplo",
+            "### 9. Revisão por pares — exemplo",
+        ],
+        "gabarito_exercicios_multipla_escolha.md": [
+            "## Exemplo de resposta justificada",
+        ],
+    }
+    for nome, termos in marcadores.items():
+        conteudo = (pasta / nome).read_text(encoding="utf-8")
+        ausentes = [termo for termo in termos if termo not in conteudo]
+        assert not ausentes, f"{nome}: exemplos incompletos: {ausentes}"
+
+
 def validar_referencias_e_revisao() -> None:
     referencias = (UNIDADE / "referencias.md").read_text(encoding="utf-8")
     for termo in ["AMERICAN HISTORICAL ASSOCIATION", "GEBRU", "RODRIGUES", "TROUILLOT", "SCHWARTZ", "CARROLL", "ANPD", "LGPD", "W3C"]:
@@ -126,9 +159,10 @@ def main() -> None:
     validar_cobertura()
     validar_dados()
     validar_exercicios()
+    validar_gabaritos()
     validar_referencias_e_revisao()
     print("OK cobertura: 12/12 conteúdos")
-    print("OK dados, exercícios, gabaritos, referências e revisores")
+    print("OK dados, exercícios, gabaritos com exemplos, referências e revisores")
     print(f"OK total: {total_textos} células Markdown, {total_codigos} de código")
 
 

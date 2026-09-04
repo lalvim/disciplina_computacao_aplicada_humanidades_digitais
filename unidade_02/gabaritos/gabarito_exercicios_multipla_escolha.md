@@ -24,3 +24,13 @@
 As justificativas completas aparecem na correção do HTML. Na discussão
 docente, exigir que o estudante explique a distinção conceitual, não apenas a
 letra escolhida.
+
+## Exemplo de resposta justificada
+
+**Questão 3 — resposta C.** Um catálogo institucional pode ser fonte primária
+quando a pergunta investiga as práticas de catalogação ou as decisões da
+instituição, porque nesse caso o próprio catálogo é o vestígio analisado. Se a
+pergunta for sobre o conteúdo das cartas descritas, o catálogo funciona como
+instrumento de localização ou dado derivado e não substitui as cartas. Portanto,
+a classificação depende da relação entre fonte e pergunta, não do formato CSV
+nem de uma propriedade permanente do documento.

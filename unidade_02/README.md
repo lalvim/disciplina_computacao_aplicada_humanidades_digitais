@@ -34,6 +34,10 @@ Requer Python 3 e pandas. Os exemplos funcionam offline. Todos os registros
 em `dados/` são fictícios e contêm lacunas deliberadas; não sustentam
 afirmações sobre instituições ou processos históricos reais.
 
+A pasta `imagens/` reúne uma abertura conceitual e sete diagramas acessíveis.
+Os arquivos são locais, funcionam offline e têm finalidade, proveniência e
+textos alternativos documentados em `imagens/README.md`.
+
 ## Carga sugerida
 
 Duas semanas, oito horas no total, incluindo preparação e revisão. A oficina

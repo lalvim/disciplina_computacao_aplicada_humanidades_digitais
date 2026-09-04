@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"
+ role="img" aria-labelledby="titulo descricao">
+<title id="titulo">Documentação e proveniência</title>
+<desc id="descricao">Uma cadeia liga fonte, registro e identificador, transformação e dado derivado; dicionário define campos e proveniência registra entidades, atividades e agentes.</desc>
+<defs>
+  <marker id="seta" markerWidth="10" markerHeight="10" refX="8" refY="3"
+   orient="auto" markerUnits="strokeWidth">
+    <path d="M0,0 L0,6 L9,3 z" fill="#17324d"/>
+  </marker>
+  <style>
+    .titulo { font: 700 30px system-ui, sans-serif; fill: #17324d; }
+    .subtitulo { font: 700 19px system-ui, sans-serif; fill: #17324d; }
+    .corpo { font: 16px system-ui, sans-serif; fill: #17324d; }
+    .nota { font: italic 15px system-ui, sans-serif; fill: #53606c; }
+    .numero { font: 700 25px system-ui, sans-serif; fill: #fff; }
+    .seta { stroke: #17324d; stroke-width: 3; fill: none; marker-end: url(#seta); }
+    .tracejada { stroke-dasharray: 9 7; }
+  </style>
+</defs>
+<rect width="1200" height="600" rx="28" fill="#fbf4e8"/>
+<text x="600" y="45" class="titulo" text-anchor="middle"><tspan x="600" dy="0">Documentar significado e trajetória</tspan></text><rect x="40" y="185" width="220" height="145" rx="18" fill="#dbe8ec" stroke="#17324d" stroke-width="3"/><text x="150.0" y="217" class="subtitulo" text-anchor="middle"><tspan x="150.0" dy="0">Fonte</tspan></text><text x="150.0" y="250" class="corpo" text-anchor="middle"><tspan x="150.0" dy="0">documento</tspan><tspan x="150.0" dy="22">ou conjunto</tspan></text><rect x="345" y="185" width="220" height="145" rx="18" fill="#d8ebe7" stroke="#256b6b" stroke-width="3"/><text x="455.0" y="217" class="subtitulo" text-anchor="middle"><tspan x="455.0" dy="0">Registro + ID</tspan></text><text x="455.0" y="250" class="corpo" text-anchor="middle"><tspan x="455.0" dy="0">identifica</tspan><tspan x="455.0" dy="22">sem confundir</tspan></text><rect x="650" y="185" width="220" height="145" rx="18" fill="#f2ddd2" stroke="#a44f32" stroke-width="3"/><text x="760.0" y="217" class="subtitulo" text-anchor="middle"><tspan x="760.0" dy="0">Transformação</tspan></text><text x="760.0" y="250" class="corpo" text-anchor="middle"><tspan x="760.0" dy="0">seleciona, transcreve</tspan><tspan x="760.0" dy="22">ou normaliza</tspan></text><rect x="955" y="185" width="205" height="145" rx="18" fill="#eadde7" stroke="#69445f" stroke-width="3"/><text x="1057.5" y="217" class="subtitulo" text-anchor="middle"><tspan x="1057.5" dy="0">Dado derivado</tspan></text><text x="1057.5" y="250" class="corpo" text-anchor="middle"><tspan x="1057.5" dy="0">mantém vínculo</tspan><tspan x="1057.5" dy="22">com a fonte</tspan></text><path class="seta" d="M260,257 H338"/><path class="seta" d="M565,257 H643"/><path class="seta" d="M870,257 H948"/><rect x="345" y="65" width="525" height="82" rx="18" fill="#fffdf8" stroke="#d8b26e" stroke-width="3"/><text x="607.5" y="97" class="subtitulo" text-anchor="middle"><tspan x="607.5" dy="0">Dicionário de dados</tspan></text><text x="607.5" y="130" class="corpo" text-anchor="middle"><tspan x="607.5" dy="0">define campo • tipo • domínio • origem • limitação</tspan></text><path class="seta tracejada" d="M607,148 V180"/><rect x="420" y="395" width="360" height="100" rx="18" fill="#fffdf8" stroke="#69445f" stroke-width="3"/><text x="600.0" y="427" class="subtitulo" text-anchor="middle"><tspan x="600.0" dy="0">Proveniência</tspan></text><text x="600.0" y="460" class="corpo" text-anchor="middle"><tspan x="600.0" dy="0">entidades • atividades • agentes</tspan><tspan x="600.0" dy="22">versões • datas • responsabilidades</tspan></text><path class="seta tracejada" d="M760,335 C760,375 725,385 700,395"/><rect x="55" y="410" width="245" height="75" rx="18" fill="#fffdf8" stroke="#256b6b" stroke-width="3"/><text x="177.5" y="442" class="subtitulo" text-anchor="middle"><tspan x="177.5" dy="0">Agente</tspan></text><text x="177.5" y="475" class="corpo" text-anchor="middle"><tspan x="177.5" dy="0">quem realizou a atividade</tspan></text><path class="seta tracejada" d="M305,448 H412"/><text x="600" y="550" class="nota" text-anchor="middle"><tspan x="600" dy="0">Auditoria técnica verifica regras; documentação explica o que elas significam e não alcançam</tspan></text>
+</svg>

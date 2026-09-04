@@ -8,6 +8,7 @@ from pathlib import Path
 from textwrap import dedent
 
 from apoio_colab import adicionar_link_na_abertura, preparacao_colab, tabela_links_colab
+from construir_imagens_unidade_02 import main as criar_imagens
 
 
 RAIZ = Path(__file__).resolve().parents[1]
@@ -140,6 +141,15 @@ def guia() -> list[dict]:
 
             ## Como construir uma base adequada à pergunta?
 
+            Observe na ilustração que as fontes atravessam diferentes decisões, mas
+            os registros excluídos não desaparecem: eles permanecem documentados para
+            auditoria e possível revisão.
+
+            ![Conjunto heterogêneo de fontes atravessa filtros de seleção até formar uma base organizada; registros não selecionados permanecem documentados e ligados à cadeia de proveniência.](imagens/00_abertura_conceitual.png)
+
+            *Ilustração conceitual gerada para a abertura da unidade; não representa
+            documentos ou acervos históricos reais.*
+
             **Problema orientador:** quais dados são necessários e como saber se eles
             representam adequadamente o fenômeno investigado?
 
@@ -178,6 +188,14 @@ def guia() -> list[dict]:
 
             Os dados são **inteiramente fictícios**. As lacunas foram criadas para
             permitir experimentos sem fazer afirmações sobre acervos reais.
+
+            O diagrama abaixo mostra que cada notebook produz uma parte do protocolo e
+            que os resultados podem exigir o retorno às decisões anteriores.
+
+            ![Percurso dos Notebooks 00 a 04: diagnóstico, seleção, cobertura, documentação e oficina conduzem a um protocolo defensável, com uma seta de retorno para revisão.](imagens/00_percurso_unidade.svg)
+
+            O percurso é cumulativo, mas não estritamente linear: uma lacuna percebida
+            na cobertura pode levar à revisão das fontes ou dos critérios de seleção.
             """
         ),
         codigo(
@@ -243,6 +261,14 @@ def fontes_selecao() -> list[dict]:
             Essas extensões não são automaticamente iguais. Um acervo digital costuma
             refletir preservação, catalogação, digitalização, acesso e decisões
             institucionais anteriores à pesquisa.
+
+            Observe como o diagrama situa o corpus dentro da população acessível e
+            explicita as mediações que limitam a passagem entre os conjuntos.
+
+            ![População de interesse contém a população acessível, que contém o corpus; ao lado, produção, preservação, catalogação, localização, digitalização, acesso e seleção aparecem como mediações.](imagens/01_populacao_acessivel_corpus.svg)
+
+            A figura é um modelo conceitual, não uma prova de representatividade. Um
+            corpus pode ser grande e ainda assim resultar de acesso muito desigual.
             """
         ),
         texto(
@@ -262,6 +288,11 @@ def fontes_selecao() -> list[dict]:
             literatura secundária como interpretações posteriores fundamentadas
             nesses documentos. A própria associação adverte, contudo, que a fronteira
             entre as duas categorias depende em grande medida da pergunta de pesquisa.
+
+            O mesmo catálogo ocupa posições diferentes no diagrama conforme o que se
+            pretende investigar.
+
+            ![O mesmo catálogo institucional funciona como instrumento ou dado derivado para uma pergunta sobre cartas e como fonte primária para uma pergunta sobre práticas de catalogação.](imagens/01_papel_das_fontes.svg)
 
             Portanto, “primária” e “secundária” descrevem uma **relação entre o
             material, o problema e o uso analítico**, não uma qualidade fixa do
@@ -417,6 +448,11 @@ def cobertura() -> list[dict]:
             | ausência na base | fonte existente não foi localizada ou selecionada | requer busca, novo acesso ou revisão do recorte |
             | valor ausente | campo não preenchido em registro incluído | requer diagnóstico e regra de tratamento |
 
+            A cadeia abaixo localiza as ausências no processo que vai da experiência
+            vivida ao campo preenchido na base.
+
+            ![Cadeia da experiência ao registro, à preservação, à base e ao campo preenchido; entre as etapas aparecem ausência no registro histórico, perda de preservação, ausência na base e valor ausente.](imagens/02_cadeia_ausencias.svg)
+
             Silêncios documentais também são efeitos de poder: quem podia registrar,
             preservar, classificar e autorizar acesso? Trouillot (1995) situa silêncios
             em diferentes momentos da produção histórica; Schwartz e Cook (2002)
@@ -459,6 +495,11 @@ def cobertura() -> list[dict]:
         texto(
             """
             ### Leitura da saída
+
+            A visualização retoma os valores calculados e permite perceber rapidamente
+            quais grupos diminuem ou desaparecem após a aplicação dos critérios.
+
+            ![Barras comparam grupos no catálogo e no corpus: família proprietária cai de dois para zero, trabalhadores de dois para um e público leitor de cinco para quatro.](imagens/02_cobertura_catalogo_corpus.svg)
 
             A tabela não revela diretamente a composição da população histórica. Ela
             revela como decisões de localização, digitalização, acesso e período
@@ -617,6 +658,12 @@ def metadados() -> list[dict]:
             """
             ## 5. Proveniência
 
+            No diagrama, o dicionário explica o significado dos campos, enquanto a
+            proveniência registra a trajetória entre fonte, atividade, agente e dado
+            derivado.
+
+            ![Cadeia conecta fonte, registro e identificador, transformação e dado derivado; o dicionário de dados define os campos e a proveniência registra entidades, atividades, agentes, versões e datas.](imagens/03_documentacao_proveniencia.svg)
+
             Proveniência responde: quem criou ou custodiou o registro, de onde ele
             veio, quando foi obtido, sob quais condições e que transformações sofreu?
             Ela forma uma cadeia entre fonte, representação e resultado. Um endereço
@@ -678,6 +725,15 @@ def oficina() -> list[dict]:
             desenho da base do projeto iniciado na Unidade 1. Não invente uma fonte
             apenas para preencher o roteiro: registre incerteza e um plano de
             verificação.
+
+            O mapa abaixo funciona como orientação de preenchimento. Ele mostra que as
+            seções não são formulários independentes: precisam sustentar umas às
+            outras e retornar à revisão por pares.
+
+            ![Pergunta, fontes, seleção, cobertura, documentação, responsabilidade e viabilidade convergem para um protocolo defensável, com retorno da revisão por pares.](imagens/04_protocolo_integrado.svg)
+
+            Use as conexões para conferir coerência. Se a pergunta mudar, revise a
+            unidade de análise, as fontes, os critérios, a cobertura e os riscos.
             """
         ),
         texto(
@@ -895,6 +951,10 @@ def criar_readme() -> None:
     em `dados/` são fictícios e contêm lacunas deliberadas; não sustentam
     afirmações sobre instituições ou processos históricos reais.
 
+    A pasta `imagens/` reúne uma abertura conceitual e sete diagramas acessíveis.
+    Os arquivos são locais, funcionam offline e têm finalidade, proveniência e
+    textos alternativos documentados em `imagens/README.md`.
+
     ## Carga sugerida
 
     Duas semanas, oito horas no total, incluindo preparação e revisão. A oficina
@@ -932,6 +992,7 @@ def criar_readme() -> None:
 def main() -> None:
     UNIDADE.mkdir(exist_ok=True)
     criar_dados()
+    criar_imagens()
     salvar_notebook("00_guia_da_unidade.ipynb", guia(), requer_repositorio=True)
     salvar_notebook(
         "01_fontes_populacao_e_selecao.ipynb",

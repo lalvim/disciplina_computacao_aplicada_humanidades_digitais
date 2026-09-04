@@ -5,6 +5,8 @@ from __future__ import annotations
 import json
 import os
 import re
+import struct
+import xml.etree.ElementTree as ET
 from pathlib import Path
 
 
@@ -75,6 +77,59 @@ def validar_dados() -> None:
     assert "inteiramente fictícios" in (
         UNIDADE / "00_guia_da_unidade.ipynb"
     ).read_text(encoding="utf-8")
+
+
+def validar_imagens() -> None:
+    pasta = UNIDADE / "imagens"
+    esperados = {
+        "README.md",
+        "00_abertura_conceitual.png",
+        "00_percurso_unidade.svg",
+        "01_populacao_acessivel_corpus.svg",
+        "01_papel_das_fontes.svg",
+        "02_cadeia_ausencias.svg",
+        "02_cobertura_catalogo_corpus.svg",
+        "03_documentacao_proveniencia.svg",
+        "04_protocolo_integrado.svg",
+    }
+    encontrados = {p.name for p in pasta.iterdir() if p.is_file()}
+    assert encontrados == esperados, f"imagens divergentes: {encontrados ^ esperados}"
+
+    referencias = []
+    for notebook in sorted(UNIDADE.glob("*.ipynb")):
+        documento = json.loads(notebook.read_text(encoding="utf-8"))
+        markdown = "\n".join(
+            fonte(celula)
+            for celula in documento["cells"]
+            if celula["cell_type"] == "markdown"
+        )
+        referencias.extend(re.findall(r"!\[([^]]+)\]\((imagens/[^)]+)\)", markdown))
+
+    assert len(referencias) == 8
+    caminhos = [caminho for _, caminho in referencias]
+    assert len(set(caminhos)) == 8
+    for alt, caminho in referencias:
+        assert len(alt.split()) >= 6, f"texto alternativo insuficiente: {caminho}"
+        assert (UNIDADE / caminho).is_file(), f"imagem ausente: {caminho}"
+
+    namespace = {"svg": "http://www.w3.org/2000/svg"}
+    for caminho in sorted(pasta.glob("*.svg")):
+        raiz = ET.parse(caminho).getroot()
+        titulo = raiz.find("svg:title", namespace)
+        descricao = raiz.find("svg:desc", namespace)
+        assert titulo is not None and (titulo.text or "").strip()
+        assert descricao is not None and len((descricao.text or "").split()) >= 8
+        assert raiz.attrib.get("role") == "img"
+        assert "aria-labelledby" in raiz.attrib
+
+    png = (pasta / "00_abertura_conceitual.png").read_bytes()
+    assert png[:8] == b"\x89PNG\r\n\x1a\n"
+    largura, altura = struct.unpack(">II", png[16:24])
+    assert largura >= 1200 and altura >= 500
+
+    ficha = (pasta / "README.md").read_text(encoding="utf-8")
+    for nome in esperados - {"README.md"}:
+        assert nome in ficha, f"imagem sem documentação: {nome}"
 
 
 def validar_exercicios() -> None:
@@ -158,10 +213,12 @@ def main() -> None:
         print(f"OK {caminho.name}: {textos} Markdown, {codigos} código")
     validar_cobertura()
     validar_dados()
+    validar_imagens()
     validar_exercicios()
     validar_gabaritos()
     validar_referencias_e_revisao()
     print("OK cobertura: 12/12 conteúdos")
+    print("OK imagens: 8 recursos locais, acessíveis e documentados")
     print("OK dados, exercícios, gabaritos com exemplos, referências e revisores")
     print(f"OK total: {total_textos} células Markdown, {total_codigos} de código")
 

@@ -312,10 +312,10 @@ Toda imagem deve:
 - ser identificada como ilustração conceitual quando tiver sido gerada por IA.
 
 SVGs devem conter os elementos `<title>` e `<desc>`. Imagens históricas e
-geradas devem possuir uma ficha em `unidade_01/imagens/README.md`, com
-proveniência, licença, alterações e texto alternativo. Não incorporar imagens
-remotas: o material deve continuar funcionando offline e no Colab após a
-clonagem do repositório.
+geradas devem possuir uma ficha no arquivo `imagens/README.md` da respectiva
+unidade, com proveniência, licença, alterações e texto alternativo. Não
+incorporar imagens remotas: o material deve continuar funcionando offline e no
+Colab após a clonagem do repositório.
 
 ### Relação com o texto
 

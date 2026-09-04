@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 610"
+ role="img" aria-labelledby="titulo descricao">
+<title id="titulo">Papéis de uma fonte</title>
+<desc id="descricao">O mesmo catálogo funciona como dado derivado para uma pergunta sobre cartas e como fonte primária para uma pergunta sobre práticas de catalogação.</desc>
+<defs>
+  <marker id="seta" markerWidth="10" markerHeight="10" refX="8" refY="3"
+   orient="auto" markerUnits="strokeWidth">
+    <path d="M0,0 L0,6 L9,3 z" fill="#17324d"/>
+  </marker>
+  <style>
+    .titulo { font: 700 30px system-ui, sans-serif; fill: #17324d; }
+    .subtitulo { font: 700 19px system-ui, sans-serif; fill: #17324d; }
+    .corpo { font: 16px system-ui, sans-serif; fill: #17324d; }
+    .nota { font: italic 15px system-ui, sans-serif; fill: #53606c; }
+    .numero { font: 700 25px system-ui, sans-serif; fill: #fff; }
+    .seta { stroke: #17324d; stroke-width: 3; fill: none; marker-end: url(#seta); }
+    .tracejada { stroke-dasharray: 9 7; }
+  </style>
+</defs>
+<rect width="1200" height="610" rx="28" fill="#fbf4e8"/>
+<text x="600" y="48" class="titulo" text-anchor="middle"><tspan x="600" dy="0">O papel da fonte depende da pergunta</tspan></text><rect x="430" y="210" width="340" height="165" rx="18" fill="#fffdf8" stroke="#d8b26e" stroke-width="3"/><text x="600.0" y="242" class="subtitulo" text-anchor="middle"><tspan x="600.0" dy="0">Mesmo catálogo institucional</tspan></text><text x="600.0" y="275" class="corpo" text-anchor="middle"><tspan x="600.0" dy="0">descrições</tspan><tspan x="600.0" dy="22">categorias</tspan><tspan x="600.0" dy="22">decisões de acesso</tspan></text><rect x="55" y="95" width="310" height="165" rx="18" fill="#dbe8ec" stroke="#17324d" stroke-width="3"/><text x="210.0" y="127" class="subtitulo" text-anchor="middle"><tspan x="210.0" dy="0">Pergunta A</tspan></text><text x="210.0" y="160" class="corpo" text-anchor="middle"><tspan x="210.0" dy="0">O que dizem</tspan><tspan x="210.0" dy="22">as cartas descritas?</tspan></text><rect x="835" y="95" width="310" height="165" rx="18" fill="#d8ebe7" stroke="#256b6b" stroke-width="3"/><text x="990.0" y="127" class="subtitulo" text-anchor="middle"><tspan x="990.0" dy="0">Pergunta B</tspan></text><text x="990.0" y="160" class="corpo" text-anchor="middle"><tspan x="990.0" dy="0">Como a instituição</tspan><tspan x="990.0" dy="22">classificou o acervo?</tspan></text><rect x="55" y="380" width="310" height="125" rx="18" fill="#f2ddd2" stroke="#a44f32" stroke-width="3"/><text x="210.0" y="412" class="subtitulo" text-anchor="middle"><tspan x="210.0" dy="0">Papel</tspan></text><text x="210.0" y="445" class="corpo" text-anchor="middle"><tspan x="210.0" dy="0">instrumento de localização</tspan><tspan x="210.0" dy="22">ou dado derivado</tspan></text><rect x="835" y="380" width="310" height="125" rx="18" fill="#eadde7" stroke="#69445f" stroke-width="3"/><text x="990.0" y="412" class="subtitulo" text-anchor="middle"><tspan x="990.0" dy="0">Papel</tspan></text><text x="990.0" y="445" class="corpo" text-anchor="middle"><tspan x="990.0" dy="0">fonte primária sobre</tspan><tspan x="990.0" dy="22">a prática institucional</tspan></text><path class="seta" d="M430,265 C350,245 340,205 365,175"/><path class="seta" d="M770,265 C850,245 860,205 835,175"/><path class="seta" d="M210,265 V375"/><path class="seta" d="M990,265 V375"/><text x="600" y="548" class="nota" text-anchor="middle"><tspan x="600" dy="0">Um artigo historiográfico pode ser secundário para estudar o passado</tspan><tspan x="600" dy="22">e primário para estudar a historiografia</tspan></text>
+</svg>

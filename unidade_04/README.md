@@ -23,3 +23,7 @@ discursivo e não precisa de clonagem.
 ## Dependências e dados
 
 Requer pandas, NumPy e Jupyter. Os dados são fictícios.
+
+As fórmulas são escritas em LaTeX nas células Markdown e renderizadas pelo
+Jupyter/Colab, sem pacote adicional. Cada fórmula é acompanhada de definição em
+linguagem corrente e da operação correspondente em Python.

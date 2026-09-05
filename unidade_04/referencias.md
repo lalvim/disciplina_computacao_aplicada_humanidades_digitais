@@ -34,4 +34,19 @@ https://pandas.pydata.org/docs/user_guide/.
 | visual | Drucker (2011) | criticar pressupostos gráficos |
 | aprofundamento | Manning et al. (2008) | vocabulário, frequências e associação |
 
+## Convenções matemáticas adotadas
+
+- frequências, proporções, medidas de centro, quartis, intervalo interquartil e
+  regra de inspeção do boxplot são apresentados como instrumentos de exploração,
+  em diálogo com Tukey (1977);
+- `var(ddof=1)` e `std(ddof=1)` são identificados como medidas amostrais com
+  denominador $n-1$, coerentes com o padrão do pandas;
+- quartis usam `quantile(..., interpolation="linear")`; outras convenções podem
+  produzir valores diferentes e devem ser documentadas;
+- a PMI usa probabilidades e frequências marginais das posições dos bigramas,
+  conforme a apresentação de associação lexical em Manning, Raghavan e Schütze
+  (2008);
+- frequência relativa e diversidade lexical sempre declaram o conjunto usado no
+  denominador.
+
 Documentações técnicas devem ser verificadas antes de cada oferta.

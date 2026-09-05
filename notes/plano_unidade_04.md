@@ -56,6 +56,14 @@ incluído na unidade. O objetivo é estudar a gramática das escolhas visuais se
 introduzir uma dependência não disponível no ambiente. O README indicará como
 substituí-lo por bibliotecas de visualização em projetos futuros.
 
+As medidas quantitativas e textuais serão apresentadas em três camadas: definição
+em linguagem corrente, fórmula em LaTeX e operação correspondente em Python. A
+notação será usada apenas quando explicitar numerador, denominador, unidade ou
+convenção de cálculo. Frequências, média, mediana, variância, IQR, contingência,
+PMI, TTR, intervalos do histograma e médias anuais terão fórmulas; classificação
+de variáveis, concordâncias e escolhas gráficas permanecerão prioritariamente
+discursivas.
+
 ## 5. Limites
 
 - sem intervalos de confiança ou testes de hipótese, reservados à Unidade 5;

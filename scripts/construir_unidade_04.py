@@ -29,9 +29,18 @@ def dados():
  (D/"proveniencia.json").write_text(json.dumps({"natureza":"inteiramente fictícios","nota":"D023 é extremo deliberado"},ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
 def guia(): return [m('''# Unidade 4 — Guia
 ## Como conhecer uma base antes de aplicar modelos?
+
+![Registros abstratos conduzem a padrões quantitativos e textuais; linhas de proveniência retornam a documentos examinados por uma lupa e se abrem em interpretações alternativas.](imagens/00_abertura_conceitual.png)
+
 Exploração descreve, diagnostica e formula perguntas; não confirma hipóteses retrospectivas. Arnold e Tilton (2019) relacionam estatística exploratória, visualização e computação às Humanidades Digitais. Drucker (2011) lembra que gráficos incorporam escolhas.'''),m('''## Percurso
+
+![Cinco etapas ligam base documentada, descrição, visualização, leitura próxima e formulação de hipóteses; uma seta retorna às decisões anteriores.](imagens/00_percurso_exploracao.svg)
+
 01 exploração quantitativa; 02 textual; 03 visual; 04 relatório. Os 24 registros são fictícios e D023 é extremo deliberado.'''),c('''import json,pandas as pd
 dados=pd.read_csv("dados/documentos.csv"); prov=json.loads(open("dados/proveniencia.json",encoding="utf-8").read()); print(dados.shape,prov["natureza"]); dados.head()'''),m('''## Regra de escrita
+
+![A escrita passa por procedimento, descrição, interpretação, limite e próximo passo.](imagens/00_camadas_escrita.svg)
+
 Separe descrição do cálculo, interpretação situada e hipótese provisória. Testes, confiança e comparação inferencial ficam para a Unidade 5.
 ### Diagnóstico
 Que padrão espera e que saída revelaria erro? Escreva aqui.'''),m('''## Produto
@@ -40,9 +49,17 @@ def quant():
  return [
   m('''# Exploração quantitativa
 ## Tipos de variáveis
+
+![Escalas nominal, ordinal, quantitativa e temporal são relacionadas a operações e gráficos; identificadores aparecem separados das medidas.](imagens/01_tipos_variaveis.svg)
+
 Nominais distinguem; ordinais ordenam; quantitativas discretas contam; contínuas medem. Datas e identificadores têm papéis próprios. `dtype` não determina a escala conceitual.'''),
   c('''import pandas as pd
 import numpy as np
+import sys
+from pathlib import Path
+from IPython.display import display
+sys.path.insert(0, str(Path.cwd())) if str(Path.cwd()) not in sys.path else None
+from graficos import distribuicao_anotada
 
 dados = pd.read_csv("dados/documentos.csv")
 pd.DataFrame(
@@ -114,6 +131,10 @@ resumo = pd.Series({
     "variancia_amostral": x.var(ddof=1),
     "desvio_padrao_amostral": x.std(ddof=1),
 })
+
+display(distribuicao_anotada(
+    x.tolist(), dados["id_documento"].tolist(), x.mean(), x.median()
+))
 resumo'''),
   m(r'''## Distribuição e valores extremos
 
@@ -176,12 +197,20 @@ def texto():
  return [
   m('''# Exploração textual
 ## Tokenização e normalização
+
+![O texto preservado passa por normalização, tokenização, filtro e contagem; o diagrama indica possíveis perdas em cada transformação.](imagens/02_fluxo_tokenizacao.svg)
+
 Tokenizar segmenta por regra. Minúsculas, pontuação e stopwords podem apagar distinções; preserve o texto e documente decisões. Neste exemplo, os tokens são calculados separadamente por documento para não criar contextos ou n-gramas entre o fim de um texto e o início do seguinte.'''),
   c('''import math
 import re
 from collections import Counter
 
 import pandas as pd
+import sys
+from pathlib import Path
+from IPython.display import display
+sys.path.insert(0, str(Path.cwd())) if str(Path.cwd()) not in sys.path else None
+from graficos import ttr_duplo
 
 dados = pd.read_csv("dados/documentos.csv")
 
@@ -250,6 +279,8 @@ dos documentos e conservar o identificador da fonte.'''),
 
 concordancias(dados, "trabalho", janela=4).head(8)'''),
   m(r'''## N-gramas e colocações
+
+![A frequência do bigrama é comparada às frequências marginais; o resultado deve ser examinado com frequência mínima e concordâncias.](imagens/02_anatomia_pmi.svg)
 
 Um bigrama é o par adjacente $(t_i,t_{i+1})$ dentro de um mesmo documento.
 Para comparar a frequência conjunta com as frequências marginais das posições
@@ -335,26 +366,53 @@ diversidade = pd.DataFrame({
     ),
 })
 print("Tamanho comum adotado:", tamanho_padrao, "tokens")
+
+display(ttr_duplo(
+    diversidade["tokens"].tolist(),
+    diversidade["ttr"].tolist(),
+    diversidade[f"ttr_{tamanho_padrao}"].tolist(),
+    tamanho_padrao,
+))
 diversidade.head()'''),
   m('''## Atividade
 Documente regras, frequências, concordâncias, n-gramas, colocação e diversidade. Retorne a trechos. Escreva aqui.'''),
  ]
-def visual(): return [m('''# Visualização exploratória
-Gráficos são argumentos. Toda figura terá título, descrição e tabela equivalente. Usaremos SVG acessível e offline.'''),c('''import pandas as pd,re
+def visual():
+ return [
+  m('''# Visualização exploratória
+
+![Cinco tipos de pergunta são ligados a barras, histograma e boxplot, dispersão, pontos e linha, ou barras de termos.](imagens/03_escolha_grafico.svg)
+
+Gráficos são argumentos. Comece pela pergunta e pela escala conceitual da
+variável. Toda figura terá título, eixos, unidades, descrição e tabela
+equivalente. Os gráficos abaixo são calculados com Python a partir da base
+fictícia; não constituem evidência histórica.'''),
+  c('''import re
 from collections import Counter
-from IPython.display import SVG,display
-dados=pd.read_csv("dados/documentos.csv")
-def barras(rotulos,valores,titulo):
- m=max(valores) or 1; corpo=f'<text x="10" y="22">{titulo}</text>'
- for i,(r,v) in enumerate(zip(rotulos,valores)):
-  y=40+i*32; z=400*v/m; corpo+=f'<text x="10" y="{y+16}">{r}</text><rect x="120" y="{y}" width="{z}" height="20" fill="#356a7a"/><text x="{130+z}" y="{y+16}">{v:.1f}</text>'
- return SVG(f'<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{titulo}" width="650" height="{70+32*len(valores)}">{corpo}</svg>')
-def pontos(xs,ys,titulo,linha=False):
- xmin,xmax=min(xs),max(xs); ymin,ymax=min(ys),max(ys); ps=[(50+550*(x-xmin)/(xmax-xmin or 1),320-260*(y-ymin)/(ymax-ymin or 1)) for x,y in zip(xs,ys)]; b=f'<text x="10" y="20">{titulo}</text>'
- if linha: b+=f'<polyline points="{" ".join(f"{x},{y}" for x,y in ps)}" fill="none" stroke="#356a7a"/>'
- else:
-  for x,y in ps: b+=f'<circle cx="{x}" cy="{y}" r="5" fill="#9a4f37"/>'
- return SVG(f'<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{titulo}" width="650" height="350">{b}</svg>')'''),m('''## Barras — categorias'''),c('''f=dados.tema.value_counts(); display(barras(f.index,f.values,"Documentos por tema")); f'''),m(r'''## Histograma e boxplot — distribuições
+
+import pandas as pd
+import sys
+from pathlib import Path
+from IPython.display import display
+sys.path.insert(0, str(Path.cwd())) if str(Path.cwd()) not in sys.path else None
+from graficos import barras_categorias, barras_horizontais, dispersao, histograma_boxplot, serie_temporal
+
+dados = pd.read_csv("dados/documentos.csv")
+'''),
+  m('''## Barras — categorias
+
+As barras respondem a uma comparação entre categorias. Neste conjunto didático,
+cada tema possui seis documentos: a igualdade foi construída deliberadamente e
+não representa equilíbrio histórico. A tabela devolvida pelo código torna os
+valores e o denominador auditáveis.'''),
+  c('''tabela_temas = dados["tema"].value_counts().sort_index().rename("documentos").to_frame()
+display(barras_categorias(
+    tabela_temas.index.tolist(), tabela_temas["documentos"].tolist(),
+    "Documentos por tema (n = 24)", "Tema atribuído", "Número de documentos",
+    "Quatro barras de mesma altura mostram seis documentos em cada tema.",
+))
+tabela_temas'''),
+  m(r'''## Histograma e boxplot — distribuições
 
 Se os limites dos intervalos são $b_0,b_1,\ldots,b_J$, a altura da barra $j$
 é a quantidade de valores dentro daquele intervalo:
@@ -364,10 +422,27 @@ h_j=\sum_{i=1}^{n}\mathbf{1}(b_{j-1}<x_i\leq b_j).
 \]
 
 Alterar os limites $b_j$ pode mudar a forma visível da distribuição, mesmo sem
-alterar os documentos. O boxplot retoma $Q_1$, mediana, $Q_3$ e os limites de
-1,5 IQR apresentados no Notebook 01. A tabela abaixo oferece os intervalos e o
-resumo numérico equivalentes.'''),c('''faixas=[0,400,600,800,1000,2200]; h=dados.groupby(pd.cut(dados.palavras,faixas),observed=False).size(); display(barras(h.index.astype(str),h.values,"Histograma da extensão")); q=dados.palavras.quantile([0,.25,.5,.75,1]); sc=lambda x:60+520*(x-q.iloc[0])/(q.iloc[-1]-q.iloc[0]); svg=f'<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Boxplot da extensão: mínimo {q.iloc[0]}, Q1 {q.iloc[1]}, mediana {q.iloc[2]}, Q3 {q.iloc[3]}, máximo {q.iloc[4]}" width="650" height="180"><line x1="{sc(q.iloc[0])}" y1="90" x2="{sc(q.iloc[4])}" y2="90" stroke="black"/><rect x="{sc(q.iloc[1])}" y="55" width="{sc(q.iloc[3])-sc(q.iloc[1])}" height="70" fill="#b9d4dc" stroke="black"/><line x1="{sc(q.iloc[2])}" y1="55" x2="{sc(q.iloc[2])}" y2="125" stroke="#9a4f37"/></svg>'; display(SVG(svg)); h,dados.palavras.describe()'''),m('''## Dispersão — relação entre quantitativas
-Padrão visual não implica causalidade.'''),c('''display(pontos(dados.paginas.tolist(),dados.palavras.tolist(),"Páginas e palavras")); dados[["paginas","palavras"]].head()'''),m(r'''## Série temporal
+alterar os documentos. O boxplot aplica a regra de 1,5 IQR: os whiskers terminam
+nos valores não extremos e D023 aparece como ponto separado. A tabela informa os
+intervalos e o resumo numérico equivalentes.'''),
+  c('''faixas = [0, 400, 600, 800, 1000, 2200]
+tabela_intervalos = dados.groupby(pd.cut(dados["palavras"], faixas), observed=False).size().rename("documentos")
+display(histograma_boxplot(
+    dados["palavras"].tolist(), faixas, dados["id_documento"].tolist()
+))
+tabela_intervalos, dados["palavras"].describe()'''),
+  m('''## Dispersão — relação entre quantitativas
+
+Cada ponto representa um documento. Forma e cor distinguem os gêneros, enquanto
+a tabela mantém os pares e IDs disponíveis. D023 deve ser inspecionado; o padrão
+visual entre páginas e palavras não demonstra causalidade.'''),
+  c('''display(dispersao(
+    dados["paginas"].tolist(), dados["palavras"].tolist(),
+    dados["genero"].tolist(), dados["id_documento"].tolist(),
+    "Páginas e extensão dos documentos", "Páginas", "Palavras",
+))
+dados[["id_documento", "genero", "paginas", "palavras"]]'''),
+  m(r'''## Série temporal
 
 Se $n_t$ documentos pertencem ao ano $t$, a média anual representada pela
 linha é:
@@ -376,13 +451,40 @@ linha é:
 \bar{x}_t=\frac{1}{n_t}\sum_{i:\,\mathrm{ano}_i=t}x_i.
 \]
 
-A fórmula torna visível o denominador anual. A linha conecta agregados dos
-documentos disponíveis; ela também reflete a composição do corpus e não demonstra,
-por si só, uma mudança histórica contínua.'''),c('''media_por_ano = dados.groupby("ano")["palavras"].mean()
-display(pontos(media_por_ano.index.tolist(),media_por_ano.values.tolist(),"Média por ano",linha=True))
-media_por_ano'''),m('''## Frequências textuais
-Barras preservam valores melhor que nuvem de palavras.'''),c('''co=Counter(re.findall(r"[a-záàâãéêíóôõúç]+"," ".join(dados.texto).lower())); stop={"a","o","e","de","do","da","como","em","nas","um","uma","também"}; top=[z for z in co.most_common() if z[0] not in stop][:10]; display(barras([p for p,n in top],[n for p,n in top],"Termos frequentes")); pd.DataFrame(top,columns=["termo","frequencia"])'''),m('''## Atividade
-Produza barras, histograma/boxplot, dispersão ou tempo e frequência textual. Para cada: tabela, descrição, escala, padrão, caso, limite e hipótese. Escreva aqui.''')]
+A fórmula torna visível o denominador anual. Mostraremos os documentos individuais
+junto da média, pois cada ano contém apenas dois casos. D023 eleva a média de 1900;
+a linha reflete a composição do corpus e não demonstra mudança histórica contínua.'''),
+  c('''resumo_anual = dados.groupby("ano")["palavras"].agg(n="size", media="mean")
+display(serie_temporal(
+    dados["ano"].tolist(), dados["palavras"].tolist(), dados["id_documento"].tolist(),
+    resumo_anual["media"].to_dict(), resumo_anual["n"].to_dict(),
+))
+resumo_anual'''),
+  m('''## Frequências textuais
+
+Barras preservam valores melhor que nuvem de palavras. A tabela informa as
+frequências e o denominador deve ser lido junto das regras de tokenização e da
+lista de stopwords.'''),
+  c('''tokens = re.findall(r"[a-záàâãéêíóôõúç]+", " ".join(dados["texto"]).lower())
+stopwords = {"a", "o", "e", "de", "do", "da", "como", "em", "nas", "um", "uma", "também"}
+tokens_conteudo = [token for token in tokens if token not in stopwords]
+top = Counter(tokens_conteudo).most_common(10)
+tabela_termos = pd.DataFrame(top, columns=["termo", "frequencia"])
+ordenada = tabela_termos.sort_values("frequencia")
+display(barras_horizontais(
+    ordenada["termo"].tolist(), ordenada["frequencia"].tolist(),
+    f"Termos frequentes após stopwords (Nc = {len(tokens_conteudo)})",
+    "Dez barras horizontais ordenadas mostram frequências absolutas dos tokens de conteúdo.",
+))
+tabela_termos'''),
+  m('''## Atividade
+
+Produza barras, histograma/boxplot, dispersão ou tempo e frequência textual. Para
+cada figura, entregue tabela, descrição alternativa, escala, padrão, caso, limite
+e hipótese. Explique também por que o gráfico escolhido responde à pergunta.
+
+**Minha análise:** Escreva aqui.'''),
+ ]
 def oficina():
  return [
   m('''# Oficina — Relatório exploratório
@@ -404,6 +506,8 @@ base própria já preparada segundo as Unidades 2 e 3.
 quatro visualizações acompanhadas de tabelas, retorno a três casos, até três
 hipóteses, limitações e instruções de reprodução.'''),
   m('''## Como realizar a oficina
+
+![Pergunta, tabela, figura, leitura e limite formam uma cadeia; divergências exigem revisão.](imagens/04_cadeia_argumento.svg)
 
 Siga esta ordem:
 
@@ -537,6 +641,8 @@ Para **cada figura**, entregue:
 
 **Figura 4 e análise:** Escreva aqui.'''),
   m('''## 5. Retorno aos casos
+
+![Agregados orientam a seleção de casos; a leitura próxima retorna para revisar categorias, contagens, hipóteses e limites.](imagens/04_ciclo_agregados_casos.svg)
 
 ### O que fazer
 
@@ -680,7 +786,7 @@ discursivo e não precisa de clonagem.
 
 ## Dependências e dados
 
-Requer pandas, NumPy e Jupyter. Os dados são fictícios.
+Requer pandas, NumPy, IPython e Jupyter. Os dados são fictícios.
 
 As fórmulas são escritas em LaTeX nas células Markdown e renderizadas pelo
 Jupyter/Colab, sem pacote adicional. Cada fórmula é acompanhada de definição em
@@ -688,6 +794,14 @@ linguagem corrente e da operação correspondente em Python.
 
 O arquivo `exercicios_unidade_04_texto.md` reúne 18 questões de múltipla
 escolha; as respostas comentadas ficam em `gabaritos/`.
+
+A pasta `imagens/` reúne uma ilustração conceitual e oito diagramas SVG
+acessíveis. Finalidade, proveniência e textos alternativos estão documentados em
+`imagens/README.md`. Os gráficos calculados permanecem nos notebooks e são
+acompanhados de tabelas equivalentes. O módulo local `graficos.py` produz esses
+gráficos em SVG sem acrescentar uma biblioteca gráfica ao ambiente didático;
+projetos futuros podem substituir essa camada por Matplotlib, Altair ou outra
+biblioteca adequada às suas necessidades.
 '''
  (U/"README.md").write_text(conteudo,encoding="utf-8")
 def main():

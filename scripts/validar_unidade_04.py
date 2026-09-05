@@ -3,6 +3,8 @@ import json
 import math
 import os
 import re
+import struct
+import xml.etree.ElementTree as ET
 from pathlib import Path
 R=Path(__file__).resolve().parents[1]; U=R/"unidade_04"
 def src(c): return "".join(c["source"]) if isinstance(c["source"],list) else c["source"]
@@ -117,6 +119,32 @@ def validar_oficina():
  ]:
   assert termo in gabarito, f"gabarito da oficina incompleto: {termo}"
 
+def validar_imagens():
+ pasta=U/"imagens"
+ esperados={
+  "README.md", "00_abertura_conceitual.png", "00_percurso_exploracao.svg",
+  "00_camadas_escrita.svg", "01_tipos_variaveis.svg", "02_fluxo_tokenizacao.svg",
+  "02_anatomia_pmi.svg", "03_escolha_grafico.svg", "04_ciclo_agregados_casos.svg",
+  "04_cadeia_argumento.svg",
+ }
+ encontrados={p.name for p in pasta.iterdir() if p.is_file()}
+ assert encontrados==esperados, f"inventário visual divergente: {encontrados ^ esperados}"
+ ns={"svg":"http://www.w3.org/2000/svg"}
+ for caminho in pasta.glob("*.svg"):
+  raiz=ET.parse(caminho).getroot()
+  titulo=raiz.find("svg:title",ns); descricao=raiz.find("svg:desc",ns)
+  assert titulo is not None and (titulo.text or "").strip()
+  assert descricao is not None and len((descricao.text or "").split())>=8
+  assert raiz.attrib.get("role")=="img" and "aria-labelledby" in raiz.attrib
+ png=(pasta/"00_abertura_conceitual.png").read_bytes()
+ assert png[:8]==b"\x89PNG\r\n\x1a\n"
+ largura,altura=struct.unpack(">II",png[16:24])
+ assert largura>=1200 and altura>=500
+ ficha=(pasta/"README.md").read_text(encoding="utf-8")
+ for nome in esperados-{"README.md"}: assert nome in ficha
+ notebooks="\n".join(p.read_text(encoding="utf-8") for p in U.glob("*.ipynb"))
+ for nome in esperados-{"README.md"}: assert nome in notebooks
+
 def main():
  ns=sorted(U.glob("*.ipynb")); assert len(ns)==5; texto=""; tm=tc=0; ambientes={}
  for p in ns:
@@ -127,8 +155,9 @@ def main():
  t=(U/"exercicios_unidade_04_texto.md").read_text(encoding="utf-8"); numeros=[int(n) for n in re.findall(r"^## Questão (\d+)",t,re.M)]; assert numeros==list(range(1,19)); assert len(re.findall(r"^- \[ \] \*\*[A-D]\.\*\*",t,re.M))==72
  chave=(U/"gabaritos/gabarito_exercicios_multipla_escolha.md").read_text(encoding="utf-8"); resp=re.findall(r"^\|\s*\d+\s*\|\s*([A-D])",chave,re.M); assert len(resp)==18
  assert len(list((U/"revisores").glob("*.md")))==9 and len(list((U/"revisores/pareceres").glob("*.md")))==7
- validar_latex(ns); validar_resultados(ambientes); validar_oficina()
+ validar_latex(ns); validar_resultados(ambientes); validar_oficina(); validar_imagens()
  print("OK 14 fórmulas LaTeX e resultados quantitativos/textuais")
  print("OK oficina: instruções, dinâmica, rubrica e exemplo resolvido")
+ print("OK imagens: 1 abertura e 8 diagramas acessíveis, locais e documentados")
  print("OK 21/21 conteúdos; exercícios textuais, gabaritos e revisão; total",tm,tc)
 if __name__=="__main__": main()

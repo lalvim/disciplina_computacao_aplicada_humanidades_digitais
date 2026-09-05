@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500"
+ role="img" aria-labelledby="titulo descricao">
+<title id="titulo">Percurso da exploração</title>
+<desc id="descricao">Cinco etapas ligam base documentada, descrição, visualização, leitura próxima e formulação de hipóteses e limites. Uma seta retorna às decisões anteriores.</desc>
+<defs>
+  <marker id="seta" markerWidth="10" markerHeight="10" refX="8" refY="3"
+   orient="auto" markerUnits="strokeWidth">
+    <path d="M0,0 L0,6 L9,3 z" fill="#17324d"/>
+  </marker>
+  <style>
+    .titulo { font: 700 30px system-ui, sans-serif; fill: #17324d; }
+    .subtitulo { font: 700 19px system-ui, sans-serif; fill: #17324d; }
+    .corpo { font: 16px system-ui, sans-serif; fill: #17324d; }
+    .pequeno { font: 14px system-ui, sans-serif; fill: #17324d; }
+    .nota { font: italic 15px system-ui, sans-serif; fill: #53606c; }
+    .seta { stroke: #17324d; stroke-width: 3; fill: none; marker-end: url(#seta); }
+    .linha { stroke: #17324d; stroke-width: 3; fill: none; }
+    .tracejada { stroke-dasharray: 9 7; }
+  </style>
+</defs>
+<rect width="1200" height="500" rx="28" fill="#fbf4e8"/>
+<text x="600" y="46" class="titulo" text-anchor="middle"><tspan x="600" dy="0">Explorar é construir um percurso de evidência</tspan></text><rect x="45" y="125" width="170" height="145" rx="18" fill="#dbe8ec" stroke="#17324d" stroke-width="3"/><text x="130.0" y="159" class="subtitulo" text-anchor="middle"><tspan x="130.0" dy="0">Base documentada</tspan></text><text x="130.0" y="195" class="corpo" text-anchor="middle"><tspan x="130.0" dy="0">corpus, unidade</tspan><tspan x="130.0" dy="22">e qualidade</tspan></text><path class="seta" d="M219,198 H270"/><rect x="280" y="125" width="170" height="145" rx="18" fill="#d8ebe7" stroke="#256b6b" stroke-width="3"/><text x="365.0" y="159" class="subtitulo" text-anchor="middle"><tspan x="365.0" dy="0">Descrever</tspan></text><text x="365.0" y="195" class="corpo" text-anchor="middle"><tspan x="365.0" dy="0">quantidades</tspan><tspan x="365.0" dy="22">e textos</tspan></text><path class="seta" d="M454,198 H505"/><rect x="515" y="125" width="170" height="145" rx="18" fill="#f2ddd2" stroke="#a44f32" stroke-width="3"/><text x="600.0" y="159" class="subtitulo" text-anchor="middle"><tspan x="600.0" dy="0">Visualizar</tspan></text><text x="600.0" y="195" class="corpo" text-anchor="middle"><tspan x="600.0" dy="0">padrões</tspan><tspan x="600.0" dy="22">e casos</tspan></text><path class="seta" d="M689,198 H740"/><rect x="750" y="125" width="170" height="145" rx="18" fill="#eadde7" stroke="#69445f" stroke-width="3"/><text x="835.0" y="159" class="subtitulo" text-anchor="middle"><tspan x="835.0" dy="0">Ler de perto</tspan></text><text x="835.0" y="195" class="corpo" text-anchor="middle"><tspan x="835.0" dy="0">documentos</tspan><tspan x="835.0" dy="22">e contextos</tspan></text><path class="seta" d="M924,198 H975"/><rect x="985" y="125" width="170" height="145" rx="18" fill="#f1e2bd" stroke="#8a6528" stroke-width="3"/><text x="1070.0" y="159" class="subtitulo" text-anchor="middle"><tspan x="1070.0" dy="0">Perguntar</tspan></text><text x="1070.0" y="195" class="corpo" text-anchor="middle"><tspan x="1070.0" dy="0">hipóteses</tspan><tspan x="1070.0" dy="22">e limites</tspan></text><path class="seta tracejada" d="M1070,290 C1070,495 140,495 130,290"/><text x="600" y="420" class="nota" text-anchor="middle"><tspan x="600" dy="0">Casos, limites e novas perguntas podem exigir revisar decisões anteriores</tspan></text>
+</svg>

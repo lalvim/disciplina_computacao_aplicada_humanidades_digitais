@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 580"
+ role="img" aria-labelledby="titulo descricao">
+<title id="titulo">Componentes e interpretação da PMI</title>
+<desc id="descricao">A frequência do bigrama é comparada às frequências marginais esquerda e direita. O resultado leva a frequência mínima e concordâncias, não diretamente a uma conclusão causal.</desc>
+<defs>
+  <marker id="seta" markerWidth="10" markerHeight="10" refX="8" refY="3"
+   orient="auto" markerUnits="strokeWidth">
+    <path d="M0,0 L0,6 L9,3 z" fill="#17324d"/>
+  </marker>
+  <style>
+    .titulo { font: 700 30px system-ui, sans-serif; fill: #17324d; }
+    .subtitulo { font: 700 19px system-ui, sans-serif; fill: #17324d; }
+    .corpo { font: 16px system-ui, sans-serif; fill: #17324d; }
+    .pequeno { font: 14px system-ui, sans-serif; fill: #17324d; }
+    .nota { font: italic 15px system-ui, sans-serif; fill: #53606c; }
+    .seta { stroke: #17324d; stroke-width: 3; fill: none; marker-end: url(#seta); }
+    .linha { stroke: #17324d; stroke-width: 3; fill: none; }
+    .tracejada { stroke-dasharray: 9 7; }
+  </style>
+</defs>
+<rect width="1200" height="580" rx="28" fill="#fbf4e8"/>
+<text x="600" y="44" class="titulo" text-anchor="middle"><tspan x="600" dy="0">PMI compara o par observado com suas marginais</tspan></text><rect x="70" y="120" width="270" height="150" rx="18" fill="#f2ddd2" stroke="#a44f32" stroke-width="3"/><text x="205.0" y="154" class="subtitulo" text-anchor="middle"><tspan x="205.0" dy="0">Par observado</tspan></text><text x="205.0" y="190" class="corpo" text-anchor="middle"><tspan x="205.0" dy="0">c(a,b)</tspan><tspan x="205.0" dy="22">quantas vezes a b ocorre</tspan></text><rect x="465" y="90" width="270" height="125" rx="18" fill="#dbe8ec" stroke="#17324d" stroke-width="3"/><text x="600.0" y="124" class="subtitulo" text-anchor="middle"><tspan x="600.0" dy="0">Marginal esquerda</tspan></text><text x="600.0" y="160" class="corpo" text-anchor="middle"><tspan x="600.0" dy="0">cL(a)</tspan><tspan x="600.0" dy="22">a na primeira posição</tspan></text><rect x="465" y="260" width="270" height="125" rx="18" fill="#d8ebe7" stroke="#256b6b" stroke-width="3"/><text x="600.0" y="294" class="subtitulo" text-anchor="middle"><tspan x="600.0" dy="0">Marginal direita</tspan></text><text x="600.0" y="330" class="corpo" text-anchor="middle"><tspan x="600.0" dy="0">cR(b)</tspan><tspan x="600.0" dy="22">b na segunda posição</tspan></text><rect x="860" y="120" width="270" height="150" rx="18" fill="#eadde7" stroke="#69445f" stroke-width="3"/><text x="995.0" y="154" class="subtitulo" text-anchor="middle"><tspan x="995.0" dy="0">PMI</tspan></text><text x="995.0" y="190" class="corpo" text-anchor="middle"><tspan x="995.0" dy="0">mais que o esperado?</tspan><tspan x="995.0" dy="22">comparar + interpretar</tspan></text><path class="seta" d="M343,195 H455"/><path class="seta" d="M738,155 C790,155 805,175 850,185"/><path class="seta" d="M738,320 C790,320 805,250 850,220"/><rect x="355" y="435" width="490" height="95" rx="18" fill="#f1e2bd" stroke="#8a6528" stroke-width="3"/><text x="600.0" y="469" class="subtitulo" text-anchor="middle"><tspan x="600.0" dy="0">Cautela obrigatória</tspan></text><text x="600.0" y="505" class="corpo" text-anchor="middle"><tspan x="600.0" dy="0">frequência mínima + concordâncias</tspan><tspan x="600.0" dy="22">associação lexical não é causalidade</tspan></text><path class="seta tracejada" d="M995,280 C995,485 855,485 855,485"/>
+</svg>

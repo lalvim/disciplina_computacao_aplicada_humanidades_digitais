@@ -56,6 +56,18 @@ incluído na unidade. O objetivo é estudar a gramática das escolhas visuais se
 introduzir uma dependência não disponível no ambiente. O README indicará como
 substituí-lo por bibliotecas de visualização em projetos futuros.
 
+O conjunto visual implementado compreende uma ilustração conceitual de abertura,
+oito diagramas SVG autorais e sete gráficos calculados com Python. Os diagramas
+tratam do percurso exploratório, das camadas da escrita, dos tipos de variáveis,
+da tokenização, da PMI, da escolha de gráficos, do retorno aos casos e da cadeia
+argumentativa. Os gráficos apresentam distribuição anotada, TTR bruta e
+padronizada, barras categóricas, histograma e boxplot, dispersão, série temporal
+e frequências textuais.
+
+Todos os recursos ficam em `unidade_04/imagens/`, com inventário, proveniência e
+textos alternativos. O módulo `unidade_04/graficos.py` produz SVGs acessíveis com
+eixos, escalas e descrições sem introduzir nova dependência gráfica.
+
 As medidas quantitativas e textuais serão apresentadas em três camadas: definição
 em linguagem corrente, fórmula em LaTeX e operação correspondente em Python. A
 notação será usada apenas quando explicitar numerador, denominador, unidade ou

@@ -22,7 +22,7 @@ discursivo e não precisa de clonagem.
 
 ## Dependências e dados
 
-Requer pandas, NumPy e Jupyter. Os dados são fictícios.
+Requer pandas, NumPy, IPython e Jupyter. Os dados são fictícios.
 
 As fórmulas são escritas em LaTeX nas células Markdown e renderizadas pelo
 Jupyter/Colab, sem pacote adicional. Cada fórmula é acompanhada de definição em
@@ -30,3 +30,11 @@ linguagem corrente e da operação correspondente em Python.
 
 O arquivo `exercicios_unidade_04_texto.md` reúne 18 questões de múltipla
 escolha; as respostas comentadas ficam em `gabaritos/`.
+
+A pasta `imagens/` reúne uma ilustração conceitual e oito diagramas SVG
+acessíveis. Finalidade, proveniência e textos alternativos estão documentados em
+`imagens/README.md`. Os gráficos calculados permanecem nos notebooks e são
+acompanhados de tabelas equivalentes. O módulo local `graficos.py` produz esses
+gráficos em SVG sem acrescentar uma biblioteca gráfica ao ambiente didático;
+projetos futuros podem substituir essa camada por Matplotlib, Altair ou outra
+biblioteca adequada às suas necessidades.

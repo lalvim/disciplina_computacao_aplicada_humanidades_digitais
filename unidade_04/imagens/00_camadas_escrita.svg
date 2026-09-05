@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420"
+ role="img" aria-labelledby="titulo descricao">
+<title id="titulo">Camadas da escrita exploratória</title>
+<desc id="descricao">A escrita começa no procedimento, passa pela descrição e interpretação, declara o limite e termina em um próximo passo. A legenda distingue descrição, explicação e conclusão.</desc>
+<defs>
+  <marker id="seta" markerWidth="10" markerHeight="10" refX="8" refY="3"
+   orient="auto" markerUnits="strokeWidth">
+    <path d="M0,0 L0,6 L9,3 z" fill="#17324d"/>
+  </marker>
+  <style>
+    .titulo { font: 700 30px system-ui, sans-serif; fill: #17324d; }
+    .subtitulo { font: 700 19px system-ui, sans-serif; fill: #17324d; }
+    .corpo { font: 16px system-ui, sans-serif; fill: #17324d; }
+    .pequeno { font: 14px system-ui, sans-serif; fill: #17324d; }
+    .nota { font: italic 15px system-ui, sans-serif; fill: #53606c; }
+    .seta { stroke: #17324d; stroke-width: 3; fill: none; marker-end: url(#seta); }
+    .linha { stroke: #17324d; stroke-width: 3; fill: none; }
+    .tracejada { stroke-dasharray: 9 7; }
+  </style>
+</defs>
+<rect width="1200" height="420" rx="28" fill="#fbf4e8"/>
+<text x="600" y="46" class="titulo" text-anchor="middle"><tspan x="600" dy="0">Do resultado calculado à pergunta seguinte</tspan></text><rect x="55" y="125" width="180" height="155" rx="18" fill="#dbe8ec" stroke="#17324d" stroke-width="3"/><text x="145.0" y="159" class="subtitulo" text-anchor="middle"><tspan x="145.0" dy="0">Procedimento</tspan></text><text x="145.0" y="195" class="corpo" text-anchor="middle"><tspan x="145.0" dy="0">o que foi calculado?</tspan><tspan x="145.0" dy="22">com qual regra?</tspan></text><path class="seta" d="M239,202 H275"/><rect x="285" y="125" width="180" height="155" rx="18" fill="#d8ebe7" stroke="#256b6b" stroke-width="3"/><text x="375.0" y="159" class="subtitulo" text-anchor="middle"><tspan x="375.0" dy="0">Descrição</tspan></text><text x="375.0" y="195" class="corpo" text-anchor="middle"><tspan x="375.0" dy="0">que valores</tspan><tspan x="375.0" dy="22">aparecem?</tspan></text><path class="seta" d="M469,202 H505"/><rect x="515" y="125" width="180" height="155" rx="18" fill="#f2ddd2" stroke="#a44f32" stroke-width="3"/><text x="605.0" y="159" class="subtitulo" text-anchor="middle"><tspan x="605.0" dy="0">Interpretação</tspan></text><text x="605.0" y="195" class="corpo" text-anchor="middle"><tspan x="605.0" dy="0">que leitura situada</tspan><tspan x="605.0" dy="22">é plausível?</tspan></text><path class="seta" d="M699,202 H735"/><rect x="745" y="125" width="180" height="155" rx="18" fill="#eadde7" stroke="#69445f" stroke-width="3"/><text x="835.0" y="159" class="subtitulo" text-anchor="middle"><tspan x="835.0" dy="0">Limite</tspan></text><text x="835.0" y="195" class="corpo" text-anchor="middle"><tspan x="835.0" dy="0">o que não pode</tspan><tspan x="835.0" dy="22">ser afirmado?</tspan></text><path class="seta" d="M929,202 H965"/><rect x="975" y="125" width="180" height="155" rx="18" fill="#f1e2bd" stroke="#8a6528" stroke-width="3"/><text x="1065.0" y="159" class="subtitulo" text-anchor="middle"><tspan x="1065.0" dy="0">Próximo passo</tspan></text><text x="1065.0" y="195" class="corpo" text-anchor="middle"><tspan x="1065.0" dy="0">que caso ou dado</tspan><tspan x="1065.0" dy="22">examinar?</tspan></text><text x="600" y="355" class="nota" text-anchor="middle"><tspan x="600" dy="0">Descrição não é explicação; hipótese não é conclusão</tspan></text>
+</svg>

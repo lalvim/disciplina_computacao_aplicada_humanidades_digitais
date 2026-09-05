@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520"
+ role="img" aria-labelledby="titulo descricao">
+<title id="titulo">Ciclo entre agregados e casos</title>
+<desc id="descricao">Agregados orientam a seleção de casos e trechos; a leitura próxima retorna aos agregados para revisar categorias, contagens, hipóteses e limites.</desc>
+<defs>
+  <marker id="seta" markerWidth="10" markerHeight="10" refX="8" refY="3"
+   orient="auto" markerUnits="strokeWidth">
+    <path d="M0,0 L0,6 L9,3 z" fill="#17324d"/>
+  </marker>
+  <style>
+    .titulo { font: 700 30px system-ui, sans-serif; fill: #17324d; }
+    .subtitulo { font: 700 19px system-ui, sans-serif; fill: #17324d; }
+    .corpo { font: 16px system-ui, sans-serif; fill: #17324d; }
+    .pequeno { font: 14px system-ui, sans-serif; fill: #17324d; }
+    .nota { font: italic 15px system-ui, sans-serif; fill: #53606c; }
+    .seta { stroke: #17324d; stroke-width: 3; fill: none; marker-end: url(#seta); }
+    .linha { stroke: #17324d; stroke-width: 3; fill: none; }
+    .tracejada { stroke-dasharray: 9 7; }
+  </style>
+</defs>
+<rect width="1200" height="520" rx="28" fill="#fbf4e8"/>
+<text x="600" y="44" class="titulo" text-anchor="middle"><tspan x="600" dy="0">Leitura distante e leitura próxima se corrigem mutuamente</tspan></text><rect x="85" y="170" width="320" height="175" rx="18" fill="#dbe8ec" stroke="#17324d" stroke-width="3"/><text x="245.0" y="204" class="subtitulo" text-anchor="middle"><tspan x="245.0" dy="0">Agregados</tspan></text><text x="245.0" y="240" class="corpo" text-anchor="middle"><tspan x="245.0" dy="0">frequências • médias</tspan><tspan x="245.0" dy="22">gráficos • colocações</tspan><tspan x="245.0" dy="22">padrões candidatos</tspan></text><rect x="795" y="170" width="320" height="175" rx="18" fill="#f2ddd2" stroke="#a44f32" stroke-width="3"/><text x="955.0" y="204" class="subtitulo" text-anchor="middle"><tspan x="955.0" dy="0">Casos e trechos</tspan></text><text x="955.0" y="240" class="corpo" text-anchor="middle"><tspan x="955.0" dy="0">extremos • exceções</tspan><tspan x="955.0" dy="22">concordâncias • contexto</tspan><tspan x="955.0" dy="22">vozes e silêncios</tspan></text><path class="seta" d="M415,215 C540,115 665,115 785,215"/><path class="seta" d="M785,310 C665,415 540,415 415,310"/><text x="600" y="125" class="nota" text-anchor="middle"><tspan x="600" dy="0">selecionar casos que qualificam o padrão</tspan></text><text x="600" y="455" class="nota" text-anchor="middle"><tspan x="600" dy="0">rever categoria, contagem, hipótese e limite</tspan></text>
+</svg>

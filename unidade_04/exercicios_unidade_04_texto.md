@@ -1,4 +1,4 @@
-# Exercícios da Unidade 4 — versão textual
+# Exercícios da Unidade 4
 
 ## Questão 1 — Variáveis
 

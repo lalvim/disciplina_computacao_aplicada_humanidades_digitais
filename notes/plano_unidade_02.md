@@ -53,7 +53,6 @@ unidade_02/
 ├── dados/
 ├── gabaritos/
 ├── revisores/
-├── exercicios_unidade_02.html
 ├── exercicios_unidade_02_texto.md
 ├── referencias.md
 └── README.md

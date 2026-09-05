@@ -79,7 +79,7 @@ discursivas.
 2. produzir notebooks e módulo SVG;
 3. incluir exercícios, gabaritos e referências;
 4. executar seis revisores;
-5. validar os 21 conteúdos da ementa, notebooks, gráficos e quiz;
+5. validar os 21 conteúdos da ementa, notebooks, gráficos e exercícios textuais;
 6. corrigir achados altos ou bloqueantes;
 7. marcar o plano como executado.
 

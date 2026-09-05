@@ -2,7 +2,7 @@
 
 O script usa apenas a biblioteca padrão para que a estrutura dos notebooks
 possa ser reconstruída mesmo antes da instalação do Jupyter. Ele não gera o
-HTML, os gabaritos, as referências, os revisores ou os pareceres.
+os exercícios textuais, os gabaritos, as referências, os revisores ou os pareceres.
 """
 
 from __future__ import annotations
@@ -241,7 +241,7 @@ def guia() -> list[dict]:
             | Aula 1 | Guia, Notebook 01 e início do 02 | 3 h 30 |
             | Preparação | Estudo de caso de Rodrigues (2020) | 40 min |
             | Aula 2 | Conclusão do 02, Notebook 03 e oficina | 3 h |
-            | Revisão assíncrona | Quiz HTML | 20 min |
+            | Revisão assíncrona | Exercícios textuais | 20 min |
 
             São **essenciais**: a pergunta reformulada, o mapa de operacionalização,
             a ficha do corpus e a síntese da oficina. Leituras complementares e
@@ -2012,7 +2012,7 @@ Esta pasta contém o material teórico-prático da primeira unidade da disciplin
 3. `02_representacao_e_operacionalizacao.ipynb`
 4. `03_dados_corpus_e_evidencias.ipynb`
 5. `04_oficina_projeto_de_pesquisa.ipynb`
-6. `exercicios_unidade_01.html`
+6. `exercicios_unidade_01_texto.md`
 7. `referencias.md`
 
 ## Abrir os notebooks no Google Colab
@@ -2039,9 +2039,9 @@ e uma fonte histórica em domínio público. O arquivo `imagens/README.md` regis
 proveniência, licença, alterações e textos alternativos. As imagens são locais e
 continuam disponíveis em uso offline e no Colab.
 
-O arquivo `exercicios_unidade_01.html` contém 18 questões de múltipla escolha
-com correção, explicações e revisão por tópico. Ele pode ser aberto diretamente
-em um navegador e funciona sem servidor ou acesso à internet.
+O arquivo `exercicios_unidade_01_texto.md` contém 18 questões de múltipla
+escolha. O gabarito separado apresenta a chave, as explicações e a revisão por
+tópico.
 
 ## Carga e modalidade
 
@@ -2051,7 +2051,7 @@ em um navegador e funciona sem servidor ou acesso à internet.
 | Aula 1 | Notebooks 00, 01 e início do 02 | 3 h 30 |
 | Preparação | Rodrigues (2020) | 40 min |
 | Aula 2 | Conclusão do 02, Notebook 03 e oficina | 3 h |
-| Revisão assíncrona | Exercício HTML | 20 min |
+| Revisão assíncrona | Exercícios textuais | 20 min |
 
 As leituras complementares e extensões não integram a carga essencial.
 

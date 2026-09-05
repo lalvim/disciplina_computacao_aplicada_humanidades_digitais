@@ -184,16 +184,13 @@ def validar_resultados_semanticos() -> None:
 
 
 def validar_exercicios() -> None:
-    html = (UNIDADE / "exercicios_unidade_03.html").read_text(encoding="utf-8")
-    assert "<!doctype html>" in html.lower() and "<noscript>" in html
-    assert not re.search(r'(?:src|href)="https?://', html)
-    assert len(re.findall(r'"enunciado":', html)) == 18
     texto = (UNIDADE / "exercicios_unidade_03_texto.md").read_text(encoding="utf-8")
-    assert len(re.findall(r"^## Questão \d+", texto, re.MULTILINE)) == 18
+    numeros = [int(n) for n in re.findall(r"^## Questão (\d+)", texto, re.MULTILINE)]
+    assert numeros == list(range(1, 19))
+    assert len(re.findall(r"^- \[ \] \*\*[A-D]\.\*\*", texto, re.MULTILINE)) == 72
     chave = (UNIDADE / "gabaritos" / "gabarito_exercicios_multipla_escolha.md").read_text(encoding="utf-8")
     respostas = re.findall(r"^\|\s*\d+\s*\|\s*([A-D])\s*\|", chave, re.MULTILINE)
-    corretas = [chr(65 + int(i)) for i in re.findall(r'"correta":\s*(\d+)', html)]
-    assert respostas == corretas and len(respostas) == 18
+    assert len(respostas) == 18
 
 
 def validar_referencias_revisores() -> None:
@@ -262,9 +259,9 @@ def validar_gabaritos() -> None:
         ausentes = [termo for termo in termos if termo not in conteudo]
         assert not ausentes, f"{nome}: exemplos incompletos: {ausentes}"
 
-    quiz = (pasta / "gabarito_exercicios_multipla_escolha.md").read_text(encoding="utf-8")
+    exercicios = (pasta / "gabarito_exercicios_multipla_escolha.md").read_text(encoding="utf-8")
     justificativas = re.findall(
-        r"^\|\s*\d+\s*\|\s*[A-D]\s*\|\s*(.+?)\s*\|$", quiz, re.MULTILINE
+        r"^\|\s*\d+\s*\|\s*[A-D]\s*\|\s*(.+?)\s*\|$", exercicios, re.MULTILINE
     )
     assert len(justificativas) == 18
     assert all(len(texto.split()) >= 8 for texto in justificativas)

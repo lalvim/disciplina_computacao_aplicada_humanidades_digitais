@@ -77,18 +77,13 @@ def validar_cobertura() -> None:
     assert not ausentes, f"tópicos ausentes: {', '.join(ausentes)}"
 
 
-def validar_exercicios_html() -> None:
-    caminho = UNIDADE / "exercicios_unidade_01.html"
-    conteudo = caminho.read_text(encoding="utf-8")
-    assert "<!doctype html>" in conteudo.lower()
-    assert not re.search(r'(?:src|href)="https?://', conteudo), (
-        "o exercício deve funcionar sem recursos externos"
+def validar_exercicios_textuais() -> None:
+    conteudo = (UNIDADE / "exercicios_unidade_01_texto.md").read_text(
+        encoding="utf-8"
     )
-    assert len(re.findall(r"^\s+enunciado:", conteudo, flags=re.MULTILINE)) == 18
-    assert len(re.findall(r"^\s+correta:", conteudo, flags=re.MULTILINE)) == 18
-    assert "<noscript>" in conteudo
-    assert "exercicios_unidade_01_texto.md" in conteudo
-
+    questoes = re.findall(r"^## Questão (\d+) — (.+)$", conteudo, re.MULTILINE)
+    assert [int(numero) for numero, _ in questoes] == list(range(1, 19))
+    assert len(re.findall(r"^- \[ \] \*\*[A-D]\.\*\*", conteudo, re.MULTILINE)) == 72
     topicos = [
         "Humanidades Digitais",
         "Finalidade e estrutura da pergunta",
@@ -101,13 +96,9 @@ def validar_exercicios_html() -> None:
         "Limites da quantificação",
         "Limites da automação",
     ]
-    ausentes = [topico for topico in topicos if f'topico: "{topico}"' not in conteudo]
-    assert not ausentes, f"tópicos ausentes no HTML: {', '.join(ausentes)}"
-
-    versao_textual = (UNIDADE / "exercicios_unidade_01_texto.md").read_text(
-        encoding="utf-8"
-    )
-    assert len(re.findall(r"^## Questão \d+", versao_textual, re.MULTILINE)) == 18
+    topicos_encontrados = {topico for _, topico in questoes}
+    ausentes = [topico for topico in topicos if topico not in topicos_encontrados]
+    assert not ausentes, f"tópicos ausentes nos exercícios: {', '.join(ausentes)}"
 
 
 def validar_imagens() -> None:
@@ -399,7 +390,7 @@ def validar_referencias() -> None:
         UNIDADE / "00_guia_da_unidade.ipynb",
         UNIDADE / "01_perguntas_e_problemas_computacionais.ipynb",
         UNIDADE / "04_oficina_projeto_de_pesquisa.ipynb",
-        UNIDADE / "exercicios_unidade_01.html",
+        UNIDADE / "exercicios_unidade_01_texto.md",
         *sorted((UNIDADE / "gabaritos").glob("*.md")),
     ]
     formulacao_antiga = "cinco tipos de pergunta"
@@ -446,15 +437,6 @@ def validar_gabaritos() -> None:
         r"^\|\s*\d+\s*\|\s*([A-D])\s*\|", chave, re.MULTILINE
     )
     assert len(respostas_chave) == 18, "a chave deve conter 18 respostas"
-
-    html = (UNIDADE / "exercicios_unidade_01.html").read_text(encoding="utf-8")
-    respostas_html = [
-        chr(65 + int(indice))
-        for indice in re.findall(r"^\s+correta:\s*(\d+),?$", html, re.MULTILINE)
-    ]
-    assert respostas_chave == respostas_html, (
-        "a chave do gabarito não corresponde às respostas do exercício HTML"
-    )
 
     oficina = (pasta / "gabarito_04_oficina.md").read_text(encoding="utf-8")
     criterios = [
@@ -643,10 +625,8 @@ def main() -> None:
     print("OK referências: bibliografia consolidada e leituras nos notebooks")
     validar_imagens()
     print("OK imagens: arquivos locais, textos alternativos, créditos e SVGs acessíveis")
-    validar_exercicios_html()
-    print(
-        "OK exercícios: 18 questões, 10 tópicos, HTML offline e versão textual"
-    )
+    validar_exercicios_textuais()
+    print("OK exercícios textuais: 18 questões, 10 tópicos e 4 alternativas")
     validar_gabaritos()
     print("OK gabaritos: 6 arquivos de respostas e 1 guia docente")
     validar_revisores()

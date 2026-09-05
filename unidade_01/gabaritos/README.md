@@ -33,7 +33,7 @@ turma e ajustar o ritmo das aulas.
 | Notebook 03: ficha do corpus e revisão em dupla | Gabarito 03, seção 2 |
 | Notebook 04: proposta integrada e síntese | Gabarito 04, seções 1 a 9 |
 | Notebook 04: autoavaliação e revisão entre pares | Gabarito 04, seções 10 e 11 |
-| Exercício HTML/textual: 18 questões | Gabarito de múltipla escolha, chave e resoluções comentadas |
+| Exercícios textuais: 18 questões | Gabarito de múltipla escolha, chave e resoluções comentadas |
 
 ## Tipos de gabarito
 
@@ -70,10 +70,6 @@ procurar palavras específicas.
 ## Limite de confidencialidade
 
 A separação em `gabaritos/` é organizacional, não um mecanismo de segurança.
-Quem tiver acesso ao repositório poderá abrir estes arquivos. Além disso, um
-questionário HTML que funciona integralmente no navegador precisa conter sua
-lógica de correção no próprio arquivo.
-
-Caso seja necessário ocultar respostas em uma avaliação formal, será preciso
-usar um ambiente com autenticação e correção no servidor, como o sistema
-institucional de aprendizagem.
+Quem tiver acesso ao repositório poderá abrir estes arquivos. Caso seja
+necessário ocultar respostas em uma avaliação formal, será preciso usar um
+ambiente institucional com controle de acesso.

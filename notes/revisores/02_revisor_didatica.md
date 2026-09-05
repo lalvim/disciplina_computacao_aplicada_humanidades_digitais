@@ -81,7 +81,7 @@ Para cada perfil, registrar:
 3. Algum código funciona apenas como decoração?
 4. Alguma atividade aberta está sem feedback ou critério?
 5. A carga cabe em oito horas?
-6. O quiz mede compreensão ou apenas reconhecimento verbal?
+6. Os exercícios finais medem compreensão ou apenas reconhecimento verbal?
 7. A oficina final integra efetivamente os notebooks?
 
 ## Entrega
@@ -93,4 +93,3 @@ Usar `modelo_de_parecer.md` e incluir:
 - achados por gravidade;
 - estimativa de carga;
 - decisão.
-

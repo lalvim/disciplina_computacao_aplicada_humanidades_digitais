@@ -27,3 +27,6 @@ Requer pandas, NumPy e Jupyter. Os dados são fictícios.
 As fórmulas são escritas em LaTeX nas células Markdown e renderizadas pelo
 Jupyter/Colab, sem pacote adicional. Cada fórmula é acompanhada de definição em
 linguagem corrente e da operação correspondente em Python.
+
+O arquivo `exercicios_unidade_04_texto.md` reúne 18 questões de múltipla
+escolha; as respostas comentadas ficam em `gabaritos/`.

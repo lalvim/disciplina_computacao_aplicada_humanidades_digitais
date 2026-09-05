@@ -16,4 +16,4 @@ históricas reais.
 | Notebook 03 | `gabarito_03_documentacao.md` |
 | Notebook 04 | `gabarito_04_governanca_documentacao.md` |
 | Notebook 05 | `gabarito_05_protocolo.md` |
-| Exercício HTML | `gabarito_exercicios_multipla_escolha.md` |
+| Exercícios textuais | `gabarito_exercicios_multipla_escolha.md` |

@@ -1,4 +1,4 @@
-# Exercícios da Unidade 3 — versão textual
+# Exercícios da Unidade 3
 
 Marque uma alternativa e consulte o gabarito após concluir.
 

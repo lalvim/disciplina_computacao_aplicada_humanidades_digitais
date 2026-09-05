@@ -55,7 +55,6 @@ unidade_03/
 ├── imagens/
 ├── gabaritos/
 ├── revisores/
-├── exercicios_unidade_03.html
 ├── exercicios_unidade_03_texto.md
 ├── referencias.md
 └── README.md

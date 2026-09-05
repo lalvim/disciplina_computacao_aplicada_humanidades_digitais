@@ -884,7 +884,7 @@ def readme() -> None:
     3. `02_estrutura_limpeza_e_qualidade.ipynb`
     4. `03_juncoes_integracao_e_reprodutibilidade.ipynb`
     5. `04_oficina_base_processavel.ipynb`
-    6. `exercicios_unidade_03.html`
+    6. `exercicios_unidade_03_texto.md`
 
     ## Abrir os notebooks no Google Colab
 
@@ -907,8 +907,8 @@ def readme() -> None:
     Nunca edite os dados brutos. Reconstrua intermediários e derivados executando os
     notebooks em ordem. As análises substantivas começam na Unidade 4.
 
-    `exercicios_unidade_03.html` contém 18 questões com correção offline e versão
-    textual. `gabaritos/` reúne respostas-modelo e rubrica; `revisores/` contém
+    `exercicios_unidade_03_texto.md` contém 18 questões de múltipla escolha.
+    `gabaritos/` reúne respostas-modelo e rubrica; `revisores/` contém
     seis roteiros e seus pareceres executados.
     """
     conteudo = dedent(conteudo).replace("__LINKS_COLAB__", links)

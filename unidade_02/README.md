@@ -11,7 +11,7 @@ Problemas em Humanidades Digitais**.
 4. `03_metadados_identificadores_e_proveniencia.ipynb`
 5. `04_governanca_reuso_e_documentacao_de_bases.ipynb`
 6. `05_oficina_protocolo_da_base.ipynb`
-7. `exercicios_unidade_02.html`
+7. `exercicios_unidade_02_texto.md`
 8. `referencias.md`
 
 ## Abrir os notebooks no Google Colab
@@ -45,8 +45,8 @@ textos alternativos documentados em `imagens/README.md`.
 Duas semanas, oito horas no total, incluindo preparação e revisão. A oficina
 produz o protocolo da base do projeto iniciado na Unidade 1.
 
-O arquivo `exercicios_unidade_02.html` contém 21 questões com correção e
-funciona offline. Há uma versão textual equivalente.
+O arquivo `exercicios_unidade_02_texto.md` contém 21 questões de múltipla
+escolha. As respostas e justificativas ficam no gabarito correspondente.
 
 ## Material do docente e revisão
 

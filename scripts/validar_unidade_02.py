@@ -137,23 +137,16 @@ def validar_imagens() -> None:
 
 
 def validar_exercicios() -> None:
-    html = (UNIDADE / "exercicios_unidade_02.html").read_text(encoding="utf-8")
-    assert "<!doctype html>" in html.lower()
-    assert "<noscript>" in html
-    assert not re.search(r'(?:src|href)="https?://', html)
-    assert len(re.findall(r'"enunciado":', html)) == 21
-    assert len(re.findall(r'"correta":', html)) == 21
     texto = (UNIDADE / "exercicios_unidade_02_texto.md").read_text(encoding="utf-8")
-    assert len(re.findall(r"^## Questão \d+", texto, re.MULTILINE)) == 21
+    numeros = [int(n) for n in re.findall(r"^## Questão (\d+)", texto, re.MULTILINE)]
+    assert numeros == list(range(1, 22))
+    assert len(re.findall(r"^- \[ \] \*\*[A-D]\.\*\*", texto, re.MULTILINE)) == 84
 
     chave = (
         UNIDADE / "gabaritos" / "gabarito_exercicios_multipla_escolha.md"
     ).read_text(encoding="utf-8")
     respostas = re.findall(r"^\|\s*\d+\s*\|\s*([A-D])\s*\|", chave, re.MULTILINE)
-    corretas = [
-        chr(65 + int(i)) for i in re.findall(r'"correta":\s*(\d+)', html)
-    ]
-    assert len(respostas) == 21 and respostas == corretas
+    assert len(respostas) == 21
 
 
 def validar_gabaritos() -> None:

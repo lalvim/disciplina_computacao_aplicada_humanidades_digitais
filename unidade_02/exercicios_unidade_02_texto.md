@@ -1,4 +1,4 @@
-# Exercícios da Unidade 2 — versão textual
+# Exercícios da Unidade 2
 
 Marque uma alternativa por questão e consulte o gabarito após concluir.
 

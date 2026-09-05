@@ -124,12 +124,11 @@ def main():
   if p.name=="04_oficina_relatorio_exploratorio.ipynb": assert b==0
  termos=["tipos de variáveis","frequências","mediana","quartis","variância","distribuição","valores extremos","contingência","tokenização","normalização","frequências absoluta e relativa","concordâncias","n-gramas","colocações","vocabulário","diversidade lexical","barras","histograma","boxplot","dispersão","série temporal"]
  assert all(t in texto for t in termos)
- h=(U/"exercicios_unidade_04.html").read_text(encoding="utf-8"); assert h.count('"enunciado":')==18 and "<noscript>" in h
- t=(U/"exercicios_unidade_04_texto.md").read_text(encoding="utf-8"); assert len(re.findall(r"^## Questão",t,re.M))==18
- chave=(U/"gabaritos/gabarito_exercicios_multipla_escolha.md").read_text(encoding="utf-8"); resp=re.findall(r"^\|\s*\d+\s*\|\s*([A-D])",chave,re.M); cor=[chr(65+int(x)) for x in re.findall(r'"correta":\s*(\d+)',h)]; assert resp==cor
+ t=(U/"exercicios_unidade_04_texto.md").read_text(encoding="utf-8"); numeros=[int(n) for n in re.findall(r"^## Questão (\d+)",t,re.M)]; assert numeros==list(range(1,19)); assert len(re.findall(r"^- \[ \] \*\*[A-D]\.\*\*",t,re.M))==72
+ chave=(U/"gabaritos/gabarito_exercicios_multipla_escolha.md").read_text(encoding="utf-8"); resp=re.findall(r"^\|\s*\d+\s*\|\s*([A-D])",chave,re.M); assert len(resp)==18
  assert len(list((U/"revisores").glob("*.md")))==9 and len(list((U/"revisores/pareceres").glob("*.md")))==7
  validar_latex(ns); validar_resultados(ambientes); validar_oficina()
  print("OK 14 fórmulas LaTeX e resultados quantitativos/textuais")
  print("OK oficina: instruções, dinâmica, rubrica e exemplo resolvido")
- print("OK 21/21 conteúdos; quiz, gabaritos e revisão; total",tm,tc)
+ print("OK 21/21 conteúdos; exercícios textuais, gabaritos e revisão; total",tm,tc)
 if __name__=="__main__": main()

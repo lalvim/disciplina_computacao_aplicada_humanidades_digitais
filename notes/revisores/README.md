@@ -43,7 +43,7 @@ Todos os revisores devem consultar:
 3. `notes/diretrizes_formatacao_material.md`;
 4. `unidade_01/README.md`;
 5. os cinco notebooks;
-6. `unidade_01/exercicios_unidade_01.html`;
+6. `unidade_01/exercicios_unidade_01_texto.md`;
 7. os gabaritos relacionados ao seu foco.
 
 O revisor não deve avaliar apenas arquivos isolados. A unidade deve ser

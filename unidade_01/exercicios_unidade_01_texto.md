@@ -1,8 +1,6 @@
-# Exercícios da Unidade 1 — versão textual
+# Exercícios da Unidade 1
 
-Esta versão contém as mesmas questões do exercício HTML, sem a correção
-interativa. Marque uma alternativa por questão e consulte o gabarito
-somente após concluir.
+Marque uma alternativa por questão e consulte o gabarito somente após concluir.
 
 ## Questão 1 — Humanidades Digitais
 

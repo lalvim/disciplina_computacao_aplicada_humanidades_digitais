@@ -24,9 +24,9 @@
 | 20 | B | Questões legais |
 | 21 | B | Integração |
 
-As justificativas completas aparecem na correção do HTML. Na discussão
-docente, exigir que o estudante explique a distinção conceitual, não apenas a
-letra escolhida.
+Na discussão docente, exigir que o estudante explique a distinção conceitual,
+não apenas a letra escolhida. Os exemplos abaixo mostram o nível de
+justificativa esperado.
 
 ## Exemplo de resposta justificada
 

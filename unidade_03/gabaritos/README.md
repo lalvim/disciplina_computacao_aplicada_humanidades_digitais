@@ -14,4 +14,4 @@ as mesmas decisões em seu próprio projeto.
 | 02 | `gabarito_02_limpeza.md` |
 | 03 | `gabarito_03_integracao.md` |
 | 04 | `gabarito_04_oficina.md` |
-| Quiz | `gabarito_exercicios_multipla_escolha.md` |
+| Exercícios textuais | `gabarito_exercicios_multipla_escolha.md` |

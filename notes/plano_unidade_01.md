@@ -37,7 +37,6 @@ unidade_01/
 ├── 03_dados_corpus_e_evidencias.ipynb
 ├── 04_oficina_projeto_de_pesquisa.ipynb
 ├── referencias.md
-├── exercicios_unidade_01.html
 ├── exercicios_unidade_01_texto.md
 ├── README.md
 └── dados/
@@ -150,8 +149,8 @@ computacionais não serão tratados como interpretações autossuficientes.
 4. Notebook 04 — 1 hora;
 5. discussão entre pares — 30 minutos.
 
-O exercício HTML será usado como revisão assíncrona de aproximadamente 20
-minutos. Leituras complementares e extensões não integram a carga essencial.
+Os exercícios textuais serão usados como revisão assíncrona de aproximadamente
+20 minutos. Leituras complementares e extensões não integram a carga essencial.
 
 ## 7. Dependências técnicas
 

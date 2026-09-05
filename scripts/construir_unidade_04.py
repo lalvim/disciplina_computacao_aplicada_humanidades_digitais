@@ -4,7 +4,12 @@ from pathlib import Path
 from textwrap import dedent
 from apoio_colab import adicionar_link_na_abertura, preparacao_colab, tabela_links_colab
 R=Path(__file__).resolve().parents[1]; U=R/"unidade_04"; D=U/"dados"
-def m(s): return {"cell_type":"markdown","metadata":{},"source":dedent(s).strip().splitlines(keepends=True)}
+def m(s):
+ texto = dedent(s).strip()
+ # $ e $$ têm renderização mais consistente no Jupyter, GitHub e Colab.
+ linhas = ["$$" if linha in {r"\[", r"\]"} else linha for linha in texto.splitlines()]
+ texto = "\n".join(linhas).replace(r"\(", "$").replace(r"\)", "$")
+ return {"cell_type":"markdown","metadata":{},"source":texto.splitlines(keepends=True)}
 def c(s): return {"cell_type":"code","execution_count":None,"metadata":{},"outputs":[],"source":dedent(s).strip().splitlines(keepends=True)}
 def nb(n,cells,requer_repositorio=False):
  publicadas=[adicionar_link_na_abertura(cells[0],U.name,n)]

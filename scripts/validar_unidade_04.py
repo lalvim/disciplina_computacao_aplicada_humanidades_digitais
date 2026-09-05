@@ -26,6 +26,13 @@ def validar_latex(notebooks):
  )
  for controle in ["\x08", "\x0c", "\x0b"]:
   assert controle not in texto, "caractere de controle introduzido por LaTeX"
+ for p in notebooks:
+  for celula in json.loads(p.read_text(encoding="utf-8"))["cells"]:
+   if celula["cell_type"] == "markdown":
+    conteudo = src(celula)
+    assert conteudo.replace("$$", "").count("$") % 2 == 0, (
+     f"delimitador LaTeX inline sem par em {p.name}"
+    )
  formulas = [
   r"f_k = \sum", r"\bar{x}=\frac", r"\widetilde{x}",
   r"s^2=\frac", r"IQR=Q_3-Q_1", r"L_{\mathrm{inferior}}",
@@ -35,9 +42,10 @@ def validar_latex(notebooks):
  ]
  ausentes = [formula for formula in formulas if formula not in texto]
  assert not ausentes, f"fórmulas LaTeX ausentes: {ausentes}"
- aberturas = re.findall(r"^\\\[$", texto, re.MULTILINE)
- fechamentos = re.findall(r"^\\\]$", texto, re.MULTILINE)
- assert len(aberturas) == 14 and len(fechamentos) == 14
+ delimitadores = re.findall(r"^\$\$$", texto, re.MULTILINE)
+ assert len(delimitadores) == 28
+ assert not re.search(r"^\\[\[\]]$", texto, re.MULTILINE)
+ assert r"\(" not in texto and r"\)" not in texto
 
 def validar_resultados(ambientes):
  quantitativo = ambientes["01_exploracao_quantitativa.ipynb"]

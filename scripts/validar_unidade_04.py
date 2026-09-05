@@ -82,6 +82,41 @@ def validar_resultados(ambientes):
  )
  assert math.isclose(primeira["pmi"], esperado_pmi)
 
+def validar_oficina():
+ caminho = U / "04_oficina_relatorio_exploratorio.ipynb"
+ documento = json.loads(caminho.read_text(encoding="utf-8"))
+ markdown = "\n".join(
+  src(celula) for celula in documento["cells"] if celula["cell_type"] == "markdown"
+ )
+ secoes = [
+  "## O que será produzido",
+  "## Como realizar a oficina",
+  "## 1. Escopo e qualidade da base",
+  "## 2. Perfil quantitativo",
+  "## 3. Perfil textual",
+  "## 4. Visualizações",
+  "## 5. Retorno aos casos",
+  "## 6. Hipóteses provisórias",
+  "## 7. Limitações e reprodutibilidade",
+  "## 8. Estrutura do relatório final",
+  "## 9. Dinâmica sugerida e revisão por pares",
+  "## 10. Rubrica e checklist de entrega",
+ ]
+ assert all(secao in markdown for secao in secoes)
+ assert markdown.count("Escreva aqui") >= 30
+ for termo in [
+  "Procedimento:", "Descrição:", "Interpretação:", "Limite:", "Próximo passo:",
+  "quatro visualizações", "três casos", "tabela equivalente", "revisão por pares",
+ ]:
+  assert termo in markdown, f"instrução ausente na oficina: {termo}"
+
+ gabarito = (U / "gabaritos" / "gabarito_04_oficina.md").read_text(encoding="utf-8")
+ for termo in [
+  "## Exemplo de resolução completa", "701,58", "138.786,95", "1.433,375", "936 tokens",
+  "TTR-19", "D023", "D001", "D003", "14/14",
+ ]:
+  assert termo in gabarito, f"gabarito da oficina incompleto: {termo}"
+
 def main():
  ns=sorted(U.glob("*.ipynb")); assert len(ns)==5; texto=""; tm=tc=0; ambientes={}
  for p in ns:
@@ -93,7 +128,8 @@ def main():
  t=(U/"exercicios_unidade_04_texto.md").read_text(encoding="utf-8"); assert len(re.findall(r"^## Questão",t,re.M))==18
  chave=(U/"gabaritos/gabarito_exercicios_multipla_escolha.md").read_text(encoding="utf-8"); resp=re.findall(r"^\|\s*\d+\s*\|\s*([A-D])",chave,re.M); cor=[chr(65+int(x)) for x in re.findall(r'"correta":\s*(\d+)',h)]; assert resp==cor
  assert len(list((U/"revisores").glob("*.md")))==9 and len(list((U/"revisores/pareceres").glob("*.md")))==7
- validar_latex(ns); validar_resultados(ambientes)
+ validar_latex(ns); validar_resultados(ambientes); validar_oficina()
  print("OK 14 fórmulas LaTeX e resultados quantitativos/textuais")
+ print("OK oficina: instruções, dinâmica, rubrica e exemplo resolvido")
  print("OK 21/21 conteúdos; quiz, gabaritos e revisão; total",tm,tc)
 if __name__=="__main__": main()

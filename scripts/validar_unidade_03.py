@@ -211,22 +211,63 @@ def validar_referencias_revisores() -> None:
 
 
 def validar_gabaritos() -> None:
+    pasta = UNIDADE / "gabaritos"
+    esperados = {
+        "README.md",
+        "gabarito_00_guia.md",
+        "gabarito_01_formatos_ocr.md",
+        "gabarito_02_limpeza.md",
+        "gabarito_03_integracao.md",
+        "gabarito_04_oficina.md",
+        "gabarito_exercicios_multipla_escolha.md",
+    }
+    encontrados = {p.name for p in pasta.glob("*.md")}
+    assert encontrados == esperados, f"gabaritos divergentes: {encontrados ^ esperados}"
+
     marcadores = {
+        "gabarito_00_guia.md": [
+            "## Exemplo de resposta preenchida",
+            "Transformação prevista",
+            "## Por que este exemplo é adequado?",
+        ],
         "gabarito_01_formatos_ocr.md": [
             "## Exemplo de inventário resolvido",
             "## Exemplo de interpretação",
+            "catalogo_messy.csv",
             "0,094",
         ],
         "gabarito_02_limpeza.md": [
             "## Exemplo de resultado das datas",
-            "## Exemplo de entrada no log de transformação",
+            "## Exemplo de resolução — log de transformação",
             "D003 parcial",
+        ],
+        "gabarito_03_integracao.md": [
+            "## Exemplo de resolução — plano de integração",
+            "### 4. Exemplo de rastreamento até a fonte",
+            "## Por que este exemplo é adequado?",
+        ],
+        "gabarito_04_oficina.md": [
+            "## Exemplo de resolução completa",
+            "### 7. Autoavaliação preenchida",
+            "### 8. Exemplo de revisão por pares",
+        ],
+        "gabarito_exercicios_multipla_escolha.md": [
+            "Justificativa-modelo",
+            "## Exemplo de resposta justificada",
+            "alternativas A, C e D",
         ],
     }
     for nome, termos in marcadores.items():
-        conteudo = (UNIDADE / "gabaritos" / nome).read_text(encoding="utf-8")
+        conteudo = (pasta / nome).read_text(encoding="utf-8")
         ausentes = [termo for termo in termos if termo not in conteudo]
         assert not ausentes, f"{nome}: exemplos incompletos: {ausentes}"
+
+    quiz = (pasta / "gabarito_exercicios_multipla_escolha.md").read_text(encoding="utf-8")
+    justificativas = re.findall(
+        r"^\|\s*\d+\s*\|\s*[A-D]\s*\|\s*(.+?)\s*\|$", quiz, re.MULTILINE
+    )
+    assert len(justificativas) == 18
+    assert all(len(texto.split()) >= 8 for texto in justificativas)
 
 
 def main() -> None:

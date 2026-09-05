@@ -9,9 +9,15 @@ textual. Extração e OCR devem produzir saídas separadas e ligadas à fonte.
 
 | Fonte | Diagnóstico | Operação | Parâmetro ou teste | Saída | Risco |
 |---|---|---|---|---|---|
+| `catalogo_messy.csv` | tabela delimitada por ponto e vírgula | importar com pandas | `sep=";"`, UTF-8, `codigo_municipio` como texto; esperar 8 × 7 | DataFrame do catálogo | separador errado ou conversão do código em número |
+| `catalogo_messy.xlsx` | pasta de trabalho com planilha `documentos` | importar com pandas/openpyxl | declarar `sheet_name`; comparar dimensões com o CSV | DataFrame da planilha | ler a aba errada ou confundir formatação com dado |
+| `metadados.json` | lista de objetos com lista interna de temas | carregar com `json` | esperar 3 registros; verificar `temas` como lista | objetos hierárquicos | achatar temas sem declarar a nova unidade |
+| `metadados.xml` | coleção com elementos `documento` | analisar a árvore XML | selecionar o nó `documento`; esperar 2 nós | elementos identificados | ignorar hierarquia ou namespaces em outra fonte |
+| `D001.txt` | texto simples sem esquema interno | ler como UTF-8 | conferir se a linha esperada está legível | cadeia de caracteres | encoding incorreto ou perda da divisão original |
 | `documento_textual.pdf` | uma página com camada textual | extração com pypdf | verificar se `extract_text()` retorna conteúdo e conferir a página | texto extraído separado do PDF | ordem de leitura ou caracteres podem divergir da página |
 | `pagina_digitalizada.png` | imagem sintética limpa, sem camada textual | OCR | Tesseract, idioma `eng`, segmentação `--psm 7`; comparar com referência | transcrição + CER/WER | mesmo resultado perfeito nesta linha não valida outras páginas |
 | `pagina_digitalizada_degradada.png` | mesma linha, degradada de forma controlada | OCR | repetir os mesmos parâmetros para isolar o efeito da qualidade | transcrição + CER/WER | borrão, inclinação e marcas podem confundir caracteres |
+| `extrato_codigos_municipios_ibge.csv` | tabela pública recortada e armazenada localmente | importar código como texto | conferir 4 códigos únicos e ler `proveniencia_base_publica.json` | tabela de referência | tratar o extrato como versão integral ou atual do IBGE |
 
 No exemplo, o PDF textual retorna “Documento D001 com camada textual”. Na rota
 offline fornecida com o material, a comparação de OCR produz:

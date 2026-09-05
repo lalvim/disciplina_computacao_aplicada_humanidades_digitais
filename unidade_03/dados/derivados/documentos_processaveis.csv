@@ -1,11 +1,11 @@
-id_documento,titulo,data_documento,municipio,codigo_municipio,genero,palavras,titulo_chave,municipio_chave,genero_original,genero_padronizado,data_original,data_normalizada,razao_data_ausente,razao_palavras_ausente,possivel_duplicata,nome_municipio_ibge,uf,texto
-D001, Jornal Aurora ,1890-01-05,São Paulo,3550308,Editorial,860.0,jornal aurora,sao paulo,Editorial,editorial,1890-01-05,1890-05-01,,,False,São Paulo,SP,"A escola noturna foi apresentada como sinal de progresso.
+id_documento,titulo,data_documento,municipio,codigo_municipio,genero,palavras,titulo_chave,municipio_chave,genero_original,genero_padronizado,data_original,data_normalizada,ano_documento,precisao_data,razao_data_ausente,razao_palavras_ausente,possivel_duplicata,nome_municipio_ibge,uf,texto
+D001, Jornal Aurora ,1890-01-05,São Paulo,3550308,Editorial,860.0,jornal aurora,sao paulo,Editorial,editorial,1890-01-05,1890-01-05,1890.0,dia,,,False,São Paulo,SP,"A escola noturna foi apresentada como sinal de progresso.
 "
-D002,gazeta popular,06/02/1891,Sao paulo,3550308,notícia,610.0,gazeta popular,sao paulo,notícia,notícia,06/02/1891,,data não informada ou não parseável,,False,São Paulo,SP,"O jornal discutiu jornadas de trabalho e instrução.
+D002,gazeta popular,06/02/1891,Sao paulo,3550308,notícia,610.0,gazeta popular,sao paulo,notícia,notícia,06/02/1891,1891-02-06,1891.0,dia,,,False,São Paulo,SP,"O jornal discutiu jornadas de trabalho e instrução.
 "
-D003,Correio do Vale,1892,Belo Horizonte,3106200,Carta,,correio do vale,belo horizonte,Carta,carta,1892,,data não informada ou não parseável,não contado,False,Belo Horizonte,MG,
-D004,JORNAL AURORA,1893-03-12,São  Paulo,3550308,editorial ,940.0,jornal aurora,sao paulo,editorial ,editorial,1893-03-12,1893-12-03,,,False,São Paulo,SP,
-D005,Gazeta Popular,data desconhecida,Rio de Janeiro,3304557,Noticia,720.0,gazeta popular,rio de janeiro,Noticia,notícia,data desconhecida,,data não informada ou não parseável,,False,Rio de Janeiro,RJ,
-D006,Correio do Vale,1900-08-20,Belo Horizonte,3106200,carta,420.0,correio do vale,belo horizonte,carta,carta,1900-08-20,,data não informada ou não parseável,,True,Belo Horizonte,MG,
-D006-copia, Correio do Vale ,20/08/1900,Belo horizonte,3106200,Carta,420.0,correio do vale,belo horizonte,Carta,carta,20/08/1900,,data não informada ou não parseável,,True,Belo Horizonte,MG,
-D007,Boletim Operário,1901-04-09,Recife,2611606,manifesto,500.0,boletim operario,recife,manifesto,manifesto,1901-04-09,1901-09-04,,,False,Recife,PE,
+D003,Correio do Vale,1892,Belo Horizonte,3106200,Carta,,correio do vale,belo horizonte,Carta,carta,1892,,1892.0,ano,dia e mês não informados,não contado,False,Belo Horizonte,MG,
+D004,JORNAL AURORA,1893-03-12,São  Paulo,3550308,editorial ,940.0,jornal aurora,sao paulo,editorial ,editorial,1893-03-12,1893-03-12,1893.0,dia,,,False,São Paulo,SP,
+D005,Gazeta Popular,data desconhecida,Rio de Janeiro,3304557,Noticia,720.0,gazeta popular,rio de janeiro,Noticia,notícia,data desconhecida,,,desconhecida,data não informada,,False,Rio de Janeiro,RJ,
+D006,Correio do Vale,1900-08-20,Belo Horizonte,3106200,carta,420.0,correio do vale,belo horizonte,carta,carta,1900-08-20,1900-08-20,1900.0,dia,,,True,Belo Horizonte,MG,
+D006-copia, Correio do Vale ,20/08/1900,Belo horizonte,3106200,Carta,420.0,correio do vale,belo horizonte,Carta,carta,20/08/1900,1900-08-20,1900.0,dia,,,True,Belo Horizonte,MG,
+D007,Boletim Operário,1901-04-09,Recife,2611606,manifesto,500.0,boletim operario,recife,manifesto,manifesto,1901-04-09,1901-04-09,1901.0,dia,,,False,Recife,PE,

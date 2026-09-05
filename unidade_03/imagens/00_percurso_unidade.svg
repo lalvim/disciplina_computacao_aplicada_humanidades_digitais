@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 550"
+ role="img" aria-labelledby="titulo descricao">
+<title id="titulo">Percurso da Unidade 3</title>
+<desc id="descricao">Quatro etapas ligam leitura de formatos, estruturação, integração e empacotamento. Os dados brutos permanecem preservados e uma seta de retorno representa auditoria e revisão.</desc>
+<defs>
+  <marker id="seta" markerWidth="10" markerHeight="10" refX="8" refY="3"
+   orient="auto" markerUnits="strokeWidth">
+    <path d="M0,0 L0,6 L9,3 z" fill="#17324d"/>
+  </marker>
+  <style>
+    .titulo { font: 700 30px system-ui, sans-serif; fill: #17324d; }
+    .subtitulo { font: 700 19px system-ui, sans-serif; fill: #17324d; }
+    .corpo { font: 16px system-ui, sans-serif; fill: #17324d; }
+    .pequeno { font: 14px system-ui, sans-serif; fill: #17324d; }
+    .nota { font: italic 15px system-ui, sans-serif; fill: #53606c; }
+    .numero { font: 700 24px system-ui, sans-serif; fill: #fff; }
+    .seta { stroke: #17324d; stroke-width: 3; fill: none; marker-end: url(#seta); }
+    .linha { stroke: #17324d; stroke-width: 3; fill: none; }
+    .tracejada { stroke-dasharray: 9 7; }
+  </style>
+</defs>
+<rect width="1200" height="550" rx="28" fill="#fbf4e8"/>
+<text x="600" y="48" class="titulo" text-anchor="middle"><tspan x="600" dy="0">Da fonte preservada à base processável</tspan></text><rect x="95" y="125" width="220" height="165" rx="18" fill="#dbe8ec" stroke="#17324d" stroke-width="3"/><text x="205.0" y="159" class="subtitulo" text-anchor="middle"><tspan x="205.0" dy="0">Ler</tspan></text><text x="205.0" y="194" class="corpo" text-anchor="middle"><tspan x="205.0" dy="0">formatos</tspan><tspan x="205.0" dy="22">e extração</tspan></text><circle cx="205" cy="125" r="23" fill="#17324d"/><text x="205" y="133" class="numero" text-anchor="middle"><tspan x="205" dy="0">1</tspan></text><path class="seta" d="M318,207 H360"/><rect x="370" y="125" width="220" height="165" rx="18" fill="#d8ebe7" stroke="#256b6b" stroke-width="3"/><text x="480.0" y="159" class="subtitulo" text-anchor="middle"><tspan x="480.0" dy="0">Estruturar</tspan></text><text x="480.0" y="194" class="corpo" text-anchor="middle"><tspan x="480.0" dy="0">unidade da linha</tspan><tspan x="480.0" dy="22">e tipos</tspan></text><circle cx="480" cy="125" r="23" fill="#256b6b"/><text x="480" y="133" class="numero" text-anchor="middle"><tspan x="480" dy="0">2</tspan></text><path class="seta" d="M593,207 H635"/><rect x="645" y="125" width="220" height="165" rx="18" fill="#f2ddd2" stroke="#a44f32" stroke-width="3"/><text x="755.0" y="159" class="subtitulo" text-anchor="middle"><tspan x="755.0" dy="0">Integrar</tspan></text><text x="755.0" y="194" class="corpo" text-anchor="middle"><tspan x="755.0" dy="0">chaves</tspan><tspan x="755.0" dy="22">e cardinalidade</tspan></text><circle cx="755" cy="125" r="23" fill="#a44f32"/><text x="755" y="133" class="numero" text-anchor="middle"><tspan x="755" dy="0">3</tspan></text><path class="seta" d="M868,207 H910"/><rect x="920" y="125" width="220" height="165" rx="18" fill="#eadde7" stroke="#69445f" stroke-width="3"/><text x="1030.0" y="159" class="subtitulo" text-anchor="middle"><tspan x="1030.0" dy="0">Empacotar</tspan></text><text x="1030.0" y="194" class="corpo" text-anchor="middle"><tspan x="1030.0" dy="0">dados, código</tspan><tspan x="1030.0" dy="22">e documentação</tspan></text><circle cx="1030" cy="125" r="23" fill="#69445f"/><text x="1030" y="133" class="numero" text-anchor="middle"><tspan x="1030" dy="0">4</tspan></text><rect x="95" y="355" width="220" height="100" rx="18" fill="#fffdf8" stroke="#d8b26e" stroke-width="3"/><text x="205.0" y="389" class="subtitulo" text-anchor="middle"><tspan x="205.0" dy="0">Brutos preservados</tspan></text><text x="205.0" y="424" class="corpo" text-anchor="middle"><tspan x="205.0" dy="0">ponto de entrada</tspan><tspan x="205.0" dy="22">não sobrescrito</tspan></text><path class="seta tracejada" d="M205,350 V300"/><path class="seta tracejada" d="M1025,315 C1025,510 210,530 210,465"/><text x="645" y="490" class="nota" text-anchor="middle"><tspan x="645" dy="0">Testes e limites podem fazer o fluxo retornar às decisões anteriores</tspan></text>
+</svg>

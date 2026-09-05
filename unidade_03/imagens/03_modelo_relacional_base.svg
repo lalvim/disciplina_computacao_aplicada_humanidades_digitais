@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"
+ role="img" aria-labelledby="titulo descricao">
+<title id="titulo">Modelo relacional didático da Unidade 3</title>
+<desc id="descricao">A tabela de documentos conecta-se por chaves a textos, relações documento-tema, municípios e indicadores. As marcações indicam as cardinalidades esperadas.</desc>
+<defs>
+  <marker id="seta" markerWidth="10" markerHeight="10" refX="8" refY="3"
+   orient="auto" markerUnits="strokeWidth">
+    <path d="M0,0 L0,6 L9,3 z" fill="#17324d"/>
+  </marker>
+  <style>
+    .titulo { font: 700 30px system-ui, sans-serif; fill: #17324d; }
+    .subtitulo { font: 700 19px system-ui, sans-serif; fill: #17324d; }
+    .corpo { font: 16px system-ui, sans-serif; fill: #17324d; }
+    .pequeno { font: 14px system-ui, sans-serif; fill: #17324d; }
+    .nota { font: italic 15px system-ui, sans-serif; fill: #53606c; }
+    .numero { font: 700 24px system-ui, sans-serif; fill: #fff; }
+    .seta { stroke: #17324d; stroke-width: 3; fill: none; marker-end: url(#seta); }
+    .linha { stroke: #17324d; stroke-width: 3; fill: none; }
+    .tracejada { stroke-dasharray: 9 7; }
+  </style>
+</defs>
+<rect width="1200" height="600" rx="28" fill="#fbf4e8"/>
+<text x="600" y="46" class="titulo" text-anchor="middle"><tspan x="600" dy="0">Uma base processável pode reunir várias tabelas</tspan></text><rect x="415" y="185" width="370" height="210" rx="18" fill="#dbe8ec" stroke="#17324d" stroke-width="3"/><text x="600.0" y="219" class="subtitulo" text-anchor="middle"><tspan x="600.0" dy="0">DOCUMENTOS</tspan></text><text x="600.0" y="254" class="corpo" text-anchor="middle"><tspan x="600.0" dy="0">PK id_documento</tspan><tspan x="600.0" dy="22">título • data • município</tspan><tspan x="600.0" dy="22">gênero • palavras</tspan></text><rect x="45" y="105" width="265" height="130" rx="18" fill="#d8ebe7" stroke="#256b6b" stroke-width="3"/><text x="177.5" y="139" class="subtitulo" text-anchor="middle"><tspan x="177.5" dy="0">TEXTOS</tspan></text><text x="177.5" y="174" class="corpo" text-anchor="middle"><tspan x="177.5" dy="0">PK/FK id_documento</tspan><tspan x="177.5" dy="22">texto extraído</tspan></text><rect x="45" y="365" width="265" height="130" rx="18" fill="#f2ddd2" stroke="#a44f32" stroke-width="3"/><text x="177.5" y="399" class="subtitulo" text-anchor="middle"><tspan x="177.5" dy="0">DOCUMENTOS_TEMAS</tspan></text><text x="177.5" y="434" class="corpo" text-anchor="middle"><tspan x="177.5" dy="0">FK id_documento</tspan><tspan x="177.5" dy="22">tema</tspan></text><rect x="890" y="105" width="265" height="130" rx="18" fill="#eadde7" stroke="#69445f" stroke-width="3"/><text x="1022.5" y="139" class="subtitulo" text-anchor="middle"><tspan x="1022.5" dy="0">MUNICÍPIOS</tspan></text><text x="1022.5" y="174" class="corpo" text-anchor="middle"><tspan x="1022.5" dy="0">PK código</tspan><tspan x="1022.5" dy="22">nome • UF</tspan></text><rect x="890" y="365" width="265" height="130" rx="18" fill="#f1e2bd" stroke="#8a6528" stroke-width="3"/><text x="1022.5" y="399" class="subtitulo" text-anchor="middle"><tspan x="1022.5" dy="0">INDICADORES</tspan></text><text x="1022.5" y="434" class="corpo" text-anchor="middle"><tspan x="1022.5" dy="0">FK id_documento</tspan><tspan x="1022.5" dy="22">tema • período • valor</tspan></text><path class="linha" d="M310,170 H405"/><path class="linha" d="M310,430 C360,430 370,340 405,340"/><path class="linha" d="M795,240 C835,240 845,170 880,170"/><path class="linha" d="M795,340 C835,340 845,430 880,430"/><text x="350" y="156" class="pequeno" text-anchor="middle"><tspan x="350" dy="0">0..1</tspan></text><text x="350" y="410" class="pequeno" text-anchor="middle"><tspan x="350" dy="0">0..N</tspan></text><text x="845" y="156" class="pequeno" text-anchor="middle"><tspan x="845" dy="0">N..1</tspan></text><text x="845" y="410" class="pequeno" text-anchor="middle"><tspan x="845" dy="0">0..N</tspan></text><text x="600" y="550" class="nota" text-anchor="middle"><tspan x="600" dy="0">Chaves mantêm vínculos sem repetir listas inteiras em uma célula</tspan></text>
+</svg>

@@ -12,9 +12,10 @@ from xml.etree import ElementTree as ET
 from zipfile import ZipFile, ZipInfo
 
 import pandas as pd
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 from apoio_colab import adicionar_link_na_abertura, preparacao_colab, tabela_links_colab
+from construir_imagens_unidade_03 import main as construir_imagens
 
 
 RAIZ = Path(__file__).resolve().parents[1]
@@ -167,11 +168,33 @@ def criar_dados() -> None:
     (BRUTOS / "D002.txt").write_text("O jornal discutiu jornadas de trabalho e instrução.\n", encoding="utf-8")
     pdf_textual(BRUTOS / "documento_textual.pdf", "Documento D001 com camada textual")
 
-    imagem = Image.new("L", (900, 180), "white")
+    referencia_ocr = "ESCOLA NOTURNA E TRABALHO — 1890"
+    imagem = Image.new("L", (1400, 260), "#f8f3e7")
     desenho = ImageDraw.Draw(imagem)
-    desenho.text((30, 60), "ESCOLA NOTURNA E TRABALHO - 1890", fill="black")
+    try:
+        fonte_ocr = ImageFont.truetype("DejaVuSerif.ttf", 58)
+    except OSError:
+        fonte_ocr = ImageFont.load_default()
+    desenho.text((80, 86), referencia_ocr, font=fonte_ocr, fill="#26231f")
+    desenho.line((55, 55, 1345, 55), fill="#b7aa91", width=2)
+    desenho.line((55, 205, 1345, 205), fill="#b7aa91", width=2)
     imagem.save(BRUTOS / "pagina_digitalizada.png")
-    (BRUTOS / "ocr_precomputado.txt").write_text("ESCOLA NOTURNA E TRABALHO - 1890\n", encoding="utf-8")
+
+    degradada = imagem.resize((770, 143)).resize((1400, 260))
+    degradada = degradada.rotate(0.65, resample=Image.Resampling.BICUBIC, fillcolor="#f8f3e7")
+    degradada = degradada.filter(ImageFilter.GaussianBlur(1.15))
+    marcas = ImageDraw.Draw(degradada)
+    for x, y, raio in [(155, 92, 15), (393, 170, 9), (690, 72, 12), (1020, 181, 17), (1275, 105, 8)]:
+        marcas.ellipse((x - raio, y - raio, x + raio, y + raio), fill="#cfc3ad")
+    for x in [245, 744, 1130]:
+        marcas.line((x, 38, x + 5, 222), fill="#ded5c4", width=3)
+    degradada.save(BRUTOS / "pagina_digitalizada_degradada.png")
+
+    (BRUTOS / "ocr_referencia.txt").write_text(referencia_ocr + "\n", encoding="utf-8")
+    (BRUTOS / "ocr_precomputado.txt").write_text(referencia_ocr + "\n", encoding="utf-8")
+    (BRUTOS / "ocr_precomputado_degradado.txt").write_text(
+        "ESC0LA NOTURNA E TRABALH0 — 189O\n", encoding="utf-8"
+    )
 
     largo = pd.DataFrame({
         "id_documento": ["D001", "D002", "D003"],
@@ -210,6 +233,12 @@ def guia() -> list[dict]:
         significa aplicar regras explícitas, preservar originais, testar resultados e
         documentar perdas. Rawson e Muñoz (2019) alertam que a ideia de limpeza pode
         ocultar trabalho interpretativo e relações de autoridade.
+
+        ![Fontes em papel, imagem e tabela atravessam camadas transparentes de transformação e produzem tabelas, relações e segmentos de texto sempre ligados aos originais preservados.](imagens/00_abertura_conceitual.png)
+
+        A ilustração antecipa o argumento central: transformar não rompe o vínculo
+        com a fonte. Cada produto derivado precisa manter um caminho de retorno às
+        entradas, regras e decisões que o produziram.
         """),
         md("""
         ## Objetivos e percurso
@@ -225,6 +254,12 @@ def guia() -> list[dict]:
         A unidade usa dados fictícios deliberadamente inconsistentes e um pequeno
         extrato didático dos códigos de municípios do IBGE, acompanhado de
         proveniência. Não há coleta pela internet durante a execução.
+
+        ![Quatro etapas ligam leitura de formatos, estruturação, integração e empacotamento; os dados brutos permanecem preservados e uma seta de retorno representa auditoria e revisão.](imagens/00_percurso_unidade.svg)
+
+        O percurso é cumulativo: cada notebook produz uma representação que será
+        retomada pelo seguinte. Testes e limites podem exigir retorno a qualquer
+        decisão anterior.
         """),
         code("""
         from pathlib import Path
@@ -325,6 +360,11 @@ def formatos() -> list[dict]:
         página é apenas imagem, a extração retorna pouco ou nada e será necessário OCR.
         Mesmo PDF com texto pode ter ordem de leitura problemática, hifenização ou
         caracteres incorretos.
+
+        ![Um arquivo PDF passa pelo teste de texto selecionável: quando há texto, extrai-se a camada textual; quando não há, aplica-se OCR; as duas rotas exigem avaliação contra a página.](imagens/01_pdf_texto_imagem_ocr.svg)
+
+        O diagrama evita uma confusão frequente: OCR não é sinônimo de “abrir PDF”.
+        Primeiro se diagnostica o conteúdo; depois se escolhe e avalia a operação.
         """),
         code("""
         from pypdf import PdfReader
@@ -340,34 +380,85 @@ def formatos() -> list[dict]:
         fonte e idioma afetam o resultado. A documentação do Tesseract recomenda
         inspecionar e preparar imagens quando necessário. A transcrição deve ser
         vinculada à imagem, à ferramenta, aos parâmetros e a uma avaliação de erro.
+
+        As duas imagens abaixo são **simulações didáticas**, não documentos
+        históricos. Elas contêm a mesma linha: a primeira está limpa; a segunda foi
+        reduzida, ampliada, inclinada, desfocada e marcada de forma controlada.
+
+        ![Linha tipográfica sintética limpa usada como referência no experimento controlado de reconhecimento óptico de caracteres.](dados/brutos/pagina_digitalizada.png)
+
+        ![A mesma linha tipográfica sintética após redução, ampliação, inclinação, desfoque e marcas controladas que dificultam o reconhecimento óptico de caracteres.](dados/brutos/pagina_digitalizada_degradada.png)
         """),
         code("""
         import shutil
         import subprocess
 
-        imagem = pasta / "pagina_digitalizada.png"
-        if shutil.which("tesseract"):
-            processo = subprocess.run(
-                ["tesseract", str(imagem), "stdout", "-l", "eng", "--psm", "7"],
-                capture_output=True, text=True, check=True,
+        entradas_ocr = [
+            ("imagem limpa", pasta / "pagina_digitalizada.png", pasta / "ocr_precomputado.txt"),
+            ("imagem degradada", pasta / "pagina_digitalizada_degradada.png", pasta / "ocr_precomputado_degradado.txt"),
+        ]
+
+        def reconhecer_ou_carregar(imagem, precomputado):
+            if shutil.which("tesseract"):
+                try:
+                    processo = subprocess.run(
+                        ["tesseract", str(imagem), "stdout", "-l", "eng", "--psm", "7"],
+                        capture_output=True, text=True, check=True,
+                    )
+                    return processo.stdout.strip(), "Tesseract executado agora"
+                except subprocess.CalledProcessError:
+                    pass
+            return (
+                precomputado.read_text(encoding="utf-8").strip(),
+                "saída pré-computada fornecida com o material",
             )
-            texto_ocr = processo.stdout.strip()
-            origem_ocr = "Tesseract executado agora"
-        else:
-            texto_ocr = (pasta / "ocr_precomputado.txt").read_text(encoding="utf-8").strip()
-            origem_ocr = "transcrição pré-computada fornecida com o material"
-        print(origem_ocr)
-        print(texto_ocr)
+
+        resultados_ocr = []
+        for condicao, imagem, precomputado in entradas_ocr:
+            transcricao, origem = reconhecer_ou_carregar(imagem, precomputado)
+            resultados_ocr.append({"condição": condicao, "transcrição": transcricao, "origem": origem})
+
+        pd.DataFrame(resultados_ocr)
         """),
         code("""
-        referencia = "ESCOLA NOTURNA E TRABALHO - 1890"
-        esperado = referencia.split()
-        observado = texto_ocr.split()
-        coincidencias = sum(a == b for a, b in zip(esperado, observado))
-        print("Tokens idênticos na mesma posição:", coincidencias, "de", len(esperado))
-        print("Revisão humana ainda necessária:", texto_ocr != referencia)
+        referencia = (pasta / "ocr_referencia.txt").read_text(encoding="utf-8").strip()
+
+        def distancia_edicao(a, b):
+            anterior = list(range(len(b) + 1))
+            for i, item_a in enumerate(a, 1):
+                atual = [i]
+                for j, item_b in enumerate(b, 1):
+                    atual.append(min(
+                        atual[-1] + 1,
+                        anterior[j] + 1,
+                        anterior[j - 1] + (item_a != item_b),
+                    ))
+                anterior = atual
+            return anterior[-1]
+
+        comparacao = []
+        for resultado in resultados_ocr:
+            observado = resultado["transcrição"]
+            comparacao.append({
+                "condição": resultado["condição"],
+                "erros em caracteres": distancia_edicao(referencia, observado),
+                "CER": distancia_edicao(referencia, observado) / len(referencia),
+                "erros em palavras": distancia_edicao(referencia.split(), observado.split()),
+                "WER": distancia_edicao(referencia.split(), observado.split()) / len(referencia.split()),
+            })
+
+        pd.DataFrame(comparacao).round({"CER": 3, "WER": 3})
         """),
         md("""
+        ### Como interpretar a comparação
+
+        CER é a taxa de erro por caractere; WER, por palavra. Zero significa
+        coincidência com a transcrição de referência nesta amostra. Valores maiores
+        indicam mais edições necessárias, mas **não decidem sozinhos** se o texto é
+        adequado: busca exploratória, citação e análise lexical exigem tolerâncias
+        diferentes. Uma referência também pode conter erro humano; por isso, a
+        página e o protocolo de transcrição continuam indispensáveis.
+
         ## Atividade — inventário técnico
 
         Para cada fonte do projeto, registre formato, estrutura interna, leitor,
@@ -407,6 +498,11 @@ def limpeza() -> list[dict]:
         No formato largo, período e tema aparecem nos nomes das colunas. No longo,
         essas dimensões viram valores. A transformação altera a unidade da linha: de
         documento para combinação documento–tema–período.
+
+        ![Uma tabela larga com uma linha por documento é reorganizada em tabela longa com uma linha por combinação documento, tema e período, sem resumir os valores.](imagens/02_largo_longo.svg)
+
+        Observe que `melt` não apenas muda a aparência: ele redefine o que cada linha
+        representa. Essa unidade precisa constar no dicionário de dados.
         """),
         code("""
         largo = pd.read_csv("dados/brutos/indicadores_largos.csv")
@@ -447,19 +543,44 @@ def limpeza() -> list[dict]:
         ## 4. Datas, códigos e ausências
 
         Código de município é identificador textual, não quantidade. Datas parciais
-        não devem receber dia e mês inventados. `errors='coerce'` transforma falhas em
-        ausências; isso exige guardar o original e uma razão, pois “desconhecida” é
-        informação diferente de erro acidental.
+        não devem receber dia e mês inventados. Um parser explícito separa datas
+        completas, anos isolados e valores desconhecidos; guardar o original, a
+        precisão e a razão evita transformar incerteza em falsa exatidão.
+
+        ![O valor de data recebido é preservado, passa por uma regra explícita e produz representação derivada, precisão e razão; log e testes permitem retornar à fonte.](imagens/02_transformacao_rastreavel.svg)
+
+        No exemplo, uma data completa pode ocupar `data_normalizada`; um ano isolado
+        ocupa `ano_documento`, mas não recebe dia e mês arbitrários. A coluna
+        `precisao_data` distingue `dia`, `ano`, `desconhecida` e, se ocorrer, `inválida`.
         """),
         code("""
         trabalho["data_original"] = trabalho["data_documento"]
-        trabalho["data_normalizada"] = pd.to_datetime(trabalho["data_documento"], errors="coerce", dayfirst=True)
-        trabalho["razao_data_ausente"] = pd.NA
-        falha_data = trabalho["data_normalizada"].isna()
-        trabalho.loc[falha_data, "razao_data_ausente"] = "data não informada ou não parseável"
+
+        def decompor_data(valor):
+            texto = str(valor).strip()
+            formatos = [
+                (r"\d{4}-\d{2}-\d{2}", "%Y-%m-%d"),
+                (r"\d{2}/\d{2}/\d{4}", "%d/%m/%Y"),
+            ]
+            for padrao, formato in formatos:
+                if re.fullmatch(padrao, texto):
+                    data = pd.to_datetime(texto, format=formato, errors="coerce")
+                    if pd.notna(data):
+                        return data, data.year, "dia", pd.NA
+                    return pd.NaT, pd.NA, "inválida", "data impossível no calendário"
+            if re.fullmatch(r"\d{4}", texto):
+                return pd.NaT, int(texto), "ano", "dia e mês não informados"
+            if texto.casefold() == "data desconhecida":
+                return pd.NaT, pd.NA, "desconhecida", "data não informada"
+            return pd.NaT, pd.NA, "inválida", "formato não reconhecido"
+
+        datas = trabalho["data_original"].apply(decompor_data).apply(pd.Series)
+        datas.columns = ["data_normalizada", "ano_documento", "precisao_data", "razao_data_ausente"]
+        datas["ano_documento"] = datas["ano_documento"].astype("Int64")
+        trabalho[datas.columns] = datas
         trabalho["palavras"] = pd.to_numeric(trabalho["palavras"], errors="coerce")
         trabalho["razao_palavras_ausente"] = trabalho["palavras"].isna().map({True: "não contado", False: pd.NA})
-        trabalho[["data_original", "data_normalizada", "razao_data_ausente", "palavras", "razao_palavras_ausente"]]
+        trabalho[["data_original", "data_normalizada", "ano_documento", "precisao_data", "razao_data_ausente", "palavras"]]
         """),
         md("""
         ## 5. Duplicatas são uma hipótese
@@ -484,7 +605,10 @@ def limpeza() -> list[dict]:
         code("""
         relatorio = {
             "linhas": len(trabalho),
-            "datas_nao_parseadas": int(trabalho["data_normalizada"].isna().sum()),
+            "datas_sem_precisao_de_dia": int(trabalho["data_normalizada"].isna().sum()),
+            "datas_parciais_ano": int(trabalho["precisao_data"].eq("ano").sum()),
+            "datas_desconhecidas": int(trabalho["precisao_data"].eq("desconhecida").sum()),
+            "datas_invalidas": int(trabalho["precisao_data"].eq("inválida").sum()),
             "palavras_ausentes": int(trabalho["palavras"].isna().sum()),
             "generos_sem_mapeamento": int(trabalho["genero_padronizado"].isna().sum()),
             "registros_em_grupos_de_possiveis_duplicatas": int(trabalho["possivel_duplicata"].sum()),
@@ -518,6 +642,12 @@ def integracao() -> list[dict]:
         1:1, 1:N ou N:N. Uma chave duplicada pode multiplicar linhas e fabricar peso
         analítico. `validate` testa a hipótese de cardinalidade; `indicator` mostra a
         cobertura da correspondência.
+
+        ![Três painéis representam relações um para um, um para muitos e muitos para muitos, mostrando por que a cardinalidade precisa ser declarada e testada antes da junção.](imagens/03_cardinalidades.svg)
+
+        Cardinalidade descreve quantas linhas de um lado podem corresponder a cada
+        linha do outro. Ela deve ser formulada, confrontada com os dados e testada no
+        código antes da junção.
         """),
         code("""
         import json
@@ -555,6 +685,12 @@ def integracao() -> list[dict]:
         temas e vários indicadores. Vamos criar uma tabela textual 1:1 apenas para os
         arquivos disponíveis; temas e indicadores permanecem em tabelas longas para
         evitar colunas multivaloradas.
+
+        ![A tabela de documentos conecta-se por chaves a textos, relações documento-tema, municípios e indicadores, com marcações das cardinalidades esperadas.](imagens/03_modelo_relacional_base.svg)
+
+        O desenho não exige um único arquivo físico: ele explicita entidades e
+        relações. Separar tabelas evita repetir textos ou armazenar listas inteiras em
+        uma célula, preservando as unidades próprias de documentos, temas e indicadores.
         """),
         code("""
         from pathlib import Path
@@ -626,6 +762,12 @@ def oficina() -> list[dict]:
         Este notebook é um roteiro de projeto. Execute transformações em uma cópia
         própria ou notebook técnico; registre aqui decisões, evidências e resultados.
         Não altere os arquivos brutos.
+
+        ![Dados brutos, código, dados derivados e documentação formam um pacote submetido a testes e parecer de qualidade, com retorno rastreável para correções.](imagens/04_pacote_processavel.svg)
+
+        A figura funciona também como checklist: um CSV isolado não demonstra como a
+        base foi produzida, testada ou delimitada. A entrega precisa combinar os
+        componentes e manter vínculos entre eles.
         """),
         md("""
         ## 1. Inventário e estrutura
@@ -758,7 +900,9 @@ def readme() -> None:
     Dados fictícios e um extrato didático documentado do IBGE ficam separados em
     `brutos`, `intermediarios` e `derivados`. Requer Python 3, pandas, openpyxl,
     pypdf e Pillow. Tesseract é opcional; há saída pré-computada para execução
-    offline sem o programa.
+    offline sem o programa. `imagens/` reúne a ilustração de abertura e sete
+    diagramas SVG acessíveis; as duas imagens sintéticas de OCR ficam em `dados/brutos`
+    porque são entradas do experimento, não apenas elementos decorativos.
 
     Nunca edite os dados brutos. Reconstrua intermediários e derivados executando os
     notebooks em ordem. As análises substantivas começam na Unidade 4.
@@ -774,6 +918,7 @@ def readme() -> None:
 def main() -> None:
     UNIDADE.mkdir(exist_ok=True)
     criar_dados()
+    construir_imagens()
     salvar_notebook("00_guia_da_unidade.ipynb", guia(), requer_repositorio=True)
     salvar_notebook(
         "01_formatos_importacao_e_extracao.ipynb",

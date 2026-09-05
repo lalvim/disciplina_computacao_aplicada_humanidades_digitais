@@ -52,6 +52,7 @@ unidade_03/
 ├── 03_juncoes_integracao_e_reprodutibilidade.ipynb
 ├── 04_oficina_base_processavel.ipynb
 ├── dados/{brutos,intermediarios,derivados}/
+├── imagens/
 ├── gabaritos/
 ├── revisores/
 ├── exercicios_unidade_03.html
@@ -125,6 +126,12 @@ O estudo de caso conterá erros deliberados e dados inteiramente fictícios. O
 código nunca sobrescreverá os dados brutos. Cada correção produzirá coluna ou
 arquivo derivado e será documentada.
 
+O percurso visual combina uma abertura conceitual, diagramas SVG autorais e duas
+imagens sintéticas controladas para o experimento de OCR. Figuras serão usadas
+para processos, decisões e relações; resultados tabulares continuarão como tabelas
+ou saídas reproduzíveis de código. Cada ilustração terá texto alternativo,
+explicação no entorno e documentação em `unidade_03/imagens/README.md`.
+
 ## 6. Dependências
 
 - Python 3;
@@ -154,7 +161,8 @@ OCR previamente gerada e identificada como tal.
 6. criar e executar seis revisores;
 7. validar execução, cobertura, integridade e reprodutibilidade;
 8. corrigir achados altos ou bloqueantes;
-9. marcar o plano como executado.
+9. produzir e integrar o conjunto visual acessível;
+10. marcar o plano como executado.
 
 ## 9. Critérios de conclusão
 
@@ -165,4 +173,5 @@ OCR previamente gerada e identificada como tal.
 - transformações e junções serão auditáveis;
 - todos os notebooks executarão offline e em ordem;
 - exercícios e gabaritos estarão consistentes;
+- imagens terão função didática explícita, texto alternativo e arquivos locais;
 - o pacote final preparará a exploração da Unidade 4.

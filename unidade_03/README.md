@@ -29,7 +29,9 @@ dependência ausente. O Notebook 04 é discursivo e não precisa de clonagem.
 Dados fictícios e um extrato didático documentado do IBGE ficam separados em
 `brutos`, `intermediarios` e `derivados`. Requer Python 3, pandas, openpyxl,
 pypdf e Pillow. Tesseract é opcional; há saída pré-computada para execução
-offline sem o programa.
+offline sem o programa. `imagens/` reúne a ilustração de abertura e sete
+diagramas SVG acessíveis; as duas imagens sintéticas de OCR ficam em `dados/brutos`
+porque são entradas do experimento, não apenas elementos decorativos.
 
 Nunca edite os dados brutos. Reconstrua intermediários e derivados executando os
 notebooks em ordem. As análises substantivas começam na Unidade 4.

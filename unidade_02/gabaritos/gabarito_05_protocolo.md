@@ -9,7 +9,7 @@ Não há uma única base correta. Avalie cada critério de 0 a 2.
 | cobertura | não discutida | lista genérica de limites | dimensões, mecanismos, efeitos e mitigação |
 | documentação | campos sem definição | dicionário incompleto | esquema, domínios, origem e limitações |
 | proveniência | apenas arquivo/URL | origem sem transformações | fonte, agentes, versão, acesso e cadeia |
-| ética e legalidade | ignoradas | riscos citados genericamente | pessoas afetadas, finalidade, proteção e instâncias |
+| governança, reuso, ética e legalidade | ignorados | riscos ou acesso citados genericamente | FAIR, usos, autoridade, pessoas afetadas, proteção e instâncias articulados |
 | viabilidade | sem estimativa | dependências vagas | piloto, recursos, autorizações e contingência |
 
 Uma aprovação exige pelo menos 11 de 14 pontos, sem nota zero em ética e
@@ -117,7 +117,22 @@ imagens acrescentarão referência do arquivo, página ou segmento.
 **Proveniência:** registrar entidade de entrada, atividade, agente, data, código
 executado e saída. Os arquivos recebidos serão preservados sem sobrescrita.
 
-### 6. Ética e questões legais
+### 6. Governança, reuso, ética e questões legais
+
+**FAIR:** os identificadores, o dicionário e a proveniência oferecem evidências
+iniciais de encontrabilidade e reuso. Ainda faltam protocolo de recuperação,
+licença, vocabulários relacionados a padrões do campo e política de versões.
+Essas lacunas serão registradas como ações, não convertidas em uma nota FAIR.
+
+**Acesso, licença e usos:** `condicao_acesso` descreve consulta e não concede
+reutilização. Cada custodiante deverá informar separadamente acesso, reprodução
+e publicação. O corpus poderá apoiar o estudo da composição do catálogo e dos
+efeitos da seleção; não deverá sustentar inferências sobre a importância
+histórica dos grupos nem ser redistribuído sem direitos verificados.
+
+**Datasheet e manutenção:** a pesquisadora manterá uma ficha com motivação,
+composição, coleta, processamento, usos, distribuição e manutenção. Cada versão
+indicará data, alterações, responsável e forma de comunicar correções.
 
 Embora os dados da atividade sejam fictícios, um projeto real pode conter nomes,
 imagens, filiações e informações sensíveis, inclusive relativas a descendentes
@@ -125,6 +140,12 @@ ou comunidades. Antes da publicação, consultarei as instâncias institucionais
 competentes, verificarei direitos e termos dos acervos e aplicarei minimização.
 Arquivos restritos ficarão em área com controle de acesso. Resultados públicos
 não incluirão dados que permitam reidentificação sem justificativa e avaliação.
+
+**CARE:** o catálogo fictício não contém dados indígenas reais, portanto não se
+alega conformidade. Se as fontes reais envolverem povos, conhecimentos,
+territórios ou patrimônio indígenas, benefício, autoridade para controlar,
+responsabilidade e ética serão definidos com os povos envolvidos; custódia
+institucional ou acesso público não serão tomados como autorização suficiente.
 
 ### 7. Viabilidade e contingência
 
@@ -145,7 +166,7 @@ desta etapa.
 | cobertura e vieses | 2 | cinco dimensões e mecanismos discutidos |
 | metadados e identificadores | 2 | estratégia e exemplo de campo definidos |
 | proveniência | 1 | estrutura prevista, ainda sem log real do piloto |
-| ética e questões legais | 1 | riscos reconhecidos, mas termos reais ainda precisam ser verificados |
+| governança, reuso, ética e questões legais | 1 | riscos e usos reconhecidos, mas autoridade, termos e protocolo de acesso reais ainda precisam ser verificados |
 | viabilidade | 2 | piloto, estimativa e plano alternativo delimitados |
 
 **Total: 12/14. Decisão:** manter com revisão obrigatória da proveniência do
@@ -164,5 +185,5 @@ separei autorização de consulta da licença de reprodução. Essas mudanças e
 que conveniência da tabela seja confundida com propriedade da fonte.
 
 **Referências mobilizadas:** AHA (2023), Gebru et al. (2021), Rodrigues (2020),
-Trouillot (1995), Schwartz e Cook (2002), Carroll et al. (2020), W3C PROV-O,
-ANPD e LGPD, conforme `referencias.md`.
+Trouillot (1995), Schwartz e Cook (2002), Wilkinson et al. (2016), Carroll et
+al. (2020), W3C PROV-O, ANPD e LGPD, conforme `referencias.md`.

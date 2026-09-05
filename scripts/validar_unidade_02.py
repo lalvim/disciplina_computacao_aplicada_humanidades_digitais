@@ -60,6 +60,9 @@ def validar_cobertura() -> None:
         "proveniência": "proveniência",
         "viés": "viés de seleção",
         "silêncios": "silêncios documentais",
+        "FAIR": "findable / encontrável",
+        "CARE": "authority to control / autoridade para controlar",
+        "datasheets": "datasheets for datasets",
         "ética e legal": "ética e questões legais",
     }
     ausentes = [rotulo for rotulo, termo in termos.items() if termo not in conteudo]
@@ -90,7 +93,8 @@ def validar_imagens() -> None:
         "02_cadeia_ausencias.svg",
         "02_cobertura_catalogo_corpus.svg",
         "03_documentacao_proveniencia.svg",
-        "04_protocolo_integrado.svg",
+        "04_fair_care_datasheets.svg",
+        "05_protocolo_integrado.svg",
     }
     encontrados = {p.name for p in pasta.iterdir() if p.is_file()}
     assert encontrados == esperados, f"imagens divergentes: {encontrados ^ esperados}"
@@ -105,9 +109,9 @@ def validar_imagens() -> None:
         )
         referencias.extend(re.findall(r"!\[([^]]+)\]\((imagens/[^)]+)\)", markdown))
 
-    assert len(referencias) == 8
+    assert len(referencias) == 9
     caminhos = [caminho for _, caminho in referencias]
-    assert len(set(caminhos)) == 8
+    assert len(set(caminhos)) == 9
     for alt, caminho in referencias:
         assert len(alt.split()) >= 6, f"texto alternativo insuficiente: {caminho}"
         assert (UNIDADE / caminho).is_file(), f"imagem ausente: {caminho}"
@@ -137,10 +141,10 @@ def validar_exercicios() -> None:
     assert "<!doctype html>" in html.lower()
     assert "<noscript>" in html
     assert not re.search(r'(?:src|href)="https?://', html)
-    assert len(re.findall(r'"enunciado":', html)) == 18
-    assert len(re.findall(r'"correta":', html)) == 18
+    assert len(re.findall(r'"enunciado":', html)) == 21
+    assert len(re.findall(r'"correta":', html)) == 21
     texto = (UNIDADE / "exercicios_unidade_02_texto.md").read_text(encoding="utf-8")
-    assert len(re.findall(r"^## Questão \d+", texto, re.MULTILINE)) == 18
+    assert len(re.findall(r"^## Questão \d+", texto, re.MULTILINE)) == 21
 
     chave = (
         UNIDADE / "gabaritos" / "gabarito_exercicios_multipla_escolha.md"
@@ -149,7 +153,7 @@ def validar_exercicios() -> None:
     corretas = [
         chr(65 + int(i)) for i in re.findall(r'"correta":\s*(\d+)', html)
     ]
-    assert len(respostas) == 18 and respostas == corretas
+    assert len(respostas) == 21 and respostas == corretas
 
 
 def validar_gabaritos() -> None:
@@ -170,7 +174,12 @@ def validar_gabaritos() -> None:
             "### Exemplo de registro de proveniência",
             "### Por que esta resposta é defensável?",
         ],
-        "gabarito_04_protocolo.md": [
+        "gabarito_04_governanca_documentacao.md": [
+            "## Resultado esperado da auditoria",
+            "## Exemplo de resposta — ficha de governança e documentação",
+            "### Por que esta resposta é defensável?",
+        ],
+        "gabarito_05_protocolo.md": [
             "## Exemplo de resposta — protocolo integrado da base",
             "### 8. Autoavaliação — exemplo",
             "### 9. Revisão por pares — exemplo",
@@ -187,7 +196,7 @@ def validar_gabaritos() -> None:
 
 def validar_referencias_e_revisao() -> None:
     referencias = (UNIDADE / "referencias.md").read_text(encoding="utf-8")
-    for termo in ["AMERICAN HISTORICAL ASSOCIATION", "GEBRU", "RODRIGUES", "TROUILLOT", "SCHWARTZ", "CARROLL", "ANPD", "LGPD", "W3C"]:
+    for termo in ["AMERICAN HISTORICAL ASSOCIATION", "GEBRU", "RODRIGUES", "TROUILLOT", "SCHWARTZ", "CARROLL", "WILKINSON", "ANPD", "LGPD", "W3C"]:
         assert termo in referencias, f"referência ausente: {termo}"
     assert referencias.count("https://") >= 8
 
@@ -202,11 +211,11 @@ def validar_referencias_e_revisao() -> None:
 
 def main() -> None:
     notebooks = sorted(UNIDADE.glob("*.ipynb"))
-    assert len(notebooks) == 5
+    assert len(notebooks) == 6
     total_textos = total_codigos = 0
     for caminho in notebooks:
         textos, codigos = executar_notebook(caminho)
-        if caminho.name == "04_oficina_protocolo_da_base.ipynb":
+        if caminho.name == "05_oficina_protocolo_da_base.ipynb":
             assert codigos == 0
         total_textos += textos
         total_codigos += codigos
@@ -217,8 +226,8 @@ def main() -> None:
     validar_exercicios()
     validar_gabaritos()
     validar_referencias_e_revisao()
-    print("OK cobertura: 12/12 conteúdos")
-    print("OK imagens: 8 recursos locais, acessíveis e documentados")
+    print("OK cobertura: 15/15 conteúdos")
+    print("OK imagens: 9 recursos locais, acessíveis e documentados")
     print("OK dados, exercícios, gabaritos com exemplos, referências e revisores")
     print(f"OK total: {total_textos} células Markdown, {total_codigos} de código")
 

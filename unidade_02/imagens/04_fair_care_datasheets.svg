@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630"
+ role="img" aria-labelledby="titulo descricao">
+<title id="titulo">FAIR, CARE e Datasheets</title>
+<desc id="descricao">Três quadros mostram FAIR para condições técnicas de reuso, CARE para autoridade e responsabilidade e datasheets para documentar o ciclo de vida; as lentes convergem em uma decisão documentada.</desc>
+<defs>
+  <marker id="seta" markerWidth="10" markerHeight="10" refX="8" refY="3"
+   orient="auto" markerUnits="strokeWidth">
+    <path d="M0,0 L0,6 L9,3 z" fill="#17324d"/>
+  </marker>
+  <style>
+    .titulo { font: 700 30px system-ui, sans-serif; fill: #17324d; }
+    .subtitulo { font: 700 19px system-ui, sans-serif; fill: #17324d; }
+    .corpo { font: 16px system-ui, sans-serif; fill: #17324d; }
+    .nota { font: italic 15px system-ui, sans-serif; fill: #53606c; }
+    .numero { font: 700 25px system-ui, sans-serif; fill: #fff; }
+    .seta { stroke: #17324d; stroke-width: 3; fill: none; marker-end: url(#seta); }
+    .tracejada { stroke-dasharray: 9 7; }
+  </style>
+</defs>
+<rect width="1200" height="630" rx="28" fill="#fbf4e8"/>
+<text x="600" y="48" class="titulo" text-anchor="middle"><tspan x="600" dy="0">Três lentes complementares sobre a base</tspan></text><rect x="55" y="105" width="320" height="235" rx="18" fill="#dbe8ec" stroke="#17324d" stroke-width="3"/><text x="215.0" y="137" class="subtitulo" text-anchor="middle"><tspan x="215.0" dy="0">FAIR</tspan></text><text x="215.0" y="170" class="corpo" text-anchor="middle"><tspan x="215.0" dy="0">encontrável</tspan><tspan x="215.0" dy="22">acessível</tspan><tspan x="215.0" dy="22">interoperável</tspan><tspan x="215.0" dy="22">reutilizável</tspan></text><rect x="440" y="105" width="320" height="235" rx="18" fill="#d8ebe7" stroke="#256b6b" stroke-width="3"/><text x="600.0" y="137" class="subtitulo" text-anchor="middle"><tspan x="600.0" dy="0">CARE</tspan></text><text x="600.0" y="170" class="corpo" text-anchor="middle"><tspan x="600.0" dy="0">benefício coletivo</tspan><tspan x="600.0" dy="22">autoridade para controlar</tspan><tspan x="600.0" dy="22">responsabilidade</tspan><tspan x="600.0" dy="22">ética</tspan></text><rect x="825" y="105" width="320" height="235" rx="18" fill="#eadde7" stroke="#69445f" stroke-width="3"/><text x="985.0" y="137" class="subtitulo" text-anchor="middle"><tspan x="985.0" dy="0">Datasheets</tspan></text><text x="985.0" y="170" class="corpo" text-anchor="middle"><tspan x="985.0" dy="0">motivação e composição</tspan><tspan x="985.0" dy="22">coleta e processamento</tspan><tspan x="985.0" dy="22">usos e distribuição</tspan><tspan x="985.0" dy="22">manutenção</tspan></text><path class="seta" d="M215,345 C215,405 410,430 485,455"/><path class="seta" d="M600,345 V445"/><path class="seta" d="M985,345 C985,405 790,430 715,455"/><rect x="410" y="445" width="380" height="90" rx="18" fill="#fffdf8" stroke="#a44f32" stroke-width="3"/><text x="600.0" y="477" class="subtitulo" text-anchor="middle"><tspan x="600.0" dy="0">Decisão documentada</tspan></text><text x="600.0" y="510" class="corpo" text-anchor="middle"><tspan x="600.0" dy="0">evidências técnicas + autoridade</tspan><tspan x="600.0" dy="22">+ ciclo de vida + limites</tspan></text><text x="600" y="585" class="nota" text-anchor="middle"><tspan x="600" dy="0">Documentação não substitui participação; acesso restrito não significa gestão inadequada</tspan></text>
+</svg>

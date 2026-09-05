@@ -4,6 +4,10 @@
 
 **Aprovada com ajustes baixos — 34/36 (94%).**
 
+Parecer atualizado após a inclusão do Notebook 04 sobre FAIR, CARE e
+*Datasheets for Datasets* em 4 de setembro de 2026. A oficina passou a ser o
+Notebook 05.
+
 | Revisor | Pontuação | Decisão |
 |---|---:|---|
 | nível acadêmico | 6/6 | Aprovada |

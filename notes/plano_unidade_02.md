@@ -1,7 +1,8 @@
 # Plano de execução — Unidade 2
 
-**Situação:** executado em 30 de julho de 2026. A primeira rodada dos seis
-revisores aprovou a unidade com ajustes baixos de manutenção.
+**Situação:** executado em 30 de julho de 2026 e ampliado em 4 de setembro de
+2026. A ampliação introduz FAIR, CARE e *Datasheets for Datasets* antes da
+oficina final.
 
 Este plano segue as
 [diretrizes de formatação e escrita do material](diretrizes_formatacao_material.md)
@@ -33,8 +34,11 @@ Ao concluir a unidade, o estudante deverá ser capaz de:
 6. especificar metadados e elaborar um dicionário de dados;
 7. propor identificadores estáveis e verificar sua unicidade;
 8. registrar proveniência e transformações previstas;
-9. reconhecer responsabilidades éticas e questões legais da coleta;
-10. documentar uma base defensável para o projeto da disciplina.
+9. distinguir encontrabilidade, acesso, interoperabilidade e reuso;
+10. situar CARE na soberania e governança de dados indígenas;
+11. documentar motivação, composição, usos, distribuição e manutenção;
+12. reconhecer responsabilidades éticas e questões legais da coleta;
+13. documentar uma base defensável para o projeto da disciplina.
 
 ## 3. Organização dos materiais
 
@@ -44,7 +48,8 @@ unidade_02/
 ├── 01_fontes_populacao_e_selecao.ipynb
 ├── 02_cobertura_vieses_e_silencios.ipynb
 ├── 03_metadados_identificadores_e_proveniencia.ipynb
-├── 04_oficina_protocolo_da_base.ipynb
+├── 04_governanca_reuso_e_documentacao_de_bases.ipynb
+├── 05_oficina_protocolo_da_base.ipynb
 ├── dados/
 ├── gabaritos/
 ├── revisores/
@@ -96,7 +101,22 @@ unidade_02/
 
 **Produto parcial:** dicionário de dados e registro de proveniência.
 
-### Notebook 04 — Oficina do protocolo da base
+### Notebook 04 — Governança, reuso e documentação de bases
+
+- princípios FAIR e sua ênfase em reutilização por pessoas e máquinas;
+- diferença entre acessibilidade e abertura irrestrita;
+- princípios CARE no contexto da soberania de dados indígenas;
+- relações e tensões entre FAIR e CARE;
+- ciclo de vida proposto em *Datasheets for Datasets*;
+- adaptação crítica para bases históricas e culturais;
+- auditoria computacional limitada a evidências verificáveis;
+- discussão em duplas sobre autoridade, acesso e usos;
+- elaboração de ficha de governança e documentação.
+
+**Produto parcial:** ficha com evidências FAIR, análise situada de governança e
+minidatasheet.
+
+### Notebook 05 — Oficina do protocolo da base
 
 - adequação da base à pergunta;
 - fontes e condições de acesso;
@@ -126,16 +146,21 @@ possa distinguir erro técnico de limitação documental.
 ### Semana 1 — 4 horas
 
 1. preparação e diagnóstico — 30 minutos;
-2. Notebook 00 — 30 minutos;
-3. Notebook 01 — 1 hora e 40 minutos;
-4. início do Notebook 02 — 1 hora e 20 minutos.
+2. Notebook 00 — 20 minutos;
+3. Notebook 01 — 1 hora e 30 minutos;
+4. Notebook 02 — 1 hora e 40 minutos.
 
 ### Semana 2 — 4 horas
 
-1. conclusão do Notebook 02 — 50 minutos;
-2. Notebook 03 — 1 hora e 30 minutos;
-3. Notebook 04 e discussão entre pares — 1 hora e 20 minutos;
+1. Notebook 03 — 1 hora e 15 minutos;
+2. Notebook 04, incluindo discussão em duplas — 1 hora e 25 minutos;
+3. Notebook 05 e revisão por pares — 1 hora;
 4. revisão objetiva — 20 minutos.
+
+Os trechos introdutórios sobre CARE e *datasheets* que antes apareciam nos
+Notebooks 02 e 03 foram convertidos em transições para o Notebook 04. A ficha
+produzida nele reduz o tempo de preenchimento da oficina, preservando as oito
+horas totais em vez de apenas acrescentar conteúdo.
 
 ## 7. Dependências e limites de escopo
 
@@ -152,7 +177,7 @@ ainda suas técnicas de correção.
 1. registrar este plano;
 2. verificar referências acadêmicas, técnicas e normativas;
 3. criar dados didáticos e documentação de proveniência;
-4. produzir os cinco notebooks;
+4. produzir os seis notebooks;
 5. preparar exercícios e gabaritos;
 6. criar roteiros de revisão adaptados à Unidade 2;
 7. executar todos os notebooks;
@@ -167,6 +192,8 @@ ainda suas técnicas de correção.
 - cobertura e representatividade serão conceitualmente distinguidas;
 - ausências documentais não serão reduzidas a valores nulos;
 - metadados, dicionário, identificadores e proveniência serão demonstrados;
+- FAIR, CARE e *datasheets* serão distinguidos e aplicados sem automatizar
+  decisões de governança;
 - ética e questões legais serão apresentadas como parte do desenho;
 - todos os notebooks executarão sem erros;
 - exercício, gabaritos e oficina usarão terminologia consistente;

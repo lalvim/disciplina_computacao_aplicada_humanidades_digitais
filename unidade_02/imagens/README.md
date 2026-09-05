@@ -7,11 +7,11 @@ do repositório no Google Colab.
 
 ## Diagramas autorais
 
-Os sete SVGs foram produzidos especificamente para esta unidade pelo script
+Os oito SVGs foram produzidos especificamente para esta unidade pelo script
 `scripts/construir_imagens_unidade_02.py` e seguem a licença geral do
 repositório:
 
-- `00_percurso_unidade.svg` — percurso cumulativo dos cinco notebooks;
+- `00_percurso_unidade.svg` — percurso cumulativo dos seis notebooks;
 - `01_populacao_acessivel_corpus.svg` — relação entre população de interesse,
   população acessível, corpus e mediações;
 - `01_papel_das_fontes.svg` — mudança do papel de uma fonte conforme a pergunta;
@@ -20,7 +20,9 @@ repositório:
   corpus por grupo representado;
 - `03_documentacao_proveniencia.svg` — funções complementares de identificador,
   dicionário de dados e proveniência;
-- `04_protocolo_integrado.svg` — articulação das partes do protocolo da base.
+- `04_fair_care_datasheets.svg` — diferenças e complementaridades entre as três
+  lentes de governança e documentação;
+- `05_protocolo_integrado.svg` — articulação das partes do protocolo da base.
 
 Todos os SVGs contêm `<title>`, `<desc>` e rótulos que não dependem somente de
 cor. A comparação de cobertura é reconstruída a partir de

@@ -16,6 +16,7 @@ DEPENDENTES_DO_REPOSITORIO = {
         "01_fontes_populacao_e_selecao.ipynb",
         "02_cobertura_vieses_e_silencios.ipynb",
         "03_metadados_identificadores_e_proveniencia.ipynb",
+        "04_governanca_reuso_e_documentacao_de_bases.ipynb",
     },
     "unidade_03": {
         "00_guia_da_unidade.ipynb",
@@ -44,7 +45,10 @@ def main() -> None:
     for unidade, dependentes in DEPENDENTES_DO_REPOSITORIO.items():
         pasta = RAIZ / unidade
         notebooks = sorted(pasta.glob("*.ipynb"))
-        assert len(notebooks) == 5, f"{unidade}: esperados cinco notebooks"
+        esperados = 6 if unidade == "unidade_02" else 5
+        assert len(notebooks) == esperados, (
+            f"{unidade}: esperados {esperados} notebooks"
+        )
         readme_unidade = (pasta / "README.md").read_text(encoding="utf-8")
 
         for caminho in notebooks:
@@ -76,8 +80,8 @@ def main() -> None:
                 assert f"PASTA_UNIDADE = REPOSITORIO / {unidade!r}" in codigo
                 compile(codigo, str(caminho), "exec")
 
-    assert total == 20
-    assert preparacoes == 13
+    assert total == 21
+    assert preparacoes == 14
     print(f"OK Colab: {total} links e {preparacoes} preparações seletivas")
 
 

@@ -111,9 +111,15 @@ Quais dados são necessários e como saber se eles representam adequadamente o f
 11. Ausências e silêncios documentais.
 12. Aspectos éticos e legais da coleta.
 
+**Aprofundamento transversal:** princípios FAIR e CARE e documentação do ciclo
+de vida por meio de uma adaptação crítica de *Datasheets for Datasets* às
+Humanidades Digitais.
+
 ### Produto da unidade
 
-Descrição da base, das fontes, das unidades de análise e dos critérios de seleção.
+Protocolo da base com fontes, unidades de análise, critérios de seleção,
+cobertura, proveniência, governança, condições de reuso e documentação do ciclo
+de vida.
 
 ---
 
@@ -722,7 +728,8 @@ somente se necessário e posiciona a execução na unidade correta.
 | 01 — Fontes, população e seleção | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_02/01_fontes_populacao_e_selecao.ipynb) |
 | 02 — Cobertura, vieses e silêncios | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_02/02_cobertura_vieses_e_silencios.ipynb) |
 | 03 — Metadados e proveniência | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_02/03_metadados_identificadores_e_proveniencia.ipynb) |
-| 04 — Oficina do protocolo | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_02/04_oficina_protocolo_da_base.ipynb) |
+| 04 — Governança, reuso e documentação | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_02/04_governanca_reuso_e_documentacao_de_bases.ipynb) |
+| 05 — Oficina do protocolo | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_02/05_oficina_protocolo_da_base.ipynb) |
 
 ### Unidade 3
 

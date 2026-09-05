@@ -98,33 +98,35 @@ def percurso() -> str:
         ("01", "Seleção", ["população", "e corpus"], CORES["verde_claro"], CORES["verde"]),
         ("02", "Cobertura", ["vieses", "e silêncios"], CORES["terracota_claro"], CORES["terracota"]),
         ("03", "Documentação", ["metadados", "e proveniência"], CORES["ameixa_claro"], CORES["ameixa"]),
-        ("04", "Oficina", ["protocolo", "defensável"], "#f1e2bd", "#8a6528"),
+        ("04", "Governança", ["FAIR, CARE", "e datasheets"], "#f1e2bd", "#8a6528"),
+        ("05", "Oficina", ["protocolo", "defensável"], CORES["azul_claro"], CORES["azul"]),
     ]
     for indice, (numero, titulo, linhas, fundo, contorno) in enumerate(itens):
-        x = 38 + indice * 233
-        partes.append(f'<rect x="{x}" y="105" width="195" height="175" rx="18" fill="{fundo}" stroke="{contorno}" stroke-width="3"/>')
-        partes.append(f'<circle cx="{x + 97.5}" cy="{130}" r="22" fill="{contorno}"/>')
-        partes.append(bloco_texto(x + 97.5, 138, [numero], "numero"))
-        partes.append(bloco_texto(x + 97.5, 175, [titulo], "subtitulo"))
-        partes.append(bloco_texto(x + 97.5, 210, linhas, "corpo"))
+        x = 22 + indice * 196
+        partes.append(f'<rect x="{x}" y="105" width="172" height="175" rx="18" fill="{fundo}" stroke="{contorno}" stroke-width="3"/>')
+        partes.append(f'<circle cx="{x + 86}" cy="{130}" r="22" fill="{contorno}"/>')
+        partes.append(bloco_texto(x + 86, 138, [numero], "numero"))
+        partes.append(bloco_texto(x + 86, 175, [titulo], "subtitulo"))
+        partes.append(bloco_texto(x + 86, 210, linhas, "corpo"))
         if indice < len(itens) - 1:
-            partes.append(f'<path class="seta" d="M{x + 198},192 H{x + 225}"/>')
+            partes.append(f'<path class="seta" d="M{x + 175},192 H{x + 189}"/>')
     produtos = [
         "pergunta situada",
         "protocolo de seleção",
         "matriz de cobertura",
         "dicionário + cadeia",
+        "ficha de governança",
         "desenho revisado",
     ]
     for indice, produto in enumerate(produtos):
-        x = 38 + indice * 233
-        partes.append(f'<rect x="{x}" y="318" width="195" height="54" rx="12" fill="{CORES["papel"]}" stroke="{CORES["areia"]}" stroke-width="2"/>')
-        partes.append(bloco_texto(x + 97.5, 350, [produto], "corpo"))
-    partes.append('<path class="seta tracejada" d="M1085,410 C1085,530 115,530 115,410"/>')
+        x = 22 + indice * 196
+        partes.append(f'<rect x="{x}" y="318" width="172" height="54" rx="12" fill="{CORES["papel"]}" stroke="{CORES["areia"]}" stroke-width="2"/>')
+        partes.append(bloco_texto(x + 86, 350, [produto], "corpo"))
+    partes.append('<path class="seta tracejada" d="M1090,410 C1090,530 108,530 108,410"/>')
     partes.append(bloco_texto(600, 474, ["Resultados e limites fazem o projeto retornar às decisões anteriores"], "nota"))
     return documento(
         "Percurso da Unidade 2",
-        "Cinco etapas conectam diagnóstico, seleção, cobertura, documentação e oficina; uma seta de retorno indica revisão das decisões.",
+        "Seis etapas conectam diagnóstico, seleção, cobertura, documentação, governança e oficina; uma seta de retorno indica revisão das decisões.",
         "".join(partes),
         540,
     )
@@ -280,6 +282,54 @@ def documentacao_proveniencia() -> str:
     )
 
 
+def fair_care_datasheets() -> str:
+    partes = [bloco_texto(600, 48, ["Três lentes complementares sobre a base"], "titulo")]
+    partes.append(
+        caixa(
+            55, 105, 320, 235, "FAIR",
+            ["encontrável", "acessível", "interoperável", "reutilizável"],
+            CORES["azul_claro"], CORES["azul"],
+        )
+    )
+    partes.append(
+        caixa(
+            440, 105, 320, 235, "CARE",
+            ["benefício coletivo", "autoridade para controlar", "responsabilidade", "ética"],
+            CORES["verde_claro"], CORES["verde"],
+        )
+    )
+    partes.append(
+        caixa(
+            825, 105, 320, 235, "Datasheets",
+            ["motivação e composição", "coleta e processamento", "usos e distribuição", "manutenção"],
+            CORES["ameixa_claro"], CORES["ameixa"],
+        )
+    )
+    partes.extend(
+        [
+            '<path class="seta" d="M215,345 C215,405 410,430 485,455"/>',
+            '<path class="seta" d="M600,345 V445"/>',
+            '<path class="seta" d="M985,345 C985,405 790,430 715,455"/>',
+            caixa(
+                410, 445, 380, 90, "Decisão documentada",
+                ["evidências técnicas + autoridade", "+ ciclo de vida + limites"],
+                CORES["papel"], CORES["terracota"],
+            ),
+            bloco_texto(
+                600, 585,
+                ["Documentação não substitui participação; acesso restrito não significa gestão inadequada"],
+                "nota",
+            ),
+        ]
+    )
+    return documento(
+        "FAIR, CARE e Datasheets",
+        "Três quadros mostram FAIR para condições técnicas de reuso, CARE para autoridade e responsabilidade e datasheets para documentar o ciclo de vida; as lentes convergem em uma decisão documentada.",
+        "".join(partes),
+        630,
+    )
+
+
 def protocolo_integrado() -> str:
     partes = [bloco_texto(600, 45, ["As partes do protocolo precisam concordar"], "titulo")]
     itens = [
@@ -318,7 +368,8 @@ def main() -> None:
         "02_cadeia_ausencias.svg": cadeia_ausencias(),
         "02_cobertura_catalogo_corpus.svg": cobertura_catalogo_corpus(),
         "03_documentacao_proveniencia.svg": documentacao_proveniencia(),
-        "04_protocolo_integrado.svg": protocolo_integrado(),
+        "04_fair_care_datasheets.svg": fair_care_datasheets(),
+        "05_protocolo_integrado.svg": protocolo_integrado(),
     }
     for nome, conteudo in imagens.items():
         (IMAGENS / nome).write_text(conteudo, encoding="utf-8")

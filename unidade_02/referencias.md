@@ -57,12 +57,13 @@ https://doi.org/10.1038/sdata.2016.18.
 |---|---|---|
 | Antes da Semana 1 | Rodrigues (2020) | Relacionar base histórica, método e ética |
 | Durante o Notebook 01 | AHA (2023) | Distinguir fontes primárias e secundárias em relação à pergunta |
-| Durante o Notebook 01 | Gebru et al. (2021) | Documentar motivação, composição e coleta |
 | Durante o Notebook 02 | Trouillot (1995), cap. 1 | Discutir produção de silêncios |
 | Durante o Notebook 02 | Schwartz e Cook (2002) | Relacionar arquivo, memória e poder |
 | Durante o Notebook 03 | W3C PROV-O | Introduzir entidades, atividades e agentes |
+| Antes e durante o Notebook 04 | Wilkinson et al. (2016) | Distinguir encontrabilidade, acesso, interoperabilidade e reuso |
+| Antes e durante o Notebook 04 | Carroll et al. (2020) | Situar CARE na soberania e governança de dados indígenas |
+| Durante o Notebook 04 | Gebru et al. (2021) | Documentar o ciclo de vida, os usos e a manutenção da base |
 | Antes da oficina | ANPD | Orientar a avaliação de dados pessoais em pesquisa |
-| Aprofundamento | Carroll et al. (2020) | Governança de dados indígenas e princípios CARE |
 
 As referências normativas e técnicas devem ser verificadas novamente antes de
 cada oferta. O material didático não substitui avaliação ética institucional

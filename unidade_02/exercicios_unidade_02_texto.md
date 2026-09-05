@@ -146,7 +146,34 @@ Os princípios CARE enfatizam, entre outros aspectos:
 - [ ] **C.** eliminação de metadados
 - [ ] **D.** neutralidade das bases
 
-## Questão 17 — Questões legais
+## Questão 17 — FAIR
+
+Nos princípios FAIR, dizer que dados são acessíveis significa necessariamente que:
+
+- [ ] **A.** qualquer pessoa pode baixá-los sem restrição
+- [ ] **B.** existe um procedimento explícito de acesso, que pode incluir autenticação e autorização
+- [ ] **C.** os dados não têm direitos associados
+- [ ] **D.** todos os registros devem ser publicados em uma planilha
+
+## Questão 18 — FAIR e CARE
+
+Qual afirmação relaciona adequadamente FAIR e CARE?
+
+- [ ] **A.** CARE substitui todos os requisitos técnicos de FAIR.
+- [ ] **B.** Uma base FAIR é automaticamente justa.
+- [ ] **C.** FAIR focaliza condições de localização e reuso; CARE acrescenta benefício, autoridade, responsabilidade e ética no contexto dos dados indígenas.
+- [ ] **D.** Os dois conjuntos de princípios exigem abertura irrestrita.
+
+## Questão 19 — Datasheets
+
+Qual conjunto corresponde às partes propostas em Datasheets for Datasets?
+
+- [ ] **A.** Somente título, autoria e palavras-chave.
+- [ ] **B.** Motivação, composição, coleta, processamento, usos, distribuição e manutenção.
+- [ ] **C.** Apenas acurácia e desempenho de modelos.
+- [ ] **D.** Somente licença e endereço eletrônico.
+
+## Questão 20 — Questões legais
 
 Diante de dados pessoais em um projeto real, o estudante deve:
 
@@ -155,7 +182,7 @@ Diante de dados pessoais em um projeto real, o estudante deve:
 - [ ] **C.** publicar primeiro e avaliar depois
 - [ ] **D.** presumir consentimento
 
-## Questão 18 — Integração
+## Questão 21 — Integração
 
 Qual protocolo é mais defensável?
 

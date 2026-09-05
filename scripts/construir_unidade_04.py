@@ -32,22 +32,41 @@ def guia(): return [m('''# Unidade 4 — Guia
 
 ![Registros abstratos conduzem a padrões quantitativos e textuais; linhas de proveniência retornam a documentos examinados por uma lupa e se abrem em interpretações alternativas.](imagens/00_abertura_conceitual.png)
 
-Exploração descreve, diagnostica e formula perguntas; não confirma hipóteses retrospectivas. Arnold e Tilton (2019) relacionam estatística exploratória, visualização e computação às Humanidades Digitais. Drucker (2011) lembra que gráficos incorporam escolhas.'''),m('''## Percurso
+Exploração descreve, diagnostica e formula perguntas; não confirma hipóteses retrospectivas. Arnold e Tilton (2019) relacionam estatística exploratória, visualização e computação às Humanidades Digitais. Drucker (2011) lembra que gráficos incorporam escolhas.'''),m('''Se explorar significa construir uma leitura inicial e controlada da base, a ordem
+das operações importa. O percurso abaixo começa pela descrição, passa pelos textos
+e pelas formas visuais e retorna aos documentos antes de formular novas perguntas.
+
+## Percurso
 
 ![Cinco etapas ligam base documentada, descrição, visualização, leitura próxima e formulação de hipóteses; uma seta retorna às decisões anteriores.](imagens/00_percurso_exploracao.svg)
 
 01 exploração quantitativa; 02 textual; 03 visual; 04 relatório. Os 24 registros são fictícios e D023 é extremo deliberado.'''),c('''import json,pandas as pd
-dados=pd.read_csv("dados/documentos.csv"); prov=json.loads(open("dados/proveniencia.json",encoding="utf-8").read()); print(dados.shape,prov["natureza"]); dados.head()'''),m('''## Regra de escrita
+dados=pd.read_csv("dados/documentos.csv"); prov=json.loads(open("dados/proveniencia.json",encoding="utf-8").read()); print(dados.shape,prov["natureza"]); dados.head()'''),m('''A inspeção inicial mostra quais registros e variáveis estão disponíveis. O passo
+seguinte é estabelecer como transformar essas observações em afirmações sem
+confundir resultado calculado, interpretação e conclusão.
+
+## Regra de escrita
 
 ![A escrita passa por procedimento, descrição, interpretação, limite e próximo passo.](imagens/00_camadas_escrita.svg)
 
 Separe descrição do cálculo, interpretação situada e hipótese provisória. Testes, confiança e comparação inferencial ficam para a Unidade 5.
 ### Diagnóstico
-Que padrão espera e que saída revelaria erro? Escreva aqui.'''),m('''## Produto
-Relatório com tabelas, quatro famílias de gráficos, perfil textual, concordâncias, casos extremos, hipóteses e limites.''')]
+Que padrão espera e que saída revelaria erro? Escreva aqui.'''),m('''A regra de escrita acompanhará todos os notebooks e dará forma à entrega. O
+produto final reúne os resultados justamente para tornar visível essa separação
+entre procedimento, descrição, interpretação, hipótese e limite.
+
+## Produto
+Relatório com tabelas, quatro famílias de gráficos, perfil textual, concordâncias,
+casos extremos, hipóteses e limites. Comece pelo Notebook 01, que estabelece como
+o tipo de variável condiciona cada resumo quantitativo.''')]
 def quant():
  return [
   m('''# Exploração quantitativa
+
+O guia definiu que explorar exige separar cálculo, interpretação e hipótese. Este
+notebook inicia essa prática pela classificação das variáveis, porque a escala de
+cada uma determina quais resumos e comparações são defensáveis.
+
 ## Tipos de variáveis
 
 ![Escalas nominal, ordinal, quantitativa e temporal são relacionadas a operações e gráficos; identificadores aparecem separados das medidas.](imagens/01_tipos_variaveis.svg)
@@ -67,7 +86,11 @@ pd.DataFrame(
      ["palavras", "quantitativa discreta"], ["id_documento", "identificador"]],
     columns=["variavel", "escala"],
 )'''),
-  m(r'''## Frequências e proporções
+  m(r'''A classificação anterior determina quais operações são conceitualmente
+adequadas. Para variáveis nominais, como `tema` e `genero`, começaremos descrevendo
+quantos documentos pertencem a cada categoria e que parcela do corpus representam.
+
+## Frequências e proporções
 
 Se $x_i$ é a categoria do documento $i$, a frequência absoluta da categoria
 $k$ e sua proporção são:
@@ -90,7 +113,11 @@ automaticamente intensidade, importância histórica ou quantidade de menções.
   c('''frequencias_tema = dados["tema"].value_counts().rename("frequencia")
 proporcoes_tema = dados["tema"].value_counts(normalize=True).rename("proporcao")
 pd.concat([frequencias_tema, proporcoes_tema], axis=1)'''),
-  m(r'''## Centro, quartis e dispersão
+  m(r'''Frequências e proporções resumem categorias. Quando a variável registra uma
+quantidade, como o número de palavras, precisamos mudar de ferramentas e descrever
+posição central, ordenação e variabilidade.
+
+## Centro, quartis e dispersão
 
 Para uma variável quantitativa com valores $x_1,\ldots,x_n$, a média é:
 
@@ -136,7 +163,11 @@ display(distribuicao_anotada(
     x.tolist(), dados["id_documento"].tolist(), x.mean(), x.median()
 ))
 resumo'''),
-  m(r'''## Distribuição e valores extremos
+  m(r'''As medidas anteriores condensam os valores em poucos números, mas não revelam
+sozinhas a forma da distribuição. Por isso, examinaremos agora a metade central e
+os casos que se afastam do conjunto antes de decidir como interpretá-los.
+
+## Distribuição e valores extremos
 
 O intervalo interquartil cobre a metade central dos valores ordenados:
 
@@ -167,7 +198,11 @@ extremos = dados[
 ]
 print("Limites:", limite_inferior, "a", limite_superior)
 extremos[["id_documento", "palavras", "genero", "tema"]]'''),
-  m(r'''## Tabela de contingência
+  m(r'''Até aqui descrevemos uma variável por vez. Para investigar se a composição
+dos temas muda entre gêneros documentais, precisamos cruzar duas variáveis
+categóricas e tornar explícito o denominador de cada comparação.
+
+## Tabela de contingência
 
 Se $A$ representa o gênero e $B$ o tema, a célula $n_{ij}$ conta os
 documentos que pertencem simultaneamente à linha $i$ e à coluna $j$:
@@ -190,12 +225,26 @@ proporcoes_por_genero = pd.crosstab(
     dados["genero"], dados["tema"], normalize="index"
 ).round(3)
 contagens, proporcoes_por_genero'''),
-  m('''## Atividade
-Classifique variáveis, escolha medidas e denominadores, inspecione extremo e contingência. Separe descrição, interpretação e hipótese. Escreva aqui.'''),
+  m('''A tabela de contingência encerra o movimento que começou na classificação das
+variáveis: escala, pergunta e denominador precisam permanecer coerentes. A
+atividade reúne essas decisões antes que os resultados sejam levados para a
+exploração textual e para as visualizações.
+
+## Atividade
+
+Classifique variáveis, escolha medidas e denominadores, inspecione extremo e
+contingência. Separe descrição, interpretação e hipótese. Ao concluir, registre
+quais resultados merecem ser comparados com o conteúdo dos textos no Notebook 02.
+Escreva aqui.'''),
  ]
 def texto():
  return [
   m('''# Exploração textual
+
+O Notebook 01 descreveu a composição e as medidas documentais da base. Agora
+voltaremos ao conteúdo linguístico dos registros, começando pelas regras que
+transformam texto preservado em unidades analisáveis.
+
 ## Tokenização e normalização
 
 ![O texto preservado passa por normalização, tokenização, filtro e contagem; o diagrama indica possíveis perdas em cada transformação.](imagens/02_fluxo_tokenizacao.svg)
@@ -220,7 +269,11 @@ def tokenizar(texto):
 dados["tokens"] = dados["texto"].map(tokenizar)
 todos_tokens = [token for documento in dados["tokens"] for token in documento]
 dados[["id_documento", "tokens"]].head(2)'''),
-  m(r'''## Frequências absoluta e relativa
+  m(r'''A tokenização transforma cada documento em unidades contáveis. Como as regras
+de segmentação e normalização definem o que será reconhecido como token, elas
+precisam ser declaradas antes de qualquer frequência.
+
+## Frequências absoluta e relativa
 
 Se $t_i$ é o token na posição $i$, a frequência de uma palavra $w$ é:
 
@@ -257,7 +310,11 @@ tabela_frequencias = pd.DataFrame([
     for palavra, frequencia in frequencias_conteudo.most_common(12)
 ])
 tabela_frequencias'''),
-  m(r'''## Concordâncias
+  m(r'''As frequências mostram quanto um termo aparece, mas retiram as ocorrências de
+seus contextos. Para avaliar o sentido e a relevância de uma contagem, precisamos
+retornar aos documentos que a produziram.
+
+## Concordâncias
 
 Uma concordância recupera uma janela de $j$ tokens à esquerda e à direita de
 cada ocorrência. Não é necessário transformar essa operação em uma medida única:
@@ -278,7 +335,11 @@ dos documentos e conservar o identificador da fonte.'''),
     return pd.DataFrame(resultados)
 
 concordancias(dados, "trabalho", janela=4).head(8)'''),
-  m(r'''## N-gramas e colocações
+  m(r'''As concordâncias permitem examinar manualmente o entorno de uma palavra. O
+passo seguinte sistematiza uma pergunta relacionada: quais unidades aparecem
+juntas de maneira recorrente dentro dos documentos?
+
+## N-gramas e colocações
 
 ![A frequência do bigrama é comparada às frequências marginais; o resultado deve ser examinado com frequência mínima e concordâncias.](imagens/02_anatomia_pmi.svg)
 
@@ -327,7 +388,11 @@ tabela_colocacoes = pd.DataFrame(
     columns=["bigrama", "frequencia", "pmi"],
 )
 tabela_colocacoes.head(10)'''),
-  m(r'''## Vocabulário e diversidade lexical
+  m(r'''N-gramas e PMI observam relações locais entre palavras. Agora mudaremos a
+escala: em vez de pares de tokens, compararemos o repertório lexical de documentos
+inteiros e verificaremos como o tamanho textual interfere nessa comparação.
+
+## Vocabulário e diversidade lexical
 
 Se $V_d$ é o número de formas distintas e $N_d$ o número de tokens do
 documento $d$, a razão forma–token é:
@@ -374,8 +439,16 @@ display(ttr_duplo(
     tamanho_padrao,
 ))
 diversidade.head()'''),
-  m('''## Atividade
-Documente regras, frequências, concordâncias, n-gramas, colocação e diversidade. Retorne a trechos. Escreva aqui.'''),
+  m('''A diversidade lexical completa um percurso que começou na representação do
+texto, passou pelas contagens e retornou ao contexto. A atividade reúne essas
+camadas para selecionar resultados que poderão ser comunicados visualmente sem
+perder as regras que os produziram.
+
+## Atividade
+
+Documente regras, frequências, concordâncias, n-gramas, colocação e diversidade.
+Retorne a trechos e indique quais resultados seguirão para o Notebook 03.
+Escreva aqui.'''),
  ]
 def visual():
  return [
@@ -399,7 +472,11 @@ from graficos import barras_categorias, barras_horizontais, dispersao, histogram
 
 dados = pd.read_csv("dados/documentos.csv")
 '''),
-  m('''## Barras — categorias
+  m('''O mapa anterior relaciona pergunta, escala e família gráfica. Começaremos pelo
+caso mais simples: comparar categorias que já foram resumidas por frequências no
+Notebook 01.
+
+## Barras — categorias
 
 As barras respondem a uma comparação entre categorias. Neste conjunto didático,
 cada tema possui seis documentos: a igualdade foi construída deliberadamente e
@@ -412,7 +489,11 @@ display(barras_categorias(
     "Quatro barras de mesma altura mostram seis documentos em cada tema.",
 ))
 tabela_temas'''),
-  m(r'''## Histograma e boxplot — distribuições
+  m(r'''As barras anteriores representam categorias separadas. Para uma variável
+quantitativa, porém, a posição dos valores e os intervalos entre eles importam;
+por isso passamos a representações da distribuição.
+
+## Histograma e boxplot — distribuições
 
 Se os limites dos intervalos são $b_0,b_1,\ldots,b_J$, a altura da barra $j$
 é a quantidade de valores dentro daquele intervalo:
@@ -431,7 +512,11 @@ display(histograma_boxplot(
     dados["palavras"].tolist(), faixas, dados["id_documento"].tolist()
 ))
 tabela_intervalos, dados["palavras"].describe()'''),
-  m('''## Dispersão — relação entre quantitativas
+  m('''Histograma e boxplot descrevem uma variável quantitativa por vez. Quando a
+pergunta envolve como duas quantidades variam conjuntamente, cada documento deve
+ser localizado por um par de coordenadas.
+
+## Dispersão — relação entre quantitativas
 
 Cada ponto representa um documento. Forma e cor distinguem os gêneros, enquanto
 a tabela mantém os pares e IDs disponíveis. D023 deve ser inspecionado; o padrão
@@ -442,7 +527,11 @@ visual entre páginas e palavras não demonstra causalidade.'''),
     "Páginas e extensão dos documentos", "Páginas", "Palavras",
 ))
 dados[["id_documento", "genero", "paginas", "palavras"]]'''),
-  m(r'''## Série temporal
+  m(r'''O gráfico de dispersão não exige uma ordem substantiva entre os casos. Quando
+uma das variáveis é o tempo, a sequência cronológica acrescenta informação, mas
+também pode sugerir uma continuidade que o corpus não sustenta.
+
+## Série temporal
 
 Se $n_t$ documentos pertencem ao ano $t$, a média anual representada pela
 linha é:
@@ -460,7 +549,11 @@ display(serie_temporal(
     resumo_anual["media"].to_dict(), resumo_anual["n"].to_dict(),
 ))
 resumo_anual'''),
-  m('''## Frequências textuais
+  m('''Até aqui visualizamos metadados e medidas documentais. O mesmo princípio —
+escolher uma forma coerente e manter uma tabela equivalente — vale para os
+resultados textuais produzidos no Notebook 02.
+
+## Frequências textuais
 
 Barras preservam valores melhor que nuvem de palavras. A tabela informa as
 frequências e o denominador deve ser lido junto das regras de tokenização e da
@@ -477,13 +570,21 @@ display(barras_horizontais(
     "Dez barras horizontais ordenadas mostram frequências absolutas dos tokens de conteúdo.",
 ))
 tabela_termos'''),
-  m('''## Atividade
+  m('''As cinco famílias mostraram que um gráfico não é uma etapa automática após o
+cálculo: sua forma depende da pergunta, da variável e do limite que precisa
+permanecer visível. A atividade transforma essas escolhas em um pequeno conjunto
+de argumentos gráficos para a oficina.
+
+## Atividade
 
 Produza barras, histograma/boxplot, dispersão ou tempo e frequência textual. Para
 cada figura, entregue tabela, descrição alternativa, escala, padrão, caso, limite
 e hipótese. Explique também por que o gráfico escolhido responde à pergunta.
 
-**Minha análise:** Escreva aqui.'''),
+**Minha análise:** Escreva aqui.
+
+Ao concluir, selecione quatro figuras que, em conjunto, descrevam a base sem
+repetir a mesma informação. Elas serão integradas ao relatório no Notebook 04.'''),
  ]
 def oficina():
  return [
@@ -505,7 +606,11 @@ base própria já preparada segundo as Unidades 2 e 3.
 **Entrega esperada:** um relatório com escopo, perfil quantitativo, perfil textual,
 quatro visualizações acompanhadas de tabelas, retorno a três casos, até três
 hipóteses, limitações e instruções de reprodução.'''),
-  m('''## Como realizar a oficina
+  m('''A entrega esperada enumera os componentes do relatório. Para que eles não se
+tornem partes isoladas, a oficina usa uma ordem em que cada resultado fornece a
+base para a decisão seguinte.
+
+## Como realizar a oficina
 
 ![Pergunta, tabela, figura, leitura e limite formam uma cadeia; divergências exigem revisão.](imagens/04_cadeia_argumento.svg)
 
@@ -529,7 +634,11 @@ Para cada resultado, use a sequência abaixo:
 
 Evite frases como “o gráfico prova”. Prefira “nesta base”, “o padrão observado” e
 “uma hipótese a investigar”.'''),
-  m('''## 1. Escopo e qualidade da base
+  m('''A sequência anterior funciona como um protocolo geral. Sua aplicação começa
+pela delimitação: antes de calcular ou visualizar, é necessário saber quais casos
+estão incluídos e o que cada linha permite observar.
+
+## 1. Escopo e qualidade da base
 
 ### O que fazer
 
@@ -553,7 +662,11 @@ Evite frases como “o gráfico prova”. Prefira “nesta base”, “o padrão
 
 Não descreva apenas o arquivo. Explique a relação entre a pergunta e aquilo que cada
 linha efetivamente representa.'''),
-  m('''## 2. Perfil quantitativo
+  m('''Com corpus, unidade e qualidade declarados, já podemos produzir descrições
+numéricas compatíveis com o alcance da base. Os limites identificados na seção
+anterior devem acompanhar a leitura de cada medida.
+
+## 2. Perfil quantitativo
 
 ### O que fazer
 
@@ -582,7 +695,11 @@ linha efetivamente representa.'''),
 > procedimento de contagem de D023.
 
 **Minha análise quantitativa:** Escreva aqui.'''),
-  m('''## 3. Perfil textual
+  m('''O perfil quantitativo descreve composição, extensão e cruzamentos, mas não
+mostra como os temas são formulados nos textos. A exploração textual acrescenta
+essa camada sem abandonar os IDs, denominadores e limites já estabelecidos.
+
+## 3. Perfil textual
 
 ### O que fazer
 
@@ -608,7 +725,11 @@ Uma lista de palavras não constitui interpretação. Explique como as regras de
 processamento condicionam o que aparece no resultado.
 
 **Meu perfil textual:** Escreva aqui.'''),
-  m('''## 4. Visualizações
+  m('''Os perfis quantitativo e textual fornecem vários resultados possíveis. A etapa
+seguinte não consiste em desenhar todos eles, mas em selecionar aqueles que melhor
+respondem à pergunta e comunicá-los sem romper a ligação com as tabelas.
+
+## 4. Visualizações
 
 ### O que fazer
 
@@ -640,7 +761,12 @@ Para **cada figura**, entregue:
 **Figura 3 e análise:** Escreva aqui.
 
 **Figura 4 e análise:** Escreva aqui.'''),
-  m('''## 5. Retorno aos casos
+  m('''As visualizações tornam padrões mais perceptíveis, mas também comprimem
+diferenças e retiram documentos de seu contexto. Por isso, todo padrão selecionado
+deve orientar um retorno deliberado a casos que possam confirmá-lo, contradizê-lo
+ou qualificá-lo.
+
+## 5. Retorno aos casos
 
 ![Agregados orientam a seleção de casos; a leitura próxima retorna para revisar categorias, contagens, hipóteses e limites.](imagens/04_ciclo_agregados_casos.svg)
 
@@ -658,7 +784,12 @@ Não selecione apenas exemplos que confirmem sua primeira interpretação.
 
 O objetivo é praticar o movimento entre leitura distante e leitura próxima, não
 usar três exemplos isolados como prova do comportamento de todo o corpus.'''),
-  m('''## 6. Hipóteses provisórias
+  m('''Depois do retorno aos casos, algumas leituras iniciais serão reforçadas e
+outras precisarão ser revistas. Somente nesse ponto os padrões agregados e as
+evidências documentais podem alimentar hipóteses — ainda provisórias e abertas a
+explicações alternativas.
+
+## 6. Hipóteses provisórias
 
 Formule no máximo três hipóteses. Cada uma deve permanecer compatível com o caráter
 exploratório desta unidade.
@@ -672,7 +803,11 @@ exploratório desta unidade.
 Uma hipótese adequada poderia começar com “A diferença observada pode estar
 associada a...”. Não use “comprovamos”, “é significativo” ou linguagem causal sem
 desenho e evidência apropriados.'''),
-  m('''## 7. Limitações e reprodutibilidade
+  m('''Uma hipótese exploratória só é intelectualmente útil quando suas fronteiras
+podem ser examinadas. A próxima seção registra tanto os limites da evidência
+quanto o percurso necessário para que outra pessoa reconstrua os resultados.
+
+## 7. Limitações e reprodutibilidade
 
 ### Limitações
 
@@ -697,7 +832,11 @@ Outra pessoa deve conseguir identificar:
 - caminho entre agregado, ID e documento.
 
 **Instruções para reproduzir:** Escreva aqui.'''),
-  m('''## 8. Estrutura do relatório final
+  m('''Agora já existem resultados, interpretações, hipóteses e limites. Organizar o
+relatório significa transformar esses elementos em uma cadeia de evidência que o
+leitor consiga seguir da pergunta até as condições de reprodução.
+
+## 8. Estrutura do relatório final
 
 Organize a entrega nesta ordem:
 
@@ -713,7 +852,11 @@ Organize a entrega nesta ordem:
 
 O relatório pode ser entregue neste notebook preenchido ou em documento equivalente,
 desde que preserve essas evidências e a ligação com o notebook técnico.'''),
-  m('''## 9. Dinâmica sugerida e revisão por pares
+  m('''A estrutura define o que o relatório precisa conter; a dinâmica define como
+produzi-lo dentro do tempo da aula. A revisão por pares verificará se a cadeia é
+compreensível para alguém que não acompanhou todas as decisões do autor.
+
+## 9. Dinâmica sugerida e revisão por pares
 
 Para uma aula de quatro horas, a meta é produzir uma primeira versão completa do
 relatório. Os cálculos básicos já devem ter sido executados nos Notebooks 01 a 03.
@@ -737,7 +880,11 @@ descrição?” e “A hipótese está apresentada como provisória?”.
 **Parecer recebido:** Escreva aqui.
 
 **Mudanças realizadas após a revisão:** Escreva aqui.'''),
-  m('''## 10. Rubrica e checklist de entrega
+  m('''O parecer do colega fornece uma leitura externa, mas a entrega ainda precisa de
+critérios comuns de qualidade. A rubrica traduz as exigências do percurso em itens
+que orientam a última revisão do relatório.
+
+## 10. Rubrica e checklist de entrega
 
 Avalie cada critério de 0 a 2. Use 0 para ausente ou inadequado, 1 para parcial e 2
 para completo e justificável.

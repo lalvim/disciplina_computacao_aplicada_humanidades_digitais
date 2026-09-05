@@ -145,6 +145,41 @@ def validar_imagens():
  notebooks="\n".join(p.read_text(encoding="utf-8") for p in U.glob("*.ipynb"))
  for nome in esperados-{"README.md"}: assert nome in notebooks
 
+def validar_encadeamento():
+ esperados={
+  "00_guia_da_unidade.ipynb":[
+   "Se explorar significa construir", "A inspeção inicial mostra",
+   "A regra de escrita acompanhará",
+  ],
+  "01_exploracao_quantitativa.ipynb":[
+   "O guia definiu que explorar", "A classificação anterior determina",
+   "Frequências e proporções resumem", "As medidas anteriores condensam",
+   "Até aqui descrevemos uma variável", "A tabela de contingência encerra",
+  ],
+  "02_exploracao_textual.ipynb":[
+   "O Notebook 01 descreveu", "A tokenização transforma",
+   "As frequências mostram", "As concordâncias permitem",
+   "N-gramas e PMI observam", "A diversidade lexical completa",
+  ],
+  "03_visualizacao_exploratoria.ipynb":[
+   "O mapa anterior relaciona", "As barras anteriores representam",
+   "Histograma e boxplot descrevem", "O gráfico de dispersão não exige",
+   "Até aqui visualizamos", "As cinco famílias mostraram",
+  ],
+  "04_oficina_relatorio_exploratorio.ipynb":[
+   "A entrega esperada enumera", "A sequência anterior funciona",
+   "Com corpus, unidade e qualidade", "O perfil quantitativo descreve",
+   "Os perfis quantitativo e textual", "As visualizações tornam",
+   "Depois do retorno aos casos", "Uma hipótese exploratória só",
+   "Agora já existem resultados", "A estrutura define",
+   "O parecer do colega fornece",
+  ],
+ }
+ for nome,marcadores in esperados.items():
+  conteudo=(U/nome).read_text(encoding="utf-8")
+  ausentes=[marcador for marcador in marcadores if marcador not in conteudo]
+  assert not ausentes, f"encadeamentos ausentes em {nome}: {ausentes}"
+
 def main():
  ns=sorted(U.glob("*.ipynb")); assert len(ns)==5; texto=""; tm=tc=0; ambientes={}
  for p in ns:
@@ -155,9 +190,10 @@ def main():
  t=(U/"exercicios_unidade_04_texto.md").read_text(encoding="utf-8"); numeros=[int(n) for n in re.findall(r"^## Questão (\d+)",t,re.M)]; assert numeros==list(range(1,19)); assert len(re.findall(r"^- \[ \] \*\*[A-D]\.\*\*",t,re.M))==72
  chave=(U/"gabaritos/gabarito_exercicios_multipla_escolha.md").read_text(encoding="utf-8"); resp=re.findall(r"^\|\s*\d+\s*\|\s*([A-D])",chave,re.M); assert len(resp)==18
  assert len(list((U/"revisores").glob("*.md")))==9 and len(list((U/"revisores/pareceres").glob("*.md")))==7
- validar_latex(ns); validar_resultados(ambientes); validar_oficina(); validar_imagens()
+ validar_latex(ns); validar_resultados(ambientes); validar_oficina(); validar_imagens(); validar_encadeamento()
  print("OK 14 fórmulas LaTeX e resultados quantitativos/textuais")
  print("OK oficina: instruções, dinâmica, rubrica e exemplo resolvido")
  print("OK imagens: 1 abertura e 8 diagramas acessíveis, locais e documentados")
+ print("OK encadeamento: transições internas e passagens entre notebooks")
  print("OK 21/21 conteúdos; exercícios textuais, gabaritos e revisão; total",tm,tc)
 if __name__=="__main__": main()

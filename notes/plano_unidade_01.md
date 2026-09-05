@@ -129,8 +129,16 @@ Python para experimentar, transformar e observar**. Respostas discursivas,
 justificativas e a proposta de pesquisa serão escritas em células Markdown. O
 código será introdutório, comentado e executável célula por célula, aparecendo
 somente quando uma operação sobre dados tornar uma decisão ou consequência
-observável. A programação não será usada como formulário e os resultados
-computacionais não serão tratados como interpretações autossuficientes.
+observável. A programação não será usada como formulário; os resultados
+computacionais serão sempre acompanhados por interpretação e não serão
+tratados como interpretações autossuficientes.
+
+Cada mudança de seção será acompanhada por uma ponte breve que explicita o
+resultado obtido, a questão ainda em aberto e a necessidade da etapa seguinte.
+Os notebooks também indicarão qual produto parcial deve ser levado adiante. Na
+oficina, essas dependências serão retomadas para que pergunta,
+operacionalização, corpus e evidência formem um argumento integrado, e não um
+conjunto de formulários independentes.
 
 ## 6. Cronograma sugerido
 

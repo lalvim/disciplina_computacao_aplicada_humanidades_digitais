@@ -601,6 +601,45 @@ def validar_revisores() -> None:
     assert "100%" in consolidado_3
 
 
+def validar_encadeamento() -> None:
+    """Garante a presença das pontes didáticas e dos produtos cumulativos."""
+    marcadores = {
+        "00_guia_da_unidade.ipynb": [
+            "O problema orientador define o fio condutor da unidade",
+            "Conhecido o ritmo do percurso",
+            "siga para o Notebook 01",
+        ],
+        "01_perguntas_e_problemas_computacionais.ipynb": [
+            "O diagnóstico do guia registrou um tema e fontes possíveis",
+            "A tarefa torna a pergunta operacional",
+            "Os comentários da dupla são insumos, não respostas prontas",
+        ],
+        "02_representacao_e_operacionalizacao.ipynb": [
+            "O Notebook 01 produziu uma pergunta delimitada",
+            "Conceito, dimensão e indicador formam uma ponte abstrata",
+            "O próximo notebook acrescenta outra decisão",
+        ],
+        "03_dados_corpus_e_evidencias.ipynb": [
+            "O Notebook 02 definiu como conceitos poderiam ser observados",
+            "Estrutura de arquivo não equivale a significado documental",
+            "produto que segue para a oficina é uma ficha",
+        ],
+        "04_oficina_projeto_de_pesquisa.ipynb": [
+            "Comece identificando o projeto e seu contexto",
+            "Um esquema viável ainda não constitui evidência",
+            "A proposta está pronta para uma leitura externa",
+        ],
+    }
+    for nome, termos in marcadores.items():
+        documento = json.loads((UNIDADE / nome).read_text(encoding="utf-8"))
+        conteudo = " ".join(
+            re.sub(r"\s+", " ", fonte_da_celula(celula)).strip()
+            for celula in documento["cells"]
+        )
+        ausentes = [termo for termo in termos if termo not in conteudo]
+        assert not ausentes, f"{nome}: encadeamento incompleto: {ausentes}"
+
+
 def main() -> None:
     notebooks = sorted(UNIDADE.glob("*.ipynb"))
     assert len(notebooks) == 5, f"esperados 5 notebooks; encontrados {len(notebooks)}"
@@ -634,6 +673,8 @@ def main() -> None:
         "OK revisores: 6 especialidades, coordenação, matriz, modelo e "
         "3 rodadas de pareceres executadas"
     )
+    validar_encadeamento()
+    print("OK encadeamento: pontes internas e produtos entre os 5 notebooks")
     print(
         f"OK total: {len(notebooks)} notebooks, "
         f"{total_textos} células de texto, {total_codigos} de código"

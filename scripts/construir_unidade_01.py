@@ -166,6 +166,10 @@ def guia() -> list[dict]:
             as decisões necessárias para que fontes, conceitos e observações possam ser
             tratados computacionalmente. O objetivo não é eliminar a interpretação,
             mas tornar explícita a relação entre pergunta, dados, método e argumento.
+
+            O problema orientador define o fio condutor da unidade. Os objetivos a
+            seguir o transformam em capacidades que poderão ser observadas nos
+            produtos parciais e na oficina.
             """
         ),
         texto(
@@ -181,6 +185,9 @@ def guia() -> list[dict]:
             5. relacionar documentos, variáveis, categorias e metadados;
             6. avaliar o alcance e os limites de uma evidência computacional;
             7. formular a pergunta inicial do projeto da disciplina.
+
+            Essas capacidades serão desenvolvidas em sequência cumulativa. O percurso
+            mostra qual decisão cada notebook acrescenta à formulação do projeto.
             """
         ),
         texto(
@@ -203,6 +210,10 @@ def guia() -> list[dict]:
             Os exemplos usam uma **coleção inteiramente fictícia** de doze registros
             de periódicos. Ela serve para tornar as decisões visíveis; não permite
             conclusões históricas reais.
+
+            Antes de começar o conteúdo, confirme o ambiente e leia as orientações de
+            trabalho. Essa preparação evita confundir dificuldades de execução com
+            problemas conceituais.
             """
         ),
         codigo(
@@ -219,6 +230,9 @@ def guia() -> list[dict]:
             """
             ## Como trabalhar com os notebooks
 
+            O ambiente está pronto; agora é preciso definir como ler, executar e
+            interpretar o material. As orientações abaixo valem para toda a unidade.
+
             Execute as células na ordem. Leia a explicação antes de observar a saída.
             Escreva respostas discursivas nas células Markdown indicadas. Nas células
             Python, primeiro preveja o resultado, depois execute e interprete. Reinicie
@@ -227,6 +241,9 @@ def guia() -> list[dict]:
             Um resultado numérico responde apenas à operação programada. Pergunte
             sempre: **que decisão tornou esse número possível, o que ele representa e
             o que ficou fora da representação?**
+
+            Esse modo de trabalho será distribuído em oito horas. A indicação de carga
+            ajuda a distinguir o núcleo obrigatório das extensões possíveis.
             """
         ),
         texto(
@@ -246,6 +263,9 @@ def guia() -> list[dict]:
             São **essenciais**: a pergunta reformulada, o mapa de operacionalização,
             a ficha do corpus e a síntese da oficina. Leituras complementares e
             extensões dos exercícios podem ser feitas após a unidade.
+
+            Conhecido o ritmo do percurso, as leituras essenciais oferecem o vocabulário
+            comum para discutir Humanidades Digitais e decisões metodológicas.
             """
         ),
         texto(
@@ -261,6 +281,10 @@ def guia() -> list[dict]:
               de caso para a segunda aula.
 
             As referências completas e os links estão em `referencias.md`.
+
+            As leituras sustentam um produto concreto. A seção seguinte explica o que
+            será entregue e quais relações entre pergunta, dados e argumento serão
+            avaliadas.
             """
         ),
         texto(
@@ -309,6 +333,10 @@ def guia() -> list[dict]:
             preferível a uma pergunta grandiosa que as fontes e os métodos não podem
             sustentar. A proposta poderá mudar nas unidades seguintes: revisar escolhas
             diante de novas evidências faz parte da pesquisa.
+
+            Com o percurso e os critérios esclarecidos, registre seu ponto de partida.
+            O diagnóstico permitirá comparar as ideias iniciais com as decisões
+            desenvolvidas ao longo da unidade.
             """
         ),
         texto(
@@ -334,6 +362,10 @@ def guia() -> list[dict]:
 
             **Maior dúvida sobre a transformação de uma questão em dados:**
             Escreva aqui.
+
+            Guarde esse registro e siga para o Notebook 01. O tema e as fontes
+            indicados aqui serão usados para formular e revisar uma primeira pergunta
+            de pesquisa.
             """
         ),
     ]
@@ -345,12 +377,20 @@ def perguntas() -> list[dict]:
             """
             # Perguntas e problemas computacionais
 
+            O diagnóstico do guia registrou um tema e fontes possíveis. Este notebook
+            transforma esse interesse inicial em uma pergunta delimitada, sem começar
+            pela escolha de uma ferramenta.
+
             ## Retomada
 
             Antes de continuar:
 
             1. Que fenômeno você registrou no guia?
             2. Que fonte permitiria observar apenas uma parte dele?
+
+            Essa retomada evidencia a distância entre fenômeno e registro. A primeira
+            seção situa essa relação no campo das Humanidades Digitais e apresenta a
+            cadeia de uma pesquisa orientada por dados.
 
             ## 1. Humanidades Digitais e pesquisa orientada por dados
 
@@ -394,6 +434,10 @@ def perguntas() -> list[dict]:
             (2021) concorda com a crítica à neutralidade, mas defende “dados situados”
             em vez de abandonar o termo *data*. A divergência é produtiva: ambos
             exigem que seleção, descrição e transformação sejam explicitadas.
+
+            Reconhecida a cadeia entre pergunta, fontes, representação, operações e
+            interpretação, precisamos qualificar a própria pergunta. Para isso,
+            separaremos sua finalidade de sua estrutura analítica.
             """
         ),
         texto(
@@ -438,6 +482,10 @@ def perguntas() -> list[dict]:
             | Gênero documental e tema variam juntos? | Descritiva | Associativa | Cruzar categorias |
             | Que processos explicam a mudança do debate? | Explicativa | Comparativa e associativa | Formular e confrontar explicações |
             | É possível estimar o gênero pelos metadados? | Preditiva | Associativa | Treinar e avaliar uma previsão |
+
+            A classificação esclarece o que se pretende conhecer, mas ainda não mostra
+            como a investigação passa de uma questão ampla para uma operação concreta.
+            A próxima seção explicita esses níveis sem confundi-los.
             """
         ),
         texto(
@@ -464,6 +512,10 @@ def perguntas() -> list[dict]:
             indicar um padrão; compreender seu sentido demanda retornar aos documentos,
             às condições de produção, às categorias adotadas e à historiografia
             pertinente.
+
+            A tarefa torna a pergunta operacional, mas a possibilidade de programá-la
+            não garante relevância nem adequação. Antes das atividades, precisamos
+            estabelecer os limites da tratabilidade computacional.
             """
         ),
         texto(
@@ -483,6 +535,10 @@ def perguntas() -> list[dict]:
 
             A formulação deve equilibrar relevância humanística, viabilidade empírica e
             responsabilidade interpretativa.
+
+            Use esses limites para revisar individualmente sua formulação. O checklist
+            transforma os alertas conceituais em perguntas de controle, sem substituir
+            uma justificativa.
             """
         ),
         texto(
@@ -503,6 +559,10 @@ def perguntas() -> list[dict]:
 
             Este checklist apoia uma decisão argumentativa. Ele não pode decidir
             automaticamente se uma pergunta é relevante ou teoricamente adequada.
+
+            Feita a revisão inicial, pratique a distinção entre finalidade e estrutura
+            em exemplos compartilhados. A classificação guiada prepara a análise dos
+            casos em que mais de uma etapa aparece na mesma investigação.
             """
         ),
         texto(
@@ -543,6 +603,9 @@ def perguntas() -> list[dict]:
                **Justificativa:** Escreva aqui.
             5. **Finalidade e estrutura:** Escreva aqui.
                **Justificativa:** Escreva aqui.
+
+            Compare as classificações antes de buscar consenso. As divergências ajudam
+            a reconhecer os casos limítrofes examinados na atividade seguinte.
             """
         ),
         texto(
@@ -561,6 +624,10 @@ def perguntas() -> list[dict]:
             exige teoria, contexto e confronto de mecanismos. Indique a finalidade e
             as estruturas presentes, as etapas secundárias e como a pergunta mudaria
             se a finalidade fosse prever o período de um documento.
+
+            Depois de trabalhar com exemplos comuns, aplique os mesmos critérios ao
+            interesse de um colega. A escuta em dupla ajuda a localizar ambiguidades
+            que o próprio autor pode não perceber.
             """
         ),
         texto(
@@ -607,6 +674,10 @@ def perguntas() -> list[dict]:
 
             **Mudança que pretendo considerar na formulação individual:**
             Escreva aqui.
+
+            Os comentários da dupla são insumos, não respostas prontas. Use-os agora
+            para produzir individualmente a primeira formulação documentada de sua
+            pergunta.
             """
         ),
         texto(
@@ -651,6 +722,10 @@ def perguntas() -> list[dict]:
 
             **O que essa tarefa deixa de fora:**
             Escreva aqui.
+
+            O produto parcial está formulado. Compare-o com as referências da unidade
+            para verificar quais escolhas possuem fundamento e quais ainda são apenas
+            hipóteses de trabalho.
             """
         ),
         texto(
@@ -671,6 +746,10 @@ def perguntas() -> list[dict]:
               *Designing and Conducting Research in Education*, cap. 2.
 
             Dados completos e links: `referencias.md`.
+
+            As leituras sustentam a síntese do percurso: uma pergunta orientada por
+            dados permanece humanística porque a operação é subordinada à
+            interpretação e pode provocar reformulação.
             """
         ),
         texto(
@@ -691,6 +770,10 @@ def operacionalizacao() -> list[dict]:
         texto(
             """
             # Representação e operacionalização
+
+            O Notebook 01 produziu uma pergunta delimitada e uma tarefa inicial. Este
+            notebook abre a camada intermediária entre elas: as decisões que tornam
+            conceitos observáveis sem confundir representação e fenômeno.
 
             ## Mapa do percurso
 
@@ -732,10 +815,16 @@ def operacionalizacao() -> list[dict]:
             contexto e poder. As referências específicas aparecem junto a cada
             etapa e ao final do notebook.
 
+            Com o mapa completo em vista, retome sua própria pergunta. Ela fornecerá o
+            conceito que atravessará as oito etapas.
+
             ## Retomada
 
             1. Qual foi a pergunta delimitada no Notebook 01?
             2. Que palavra ou expressão dessa pergunta ainda precisa ser definida?
+
+            A expressão escolhida ainda é ampla. Começaremos definindo o conceito e
+            selecionando a dimensão específica que a pesquisa pretende examinar.
 
             ## 1. Conceito e dimensão
 
@@ -793,6 +882,9 @@ def operacionalizacao() -> list[dict]:
             só sua importância histórica. O estudante deve escolher a dimensão que
             melhor corresponda à pergunta. A última coluna apenas antecipa exemplos
             de **indicadores**, que serão definidos formalmente na seção seguinte.
+
+            Escolhida uma dimensão, precisamos definir que traço observável poderá
+            funcionar como evidência dela. Esse é o papel do indicador.
             """
         ),
         texto(
@@ -834,6 +926,10 @@ def operacionalizacao() -> list[dict]:
             e observação. O mapa completo será construído ao final do notebook. A
             tabela não precisa ser criada em Python, pois ainda não contém observações
             a serem processadas.
+
+            Conceito, dimensão e indicador formam uma ponte abstrata. Para aplicá-la às
+            fontes, é necessário decidir sobre que entidade cada observação e cada
+            afirmação serão feitas.
             """
         ),
         texto(
@@ -876,6 +972,10 @@ def operacionalizacao() -> list[dict]:
             Antes de continuar, pergunte: o que cada linha representa, sobre qual
             entidade a pesquisa fará afirmações e qual identificador permite distinguir
             uma unidade da outra?
+
+            Definida a unidade, podemos projetar como cada caso será registrado. A
+            seção seguinte separa campos, valores, documentos e metadados para evitar
+            que papéis distintos sejam misturados na tabela.
             """
         ),
         texto(
@@ -922,6 +1022,10 @@ def operacionalizacao() -> list[dict]:
 
             A tabela documenta o esquema. O código passa a ser relevante quando há
             registros concretos a inspecionar, transformar ou comparar.
+
+            Um esquema informa onde registrar uma classificação, mas ainda não explica
+            quem a criou nem em que contexto. Por isso, o próximo passo examina
+            categorias históricas e analíticas.
             """
         ),
         texto(
@@ -985,6 +1089,10 @@ def operacionalizacao() -> list[dict]:
             “limpeza” de dados, enquanto D'Ignazio e Klein (2020) mostram que decidir
             o que e como contar envolve poder, trabalho e experiências que podem
             desaparecer das estruturas formais.
+
+            Depois de historicizar as categorias, compare como escolhas diferentes de
+            modelagem alteram o resultado. O experimento torna essa consequência
+            observável nos mesmos documentos.
             """
         ),
         texto(
@@ -1061,6 +1169,10 @@ def operacionalizacao() -> list[dict]:
             """
             ## 7. Validade da representação
 
+            A comparação mostrou que representações distintas produzem contagens
+            distintas. A questão agora é avaliar qual delas é adequada à pergunta e
+            quais evidências permitem sustentar essa escolha.
+
             A lista abaixo é um **roteiro didático de verificação**, não uma taxonomia
             retirada integralmente de uma única referência. Ela articula a validade da
             mensuração discutida por Adcock e Collier (2001), a confiabilidade e a
@@ -1098,6 +1210,9 @@ def operacionalizacao() -> list[dict]:
         texto(
             """
             ## 8. Mapa de operacionalização
+
+            Os critérios de validade permitem revisar cada elo da cadeia. O mapa reúne
+            essas decisões em um produto único, incluindo alternativas e limitações.
 
             **Atividade:** produção individual seguida de comparação em dupla.
 
@@ -1154,6 +1269,10 @@ def operacionalizacao() -> list[dict]:
             """
             ## Referências e leituras
 
+            O mapa documenta decisões próprias; as referências abaixo permitem
+            identificar quais delas se apoiam em debates metodológicos e quais exigem
+            investigação adicional.
+
             ### De onde vêm os elementos do percurso?
 
             | Etapa da unidade | Base bibliográfica | Como a referência é usada aqui |
@@ -1192,6 +1311,10 @@ def operacionalizacao() -> list[dict]:
             """
             ## Reflexão e síntese
 
+            Retome agora todo o encadeamento e identifique onde a representação perde
+            informação ou introduz julgamento. A síntese deve indicar o que será
+            levado à delimitação do corpus.
+
             - O que aconteceria se a unidade fosse alterada?
             - Sua categoria existe nas fontes ou foi criada para analisá-las?
             - Como casos ambíguos serão registrados?
@@ -1211,10 +1334,17 @@ def corpus() -> list[dict]:
             """
             # Dados, corpus e evidências
 
+            O Notebook 02 definiu como conceitos poderiam ser observados. Este
+            notebook pergunta em quais materiais e sob quais critérios essas
+            observações formarão um corpus capaz de sustentar evidências.
+
             ## Retomada
 
             1. Qual é sua unidade de análise?
             2. Que indicador você propôs e de qual fonte ele seria extraído?
+
+            As respostas ligam representação e fonte. Para delimitar o alcance da
+            análise, começaremos distinguindo população, amostra e corpus.
 
             ## 1. População, amostra e corpus
 
@@ -1263,6 +1393,10 @@ def corpus() -> list[dict]:
         texto(
             """
             ## 2. Critérios de inclusão e exclusão
+
+            Nomear o conjunto não explica como ele foi formado. Os critérios de
+            inclusão e exclusão tornam a passagem do universo disponível ao corpus
+            explícita, reproduzível e criticável.
 
             Um corpus deve ser definido por regras justificáveis e reproduzíveis:
 
@@ -1320,6 +1454,10 @@ def corpus() -> list[dict]:
             """
             ## Estudo de caso brasileiro — população escravizada de Mariana
 
+            O exemplo fictício torna os critérios visíveis, mas não expõe toda a
+            complexidade de fontes históricas reais. O estudo de Rodrigues permite
+            examinar como seleção, categorias e ética se articulam em um projeto.
+
             Rodrigues (2020) examina a construção de uma base sobre a população
             escravizada de Mariana no século XVIII. O caso mostra que transpor fontes
             produzidas sob a escravidão para uma base não é simples digitalização:
@@ -1342,6 +1480,10 @@ def corpus() -> list[dict]:
         texto(
             """
             ## 3. Três formas de organização dos dados
+
+            Delimitado o corpus, é preciso reconhecer como seus materiais chegam ao
+            pesquisador. A forma de organização condiciona o que pode ser consultado
+            diretamente e o que exige transformação.
 
             - **Estruturados:** seguem esquema explícito, como uma tabela com colunas.
             - **Semiestruturados:** possuem marcas e hierarquias flexíveis, como JSON ou
@@ -1386,6 +1528,10 @@ def corpus() -> list[dict]:
             """
             ## 4. Documentos e metadados
 
+            Estrutura de arquivo não equivale a significado documental. A próxima
+            distinção separa o conteúdo da fonte dos metadados que a identificam,
+            contextualizam e ligam à sua materialidade.
+
             O conteúdo do documento e seus metadados respondem a perguntas distintas.
             Buscar “educação” no texto não equivale a usar uma categoria temática
             atribuída por catalogação. O primeiro procedimento depende da palavra
@@ -1424,6 +1570,10 @@ def corpus() -> list[dict]:
         texto(
             """
             ## 5. Evidência computacional e interpretação humanística
+
+            Com corpus, formatos, documentos e metadados definidos, podemos acompanhar
+            como uma operação produz um resultado e como esse resultado se torna — ou
+            não — evidência para uma interpretação.
 
             ### Objetivo da seção
 
@@ -1533,6 +1683,10 @@ def corpus() -> list[dict]:
             """
             ## 6. Limites da quantificação e da automação
 
+            A cadeia de evidência mostrou que o resultado depende de decisões
+            anteriores. Esta seção generaliza a cautela: escala e velocidade podem
+            ampliar tanto possibilidades analíticas quanto erros e apagamentos.
+
             A quantificação pode:
 
             - tornar padrões comparáveis;
@@ -1577,6 +1731,10 @@ def corpus() -> list[dict]:
         texto(
             """
             ## Atividade — ficha do corpus
+
+            O resumo computacional descreve propriedades do conjunto, enquanto os
+            limites exigem argumentação. A ficha reúne ambos em uma delimitação do
+            corpus adequada à pergunta do estudante.
 
             **Modalidade:** produção individual seguida de revisão em dupla.
             **Tempo sugerido:** 30 minutos individuais e 15 minutos em dupla.
@@ -1631,6 +1789,9 @@ def corpus() -> list[dict]:
             """
             ## Referências e leituras
 
+            Depois de preencher e revisar a ficha, confronte suas decisões com os
+            debates sobre números situados, limpeza e construção de bases históricas.
+
             - D'IGNAZIO, Catherine; KLEIN, Lauren F. (2020). *Data Feminism*,
               capítulo “The Numbers Don't Speak for Themselves”.
             - RAWSON, Katie; MUÑOZ, Trevor (2019). “Against Cleaning”.
@@ -1644,6 +1805,10 @@ def corpus() -> list[dict]:
         texto(
             """
             ## Síntese
+
+            Reúna a delimitação técnica e a crítica das condições de produção. O
+            produto que segue para a oficina é uma ficha capaz de explicar tanto o que
+            integra o corpus quanto o que permanece ausente.
 
             O corpus não é um recipiente neutro. Ele materializa decisões de pesquisa
             e processos anteriores de produção, preservação e acesso. No próximo
@@ -1682,6 +1847,10 @@ def oficina() -> list[dict]:
 
             *A oficina não começa do zero: ela integra os produtos anteriores, testa a
             coerência entre eles e registra mudanças motivadas pela revisão.*
+
+            Comece identificando o projeto e seu contexto. Essa referência inicial
+            permite verificar, nas seções seguintes, se pergunta, corpus e método
+            permanecem alinhados ao mesmo fenômeno.
             """
         ),
         texto(
@@ -1699,6 +1868,10 @@ def oficina() -> list[dict]:
 
             **Contexto espacial, temporal e institucional:**
             Escreva aqui.
+
+            A identificação nomeia o campo de interesse, mas ainda não formula um
+            problema investigável. Passe da motivação humanística a uma pergunta cuja
+            finalidade e recorte possam ser justificados.
             """
         ),
         texto(
@@ -1738,6 +1911,9 @@ def oficina() -> list[dict]:
 
             **O que mudou em relação ao produto do Notebook 01 e por quê?**
             Escreva aqui.
+
+            A pergunta define o que se deseja conhecer. Agora declare sobre quais
+            unidades e materiais as afirmações poderão efetivamente ser feitas.
             """
         ),
         texto(
@@ -1772,6 +1948,10 @@ def oficina() -> list[dict]:
 
             **O que mudou em relação à ficha do Notebook 03 e por quê?**
             Escreva aqui.
+
+            Delimitados unidade e corpus, retome o conceito central. A
+            operacionalização deve mostrar como ele se liga a observações possíveis
+            nesses materiais, inclusive por alternativas comparáveis.
             """
         ),
         texto(
@@ -1797,6 +1977,9 @@ def oficina() -> list[dict]:
 
             **O que mudou em relação ao mapa do Notebook 02 e por quê?**
             Escreva aqui.
+
+            O mapa define o que observar; o esquema seguinte antecipa onde cada
+            observação, documento e metadado será registrado e de onde virá.
             """
         ),
         texto(
@@ -1819,6 +2002,10 @@ def oficina() -> list[dict]:
 
             Acrescente quantas linhas forem necessárias. Neste momento, a tabela é uma
             especificação; na Unidade 2 ela orientará a construção dos dados reais.
+
+            Um esquema viável ainda não constitui evidência. Explicite agora como uma
+            operação prevista produziria um resultado e por que ele seria pertinente
+            à pergunta humanística.
             """
         ),
         texto(
@@ -1858,6 +2045,10 @@ def oficina() -> list[dict]:
 
             **Conhecimento contextual necessário:**
             Escreva aqui.
+
+            A cadeia descreve uma interpretação possível. Para não convertê-la em
+            promessa excessiva, examine perdas, vieses e responsabilidades em todas as
+            etapas que a tornaram possível.
             """
         ),
         texto(
@@ -1881,6 +2072,10 @@ def oficina() -> list[dict]:
             | Automação | Escreva | Escreva |
             | Ética | Escreva | Escreva |
             | Interpretação | Escreva | Escreva |
+
+            Com a proposta completa e seus riscos explícitos, faça uma primeira
+            avaliação de coerência. A rubrica localiza os pontos que precisam de
+            revisão antes da síntese.
             """
         ),
         texto(
@@ -1913,6 +2108,9 @@ def oficina() -> list[dict]:
             **Síntese da autoavaliação:**
             Escreva aqui. A pontuação ajuda a localizar lacunas, mas não substitui a
             justificativa escrita.
+
+            Use as lacunas encontradas para redigir uma síntese autocontida. Ela deve
+            apresentar a lógica do projeto sem depender das tabelas anteriores.
             """
         ),
         texto(
@@ -1937,6 +2135,10 @@ def oficina() -> list[dict]:
 
             **Próxima decisão necessária:**
             Escreva aqui.
+
+            A síntese faz afirmações fundamentadas por conceitos e debates. Registre
+            apenas as obras efetivamente mobilizadas para que o leitor possa
+            reconstruir essa fundamentação.
             """
         ),
         texto(
@@ -1950,6 +2152,10 @@ def oficina() -> list[dict]:
             2. Escreva aqui.
 
             A bibliografia geral da unidade está em `referencias.md`.
+
+            A proposta está pronta para uma leitura externa. A revisão entre pares
+            testa se as conexões que parecem claras ao autor também são defensáveis
+            para outra pessoa.
             """
         ),
         texto(

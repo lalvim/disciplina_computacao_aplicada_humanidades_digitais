@@ -1,7 +1,9 @@
 # Plano de execução — Unidade 3
 
 **Situação:** executado em 31 de julho de 2026. A primeira rodada dos seis
-revisores aprovou a unidade com ajustes baixos de manutenção.
+revisores aprovou a unidade com ajustes baixos de manutenção. A segunda rodada,
+realizada em 4 de setembro de 2026, determinou revisão obrigatória antes da
+oferta; consulte `unidade_03/revisores/pareceres/rodada_02/`.
 
 Este plano segue as
 [diretrizes de formatação e escrita do material](diretrizes_formatacao_material.md)

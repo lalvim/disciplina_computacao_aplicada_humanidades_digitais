@@ -158,6 +158,10 @@ def guia() -> list[dict]:
             produção das fontes, da cobertura, das exclusões e das condições de uso.
             Esta unidade transforma a pergunta da Unidade 1 em um protocolo auditável
             de construção da base.
+
+            A pergunta orientadora fornece o fio condutor. Os objetivos a seguir
+            transformam essa pergunta em capacidades observáveis que serão retomadas
+            no produto final.
             """
         ),
         texto(
@@ -174,6 +178,10 @@ def guia() -> list[dict]:
                vida de uma base;
             6. reconhecer responsabilidades éticas e questões legais;
             7. produzir o protocolo da base do seu projeto.
+
+            Esses objetivos não serão tratados isoladamente. O percurso organiza-os
+            como decisões cumulativas: primeiro delimitar e selecionar, depois
+            examinar cobertura, documentar, governar e integrar.
             """
         ),
         texto(
@@ -199,6 +207,10 @@ def guia() -> list[dict]:
 
             O percurso é cumulativo, mas não estritamente linear: uma lacuna percebida
             na cobertura pode levar à revisão das fontes ou dos critérios de seleção.
+
+            Antes de iniciar essas decisões, o diagnóstico torna visíveis suas
+            hipóteses atuais. Ele não vale nota: servirá como ponto de comparação ao
+            final da unidade.
             """
         ),
         codigo(
@@ -228,12 +240,20 @@ def guia() -> list[dict]:
 
             ### Minha resposta
 
+            Registre uma resposta breve para cada pergunta e indique ao menos uma
+            dúvida. Essas dúvidas ajudam a identificar os aspectos do protocolo que
+            exigirão mais atenção.
+
             Escreva aqui.
             """
         ),
         texto(
             """
             ## Critérios do produto
+
+            O diagnóstico revelou pressupostos; os critérios abaixo explicitam o que
+            o protocolo deverá demonstrar para que esses pressupostos possam ser
+            examinados e revistos.
 
             O protocolo final será avaliado por: alinhamento à pergunta; seleção
             reproduzível; análise de cobertura; documentação; proveniência; ética e
@@ -243,6 +263,9 @@ def guia() -> list[dict]:
             bases; Rodrigues (2020) sobre decisões éticas e metodológicas em uma base
             histórica; ANPD (2023/2025) para tratamento de dados pessoais em pesquisa.
             Dados completos: `referencias.md`.
+
+            Com esse horizonte definido, siga para o Notebook 01. O primeiro passo é
+            relacionar a pergunta às fontes, à população e aos critérios de seleção.
             """
         ),
     ]
@@ -253,6 +276,10 @@ def fontes_selecao() -> list[dict]:
         texto(
             """
             # Fontes, população e seleção
+
+            O guia definiu o protocolo como produto da unidade. Este notebook inicia
+            sua construção pela decisão que condiciona todas as demais: quais casos
+            podem integrar a base e com base em quais evidências.
 
             ## 1. A base começa antes da planilha
 
@@ -272,6 +299,10 @@ def fontes_selecao() -> list[dict]:
 
             A figura é um modelo conceitual, não uma prova de representatividade. Um
             corpus pode ser grande e ainda assim resultar de acesso muito desigual.
+
+            Delimitados os três conjuntos, é preciso examinar o papel de cada material
+            na argumentação. Essa relação com a pergunta determina se ele funciona
+            como fonte primária, secundária ou dado derivado.
             """
         ),
         texto(
@@ -317,6 +348,10 @@ def fontes_selecao() -> list[dict]:
 
             **Referência:** American Historical Association (2023), seção “Shared
             Values of Historians”. Dados completos em `referencias.md`.
+
+            Classificar a fonte esclarece seu uso, mas ainda não decide quais registros
+            entram no corpus. Para tornar essa passagem justificável, os critérios
+            precisam ser definidos antes da filtragem.
             """
         ),
         texto(
@@ -357,6 +392,10 @@ def fontes_selecao() -> list[dict]:
         ),
         texto(
             """
+            A filtragem produz um corpus, mas também produz exclusões. A próxima etapa
+            registra esse outro resultado da seleção para que a decisão possa ser
+            auditada e revista.
+
             ## 4. Registrar exclusões
 
             Reprodutibilidade não exige apenas uma lista final. Exige saber por que um
@@ -383,12 +422,20 @@ def fontes_selecao() -> list[dict]:
             """
             ### Interpretação
 
+            A tabela de motivos descreve o efeito das regras. Agora é necessário
+            interpretá-la: uma contagem não explica, por si só, se a perda decorre do
+            fenômeno estudado, da infraestrutura ou de uma decisão da pesquisa.
+
             1. Quantos registros foram excluídos por cada regra?
             2. Um registro pode ter mais de um motivo?
             3. “Não digitalizado” é uma propriedade do fenômeno ou da infraestrutura?
             4. Seria possível consultar presencialmente parte do material excluído?
 
             Escreva aqui.
+
+            Depois de interpretar o exemplo, transfira a mesma lógica para seu
+            projeto. A atividade converte conceitos e diagnóstico computacional em um
+            protocolo de seleção argumentado.
             """
         ),
         texto(
@@ -410,6 +457,10 @@ def fontes_selecao() -> list[dict]:
             **Critérios de exclusão e casos limítrofes:** Escreva aqui.
 
             **Como as exclusões serão registradas:** Escreva aqui.
+
+            Ao terminar, verifique se outra pessoa conseguiria reconstruir sua decisão
+            sem adivinhar critérios. Essa verificação prepara a síntese e o exame de
+            cobertura do notebook seguinte.
             """
         ),
         texto(
@@ -421,6 +472,10 @@ def fontes_selecao() -> list[dict]:
             a elaboração de uma base histórica envolve escolhas metodológicas e
             éticas; Gebru et al. (2021) recomendam documentar motivação, composição,
             coleta e usos. Dados completos: `referencias.md`.
+
+            Leve seu protocolo de seleção ao Notebook 02. O corpus escolhido será ali
+            comparado à cobertura desejada e à acessível, tornando visíveis perdas,
+            vieses e silêncios.
             """
         ),
     ]
@@ -432,6 +487,10 @@ def cobertura() -> list[dict]:
             """
             # Cobertura, vieses e silêncios
 
+            O Notebook 01 produziu critérios e um corpus. Agora a atenção se desloca
+            da clareza das regras para suas consequências: quem, o quê e quais
+            contextos permanecem visíveis depois da seleção.
+
             ## 1. Cobertura não é sinônimo de representatividade
 
             **Cobertura** descreve quais períodos, lugares, instituições, tipos
@@ -439,6 +498,10 @@ def cobertura() -> list[dict]:
             afirmação mais forte: depende da população, do mecanismo de seleção e do
             tipo de inferência pretendida. Um corpus pode ter boa cobertura temporal e
             ainda excluir sistematicamente determinadas experiências.
+
+            Para interpretar uma cobertura incompleta, não basta contar lacunas. É
+            preciso localizar em que etapa cada ausência surgiu, pois ausências
+            históricas, ausências na base e valores vazios exigem respostas distintas.
             """
         ),
         texto(
@@ -460,6 +523,10 @@ def cobertura() -> list[dict]:
             preservar, classificar e autorizar acesso? Trouillot (1995) situa silêncios
             em diferentes momentos da produção histórica; Schwartz e Cook (2002)
             discutem arquivos, memória e poder.
+
+            Com essas distinções conceituais, podemos comparar empiricamente o universo
+            acessível e o corpus. A comparação não recupera o que nunca foi registrado,
+            mas mostra o que as decisões do projeto fizeram desaparecer ou diminuir.
             """
         ),
         texto(
@@ -497,6 +564,9 @@ def cobertura() -> list[dict]:
         ),
         texto(
             """
+            O cálculo fornece a comparação; a leitura a seguir delimita o que ela pode
+            e não pode sustentar como evidência.
+
             ### Leitura da saída
 
             A visualização retoma os valores calculados e permite perceber rapidamente
@@ -524,6 +594,10 @@ def cobertura() -> list[dict]:
         ),
         texto(
             """
+            As duas saídas mostram distribuições e relações observáveis. A passagem
+            seguinte pergunta se essas diferenças seguem um mecanismo sistemático
+            relevante para a pesquisa, caracterizando possível viés de seleção.
+
             ## 4. Viés de seleção
 
             Viés de seleção ocorre quando a inclusão se relaciona de modo sistemático
@@ -533,6 +607,10 @@ def cobertura() -> list[dict]:
 
             Associação entre instituição e digitalização, neste exemplo, é um sinal
             para investigar o processo de seleção; não é explicação histórica.
+
+            Identificado o mecanismo possível, organize suas consequências por
+            dimensão. A matriz a seguir converte o diagnóstico em limites explícitos e
+            ações de mitigação.
             """
         ),
         texto(
@@ -550,6 +628,10 @@ def cobertura() -> list[dict]:
             **Silêncios que a ampliação da coleta talvez não resolva:** Escreva aqui.
 
             **Como os limites restringem minhas afirmações:** Escreva aqui.
+
+            A matriz ajuda a decidir o que ampliar, restringir ou declarar como limite.
+            Contudo, mitigação não significa necessariamente coletar ou abrir mais
+            dados; por isso, o passo seguinte introduz a questão da governança.
             """
         ),
         texto(
@@ -566,6 +648,10 @@ def cobertura() -> list[dict]:
 
             Uma análise responsável documenta não só o que existe na tabela, mas os
             processos que produziram presenças, ausências e possibilidades de acesso.
+
+            Leve a matriz ao Notebook 03. Metadados e proveniência tornarão rastreáveis
+            as decisões de seleção e os limites de cobertura; o Notebook 04 retomará
+            suas implicações de governança.
             """
         ),
     ]
@@ -576,6 +662,10 @@ def metadados() -> list[dict]:
         texto(
             """
             # Metadados, identificadores e proveniência
+
+            Os notebooks anteriores definiram o corpus e analisaram seus limites. Este
+            notebook pergunta como preservar essas decisões junto aos dados para que
+            outra pessoa consiga compreender, verificar e reutilizar a base.
 
             ## 1. Documentação como parte da base
 
@@ -589,6 +679,10 @@ def metadados() -> list[dict]:
 
             As categorias se sobrepõem em padrões reais; servem aqui como guia de
             inspeção.
+
+            Saber que tipos de metadados existem é apenas o primeiro nível. O
+            dicionário de dados traduz essa visão para cada campo, explicitando seu
+            significado, sua origem e suas regras.
             """
         ),
         texto(
@@ -612,6 +706,10 @@ def metadados() -> list[dict]:
         ),
         texto(
             """
+            Definidos os campos, precisamos manter as relações entre registros mesmo
+            quando títulos, posições ou descrições mudam. Essa função é exercida pelos
+            identificadores.
+
             ## 3. Identificadores
 
             Um identificador deve ser único no escopo definido, persistente o bastante
@@ -633,6 +731,10 @@ def metadados() -> list[dict]:
         ),
         texto(
             """
+            A unicidade dos identificadores garante uma condição estrutural, mas não
+            assegura que o restante da base respeite o esquema documentado. A próxima
+            auditoria compara campos e valores observados com o que era esperado.
+
             ## 4. Campos e domínios esperados
 
             Esta auditoria compara o esquema observado com o documentado e verifica
@@ -659,6 +761,10 @@ def metadados() -> list[dict]:
         ),
         texto(
             """
+            Essas verificações descrevem o estado atual da tabela. Para explicar como
+            ela chegou a esse estado — fontes, agentes, datas e transformações — é
+            necessário acrescentar proveniência.
+
             ## 5. Proveniência
 
             No diagrama, o dicionário explica o significado dos campos, enquanto a
@@ -686,6 +792,10 @@ def metadados() -> list[dict]:
         ),
         texto(
             """
+            Dicionário, identificadores, validações e proveniência cumprem funções
+            distintas. A atividade reúne essas camadas em uma documentação coerente
+            para o projeto do estudante.
+
             ## Atividade — documentação do projeto
 
             **Estratégia de identificadores e escopo de unicidade:** Escreva aqui.
@@ -699,6 +809,10 @@ def metadados() -> list[dict]:
             **Transformações previstas e responsável por registrá-las:** Escreva aqui.
 
             **Relação entre registro derivado e fonte:** Escreva aqui.
+
+            Revise o conjunto perguntando se uma pessoa externa conseguiria interpretar
+            os campos e reconstruir a trajetória de um registro. Essa verificação leva
+            à síntese e evidencia o que a documentação técnica ainda não resolve.
             """
         ),
         texto(
@@ -714,6 +828,10 @@ def metadados() -> list[dict]:
 
             Uma base auditável combina documentação legível por pessoas com
             verificações computacionais simples. Dados completos: `referencias.md`.
+
+            Leve essa documentação ao Notebook 04. Nele, a pergunta se amplia: mesmo
+            uma base tecnicamente auditável ainda precisa justificar acesso, reuso,
+            autoridade, benefício e responsabilidades.
             """
         ),
     ]
@@ -748,6 +866,10 @@ def governanca_documentacao() -> list[dict]:
             3. distinguir abertura, acessibilidade e autoridade;
             4. adaptar perguntas de *datasheets* a uma base de Humanidades Digitais;
             5. produzir uma ficha de governança e documentação para seu projeto.
+
+            Partiremos da documentação construída no Notebook 03. Primeiro
+            distinguiremos as perguntas de cada lente; depois as aplicaremos a
+            evidências, casos e decisões do projeto.
             """
         ),
         texto(
@@ -764,6 +886,10 @@ def governanca_documentacao() -> list[dict]:
             selo de qualidade. Elas tornam perguntas diferentes visíveis. Uma decisão
             defensável precisa registrar tanto as evidências quanto aquilo que ainda
             depende de consulta, negociação ou avaliação institucional.
+
+            A primeira lente examinada será FAIR, porque ela permite retomar de forma
+            direta os identificadores, metadados, formatos e condições de acesso já
+            documentados.
             """
         ),
         texto(
@@ -780,6 +906,10 @@ def governanca_documentacao() -> list[dict]:
             | **I — Interoperable / Interoperável** | dados e metadados podem relacionar-se a outros sistemas | formatos documentados, vocabulários e relações qualificadas |
             | **R — Reusable / Reutilizável** | contexto, proveniência e condições permitem avaliar novos usos | licença ou termos, proveniência, padrões do campo e limitações |
 
+            O princípio da acessibilidade exige uma distinção importante antes da
+            auditoria: descrever como obter um objeto não significa torná-lo aberto a
+            qualquer pessoa ou finalidade.
+
             ### Acessível não significa necessariamente aberto
 
             FAIR não exige que todo arquivo seja oferecido irrestritamente. Dados
@@ -791,6 +921,10 @@ def governanca_documentacao() -> list[dict]:
             FAIR também não é um padrão técnico único nem uma propriedade binária. Os
             princípios orientam decisões; sua aplicação depende do domínio, da
             infraestrutura e do objeto digital considerado.
+
+            Esses princípios ganham sentido quando associados a evidências verificáveis.
+            O experimento a seguir transforma algumas afirmações sobre a base em
+            perguntas auditáveis, sem reduzir FAIR a uma nota.
             """
         ),
         texto(
@@ -847,6 +981,10 @@ def governanca_documentacao() -> list[dict]:
             qualidade semântica dos metadados, a estabilidade futura dos
             identificadores, a adequação dos vocabulários nem a legitimidade das
             condições de acesso.
+
+            A auditoria alcança infraestrutura e documentação, mas não determina quem
+            possui autoridade legítima nem quem recebe benefícios ou suporta riscos.
+            Essa insuficiência motiva a passagem aos princípios CARE.
             """
         ),
         texto(
@@ -872,6 +1010,10 @@ def governanca_documentacao() -> list[dict]:
             conformidade. Em outros contextos, CARE pode provocar perguntas úteis
             sobre poder e benefício, mas o projeto não deve alegar adesão aos
             princípios sem justificar seu âmbito e sua governança.
+
+            Com as duas lentes definidas, podemos observar como abertura técnica e
+            autoridade situada podem apontar para decisões diferentes. As tensões não
+            são falhas do método: são questões que o projeto precisa explicitar.
             """
         ),
         texto(
@@ -885,6 +1027,10 @@ def governanca_documentacao() -> list[dict]:
             | Um repositório publica imagens, metadados e API aberta de uma coleção indígena sem participação do povo relacionado | os objetos podem ser encontráveis, acessíveis e interoperáveis | abertura técnica não responde quem autorizou, quem se beneficia nem quais usos causam dano |
             | Uma comunidade mantém certos registros restritos, mas publica metadados e um procedimento de acesso sob sua autoridade | a restrição não impede necessariamente FAIR, se o protocolo estiver documentado | o controle de acesso pode expressar autoridade, responsabilidade e ética |
 
+            Os casos tornam a tensão concreta. A discussão em duplas pede que você
+            transforme a comparação em uma decisão condicionada por evidências e pela
+            autoridade das pessoas envolvidas.
+
             ### Discussão em duplas — abrir, restringir ou negociar?
 
             **Dinâmica:** em 5 minutos, cada estudante escolhe um caso e formula uma
@@ -895,6 +1041,11 @@ def governanca_documentacao() -> list[dict]:
             Não procure uma regra universal. Identifique quem pode decidir, quais
             informações faltam e quais danos ou benefícios cada forma de acesso pode
             produzir.
+
+            A discussão produz decisões e condições, mas elas precisam permanecer
+            registradas para futuros responsáveis e usuários. A proposta de
+            *Datasheets for Datasets* oferece uma estrutura para essa documentação ao
+            longo do ciclo de vida.
             """
         ),
         texto(
@@ -923,6 +1074,10 @@ def governanca_documentacao() -> list[dict]:
             Os autores também alertam que a criação da ficha não deve ser totalmente
             automatizada: seu valor está na reflexão sobre escolhas, riscos e
             responsabilidades, não apenas na extração de propriedades técnicas.
+
+            Agora as três lentes podem ser reunidas. A atividade transforma evidências
+            FAIR, questões CARE e documentação do ciclo de vida em uma única ficha
+            destinada ao protocolo final.
             """
         ),
         texto(
@@ -948,6 +1103,10 @@ def governanca_documentacao() -> list[dict]:
             | I | Escreva aqui | Escreva aqui | Escreva aqui |
             | R | Escreva aqui | Escreva aqui | Escreva aqui |
 
+            As evidências técnicas delimitam o que já está documentado. Em seguida,
+            examine quem pode decidir, beneficiar-se ou ser afetado pelas formas de
+            coleta e uso.
+
             ### Parte B — governança e CARE
 
             **Os dados envolvem povos indígenas ou conhecimentos, territórios e
@@ -961,6 +1120,10 @@ def governanca_documentacao() -> list[dict]:
 
             **Que riscos e usos futuros precisam ser avaliados pelas pessoas ou
             comunidades afetadas?** Escreva aqui.
+
+            Essas decisões de governança precisam ser comunicadas junto à motivação,
+            composição, distribuição e manutenção da base. Use-as para preencher o
+            minidatasheet.
 
             ### Parte C — minidatasheet
 
@@ -976,6 +1139,10 @@ def governanca_documentacao() -> list[dict]:
 
             **Manutenção, contato e versionamento:** Escreva aqui.
 
+            A ficha ainda expressa apenas a perspectiva de quem a escreveu. A revisão
+            por pares procura inconsistências e ausências antes de sua incorporação ao
+            protocolo da oficina.
+
             ### Parte D — parecer da dupla e revisão
 
             O colega deve localizar: uma afirmação sem evidência; uma condição de
@@ -985,6 +1152,9 @@ def governanca_documentacao() -> list[dict]:
             **Parecer recebido:** Escreva aqui.
 
             **Mudança realizada e justificativa:** Escreva aqui.
+
+            Depois da revisão, a síntese abaixo recupera a função específica de cada
+            lente e explicita o produto que seguirá para o Notebook 05.
             """
         ),
         texto(
@@ -1028,6 +1198,10 @@ def oficina() -> list[dict]:
 
             Use as conexões para conferir coerência. Se a pergunta mudar, revise a
             unidade de análise, as fontes, os critérios, a cobertura e os riscos.
+
+            A oficina integra os produtos dos Notebooks 01 a 04. Comece pelo
+            alinhamento, pois todas as escolhas posteriores precisam responder à
+            mesma pergunta e finalidade.
             """
         ),
         texto(
@@ -1041,6 +1215,9 @@ def oficina() -> list[dict]:
             **Unidade de análise:** Escreva aqui.
 
             **Que observações seriam necessárias para responder:** Escreva aqui.
+
+            Com pergunta e unidade de análise definidas, identifique quais fontes podem
+            fornecer essas observações e reconstrua a cadeia que as produziu.
             """
         ),
         texto(
@@ -1056,6 +1233,10 @@ def oficina() -> list[dict]:
             **Finalidade original dos registros e categorias herdadas:** Escreva aqui.
 
             **Condições materiais e técnicas de acesso:** Escreva aqui.
+
+            Conhecer as fontes não basta para formar a base. Delimite agora a população
+            de interesse, o universo acessível e o corpus, justificando cada regra de
+            inclusão e exclusão.
             """
         ),
         texto(
@@ -1074,6 +1255,10 @@ def oficina() -> list[dict]:
             | exclusão | Escreva aqui | Escreva aqui | Escreva aqui | Escreva aqui |
 
             **Registro das exclusões:** Escreva aqui.
+
+            Toda seleção altera presenças e ausências. Use os critérios recém-definidos
+            para avaliar cobertura, possíveis vieses e o alcance legítimo das
+            afirmações.
             """
         ),
         texto(
@@ -1093,6 +1278,10 @@ def oficina() -> list[dict]:
             **Silêncios não redutíveis a valores ausentes:** Escreva aqui.
 
             **Limites das afirmações:** Escreva aqui.
+
+            Esses limites precisam permanecer ligados aos registros. Defina os
+            metadados, identificadores e informações de proveniência que tornarão as
+            decisões auditáveis.
             """
         ),
         texto(
@@ -1110,6 +1299,10 @@ def oficina() -> list[dict]:
             **Como a fonte será ligada ao registro derivado:** Escreva aqui.
 
             **Versão, data de acesso, agente e transformações:** Escreva aqui.
+
+            A documentação técnica permite reconstruir a base, mas não resolve por si
+            só quem pode acessá-la, reutilizá-la ou ser afetado por ela. Examine agora
+            governança, ética e questões legais.
             """
         ),
         texto(
@@ -1146,6 +1339,10 @@ def oficina() -> list[dict]:
             Para situações concretas, consulte a instituição, o comitê de ética, a
             ANPD e assessoria jurídica quando aplicável. O guia da ANPD não possui
             caráter normativo e não substitui a legislação.
+
+            As responsabilidades identificadas precisam caber nas condições reais do
+            projeto. Confronte o desenho desejado com tempo, acesso, infraestrutura e
+            alternativas de contingência.
             """
         ),
         texto(
@@ -1161,6 +1358,9 @@ def oficina() -> list[dict]:
             **Plano B se a principal fonte não puder ser usada:** Escreva aqui.
 
             **O que será deliberadamente deixado de fora:** Escreva aqui.
+
+            Com o primeiro rascunho completo, use a rubrica para localizar fragilidades
+            antes de submetê-lo à leitura de outra pessoa.
             """
         ),
         texto(
@@ -1181,6 +1381,10 @@ def oficina() -> list[dict]:
 
             **Decisão:** manter, reformular ou abandonar esta proposta de base?
             Justifique. Escreva aqui.
+
+            A autoavaliação explicita sua própria leitura do protocolo. A revisão por
+            pares testa se as justificativas e os limites também são compreensíveis e
+            defensáveis para um leitor externo.
             """
         ),
         texto(
@@ -1198,6 +1402,9 @@ def oficina() -> list[dict]:
             **Parecer recebido:** Escreva aqui.
 
             **Mudanças realizadas e justificativa:** Escreva aqui.
+
+            Incorpore o parecer antes da entrega. A versão final deve mostrar não apenas
+            escolhas, mas também as revisões provocadas pela avaliação do conjunto.
             """
         ),
         texto(

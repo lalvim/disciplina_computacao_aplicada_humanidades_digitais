@@ -202,6 +202,50 @@ def validar_referencias_e_revisao() -> None:
     assert "94%" in consolidado and "Aprovada" in consolidado
 
 
+def validar_encadeamento() -> None:
+    """Garante que os notebooks explicitem as dependências entre suas etapas."""
+    marcadores = {
+        "00_guia_da_unidade.ipynb": [
+            "A pergunta orientadora fornece o fio condutor",
+            "o diagnóstico torna visíveis suas hipóteses atuais",
+            "siga para o Notebook 01",
+        ],
+        "01_fontes_populacao_e_selecao.ipynb": [
+            "Este notebook inicia sua construção pela decisão",
+            "A filtragem produz um corpus, mas também produz exclusões",
+            "Leve seu protocolo de seleção ao Notebook 02",
+        ],
+        "02_cobertura_vieses_e_silencios.ipynb": [
+            "O Notebook 01 produziu critérios e um corpus",
+            "A matriz ajuda a decidir o que ampliar",
+            "Leve a matriz ao Notebook 03",
+        ],
+        "03_metadados_identificadores_e_proveniencia.ipynb": [
+            "Os notebooks anteriores definiram o corpus",
+            "Dicionário, identificadores, validações e proveniência",
+            "Leve essa documentação ao Notebook 04",
+        ],
+        "04_governanca_reuso_e_documentacao_de_bases.ipynb": [
+            "Partiremos da documentação construída no Notebook 03",
+            "Agora as três lentes podem ser reunidas",
+            "Leve a ficha revisada para o Notebook 05",
+        ],
+        "05_oficina_protocolo_da_base.ipynb": [
+            "A oficina integra os produtos dos Notebooks 01 a 04",
+            "Toda seleção altera presenças e ausências",
+            "Incorpore o parecer antes da entrega",
+        ],
+    }
+    for nome, termos in marcadores.items():
+        documento = json.loads((UNIDADE / nome).read_text(encoding="utf-8"))
+        conteudo = " ".join(
+            re.sub(r"\s+", " ", fonte(celula)).strip()
+            for celula in documento["cells"]
+        )
+        ausentes = [termo for termo in termos if termo not in conteudo]
+        assert not ausentes, f"{nome}: encadeamento incompleto: {ausentes}"
+
+
 def main() -> None:
     notebooks = sorted(UNIDADE.glob("*.ipynb"))
     assert len(notebooks) == 6
@@ -219,9 +263,11 @@ def main() -> None:
     validar_exercicios()
     validar_gabaritos()
     validar_referencias_e_revisao()
+    validar_encadeamento()
     print("OK cobertura: 15/15 conteúdos")
     print("OK imagens: 9 recursos locais, acessíveis e documentados")
     print("OK dados, exercícios, gabaritos com exemplos, referências e revisores")
+    print("OK encadeamento: pontes internas e produtos entre os 6 notebooks")
     print(f"OK total: {total_textos} células Markdown, {total_codigos} de código")
 
 

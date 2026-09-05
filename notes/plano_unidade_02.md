@@ -136,6 +136,13 @@ Python será usado quando operações sobre registros permitirem observar as
 consequências de critérios de seleção, calcular cobertura, verificar
 identificadores ou auditar metadados. Não será usado como formulário.
 
+Cada mudança de seção será acompanhada por uma ponte breve que explicita o
+resultado obtido, a pergunta ainda em aberto e por que a etapa seguinte é
+necessária. Ao final de cada notebook, o estudante será orientado a levar seu
+produto parcial ao notebook seguinte; na oficina, essas dependências serão
+retomadas para que o protocolo apareça como argumento integrado, e não como uma
+coleção de formulários independentes.
+
 Os dados didáticos serão fictícios, pequenos e deliberadamente imperfeitos.
 Eles incluirão lacunas de cobertura e registros excluíveis para que o estudante
 possa distinguir erro técnico de limitação documental.

@@ -121,6 +121,12 @@ Python será usado porque transformação e auditoria são objetivos explícitos
 unidade. Toda operação terá pergunta, entrada, saída e interpretação. Decisões
 substantivas, regras e justificativas permanecerão em Markdown.
 
+Cada mudança de seção será acompanhada por um breve encadeamento que recupera o
+resultado anterior, explicita sua insuficiência ou novo uso e apresenta a razão
+metodológica da etapa seguinte. Ao final de cada notebook, a síntese indicará qual
+produto parcial deve ser levado ao próximo, preservando o caráter cumulativo do
+percurso entre inventário, transformação, integração e oficina.
+
 O estudo de caso conterá erros deliberados e dados inteiramente fictícios. O
 código nunca sobrescreverá os dados brutos. Cada correção produzirá coluna ou
 arquivo derivado e será documentada.

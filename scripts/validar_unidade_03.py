@@ -267,6 +267,43 @@ def validar_gabaritos() -> None:
     assert all(len(texto.split()) >= 8 for texto in justificativas)
 
 
+def validar_encadeamento() -> None:
+    esperados = {
+        "00_guia_da_unidade.ipynb": [
+            "O problema orientador define", "A inspeção apresentou",
+            "Separar as camadas protege", "As respostas do diagnóstico indicam",
+        ],
+        "01_formatos_importacao_e_extracao.ipynb": [
+            "O guia separou dados brutos", "As saídas confirmam",
+            "A comparação mostrou", "A tabela pública possui",
+            "A extração anterior acessou", "As duas transcrições",
+            "A comparação de CER e WER", "Ao preencher o inventário",
+        ],
+        "02_estrutura_limpeza_e_qualidade.ipynb": [
+            "O Notebook 01 produziu", "A inspeção da tabela mostra",
+            "A transformação para o formato longo", "As chaves normalizadas facilitam",
+            "Depois de normalizar campos", "As regras anteriores modificaram",
+            "O relatório quantitativo informa", "O log da atividade liga",
+        ],
+        "03_juncoes_integracao_e_reprodutibilidade.ipynb": [
+            "O Notebook 02 produziu", "A junção foi executada",
+            "A auditoria mostrou", "Textos e temas já foram separados",
+            "O modelo relacional preserva", "As verificações anteriores testam",
+            "O plano produzido na atividade",
+        ],
+        "04_oficina_base_processavel.ipynb": [
+            "A oficina começa pelo inventário", "Com as entradas e o ambiente",
+            "A importação produz objetos", "As regras do modelo tabular",
+            "Depois de representar ausências", "As junções produzem",
+            "Com inventário, transformações", "A autoavaliação identifica",
+        ],
+    }
+    for nome, marcadores in esperados.items():
+        conteudo = (UNIDADE / nome).read_text(encoding="utf-8")
+        ausentes = [marcador for marcador in marcadores if marcador not in conteudo]
+        assert not ausentes, f"encadeamentos ausentes em {nome}: {ausentes}"
+
+
 def main() -> None:
     notebooks = sorted(UNIDADE.glob("*.ipynb"))
     assert len(notebooks) == 5
@@ -285,8 +322,10 @@ def main() -> None:
     validar_exercicios()
     validar_gabaritos()
     validar_referencias_revisores()
+    validar_encadeamento()
     print("OK cobertura: 13/13 conteúdos")
     print("OK imagens: 8 recursos didáticos e 2 entradas de OCR, acessíveis e documentados")
+    print("OK encadeamento: transições internas e passagens entre notebooks")
     print("OK datas, OCR, dados brutos preservados, 3 derivados, exercícios, gabaritos e revisão")
     print(f"OK total: {total_md} células Markdown, {total_code} de código")
 

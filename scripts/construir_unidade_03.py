@@ -241,6 +241,10 @@ def guia() -> list[dict]:
         entradas, regras e decisões que o produziram.
         """),
         md("""
+        O problema orientador define a exigência de preservar vínculos durante a
+        transformação. Para realizá-la, precisamos decompor o trabalho em etapas nas
+        quais cada produto possa ser verificado antes de alimentar o seguinte.
+
         ## Objetivos e percurso
 
         | Notebook | Questão | Produto |
@@ -272,6 +276,10 @@ def guia() -> list[dict]:
         bruto.head(3)
         """),
         md("""
+        A inspeção apresentou os materiais que atravessarão o percurso. Antes de
+        transformá-los, precisamos estabelecer onde cada estado dos dados ficará e
+        como será possível retornar ao ponto de entrada.
+
         ## Regra de ouro: camadas, não sobrescrita
 
         - `brutos/`: cópias recebidas, imutáveis;
@@ -282,18 +290,28 @@ def guia() -> list[dict]:
         Uma cópia bruta não é “verdade original”; ela é o ponto de entrada preservado
         do fluxo. Proveniência continua necessária.
 
+        Separar as camadas protege os dados recebidos, mas não identifica quais
+        operações serão necessárias em cada projeto. O diagnóstico antecipa essas
+        operações e os riscos que deverão ser registrados ao longo da unidade.
+
         ## Diagnóstico
 
         Que transformações seu projeto exigirá? Quais podem alterar sentido, unidade
         ou quantidade de registros? **Resposta:** Escreva aqui.
         """),
         md("""
+        As respostas do diagnóstico indicam transformações e riscos previstos. O
+        produto reúne as evidências necessárias para mostrar que essas operações
+        foram executadas, testadas e documentadas de maneira auditável.
+
         ## Produto e avaliação
 
         A entrega incluirá inventário, código executável, tabela processável, log de
         transformações, testes de chaves/junções, amostra de controle de OCR e limites.
         Frequências substantivas, gráficos e hipóteses exploratórias pertencem à
-        Unidade 4. Consulte `referencias.md` para leituras completas.
+        Unidade 4. Consulte `referencias.md` para leituras completas. Comece pelo
+        Notebook 01, no qual os formatos recebidos determinarão leitores, parâmetros
+        e estratégias de extração diferentes.
         """),
     ]
 
@@ -302,6 +320,10 @@ def formatos() -> list[dict]:
     return [
         md("""
         # Formatos, importação e extração
+
+        O guia separou dados brutos, intermediários e derivados. Este notebook começa
+        pelo ponto de entrada desse fluxo: reconhecer o que cada arquivo contém e
+        escolher uma operação de leitura que preserve sua estrutura e proveniência.
 
         ## 1. Formato é estrutura e affordance
 
@@ -329,6 +351,10 @@ def formatos() -> list[dict]:
         print("TXT:", txt.strip())
         """),
         md("""
+        As saídas confirmam que os leitores devolveram objetos utilizáveis, mas esse
+        sucesso técnico ainda não informa se a estrutura foi compreendida corretamente.
+        A interpretação começa comparando o resultado com aquilo que esperávamos ler.
+
         ### Interpretação
 
         Leitores diferentes retornam objetos diferentes. Importar com sucesso não
@@ -336,6 +362,10 @@ def formatos() -> list[dict]:
         corretamente. Registre parâmetros, versão da fonte e testes esperados.
         """),
         md("""
+        A comparação mostrou que abrir um arquivo não basta para demonstrar que ele
+        foi interpretado corretamente. Quando o arquivo vem de uma instituição
+        externa, também precisamos fixar e documentar exatamente a versão utilizada.
+
         ## 2. Base pública sem dependência de rede
 
         O arquivo `extrato_codigos_municipios_ibge.csv` é uma cópia local pequena da
@@ -354,6 +384,10 @@ def formatos() -> list[dict]:
         municipios
         """),
         md("""
+        A tabela pública possui estrutura diretamente legível pelo pandas. Documentos
+        orientados à página exigem outro diagnóstico: antes de escolher uma técnica,
+        precisamos descobrir se o PDF contém caracteres codificados ou apenas imagem.
+
         ## 3. Extração de PDF não é OCR
 
         Se o PDF contém caracteres, um leitor pode extrair a camada textual. Se cada
@@ -374,6 +408,10 @@ def formatos() -> list[dict]:
         print(texto_pdf.strip())
         """),
         md("""
+        A extração anterior acessou uma camada textual já presente no PDF. Quando essa
+        camada não existe ou é inadequada, o texto precisa ser estimado a partir dos
+        pixels; por isso, o OCR deve ser tratado como hipótese de transcrição.
+
         ## 4. OCR como hipótese de transcrição
 
         OCR reconhece caracteres em imagem. Resolução, inclinação, ruído, layout,
@@ -450,6 +488,10 @@ def formatos() -> list[dict]:
         pd.DataFrame(comparacao).round({"CER": 3, "WER": 3})
         """),
         md("""
+        As duas transcrições e suas métricas permitem comparar condições controladas.
+        Antes de decidir se uma saída é aceitável, precisamos relacionar a magnitude
+        do erro à finalidade concreta para a qual o texto será utilizado.
+
         ### Como interpretar a comparação
 
         CER é a taxa de erro por caractere; WER, por palavra. Zero significa
@@ -459,6 +501,11 @@ def formatos() -> list[dict]:
         diferentes. Uma referência também pode conter erro humano; por isso, a
         página e o protocolo de transcrição continuam indispensáveis.
 
+        A comparação de CER e WER transforma diferenças visíveis em indicadores de
+        qualidade, mas a adequação continua dependente do uso pretendido. O inventário
+        técnico reúne formato, operação, parâmetro, teste e finalidade para todas as
+        fontes do projeto.
+
         ## Atividade — inventário técnico
 
         Para cada fonte do projeto, registre formato, estrutura interna, leitor,
@@ -466,11 +513,16 @@ def formatos() -> list[dict]:
         saída prevista. Diferencie claramente dado recebido, texto extraído e texto
         reconhecido. **Inventário:** Escreva aqui.
 
+        Ao preencher o inventário, o estudante torna explícito como cada entrada será
+        lida e avaliada. A síntese fixa o princípio que deverá acompanhar a próxima
+        etapa, quando essas representações serão reorganizadas e normalizadas.
+
         ## Síntese
 
         A importação é interpretação técnica. O objetivo não é converter tudo para um
         único formato sem crítica, mas produzir representações adequadas, vinculadas e
-        testáveis.
+        testáveis. Leve o inventário ao Notebook 02: ele orientará a unidade da linha,
+        as regras de transformação e os testes de qualidade.
         """),
     ]
 
@@ -479,6 +531,10 @@ def limpeza() -> list[dict]:
     return [
         md("""
         # Estrutura tabular, limpeza e qualidade
+
+        O Notebook 01 produziu representações legíveis e um inventário de riscos.
+        Agora precisamos organizar essas representações segundo unidades explícitas e
+        aplicar correções sem apagar os valores recebidos ou suas incertezas.
 
         ## 1. Uma variável por coluna, uma observação por linha
 
@@ -493,6 +549,10 @@ def limpeza() -> list[dict]:
         bruto.info()
         """),
         md("""
+        A inspeção da tabela mostra que colunas e linhas já carregam decisões sobre
+        entidades e observações. A comparação entre formatos largo e longo torna
+        visível como uma reorganização pode mudar precisamente a unidade da linha.
+
         ## 2. Largo e longo
 
         No formato largo, período e tema aparecem nos nomes das colunas. No longo,
@@ -513,6 +573,10 @@ def limpeza() -> list[dict]:
         longo.head(6)
         """),
         md("""
+        A transformação para o formato longo reorganiza valores sem precisar apagar a
+        entrada. O mesmo princípio vale para correções textuais: em vez de substituir
+        silenciosamente, criaremos uma representação normalizada ao lado do original.
+
         ## 3. Preservar original, criar versão normalizada
 
         Não sobrescreveremos títulos, municípios ou gêneros. A coluna original permite
@@ -540,6 +604,10 @@ def limpeza() -> list[dict]:
         trabalho[["titulo", "titulo_chave", "genero_original", "genero_padronizado"]]
         """),
         md("""
+        As chaves normalizadas facilitam comparações, mas cada tipo de campo exige uma
+        regra própria. Datas incompletas, identificadores numéricos e valores ausentes
+        não podem ser tratados como simples variações ortográficas.
+
         ## 4. Datas, códigos e ausências
 
         Código de município é identificador textual, não quantidade. Datas parciais
@@ -583,6 +651,10 @@ def limpeza() -> list[dict]:
         trabalho[["data_original", "data_normalizada", "ano_documento", "precisao_data", "razao_data_ausente", "palavras"]]
         """),
         md("""
+        Depois de normalizar campos e representar ausências, podemos comparar registros
+        com maior consistência. Ainda assim, semelhança não prova identidade: ela apenas
+        produz candidatos a duplicata que precisam de revisão documental.
+
         ## 5. Duplicatas são uma hipótese
 
         IDs repetidos detectam um tipo de duplicata. Registros de um mesmo documento
@@ -597,6 +669,10 @@ def limpeza() -> list[dict]:
         trabalho.loc[trabalho["possivel_duplicata"], ["id_documento", "titulo", "data_original", "palavras"]]
         """),
         md("""
+        As regras anteriores modificaram representações, registraram incertezas e
+        sinalizaram casos para revisão. Antes de usar essa tabela em junções, precisamos
+        resumir o que mudou e exportar uma camada intermediária reproduzível.
+
         ## 6. Relatório e exportação intermediária
 
         Antes/depois deve quantificar transformações, falhas e casos para revisão. A
@@ -617,16 +693,26 @@ def limpeza() -> list[dict]:
         pd.Series(relatorio, name="quantidade")
         """),
         md("""
+        O relatório quantitativo informa quantos casos foram afetados, mas não explica
+        por que cada decisão foi tomada. O log acrescenta regra, justificativa, teste,
+        reversibilidade e responsabilidade a esse resumo.
+
         ## Atividade — log de transformação
 
         Registre campo, problema, regra, justificativa, valores afetados, teste,
         reversibilidade e responsável. Explique que distinção cada regra pode apagar.
         **Log:** Escreva aqui.
 
+        O log da atividade liga cada valor derivado ao original e à regra aplicada. A
+        síntese recupera essa relação antes de a tabela intermediária participar de
+        junções com outras entidades.
+
         ## Síntese
 
         Limpeza responsável acrescenta rastreabilidade. Ela não transforma incerteza
-        substantiva em certeza técnica nem autoriza exclusão silenciosa.
+        substantiva em certeza técnica nem autoriza exclusão silenciosa. No Notebook
+        03, a tabela intermediária e seu log serão usados para declarar chaves,
+        cardinalidades e vínculos entre documentos, textos, temas e indicadores.
         """),
     ]
 
@@ -635,6 +721,11 @@ def integracao() -> list[dict]:
     return [
         md("""
         # Junções, integração e reprodutibilidade
+
+        O Notebook 02 produziu uma tabela intermediária com campos normalizados,
+        incertezas representadas e possíveis duplicatas sinalizadas. Este notebook
+        examina o que acontece quando essa tabela passa a se relacionar com outras:
+        uma junção pode confirmar vínculos, revelar lacunas ou criar casos indevidos.
 
         ## 1. Chaves e cardinalidade
 
@@ -662,6 +753,10 @@ def integracao() -> list[dict]:
         integrada["_merge"].value_counts()
         """),
         md("""
+        A junção foi executada com uma cardinalidade declarada e um indicador de
+        correspondência. O resultado técnico precisa agora ser auditado: preservar o
+        número de linhas não garante que todas as chaves tenham sido encontradas.
+
         ### Auditoria da junção
 
         `left_only` não deve ser descartado automaticamente: pode indicar código
@@ -679,6 +774,10 @@ def integracao() -> list[dict]:
         pd.Series(auditoria_juncao)
         """),
         md("""
+        A auditoria mostrou como avaliar uma relação entre duas tabelas. Uma base de
+        pesquisa, porém, costuma reunir relações diferentes; textos, temas e
+        indicadores não compartilham necessariamente a mesma cardinalidade.
+
         ## 2. Integrar textos, metadados e indicadores
 
         Um documento pode possuir zero ou um arquivo textual nesta versão, vários
@@ -709,6 +808,11 @@ def integracao() -> list[dict]:
         base_documentos = integrada.merge(tabela_textos, on="id_documento", how="left", validate="one_to_one")
         print("Documentos:", len(base_documentos), "| relações documento-tema:", len(tabela_temas))
         """),
+        md("""
+        Textos e temas já foram separados segundo suas cardinalidades. Falta aplicar
+        a mesma lógica aos indicadores: a tabela larga será transformada para que
+        tema e período se tornem dimensões explícitas antes da exportação derivada.
+        """),
         code("""
         largo = pd.read_csv("dados/brutos/indicadores_largos.csv")
         indicadores = largo.melt(id_vars="id_documento", var_name="tema_periodo", value_name="ocorrencias")
@@ -720,6 +824,10 @@ def integracao() -> list[dict]:
         indicadores.to_csv("dados/derivados/indicadores_longos.csv", index=False)
         """),
         md("""
+        O modelo relacional preserva entidades e multiplicidades em tabelas ligadas.
+        Para que esse desenho seja reproduzível, também precisamos organizar arquivos,
+        ordem de execução, parâmetros e produtos derivados.
+
         ## 3. Organização e execução
 
         Uma estrutura simples separa entrada, intermediários e derivados. Notebooks
@@ -739,17 +847,27 @@ def integracao() -> list[dict]:
         verificacoes
         """),
         md("""
+        As verificações anteriores testam se arquivos, chaves e relações foram
+        reconstruídos como esperado. O plano de integração transforma esses testes em
+        um desenho explícito que pode ser revisado antes de receber dados reais.
+
         ## Atividade — plano de integração
 
         Desenhe as tabelas, unidades, chaves, cardinalidades, campos compartilhados,
         validações, tratamento de não correspondências e saídas. Indique como um
         resultado será rastreado até a fonte. **Plano:** Escreva aqui.
 
+        O plano produzido na atividade reúne unidades, chaves, cardinalidades,
+        validações e rastreamento. A síntese destaca a consequência metodológica desse
+        desenho: integrar dados é afirmar identidades e relações entre entidades.
+
         ## Síntese
 
         Junção é uma afirmação de identidade e relação, não mero encaixe de colunas.
         A base processável pode ser plural: tabela de documentos, tabela de relações,
-        textos e indicadores ligados por chaves verificadas.
+        textos e indicadores ligados por chaves verificadas. Leve esse pacote para a
+        oficina, onde inventário, transformações, integrações, testes e documentação
+        serão avaliados como uma única entrega.
         """),
     ]
 
@@ -770,6 +888,10 @@ def oficina() -> list[dict]:
         componentes e manter vínculos entre eles.
         """),
         md("""
+        A oficina começa pelo inventário porque nenhuma transformação pode ser
+        avaliada sem conhecer pergunta, unidade, entradas, versões e política de
+        preservação. Essa descrição estabelece o escopo de todas as etapas seguintes.
+
         ## 1. Inventário e estrutura
 
         **Pergunta e unidade de análise:** Escreva aqui.
@@ -781,6 +903,10 @@ def oficina() -> list[dict]:
         **Ambiente e dependências:** Escreva aqui.
         """),
         md("""
+        Com as entradas e o ambiente identificados, podemos registrar como cada fonte
+        será convertida em uma representação legível. As escolhas de importação e
+        extração precisam produzir saídas compatíveis com o inventário declarado.
+
         ## 2. Importação e extração
 
         | Fonte | Leitor/parâmetros | Estrutura esperada | Teste | Saída |
@@ -792,6 +918,10 @@ def oficina() -> list[dict]:
         **Plano de OCR, amostra de controle e métrica de erro:** Escreva aqui.
         """),
         md("""
+        A importação produz objetos técnicos, mas ainda não garante uma organização
+        coerente para análise. O modelo tabular define o que cada linha representa e
+        quais transformações serão aplicadas sem apagar os valores recebidos.
+
         ## 3. Modelo tabular e transformação
 
         **Tabelas e unidade de cada linha:** Escreva aqui.
@@ -803,6 +933,10 @@ def oficina() -> list[dict]:
         | Escreva aqui | Escreva aqui | Escreva aqui | Escreva aqui | Escreva aqui | Escreva aqui |
         """),
         md("""
+        As regras do modelo tabular tornam valores comparáveis e auditáveis. Essa
+        comparabilidade permite diagnosticar ausências e semelhanças, mas não autoriza
+        preencher lacunas ou eliminar registros automaticamente.
+
         ## 4. Ausências e duplicatas
 
         **Representações de ausência e razões:** Escreva aqui.
@@ -814,6 +948,10 @@ def oficina() -> list[dict]:
         **Decisão de manter, relacionar, fundir ou excluir:** Escreva aqui.
         """),
         md("""
+        Depois de representar ausências e revisar possíveis duplicatas, as unidades
+        estão mais bem definidas para integração. Agora é necessário declarar como as
+        tabelas se relacionam e testar se a junção preserva o número e a identidade dos casos.
+
         ## 5. Junções e integração
 
         | Tabelas | Chave | Cardinalidade | Validação | Não correspondências |
@@ -825,6 +963,10 @@ def oficina() -> list[dict]:
         **Contagens antes/depois e riscos de multiplicação:** Escreva aqui.
         """),
         md("""
+        As junções produzem a base integrada, mas o resultado ainda precisa demonstrar
+        como foi construído. Logs e testes ligam cada saída às entradas, parâmetros e
+        decisões que tornam o processo reproduzível.
+
         ## 6. Registro e testes
 
         **Log de transformações:** Escreva aqui.
@@ -836,6 +978,10 @@ def oficina() -> list[dict]:
         **Erros conhecidos e casos pendentes:** Escreva aqui.
         """),
         md("""
+        Com inventário, transformações, relações e testes documentados, já podemos
+        avaliar o pacote como um todo. A rubrica converte os requisitos metodológicos
+        em critérios comuns para autoavaliação.
+
         ## 7. Rubrica
 
         | Critério | 0 | 1 | 2 | Minha nota/evidência |
@@ -849,6 +995,10 @@ def oficina() -> list[dict]:
         | reprodutibilidade | manual | ordem parcial | reconstruível | Escreva aqui |
         """),
         md("""
+        A autoavaliação identifica lacunas segundo critérios conhecidos. A revisão por
+        pares acrescenta uma tentativa externa de reconstruir decisões, localizar
+        junções perigosas e verificar limites que o autor pode não ter percebido.
+
         ## 8. Entrega e revisão por pares
 
         Entregue inventário, notebooks, base processável, tabelas relacionais, log,
@@ -858,7 +1008,9 @@ def oficina() -> list[dict]:
         **Parecer recebido e mudanças:** Escreva aqui.
 
         **O que a Unidade 4 poderá explorar e o que ainda não deve concluir:**
-        Escreva aqui.
+        Escreva aqui. Esta resposta encerra a Unidade 3: ela distingue a base que já
+        pode ser explorada das questões de qualidade que ainda condicionam qualquer
+        descrição, gráfico ou hipótese na unidade seguinte.
         """),
     ]
 

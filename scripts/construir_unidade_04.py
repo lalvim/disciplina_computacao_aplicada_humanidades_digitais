@@ -114,18 +114,32 @@ automaticamente intensidade, importância histórica ou quantidade de menções.
 proporcoes_tema = dados["tema"].value_counts(normalize=True).rename("proporcao")
 pd.concat([frequencias_tema, proporcoes_tema], axis=1)'''),
   m(r'''Frequências e proporções resumem categorias. Quando a variável registra uma
-quantidade, como o número de palavras, precisamos mudar de ferramentas e descrever
-posição central, ordenação e variabilidade.
+quantidade, como o número de palavras, precisamos primeiro perguntar onde os valores
+se concentram. Essa pergunta introduz as medidas de tendência central.
 
-## Centro, quartis e dispersão
+## Medidas de tendência central
 
-Para uma variável quantitativa com valores $x_1,\ldots,x_n$, a média é:
+Medidas de tendência central resumem uma distribuição por um valor considerado
+central ou típico. Elas não são intercambiáveis.
+
+### Média
+
+Para valores quantitativos $x_1,\ldots,x_n$, a média aritmética é a soma dividida
+pelo número de observações:
 
 \[
 \bar{x}=\frac{1}{n}\sum_{i=1}^{n}x_i.
 \]
 
-Depois de ordenar os valores, $x_{(1)}\leq\cdots\leq x_{(n)}$, a mediana é:
+A média funciona como ponto de equilíbrio da distribuição e usa todos os valores.
+Por isso, é sensível a valores extremos. Ela é adequada quando somar os valores e
+dividir igualmente o total entre as unidades possui interpretação substantiva. Não
+faz sentido calcular a média de identificadores ou de categorias nominais.
+
+### Mediana
+
+A mediana é o valor central depois de ordenar as observações. Se $n$ for par, usa-se
+a média dos dois valores centrais:
 
 \[
 \widetilde{x}=
@@ -135,7 +149,63 @@ x_{((n+1)/2)}, & n \text{ ímpar},\\[4pt]
 \end{cases}
 \]
 
-O pandas calcula por padrão a variância amostral e o desvio-padrão amostral:
+Ela depende da posição, não da distância de todos os valores ao centro, e tende a
+ser menos sensível a extremos. É especialmente informativa em distribuições
+assimétricas, mas não substitui a inspeção da distribuição.
+
+### Moda
+
+A moda é o valor ou categoria de maior frequência. Pode ser usada também com
+variáveis nominais, para as quais média e mediana não são adequadas. Uma distribuição
+pode ter uma moda, várias modas ou nenhuma moda informativa. Se todos os valores
+aparecem uma vez, o `pandas` devolve todos em `mode()`; escolher apenas o primeiro
+criaria uma falsa moda única.
+
+| Medida | Pergunta resumida | Sensibilidade ou limite |
+|---|---|---|
+| média | qual seria a parcela igual do total por unidade? | usa todos os valores e responde fortemente a extremos |
+| mediana | qual valor ocupa o centro da ordenação? | não expressa as distâncias entre todos os casos |
+| moda | qual valor ou categoria ocorre mais vezes? | pode ser múltipla ou não informativa |
+'''),
+  c('''x = dados["palavras"]
+frequencias_palavras = x.value_counts()
+frequencia_maxima = int(frequencias_palavras.max())
+valores_modais = sorted(frequencias_palavras[frequencias_palavras.eq(frequencia_maxima)].index.tolist())
+moda_informativa = valores_modais if frequencia_maxima > 1 else "nenhuma: todos os valores ocorrem uma vez"
+
+resumo_tendencia = pd.Series({
+    "n": x.count(),
+    "media": x.mean(),
+    "mediana": x.median(),
+    "frequencia_da_moda": frequencia_maxima,
+    "moda_informativa": moda_informativa,
+})
+
+display(distribuicao_anotada(
+    x.tolist(), dados["id_documento"].tolist(), x.mean(), x.median()
+))
+resumo_tendencia'''),
+  m(r'''A média e a mediana localizam o centro; a moda examina repetição. Nenhuma delas
+informa quanto os valores se afastam entre si. Para distinguir distribuições com o
+mesmo centro, precisamos acrescentar medidas de dispersão.
+
+## Medidas de dispersão
+
+A **amplitude** é a distância entre máximo e mínimo. Usa apenas os dois extremos:
+
+\[
+A=x_{\max}-x_{\min}.
+\]
+
+Os quartis $Q_1$ e $Q_3$ delimitam a metade central dos valores ordenados. O intervalo
+interquartil é:
+
+\[
+IQR=Q_3-Q_1.
+\]
+
+A variância amostral calcula a média corrigida dos desvios quadráticos em relação à
+média; o desvio-padrão retorna à unidade original:
 
 \[
 s^2=\frac{1}{n-1}\sum_{i=1}^{n}(x_i-\bar{x})^2,
@@ -143,37 +213,32 @@ s^2=\frac{1}{n-1}\sum_{i=1}^{n}(x_i-\bar{x})^2,
 s=\sqrt{s^2}.
 \]
 
-A média usa todos os valores e é sensível a extremos; a mediana depende da
-posição ordenada; a moda é o valor de maior frequência. O denominador $n-1$
-corresponde a `var(ddof=1)` e `std(ddof=1)`. Se o objetivo fosse descrever uma
-população integral com denominador $n$, seria necessário declarar `ddof=0`.'''),
-  c('''x = dados["palavras"]
-resumo = pd.Series({
-    "n": x.count(),
-    "media": x.mean(),
-    "mediana": x.median(),
-    "moda": x.mode().iloc[0],
-    "q1": x.quantile(0.25, interpolation="linear"),
-    "q3": x.quantile(0.75, interpolation="linear"),
+Variância fica em unidades ao quadrado e é menos intuitiva para descrição direta. O
+desvio-padrão fica na mesma unidade de $x$, mas ambos são sensíveis a extremos. IQR é
+mais resistente porque depende da metade central. O denominador $n-1$ corresponde a
+`ddof=1`; para descrever uma população integral com denominador $n$, declare `ddof=0`.
+'''),
+  c('''q1 = x.quantile(0.25, interpolation="linear")
+q3 = x.quantile(0.75, interpolation="linear")
+resumo_dispersao = pd.Series({
+    "minimo": x.min(),
+    "maximo": x.max(),
+    "amplitude": x.max() - x.min(),
+    "q1": q1,
+    "q3": q3,
+    "iqr": q3 - q1,
     "variancia_amostral": x.var(ddof=1),
     "desvio_padrao_amostral": x.std(ddof=1),
 })
-
-display(distribuicao_anotada(
-    x.tolist(), dados["id_documento"].tolist(), x.mean(), x.median()
-))
-resumo'''),
-  m(r'''As medidas anteriores condensam os valores em poucos números, mas não revelam
-sozinhas a forma da distribuição. Por isso, examinaremos agora a metade central e
-os casos que se afastam do conjunto antes de decidir como interpretá-los.
+resumo_dispersao'''),
+  m(r'''As medidas de dispersão quantificam afastamentos, mas ainda não mostram onde
+cada observação aparece nem por que um caso se afasta. A próxima etapa usa quartis e
+IQR para localizar candidatos à inspeção na distribuição.
 
 ## Distribuição e valores extremos
 
-O intervalo interquartil cobre a metade central dos valores ordenados:
-
-\[
-IQR=Q_3-Q_1.
-\]
+Retome o $IQR$ calculado na seção anterior: ele cobre a metade central dos
+valores ordenados e fornece uma regra convencional para localizar casos afastados.
 
 A regra usada pelo boxplot define dois limites:
 
@@ -186,9 +251,7 @@ L_{\mathrm{superior}}=Q_3+1{,}5\,IQR.
 Um caso fora desses limites é um candidato à inspeção, nunca uma exclusão
 automática ou prova de erro. Quartis possuem convenções de cálculo diferentes;
 neste notebook registramos explicitamente a interpolação linear usada pelo pandas.'''),
-  c('''q1 = x.quantile(0.25, interpolation="linear")
-q3 = x.quantile(0.75, interpolation="linear")
-iqr = q3 - q1
+  c('''iqr = q3 - q1
 limite_inferior = q1 - 1.5 * iqr
 limite_superior = q3 + 1.5 * iqr
 
@@ -232,8 +295,9 @@ exploração textual e para as visualizações.
 
 ## Atividade
 
-Classifique variáveis, escolha medidas e denominadores, inspecione extremo e
-contingência. Separe descrição, interpretação e hipótese. Ao concluir, registre
+Classifique variáveis; escolha e justifique ao menos uma medida de tendência central
+e uma de dispersão; declare denominadores; inspecione extremo e contingência.
+Separe descrição, interpretação e hipótese. Ao concluir, registre
 quais resultados merecem ser comparados com o conteúdo dos textos no Notebook 02.
 Escreva aqui.'''),
  ]

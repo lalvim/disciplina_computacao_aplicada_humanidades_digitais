@@ -37,7 +37,7 @@ def validar_latex(notebooks):
     )
  formulas = [
   r"f_k = \sum", r"\bar{x}=\frac", r"\widetilde{x}",
-  r"s^2=\frac", r"IQR=Q_3-Q_1", r"L_{\mathrm{inferior}}",
+  r"A=x_{\max}-x_{\min}", r"s^2=\frac", r"IQR=Q_3-Q_1", r"L_{\mathrm{inferior}}",
   r"n_{ij}=\sum", r"p_{j\mid i}", r"f(w)=\sum",
   r"PMI(a,b)=", r"TTR(d)=", r"TTR_m(d)=", r"h_j=\sum",
   r"\bar{x}_t=\frac",
@@ -45,14 +45,18 @@ def validar_latex(notebooks):
  ausentes = [formula for formula in formulas if formula not in texto]
  assert not ausentes, f"fórmulas LaTeX ausentes: {ausentes}"
  delimitadores = re.findall(r"^\$\$$", texto, re.MULTILINE)
- assert len(delimitadores) == 28
+ assert len(delimitadores) == 30
  assert not re.search(r"^\\[\[\]]$", texto, re.MULTILINE)
  assert r"\(" not in texto and r"\)" not in texto
 
 def validar_resultados(ambientes):
  quantitativo = ambientes["01_exploracao_quantitativa.ipynb"]
- resumo = quantitativo["resumo"]
+ resumo = quantitativo["resumo_dispersao"]
  assert resumo["variancia_amostral"] == quantitativo["x"].var(ddof=1)
+ assert quantitativo["resumo_tendencia"]["media"] == quantitativo["x"].mean()
+ assert quantitativo["resumo_tendencia"]["mediana"] == quantitativo["x"].median()
+ assert quantitativo["frequencia_maxima"] == 1
+ assert "nenhuma" in quantitativo["moda_informativa"]
  assert quantitativo["limite_inferior"] < quantitativo["limite_superior"]
  assert quantitativo["extremos"]["id_documento"].tolist() == ["D023"]
  somas_linha = quantitativo["proporcoes_por_genero"].sum(axis=1)
@@ -119,6 +123,22 @@ def validar_oficina():
  ]:
   assert termo in gabarito, f"gabarito da oficina incompleto: {termo}"
 
+def validar_gabarito_quantitativo():
+ gabarito = (U / "gabaritos/gabarito_01_quantitativo.md").read_text(encoding="utf-8")
+ marcadores = [
+  "## Exemplo de resolução",
+  "701,58",
+  "621,5",
+  "não há uma moda informativa",
+  "389,75",
+  "372,54",
+  "palavras ao quadrado",
+  "## Critérios de qualidade",
+  "## Erros frequentes",
+ ]
+ ausentes = [marcador for marcador in marcadores if marcador not in gabarito]
+ assert not ausentes, f"gabarito quantitativo incompleto: {ausentes}"
+
 def validar_imagens():
  pasta=U/"imagens"
  esperados={
@@ -153,7 +173,8 @@ def validar_encadeamento():
   ],
   "01_exploracao_quantitativa.ipynb":[
    "O guia definiu que explorar", "A classificação anterior determina",
-   "Frequências e proporções resumem", "As medidas anteriores condensam",
+   "Frequências e proporções resumem", "A média e a mediana localizam",
+   "As medidas de dispersão quantificam",
    "Até aqui descrevemos uma variável", "A tabela de contingência encerra",
   ],
   "02_exploracao_textual.ipynb":[
@@ -185,15 +206,15 @@ def main():
  for p in ns:
   a,b,env=run(p); ambientes[p.name]=env; tm+=a;tc+=b; print("OK",p.name,a,b); d=json.loads(p.read_text(encoding="utf-8")); texto+=" ".join(src(x) for x in d["cells"]).lower()
   if p.name=="04_oficina_relatorio_exploratorio.ipynb": assert b==0
- termos=["tipos de variáveis","frequências","mediana","quartis","variância","distribuição","valores extremos","contingência","tokenização","normalização","frequências absoluta e relativa","concordâncias","n-gramas","colocações","vocabulário","diversidade lexical","barras","histograma","boxplot","dispersão","série temporal"]
+ termos=["tipos de variáveis","frequências","medidas de tendência central","média","mediana","moda","medidas de dispersão","quartis","variância","distribuição","valores extremos","contingência","tokenização","normalização","frequências absoluta e relativa","concordâncias","n-gramas","colocações","vocabulário","diversidade lexical","barras","histograma","boxplot","dispersão","série temporal"]
  assert all(t in texto for t in termos)
  t=(U/"exercicios_unidade_04_texto.md").read_text(encoding="utf-8"); numeros=[int(n) for n in re.findall(r"^## Questão (\d+)",t,re.M)]; assert numeros==list(range(1,19)); assert len(re.findall(r"^- \[ \] \*\*[A-D]\.\*\*",t,re.M))==72
  chave=(U/"gabaritos/gabarito_exercicios_multipla_escolha.md").read_text(encoding="utf-8"); resp=re.findall(r"^\|\s*\d+\s*\|\s*([A-D])",chave,re.M); assert len(resp)==18
  assert len(list((U/"revisores").glob("*.md")))==9 and len(list((U/"revisores/pareceres").glob("*.md")))==7
- validar_latex(ns); validar_resultados(ambientes); validar_oficina(); validar_imagens(); validar_encadeamento()
+ validar_latex(ns); validar_resultados(ambientes); validar_oficina(); validar_gabarito_quantitativo(); validar_imagens(); validar_encadeamento()
  print("OK 14 fórmulas LaTeX e resultados quantitativos/textuais")
  print("OK oficina: instruções, dinâmica, rubrica e exemplo resolvido")
  print("OK imagens: 1 abertura e 8 diagramas acessíveis, locais e documentados")
  print("OK encadeamento: transições internas e passagens entre notebooks")
- print("OK 21/21 conteúdos; exercícios textuais, gabaritos e revisão; total",tm,tc)
+ print("OK 21/21 conteúdos; tendência central e dispersão separadas; total",tm,tc)
 if __name__=="__main__": main()

@@ -76,6 +76,11 @@ PMI, TTR, intervalos do histograma e médias anuais terão fórmulas; classifica
 de variáveis, concordâncias e escolhas gráficas permanecerão prioritariamente
 discursivas.
 
+No Notebook 01, as medidas de tendência central serão apresentadas em seção
+própria — média, mediana e moda, com critérios de uso e sensibilidade — antes
+das medidas de dispersão — amplitude, quartis, IQR, variância e desvio-padrão.
+Essa separação evita tratar “centro” e “espalhamento” como uma única operação.
+
 ## 5. Limites
 
 - sem intervalos de confiança ou testes de hipótese, reservados à Unidade 5;

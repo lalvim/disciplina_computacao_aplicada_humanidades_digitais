@@ -1,0 +1,18 @@
+{
+  "natureza": "dados inteiramente fictícios",
+  "documentos": {
+    "origem": "cópia de unidade_04/dados/documentos.csv",
+    "registros": 24,
+    "transformacao": "nenhuma; identificadores preservados"
+  },
+  "documentos_comparacao": {
+    "origem": "primeiros 12 registros da cópia",
+    "transformacao": "acréscimo de frases fictícias controladas por gênero e local e marca didática por documento",
+    "finalidade": "produzir rankings textuais não triviais mantendo os identificadores"
+  },
+  "versoes": {
+    "origem": "exemplos criados para a Unidade 5",
+    "finalidade": "comparar transcrições e versões"
+  },
+  "limite": "não sustenta afirmações históricas ou sociais reais"
+}

@@ -1,0 +1,7 @@
+id_versao,id_documento,tipo_versao,texto
+V001,D001,transcrição A,A escola noturna amplia a instrução pública.
+V002,D001,transcrição B,A escola noturna amplia instrução pública.
+V003,D002,OCR bruto,O trabalho nas oficinas reune jornada salario e associação.
+V004,D002,revisada,"O trabalho nas oficinas reúne jornada, salário e associação."
+V005,D003,edição 1,A estrada e a máquina anunciam progresso e conflito.
+V006,D003,edição 2,"A nova estrada e a máquina anunciam progresso, mas também conflito."

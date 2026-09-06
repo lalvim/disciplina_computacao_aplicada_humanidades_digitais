@@ -751,6 +751,17 @@ somente se necessário e posiciona a execução na unidade correta.
 | 03 — Visualização exploratória | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_04/03_visualizacao_exploratoria.ipynb) |
 | 04 — Oficina do relatório | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_04/04_oficina_relatorio_exploratorio.ipynb) |
 
+### Unidade 5
+
+| Notebook | Google Colab |
+|---|---|
+| 00 — Guia da unidade | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_05/00_guia_da_unidade.ipynb) |
+| 01 — Estimativas e tamanhos de efeito | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_05/01_estimativas_e_tamanhos_de_efeito.ipynb) |
+| 02 — Incerteza e testes de hipótese | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_05/02_incerteza_e_testes_de_hipotese.ipynb) |
+| 03 — Representação vetorial de textos | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_05/03_representacao_vetorial_de_textos.ipynb) |
+| 04 — Similaridade, documentos e versões | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_05/04_similaridade_documentos_e_versoes.ipynb) |
+| 05 — Oficina da análise comparativa | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_05/05_oficina_analise_comparativa.ipynb) |
+
 Os notebooks discursivos não possuem célula de clonagem. Nos demais, a célula
 operacional é separada dos experimentos e não faz parte da avaliação. O
 diretório `/content` é temporário: respostas e alterações desaparecem ao fim da

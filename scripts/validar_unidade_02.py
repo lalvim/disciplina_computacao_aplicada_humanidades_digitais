@@ -81,6 +81,19 @@ def validar_dados() -> None:
         UNIDADE / "00_guia_da_unidade.ipynb"
     ).read_text(encoding="utf-8")
 
+    guia = (UNIDADE / "00_guia_da_unidade.ipynb").read_text(encoding="utf-8")
+    for termo in [
+        "## Como ler a pasta `dados`",
+        "`catalogo_fontes.csv`",
+        "`dicionario_dados.csv`",
+        "`proveniencia_catalogo.json`",
+        "Seleção e cobertura",
+        "Interpretação e consistência",
+        "Rastreabilidade e responsabilidade",
+        "Nenhum dos três arquivos, isoladamente",
+    ]:
+        assert termo in guia, f"explicação da pasta de dados incompleta: {termo}"
+
 
 def validar_imagens() -> None:
     pasta = UNIDADE / "imagens"

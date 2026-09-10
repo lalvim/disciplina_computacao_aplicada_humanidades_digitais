@@ -213,6 +213,35 @@ def guia() -> list[dict]:
             final da unidade.
             """
         ),
+        texto(
+            """
+            ## Como ler a pasta `dados`
+
+            A pasta `dados` contém três arquivos complementares. Eles não representam
+            três coleções independentes: juntos, documentam os **registros**, o
+            **significado de suas colunas** e a **trajetória de produção da base**.
+
+            | Arquivo | O que representa | Problema ao qual se relaciona | Onde será retomado |
+            |---|---|---|---|
+            | `catalogo_fontes.csv` | Catálogo fictício com uma fonte por linha e atributos como instituição, tipo documental, ano, localização, digitalização e acesso. É a tabela principal sobre a qual serão formulados recortes. | **Seleção e cobertura:** quais registros podem entrar no corpus, quais ficam de fora e que grupos, lugares ou tipos documentais aparecem de forma desigual? | Notebooks 01 e 02; também será auditado nos Notebooks 03 e 04. |
+            | `dicionario_dados.csv` | Documentação de cada coluna do catálogo: nome, descrição, tipo, regra e origem. Cada linha descreve um **campo**, e não uma fonte histórica. | **Interpretação e consistência:** o que significa cada variável, quais valores são esperados e como outra pessoa pode compreender a estrutura da tabela? | Notebook 03 e auditoria de documentação do Notebook 04. |
+            | `proveniencia_catalogo.json` | Registro, em estrutura hierárquica, da natureza, autoria, finalidade, origem, transformações e restrições do catálogo como um todo. | **Rastreabilidade e responsabilidade:** quem produziu a base, para quê, mediante quais transformações e com quais limites de reutilização? | Notebooks 03 e 04. |
+
+            Em termos simples, o CSV principal responde **“quais registros e
+            atributos temos?”**; o dicionário responde **“o que cada campo quer
+            dizer?”**; e a proveniência responde **“como e por que esta base foi
+            produzida?”**. Nenhum dos três arquivos, isoladamente, documenta a base
+            por completo.
+
+            Todos contêm dados didáticos inteiramente fictícios. O problema da
+            unidade não é descobrir fatos históricos a partir deles, mas aprender a
+            construir e justificar uma base que possa ser criticada, auditada e
+            reutilizada responsavelmente.
+
+            Conhecido o papel de cada arquivo, podemos abrir o catálogo principal
+            apenas para reconhecer sua escala antes do diagnóstico inicial.
+            """
+        ),
         codigo(
             """
             from pathlib import Path

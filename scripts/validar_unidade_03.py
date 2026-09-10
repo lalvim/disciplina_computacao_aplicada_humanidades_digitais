@@ -84,6 +84,25 @@ def validar_arquivos() -> None:
     degradada = (BRUTOS / "ocr_precomputado_degradado.txt").read_text(encoding="utf-8").strip()
     assert limpa == referencia and degradada != referencia
 
+    guia = (UNIDADE / "00_guia_da_unidade.ipynb").read_text(encoding="utf-8")
+    pasta_dados = UNIDADE / "dados"
+    arquivos = sorted(
+        caminho.relative_to(pasta_dados).as_posix()
+        for caminho in pasta_dados.rglob("*")
+        if caminho.is_file()
+    )
+    nao_documentados = [nome for nome in arquivos if f"`{nome}`" not in guia]
+    assert not nao_documentados, f"arquivos sem explicação no guia: {nao_documentados}"
+    for termo in [
+        "## Como ler a pasta `dados`",
+        "Entradas preservadas: `brutos/`",
+        "Resultado verificável: `intermediarios/`",
+        "Produtos para análise: `derivados/`",
+        "fontes preservadas → transformação verificável →",
+        "problema metodológico específico",
+    ]:
+        assert termo in guia, f"explicação da pasta de dados incompleta: {termo}"
+
 
 def dimensoes_png(caminho: Path) -> tuple[int, int]:
     dados = caminho.read_bytes()

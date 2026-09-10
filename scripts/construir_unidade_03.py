@@ -265,6 +265,63 @@ def guia() -> list[dict]:
         retomada pelo seguinte. Testes e limites podem exigir retorno a qualquer
         decisão anterior.
         """),
+        md("""
+        ## Como ler a pasta `dados`
+
+        A pasta está organizada como um fluxo de transformação. Os arquivos em
+        `brutos/` são entradas preservadas; `intermediarios/` guarda um resultado
+        verificável ainda sujeito a integração; e `derivados/` reúne produtos
+        reconstruíveis destinados à análise. Portanto, os arquivos não são exemplos
+        soltos: cada um permite examinar um problema metodológico específico.
+
+        ### Entradas preservadas: `brutos/`
+
+        | Arquivo | O que representa | Problema ao qual se relaciona | Uso principal |
+        |---|---|---|---|
+        | `brutos/catalogo_messy.csv` | Catálogo fictício delimitado por ponto e vírgula, com datas, grafias, ausências e possível duplicata deliberadamente inconsistentes. | Importação parametrizada, diagnóstico de qualidade, padronização cautelosa e detecção de duplicatas. | Notebooks 01 e 02. |
+        | `brutos/catalogo_messy.xlsx` | O mesmo catálogo em uma planilha Excel. | Como formatos diferentes exigem leitores e parâmetros próprios, ainda que representem conteúdo semelhante. | Notebook 01. |
+        | `brutos/metadados.json` | Lista hierárquica que liga documentos a arquivos textuais e a zero ou vários temas. | Leitura de dados semiestruturados e representação de relações 1:N. | Notebooks 01 e 03. |
+        | `brutos/metadados.xml` | Pequeno recorte dos metadados em estrutura XML. | Diferenças de sintaxe, hierarquia e extração entre formatos semiestruturados. | Notebook 01. |
+        | `brutos/D001.txt` | Texto simples associado ao documento D001. | Leitura de texto não estruturado e manutenção do vínculo entre arquivo e identificador. | Notebooks 01 e 03. |
+        | `brutos/D002.txt` | Texto simples associado ao documento D002. | Integração de conteúdo textual com o catálogo sem copiar listas ou perder a chave documental. | Notebooks 01 e 03. |
+        | `brutos/documento_textual.pdf` | PDF sintético que já contém uma camada textual. | Distinguir extração de texto de PDF nascido digitalmente de OCR aplicado a imagem. | Notebook 01. |
+        | `brutos/pagina_digitalizada.png` | Imagem sintética limpa de uma linha tipográfica. | Entrada controlada para observar reconhecimento óptico de caracteres. | Notebook 01. |
+        | `brutos/pagina_digitalizada_degradada.png` | Versão da mesma imagem com redução, inclinação, desfoque e marcas. | Efeito da qualidade material e da digitalização sobre os erros de OCR. | Notebook 01. |
+        | `brutos/ocr_referencia.txt` | Transcrição correta usada como referência de controle. | Avaliação do OCR por comparação com uma transcrição validada; não é uma saída automática. | Notebook 01. |
+        | `brutos/ocr_precomputado.txt` | Saída de OCR previamente calculada para a imagem limpa. | Permitir o experimento offline e medir erros mesmo sem Tesseract instalado. | Notebook 01. |
+        | `brutos/ocr_precomputado_degradado.txt` | Saída previamente calculada para a imagem degradada, contendo erros deliberados. | Comparar CER e WER e mostrar que OCR produz hipótese textual, não transcrição garantida. | Notebook 01. |
+        | `brutos/indicadores_largos.csv` | Tabela fictícia com tema e período codificados nos nomes das colunas. | Diferença entre formatos largo e longo e explicitação das dimensões tema e período. | Notebooks 02 e 03. |
+        | `brutos/extrato_codigos_municipios_ibge.csv` | Extrato didático de quatro códigos municipais de uma fonte pública real. | Enriquecimento por junção, compatibilidade de chaves e cardinalidade muitos-para-um. | Notebooks 01 e 03. |
+        | `brutos/proveniencia_base_publica.json` | Fonte, URL, data de acesso e ressalva de reutilização do extrato do IBGE. | Proveniência e responsabilidade no uso de uma base pública; o CSV não documenta sozinho sua origem. | Notebook 01 e rastreamento do pacote final. |
+
+        Os arquivos de OCR pré-computado permanecem nessa camada porque funcionam
+        como entradas preservadas para o experimento reproduzível. Eles não devem ser
+        confundidos nem com as imagens que deram origem ao reconhecimento nem com a
+        transcrição de referência usada para avaliá-lo.
+
+        ### Resultado verificável: `intermediarios/`
+
+        | Arquivo | O que representa | Problema ao qual se relaciona | Uso principal |
+        |---|---|---|---|
+        | `intermediarios/catalogo_normalizado.csv` | Versão do catálogo após regras explícitas de normalização, representação de datas incertas e sinalização de possíveis duplicatas. | Preservar decisões e incertezas entre a entrada bruta e a integração, sem sobrescrever o original. | Produzido no Notebook 02 e consumido no Notebook 03. |
+
+        ### Produtos para análise: `derivados/`
+
+        | Arquivo | O que representa | Problema ao qual se relaciona | Uso principal |
+        |---|---|---|---|
+        | `derivados/documentos_processaveis.csv` | Tabela principal já normalizada e enriquecida com município e, quando disponível, texto. | Integrar entidades sem multiplicar documentos e preparar uma unidade documental analisável. | Produzido no Notebook 03 e auditado na oficina. |
+        | `derivados/documentos_temas.csv` | Tabela de relações, com uma linha para cada associação entre documento e tema. | Representar cardinalidade 1:N sem armazenar vários temas em uma única célula. | Produzido no Notebook 03 e auditado na oficina. |
+        | `derivados/indicadores_longos.csv` | Indicadores reorganizados com tema e período em colunas próprias. | Produzir estrutura longa adequada a agrupamentos e análises posteriores. | Produzido no Notebook 03 e auditado na oficina. |
+
+        Em síntese, o percurso é **fontes preservadas → transformação verificável →
+        produtos analisáveis**. Os notebooks devem reconstruir as duas últimas
+        camadas; por isso, não edite manualmente os arquivos brutos, intermediários
+        ou derivados.
+
+        Com esse mapa, podemos inspecionar o catálogo bruto e contar as entradas sem
+        ainda corrigi-las. A finalidade da primeira leitura é reconhecer o material,
+        não começar silenciosamente a limpeza.
+        """),
         code("""
         from pathlib import Path
         import pandas as pd

@@ -19,6 +19,28 @@ def run(p):
  finally: os.chdir(old)
  return a,b,env
 
+def validar_dados():
+ pasta = U / "dados"
+ arquivos = sorted(
+  caminho.relative_to(pasta).as_posix()
+  for caminho in pasta.rglob("*")
+  if caminho.is_file()
+ )
+ assert arquivos == ["documentos.csv", "proveniencia.json"]
+
+ guia = (U / "00_guia_da_unidade.ipynb").read_text(encoding="utf-8")
+ nao_documentados = [nome for nome in arquivos if f"`{nome}`" not in guia]
+ assert not nao_documentados, f"arquivos sem explicação no guia: {nao_documentados}"
+ for termo in [
+  "## Como ler a pasta `dados`",
+  "Exploração multimodal",
+  "Interpretação, auditoria e limites",
+  "uma linha por documento e nove campos",
+  "nota decorativa: ela altera a leitura do extremo D023",
+  "não criam novos arquivos de dados nesta",
+ ]:
+  assert termo in guia, f"explicação da pasta de dados incompleta: {termo}"
+
 def validar_latex(notebooks):
  texto = "\n".join(
   src(c)
@@ -211,7 +233,7 @@ def main():
  t=(U/"exercicios_unidade_04_texto.md").read_text(encoding="utf-8"); numeros=[int(n) for n in re.findall(r"^## Questão (\d+)",t,re.M)]; assert numeros==list(range(1,19)); assert len(re.findall(r"^- \[ \] \*\*[A-D]\.\*\*",t,re.M))==72
  chave=(U/"gabaritos/gabarito_exercicios_multipla_escolha.md").read_text(encoding="utf-8"); resp=re.findall(r"^\|\s*\d+\s*\|\s*([A-D])",chave,re.M); assert len(resp)==18
  assert len(list((U/"revisores").glob("*.md")))==9 and len(list((U/"revisores/pareceres").glob("*.md")))==7
- validar_latex(ns); validar_resultados(ambientes); validar_oficina(); validar_gabarito_quantitativo(); validar_imagens(); validar_encadeamento()
+ validar_dados(); validar_latex(ns); validar_resultados(ambientes); validar_oficina(); validar_gabarito_quantitativo(); validar_imagens(); validar_encadeamento()
  print("OK 14 fórmulas LaTeX e resultados quantitativos/textuais")
  print("OK oficina: instruções, dinâmica, rubrica e exemplo resolvido")
  print("OK imagens: 1 abertura e 8 diagramas acessíveis, locais e documentados")

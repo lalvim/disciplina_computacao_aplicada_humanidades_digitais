@@ -872,7 +872,7 @@ def governanca_documentacao() -> list[dict]:
             """
             # Governança, reuso e documentação de bases
 
-            ## Uma base bem documentada é automaticamente justa e reutilizável?
+            ## Em que condições uma base bem documentada pode ser reutilizada — por quem, para quais finalidades e sob qual autoridade?
 
             Uma base pode ter identificadores persistentes, metadados completos e
             formato aberto e, ainda assim, ter sido disponibilizada sem participação
@@ -885,8 +885,10 @@ def governanca_documentacao() -> list[dict]:
 
             ![Três lentes complementares examinam uma base: FAIR focaliza encontrabilidade e reuso técnico, CARE focaliza pessoas, autoridade e responsabilidade, e datasheets documentam o ciclo de vida.](imagens/04_fair_care_datasheets.svg)
 
-            **Problema orientador:** reutilizável para quem, com qual finalidade, sob
-            qual autoridade e com que documentação?
+            A pergunta de abertura exige examinar conjuntamente condições técnicas de
+            reuso, finalidades, pessoas e coletividades afetadas, autoridade para
+            decidir e documentação do ciclo de vida. As três lentes permitirão
+            distinguir essas dimensões sem reduzi-las a um único selo de qualidade.
 
             Ao final, você deverá ser capaz de:
 

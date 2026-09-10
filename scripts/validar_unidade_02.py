@@ -239,6 +239,8 @@ def validar_encadeamento() -> None:
             "Leve essa documentação ao Notebook 04",
         ],
         "04_governanca_reuso_e_documentacao_de_bases.ipynb": [
+            "Em que condições uma base bem documentada pode ser reutilizada",
+            "condições técnicas de reuso, finalidades, pessoas e coletividades afetadas",
             "Partiremos da documentação construída no Notebook 03",
             "Agora as três lentes podem ser reunidas",
             "Leve a ficha revisada para o Notebook 05",

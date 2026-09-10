@@ -40,7 +40,29 @@ e pelas formas visuais e retorna aos documentos antes de formular novas pergunta
 
 ![Cinco etapas ligam base documentada, descrição, visualização, leitura próxima e formulação de hipóteses; uma seta retorna às decisões anteriores.](imagens/00_percurso_exploracao.svg)
 
-01 exploração quantitativa; 02 textual; 03 visual; 04 relatório. Os 24 registros são fictícios e D023 é extremo deliberado.'''),c('''import json,pandas as pd
+01 exploração quantitativa; 02 textual; 03 visual; 04 relatório. Os 24 registros são fictícios e D023 é extremo deliberado.'''),m('''## Como ler a pasta `dados`
+
+A pasta reúne dois arquivos complementares. Um contém os registros e as variáveis que
+serão explorados; o outro documenta condições necessárias para interpretar esses
+registros. Ler somente a tabela permitiria calcular resultados, mas ocultaria por que
+a base existe e como um caso incomum foi introduzido.
+
+| Arquivo | O que representa | Problema ao qual se relaciona | Onde será retomado |
+|---|---|---|---|
+| `documentos.csv` | Corpus didático fictício com uma linha por documento e nove campos: identificador, ano, gênero, local, tema, número de palavras, pessoas, páginas e texto. Reúne variáveis quantitativas, categóricas, temporal e textual sobre as mesmas unidades documentais. | **Exploração multimodal:** como descrever distribuições e associações sem confundir documento, palavra, pessoa ou página; como relacionar agregados quantitativos ao conteúdo dos textos. | Notebook 01 para resumos quantitativos; Notebook 02 para exploração textual; Notebook 03 para visualizações; Notebook 04 para o relatório integrado. |
+| `proveniencia.json` | Metadados sobre o conjunto: informa que os dados são inteiramente fictícios e que D023 foi criado como valor extremo deliberado. Não contém uma linha para cada documento. | **Interpretação, auditoria e limites:** distinguir uma característica pedagógica planejada de erro histórico ou documental e impedir afirmações sobre instituições, grupos ou processos reais. | Notebook 00 na contextualização; Notebook 01 na inspeção de extremos; Notebook 04 na seção de limitações e reprodutibilidade. |
+
+Em termos simples, `documentos.csv` responde **“quais observações serão
+exploradas?”**, enquanto `proveniencia.json` responde **“em que condições essa base
+foi produzida e como seus resultados podem ser interpretados?”**. Proveniência não
+é uma nota decorativa: ela altera a leitura do extremo D023. Neste exercício, saber
+que ele é deliberado impede tratá-lo automaticamente como falha de digitação ou como
+evidência de um fenômeno histórico.
+
+Os dois arquivos permanecem como entradas da exploração. Os notebooks calculam
+tabelas e gráficos a partir deles, mas não criam novos arquivos de dados nesta
+unidade. Conhecido o papel de cada entrada, podemos abri-las para reconhecer a escala
+do corpus e confirmar sua natureza antes de iniciar qualquer cálculo.'''),c('''import json,pandas as pd
 dados=pd.read_csv("dados/documentos.csv"); prov=json.loads(open("dados/proveniencia.json",encoding="utf-8").read()); print(dados.shape,prov["natureza"]); dados.head()'''),m('''A inspeção inicial mostra quais registros e variáveis estão disponíveis. O passo
 seguinte é estabelecer como transformar essas observações em afirmações sem
 confundir resultado calculado, interpretação e conclusão.

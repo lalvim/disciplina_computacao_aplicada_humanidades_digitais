@@ -179,6 +179,37 @@ def formatos_estruturas() -> str:
     )
 
 
+def linha_tempo_formatos() -> str:
+    partes = [texto(600, 43, ["Marcos históricos dos formatos de dados"], "titulo")]
+    partes.append(texto(600, 75, ["As datas representam tipos diferentes de marco: criação, rascunho, apresentação ou padrão"], "nota"))
+    partes.append('<path class="linha" d="M80,310 H1120"/>')
+
+    itens = [
+        (105, 115, "1990", "HTML", ["publicar documentos", "ligados na Web"], CORES["azul_claro"], CORES["azul"]),
+        (300, 355, "1996 → 1998", "XML", ["estruturar e trocar", "informação na Web"], CORES["verde_claro"], CORES["verde"]),
+        (495, 115, "2001", "JSON", ["intercâmbio textual", "leve e portável"], CORES["terracota_claro"], CORES["terracota"]),
+        (690, 355, "2001", "YAML", ["serialização legível", "por pessoas"], CORES["ameixa_claro"], CORES["ameixa"]),
+        (885, 115, "2005*", "CSV", ["documentar a troca", "de tabelas planas"], "#f1e2bd", "#8a6528"),
+        (1080, 355, "2006", "XLSX", ["representar e empacotar", "planilhas Office"], CORES["azul_claro"], CORES["azul"]),
+    ]
+    for x, y, data, formato, objetivo, fundo, contorno in itens:
+        partes.append(f'<circle cx="{x}" cy="310" r="11" fill="{contorno}"/>')
+        if y < 310:
+            partes.append(f'<path class="linha" d="M{x},299 V280"/>')
+        else:
+            partes.append(f'<path class="linha" d="M{x},321 V345"/>')
+        partes.append(caixa(x - 82, y, 164, 165, formato, [data, *objetivo], fundo, contorno))
+
+    partes.append(texto(600, 565, ["* A RFC 4180 registrou uma prática CSV anterior; não corresponde à criação do formato"], "nota"))
+    partes.append(texto(600, 598, ["Uma história de formatos é uma história de problemas, usos e processos de padronização"], "nota"))
+    return documento(
+        "Linha do tempo de formatos de dados",
+        "Linha do tempo com HTML em 1990, XML entre 1996 e 1998, JSON e YAML em 2001, documentação do CSV pela RFC 4180 em 2005 e padronização do XLSX em 2006. Uma nota informa que o CSV já era usado antes da RFC.",
+        "".join(partes),
+        635,
+    )
+
+
 def pdf_texto_imagem_ocr() -> str:
     partes = [texto(600, 46, ["PDF: primeiro diagnosticar, depois escolher a operação"], "titulo")]
     partes.append(caixa(55, 205, 205, 120, "Arquivo PDF", ["contêiner de", "páginas"], CORES["papel"], CORES["areia"]))
@@ -341,6 +372,7 @@ def main() -> None:
     IMAGENS.mkdir(parents=True, exist_ok=True)
     imagens = {
         "00_percurso_unidade.svg": percurso(),
+        "01_linha_tempo_formatos.svg": linha_tempo_formatos(),
         "01_formatos_estruturas.svg": formatos_estruturas(),
         "01_pdf_texto_imagem_ocr.svg": pdf_texto_imagem_ocr(),
         "02_largo_longo.svg": largo_longo(),

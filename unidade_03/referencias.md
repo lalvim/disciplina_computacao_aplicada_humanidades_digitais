@@ -21,6 +21,29 @@ study. *Digital Scholarship in the Humanities*, v. 34, n. 4, p. 825–843,
 
 ## Documentação técnica
 
+W3C. *Hypertext Markup Language 2.0 — Acknowledgments*. Registra o desenho do
+HTML por Tim Berners-Lee no projeto World Wide Web de 1990.
+https://www.w3.org/MarkUp/html-spec/html-spec_12.html.
+
+W3C. *The World Wide Web Consortium Issues XML 1.0 as a W3C Recommendation*.
+Apresenta o início do projeto em 1996, seus rascunhos e a Recomendação de 1998.
+https://www.w3.org/press-releases/1998/xml10-rec/.
+
+ECMA INTERNATIONAL. *ECMA-404: The JSON Data Interchange Syntax*. 1. ed.,
+2013. Registra que o JSON foi apresentado publicamente em 2001.
+https://ecma-international.org/wp-content/uploads/ECMA-404_1st_edition_october_2013.pdf.
+
+YAML. *Yet Another Markup Language (YAML) 1.0 — Working Draft, 16 June 2001*.
+https://yaml.org/spec/history/2001-06-16.html.
+
+IETF. *RFC 4180: Common Format and MIME Type for Comma-Separated Values (CSV)
+Files*. 2005. Documenta uma prática anterior e registra o tipo `text/csv`.
+https://www.rfc-editor.org/rfc/rfc4180.
+
+ECMA INTERNATIONAL. *ECMA-376: Office Open XML File Formats*. A primeira
+edição foi publicada em dezembro de 2006.
+https://ecma-international.org/publications-and-standards/standards/ecma-376/.
+
 PANDAS DEVELOPMENT TEAM. *pandas User Guide: IO tools, missing data, merge and
 reshaping*. https://pandas.pydata.org/docs/user_guide/.
 
@@ -41,6 +64,7 @@ https://www.ibge.gov.br/explica/codigos-dos-municipios.php.
 | Momento | Leitura | Finalidade |
 |---|---|---|
 | Antes da Semana 1 | Rawson e Muñoz (2019) | Problematizar a metáfora da limpeza |
+| Início do Notebook 01 | W3C, IETF, ECMA e YAML | Distinguir origem, uso e padronização dos formatos |
 | Notebook 01 | Hill e Hengchen (2019) | Relacionar erro de OCR e análise histórica |
 | Notebook 02 | Wickham (2014) | Discutir unidade de observação e estrutura |
 | Notebook 02 | Van Hooland et al. (2013) | Diagnosticar inconsistências e duplicatas |

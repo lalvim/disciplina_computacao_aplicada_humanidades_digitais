@@ -118,6 +118,7 @@ def validar_imagens() -> None:
         "README.md",
         "00_abertura_conceitual.png",
         "00_percurso_unidade.svg",
+        "01_linha_tempo_formatos.svg",
         "01_formatos_estruturas.svg",
         "01_pdf_texto_imagem_ocr.svg",
         "02_largo_longo.svg",
@@ -141,7 +142,7 @@ def validar_imagens() -> None:
             re.findall(r"!\[([^]]+)\]\((dados/brutos/pagina_digitalizada[^)]+)\)", markdown)
         )
 
-    assert len(referencias) == 9 and len({c for _, c in referencias}) == 9
+    assert len(referencias) == 10 and len({c for _, c in referencias}) == 10
     assert len(referencias_ocr) == 2 and len({c for _, c in referencias_ocr}) == 2
     for alt, relativo in referencias + referencias_ocr:
         assert len(alt.split()) >= 6, f"texto alternativo insuficiente: {relativo}"
@@ -156,6 +157,10 @@ def validar_imagens() -> None:
         assert descricao is not None and len((descricao.text or "").split()) >= 8
         assert raiz.attrib.get("role") == "img"
         assert raiz.attrib.get("aria-labelledby") == "titulo descricao"
+
+    linha_tempo = (pasta / "01_linha_tempo_formatos.svg").read_text(encoding="utf-8")
+    for termo in ["HTML", "XML", "JSON", "YAML", "CSV", "XLSX", "2005*", "2006"]:
+        assert termo in linha_tempo, f"marco ausente da linha do tempo: {termo}"
 
     largura, altura = dimensoes_png(pasta / "00_abertura_conceitual.png")
     assert largura >= 1200 and altura >= 500
@@ -320,6 +325,8 @@ def validar_encadeamento() -> None:
         ],
         "01_formatos_importacao_e_extracao.ipynb": [
             "O guia separou dados brutos", "As saídas confirmam",
+            "## Linha do tempo: formatos surgem para problemas diferentes",
+            "documentação de uso anterior, não criação",
             "*affordance* (possibilidades de ação)",
             "ações que um formato facilita, dificulta ou",
             "A seção anterior tratou da **estrutura interna**",
@@ -383,7 +390,7 @@ def main() -> None:
     validar_referencias_revisores()
     validar_encadeamento()
     print("OK cobertura: 13/13 conteúdos")
-    print("OK imagens: 9 recursos didáticos e 2 entradas de OCR, acessíveis e documentados")
+    print("OK imagens: 10 recursos didáticos e 2 entradas de OCR, acessíveis e documentados")
     print("OK encadeamento: transições internas e passagens entre notebooks")
     print("OK atividades: U03-A01 a U03-A07 associadas aos gabaritos")
     print("OK datas, OCR, dados brutos preservados, 3 derivados, exercícios, gabaritos e revisão")

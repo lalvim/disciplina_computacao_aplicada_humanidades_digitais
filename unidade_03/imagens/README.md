@@ -10,6 +10,7 @@ código permanecem nos notebooks, onde podem ser examinados e reproduzidos.
 |---|---|---|---|
 | `00_abertura_conceitual.png` | 00 | apresentar transformação, preservação e proveniência como um mesmo fluxo | imagem gerada |
 | `00_percurso_unidade.svg` | 00 | antecipar as quatro etapas e o retorno provocado pela auditoria | SVG autoral |
+| `01_linha_tempo_formatos.svg` | 01 | contextualizar marcos de criação, publicação e padronização dos formatos | SVG autoral |
 | `01_formatos_estruturas.svg` | 01 | comparar as estruturas e possibilidades de ação de CSV, XLSX, JSON e XML | SVG autoral |
 | `01_pdf_texto_imagem_ocr.svg` | 01 | distinguir extração de camada textual e OCR | SVG autoral |
 | `02_largo_longo.svg` | 02 | tornar visível a mudança da unidade da linha | SVG autoral |

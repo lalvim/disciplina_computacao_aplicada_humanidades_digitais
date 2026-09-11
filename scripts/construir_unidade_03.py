@@ -382,6 +382,38 @@ def formatos() -> list[dict]:
         pelo ponto de entrada desse fluxo: reconhecer o que cada arquivo contém e
         escolher uma operação de leitura que preserve sua estrutura e proveniência.
 
+        ## Linha do tempo: formatos surgem para problemas diferentes
+
+        Formatos não aparecem todos no mesmo contexto nem possuem necessariamente uma
+        única “data de criação”. Em alguns casos conhecemos o início do projeto; em
+        outros, o primeiro rascunho público ou a data de uma padronização posterior.
+        A linha do tempo usa o marco mais bem documentado e identifica sua natureza.
+
+        ![Linha do tempo mostra HTML em 1990, XML entre 1996 e 1998, JSON e YAML em 2001, a documentação do CSV em 2005 e a padronização do XLSX em 2006.](imagens/01_linha_tempo_formatos.svg)
+
+        | Marco | Formato | Objetivo inicial ou problema enfrentado | Natureza da data |
+        |---|---|---|---|
+        | 1990 | HTML | publicar documentos com ligações no projeto World Wide Web | criação no projeto Web |
+        | 1996 → 1998 | XML | oferecer uma forma simplificada de SGML para informação estruturada e intercâmbio na Web | primeiro *Working Draft* → Recomendação W3C |
+        | 2001 | JSON | representar objetos e listas em uma sintaxe textual pequena e independente de linguagem para intercâmbio | apresentação pública no JSON.org |
+        | 2001 | YAML | serializar estruturas de dados com prioridade para legibilidade humana e interação com linguagens de programação | primeiros rascunhos públicos |
+        | 2005 | CSV | registrar convenções comuns para intercambiar tabelas planas em texto | RFC 4180; documentação de uso anterior, não criação |
+        | 2006 | XLSX / Office Open XML | representar e empacotar documentos de escritório, incluindo planilhas, com vocabulários baseados em XML | primeira edição da ECMA-376 |
+
+        A posição do CSV exige atenção: a RFC 4180 afirma que o formato já era usado
+        havia bastante tempo. Portanto, 2005 é a data de sua documentação em RFC, não
+        um “aniversário” do CSV. A cronologia também corrige outra simplificação comum:
+        XLSX não foi criado em 2001; o marco normativo adotado aqui é a primeira edição
+        da ECMA-376, publicada em 2006.
+
+        HTML e YAML entram como contexto comparativo, embora não sejam manipulados nos
+        exercícios deste notebook. O percurso prático se concentra em CSV, XLSX, JSON
+        e XML, além de TXT e PDF, porque são os formatos presentes na pasta de dados.
+        A história ajuda a perceber que a escolha entre eles não é uma escala do
+        “mais antigo” ao “mais moderno”: cada formato favorece objetivos distintos.
+        Os documentos históricos e as especificações usados para estabelecer os
+        marcos — W3C, IETF/RFC, ECMA e YAML — estão listados em `referencias.md`.
+
         ## 1. Formato é estrutura e *affordance* (possibilidades de ação)
 
         Aqui, *affordance* designa as ações que um formato facilita, dificulta ou

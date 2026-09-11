@@ -431,15 +431,30 @@ def formatos() -> list[dict]:
         corretamente. Registre parâmetros, versão da fonte e testes esperados.
         """),
         md("""
-        A comparação mostrou que abrir um arquivo não basta para demonstrar que ele
-        foi interpretado corretamente. Quando o arquivo vem de uma instituição
-        externa, também precisamos fixar e documentar exatamente a versão utilizada.
+        A seção anterior tratou da **estrutura interna** dos arquivos: leitor,
+        separador, planilha, hierarquia e tipos. Quando os dados vêm de uma instituição
+        externa, surge uma segunda exigência: documentar **qual versão** foi utilizada,
+        de onde veio, quando foi acessada e qual recorte foi preservado.
 
-        ## 2. Base pública sem dependência de rede
+        ## 2. Base pública: cópia local, versão e proveniência
 
         O arquivo `extrato_codigos_municipios_ibge.csv` é uma cópia local pequena da
-        tabela do IBGE. O JSON de proveniência registra página, acesso e recorte. Uma
-        base pública muda; por isso, citar “IBGE” sem versão/data não basta.
+        tabela do IBGE. Ele permite repetir o exercício em sala sem depender da rede e
+        mantém estável a entrada usada pelo código. Essa conveniência técnica não torna
+        a cópia autossuficiente: uma base pública pode mudar, e citar apenas “IBGE” não
+        identifica a versão efetivamente analisada.
+
+        Por isso, o CSV é acompanhado por `proveniencia_base_publica.json`, que registra
+        fonte, endereço, data de acesso, recorte e ressalva de reutilização. Os dois
+        arquivos respondem a perguntas complementares:
+
+        - o CSV responde **quais registros e campos foram preservados?**;
+        - o JSON responde **de onde veio esta cópia e em que condições ela pode ser
+          compreendida e atualizada?**
+
+        No código seguinte, `dtype={"codigo_municipio": "string"}` também explicita uma
+        decisão semântica: o código municipal é um identificador, não uma quantidade
+        sobre a qual se devam realizar operações aritméticas.
         """),
         code("""
         municipios = pd.read_csv(
@@ -453,9 +468,11 @@ def formatos() -> list[dict]:
         municipios
         """),
         md("""
-        A tabela pública possui estrutura diretamente legível pelo pandas. Documentos
-        orientados à página exigem outro diagnóstico: antes de escolher uma técnica,
-        precisamos descobrir se o PDF contém caracteres codificados ou apenas imagem.
+        Com o CSV, tratamos uma fonte externa já organizada como tabela: foi necessário
+        interpretar sua estrutura e documentar sua versão. Agora mudaremos de tipo de
+        objeto. Documentos orientados à página não oferecem diretamente linhas e
+        colunas; antes de escolher uma técnica, precisamos descobrir se o PDF contém
+        caracteres codificados ou apenas imagem.
 
         ## 3. Extração de PDF não é OCR
 

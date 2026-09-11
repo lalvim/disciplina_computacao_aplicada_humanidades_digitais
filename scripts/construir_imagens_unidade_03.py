@@ -117,6 +117,68 @@ def percurso() -> str:
     )
 
 
+def formatos_estruturas() -> str:
+    partes = [texto(600, 46, ["Quatro formatos, quatro maneiras de organizar informação"], "titulo")]
+    paineis = [
+        (35, "CSV", "tabela plana", CORES["azul_claro"], CORES["azul"]),
+        (325, "XLSX", "pasta de planilhas", CORES["verde_claro"], CORES["verde"]),
+        (615, "JSON", "objetos e listas", CORES["terracota_claro"], CORES["terracota"]),
+        (905, "XML", "elementos aninhados", CORES["ameixa_claro"], CORES["ameixa"]),
+    ]
+    for x, titulo, subtitulo, fundo, contorno in paineis:
+        partes.append(f'<rect x="{x}" y="85" width="260" height="440" rx="20" fill="{fundo}" stroke="{contorno}" stroke-width="3"/>')
+        partes.append(texto(x + 130, 125, [titulo], "titulo"))
+        partes.append(texto(x + 130, 155, [subtitulo], "nota"))
+
+    # CSV: uma grade sem camadas adicionais.
+    for linha in range(4):
+        for coluna in range(3):
+            x, y = 72 + coluna * 62, 195 + linha * 38
+            fill = CORES["papel"] if linha else "#c8dce4"
+            partes.append(f'<rect x="{x}" y="{y}" width="62" height="38" fill="{fill}" stroke="{CORES["azul"]}"/>')
+    partes.append(texto(165, 385, ["linhas + colunas", "separador e encoding", "tipos precisam ser inferidos"], "corpo", intervalo=25))
+
+    # XLSX: abas e grade representam a pasta que pode conter várias planilhas.
+    partes.append(f'<rect x="360" y="195" width="190" height="145" rx="6" fill="{CORES["papel"]}" stroke="{CORES["verde"]}" stroke-width="3"/>')
+    for linha in range(1, 4):
+        partes.append(f'<path d="M360,{195 + linha * 32} H550" stroke="{CORES["verde"]}"/>')
+    for coluna in range(1, 4):
+        partes.append(f'<path d="M{360 + coluna * 47},195 V340" stroke="{CORES["verde"]}"/>')
+    partes.append(f'<rect x="370" y="340" width="65" height="22" rx="5" fill="{CORES["verde"]}"/>')
+    partes.append(f'<rect x="442" y="340" width="65" height="22" rx="5" fill="#94c8bd"/>')
+    partes.append(texto(455, 402, ["várias planilhas", "fórmulas e formatação", "selecionar a aba correta"], "corpo", intervalo=25))
+
+    # JSON: árvore com objeto, lista e valores.
+    partes.append(texto(745, 205, ["{ documento }"], "subtitulo"))
+    partes.append(f'<path class="linha" d="M745,220 V250 M675,250 H815 M675,250 V275 M815,250 V275"/>')
+    partes.append(f'<rect x="642" y="275" width="95" height="68" rx="10" fill="{CORES["papel"]}" stroke="{CORES["terracota"]}" stroke-width="3"/>')
+    partes.append(texto(689, 302, ["id"], "subtitulo"))
+    partes.append(texto(689, 327, ["D001"], "pequeno"))
+    partes.append(f'<rect x="753" y="275" width="125" height="68" rx="10" fill="{CORES["papel"]}" stroke="{CORES["terracota"]}" stroke-width="3"/>')
+    partes.append(texto(815, 302, ["temas"], "subtitulo"))
+    partes.append(texto(815, 327, ["[ ... ]"], "pequeno"))
+    partes.append(texto(745, 390, ["chaves + valores", "listas e objetos aninhados", "percorrer a hierarquia"], "corpo", intervalo=25))
+
+    # XML: árvore de elementos explicitada por marcas de abertura e fechamento.
+    partes.append(texto(1035, 205, ["<documento>"], "subtitulo"))
+    partes.append(f'<path class="linha" d="M1035,220 V250 M965,250 H1105 M965,250 V275 M1105,250 V275"/>')
+    partes.append(f'<rect x="925" y="275" width="90" height="68" rx="10" fill="{CORES["papel"]}" stroke="{CORES["ameixa"]}" stroke-width="3"/>')
+    partes.append(texto(970, 302, ["<id>"], "subtitulo"))
+    partes.append(texto(970, 327, ["D001"], "pequeno"))
+    partes.append(f'<rect x="1030" y="275" width="140" height="68" rx="10" fill="{CORES["papel"]}" stroke="{CORES["ameixa"]}" stroke-width="3"/>')
+    partes.append(texto(1100, 302, ["<tema>"], "subtitulo"))
+    partes.append(texto(1100, 327, ["educação"], "pequeno"))
+    partes.append(texto(1035, 390, ["elementos + atributos", "ordem e aninhamento", "navegar pelas marcas"], "corpo", intervalo=25))
+
+    partes.append(texto(600, 580, ["A extensão sugere um leitor; parâmetros, estrutura esperada e testes confirmam a interpretação"], "nota"))
+    return documento(
+        "Estruturas e possibilidades de ação em CSV, XLSX, JSON e XML",
+        "Quatro painéis comparam uma grade tabular CSV, uma pasta XLSX com abas, uma árvore JSON de objetos e listas e uma árvore XML de elementos aninhados. Cada formato exige operações de leitura próprias.",
+        "".join(partes),
+        620,
+    )
+
+
 def pdf_texto_imagem_ocr() -> str:
     partes = [texto(600, 46, ["PDF: primeiro diagnosticar, depois escolher a operação"], "titulo")]
     partes.append(caixa(55, 205, 205, 120, "Arquivo PDF", ["contêiner de", "páginas"], CORES["papel"], CORES["areia"]))
@@ -279,6 +341,7 @@ def main() -> None:
     IMAGENS.mkdir(parents=True, exist_ok=True)
     imagens = {
         "00_percurso_unidade.svg": percurso(),
+        "01_formatos_estruturas.svg": formatos_estruturas(),
         "01_pdf_texto_imagem_ocr.svg": pdf_texto_imagem_ocr(),
         "02_largo_longo.svg": largo_longo(),
         "02_transformacao_rastreavel.svg": transformacao_rastreavel(),

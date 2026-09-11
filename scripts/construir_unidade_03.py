@@ -382,13 +382,25 @@ def formatos() -> list[dict]:
         pelo ponto de entrada desse fluxo: reconhecer o que cada arquivo contém e
         escolher uma operação de leitura que preserve sua estrutura e proveniência.
 
-        ## 1. Formato é estrutura e affordance
+        ## 1. Formato é estrutura e *affordance* (possibilidades de ação)
+
+        Aqui, *affordance* designa as ações que um formato facilita, dificulta ou
+        condiciona para quem o utiliza.
 
         CSV registra uma tabela sem fórmulas ou tipos ricos; XLSX pode conter várias
         planilhas, fórmulas e formatação; JSON e XML expressam hierarquias; TXT não
         define internamente como interpretar seu conteúdo; PDF busca preservar uma
         apresentação de página e pode conter texto, imagem ou ambos. Extensão não
         garante conteúdo nem qualidade.
+
+        ![Quatro painéis comparam CSV como grade tabular, XLSX como pasta com planilhas, JSON como árvore de objetos e listas e XML como árvore de elementos aninhados.](imagens/01_formatos_estruturas.svg)
+
+        A figura destaca a estrutura predominante e as operações favorecidas por cada
+        formato. CSV e XLSX podem representar tabelas, mas uma pasta XLSX pode reunir
+        abas, fórmulas e formatação. JSON e XML preservam hierarquias, embora usem
+        sintaxes e formas de navegação diferentes. Em todos os casos, a extensão
+        orienta a escolha inicial do leitor, mas parâmetros e testes confirmam se a
+        interpretação foi correta.
         """),
         code("""
         import json

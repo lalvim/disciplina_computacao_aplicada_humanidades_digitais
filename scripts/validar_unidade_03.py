@@ -118,6 +118,7 @@ def validar_imagens() -> None:
         "README.md",
         "00_abertura_conceitual.png",
         "00_percurso_unidade.svg",
+        "01_formatos_estruturas.svg",
         "01_pdf_texto_imagem_ocr.svg",
         "02_largo_longo.svg",
         "02_transformacao_rastreavel.svg",
@@ -140,7 +141,7 @@ def validar_imagens() -> None:
             re.findall(r"!\[([^]]+)\]\((dados/brutos/pagina_digitalizada[^)]+)\)", markdown)
         )
 
-    assert len(referencias) == 8 and len({c for _, c in referencias}) == 8
+    assert len(referencias) == 9 and len({c for _, c in referencias}) == 9
     assert len(referencias_ocr) == 2 and len({c for _, c in referencias_ocr}) == 2
     for alt, relativo in referencias + referencias_ocr:
         assert len(alt.split()) >= 6, f"texto alternativo insuficiente: {relativo}"
@@ -296,6 +297,8 @@ def validar_encadeamento() -> None:
         ],
         "01_formatos_importacao_e_extracao.ipynb": [
             "O guia separou dados brutos", "As saídas confirmam",
+            "*affordance* (possibilidades de ação)",
+            "ações que um formato facilita, dificulta ou",
             "A comparação mostrou", "A tabela pública possui",
             "A extração anterior acessou", "As duas transcrições",
             "A comparação de CER e WER", "Ao preencher o inventário",
@@ -346,7 +349,7 @@ def main() -> None:
     validar_referencias_revisores()
     validar_encadeamento()
     print("OK cobertura: 13/13 conteúdos")
-    print("OK imagens: 8 recursos didáticos e 2 entradas de OCR, acessíveis e documentados")
+    print("OK imagens: 9 recursos didáticos e 2 entradas de OCR, acessíveis e documentados")
     print("OK encadeamento: transições internas e passagens entre notebooks")
     print("OK atividades: U03-A01 a U03-A07 associadas aos gabaritos")
     print("OK datas, OCR, dados brutos preservados, 3 derivados, exercícios, gabaritos e revisão")

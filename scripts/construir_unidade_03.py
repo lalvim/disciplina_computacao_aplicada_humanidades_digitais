@@ -813,6 +813,15 @@ def integracao() -> list[dict]:
         examina o que acontece quando essa tabela passa a se relacionar com outras:
         uma junção pode confirmar vínculos, revelar lacunas ou criar casos indevidos.
 
+        ### Como percorrer este notebook
+
+        A primeira célula de código apenas prepara o ambiente: no Colab, ela localiza
+        o repositório e instala o que estiver ausente; em uma execução local, apenas
+        informa que nenhuma clonagem é necessária. **Ela ainda não transforma os
+        dados da pesquisa.** Execute-a uma vez e, depois, acompanhe cada exemplo pela
+        sequência: pergunta → explicação → código → interpretação da saída.
+        """),
+        md("""
         ## 1. Chaves e cardinalidade
 
         Antes de juntar, declare a unidade de cada tabela e a cardinalidade esperada:
@@ -825,17 +834,67 @@ def integracao() -> list[dict]:
         Cardinalidade descreve quantas linhas de um lado podem corresponder a cada
         linha do outro. Ela deve ser formulada, confrontada com os dados e testada no
         código antes da junção.
+
+        ### Primeiro exemplo: acrescentar o nome oficial do município
+
+        Queremos enriquecer o catálogo de documentos com informações da tabela de
+        municípios. Antes da junção, o código abre os dois arquivos e registra o que
+        cada um representa:
+
+        | Objeto no código | Unidade de cada linha | Chave usada |
+        |---|---|---|
+        | `catalogo` | um documento | `codigo_municipio` |
+        | `municipios` | um município | `codigo_municipio` |
+
+        Como vários documentos podem pertencer ao mesmo município, mas cada código
+        deve identificar somente um município na tabela de referência, a relação
+        esperada é **muitos para um** (`many_to_one`). A célula seguinte somente lê os
+        arquivos e apresenta suas dimensões; ainda não os combina.
         """),
         code("""
-        import json
         import pandas as pd
 
-        catalogo = pd.read_csv("dados/intermediarios/catalogo_normalizado.csv", dtype={"codigo_municipio": "string"})
-        municipios = pd.read_csv("dados/brutos/extrato_codigos_municipios_ibge.csv", dtype={"codigo_municipio": "string"})
-        integrada = catalogo.merge(
-            municipios, on="codigo_municipio", how="left",
-            validate="many_to_one", indicator=True,
+        catalogo = pd.read_csv(
+            "dados/intermediarios/catalogo_normalizado.csv",
+            dtype={"codigo_municipio": "string"},
         )
+        municipios = pd.read_csv(
+            "dados/brutos/extrato_codigos_municipios_ibge.csv",
+            dtype={"codigo_municipio": "string"},
+        )
+
+        pd.DataFrame({
+            "tabela": ["catalogo", "municipios"],
+            "linhas": [len(catalogo), len(municipios)],
+            "colunas": [len(catalogo.columns), len(municipios.columns)],
+            "unidade_da_linha": ["documento", "município"],
+        })
+        """),
+        md("""
+        Com as tabelas carregadas, podemos realizar a junção. Leia os argumentos do
+        código como uma declaração metodológica:
+
+        - `on="codigo_municipio"`: procura códigos iguais nas duas tabelas;
+        - `how="left"`: mantém todos os documentos, mesmo quando não encontra um
+          município correspondente;
+        - `validate="many_to_one"`: exige que cada código da tabela municipal apareça
+          no máximo uma vez;
+        - `indicator=True`: cria `_merge`, uma coluna que informa se cada linha foi
+          encontrada nas duas tabelas (`both`) ou somente em uma delas.
+
+        Ao final, a contagem de `_merge` mostra a cobertura da junção. O resultado
+        desejado é que os oito documentos estejam em `both`; qualquer `left_only`
+        exigiria investigação.
+        """),
+        code("""
+        integrada = catalogo.merge(
+            municipios,
+            on="codigo_municipio",
+            how="left",
+            validate="many_to_one",
+            indicator=True,
+        )
+
         integrada["_merge"].value_counts()
         """),
         md("""
@@ -848,6 +907,17 @@ def integracao() -> list[dict]:
         `left_only` não deve ser descartado automaticamente: pode indicar código
         inválido, cobertura incompleta da tabela de referência ou mudança temporal.
         Compare contagens antes e depois e examine chaves sem correspondência.
+
+        A célula seguinte reúne cinco verificações em um pequeno relatório:
+
+        | Campo do relatório | O que permite verificar |
+        |---|---|
+        | `linhas_antes` e `linhas_depois` | se a junção multiplicou ou removeu documentos |
+        | `sem_correspondencia` | quantos documentos não encontraram município |
+        | `ids_unicos_antes` e `ids_unicos_depois` | se a quantidade de documentos distintos foi preservada |
+
+        `len` conta linhas; `nunique` conta identificadores distintos; e
+        `eq("left_only").sum()` conta as linhas marcadas como sem correspondência.
         """),
         code("""
         auditoria_juncao = {
@@ -897,6 +967,17 @@ def integracao() -> list[dict]:
         O JSON contém um objeto por documento. D001, por exemplo, aponta para
         `D001.txt` e possui dois temas. O código abaixo apenas abre e apresenta esses
         objetos; ainda não realiza nenhuma junção.
+
+        Leia a célula em quatro movimentos:
+
+        1. `Path(...)` representa o caminho do arquivo;
+        2. `read_text(...)` lê seu conteúdo como texto;
+        3. `json.loads(...)` interpreta esse texto como objetos Python;
+        4. `pd.DataFrame(...)` apenas os apresenta em forma de tabela para inspeção.
+
+        A variável `metadados` continua preservando a estrutura do JSON. A conversão
+        final em `DataFrame` serve somente para tornar a saída mais fácil de ler neste
+        momento.
         """),
         code("""
         import json

@@ -180,6 +180,9 @@ def validar_imagens():
   assert titulo is not None and (titulo.text or "").strip()
   assert descricao is not None and len((descricao.text or "").split())>=8
   assert raiz.attrib.get("role")=="img" and "aria-labelledby" in raiz.attrib
+ hierarquia=(pasta/"01_tipos_variaveis.svg").read_text(encoding="utf-8")
+ for termo in ["Tipos de dados", "Categóricos", "Numéricos", "Temporais", "Nominal", "Ordinal", "Intervalar", "Razão", "Datas", "Horários"]:
+  assert termo in hierarquia, f"tipo ausente da ilustração: {termo}"
  png=(pasta/"00_abertura_conceitual.png").read_bytes()
  assert png[:8]==b"\x89PNG\r\n\x1a\n"
  largura,altura=struct.unpack(">II",png[16:24])
@@ -230,7 +233,7 @@ def main():
  for p in ns:
   a,b,env=run(p); ambientes[p.name]=env; tm+=a;tc+=b; print("OK",p.name,a,b); d=json.loads(p.read_text(encoding="utf-8")); texto+=" ".join(src(x) for x in d["cells"]).lower()
   if p.name=="04_oficina_relatorio_exploratorio.ipynb": assert b==0
- termos=["tipos de variáveis","frequências","medidas de tendência central","média","mediana","moda","medidas de dispersão","quartis","variância","distribuição","valores extremos","contingência","tokenização","normalização","frequências absoluta e relativa","concordâncias","n-gramas","colocações","vocabulário","diversidade lexical","barras","histograma","boxplot","dispersão","série temporal"]
+ termos=["tipos de variáveis","categóricos","numéricos","temporais","nominal","ordinal","intervalar","razão","datas","horários","frequências","medidas de tendência central","média","mediana","moda","medidas de dispersão","quartis","variância","distribuição","valores extremos","contingência","tokenização","normalização","frequências absoluta e relativa","concordâncias","n-gramas","colocações","vocabulário","diversidade lexical","barras","histograma","boxplot","dispersão","série temporal"]
  assert all(t in texto for t in termos)
  t=(U/"exercicios_unidade_04_texto.md").read_text(encoding="utf-8"); numeros=[int(n) for n in re.findall(r"^## Questão (\d+)",t,re.M)]; assert numeros==list(range(1,19)); assert len(re.findall(r"^- \[ \] \*\*[A-D]\.\*\*",t,re.M))==72
  chave=(U/"gabaritos/gabarito_exercicios_multipla_escolha.md").read_text(encoding="utf-8"); resp=re.findall(r"^\|\s*\d+\s*\|\s*([A-D])",chave,re.M); assert len(resp)==18

@@ -91,9 +91,44 @@ cada uma determina quais resumos e comparações são defensáveis.
 
 ## Tipos de variáveis
 
-![Escalas nominal, ordinal, quantitativa e temporal são relacionadas a operações e gráficos; identificadores aparecem separados das medidas.](imagens/01_tipos_variaveis.svg)
+Uma **variável** é uma característica registrada para cada unidade de observação.
+Neste corpus, por exemplo, cada linha representa um documento e `genero`, `ano` e
+`palavras` são variáveis desse documento. Para escolher resumos e gráficos, não basta
+observar como o valor foi armazenado no arquivo: é necessário perguntar o que ele
+significa para a pesquisa.
 
-Nominais distinguem; ordinais ordenam; quantitativas discretas contam; contínuas medem. Datas e identificadores têm papéis próprios. `dtype` não determina a escala conceitual.'''),
+![A hierarquia divide os tipos de dados em categóricos, numéricos e temporais; categóricos se dividem em nominal e ordinal, numéricos em intervalar e razão, e temporais em datas e horários.](imagens/01_tipos_variaveis.svg)
+
+A figura adota a seguinte hierarquia didática:
+
+| Família | Subtipo | O que o subtipo permite afirmar | Exemplo |
+|---|---|---|---|
+| categóricos | nominal | os valores distinguem categorias, mas não estabelecem uma ordem | `genero`, `local` e `tema` |
+| categóricos | ordinal | as categorias possuem ordem, mas a distância entre elas não é conhecida | estado de conservação: baixo, médio, alto |
+| numéricos | intervalar | diferenças são comparáveis, mas o zero é convencional e não expressa ausência | um escore padronizado sem zero absoluto |
+| numéricos | razão | diferenças e proporções são interpretáveis porque zero significa ausência da quantidade | `palavras`, `pessoas` e `paginas` |
+| temporais | datas | os valores situam eventos no calendário e permitem ordenação e, com cautela, duração | `ano` ou uma data completa |
+| temporais | horários | os valores situam ocorrências no ciclo diário | horário de publicação ou registro |
+
+Esta base possui exemplos nominais, de razão e temporais. Os casos ordinal,
+intervalar e horário aparecem na tabela como possibilidades conceituais, não como
+colunas existentes em `documentos.csv`.
+
+Há ainda duas cautelas importantes:
+
+- **discreto ou contínuo** é uma distinção complementar entre os valores numéricos,
+  não uma substituição para intervalar ou razão; `palavras`, por exemplo, é ao mesmo
+  tempo uma contagem discreta e uma variável de razão;
+- um **identificador**, como `id_documento`, exerce um papel técnico. Mesmo que seja
+  armazenado como número, não é uma medida e não deve ser somado nem receber média.
+
+Datas e horários também exigem decisões contextuais. Subtrair anos pode representar
+uma duração, mas o ano zero do calendário não transforma `ano` em variável de razão;
+horários do dia são cíclicos, de modo que 23h e 0h estão próximos apesar dos números.
+Assim, `dtype` não determina a classificação conceitual da variável. A distinção
+entre escalas nominal, ordinal, intervalar e de razão segue Stevens (1946); aqui,
+datas e horários são destacados como uma família operacional por exigirem tratamento
+temporal próprio.'''),
   c('''import pandas as pd
 import numpy as np
 import sys
@@ -104,9 +139,16 @@ from graficos import distribuicao_anotada
 
 dados = pd.read_csv("dados/documentos.csv")
 pd.DataFrame(
-    [["genero", "nominal"], ["ano", "temporal"],
-     ["palavras", "quantitativa discreta"], ["id_documento", "identificador"]],
-    columns=["variavel", "escala"],
+    [
+        ["genero", "na base", "categórico", "nominal", "categorias sem ordem"],
+        ["estado_conservacao", "exemplo", "categórico", "ordinal", "categorias ordenadas"],
+        ["escore_padronizado", "exemplo", "numérico", "intervalar", "zero convencional"],
+        ["palavras", "na base", "numérico", "razão", "contagem discreta com zero significativo"],
+        ["ano", "na base", "temporal", "data", "posição no calendário"],
+        ["hora_publicacao", "exemplo", "temporal", "horário", "posição no ciclo diário"],
+        ["id_documento", "na base", "papel técnico", "identificador", "distingue documentos"],
+    ],
+    columns=["variavel", "origem", "familia", "subtipo", "por_que"],
 )'''),
   m(r'''A classificação anterior determina quais operações são conceitualmente
 adequadas. Para variáveis nominais, como `tema` e `genero`, começaremos descrevendo

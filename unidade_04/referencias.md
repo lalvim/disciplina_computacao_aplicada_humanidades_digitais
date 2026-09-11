@@ -11,6 +11,9 @@ https://www.digitalhumanities.org/dhq/vol/5/1/000091/000091.html.
 
 TUKEY, John W. *Exploratory Data Analysis*. Reading: Addison-Wesley, 1977.
 
+STEVENS, S. S. On the Theory of Scales of Measurement. *Science*, v. 103,
+n. 2684, p. 677–680, 1946. https://doi.org/10.1126/science.103.2684.677.
+
 SINCLAIR, Stéfan; ROCKWELL, Geoffrey. Text Analysis and Visualization: Making
 Meaning Count. In: SCHREIBMAN, Susan; SIEMENS, Ray; UNSWORTH, John (org.). *A
 New Companion to Digital Humanities*. Wiley, 2015.
@@ -29,6 +32,7 @@ https://pandas.pydata.org/docs/user_guide/.
 | Momento | Leitura | Finalidade |
 |---|---|---|
 | início | Arnold e Tilton (2019) | situar EDA em Humanidades Digitais |
+| tipos de variáveis | Stevens (1946) | distinguir escalas nominal, ordinal, intervalar e de razão |
 | quantitativo | Tukey (1977), trechos | distinguir exploração e confirmação |
 | textual | Sinclair e Rockwell (2015) | relacionar contagem e produção de sentido |
 | visual | Drucker (2011) | criticar pressupostos gráficos |

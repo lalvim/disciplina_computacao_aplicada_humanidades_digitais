@@ -115,21 +115,47 @@ def niveis_escrita():
 
 
 def tipos_variaveis():
-    partes = [texto(600, 44, ["A escala conceitual orienta operações e gráficos"], "titulo")]
-    itens = [
-        (45, "Nominal", ["distingue categorias", "frequências • barras"], CORES["azul_claro"], CORES["azul"]),
-        (335, "Ordinal", ["categorias ordenadas", "posição • barras ordenadas"], CORES["verde_claro"], CORES["verde"]),
-        (625, "Quantitativa", ["conta ou mede", "centro • dispersão"], CORES["terracota_claro"], CORES["terracota"]),
-        (915, "Temporal", ["ordena no tempo", "pontos • linha cautelosa"], CORES["ameixa_claro"], CORES["ameixa"]),
+    partes = [texto(600, 40, ["Hierarquia didática dos tipos de dados"], "titulo")]
+    partes.append(caixa(450, 70, 300, 80, "Tipos de dados", ["classificar pelo significado"], CORES["papel"], CORES["areia"]))
+
+    centros_familias = [215, 600, 985]
+    partes.append('<path class="linha" d="M600,150 V185 H215 M600,185 H985"/>')
+    for centro in centros_familias:
+        partes.append(f'<path class="linha" d="M{centro},185 V210"/>')
+
+    familias = [
+        (50, "Categóricos", ["distinguem grupos"], CORES["azul_claro"], CORES["azul"]),
+        (435, "Numéricos", ["expressam medidas"], CORES["terracota_claro"], CORES["terracota"]),
+        (820, "Temporais", ["situam no tempo"], CORES["ameixa_claro"], CORES["ameixa"]),
     ]
-    for x, titulo, linhas, fundo, contorno in itens:
-        partes.append(caixa(x, 110, 240, 155, titulo, linhas, fundo, contorno))
-    partes.append(caixa(400, 330, 400, 120, "Identificador", ["parece número, mas identifica", "não se soma nem se calcula média"], CORES["papel"], CORES["areia"]))
-    partes.append(texto(600, 515, ["O dtype do arquivo não substitui a decisão teórica sobre a variável"], "nota"))
+    for x, titulo, linhas, fundo, contorno in familias:
+        partes.append(caixa(x, 210, 330, 90, titulo, linhas, fundo, contorno))
+
+    pares = [(130, 310), (515, 695), (900, 1080)]
+    for centro, (esquerda, direita) in zip(centros_familias, pares):
+        partes.append(
+            f'<path class="linha" d="M{centro},300 V330 H{esquerda} '
+            f'M{centro},330 H{direita} M{esquerda},330 V355 M{direita},330 V355"/>'
+        )
+
+    subtipos = [
+        (50, "Nominal", ["sem ordem", "gênero • tema"], CORES["azul_claro"], CORES["azul"]),
+        (230, "Ordinal", ["com ordem", "baixo • médio • alto"], CORES["azul_claro"], CORES["azul"]),
+        (435, "Intervalar", ["diferenças válidas", "zero convencional"], CORES["terracota_claro"], CORES["terracota"]),
+        (615, "Razão", ["zero significativo", "palavras • páginas"], CORES["terracota_claro"], CORES["terracota"]),
+        (820, "Datas", ["ano ou data", "ordem • duração"], CORES["ameixa_claro"], CORES["ameixa"]),
+        (1000, "Horários", ["hora do dia", "atenção aos ciclos"], CORES["ameixa_claro"], CORES["ameixa"]),
+    ]
+    for x, titulo, linhas, fundo, contorno in subtipos:
+        partes.append(caixa(x, 355, 160, 130, titulo, linhas, fundo, contorno))
+
+    partes.append(caixa(115, 535, 440, 100, "Distinção complementar", ["numéricos também podem ser", "discretos ou contínuos"], CORES["verde_claro"], CORES["verde"]))
+    partes.append(caixa(645, 535, 440, 100, "Identificador", ["identifica, mesmo se parecer número", "não se soma nem recebe média"], CORES["papel"], CORES["areia"]))
+    partes.append(texto(600, 684, ["O dtype do arquivo não substitui a decisão teórica sobre a variável"], "nota"))
     return documento(
-        "Tipos de variáveis e escolhas analíticas",
-        "Quatro caixas relacionam escalas nominal, ordinal, quantitativa e temporal a operações e gráficos. Uma quinta caixa alerta que identificadores numéricos não são medidas.",
-        "".join(partes), 560,
+        "Hierarquia didática dos tipos de dados",
+        "Tipos de dados se dividem em categóricos, numéricos e temporais. Categóricos se dividem em nominal e ordinal; numéricos, em intervalar e razão; temporais, em datas e horários. Notas separam as distinções discreto e contínuo e o papel dos identificadores.",
+        "".join(partes), 720,
     )
 
 

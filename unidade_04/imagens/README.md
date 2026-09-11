@@ -11,7 +11,7 @@ dados fictícios e permanecem acompanhados de tabelas equivalentes.
 | `00_abertura_conceitual.png` | 00 | apresentar exploração como movimento entre agregados, documentos e hipóteses | imagem gerada |
 | `00_percurso_exploracao.svg` | 00 | antecipar o percurso completo da unidade e seus retornos | SVG autoral |
 | `00_camadas_escrita.svg` | 00 | distinguir procedimento, descrição, interpretação, limite e próximo passo | SVG autoral |
-| `01_tipos_variaveis.svg` | 01 | relacionar escalas conceituais, operações e gráficos | SVG autoral |
+| `01_tipos_variaveis.svg` | 01 | apresentar a hierarquia entre dados categóricos, numéricos e temporais e seus subtipos | SVG autoral |
 | `02_fluxo_tokenizacao.svg` | 02 | mostrar transformações textuais e possíveis perdas | SVG autoral |
 | `02_anatomia_pmi.svg` | 02 | relacionar bigrama, marginais, PMI e cautelas | SVG autoral |
 | `03_escolha_grafico.svg` | 03 | orientar a escolha do gráfico pela pergunta e pelas variáveis | SVG autoral |

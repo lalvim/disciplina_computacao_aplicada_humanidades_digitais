@@ -909,6 +909,8 @@ def integracao() -> list[dict]:
         pd.DataFrame(metadados)
         """),
         md("""
+        ### 2.2 Criar as tabelas de temas e textos
+
         Para transformar a lista de temas em tabela, precisamos produzir **uma linha
         para cada relação**. O primeiro `for` percorre documentos; o segundo percorre
         os temas daquele documento. Assim, D001 produzirá duas linhas, sem duplicar a
@@ -918,8 +920,6 @@ def integracao() -> list[dict]:
         |---|---|
         | D001 | educação |
         | D001 | progresso |
-
-        ### 2.2 Criar as tabelas de temas e textos
 
         O mesmo bloco cria uma segunda tabela com apenas os textos disponíveis. A
         condição `if arquivo_texto is not None` evita tentar abrir um arquivo quando o

@@ -911,6 +911,22 @@ def integracao() -> list[dict]:
         md("""
         ### 2.2 Criar as tabelas de temas e textos
 
+        Nesta etapa, aprenderemos que os dados podem ser mantidos em **tabelas
+        separadas conforme o que cada linha representa**. A separação não rompe a
+        relação entre eles: todas as tabelas conservam `id_documento` como chave
+        comum e podem ser reunidas posteriormente, quando a pergunta de pesquisa
+        exigir.
+
+        | Tabela | O que uma linha representa |
+        |---|---|
+        | tabela central de documentos | um documento |
+        | tabela de textos | o texto disponível de um documento |
+        | tabela documento–tema | a associação entre um documento e um tema |
+
+        Esse arranjo evita repetir indevidamente a linha completa de um documento.
+        D001, por exemplo, é um documento associado a dois temas — não dois
+        documentos diferentes.
+
         Para transformar a lista de temas em tabela, precisamos produzir **uma linha
         para cada relação**. O primeiro `for` percorre documentos; o segundo percorre
         os temas daquele documento. Assim, D001 produzirá duas linhas, sem duplicar a

@@ -1,5 +1,7 @@
 # Gabarito orientativo — Limpeza e qualidade
 
+**Atividade associada:** `U03-A03`.
+
 Resultados esperados:
 
 - tabela larga: 3 × 5; longa: 12 × 4 após separar tema e período;

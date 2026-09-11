@@ -72,7 +72,7 @@ confundir resultado calculado, interpretação e conclusão.
 ![A escrita passa por procedimento, descrição, interpretação, limite e próximo passo.](imagens/00_camadas_escrita.svg)
 
 Separe descrição do cálculo, interpretação situada e hipótese provisória. Testes, confiança e comparação inferencial ficam para a Unidade 5.
-### Diagnóstico
+### U04-A01 — Diagnóstico
 Que padrão espera e que saída revelaria erro? Escreva aqui.'''),m('''A regra de escrita acompanhará todos os notebooks e dará forma à entrega. O
 produto final reúne os resultados justamente para tornar visível essa separação
 entre procedimento, descrição, interpretação, hipótese e limite.
@@ -315,7 +315,7 @@ variáveis: escala, pergunta e denominador precisam permanecer coerentes. A
 atividade reúne essas decisões antes que os resultados sejam levados para a
 exploração textual e para as visualizações.
 
-## Atividade
+## U04-A02 — Atividade — exploração quantitativa
 
 Classifique variáveis; escolha e justifique ao menos uma medida de tendência central
 e uma de dispersão; declare denominadores; inspecione extremo e contingência.
@@ -530,7 +530,7 @@ texto, passou pelas contagens e retornou ao contexto. A atividade reúne essas
 camadas para selecionar resultados que poderão ser comunicados visualmente sem
 perder as regras que os produziram.
 
-## Atividade
+## U04-A03 — Atividade — exploração textual
 
 Documente regras, frequências, concordâncias, n-gramas, colocação e diversidade.
 Retorne a trechos e indique quais resultados seguirão para o Notebook 03.
@@ -661,7 +661,7 @@ cálculo: sua forma depende da pergunta, da variável e do limite que precisa
 permanecer visível. A atividade transforma essas escolhas em um pequeno conjunto
 de argumentos gráficos para a oficina.
 
-## Atividade
+## U04-A04 — Atividade — visualização exploratória
 
 Produza barras, histograma/boxplot, dispersão ou tempo e frequência textual. Para
 cada figura, entregue tabela, descrição alternativa, escala, padrão, caso, limite
@@ -674,7 +674,7 @@ repetir a mesma informação. Elas serão integradas ao relatório no Notebook 0
  ]
 def oficina():
  return [
-  m('''# Oficina — Relatório exploratório
+  m('''# U04-A05 — Oficina — Relatório exploratório
 
 ## O que será produzido
 
@@ -942,7 +942,7 @@ desde que preserve essas evidências e a ligação com o notebook técnico.'''),
 produzi-lo dentro do tempo da aula. A revisão por pares verificará se a cadeia é
 compreensível para alguém que não acompanhou todas as decisões do autor.
 
-## 9. Dinâmica sugerida e revisão por pares
+## U04-A06 — 9. Dinâmica sugerida e revisão por pares
 
 Para uma aula de quatro horas, a meta é produzir uma primeira versão completa do
 relatório. Os cálculos básicos já devem ter sido executados nos Notebooks 01 a 03.

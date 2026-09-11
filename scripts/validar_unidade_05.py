@@ -10,6 +10,10 @@ import struct
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
+import pandas as pd
+
+from apoio_atividades import validar_identificadores_atividades
+
 RAIZ = Path(__file__).resolve().parents[1]
 UNIDADE = RAIZ / "unidade_05"
 
@@ -141,7 +145,6 @@ def validar_dados() -> None:
     esperados = {"documentos.csv", "documentos_comparacao.csv", "versoes_textuais.csv", "proveniencia.json"}
     encontrados = {p.name for p in (UNIDADE / "dados").iterdir() if p.is_file()}
     assert encontrados == esperados
-    import pandas as pd
     original = pd.read_csv(UNIDADE / "dados" / "documentos.csv")
     derivado = pd.read_csv(UNIDADE / "dados" / "documentos_comparacao.csv")
     assert len(original) == 24 and len(derivado) == 12
@@ -159,7 +162,7 @@ def validar_exercicios_e_gabaritos() -> None:
     assert not list(UNIDADE.glob("*.html")) and not list(RAIZ.glob("scripts/*unidade_05*html*"))
     pasta = UNIDADE / "gabaritos"
     esperados = {
-        "README.md", "gabarito_01_estimativas.md", "gabarito_02_inferencia.md",
+        "README.md", "gabarito_00_guia.md", "gabarito_01_estimativas.md", "gabarito_02_inferencia.md",
         "gabarito_03_representacao_textual.md", "gabarito_04_similaridade.md",
         "gabarito_05_oficina.md", "gabarito_exercicios_multipla_escolha.md",
     }
@@ -246,12 +249,14 @@ def main() -> None:
     validar_resultados(ambientes)
     validar_dados()
     validar_exercicios_e_gabaritos()
+    validar_identificadores_atividades(UNIDADE, 8)
     validar_imagens()
     validar_referencias_revisores()
     validar_encadeamento()
     print("OK conteúdo: 20/20 tópicos quantitativos, textuais e críticos")
     print("OK fórmulas e resultados: estimativas, reamostragem e métricas textuais")
-    print("OK dados, 20 exercícios, 6 gabaritos com exemplos e ausência de HTML")
+    print("OK dados, 20 exercícios, 7 gabaritos com exemplos e ausência de HTML")
+    print("OK atividades: U05-A01 a U05-A08 associadas aos gabaritos")
     print("OK imagens: 1 abertura e 11 SVGs acessíveis e documentados")
     print("OK revisão: seis pareceres, sem achados altos ou bloqueantes")
     print("OK encadeamento: produtos cumulativos nos 6 notebooks")

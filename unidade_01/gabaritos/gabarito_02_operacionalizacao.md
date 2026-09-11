@@ -1,5 +1,7 @@
 # Gabarito orientativo — Representação e operacionalização
 
+**Atividades associadas:** `U01-A07`, `U01-A08` e `U01-A09`.
+
 ## 0. Retomada — exemplo de resolução
 
 **Pergunta delimitada recuperada do Notebook 01:** Como a categoria temática

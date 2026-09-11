@@ -1,5 +1,7 @@
 # Gabarito — Perguntas e problemas computacionais
 
+**Atividades associadas:** `U01-A02`, `U01-A03`, `U01-A04`, `U01-A05` e `U01-A06`.
+
 ## 1. Retomada do diagnóstico — exemplo de resolução
 
 **Fenômeno registrado no guia:** participação de associações de trabalhadores em

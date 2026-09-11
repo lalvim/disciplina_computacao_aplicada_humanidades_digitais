@@ -1,5 +1,7 @@
 # Gabarito orientativo — Dados, corpus e evidências
 
+**Atividades associadas:** `U01-A10` e `U01-A11`.
+
 ## 0. Retomada — exemplo de resolução
 
 **Unidade de análise recuperada do Notebook 02:** documento jornalístico.

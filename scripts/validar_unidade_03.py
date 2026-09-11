@@ -12,6 +12,8 @@ from pathlib import Path
 
 import pandas as pd
 
+from apoio_atividades import validar_identificadores_atividades
+
 RAIZ = Path(__file__).resolve().parents[1]
 UNIDADE = RAIZ / "unidade_03"
 BRUTOS = UNIDADE / "dados" / "brutos"
@@ -340,11 +342,13 @@ def main() -> None:
     validar_resultados_semanticos()
     validar_exercicios()
     validar_gabaritos()
+    validar_identificadores_atividades(UNIDADE, 7)
     validar_referencias_revisores()
     validar_encadeamento()
     print("OK cobertura: 13/13 conteúdos")
     print("OK imagens: 8 recursos didáticos e 2 entradas de OCR, acessíveis e documentados")
     print("OK encadeamento: transições internas e passagens entre notebooks")
+    print("OK atividades: U03-A01 a U03-A07 associadas aos gabaritos")
     print("OK datas, OCR, dados brutos preservados, 3 derivados, exercícios, gabaritos e revisão")
     print(f"OK total: {total_md} células Markdown, {total_code} de código")
 

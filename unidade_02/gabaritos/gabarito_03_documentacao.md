@@ -1,5 +1,7 @@
 # Gabarito orientativo — Metadados e proveniência
 
+**Atividade associada:** `U02-A06`.
+
 ## Auditorias
 
 O catálogo possui 16 registros, 16 identificadores únicos, nenhum identificador

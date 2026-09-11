@@ -255,7 +255,7 @@ def guia() -> list[dict]:
         ),
         texto(
             """
-            ## Diagnóstico inicial
+            ## U02-A01 — Diagnóstico inicial
 
             Responda em Markdown:
 
@@ -449,7 +449,7 @@ def fontes_selecao() -> list[dict]:
         ),
         texto(
             """
-            ### Interpretação
+            ### U02-A02 — Atividade guiada — interpretação da filtragem
 
             A tabela de motivos descreve o efeito das regras. Agora é necessário
             interpretá-la: uma contagem não explica, por si só, se a perda decorre do
@@ -469,7 +469,7 @@ def fontes_selecao() -> list[dict]:
         ),
         texto(
             """
-            ## Atividade — protocolo de seleção
+            ## U02-A03 — Atividade — protocolo de seleção
 
             Para seu projeto, registre:
 
@@ -596,7 +596,7 @@ def cobertura() -> list[dict]:
             O cálculo fornece a comparação; a leitura a seguir delimita o que ela pode
             e não pode sustentar como evidência.
 
-            ### Leitura da saída
+            ### U02-A04 — Atividade guiada — leitura da comparação
 
             A visualização retoma os valores calculados e permite perceber rapidamente
             quais grupos diminuem ou desaparecem após a aplicação dos critérios.
@@ -644,7 +644,7 @@ def cobertura() -> list[dict]:
         ),
         texto(
             """
-            ## Atividade — matriz de cobertura
+            ## U02-A05 — Atividade — matriz de cobertura
 
             | Dimensão | Cobertura desejada | Cobertura acessível | Lacuna | Consequência | Mitigação |
             |---|---|---|---|---|---|
@@ -825,7 +825,7 @@ def metadados() -> list[dict]:
             distintas. A atividade reúne essas camadas em uma documentação coerente
             para o projeto do estudante.
 
-            ## Atividade — documentação do projeto
+            ## U02-A06 — Atividade — documentação do projeto
 
             **Estratégia de identificadores e escopo de unicidade:** Escreva aqui.
 
@@ -960,7 +960,7 @@ def governanca_documentacao() -> list[dict]:
         ),
         texto(
             """
-            ## 3. Experimento guiado — quais evidências podem ser auditadas?
+            ## U02-A07 — 3. Experimento guiado — quais evidências podem ser auditadas?
 
             O código abaixo não decide se a base “é FAIR”. Ele verifica apenas sinais
             observáveis no pacote didático: identificadores, documentação dos campos,
@@ -1062,7 +1062,7 @@ def governanca_documentacao() -> list[dict]:
             transforme a comparação em uma decisão condicionada por evidências e pela
             autoridade das pessoas envolvidas.
 
-            ### Discussão em duplas — abrir, restringir ou negociar?
+            ### U02-A08 — Discussão em duplas — abrir, restringir ou negociar?
 
             **Dinâmica:** em 5 minutos, cada estudante escolhe um caso e formula uma
             decisão. Em 10 minutos, a dupla compara as decisões usando ao menos uma
@@ -1113,7 +1113,7 @@ def governanca_documentacao() -> list[dict]:
         ),
         texto(
             """
-            ## 7. Atividade integrada — ficha de governança e documentação
+            ## U02-A09 — 7. Atividade integrada — ficha de governança e documentação
 
             **Produto:** uma ficha de uma a duas páginas que será incorporada ao
             protocolo da oficina.
@@ -1214,7 +1214,7 @@ def oficina() -> list[dict]:
     return [
         texto(
             """
-            # Oficina — Protocolo da base
+            # U02-A10 — Oficina — Protocolo da base
 
             Este notebook é integralmente discursivo. Use Markdown para justificar o
             desenho da base do projeto iniciado na Unidade 1. Não invente uma fonte
@@ -1420,7 +1420,7 @@ def oficina() -> list[dict]:
         ),
         texto(
             """
-            ## 9. Revisão por pares
+            ## U02-A11 — 9. Revisão por pares
 
             O colega deve localizar no protocolo:
 

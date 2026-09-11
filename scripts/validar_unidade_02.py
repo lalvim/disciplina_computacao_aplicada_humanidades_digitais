@@ -9,6 +9,8 @@ import struct
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
+from apoio_atividades import validar_identificadores_atividades
+
 
 RAIZ = Path(__file__).resolve().parents[1]
 UNIDADE = RAIZ / "unidade_02"
@@ -165,6 +167,10 @@ def validar_exercicios() -> None:
 def validar_gabaritos() -> None:
     pasta = UNIDADE / "gabaritos"
     marcadores = {
+        "gabarito_00_guia.md": [
+            "**Atividade associada:** `U02-A01`",
+            "## Exemplo de resposta",
+        ],
         "gabarito_01_selecao.md": [
             "## Exemplo de resposta — protocolo de seleção",
             "C004, de 1900, deve ser incluído",
@@ -277,11 +283,13 @@ def main() -> None:
     validar_imagens()
     validar_exercicios()
     validar_gabaritos()
+    validar_identificadores_atividades(UNIDADE, 12)
     validar_referencias_e_revisao()
     validar_encadeamento()
     print("OK cobertura: 15/15 conteúdos")
     print("OK imagens: 9 recursos locais, acessíveis e documentados")
     print("OK dados, exercícios, gabaritos com exemplos, referências e revisores")
+    print("OK atividades: U02-A01 a U02-A12 associadas aos gabaritos")
     print("OK encadeamento: pontes internas e produtos entre os 6 notebooks")
     print(f"OK total: {total_textos} células Markdown, {total_codigos} de código")
 

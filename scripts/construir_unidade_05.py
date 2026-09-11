@@ -170,7 +170,7 @@ def guia() -> list[dict]:
         3. Como a escolha da medida altera a conclusão?
         4. Uma diferença estatística é necessariamente relevante?
 
-        ## Diagnóstico inicial
+        ## U05-A01 — Diagnóstico inicial
 
         **Atividade individual — 10 minutos.** Responda em Markdown:
 
@@ -341,7 +341,7 @@ def estimativas() -> list[dict]:
         dados.nlargest(3, "palavras")[["id_documento", "local", "palavras", "texto"]]
         '''),
         texto('''
-        ## Atividade integrada — quadro de estimativas
+        ## U05-A02 — Atividade integrada — quadro de estimativas
 
         **Modalidade:** individual e revisão em dupla. **Tempo:** 25 + 10 minutos.
 
@@ -505,7 +505,9 @@ def inferencia() -> list[dict]:
         uma diferença importante pode permanecer imprecisa em amostra pequena. A
         relevância depende da pergunta, da escala, das consequências e da literatura.
 
-        **Atividade integrada — ficha inferencial. Modalidade:** dupla. **Tempo:** 30
+        ### U05-A03 — Atividade integrada — ficha inferencial
+
+        **Modalidade:** dupla. **Tempo:** 30
         minutos.
 
         1. declare população-alvo e procedimento de seleção;
@@ -667,7 +669,7 @@ def representacao_textual() -> list[dict]:
         distribuição dos temas pelos anos. Para interpretar um termo, retorne aos textos
         e concordâncias; o peso não explica por que ele aparece.
 
-        ## Atividade integrada — matriz documentada
+        ## U05-A04 — Atividade integrada — matriz documentada
 
         **Modalidade:** dupla. **Tempo:** 35 minutos.
 
@@ -891,7 +893,7 @@ def similaridade() -> list[dict]:
         Autoria não deve ser tratada como essência estilística: gênero, período,
         transcrição e composição do corpus podem explicar parte da proximidade.
 
-        ## Atividade integrada — relatório de pares
+        ## U05-A05 — Atividade integrada — relatório de pares
 
         **Modalidade:** trios. **Tempo:** 35 minutos.
 
@@ -917,7 +919,7 @@ def similaridade() -> list[dict]:
 def oficina() -> list[dict]:
     return [
         texto('''
-        # Oficina — análise comparativa
+        # U05-A06 — Oficina — análise comparativa
 
         Este notebook reúne os produtos dos Notebooks 01 a 04. Não há código aqui:
         copie resultados executados, documente o procedimento e escreva a interpretação
@@ -1078,7 +1080,7 @@ def oficina() -> list[dict]:
         um leitor externo consegue reconstruir as escolhas e localizar promessas
         excessivas.
 
-        ## 9. Revisão por pares
+        ## U05-A07 — 9. Revisão por pares
 
         **Dinâmica:** 5 minutos de apresentação, 12 minutos de leitura e comentário, 8
         minutos de conversa; depois invertam os papéis.
@@ -1148,7 +1150,7 @@ QUESTOES = [
 
 
 def criar_exercicios() -> None:
-    linhas = ["# Exercícios — Unidade 5", "", "Assinale uma alternativa e justifique antes de consultar o gabarito.", ""]
+    linhas = ["# U05-A08 — Exercícios de múltipla escolha — Unidade 5", "", "Assinale uma alternativa e justifique antes de consultar o gabarito.", ""]
     letras = "ABCD"
     for i, (pergunta, opcoes, _, _) in enumerate(QUESTOES, 1):
         linhas += [f"## Questão {i}", "", pergunta, ""]
@@ -1156,7 +1158,7 @@ def criar_exercicios() -> None:
         linhas += ["", "**Justificativa:** Escreva aqui.", ""]
     (UNIDADE / "exercicios_unidade_05_texto.md").write_text("\n".join(linhas), encoding="utf-8")
 
-    chave = ["# Gabarito — exercícios da Unidade 5", "", "| Questão | Resposta | Justificativa |", "|---:|:---:|---|"]
+    chave = ["# Gabarito — exercícios da Unidade 5", "", "**Atividade associada:** `U05-A08`.", "", "| Questão | Resposta | Justificativa |", "|---:|:---:|---|"]
     for i, (_, _, correta, explicacao) in enumerate(QUESTOES, 1):
         chave.append(f"| {i} | {letras[correta]} | {explicacao} |")
     chave += ["", "## Exemplo de resposta justificada", "", "**Questão 13:** os conjuntos possuem interseção `{b, c}` e união `{a, b, c, d}`. Assim, $J=2/4=0{,}5$. A alternativa C é correta. A repetição de um termo não mudaria esta versão de Jaccard, pois ela compara conjuntos."]
@@ -1171,8 +1173,39 @@ def criar_gabaritos() -> None:
 
 Os gabaritos oferecem exemplos completos, critérios de qualidade e erros frequentes.
 As respostas substantivas podem variar quando pergunta, corpus e justificativa forem
-coerentes. Use-os após realizar as atividades.''',
+coerentes. Use-os após realizar as atividades.
+
+## Índice das atividades e gabaritos
+
+| ID | Notebook ou material | Atividade | Gabarito |
+|---|---|---|---|
+| U05-A01 | Notebook 00 | Diagnóstico inicial | `gabarito_00_guia.md` |
+| U05-A02 | Notebook 01 | Quadro de estimativas | `gabarito_01_estimativas.md` |
+| U05-A03 | Notebook 02 | Ficha inferencial | `gabarito_02_inferencia.md` |
+| U05-A04 | Notebook 03 | Matriz documentada | `gabarito_03_representacao_textual.md` |
+| U05-A05 | Notebook 04 | Relatório de pares similares | `gabarito_04_similaridade.md` |
+| U05-A06 | Notebook 05 | Oficina de análise comparativa | `gabarito_05_oficina.md` |
+| U05-A07 | Notebook 05 | Revisão por pares da oficina | `gabarito_05_oficina.md` |
+| U05-A08 | Exercícios textuais | Exercícios de múltipla escolha | `gabarito_exercicios_multipla_escolha.md` |''',
+        "gabarito_00_guia.md": '''# Gabarito orientativo — Diagnóstico inicial
+
+**Atividade associada:** `U05-A01`.
+
+## Exemplo de resposta
+
+Uma diferença entre médias informa magnitude na escala original, mas não mostra
+sozinha a sobreposição entre grupos nem a sensibilidade a documentos extremos. Um
+intervalo expressa a incerteza de um procedimento sob pressupostos definidos; não é
+uma faixa que contenha 95% dos documentos. Um valor de p pequeno também não mede a
+importância histórica da diferença. Para comparar textos, a medida deve ser escolhida
+de acordo com o que a representação preserva: presença, frequência, ponderação ou
+ordem dos elementos.
+
+O diagnóstico aceita formulações alternativas quando distinguem magnitude,
+incerteza, relevância e representação.''',
         "gabarito_01_estimativas.md": '''# Gabarito — estimativas
+
+**Atividade associada:** `U05-A02`.
 
 ## Exemplo de resolução completa
 
@@ -1201,6 +1234,8 @@ Declara ordem, unidade, escala e sensibilidade; retorna aos casos e limita o uni
 - remover D023 sem critério; tratar `d` como importância histórica.''',
         "gabarito_02_inferencia.md": '''# Gabarito — inferência
 
+**Atividade associada:** `U05-A03`.
+
 ## Exemplo de resolução completa
 
 **Alvo didático:** diferença de médias sob um procedimento hipotético de amostragem.
@@ -1227,6 +1262,8 @@ histórica.”
 “aceitar a nula”, “95% dos dados”, “3% de chance da nula” e “significativo = importante”.''',
         "gabarito_03_representacao_textual.md": '''# Gabarito — representação textual
 
+**Atividade associada:** `U05-A04`.
+
 ## Exemplo de resolução completa
 
 1. Preservar `texto` e `id_documento`.
@@ -1247,6 +1284,8 @@ verificar negação, enquadramento e repetição artificial.”
 - comparar implementações com convenções IDF diferentes sem documentá-las.''',
         "gabarito_04_similaridade.md": '''# Gabarito — similaridade
 
+**Atividade associada:** `U05-A05`.
+
 ## Exemplo de resolução completa
 
 Use D001 como consulta. Calcule Jaccard sobre conjuntos, cosseno sobre contagens e
@@ -1264,6 +1303,8 @@ mede operações mínimas, mas não a gravidade editorial da correção.”
 Medida ligada à pergunta, convenção explícita, dois pares inspecionados e ausência de
 inferência automática sobre autoria, influência ou equivalência semântica.''',
         "gabarito_05_oficina.md": '''# Gabarito — oficina comparativa
+
+**Atividades associadas:** `U05-A06` e `U05-A07`.
 
 ## Exemplo de análise completa
 

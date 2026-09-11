@@ -1,5 +1,7 @@
 # Gabarito orientativo — Fontes e seleção
 
+**Atividades associadas:** `U02-A02` e `U02-A03`.
+
 ## Resultado do experimento
 
 Os critérios incluem nove registros: A001, A002, A004, B001, B002, C001, C002,

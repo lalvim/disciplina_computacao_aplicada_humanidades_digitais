@@ -1,5 +1,7 @@
 # Gabarito — exercícios da Unidade 5
 
+**Atividade associada:** `U05-A08`.
+
 | Questão | Resposta | Justificativa |
 |---:|:---:|---|
 | 1 | B | Média e mediana respondem a aspectos distintos; a distribuição e os casos mostram a sensibilidade. |

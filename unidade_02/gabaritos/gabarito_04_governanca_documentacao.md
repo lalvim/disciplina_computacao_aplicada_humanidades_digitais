@@ -1,5 +1,7 @@
 # Gabarito — Governança, reuso e documentação de bases
 
+**Atividades associadas:** `U02-A07`, `U02-A08` e `U02-A09`.
+
 Este gabarito apresenta uma resolução possível para o catálogo fictício. A
 avaliação deve considerar a qualidade das evidências e justificativas, não a
 reprodução literal do exemplo.

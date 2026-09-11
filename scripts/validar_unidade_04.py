@@ -6,6 +6,7 @@ import re
 import struct
 import xml.etree.ElementTree as ET
 from pathlib import Path
+from apoio_atividades import validar_identificadores_atividades
 R=Path(__file__).resolve().parents[1]; U=R/"unidade_04"
 def src(c): return "".join(c["source"]) if isinstance(c["source"],list) else c["source"]
 def run(p):
@@ -127,7 +128,7 @@ def validar_oficina():
   "## 6. Hipóteses provisórias",
   "## 7. Limitações e reprodutibilidade",
   "## 8. Estrutura do relatório final",
-  "## 9. Dinâmica sugerida e revisão por pares",
+  "## U04-A06 — 9. Dinâmica sugerida e revisão por pares",
   "## 10. Rubrica e checklist de entrega",
  ]
  assert all(secao in markdown for secao in secoes)
@@ -233,10 +234,11 @@ def main():
  t=(U/"exercicios_unidade_04_texto.md").read_text(encoding="utf-8"); numeros=[int(n) for n in re.findall(r"^## Questão (\d+)",t,re.M)]; assert numeros==list(range(1,19)); assert len(re.findall(r"^- \[ \] \*\*[A-D]\.\*\*",t,re.M))==72
  chave=(U/"gabaritos/gabarito_exercicios_multipla_escolha.md").read_text(encoding="utf-8"); resp=re.findall(r"^\|\s*\d+\s*\|\s*([A-D])",chave,re.M); assert len(resp)==18
  assert len(list((U/"revisores").glob("*.md")))==9 and len(list((U/"revisores/pareceres").glob("*.md")))==7
- validar_dados(); validar_latex(ns); validar_resultados(ambientes); validar_oficina(); validar_gabarito_quantitativo(); validar_imagens(); validar_encadeamento()
+ validar_dados(); validar_latex(ns); validar_resultados(ambientes); validar_oficina(); validar_gabarito_quantitativo(); validar_imagens(); validar_encadeamento(); validar_identificadores_atividades(U,7)
  print("OK 14 fórmulas LaTeX e resultados quantitativos/textuais")
  print("OK oficina: instruções, dinâmica, rubrica e exemplo resolvido")
  print("OK imagens: 1 abertura e 8 diagramas acessíveis, locais e documentados")
  print("OK encadeamento: transições internas e passagens entre notebooks")
+ print("OK atividades: U04-A01 a U04-A07 associadas aos gabaritos")
  print("OK 21/21 conteúdos; tendência central e dispersão separadas; total",tm,tc)
 if __name__=="__main__": main()

@@ -1,4 +1,4 @@
-# Exercícios da Unidade 2
+# U02-A12 — Exercícios de múltipla escolha da Unidade 2
 
 Marque uma alternativa por questão e consulte o gabarito após concluir.
 

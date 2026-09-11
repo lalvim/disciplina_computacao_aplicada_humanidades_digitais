@@ -1,5 +1,7 @@
 # Gabarito — Exercícios de múltipla escolha
 
+**Atividade associada:** `U02-A12`.
+
 | Questão | Resposta | Tópico |
 |---:|:---:|---|
 | 1 | B | População e corpus |

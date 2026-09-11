@@ -1,5 +1,7 @@
 # Gabarito — similaridade
 
+**Atividade associada:** `U05-A05`.
+
 ## Exemplo de resolução completa
 
 Use D001 como consulta. Calcule Jaccard sobre conjuntos, cosseno sobre contagens e

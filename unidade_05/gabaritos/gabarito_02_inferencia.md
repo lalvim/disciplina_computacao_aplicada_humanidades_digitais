@@ -1,5 +1,7 @@
 # Gabarito — inferência
 
+**Atividade associada:** `U05-A03`.
+
 ## Exemplo de resolução completa
 
 **Alvo didático:** diferença de médias sob um procedimento hipotético de amostragem.

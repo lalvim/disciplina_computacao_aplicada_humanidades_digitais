@@ -1,5 +1,7 @@
 # Gabarito orientativo — Primeira base processável
 
+**Atividades associadas:** `U03-A05` e `U03-A06`.
+
 Cada item recebe 0, 1 ou 2 pontos conforme a rubrica do notebook. Aprovação
 orientativa: ao menos 11/14, sem zero em preservação/proveniência, junções ou
 reprodutibilidade. O exemplo a seguir preenche todas as partes da oficina com o

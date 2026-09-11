@@ -1,5 +1,7 @@
 # Gabarito — estimativas
 
+**Atividade associada:** `U05-A02`.
+
 ## Exemplo de resolução completa
 
 **Pergunta:** a extensão simulada dos documentos difere entre Capital e Interior?

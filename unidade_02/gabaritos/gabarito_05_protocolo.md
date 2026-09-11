@@ -1,5 +1,7 @@
 # Gabarito e rubrica — Protocolo da base
 
+**Atividades associadas:** `U02-A10` e `U02-A11`.
+
 Não há uma única base correta. Avalie cada critério de 0 a 2.
 
 | Critério | 0 — ausente | 1 — parcial | 2 — defensável |

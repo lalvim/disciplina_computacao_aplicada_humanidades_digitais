@@ -1,5 +1,7 @@
 # Gabarito — Exercícios de múltipla escolha
 
+**Atividade associada:** `U03-A07`.
+
 | Questão | Resposta | Justificativa-modelo |
 |---:|:---:|---|
 | 1 | B | Manter a entrada imutável e gerar derivados permite comparar versões e reconstruir cada transformação. |

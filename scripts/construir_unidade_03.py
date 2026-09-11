@@ -351,7 +351,7 @@ def guia() -> list[dict]:
         operações serão necessárias em cada projeto. O diagnóstico antecipa essas
         operações e os riscos que deverão ser registrados ao longo da unidade.
 
-        ## Diagnóstico
+        ## U03-A01 — Diagnóstico
 
         Que transformações seu projeto exigirá? Quais podem alterar sentido, unidade
         ou quantidade de registros? **Resposta:** Escreva aqui.
@@ -563,7 +563,7 @@ def formatos() -> list[dict]:
         técnico reúne formato, operação, parâmetro, teste e finalidade para todas as
         fontes do projeto.
 
-        ## Atividade — inventário técnico
+        ## U03-A02 — Atividade — inventário técnico
 
         Para cada fonte do projeto, registre formato, estrutura interna, leitor,
         encoding/planilha/nó, presença de texto, necessidade de OCR, riscos, teste e
@@ -754,7 +754,7 @@ def limpeza() -> list[dict]:
         por que cada decisão foi tomada. O log acrescenta regra, justificativa, teste,
         reversibilidade e responsabilidade a esse resumo.
 
-        ## Atividade — log de transformação
+        ## U03-A03 — Atividade — log de transformação
 
         Registre campo, problema, regra, justificativa, valores afetados, teste,
         reversibilidade e responsável. Explique que distinção cada regra pode apagar.
@@ -908,7 +908,7 @@ def integracao() -> list[dict]:
         reconstruídos como esperado. O plano de integração transforma esses testes em
         um desenho explícito que pode ser revisado antes de receber dados reais.
 
-        ## Atividade — plano de integração
+        ## U03-A04 — Atividade — plano de integração
 
         Desenhe as tabelas, unidades, chaves, cardinalidades, campos compartilhados,
         validações, tratamento de não correspondências e saídas. Indique como um
@@ -932,7 +932,7 @@ def integracao() -> list[dict]:
 def oficina() -> list[dict]:
     return [
         md("""
-        # Oficina — Primeira base processável
+        # U03-A05 — Oficina — Primeira base processável
 
         Este notebook é um roteiro de projeto. Execute transformações em uma cópia
         própria ou notebook técnico; registre aqui decisões, evidências e resultados.
@@ -1056,7 +1056,7 @@ def oficina() -> list[dict]:
         pares acrescenta uma tentativa externa de reconstruir decisões, localizar
         junções perigosas e verificar limites que o autor pode não ter percebido.
 
-        ## 8. Entrega e revisão por pares
+        ## U03-A06 — 8. Entrega e revisão por pares
 
         Entregue inventário, notebooks, base processável, tabelas relacionais, log,
         relatório de qualidade e ficha de proveniência. O colega deve tentar localizar

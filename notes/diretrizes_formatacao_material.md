@@ -169,6 +169,31 @@ escrita diretamente em Markdown.
 
 Cada atividade deve indicar claramente sua natureza.
 
+### Identificadores das atividades
+
+Toda atividade deve começar por um identificador estável no formato `Uxx-Ayy`,
+em que `Uxx` indica a unidade e `Ayy` indica a ordem pedagógica da atividade
+dentro dela. Exemplo: `### U02-A08 — Discussão em duplas — abrir, restringir ou
+negociar?`.
+
+O identificador nomeia um bloco de trabalho com instrução, dinâmica ou produto
+próprio. Perguntas internas, etapas de uma mesma ficha e células que apenas
+demonstram código não recebem novos códigos. Uma oficina é uma atividade composta;
+uma revisão por pares recebe código próprio quando possui tempo, procedimento e
+registro de resposta próprios.
+
+O mesmo identificador deve aparecer:
+
+- no título da atividade no material do estudante;
+- no início do gabarito correspondente, em `Atividades associadas`;
+- no índice de `gabaritos/README.md`, junto ao notebook, título da atividade e
+  arquivo de resolução.
+
+Os exercícios de múltipla escolha de cada unidade formam uma atividade única e
+recebem o último identificador da sequência. Os códigos não devem ser renumerados
+apenas porque uma atividade nova foi inserida posteriormente; nesse caso, registre
+a decisão e preserve, sempre que possível, os identificadores já publicados.
+
 ### Atividade de escrita
 
 Usar quando o estudante precisar formular, explicar, interpretar ou justificar.

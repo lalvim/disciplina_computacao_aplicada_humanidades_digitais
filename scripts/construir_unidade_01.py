@@ -341,7 +341,7 @@ def guia() -> list[dict]:
         ),
         texto(
             """
-            ## Atividade individual — diagnóstico inicial
+            ## U01-A01 — Atividade individual — diagnóstico inicial
 
             **Modalidade:** individual. **Tempo sugerido:** 10 minutos.
 
@@ -543,7 +543,7 @@ def perguntas() -> list[dict]:
         ),
         texto(
             """
-            ### Atividade individual — checklist de revisão
+            ### U01-A02 — Atividade individual — checklist de revisão
 
             **Tempo sugerido:** 5 minutos. **Produto:** pergunta anotada com os itens
             que ainda exigem revisão.
@@ -567,7 +567,7 @@ def perguntas() -> list[dict]:
         ),
         texto(
             """
-            ## Atividade guiada — classifique com justificativa
+            ## U01-A03 — Atividade guiada — classifique com justificativa
 
             **Modalidade:** trios. **Tempo sugerido:** 15 minutos de trabalho e 10
             minutos de correção dialogada. **Produto:** cinco classificações com
@@ -610,7 +610,7 @@ def perguntas() -> list[dict]:
         ),
         texto(
             """
-            ### Atividade em trio e plenária — casos limítrofes
+            ### U01-A04 — Atividade em trio e plenária — casos limítrofes
 
             **Tempo sugerido:** 10 minutos no trio e 5 minutos em plenária.
             **Produto:** classificação argumentada e uma reformulação preditiva.
@@ -632,7 +632,7 @@ def perguntas() -> list[dict]:
         ),
         texto(
             """
-            ## Atividade em dupla — compreender e delimitar o interesse do colega
+            ## U01-A05 — Atividade em dupla — compreender e delimitar o interesse do colega
 
             **Modalidade:** duplas. **Tempo sugerido:** 10 minutos.
             **Produto:** comentários do colega que serão usados na formulação
@@ -682,7 +682,7 @@ def perguntas() -> list[dict]:
         ),
         texto(
             """
-            ## Atividade autônoma — produto parcial
+            ## U01-A06 — Atividade autônoma — produto parcial
 
             **Modalidade:** individual. **Tempo sugerido:** 15 minutos.
             **Produto:** primeira formulação documentada de sua pergunta, preenchida
@@ -1099,7 +1099,7 @@ def operacionalizacao() -> list[dict]:
             """
             ## 6. Comparação de representações
 
-            ### Experimento — uma decisão de representação altera a contagem
+            ### U01-A07 — Experimento — uma decisão de representação altera a contagem
 
             Os mesmos três documentos serão representados de duas maneiras: com um
             único tema dominante e com todos os temas atribuídos. Antes de executar,
@@ -1209,7 +1209,7 @@ def operacionalizacao() -> list[dict]:
         ),
         texto(
             """
-            ## 8. Mapa de operacionalização
+            ## U01-A08 — 8. Atividade — mapa de operacionalização
 
             Os critérios de validade permitem revisar cada elo da cadeia. O mapa reúne
             essas decisões em um produto único, incluindo alternativas e limitações.
@@ -1309,7 +1309,7 @@ def operacionalizacao() -> list[dict]:
         ),
         texto(
             """
-            ## Reflexão e síntese
+            ## U01-A09 — Atividade de reflexão e síntese
 
             Retome agora todo o encadeamento e identifique onde a representação perde
             informação ou introduz julgamento. A síntese deve indicar o que será
@@ -1615,7 +1615,7 @@ def corpus() -> list[dict]:
             Cada etapa condiciona as seguintes. Uma contagem pode estar correta em
             relação à tabela e ainda ser inadequada para uma afirmação histórica ampla.
 
-            ### Experimento — contar registros por categoria local
+            ### U01-A10 — Experimento — contar registros por categoria local
 
             No código seguinte, `documentos["local"]` seleciona apenas a coluna
             `local`. O método `value_counts()` agrupa valores iguais e conta quantas
@@ -1730,7 +1730,7 @@ def corpus() -> list[dict]:
         ),
         texto(
             """
-            ## Atividade — ficha do corpus
+            ## U01-A11 — Atividade — ficha do corpus
 
             O resumo computacional descreve propriedades do conjunto, enquanto os
             limites exigem argumentação. A ficha reúne ambos em uma delimitação do
@@ -1823,7 +1823,7 @@ def oficina() -> list[dict]:
     return [
         texto(
             """
-            # Oficina — formulação inicial do projeto
+            # U01-A12 — Oficina — formulação inicial do projeto
 
             Este notebook produz o trabalho da Unidade 1. Edite as células Markdown
             indicadas e escreva com liberdade. O objetivo é construir uma versão
@@ -2160,7 +2160,7 @@ def oficina() -> list[dict]:
         ),
         texto(
             """
-            ## Atividade — revisão entre pares
+            ## U01-A13 — Atividade — revisão entre pares
 
             **Modalidade:** duplas, com dois turnos. **Tempo sugerido:** 15 minutos por
             proposta. **Produto:** parecer breve recebido e registro das mudanças

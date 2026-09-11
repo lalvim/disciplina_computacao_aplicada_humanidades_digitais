@@ -1,5 +1,7 @@
 # Gabarito orientativo — Cobertura, vieses e silêncios
 
+**Atividades associadas:** `U02-A04` e `U02-A05`.
+
 No catálogo fictício, o filtro elimina completamente `família proprietária` e
 reduz outros grupos. Isso não demonstra sua importância histórica: mostra a
 consequência conjunta do período, da localização, da digitalização e do acesso.

@@ -1,5 +1,7 @@
 # Gabarito orientativo — Oficina do relatório exploratório
 
+**Atividades associadas:** `U04-A05` e `U04-A06`.
+
 Este exemplo mostra o nível de completude esperado. Os dados são inteiramente
 fictícios; portanto, os resultados demonstram procedimentos e não sustentam
 afirmações históricas reais.

@@ -1,5 +1,7 @@
 # Gabarito — Exploração quantitativa
 
+**Atividade associada:** `U04-A02`.
+
 ## Exemplo de resolução
 
 Na variável `palavras`, a soma dos 24 valores é 16.838; portanto, a média é 16.838 ÷ 24 ≈ 701,58 palavras. Depois da ordenação, a mediana é 621,5 palavras. Como todos os valores aparecem uma única vez, não há uma moda informativa. Nesse caso, `Series.mode()` devolve todos os valores: selecionar apenas o primeiro produziria, incorretamente, uma falsa moda única.

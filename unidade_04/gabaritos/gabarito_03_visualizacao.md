@@ -1,5 +1,7 @@
 # Gabarito — Visualização exploratória
 
+**Atividade associada:** `U04-A04`.
+
 Este gabarito apresenta uma resolução possível com a base fictícia. Uma resposta
 adequada deve justificar o gráfico pela pergunta e pela escala das variáveis,
 apresentar a tabela correspondente e separar descrição, interpretação e limite.

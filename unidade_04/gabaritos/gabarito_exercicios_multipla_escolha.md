@@ -1,5 +1,7 @@
 # Gabarito — Múltipla escolha
 
+**Atividade associada:** `U04-A07`.
+
 | Questão | Resposta |
 |---:|:---:|
 | 1 | B |

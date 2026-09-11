@@ -1,4 +1,4 @@
-# Exercícios da Unidade 3
+# U03-A07 — Exercícios de múltipla escolha da Unidade 3
 
 Marque uma alternativa e consulte o gabarito após concluir.
 

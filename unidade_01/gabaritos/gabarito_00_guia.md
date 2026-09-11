@@ -1,5 +1,7 @@
 # Gabarito orientativo — Guia e diagnóstico inicial
 
+**Atividades associadas:** `U01-A01`.
+
 ## 1. Natureza da atividade
 
 O diagnóstico do Notebook 00 não possui respostas certas. Seu gabarito mostra

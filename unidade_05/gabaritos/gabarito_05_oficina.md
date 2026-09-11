@@ -1,5 +1,7 @@
 # Gabarito — oficina comparativa
 
+**Atividades associadas:** `U05-A06` e `U05-A07`.
+
 ## Exemplo de análise completa
 
 **Pergunta:** na coleção fictícia, documentos de Capital e Interior diferem em extensão

@@ -8,6 +8,8 @@ import re
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
+from apoio_atividades import validar_identificadores_atividades
+
 
 RAIZ = Path(__file__).resolve().parents[1]
 UNIDADE = RAIZ / "unidade_01"
@@ -247,7 +249,7 @@ def validar_referencias() -> None:
     assert "Atividade em dupla" not in conteudo_guia
     assert conteudo_guia.index(
         "## Produto final da unidade e critérios de avaliação"
-    ) < conteudo_guia.index("## Atividade individual — diagnóstico inicial")
+    ) < conteudo_guia.index("## U01-A01 — Atividade individual — diagnóstico inicial")
 
     dinamicas_esperadas = {
         "00_guia_da_unidade.ipynb": [
@@ -300,7 +302,7 @@ def validar_referencias() -> None:
             "Experimento — uma decisão de representação altera a contagem",
             "documentos_temas.explode",
             "## 7. Validade da representação",
-            "## 8. Mapa de operacionalização",
+            "## U01-A08 — 8. Atividade — mapa de operacionalização",
             "### Possibilidades de dimensão para o conceito do exemplo",
             "| Recorrência temporal | Com que regularidade o tema aparece na coleção? |",
             "| Protagonismo | Quem recebe voz ou capacidade de agir? |",
@@ -325,7 +327,7 @@ def validar_referencias() -> None:
             "| Dados registrados | valores `Capital` e `Interior` na coluna `local` |",
             "### A cadeia de produção da evidência",
             "| Operação | aplicação de `value_counts()` à coluna `local` |",
-            "### Experimento — contar registros por categoria local",
+            "### U01-A10 — Experimento — contar registros por categoria local",
             "### Como ler a saída",
             "A produção jornalística da Capital e do Interior era igual",
             "o Python ainda poderá produzir `6` e `6`",
@@ -426,9 +428,9 @@ def validar_gabaritos() -> None:
     )
 
     guia_gabaritos = (pasta / "README.md").read_text(encoding="utf-8")
-    assert "## Cobertura das atividades" in guia_gabaritos
-    assert "Notebook 00: diagnóstico inicial" in guia_gabaritos
-    assert "Notebook 04: autoavaliação e revisão entre pares" in guia_gabaritos
+    assert "## Índice das atividades e gabaritos" in guia_gabaritos
+    assert "U01-A01" in guia_gabaritos
+    assert "U01-A14" in guia_gabaritos
 
     chave = (pasta / "gabarito_exercicios_multipla_escolha.md").read_text(
         encoding="utf-8"
@@ -668,6 +670,8 @@ def main() -> None:
     print("OK exercícios textuais: 18 questões, 10 tópicos e 4 alternativas")
     validar_gabaritos()
     print("OK gabaritos: 6 arquivos de respostas e 1 guia docente")
+    validar_identificadores_atividades(UNIDADE, 14)
+    print("OK atividades: U01-A01 a U01-A14 associadas aos gabaritos")
     validar_revisores()
     print(
         "OK revisores: 6 especialidades, coordenação, matriz, modelo e "

@@ -1,5 +1,7 @@
 # Gabarito — representação textual
 
+**Atividade associada:** `U05-A04`.
+
 ## Exemplo de resolução completa
 
 1. Preservar `texto` e `id_documento`.

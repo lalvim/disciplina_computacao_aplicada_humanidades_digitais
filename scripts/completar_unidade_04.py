@@ -5,8 +5,29 @@ def w(p,s): p.parent.mkdir(parents=True,exist_ok=True); p.write_text(s.strip()+"
 def main():
  g=U/"gabaritos"
  w(g/"README.md","""# Gabaritos da Unidade 4
-Modelos orientam procedimentos; interpretações abertas exigem evidência e limites.""")
+Modelos orientam procedimentos; interpretações abertas exigem evidência e limites.
+
+## Índice das atividades e gabaritos
+
+| ID | Atividade | Gabarito |
+|---|---|---|
+| U04-A01 | Diagnóstico inicial | `gabarito_00_guia.md` |
+| U04-A02 | Exploração quantitativa | `gabarito_01_quantitativo.md` |
+| U04-A03 | Exploração textual | `gabarito_02_textual.md` |
+| U04-A04 | Visualização exploratória | `gabarito_03_visualizacao.md` |
+| U04-A05 | Oficina do relatório exploratório | `gabarito_04_oficina.md` |
+| U04-A06 | Revisão por pares da oficina | `gabarito_04_oficina.md` |
+| U04-A07 | Exercícios de múltipla escolha | `gabarito_exercicios_multipla_escolha.md` |""")
+ w(g/"gabarito_00_guia.md","""# Gabarito orientativo — Diagnóstico inicial
+
+**Atividade associada:** `U04-A01`.
+
+## Exemplo de resposta
+
+Espero encontrar diferenças de extensão entre temas. Uma saída que revelaria problema seria uma contagem maior que 24 documentos ou proporções incompatíveis com o denominador declarado. A expectativa é hipótese de trabalho, não conclusão.""")
  w(g/"gabarito_01_quantitativo.md","""# Gabarito — Exploração quantitativa
+
+**Atividade associada:** `U04-A02`.
 
 ## Exemplo de resolução
 
@@ -34,13 +55,19 @@ Na tabela de contingência, a resposta deve informar se apresenta contagens ou p
 - tratar média e mediana como equivalentes diante de valores extremos;
 - excluir D023 somente por ultrapassar a cerca de Tukey.""")
  w(g/"gabarito_02_textual.md","""# Gabarito — Exploração textual
+**Atividade associada:** `U04-A03`.
+
 Exigir regras de tokenização e normalização, frequências absolutas e relativas, concordâncias, n-gramas e PMI com frequência mínima. Diversidade deve reconhecer o efeito do tamanho; ao menos um agregado precisa retornar ao trecho original.""")
  w(g/"gabarito_03_visualizacao.md","""# Gabarito — Visualização
+**Atividade associada:** `U04-A04`.
+
 Barras para categorias; histograma e boxplot para distribuição; dispersão para duas quantitativas; linha para ordem temporal; barras para termos. Toda figura requer tabela equivalente, descrição, escala, interpretação e limite. Nuvem de palavras não substitui valores legíveis.""")
  w(g/"gabarito_04_oficina.md","""# Rubrica — Relatório exploratório
+**Atividades associadas:** `U04-A05` e `U04-A06`.
+
 Pontue 0–2: escopo; correção quantitativa; exploração textual; visualização/acessibilidade; retorno aos casos; limites; reprodutibilidade. Aprovação orientativa: 11/14, sem zero em correção ou limites. Hipóteses permanecem provisórias.""")
  letras="B B A B A B A A B A A A A A A A B A".split()
- linhas=["# Gabarito — Múltipla escolha","","| Questão | Resposta |","|---:|:---:|"]+[f"| {i} | {x} |" for i,x in enumerate(letras,1)]
+ linhas=["# Gabarito — Múltipla escolha","","**Atividade associada:** `U04-A07`.","","| Questão | Resposta |","|---:|:---:|"]+[f"| {i} | {x} |" for i,x in enumerate(letras,1)]
  w(g/"gabarito_exercicios_multipla_escolha.md","\n".join(linhas))
  r=U/"revisores"; focos={"01_nivel_academico":"rigor, exploração versus confirmação e nível de mestrado","02_didatica":"progressão quantitativo–textual–visual e carga","03_alinhamento":"21 conteúdos, produto e limite com Unidade 5","04_humanidades_digitais":"agregados, leitura próxima e crítica da visualização","05_referencias":"precisão de Tukey, Drucker, Arnold e Tilton, Sinclair e Rockwell","06_tecnico_acessibilidade":"execução offline, SVG, tabelas alternativas, teclado e contraste"}
  w(r/"README.md","# Revisores da Unidade 4\n\nSeis perspectivas; achados devem citar evidência e gravidade.")

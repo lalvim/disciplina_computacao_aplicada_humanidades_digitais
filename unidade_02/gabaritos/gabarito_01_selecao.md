@@ -1,8 +1,6 @@
 # Gabarito orientativo — Fontes e seleção
 
-**Atividades associadas:** `U02-A02` e `U02-A03`.
-
-## Resultado do experimento
+## U02-A02 — Resultado e interpretação da filtragem
 
 Os critérios incluem nove registros: A001, A002, A004, B001, B002, C001, C002,
 C003 e C004. Sete registros são excluídos. Um item pode acumular motivos de
@@ -31,7 +29,7 @@ A resposta deve distinguir população de interesse, população acessível e
 corpus; relacionar o papel das fontes à pergunta; formular regras verificáveis;
 prever casos limítrofes; e explicar como exclusões serão preservadas.
 
-## Exemplo de resposta — protocolo de seleção
+## U02-A03 — Exemplo de resposta — protocolo de seleção
 
 O exemplo abaixo responde ao roteiro do notebook. Ele usa a base fictícia e
 não constitui a única solução possível.

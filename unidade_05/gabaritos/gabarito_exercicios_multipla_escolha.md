@@ -1,6 +1,4 @@
-# Gabarito — exercícios da Unidade 5
-
-**Atividade associada:** `U05-A08`.
+# U05-A08 — Gabarito — exercícios da Unidade 5
 
 | Questão | Resposta | Justificativa |
 |---:|:---:|---|

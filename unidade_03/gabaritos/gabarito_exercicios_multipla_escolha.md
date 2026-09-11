@@ -1,6 +1,4 @@
-# Gabarito — Exercícios de múltipla escolha
-
-**Atividade associada:** `U03-A07`.
+# U03-A07 — Gabarito — Exercícios de múltipla escolha
 
 | Questão | Resposta | Justificativa-modelo |
 |---:|:---:|---|

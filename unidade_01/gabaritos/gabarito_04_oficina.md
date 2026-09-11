@@ -1,11 +1,9 @@
 # Gabarito orientativo — Oficina do projeto
 
-**Atividades associadas:** `U01-A12` e `U01-A13`.
-
 Este arquivo apresenta uma resposta-modelo completa. Ela demonstra coerência
 entre as partes, mas não deve ser usada como molde temático obrigatório.
 
-## Como acompanhar o exemplo de resolução
+## U01-A12 — Como acompanhar a resolução da oficina
 
 O projeto-modelo reutiliza o mesmo caso dos gabaritos anteriores. A resolução
 segue quatro movimentos:
@@ -213,7 +211,7 @@ integrais permitem uma segunda operacionalização.
 definido, coerente e criticamente justificado no estágio atual. Não atribuir 3 a
 um item apenas porque ele foi mencionado.
 
-## 11. Revisão entre pares — exemplo de resolução
+## U01-A13 — Revisão entre pares — exemplo de resolução
 
 ### Parecer recebido
 

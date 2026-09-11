@@ -1,12 +1,10 @@
 # Gabarito orientativo — Oficina do relatório exploratório
 
-**Atividades associadas:** `U04-A05` e `U04-A06`.
-
 Este exemplo mostra o nível de completude esperado. Os dados são inteiramente
 fictícios; portanto, os resultados demonstram procedimentos e não sustentam
 afirmações históricas reais.
 
-## Exemplo de resolução completa
+## U04-A05 — Exemplo de resolução completa da oficina
 
 ### 1. Escopo e qualidade da base
 
@@ -176,3 +174,16 @@ tokens e bins `[0, 400, 600, 800, 1000, 2200]`.
 Uma pesquisa real pode receber nota alta mesmo com dados incompletos ou hipóteses
 incertas. O que se avalia é a adequação, a transparência e a capacidade de reconhecer
 os limites — não a produção de resultados “bonitos”.
+
+## U04-A06 — Exemplo de revisão por pares
+
+**Parecer recebido:** “O relatório identifica D023 como extremo e informa que ele é
+deliberado, mas a hipótese sobre a elevação de 1900 ainda pode ser lida como tendência
+temporal. Compare a média anual com e sem D023 e deixe explícito que há somente dois
+documentos por ano.”
+
+**Mudança realizada:** acrescentar a análise de sensibilidade sem D023, informar o
+denominador anual e reformular a conclusão para descrever apenas esta base fictícia.
+
+O parecer é adequado porque localiza uma afirmação que excedia a evidência, solicita
+uma verificação executável e produz uma alteração concreta no relatório.

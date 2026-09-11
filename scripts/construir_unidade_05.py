@@ -1158,7 +1158,7 @@ def criar_exercicios() -> None:
         linhas += ["", "**Justificativa:** Escreva aqui.", ""]
     (UNIDADE / "exercicios_unidade_05_texto.md").write_text("\n".join(linhas), encoding="utf-8")
 
-    chave = ["# Gabarito — exercícios da Unidade 5", "", "**Atividade associada:** `U05-A08`.", "", "| Questão | Resposta | Justificativa |", "|---:|:---:|---|"]
+    chave = ["# U05-A08 — Gabarito — exercícios da Unidade 5", "", "| Questão | Resposta | Justificativa |", "|---:|:---:|---|"]
     for i, (_, _, correta, explicacao) in enumerate(QUESTOES, 1):
         chave.append(f"| {i} | {letras[correta]} | {explicacao} |")
     chave += ["", "## Exemplo de resposta justificada", "", "**Questão 13:** os conjuntos possuem interseção `{b, c}` e união `{a, b, c, d}`. Assim, $J=2/4=0{,}5$. A alternativa C é correta. A repetição de um termo não mudaria esta versão de Jaccard, pois ela compara conjuntos."]
@@ -1187,9 +1187,7 @@ coerentes. Use-os após realizar as atividades.
 | U05-A06 | Notebook 05 | Oficina de análise comparativa | `gabarito_05_oficina.md` |
 | U05-A07 | Notebook 05 | Revisão por pares da oficina | `gabarito_05_oficina.md` |
 | U05-A08 | Exercícios textuais | Exercícios de múltipla escolha | `gabarito_exercicios_multipla_escolha.md` |''',
-        "gabarito_00_guia.md": '''# Gabarito orientativo — Diagnóstico inicial
-
-**Atividade associada:** `U05-A01`.
+        "gabarito_00_guia.md": '''# U05-A01 — Gabarito orientativo — Diagnóstico inicial
 
 ## Exemplo de resposta
 
@@ -1203,9 +1201,7 @@ ordem dos elementos.
 
 O diagnóstico aceita formulações alternativas quando distinguem magnitude,
 incerteza, relevância e representação.''',
-        "gabarito_01_estimativas.md": '''# Gabarito — estimativas
-
-**Atividade associada:** `U05-A02`.
+        "gabarito_01_estimativas.md": '''# U05-A02 — Gabarito — estimativas
 
 ## Exemplo de resolução completa
 
@@ -1232,9 +1228,7 @@ Declara ordem, unidade, escala e sensibilidade; retorna aos casos e limita o uni
 - escolher a média depois de observar qual diferença parece maior;
 - chamar diferença relativa de “vezes maior” sem verificar o denominador;
 - remover D023 sem critério; tratar `d` como importância histórica.''',
-        "gabarito_02_inferencia.md": '''# Gabarito — inferência
-
-**Atividade associada:** `U05-A03`.
+        "gabarito_02_inferencia.md": '''# U05-A03 — Gabarito — inferência
 
 ## Exemplo de resolução completa
 
@@ -1260,9 +1254,7 @@ histórica.”
 ## Erros frequentes
 
 “aceitar a nula”, “95% dos dados”, “3% de chance da nula” e “significativo = importante”.''',
-        "gabarito_03_representacao_textual.md": '''# Gabarito — representação textual
-
-**Atividade associada:** `U05-A04`.
+        "gabarito_03_representacao_textual.md": '''# U05-A04 — Gabarito — representação textual
 
 ## Exemplo de resolução completa
 
@@ -1282,9 +1274,7 @@ verificar negação, enquadramento e repetição artificial.”
 - chamar zero de irrelevância;
 - esquecer que Bag of Words perde ordem;
 - comparar implementações com convenções IDF diferentes sem documentá-las.''',
-        "gabarito_04_similaridade.md": '''# Gabarito — similaridade
-
-**Atividade associada:** `U05-A05`.
+        "gabarito_04_similaridade.md": '''# U05-A05 — Gabarito — similaridade
 
 ## Exemplo de resolução completa
 
@@ -1304,9 +1294,7 @@ Medida ligada à pergunta, convenção explícita, dois pares inspecionados e au
 inferência automática sobre autoria, influência ou equivalência semântica.''',
         "gabarito_05_oficina.md": '''# Gabarito — oficina comparativa
 
-**Atividades associadas:** `U05-A06` e `U05-A07`.
-
-## Exemplo de análise completa
+## U05-A06 — Exemplo de análise completa da oficina
 
 **Pergunta:** na coleção fictícia, documentos de Capital e Interior diferem em extensão
 simulada, e essa leitura resiste ao caso D023?
@@ -1333,7 +1321,7 @@ intensidade temática.”
 21/21 quando todos os sete critérios recebem 3, desde que a justificativa acompanhe a
 pontuação. Uma nota alta não substitui correção conceitual.
 
-## Revisão por pares — exemplo
+## U05-A07 — Revisão por pares — exemplo
 
 **Parecer:** “Explique por que média é principal e acrescente a mediana; limite a
 conclusão à coleção.” **Mudança:** incluir mediana, análise sem D023 e reformular o

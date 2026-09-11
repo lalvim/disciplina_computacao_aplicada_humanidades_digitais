@@ -1,6 +1,4 @@
-# Gabarito orientativo — Guia e diagnóstico inicial
-
-**Atividades associadas:** `U01-A01`.
+# U01-A01 — Gabarito orientativo — Guia e diagnóstico inicial
 
 ## 1. Natureza da atividade
 

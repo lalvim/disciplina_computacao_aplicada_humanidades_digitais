@@ -1,6 +1,4 @@
-# Gabarito — representação textual
-
-**Atividade associada:** `U05-A04`.
+# U05-A04 — Gabarito — representação textual
 
 ## Exemplo de resolução completa
 

@@ -1,6 +1,6 @@
 # Gabarito orientativo — Cobertura, vieses e silêncios
 
-**Atividades associadas:** `U02-A04` e `U02-A05`.
+## U02-A04 — Leitura da comparação de cobertura
 
 No catálogo fictício, o filtro elimina completamente `família proprietária` e
 reduz outros grupos. Isso não demonstra sua importância histórica: mostra a
@@ -17,7 +17,7 @@ Uma boa análise deve:
   preservação;
 - propor mitigação sem prometer neutralizar integralmente o viés.
 
-## Exemplo de resposta — matriz de cobertura
+## U02-A05 — Exemplo de resposta — matriz de cobertura
 
 **Pergunta adotada no exemplo:** como a composição do catálogo fictício varia
 por instituição, tipo documental e grupo representado entre 1890 e 1900, e como

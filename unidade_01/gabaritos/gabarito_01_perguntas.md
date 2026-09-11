@@ -1,7 +1,5 @@
 # Gabarito — Perguntas e problemas computacionais
 
-**Atividades associadas:** `U01-A02`, `U01-A03`, `U01-A04`, `U01-A05` e `U01-A06`.
-
 ## 1. Retomada do diagnóstico — exemplo de resolução
 
 **Fenômeno registrado no guia:** participação de associações de trabalhadores em
@@ -16,7 +14,7 @@ conversas informais, conflitos omitidos, pessoas não autorizadas a falar ou a
 recepção das decisões. Uma boa resposta identifica simultaneamente uma
 possibilidade de observação e um limite da fonte.
 
-## 2. Checklist de revisão — exemplo resolvido
+## U01-A02 — Checklist de revisão — exemplo resolvido
 
 Considere o rascunho: “Como o progresso transformou a sociedade brasileira?”
 
@@ -40,7 +38,7 @@ reconhecer o tema e leitura contextual para interpretar seus sentidos.
 O checklist não prova que a pergunta é relevante. Ele apenas localiza decisões
 que precisam ser explicitadas.
 
-## 3. Atividade guiada — resolução comentada
+## U01-A03 — Atividade guiada — resolução comentada
 
 ### Pergunta 1
 
@@ -141,7 +139,7 @@ estrutura associativa.
 e avaliar seu desempenho em romances não usados no treinamento. Bom desempenho
 não explicaria historicamente as mudanças do vocabulário.
 
-## 4. Casos limítrofes — exemplo de resolução
+## U01-A04 — Casos limítrofes — exemplo de resolução
 
 > Quais mudanças no vocabulário distinguem dois períodos e que processos
 > históricos ajudam a explicá-las?
@@ -171,7 +169,7 @@ um documento pertence com base em características de seu vocabulário?” Nesse
 caso, a finalidade passa a ser preditiva; acertar o período não explica por que o
 vocabulário mudou.
 
-## 5. Revisão em dupla — exemplo preenchido
+## U01-A05 — Revisão em dupla — exemplo preenchido
 
 **Apresentação inicial:** “Quero compreender a participação de trabalhadores no
 contexto dos debates sobre educação entre 1880 e 1930, observando inicialmente
@@ -197,7 +195,7 @@ ou fala diretamente citada, mantendo registro das limitações editoriais.
 **Por que este é um bom parecer:** o colega não reescreve a pergunta nem escolhe
 uma técnica. Ele torna visíveis decisões que o autor deverá justificar.
 
-## 6. Produto parcial — exemplo de resolução
+## U01-A06 — Produto parcial — exemplo de resolução
 
 O exemplo usa a coleção didática fictícia da unidade.
 

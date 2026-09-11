@@ -1,6 +1,4 @@
-# Gabarito — inferência
-
-**Atividade associada:** `U05-A03`.
+# U05-A03 — Gabarito — inferência
 
 ## Exemplo de resolução completa
 

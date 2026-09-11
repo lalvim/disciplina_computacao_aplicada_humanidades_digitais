@@ -1,6 +1,4 @@
-# Gabarito orientativo — Limpeza e qualidade
-
-**Atividade associada:** `U03-A03`.
+# U03-A03 — Gabarito orientativo — Limpeza e qualidade
 
 Resultados esperados:
 

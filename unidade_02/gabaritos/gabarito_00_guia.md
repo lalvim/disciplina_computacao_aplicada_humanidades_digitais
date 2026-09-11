@@ -1,6 +1,4 @@
-# Gabarito orientativo — Diagnóstico inicial
-
-**Atividade associada:** `U02-A01`.
+# U02-A01 — Gabarito orientativo — Diagnóstico inicial
 
 ## Exemplo de resposta
 

@@ -1,7 +1,5 @@
 # Gabarito orientativo — Representação e operacionalização
 
-**Atividades associadas:** `U01-A07`, `U01-A08` e `U01-A09`.
-
 ## 0. Retomada — exemplo de resolução
 
 **Pergunta delimitada recuperada do Notebook 01:** Como a categoria temática
@@ -38,7 +36,7 @@ Essas obras não fornecem uma resposta automática para o exercício. Elas ofere
 critérios para justificar por que a cadeia conceito–indicador–registro é adequada
 e quais perdas precisam permanecer visíveis.
 
-## 1. Leitura da tabela e resultado do experimento
+## U01-A07 — Leitura da tabela e resultado do experimento
 
 ### Unidade de análise
 
@@ -118,7 +116,7 @@ provisória; autoria, regra e dúvida permanecem rastreáveis. Se o contexto nã
 permitir decidir, a categoria analítica pode ficar como “indeterminada” em vez de
 forçar uma equivalência.
 
-## 2. Mapa de operacionalização — resposta-modelo
+## U01-A08 — Mapa de operacionalização — resposta-modelo
 
 | Conceito | Dimensão | Indicador | Unidade de análise | Variável | Categorias ou valores | Fonte | Regra | Limitação |
 |---|---|---|---|---|---|---|---|---|
@@ -169,7 +167,7 @@ casos e usaria a extensão apenas como pista complementar para releitura.”
 escolha à pergunta e não apresenta uma medida numérica como naturalmente
 superior.
 
-## 3. Respostas esperadas para a reflexão
+## U01-A09 — Respostas esperadas para a reflexão
 
 ### O que aconteceria se a unidade fosse alterada?
 

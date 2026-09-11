@@ -1,6 +1,4 @@
-# Gabarito — estimativas
-
-**Atividade associada:** `U05-A02`.
+# U05-A02 — Gabarito — estimativas
 
 ## Exemplo de resolução completa
 

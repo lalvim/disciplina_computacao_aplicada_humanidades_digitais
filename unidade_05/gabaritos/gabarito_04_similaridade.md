@@ -1,6 +1,4 @@
-# Gabarito — similaridade
-
-**Atividade associada:** `U05-A05`.
+# U05-A05 — Gabarito — similaridade
 
 ## Exemplo de resolução completa
 

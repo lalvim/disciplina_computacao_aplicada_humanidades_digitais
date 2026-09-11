@@ -1,6 +1,4 @@
-# Gabarito orientativo — Diagnóstico inicial
-
-**Atividade associada:** `U03-A01`.
+# U03-A01 — Gabarito orientativo — Diagnóstico inicial
 
 O diagnóstico não pede que o estudante execute todas as transformações. Ele deve
 antecipar quais operações serão necessárias e quais delas podem alterar sentido,

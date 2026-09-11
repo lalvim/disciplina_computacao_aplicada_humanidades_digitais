@@ -1,6 +1,4 @@
-# Gabarito — Visualização exploratória
-
-**Atividade associada:** `U04-A04`.
+# U04-A04 — Gabarito — Visualização exploratória
 
 Este gabarito apresenta uma resolução possível com a base fictícia. Uma resposta
 adequada deve justificar o gráfico pela pergunta e pela escala das variáveis,

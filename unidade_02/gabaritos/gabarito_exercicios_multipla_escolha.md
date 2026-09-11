@@ -1,6 +1,4 @@
-# Gabarito — Exercícios de múltipla escolha
-
-**Atividade associada:** `U02-A12`.
+# U02-A12 — Gabarito — Exercícios de múltipla escolha
 
 | Questão | Resposta | Tópico |
 |---:|:---:|---|

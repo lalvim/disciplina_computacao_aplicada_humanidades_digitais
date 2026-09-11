@@ -1,13 +1,11 @@
 # Gabarito orientativo — Primeira base processável
 
-**Atividades associadas:** `U03-A05` e `U03-A06`.
-
 Cada item recebe 0, 1 ou 2 pontos conforme a rubrica do notebook. Aprovação
 orientativa: ao menos 11/14, sem zero em preservação/proveniência, junções ou
 reprodutibilidade. O exemplo a seguir preenche todas as partes da oficina com o
 estudo de caso da unidade.
 
-## Exemplo de resolução completa
+## U03-A05 — Exemplo de resolução completa da oficina
 
 ### 1. Inventário e estrutura
 
@@ -147,7 +145,7 @@ históricas; apenas dois textos estão disponíveis.
 | reprodutibilidade | 2 | ordem de execução e saídas reconstruíveis desde os brutos |
 | **Total** | **14/14** | atende ao exemplo integral; projetos reais podem ter pendências justificadas |
 
-### 8. Exemplo de revisão por pares
+### U03-A06 — Exemplo de revisão por pares
 
 **Parecer recebido:** “A base é reconstruível e a junção municipal está controlada,
 mas `municipio_chave` pode aproximar grafias sem resolver mudanças territoriais. O

@@ -168,16 +168,17 @@ def validar_gabaritos() -> None:
     pasta = UNIDADE / "gabaritos"
     marcadores = {
         "gabarito_00_guia.md": [
-            "**Atividade associada:** `U02-A01`",
+            "# U02-A01 — Gabarito orientativo",
             "## Exemplo de resposta",
         ],
         "gabarito_01_selecao.md": [
-            "## Exemplo de resposta — protocolo de seleção",
+            "## U02-A03 — Exemplo de resposta — protocolo de seleção",
             "C004, de 1900, deve ser incluído",
             "### Por que esta resposta é defensável?",
         ],
         "gabarito_02_cobertura.md": [
-            "## Exemplo de resposta — matriz de cobertura",
+            "## U02-A04 — Leitura da comparação de cobertura",
+            "## U02-A05 — Exemplo de resposta — matriz de cobertura",
             "Silêncios que a ampliação da coleta talvez não resolva",
             "### Por que esta resposta é defensável?",
         ],
@@ -187,14 +188,15 @@ def validar_gabaritos() -> None:
             "### Por que esta resposta é defensável?",
         ],
         "gabarito_04_governanca_documentacao.md": [
-            "## Resultado esperado da auditoria",
-            "## Exemplo de resposta — ficha de governança e documentação",
+            "## U02-A07 — Resultado esperado da auditoria",
+            "## U02-A08 — Exemplo de decisão para a discussão em duplas",
+            "## U02-A09 — Exemplo de resposta — ficha de governança e documentação",
             "### Por que esta resposta é defensável?",
         ],
         "gabarito_05_protocolo.md": [
-            "## Exemplo de resposta — protocolo integrado da base",
+            "## U02-A10 — Exemplo de resposta — protocolo integrado da base",
             "### 8. Autoavaliação — exemplo",
-            "### 9. Revisão por pares — exemplo",
+            "### U02-A11 — Revisão por pares — exemplo",
         ],
         "gabarito_exercicios_multipla_escolha.md": [
             "## Exemplo de resposta justificada",

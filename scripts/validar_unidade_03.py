@@ -265,9 +265,9 @@ def validar_gabaritos() -> None:
             "## Por que este exemplo é adequado?",
         ],
         "gabarito_04_oficina.md": [
-            "## Exemplo de resolução completa",
+            "## U03-A05 — Exemplo de resolução completa da oficina",
             "### 7. Autoavaliação preenchida",
-            "### 8. Exemplo de revisão por pares",
+            "### U03-A06 — Exemplo de revisão por pares",
         ],
         "gabarito_exercicios_multipla_escolha.md": [
             "Justificativa-modelo",

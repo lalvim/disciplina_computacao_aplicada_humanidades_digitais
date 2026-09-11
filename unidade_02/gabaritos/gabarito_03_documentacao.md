@@ -1,6 +1,4 @@
-# Gabarito orientativo — Metadados e proveniência
-
-**Atividade associada:** `U02-A06`.
+# U02-A06 — Gabarito orientativo — Metadados e proveniência
 
 ## Auditorias
 

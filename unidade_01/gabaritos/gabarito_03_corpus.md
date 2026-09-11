@@ -1,7 +1,5 @@
 # Gabarito orientativo — Dados, corpus e evidências
 
-**Atividades associadas:** `U01-A10` e `U01-A11`.
-
 ## 0. Retomada — exemplo de resolução
 
 **Unidade de análise recuperada do Notebook 02:** documento jornalístico.
@@ -14,7 +12,7 @@ afirmação, o traço usado para observar o conceito e a fonte da qual o valor s
 produzido. Dizer apenas “a unidade é o jornal e o indicador é o CSV” confundiria
 entidade analítica, instituição e formato de arquivo.
 
-## 1. Resultados dos experimentos
+## U01-A10 — Resultados do experimento de contagem
 
 ### Como acompanhar a resolução
 
@@ -104,7 +102,7 @@ produção jornalística histórica.”
 avalia representatividade, qualidade das fontes, adequação das categorias ou
 relevância histórica.
 
-## 2. Ficha do corpus — resposta-modelo
+## U01-A11 — Ficha do corpus — resposta-modelo
 
 **Universo de interesse:** Debates jornalísticos sobre educação, trabalho e
 progresso em periódicos publicados entre 1890 e 1905.

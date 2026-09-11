@@ -1,8 +1,6 @@
 # Gabarito — oficina comparativa
 
-**Atividades associadas:** `U05-A06` e `U05-A07`.
-
-## Exemplo de análise completa
+## U05-A06 — Exemplo de análise completa da oficina
 
 **Pergunta:** na coleção fictícia, documentos de Capital e Interior diferem em extensão
 simulada, e essa leitura resiste ao caso D023?
@@ -29,7 +27,7 @@ intensidade temática.”
 21/21 quando todos os sete critérios recebem 3, desde que a justificativa acompanhe a
 pontuação. Uma nota alta não substitui correção conceitual.
 
-## Revisão por pares — exemplo
+## U05-A07 — Revisão por pares — exemplo
 
 **Parecer:** “Explique por que média é principal e acrescente a mediana; limite a
 conclusão à coleção.” **Mudança:** incluir mediana, análise sem D023 e reformular o

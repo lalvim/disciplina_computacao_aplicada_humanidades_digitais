@@ -1,7 +1,5 @@
 # Gabarito e rubrica — Protocolo da base
 
-**Atividades associadas:** `U02-A10` e `U02-A11`.
-
 Não há uma única base correta. Avalie cada critério de 0 a 2.
 
 | Critério | 0 — ausente | 1 — parcial | 2 — defensável |
@@ -17,7 +15,7 @@ Não há uma única base correta. Avalie cada critério de 0 a 2.
 Uma aprovação exige pelo menos 11 de 14 pontos, sem nota zero em ética e
 legalidade ou em alinhamento. A nota não substitui parecer do docente.
 
-## Exemplo de resposta — protocolo integrado da base
+## U02-A10 — Exemplo de resposta — protocolo integrado da base
 
 Este exemplo condensado usa o catálogo fictício. Seu objetivo é mostrar como as
 partes do protocolo se sustentam mutuamente, e não oferecer texto para cópia.
@@ -174,7 +172,7 @@ desta etapa.
 **Total: 12/14. Decisão:** manter com revisão obrigatória da proveniência do
 piloto e das condições legais antes de iniciar a coleta real.
 
-### 9. Revisão por pares — exemplo
+### U02-A11 — Revisão por pares — exemplo
 
 **Parecer recebido:** o intervalo está claro e as exclusões são auditáveis, mas
 `grupo_representado` pode ocultar múltiplos grupos em um mesmo documento. A

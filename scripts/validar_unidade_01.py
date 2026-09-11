@@ -483,7 +483,7 @@ def validar_gabaritos() -> None:
             "Revisão em dupla — exemplo de resolução",
         ],
         "gabarito_04_oficina.md": [
-            "Como acompanhar o exemplo de resolução",
+            "U01-A12 — Como acompanhar a resolução da oficina",
             "Autoavaliação — exemplo de resolução",
             "Revisão entre pares — exemplo de resolução",
         ],

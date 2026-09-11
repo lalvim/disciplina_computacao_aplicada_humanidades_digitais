@@ -1,6 +1,4 @@
-# Gabarito — Exploração quantitativa
-
-**Atividade associada:** `U04-A02`.
+# U04-A02 — Gabarito — Exploração quantitativa
 
 ## Exemplo de resolução
 

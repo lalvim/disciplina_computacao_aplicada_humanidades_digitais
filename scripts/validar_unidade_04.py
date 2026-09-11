@@ -141,8 +141,9 @@ def validar_oficina():
 
  gabarito = (U / "gabaritos" / "gabarito_04_oficina.md").read_text(encoding="utf-8")
  for termo in [
-  "## Exemplo de resolução completa", "701,58", "138.786,95", "1.433,375", "936 tokens",
+  "## U04-A05 — Exemplo de resolução completa da oficina", "701,58", "138.786,95", "1.433,375", "936 tokens",
   "TTR-19", "D023", "D001", "D003", "14/14",
+  "## U04-A06 — Exemplo de revisão por pares",
  ]:
   assert termo in gabarito, f"gabarito da oficina incompleto: {termo}"
 

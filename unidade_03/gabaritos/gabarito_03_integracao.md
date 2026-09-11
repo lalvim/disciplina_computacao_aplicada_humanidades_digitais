@@ -1,6 +1,4 @@
-# Gabarito orientativo — Junções e integração
-
-**Atividade associada:** `U03-A04`.
+# U03-A04 — Gabarito orientativo — Junções e integração
 
 A atividade pede um plano de integração: quais tabelas existem, o que cada linha
 representa, como elas se relacionam e que testes impedem a criação silenciosa de

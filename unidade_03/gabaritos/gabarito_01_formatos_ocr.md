@@ -1,6 +1,4 @@
-# Gabarito orientativo — Formatos e OCR
-
-**Atividade associada:** `U03-A02`.
+# U03-A02 — Gabarito orientativo — Formatos e OCR
 
 O inventário deve registrar a estrutura interna, não só a extensão. CSV requer
 separador e encoding; XLSX requer planilha; JSON/XML exigem caminho na

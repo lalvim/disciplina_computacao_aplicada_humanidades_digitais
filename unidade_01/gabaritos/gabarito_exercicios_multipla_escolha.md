@@ -1,6 +1,4 @@
-# Gabarito — Exercícios de múltipla escolha
-
-**Atividade associada:** `U01-A14`.
+# U01-A14 — Gabarito — Exercícios de múltipla escolha
 
 ## Chave rápida
 

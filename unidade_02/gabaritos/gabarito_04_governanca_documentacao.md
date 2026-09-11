@@ -1,12 +1,10 @@
 # Gabarito — Governança, reuso e documentação de bases
 
-**Atividades associadas:** `U02-A07`, `U02-A08` e `U02-A09`.
-
 Este gabarito apresenta uma resolução possível para o catálogo fictício. A
 avaliação deve considerar a qualidade das evidências e justificativas, não a
 reprodução literal do exemplo.
 
-## Resultado esperado da auditoria
+## U02-A07 — Resultado esperado da auditoria
 
 | Princípio | Evidência examinada | Presente |
 |---|---|:---:|
@@ -37,7 +35,16 @@ que a condição de acesso foi legitimamente estabelecida.
    justificadas. Um valor verdadeiro pode esconder documentação superficial.
    Somá-los produziria precisão aparente, não uma avaliação FAIR conclusiva.
 
-## Exemplo de resposta — ficha de governança e documentação
+## U02-A08 — Exemplo de decisão para a discussão em duplas
+
+No caso da comunidade que mantém registros restritos, a decisão-modelo é preservar
+a restrição e publicar metadados e um procedimento de solicitação sob a autoridade
+da própria comunidade. A evidência FAIR é a existência de um protocolo explícito de
+acesso. As questões CARE são quem possui autoridade para decidir e quais danos ou
+benefícios podem decorrer da abertura. A decisão mudaria se a comunidade, por meio
+de sua instância legítima, definisse outras condições de circulação.
+
+## U02-A09 — Exemplo de resposta — ficha de governança e documentação
 
 ### Parte A — evidências FAIR
 

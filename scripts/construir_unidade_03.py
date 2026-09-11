@@ -866,48 +866,192 @@ def integracao() -> list[dict]:
 
         ## 2. Integrar textos, metadados e indicadores
 
-        Um documento pode possuir zero ou um arquivo textual nesta versão, vários
-        temas e vários indicadores. Vamos criar uma tabela textual 1:1 apenas para os
-        arquivos disponíveis; temas e indicadores permanecem em tabelas longas para
-        evitar colunas multivaloradas.
+        **Integrar** significa relacionar informações que descrevem a mesma unidade
+        sem confundir unidades diferentes. Nesta base, há quatro tipos de registro:
+
+        | Informação | Unidade de cada linha ou item | Relação com um documento |
+        |---|---|---|
+        | catálogo normalizado | um documento | uma linha por documento |
+        | arquivo textual | o texto disponível de um documento | zero ou um texto nesta versão |
+        | atribuição temática | uma relação documento–tema | um documento pode ter vários temas |
+        | indicador | uma relação documento–tema–período | um documento pode ter vários indicadores |
+
+        A distinção é importante porque “vários temas” não significa “vários
+        documentos”. Se repetíssemos a linha inteira de D001 para registrar educação e
+        progresso, também repetiríamos título, município e número de palavras. Uma
+        soma posterior poderia contar o mesmo documento duas vezes.
 
         ![A tabela de documentos conecta-se por chaves a textos, relações documento-tema, municípios e indicadores, com marcações das cardinalidades esperadas.](imagens/03_modelo_relacional_base.svg)
 
-        O desenho não exige um único arquivo físico: ele explicita entidades e
-        relações. Separar tabelas evita repetir textos ou armazenar listas inteiras em
-        uma célula, preservando as unidades próprias de documentos, temas e indicadores.
+        O desenho não exige colocar tudo em um único arquivo. Ele mantém uma tabela
+        central de documentos e tabelas auxiliares ligadas pelo identificador
+        `id_documento`. A seção seguirá quatro passos:
+
+        1. abrir os metadados que indicam arquivos textuais e temas;
+        2. criar separadamente a tabela de textos e a tabela documento–tema;
+        3. ligar os textos disponíveis ao catálogo sem remover documentos sem texto;
+        4. reorganizar os indicadores e exportar os três produtos derivados.
+
+        ### 2.1 Ler o registro que orienta a integração
+
+        O JSON contém um objeto por documento. D001, por exemplo, aponta para
+        `D001.txt` e possui dois temas. O código abaixo apenas abre e apresenta esses
+        objetos; ainda não realiza nenhuma junção.
         """),
         code("""
+        import json
         from pathlib import Path
 
-        metadados = json.loads(Path("dados/brutos/metadados.json").read_text(encoding="utf-8"))
-        textos = []
-        temas = []
-        for item in metadados:
-            for tema in item["temas"]:
-                temas.append({"id_documento": item["id_documento"], "tema": tema})
-            if item["arquivo_texto"]:
-                caminho = Path("dados/brutos") / item["arquivo_texto"]
-                textos.append({"id_documento": item["id_documento"], "texto": caminho.read_text(encoding="utf-8")})
-        tabela_textos = pd.DataFrame(textos)
-        tabela_temas = pd.DataFrame(temas)
-        base_documentos = integrada.merge(tabela_textos, on="id_documento", how="left", validate="one_to_one")
-        print("Documentos:", len(base_documentos), "| relações documento-tema:", len(tabela_temas))
+        caminho_metadados = Path("dados/brutos/metadados.json")
+        texto_json = caminho_metadados.read_text(encoding="utf-8")
+        metadados = json.loads(texto_json)
+
+        pd.DataFrame(metadados)
         """),
         md("""
-        Textos e temas já foram separados segundo suas cardinalidades. Falta aplicar
-        a mesma lógica aos indicadores: a tabela larga será transformada para que
-        tema e período se tornem dimensões explícitas antes da exportação derivada.
+        Para transformar a lista de temas em tabela, precisamos produzir **uma linha
+        para cada relação**. O primeiro `for` percorre documentos; o segundo percorre
+        os temas daquele documento. Assim, D001 produzirá duas linhas, sem duplicar a
+        linha do catálogo.
+
+        | `id_documento` | `tema` |
+        |---|---|
+        | D001 | educação |
+        | D001 | progresso |
+
+        ### 2.2 Criar as tabelas de temas e textos
+
+        O mesmo bloco cria uma segunda tabela com apenas os textos disponíveis. A
+        condição `if arquivo_texto is not None` evita tentar abrir um arquivo quando o
+        JSON informa que ele não existe nesta versão. Ausência de texto não significa
+        ausência do documento no catálogo.
+        """),
+        code("""
+        linhas_temas = []
+        linhas_textos = []
+
+        # Primeiro, percorremos um documento por vez.
+        for item in metadados:
+            id_documento = item["id_documento"]
+
+            # Cada tema do documento se torna uma relação em uma nova linha.
+            for tema in item["temas"]:
+                linhas_temas.append({
+                    "id_documento": id_documento,
+                    "tema": tema,
+                })
+
+            # O texto só é lido quando o JSON informa um nome de arquivo.
+            arquivo_texto = item["arquivo_texto"]
+            if arquivo_texto is not None:
+                caminho = Path("dados/brutos") / arquivo_texto
+                linhas_textos.append({
+                    "id_documento": id_documento,
+                    "texto": caminho.read_text(encoding="utf-8"),
+                })
+
+        tabela_temas = pd.DataFrame(linhas_temas)
+        tabela_textos = pd.DataFrame(linhas_textos)
+
+        print("Relações documento–tema:", len(tabela_temas))
+        print("Textos disponíveis:", len(tabela_textos))
+        tabela_temas
+        """),
+        md("""
+        As duas tabelas agora preservam unidades distintas: uma linha da
+        `tabela_temas` é uma atribuição temática; uma linha da `tabela_textos` é um
+        texto disponível. Somente a tabela de textos pode ser ligada diretamente à
+        tabela central sem multiplicar documentos, pois há no máximo um texto por ID
+        nesta versão.
+
+        ### 2.3 Ligar os textos sem excluir documentos
+
+        A junção abaixo parte de `integrada`, que possui oito documentos, e procura um
+        texto com o mesmo `id_documento`:
+
+        - `how="left"` preserva todos os documentos da tabela da esquerda;
+        - `on="id_documento"` declara a chave compartilhada;
+        - `validate="one_to_one"` interrompe a execução se um ID aparecer repetido em
+          qualquer uma das duas tabelas.
+
+        O resultado continua com oito documentos. D001 e D002 recebem texto; os demais
+        permanecem com valor ausente na coluna `texto`. Essa ausência é informação
+        sobre a cobertura textual da versão, não motivo para apagar a linha.
+        """),
+        code("""
+        base_documentos = integrada.merge(
+            tabela_textos,
+            on="id_documento",
+            how="left",
+            validate="one_to_one",
+        )
+
+        print("Documentos antes da junção textual:", len(integrada))
+        print("Documentos depois da junção textual:", len(base_documentos))
+        base_documentos[["id_documento", "titulo", "texto"]].head(4)
+        """),
+        md("""
+        Textos e temas já foram separados segundo suas cardinalidades, e a junção
+        textual preservou a quantidade de documentos. Falta aplicar a mesma lógica
+        aos indicadores.
+
+        ### 2.4 Transformar indicadores largos em relações explícitas
+
+        Na tabela recebida, nomes como `educacao_1890` misturam duas informações na
+        mesma coluna: tema e período. `melt` mantém `id_documento` e transforma as
+        demais colunas em pares `tema_periodo`–`ocorrencias`.
+
+        Em seguida, `rsplit("_", n=1)` divide cada nome pelo último sublinhado:
+        `educacao_1890` torna-se tema `educacao` e período `1890`. Essa regra depende
+        de uma convenção documentada: todo nome precisa terminar em sublinhado e quatro
+        dígitos de ano.
         """),
         code("""
         largo = pd.read_csv("dados/brutos/indicadores_largos.csv")
-        indicadores = largo.melt(id_vars="id_documento", var_name="tema_periodo", value_name="ocorrencias")
-        partes = indicadores["tema_periodo"].str.extract(r"(?P<tema>.+)_(?P<periodo>\d{4})")
-        indicadores = pd.concat([indicadores[["id_documento", "ocorrencias"]], partes], axis=1)
+        indicadores = largo.melt(
+            id_vars="id_documento",
+            var_name="tema_periodo",
+            value_name="ocorrencias",
+        )
 
-        base_documentos.drop(columns="_merge").to_csv("dados/derivados/documentos_processaveis.csv", index=False)
-        tabela_temas.to_csv("dados/derivados/documentos_temas.csv", index=False)
-        indicadores.to_csv("dados/derivados/indicadores_longos.csv", index=False)
+        tema_e_periodo = indicadores["tema_periodo"].str.rsplit(
+            "_", n=1, expand=True
+        )
+        tema_e_periodo.columns = ["tema", "periodo"]
+
+        indicadores[["tema", "periodo"]] = tema_e_periodo
+        indicadores = indicadores[
+            ["id_documento", "tema", "periodo", "ocorrencias"]
+        ]
+        indicadores.head(8)
+        """),
+        md("""
+        A transformação não calculou novos indicadores nem resumiu valores; apenas
+        mudou sua organização. Agora cada linha declara diretamente sua unidade:
+        documento–tema–período. Com as três tabelas prontas, podemos exportá-las.
+
+        ### 2.5 Exportar produtos derivados
+
+        Cada comando `to_csv` grava uma tabela com função própria. A coluna `_merge`
+        foi útil para auditar a junção municipal, mas não pertence ao produto final e
+        é retirada da tabela de documentos.
+        """),
+        code("""
+        base_documentos.drop(columns="_merge").to_csv(
+            "dados/derivados/documentos_processaveis.csv", index=False
+        )
+        tabela_temas.to_csv(
+            "dados/derivados/documentos_temas.csv", index=False
+        )
+        indicadores.to_csv(
+            "dados/derivados/indicadores_longos.csv", index=False
+        )
+
+        pd.Series({
+            "documentos": len(base_documentos),
+            "relações documento–tema": len(tabela_temas),
+            "relações documento–tema–período": len(indicadores),
+        })
         """),
         md("""
         O modelo relacional preserva entidades e multiplicidades em tabelas ligadas.
@@ -920,17 +1064,36 @@ def integracao() -> list[dict]:
         numerados tornam a ordem visível, mas reprodutibilidade também requer ambiente,
         parâmetros, versões e execução desde o início. Saídas derivadas devem poder ser
         reconstruídas sem editar manualmente células intermediárias.
+
+        Antes de ler o código, traduza cada verificação para uma pergunta sobre a
+        pesquisa:
+
+        | Verificação no código | Pergunta em linguagem comum | Resultado esperado |
+        |---|---|---|
+        | IDs únicos | cada linha da tabela central representa um documento diferente? | `True` |
+        | nenhuma linha criada | as junções evitaram multiplicar documentos? | `True` |
+        | temas referenciam documentos | todo ID usado na tabela de temas existe na tabela central? | `True` |
+        | arquivos derivados | os três produtos planejados foram gravados? | `3` |
+
+        `is_unique` responde à primeira pergunta. A comparação de comprimentos testa
+        a segunda. `issubset` verifica se o conjunto de IDs dos temas está contido no
+        conjunto de documentos. Por fim, `glob("*.csv")` localiza os arquivos CSV na
+        pasta de derivados e `len` os conta.
         """),
         code("""
         from pathlib import Path
 
         verificacoes = {
             "ids_documentos_unicos": base_documentos["id_documento"].is_unique,
-            "nenhuma_linha_criada_na_juncao_municipal": len(base_documentos) == len(catalogo),
-            "temas_referenciam_documentos": set(tabela_temas["id_documento"]).issubset(set(base_documentos["id_documento"])),
+            "nenhuma_linha_criada_nas_juncoes": (
+                len(base_documentos) == len(catalogo)
+            ),
+            "temas_referenciam_documentos": set(
+                tabela_temas["id_documento"]
+            ).issubset(set(base_documentos["id_documento"])),
             "arquivos_derivados": len(list(Path("dados/derivados").glob("*.csv"))),
         }
-        verificacoes
+        pd.Series(verificacoes)
         """),
         md("""
         As verificações anteriores testam se arquivos, chaves e relações foram

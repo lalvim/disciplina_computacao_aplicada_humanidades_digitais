@@ -200,9 +200,32 @@ def validar_resultados_semanticos() -> None:
     derivada = pd.read_csv(
         UNIDADE / "dados" / "derivados" / "documentos_processaveis.csv",
         dtype={"id_documento": "string", "ano_documento": "Int64"},
-    ).set_index("id_documento")
+    )
+    assert len(derivada) == 8
+    assert derivada["id_documento"].is_unique
+    assert int(derivada["texto"].notna().sum()) == 2
+    derivada = derivada.set_index("id_documento")
     assert derivada.loc["D002", "data_normalizada"] == "1891-02-06"
     assert derivada.loc["D003", "precisao_data"] == "ano"
+
+    temas = pd.read_csv(
+        UNIDADE / "dados" / "derivados" / "documentos_temas.csv",
+        dtype={"id_documento": "string"},
+    )
+    assert len(temas) == 4
+    assert set(temas.loc[temas["id_documento"].eq("D001"), "tema"]) == {
+        "educação", "progresso",
+    }
+
+    indicadores = pd.read_csv(
+        UNIDADE / "dados" / "derivados" / "indicadores_longos.csv",
+        dtype={"id_documento": "string"},
+    )
+    assert len(indicadores) == 12
+    assert list(indicadores.columns) == [
+        "id_documento", "tema", "periodo", "ocorrencias",
+    ]
+    assert set(indicadores["periodo"]) == {1890, 1900}
 
 
 def validar_exercicios() -> None:
@@ -315,7 +338,13 @@ def validar_encadeamento() -> None:
         ],
         "03_juncoes_integracao_e_reprodutibilidade.ipynb": [
             "O Notebook 02 produziu", "A junção foi executada",
-            "A auditoria mostrou", "Textos e temas já foram separados",
+            "A auditoria mostrou", "**Integrar** significa relacionar informações",
+            "vários temas” não significa “vários",
+            "### 2.1 Ler o registro", "### 2.2 Criar as tabelas",
+            "### 2.3 Ligar os textos", "`how=\"left\"` preserva",
+            "### 2.4 Transformar indicadores", "`rsplit(\"_\", n=1)`",
+            "### 2.5 Exportar produtos", "Textos e temas já foram separados",
+            "Pergunta em linguagem comum",
             "O modelo relacional preserva", "As verificações anteriores testam",
             "O plano produzido na atividade",
         ],
@@ -327,7 +356,8 @@ def validar_encadeamento() -> None:
         ],
     }
     for nome, marcadores in esperados.items():
-        conteudo = (UNIDADE / nome).read_text(encoding="utf-8")
+        notebook = json.loads((UNIDADE / nome).read_text(encoding="utf-8"))
+        conteudo = "\n".join(fonte(celula) for celula in notebook["cells"])
         ausentes = [marcador for marcador in marcadores if marcador not in conteudo]
         assert not ausentes, f"encadeamentos ausentes em {nome}: {ausentes}"
 

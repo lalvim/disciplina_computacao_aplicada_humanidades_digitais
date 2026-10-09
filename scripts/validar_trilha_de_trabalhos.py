@@ -26,9 +26,31 @@ def main() -> None:
     assert caminho_exemplo.exists(), "notebook com o exemplo completo não encontrado"
     documento_exemplo = json.loads(caminho_exemplo.read_text(encoding="utf-8"))
     texto_exemplo = "\n".join(fonte(c) for c in documento_exemplo["cells"])
+    celulas_codigo = [
+        c for c in documento_exemplo["cells"] if c["cell_type"] == "code"
+    ]
     assert "# EXEMPLO PREENCHIDO" in texto_exemplo
     assert "PI-EXEMPLO-IMPRENSA" in texto_exemplo
     assert "não representa uma pesquisa histórica real" in texto_exemplo
+    assert len(celulas_codigo) >= 7, "faltam demonstrações executáveis no exemplo"
+    assert all(c.get("execution_count") is not None for c in celulas_codigo), (
+        "há células de código que ainda não foram executadas"
+    )
+    assert not any(
+        saida.get("output_type") == "error"
+        for c in celulas_codigo
+        for saida in c.get("outputs", [])
+    ), "o notebook contém saída de erro"
+    imagens = [
+        saida
+        for c in celulas_codigo
+        for saida in c.get("outputs", [])
+        if "image/png" in saida.get("data", {})
+    ]
+    assert len(imagens) >= 3, "os três gráficos não estão incorporados ao notebook"
+    assert "Análise dos resultados" in texto_exemplo
+    assert "Análise do gráfico" in texto_exemplo
+    assert "plt.show()" in texto_exemplo
     for unidade in range(1, 15):
         assert f"## U{unidade:02d} —" in texto_exemplo, (
             f"unidade U{unidade:02d} ausente do exemplo completo"

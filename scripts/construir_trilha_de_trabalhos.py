@@ -19,7 +19,31 @@ def md(texto: str) -> dict:
     }
 
 
+def codigo(texto: str) -> dict:
+    return {
+        "cell_type": "code",
+        "execution_count": None,
+        "metadata": {},
+        "outputs": [],
+        "source": dedent(texto).strip().splitlines(keepends=True),
+    }
+
+
 def salvar(nome: str, celulas: list[dict]) -> None:
+    caminho = PASTA / nome
+    if caminho.exists():
+        anterior = json.loads(caminho.read_text(encoding="utf-8"))
+        codigos_anteriores = [
+            c for c in anterior.get("cells", []) if c.get("cell_type") == "code"
+        ]
+        codigos_novos = [c for c in celulas if c.get("cell_type") == "code"]
+        fontes_anteriores = ["".join(c.get("source", [])) for c in codigos_anteriores]
+        fontes_novas = ["".join(c.get("source", [])) for c in codigos_novos]
+        if fontes_anteriores == fontes_novas:
+            for nova, antiga in zip(codigos_novos, codigos_anteriores):
+                nova["execution_count"] = antiga.get("execution_count")
+                nova["outputs"] = antiga.get("outputs", [])
+
     doc = {
         "cells": celulas,
         "metadata": {
@@ -33,7 +57,7 @@ def salvar(nome: str, celulas: list[dict]) -> None:
         "nbformat": 4,
         "nbformat_minor": 5,
     }
-    (PASTA / nome).write_text(
+    caminho.write_text(
         json.dumps(doc, ensure_ascii=False, indent=1) + "\n",
         encoding="utf-8",
     )
@@ -308,6 +332,251 @@ TITULOS_EXEMPLO = {
 }
 
 
+def demonstracao_analitica(unidade: int) -> list[dict]:
+    """Acrescenta código e interpretação onde o projeto produz evidências."""
+    if unidade == 3:
+        return [
+            md("""
+            ### Demonstração técnica — construir a base processável
+
+            A célula seguinte cria uma versão sintética e reproduzível do corpus.
+            Em uma pesquisa real, esta etapa leria os arquivos preservados em
+            `dados/brutos/`; aqui os dados são gerados apenas para que o exemplo
+            possa ser executado sem downloads.
+            """),
+            codigo("""
+            import numpy as np
+            import pandas as pd
+            import matplotlib.pyplot as plt
+
+            rng = np.random.default_rng(42)
+
+            def criar_periodo(periodo, anos, composicao, media_frequencia):
+                partes = []
+                for periodico, quantidade, centrais in composicao:
+                    parte = pd.DataFrame({
+                        "periodo": periodo,
+                        "ano": rng.choice(anos, quantidade, replace=True),
+                        "periodico": periodico,
+                        "educacao_central": [True] * centrais
+                        + [False] * (quantidade - centrais),
+                        "genero": rng.choice(
+                            ["editorial", "notícia", "ensaio"],
+                            quantidade,
+                            p=[0.25, 0.45, 0.30],
+                        ),
+                        "tokens": np.maximum(
+                            120, rng.normal(720, 230, quantidade).round()
+                        ).astype(int),
+                    })
+                    partes.append(parte)
+                periodo_df = pd.concat(partes, ignore_index=True)
+                frequencias = rng.normal(media_frequencia, 2.2, len(periodo_df))
+                frequencias += media_frequencia - frequencias.mean()
+                periodo_df["freq_educacao_mil"] = frequencias.round(2)
+                return periodo_df
+
+            df = pd.concat([
+                criar_periodo(
+                    "1890–1899", range(1890, 1900),
+                    [("A", 40, 10), ("B", 40, 9), ("C", 30, 7)], 8.2,
+                ),
+                criar_periodo(
+                    "1900–1910", range(1900, 1911),
+                    [("A", 35, 13), ("B", 35, 12), ("C", 35, 12), ("D", 25, 12)],
+                    12.7,
+                ),
+            ], ignore_index=True).sample(frac=1, random_state=42).reset_index(drop=True)
+
+            df.insert(0, "id_artigo", [f"ART-{i:03d}" for i in range(1, len(df) + 1)])
+            df["mencoes_educacao"] = (
+                df["freq_educacao_mil"] * df["tokens"] / 1000
+            ).round().clip(lower=0).astype(int)
+
+            display(df.head())
+            """),
+            codigo("""
+            # Verificações mínimas antes da análise
+            verificacoes = pd.Series({
+                "linhas": len(df),
+                "IDs únicos": df["id_artigo"].nunique(),
+                "IDs ausentes": int(df["id_artigo"].isna().sum()),
+                "anos mínimo e máximo": f"{df['ano'].min()}–{df['ano'].max()}",
+                "frequências ausentes": int(df["freq_educacao_mil"].isna().sum()),
+            }, name="resultado")
+            display(verificacoes.to_frame())
+            """),
+            md("""
+            **Leitura da verificação.** Há 240 linhas e 240 identificadores únicos,
+            portanto cada linha pode representar um artigo sem duplicação de ID.
+            A cobertura vai de 1890 a 1910 e a variável usada na exploração não tem
+            valores ausentes. Esses testes não provam que a base é historicamente
+            representativa; apenas confirmam algumas condições técnicas necessárias.
+            """),
+        ]
+
+    if unidade == 4:
+        return [
+            md("""
+            ### Exploração — resumir antes de interpretar
+
+            Primeiro calculamos os denominadores e as medidas por período. Depois
+            produzimos dois gráficos complementares: uma proporção baseada na
+            anotação humana e a distribuição de uma frequência lexical.
+            """),
+            codigo("""
+            resumo = (
+                df.groupby("periodo", observed=True)
+                .agg(
+                    artigos=("id_artigo", "size"),
+                    artigos_centrais=("educacao_central", "sum"),
+                    proporcao_central=("educacao_central", "mean"),
+                    media_freq_mil=("freq_educacao_mil", "mean"),
+                    mediana_tokens=("tokens", "median"),
+                )
+            )
+            display(resumo.round(3))
+            """),
+            codigo("""
+            ordem = ["1890–1899", "1900–1910"]
+            fig, eixos = plt.subplots(1, 2, figsize=(12, 4.2))
+
+            (resumo.loc[ordem, "proporcao_central"] * 100).plot.bar(
+                ax=eixos[0], color=["#6b8e9b", "#c87941"]
+            )
+            eixos[0].set_title("Artigos com educação como tema central")
+            eixos[0].set_xlabel("Período")
+            eixos[0].set_ylabel("Artigos (%)")
+            eixos[0].tick_params(axis="x", rotation=0)
+            eixos[0].set_ylim(0, 50)
+
+            dados_boxplot = [
+                df.loc[df["periodo"].eq(periodo), "freq_educacao_mil"]
+                for periodo in ordem
+            ]
+            eixos[1].boxplot(dados_boxplot, tick_labels=ordem, showmeans=True)
+            eixos[1].set_title("Vocabulário educacional por artigo")
+            eixos[1].set_xlabel("Período")
+            eixos[1].set_ylabel("Ocorrências por mil tokens")
+
+            plt.tight_layout()
+            plt.show()
+            """),
+            md("""
+            **Análise dos resultados.** O primeiro gráfico mostra aproximadamente
+            24% de artigos centrais no primeiro período e 38% no segundo. A altura
+            das barras só é comparável porque cada valor usa como denominador o total
+            de artigos do próprio período. O boxplot aponta também uma frequência
+            lexical maior depois de 1900, mas exibe a dispersão e impede que a média
+            seja confundida com o comportamento de todos os documentos.
+
+            As duas evidências convergem, mas medem coisas diferentes: uma categoria
+            atribuída ao artigo inteiro e ocorrências de vocabulário. Nenhum gráfico,
+            isoladamente, demonstra uma transformação geral da imprensa operária.
+            """),
+        ]
+
+    if unidade == 5:
+        return [
+            md("""
+            ### Comparação e análise de sensibilidade
+
+            Como o periódico D só existe no segundo período, repetimos a comparação
+            usando apenas A, B e C. Essa mudança testa quanto o resultado depende da
+            composição do corpus.
+            """),
+            codigo("""
+            corpus_comum = df[df["periodico"].isin(["A", "B", "C"])]
+
+            cenarios = pd.DataFrame({
+                "corpus completo": df.groupby("periodo")["educacao_central"].mean(),
+                "somente periódicos A–C": corpus_comum.groupby("periodo")["educacao_central"].mean(),
+            }) * 100
+            cenarios.loc["diferença (p.p.)"] = (
+                cenarios.loc["1900–1910"] - cenarios.loc["1890–1899"]
+            )
+            display(cenarios.round(1))
+            """),
+            codigo("""
+            comparacao = cenarios.drop(index="diferença (p.p.)").T
+            comparacao.plot.bar(figsize=(8, 4), color=["#6b8e9b", "#c87941"])
+            plt.title("Sensibilidade à composição dos periódicos")
+            plt.xlabel("Cenário analítico")
+            plt.ylabel("Artigos com educação central (%)")
+            plt.xticks(rotation=0)
+            plt.legend(title="Período")
+            plt.ylim(0, 55)
+            plt.tight_layout()
+            plt.show()
+            """),
+            md("""
+            **Análise dos resultados.** A diferença é de cerca de 14 pontos
+            percentuais no corpus completo e 12 pontos quando comparamos somente
+            periódicos presentes nos dois períodos. A direção do contraste permanece,
+            mas sua magnitude diminui. Portanto, a composição institucional explica
+            parte — não toda — da diferença observada. O resultado continua sendo
+            descritivo e restrito ao corpus.
+            """),
+        ]
+
+    if unidade == 11:
+        return [
+            md("""
+            ### Exploração temporal — cobertura e tendência no mesmo gráfico
+
+            Uma linha temporal pode sugerir continuidade mesmo quando alguns anos
+            têm poucos documentos. Por isso o código calcula também o número de
+            artigos por ano e só liga com uma linha os anos que atingem o limiar
+            didático de oito artigos.
+            """),
+            codigo("""
+            anual = (
+                df.groupby("ano")
+                .agg(
+                    artigos=("id_artigo", "size"),
+                    proporcao_central=("educacao_central", "mean"),
+                )
+                .reset_index()
+            )
+            anual["percentual_central"] = anual["proporcao_central"] * 100
+
+            fig, eixo = plt.subplots(figsize=(10, 4.5))
+            eixo.scatter(
+                anual["ano"], anual["percentual_central"],
+                s=anual["artigos"] * 7, color="#777777", alpha=0.7,
+                label="todos os anos (tamanho = cobertura)",
+            )
+            cobertura_suficiente = anual[anual["artigos"] >= 8]
+            eixo.plot(
+                cobertura_suficiente["ano"],
+                cobertura_suficiente["percentual_central"],
+                color="#a34f2a", marker="o",
+                label="anos com pelo menos 8 artigos",
+            )
+            eixo.axvline(1899.5, color="#333333", linestyle="--", linewidth=1)
+            eixo.set_title("Centralidade da educação e cobertura anual")
+            eixo.set_xlabel("Ano")
+            eixo.set_ylabel("Artigos com educação central (%)")
+            eixo.set_ylim(0, 100)
+            eixo.legend()
+            plt.tight_layout()
+            plt.show()
+
+            display(anual)
+            """),
+            md("""
+            **Análise do gráfico.** Os percentuais oscilam bastante entre anos e o
+            tamanho dos pontos mostra que a cobertura também varia. O segundo período
+            tende a ocupar níveis mais altos, mas não há crescimento contínuo ano a
+            ano. A linha tracejada apenas separa os períodos definidos na pesquisa;
+            ela não prova que 1900 seja uma ruptura histórica. Essa leitura é mais
+            cautelosa do que resumir o gráfico como “a educação aumentou”.
+            """),
+        ]
+
+    return []
+
+
 def exemplo_completo() -> list[dict]:
     """Reúne em um arquivo visível o exemplo que acompanha os 14 cadernos."""
     celulas = [
@@ -334,6 +603,24 @@ def exemplo_completo() -> list[dict]:
         3. Compare decisões de adoção e de não adoção de métodos.
         4. Use o caderno específico da unidade para produzir sua própria entrega.
 
+        ## O que caracteriza a entrega em notebook
+
+        A entrega não é apenas um relatório textual nem uma coleção de códigos.
+        Ela deve construir uma sequência legível de evidências:
+
+        | Elemento | Função |
+        |---|---|
+        | texto antes do código | apresenta a pergunta e explica por que a operação será feita |
+        | código executável | realiza uma transformação, cálculo, tabela ou gráfico necessário |
+        | saída selecionada | torna o resultado inspecionável pelo leitor |
+        | análise depois da saída | interpreta padrões sem apenas repetir números ou formas |
+        | limites | registra o que a evidência não permite concluir |
+
+        Neste exemplo, a U03 constrói e verifica a base; a U04 explora tabelas e
+        distribuições; a U05 compara cenários; e a U11 examina uma série temporal.
+        As demais unidades mostram decisões que não exigem inserir código apenas
+        para aparentar tecnicidade.
+
         | Percurso | Função no projeto fictício |
         |---|---|
         | U01–U05 | construir pergunta, corpus, base e comparação inicial |
@@ -347,6 +634,7 @@ def exemplo_completo() -> list[dict]:
 
         {EXEMPLOS[unidade]}
         """))
+        celulas.extend(demonstracao_analitica(unidade))
     celulas.append(md("""
         ## Síntese das decisões metodológicas do exemplo
 

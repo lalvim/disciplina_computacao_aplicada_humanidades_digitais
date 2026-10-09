@@ -11,6 +11,9 @@ das unidades.
 
 O arquivo reúne o percurso completo do projeto fictício
 `PI-EXEMPLO-IMPRENSA`, da proposta inicial da U01 ao fechamento da U14.
+Ele está salvo com as células executadas, de modo que tabelas e gráficos possam ser
+vistos sem uma nova execução. No Colab ou no Jupyter, o estudante também pode usar
+“Executar tudo” para reconstruir as saídas.
 
 ## Diferença essencial
 
@@ -21,15 +24,28 @@ O arquivo reúne o percurso completo do projeto fictício
 | produz exercícios e resultados provisórios | seleciona evidências, interpreta e aponta arquivos técnicos |
 | avalia a aprendizagem da unidade | demonstra continuidade entre as unidades |
 
-Código e resultados calculados devem permanecer nos notebooks técnicos. A entrega
-cumulativa registra o que foi feito, por que foi feito, quais evidências foram
-selecionadas e quais arquivos sustentam o argumento.
+A entrega pode e deve reunir **código conciso, tabelas, gráficos e análise** quando
+esses elementos sustentarem o argumento. Preparações extensas, testes auxiliares e
+experimentos descartados podem permanecer em notebooks técnicos complementares,
+desde que sejam indicados na entrega.
+
+O exemplo adota a sequência recomendada:
+
+1. texto que apresenta a pergunta da análise;
+2. código executável;
+3. tabela ou gráfico produzido;
+4. interpretação do resultado;
+5. explicitação dos limites da evidência.
 
 ## Projeto utilizado no exemplo
 
 O exemplo acompanha a mesma pergunta e o mesmo corpus versionado da U01 à U14.
 Nas unidades condicionais, ele apresenta tanto métodos incorporados quanto decisões
 fundamentadas de não adoção.
+
+As demonstrações executáveis aparecem nas etapas em que são metodologicamente
+necessárias: construção e verificação da base (U03), exploração e visualização
+(U04), comparação e sensibilidade (U05) e análise temporal (U11).
 
 Todos os dados e resultados são inventados para fins didáticos. Eles mostram a
 lógica e o nível de detalhe esperados, mas não devem ser copiados nem interpretados

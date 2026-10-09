@@ -5,7 +5,7 @@ como um mesmo projeto pode evoluir de forma cumulativa ao longo da disciplina,
 sem criar uma coleção paralela de modelos que possa ser confundida com as oficinas
 das unidades.
 
-## Notebook disponível
+## Notebooks disponíveis
 
 **[`EXEMPLO_PREENCHIDO_projeto_integrador_U01_a_U14.ipynb`](EXEMPLO_PREENCHIDO_projeto_integrador_U01_a_U14.ipynb)**
 
@@ -14,6 +14,13 @@ O arquivo reúne o percurso completo do projeto fictício
 Ele está salvo com as células executadas, de modo que tabelas e gráficos possam ser
 vistos sem uma nova execução. No Colab ou no Jupyter, o estudante também pode usar
 “Executar tudo” para reconstruir as saídas.
+
+**[`EXEMPLO_PREENCHIDO_IBGE_DADOS_FICTICIOS_U01_a_U14.ipynb`](EXEMPLO_PREENCHIDO_IBGE_DADOS_FICTICIOS_U01_a_U14.ipynb)**
+
+O segundo arquivo apresenta um projeto municipal inspirado na estrutura de dados
+do IBGE. Municípios, códigos e valores são inteiramente fictícios. O exemplo permite
+ensinar preparação de painel, exploração, comparação pareada, regressão descritiva
+e análise temporal antes de uma futura substituição por dados oficiais documentados.
 
 ## Diferença essencial
 
@@ -39,15 +46,15 @@ O exemplo adota a sequência recomendada:
 
 ## Projeto utilizado no exemplo
 
-O exemplo acompanha a mesma pergunta e o mesmo corpus versionado da U01 à U14.
-Nas unidades condicionais, ele apresenta tanto métodos incorporados quanto decisões
+Cada exemplo acompanha a mesma pergunta e o mesmo corpus versionado da U01 à U14.
+Nas unidades condicionais, eles apresentam tanto métodos incorporados quanto decisões
 fundamentadas de não adoção.
 
 As demonstrações executáveis aparecem nas etapas em que são metodologicamente
 necessárias: construção e verificação da base (U03), exploração e visualização
 (U04), comparação e sensibilidade (U05) e análise temporal (U11).
 
-Todos os dados e resultados são inventados para fins didáticos. Eles mostram a
+Todos os dados e resultados dos dois exemplos são inventados para fins didáticos. Eles mostram a
 lógica e o nível de detalhe esperados, mas não devem ser copiados nem interpretados
 como evidência histórica.
 

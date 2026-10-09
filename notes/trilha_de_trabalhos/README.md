@@ -115,8 +115,9 @@ justificada, constitui uma decisão metodológica válida.
 ### Exemplo preenchido
 
 - **[Exemplo preenchido completo, da U01 à U14](notebooks_de_entrega/EXEMPLO_PREENCHIDO_projeto_integrador_U01_a_U14.ipynb)**
+- **[Exemplo com estrutura inspirada no IBGE — dados fictícios](notebooks_de_entrega/EXEMPLO_PREENCHIDO_IBGE_DADOS_FICTICIOS_U01_a_U14.ipynb)**
 - [`notebooks_de_entrega/README.md`](notebooks_de_entrega/README.md)
-- um único notebook demonstra o encadeamento do projeto;
+- dois notebooks demonstram o encadeamento com tipos distintos de corpus;
 - as orientações específicas de cada entrega permanecem nas pastas da trilha;
 - os notebooks das oficinas continuam sendo os materiais de trabalho das unidades.
 

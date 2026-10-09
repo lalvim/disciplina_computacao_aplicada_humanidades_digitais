@@ -8,7 +8,7 @@ from textwrap import dedent
 
 
 RAIZ = Path(__file__).resolve().parents[1]
-PASTA = RAIZ / "notes" / "trilha_de_trabalhos" / "exemplo_de_entrega"
+PASTA = RAIZ / "trilha_de_trabalhos" / "exemplo_de_entrega"
 
 
 def md(texto: str) -> dict:

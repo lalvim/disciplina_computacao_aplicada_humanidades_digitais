@@ -658,8 +658,8 @@ Aplicação de pelo menos uma técnica, como:
 
 As entregas intermediárias são versões sucessivas do **mesmo notebook**, e não
 relatórios independentes. Consulte o [enunciado do trabalho
-incremental](notes/trilha_de_trabalhos/README.md) e os [exemplos
-preenchidos](notes/trilha_de_trabalhos/exemplo_de_entrega/README.md).
+incremental](trilha_de_trabalhos/README.md) e os [exemplos
+preenchidos](trilha_de_trabalhos/exemplo_de_entrega/README.md).
 
 A avaliação do projeto deve considerar:
 

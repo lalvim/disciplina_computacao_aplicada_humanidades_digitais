@@ -638,8 +638,8 @@ Aplicação de pelo menos uma técnica, como:
 
 ### Etapa 6 — Comunicação
 
-1. notebook ou repositório reprodutível;
-2. relatório acadêmico;
+1. relatório acadêmico em notebook reprodutível;
+2. repositório com dados compartilháveis, código e documentação;
 3. apresentação oral;
 4. demonstração dos resultados.
 
@@ -655,6 +655,11 @@ Aplicação de pelo menos uma técnica, como:
 | Entregas intermediárias do projeto  |  20% |
 | Projeto final reprodutível          |  20% |
 | Apresentação e defesa do projeto    |  10% |
+
+As entregas intermediárias são versões sucessivas do **mesmo notebook**, e não
+relatórios independentes. Consulte o [enunciado do trabalho
+incremental](notes/trilha_de_trabalhos/README.md) e os [exemplos
+preenchidos](notes/trilha_de_trabalhos/exemplo_de_entrega/README.md).
 
 A avaliação do projeto deve considerar:
 

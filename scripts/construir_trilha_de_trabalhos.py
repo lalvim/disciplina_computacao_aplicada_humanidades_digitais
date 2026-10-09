@@ -8,7 +8,7 @@ from textwrap import dedent
 
 
 RAIZ = Path(__file__).resolve().parents[1]
-PASTA = RAIZ / "notes" / "trilha_de_trabalhos" / "notebooks_de_entrega"
+PASTA = RAIZ / "notes" / "trilha_de_trabalhos" / "exemplo_de_entrega"
 
 
 def md(texto: str) -> dict:
@@ -2034,7 +2034,7 @@ def u14() -> list[dict]:
 def main() -> None:
     PASTA.mkdir(parents=True, exist_ok=True)
     salvar(
-        "EXEMPLO_PREENCHIDO_projeto_integrador_U01_a_U14.ipynb",
+        "EXEMPLO_PREENCHIDO_PROJETO_JORNAIS_U01_a_U14.ipynb",
         exemplo_completo(),
     )
     salvar(

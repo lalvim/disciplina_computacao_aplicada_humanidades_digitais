@@ -7,7 +7,7 @@ from pathlib import Path
 
 
 RAIZ = Path(__file__).resolve().parents[1]
-PASTA = RAIZ / "notes" / "trilha_de_trabalhos" / "notebooks_de_entrega"
+PASTA = RAIZ / "notes" / "trilha_de_trabalhos" / "exemplo_de_entrega"
 
 
 def fonte(celula: dict) -> str:
@@ -70,7 +70,7 @@ def main() -> None:
 
     exemplos = [
         (
-            PASTA / "EXEMPLO_PREENCHIDO_projeto_integrador_U01_a_U14.ipynb",
+            PASTA / "EXEMPLO_PREENCHIDO_PROJETO_JORNAIS_U01_a_U14.ipynb",
             "PI-EXEMPLO-IMPRENSA",
             7,
             3,

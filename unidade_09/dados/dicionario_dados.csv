@@ -1,0 +1,7 @@
+variavel,tipo,descricao
+id_instituicao,nominal,identificador fictício
+itens_acervo,razão,itens catalogados simulados
+eventos_ano,razão,eventos anuais simulados
+publico_ano,razão,público anual simulado
+orcamento_anual,razão,orçamento simulado
+texto,texto,excerto sintético multitemático

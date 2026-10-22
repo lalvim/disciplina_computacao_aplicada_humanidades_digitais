@@ -1,0 +1,7 @@
+{
+  "natureza": "dados inteiramente fictícios",
+  "semente": 20261024,
+  "finalidade": "agrupamento numérico, textual e modelagem de tópicos",
+  "estrutura_didatica": "três perfis e três vocabulários latentes foram inseridos, com ruído e documentos mistos",
+  "limite": "clusters e tópicos não representam instituições, documentos ou grupos sociais reais"
+}

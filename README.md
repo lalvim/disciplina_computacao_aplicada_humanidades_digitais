@@ -802,6 +802,17 @@ somente se necessário e posiciona a execução na unidade correta.
 | 04 — Classificação textual | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_08/04_classificacao_textual_tfidf_e_embeddings.ipynb) |
 | 05 — Oficina de classificação | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_08/05_oficina_classificacao.ipynb) |
 
+### Unidade 9
+
+| Notebook | Google Colab |
+|---|---|
+| 00 — Guia da unidade | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_09/00_guia_da_unidade.ipynb) |
+| 01 — Padronização, distância e K-means | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_09/01_padronizacao_distancia_e_kmeans.ipynb) |
+| 02 — Hierarquia, caracterização e estabilidade | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_09/02_hierarquia_caracterizacao_e_estabilidade.ipynb) |
+| 03 — Agrupamento de documentos | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_09/03_agrupamento_de_documentos.ipynb) |
+| 04 — Modelagem de tópicos e tempo | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_09/04_modelagem_de_topicos_e_tempo.ipynb) |
+| 05 — Oficina de agrupamentos e temas | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_09/05_oficina_agrupamentos_e_temas.ipynb) |
+
 Os notebooks discursivos não possuem célula de clonagem. Nos demais, a célula
 operacional é separada dos experimentos e não faz parte da avaliação. O
 diretório `/content` é temporário: respostas e alterações desaparecem ao fim da

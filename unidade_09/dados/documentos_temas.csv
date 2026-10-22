@@ -1,0 +1,181 @@
+id_documento,ano,periodo,texto
+T001,1890,1890–1899,saúde sanitária cuidado médico posto prevenção doença atendimento biblioteca leitura registro 1
+T002,1891,1890–1899,educação escolar ensino escola professor aula aluno ensino registro 2
+T003,1892,1890–1899,cultura artística patrimônio poesia espetáculo associação literária palco registro 3
+T004,1893,1890–1899,saúde sanitária cuidado salubridade remédio enfermaria campanha sanitária registro 4
+T005,1894,1890–1899,educação escolar ensino biblioteca leitura curso matrícula educação registro 5
+T006,1895,1890–1899,cultura artística patrimônio poesia espetáculo associação literária palco registro 6
+T007,1896,1890–1899,saúde sanitária cuidado salubridade remédio enfermaria campanha sanitária registro 7
+T008,1897,1890–1899,educação escolar ensino biblioteca leitura curso matrícula educação museu patrimônio registro 8
+T009,1898,1890–1899,cultura artística patrimônio teatro música exposição artista concerto registro 9
+T010,1899,1890–1899,saúde sanitária cuidado médico posto prevenção doença atendimento registro 10
+T011,1900,1900–1909,educação escolar ensino biblioteca leitura curso matrícula educação registro 11
+T012,1901,1900–1909,cultura artística patrimônio teatro música exposição artista concerto registro 12
+T013,1902,1900–1909,saúde sanitária cuidado salubridade remédio enfermaria campanha sanitária registro 13
+T014,1903,1900–1909,educação escolar ensino biblioteca leitura curso matrícula educação registro 14
+T015,1904,1900–1909,cultura artística patrimônio poesia espetáculo associação literária palco salubridade remédio registro 15
+T016,1905,1900–1909,saúde sanitária cuidado médico posto prevenção doença atendimento registro 16
+T017,1906,1900–1909,educação escolar ensino colégio livro infância aprendizagem formação registro 17
+T018,1907,1900–1909,cultura artística patrimônio teatro música exposição artista concerto registro 18
+T019,1908,1900–1909,saúde sanitária cuidado hospital vacina higiene epidemia cuidado registro 19
+T020,1909,1900–1909,educação escolar ensino biblioteca leitura curso matrícula educação registro 20
+T021,1910,1910–1919,saúde sanitária cuidado salubridade remédio enfermaria campanha sanitária registro 21
+T022,1911,1910–1919,educação escolar ensino escola professor aula aluno ensino teatro música registro 22
+T023,1912,1910–1919,cultura artística patrimônio poesia espetáculo associação literária palco registro 23
+T024,1913,1910–1919,saúde sanitária cuidado salubridade remédio enfermaria campanha sanitária registro 24
+T025,1914,1910–1919,educação escolar ensino biblioteca leitura curso matrícula educação registro 25
+T026,1915,1910–1919,cultura artística patrimônio museu patrimônio pintura festival cultura registro 26
+T027,1916,1910–1919,saúde sanitária cuidado médico posto prevenção doença atendimento registro 27
+T028,1917,1910–1919,educação escolar ensino escola professor aula aluno ensino registro 28
+T029,1918,1910–1919,cultura artística patrimônio teatro música exposição artista concerto hospital vacina registro 29
+T030,1919,1910–1919,saúde sanitária cuidado hospital vacina higiene epidemia cuidado registro 30
+T031,1890,1890–1899,saúde sanitária cuidado hospital vacina higiene epidemia cuidado registro 31
+T032,1891,1890–1899,educação escolar ensino escola professor aula aluno ensino registro 32
+T033,1892,1890–1899,cultura artística patrimônio poesia espetáculo associação literária palco registro 33
+T034,1893,1890–1899,saúde sanitária cuidado médico posto prevenção doença atendimento registro 34
+T035,1894,1890–1899,educação escolar ensino colégio livro infância aprendizagem formação registro 35
+T036,1895,1890–1899,cultura artística patrimônio teatro música exposição artista concerto salubridade remédio registro 36
+T037,1896,1890–1899,saúde sanitária cuidado salubridade remédio enfermaria campanha sanitária registro 37
+T038,1897,1890–1899,educação escolar ensino biblioteca leitura curso matrícula educação registro 38
+T039,1898,1890–1899,cultura artística patrimônio teatro música exposição artista concerto registro 39
+T040,1899,1890–1899,saúde sanitária cuidado médico posto prevenção doença atendimento registro 40
+T041,1900,1900–1909,educação escolar ensino escola professor aula aluno ensino registro 41
+T042,1901,1900–1909,cultura artística patrimônio teatro música exposição artista concerto registro 42
+T043,1902,1900–1909,saúde sanitária cuidado hospital vacina higiene epidemia cuidado colégio livro registro 43
+T044,1903,1900–1909,educação escolar ensino biblioteca leitura curso matrícula educação registro 44
+T045,1904,1900–1909,cultura artística patrimônio museu patrimônio pintura festival cultura registro 45
+T046,1905,1900–1909,saúde sanitária cuidado salubridade remédio enfermaria campanha sanitária registro 46
+T047,1906,1900–1909,educação escolar ensino biblioteca leitura curso matrícula educação registro 47
+T048,1907,1900–1909,cultura artística patrimônio poesia espetáculo associação literária palco registro 48
+T049,1908,1900–1909,saúde sanitária cuidado salubridade remédio enfermaria campanha sanitária registro 49
+T050,1909,1900–1909,educação escolar ensino escola professor aula aluno ensino museu patrimônio registro 50
+T051,1910,1910–1919,saúde sanitária cuidado hospital vacina higiene epidemia cuidado registro 51
+T052,1911,1910–1919,educação escolar ensino colégio livro infância aprendizagem formação registro 52
+T053,1912,1910–1919,cultura artística patrimônio museu patrimônio pintura festival cultura registro 53
+T054,1913,1910–1919,saúde sanitária cuidado hospital vacina higiene epidemia cuidado registro 54
+T055,1914,1910–1919,educação escolar ensino biblioteca leitura curso matrícula educação registro 55
+T056,1915,1910–1919,cultura artística patrimônio poesia espetáculo associação literária palco registro 56
+T057,1916,1910–1919,saúde sanitária cuidado médico posto prevenção doença atendimento colégio livro registro 57
+T058,1917,1910–1919,educação escolar ensino escola professor aula aluno ensino registro 58
+T059,1918,1910–1919,cultura artística patrimônio poesia espetáculo associação literária palco registro 59
+T060,1919,1910–1919,saúde sanitária cuidado salubridade remédio enfermaria campanha sanitária registro 60
+T061,1890,1890–1899,saúde sanitária cuidado salubridade remédio enfermaria campanha sanitária registro 61
+T062,1891,1890–1899,educação escolar ensino colégio livro infância aprendizagem formação registro 62
+T063,1892,1890–1899,cultura artística patrimônio museu patrimônio pintura festival cultura registro 63
+T064,1893,1890–1899,saúde sanitária cuidado salubridade remédio enfermaria campanha sanitária biblioteca leitura registro 64
+T065,1894,1890–1899,educação escolar ensino colégio livro infância aprendizagem formação registro 65
+T066,1895,1890–1899,cultura artística patrimônio museu patrimônio pintura festival cultura registro 66
+T067,1896,1890–1899,saúde sanitária cuidado médico posto prevenção doença atendimento registro 67
+T068,1897,1890–1899,educação escolar ensino colégio livro infância aprendizagem formação registro 68
+T069,1898,1890–1899,cultura artística patrimônio museu patrimônio pintura festival cultura registro 69
+T070,1899,1890–1899,saúde sanitária cuidado salubridade remédio enfermaria campanha sanitária registro 70
+T071,1900,1900–1909,educação escolar ensino colégio livro infância aprendizagem formação teatro música registro 71
+T072,1901,1900–1909,cultura artística patrimônio poesia espetáculo associação literária palco registro 72
+T073,1902,1900–1909,saúde sanitária cuidado hospital vacina higiene epidemia cuidado registro 73
+T074,1903,1900–1909,educação escolar ensino escola professor aula aluno ensino registro 74
+T075,1904,1900–1909,cultura artística patrimônio teatro música exposição artista concerto registro 75
+T076,1905,1900–1909,saúde sanitária cuidado salubridade remédio enfermaria campanha sanitária registro 76
+T077,1906,1900–1909,educação escolar ensino biblioteca leitura curso matrícula educação registro 77
+T078,1907,1900–1909,cultura artística patrimônio teatro música exposição artista concerto médico posto registro 78
+T079,1908,1900–1909,saúde sanitária cuidado salubridade remédio enfermaria campanha sanitária registro 79
+T080,1909,1900–1909,educação escolar ensino biblioteca leitura curso matrícula educação registro 80
+T081,1910,1910–1919,saúde sanitária cuidado salubridade remédio enfermaria campanha sanitária registro 81
+T082,1911,1910–1919,educação escolar ensino colégio livro infância aprendizagem formação registro 82
+T083,1912,1910–1919,cultura artística patrimônio teatro música exposição artista concerto registro 83
+T084,1913,1910–1919,saúde sanitária cuidado médico posto prevenção doença atendimento registro 84
+T085,1914,1910–1919,educação escolar ensino biblioteca leitura curso matrícula educação poesia espetáculo registro 85
+T086,1915,1910–1919,cultura artística patrimônio teatro música exposição artista concerto registro 86
+T087,1916,1910–1919,saúde sanitária cuidado hospital vacina higiene epidemia cuidado registro 87
+T088,1917,1910–1919,educação escolar ensino colégio livro infância aprendizagem formação registro 88
+T089,1918,1910–1919,cultura artística patrimônio museu patrimônio pintura festival cultura registro 89
+T090,1919,1910–1919,saúde sanitária cuidado salubridade remédio enfermaria campanha sanitária registro 90
+T091,1890,1890–1899,saúde sanitária cuidado hospital vacina higiene epidemia cuidado registro 91
+T092,1891,1890–1899,educação escolar ensino escola professor aula aluno ensino museu patrimônio registro 92
+T093,1892,1890–1899,cultura artística patrimônio teatro música exposição artista concerto registro 93
+T094,1893,1890–1899,saúde sanitária cuidado hospital vacina higiene epidemia cuidado registro 94
+T095,1894,1890–1899,educação escolar ensino biblioteca leitura curso matrícula educação registro 95
+T096,1895,1890–1899,cultura artística patrimônio museu patrimônio pintura festival cultura registro 96
+T097,1896,1890–1899,saúde sanitária cuidado hospital vacina higiene epidemia cuidado registro 97
+T098,1897,1890–1899,educação escolar ensino biblioteca leitura curso matrícula educação registro 98
+T099,1898,1890–1899,cultura artística patrimônio poesia espetáculo associação literária palco médico posto registro 99
+T100,1899,1890–1899,saúde sanitária cuidado salubridade remédio enfermaria campanha sanitária registro 100
+T101,1900,1900–1909,educação escolar ensino escola professor aula aluno ensino registro 101
+T102,1901,1900–1909,cultura artística patrimônio museu patrimônio pintura festival cultura registro 102
+T103,1902,1900–1909,saúde sanitária cuidado médico posto prevenção doença atendimento registro 103
+T104,1903,1900–1909,educação escolar ensino colégio livro infância aprendizagem formação registro 104
+T105,1904,1900–1909,cultura artística patrimônio teatro música exposição artista concerto registro 105
+T106,1905,1900–1909,saúde sanitária cuidado médico posto prevenção doença atendimento biblioteca leitura registro 106
+T107,1906,1900–1909,educação escolar ensino colégio livro infância aprendizagem formação registro 107
+T108,1907,1900–1909,cultura artística patrimônio poesia espetáculo associação literária palco registro 108
+T109,1908,1900–1909,saúde sanitária cuidado médico posto prevenção doença atendimento registro 109
+T110,1909,1900–1909,educação escolar ensino escola professor aula aluno ensino registro 110
+T111,1910,1910–1919,saúde sanitária cuidado salubridade remédio enfermaria campanha sanitária registro 111
+T112,1911,1910–1919,educação escolar ensino colégio livro infância aprendizagem formação registro 112
+T113,1912,1910–1919,cultura artística patrimônio poesia espetáculo associação literária palco médico posto registro 113
+T114,1913,1910–1919,saúde sanitária cuidado médico posto prevenção doença atendimento registro 114
+T115,1914,1910–1919,educação escolar ensino colégio livro infância aprendizagem formação registro 115
+T116,1915,1910–1919,cultura artística patrimônio poesia espetáculo associação literária palco registro 116
+T117,1916,1910–1919,saúde sanitária cuidado salubridade remédio enfermaria campanha sanitária registro 117
+T118,1917,1910–1919,educação escolar ensino escola professor aula aluno ensino registro 118
+T119,1918,1910–1919,cultura artística patrimônio poesia espetáculo associação literária palco registro 119
+T120,1919,1910–1919,saúde sanitária cuidado médico posto prevenção doença atendimento escola professor registro 120
+T121,1890,1890–1899,saúde sanitária cuidado hospital vacina higiene epidemia cuidado registro 121
+T122,1891,1890–1899,educação escolar ensino escola professor aula aluno ensino registro 122
+T123,1892,1890–1899,cultura artística patrimônio poesia espetáculo associação literária palco registro 123
+T124,1893,1890–1899,saúde sanitária cuidado hospital vacina higiene epidemia cuidado registro 124
+T125,1894,1890–1899,educação escolar ensino escola professor aula aluno ensino registro 125
+T126,1895,1890–1899,cultura artística patrimônio teatro música exposição artista concerto registro 126
+T127,1896,1890–1899,saúde sanitária cuidado salubridade remédio enfermaria campanha sanitária escola professor registro 127
+T128,1897,1890–1899,educação escolar ensino escola professor aula aluno ensino registro 128
+T129,1898,1890–1899,cultura artística patrimônio museu patrimônio pintura festival cultura registro 129
+T130,1899,1890–1899,saúde sanitária cuidado médico posto prevenção doença atendimento registro 130
+T131,1900,1900–1909,educação escolar ensino escola professor aula aluno ensino registro 131
+T132,1901,1900–1909,cultura artística patrimônio teatro música exposição artista concerto registro 132
+T133,1902,1900–1909,saúde sanitária cuidado médico posto prevenção doença atendimento registro 133
+T134,1903,1900–1909,educação escolar ensino biblioteca leitura curso matrícula educação teatro música registro 134
+T135,1904,1900–1909,cultura artística patrimônio museu patrimônio pintura festival cultura registro 135
+T136,1905,1900–1909,saúde sanitária cuidado salubridade remédio enfermaria campanha sanitária registro 136
+T137,1906,1900–1909,educação escolar ensino biblioteca leitura curso matrícula educação registro 137
+T138,1907,1900–1909,cultura artística patrimônio museu patrimônio pintura festival cultura registro 138
+T139,1908,1900–1909,saúde sanitária cuidado médico posto prevenção doença atendimento registro 139
+T140,1909,1900–1909,educação escolar ensino colégio livro infância aprendizagem formação registro 140
+T141,1910,1910–1919,saúde sanitária cuidado salubridade remédio enfermaria campanha sanitária colégio livro registro 141
+T142,1911,1910–1919,educação escolar ensino biblioteca leitura curso matrícula educação registro 142
+T143,1912,1910–1919,cultura artística patrimônio teatro música exposição artista concerto registro 143
+T144,1913,1910–1919,saúde sanitária cuidado médico posto prevenção doença atendimento registro 144
+T145,1914,1910–1919,educação escolar ensino biblioteca leitura curso matrícula educação registro 145
+T146,1915,1910–1919,cultura artística patrimônio poesia espetáculo associação literária palco registro 146
+T147,1916,1910–1919,saúde sanitária cuidado médico posto prevenção doença atendimento registro 147
+T148,1917,1910–1919,educação escolar ensino biblioteca leitura curso matrícula educação teatro música registro 148
+T149,1918,1910–1919,cultura artística patrimônio museu patrimônio pintura festival cultura registro 149
+T150,1919,1910–1919,saúde sanitária cuidado salubridade remédio enfermaria campanha sanitária registro 150
+T151,1890,1890–1899,saúde sanitária cuidado médico posto prevenção doença atendimento registro 151
+T152,1891,1890–1899,educação escolar ensino biblioteca leitura curso matrícula educação registro 152
+T153,1892,1890–1899,cultura artística patrimônio museu patrimônio pintura festival cultura registro 153
+T154,1893,1890–1899,saúde sanitária cuidado médico posto prevenção doença atendimento registro 154
+T155,1894,1890–1899,educação escolar ensino colégio livro infância aprendizagem formação teatro música registro 155
+T156,1895,1890–1899,cultura artística patrimônio teatro música exposição artista concerto registro 156
+T157,1896,1890–1899,saúde sanitária cuidado médico posto prevenção doença atendimento registro 157
+T158,1897,1890–1899,educação escolar ensino colégio livro infância aprendizagem formação registro 158
+T159,1898,1890–1899,cultura artística patrimônio teatro música exposição artista concerto registro 159
+T160,1899,1890–1899,saúde sanitária cuidado salubridade remédio enfermaria campanha sanitária registro 160
+T161,1900,1900–1909,educação escolar ensino colégio livro infância aprendizagem formação registro 161
+T162,1901,1900–1909,cultura artística patrimônio poesia espetáculo associação literária palco médico posto registro 162
+T163,1902,1900–1909,saúde sanitária cuidado médico posto prevenção doença atendimento registro 163
+T164,1903,1900–1909,educação escolar ensino biblioteca leitura curso matrícula educação registro 164
+T165,1904,1900–1909,cultura artística patrimônio teatro música exposição artista concerto registro 165
+T166,1905,1900–1909,saúde sanitária cuidado salubridade remédio enfermaria campanha sanitária registro 166
+T167,1906,1900–1909,educação escolar ensino escola professor aula aluno ensino registro 167
+T168,1907,1900–1909,cultura artística patrimônio museu patrimônio pintura festival cultura registro 168
+T169,1908,1900–1909,saúde sanitária cuidado hospital vacina higiene epidemia cuidado escola professor registro 169
+T170,1909,1900–1909,educação escolar ensino colégio livro infância aprendizagem formação registro 170
+T171,1910,1910–1919,saúde sanitária cuidado hospital vacina higiene epidemia cuidado registro 171
+T172,1911,1910–1919,educação escolar ensino escola professor aula aluno ensino registro 172
+T173,1912,1910–1919,cultura artística patrimônio museu patrimônio pintura festival cultura registro 173
+T174,1913,1910–1919,saúde sanitária cuidado médico posto prevenção doença atendimento registro 174
+T175,1914,1910–1919,educação escolar ensino biblioteca leitura curso matrícula educação registro 175
+T176,1915,1910–1919,cultura artística patrimônio poesia espetáculo associação literária palco hospital vacina registro 176
+T177,1916,1910–1919,saúde sanitária cuidado hospital vacina higiene epidemia cuidado registro 177
+T178,1917,1910–1919,educação escolar ensino escola professor aula aluno ensino registro 178
+T179,1918,1910–1919,cultura artística patrimônio teatro música exposição artista concerto registro 179
+T180,1919,1910–1919,saúde sanitária cuidado médico posto prevenção doença atendimento registro 180

@@ -1,0 +1,7 @@
+{
+  "natureza": "dados inteiramente fictícios",
+  "finalidade": "ensino de regressão linear, interação, diagnóstico e regressão logística",
+  "geracao": "simulação determinística com semente 20261022",
+  "caso_atipico": "M150 recebeu acréscimo deliberado na resposta contínua para o diagnóstico",
+  "limite": "não representa municípios nem sustenta afirmações sobre políticas culturais reais"
+}

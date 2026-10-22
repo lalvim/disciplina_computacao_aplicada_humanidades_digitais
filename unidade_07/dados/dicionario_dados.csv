@@ -1,0 +1,11 @@
+variavel,unidade,tipo,descricao
+id_municipio,identificador,nominal,código fictício
+municipio,nome,nominal,nome fictício
+regiao,categoria,nominal,macrorregião apenas para exercício
+urbanizacao_pct,%,razão,parcela da população em área urbana
+renda_pc,unidade monetária,razão,renda mensal per capita simulada
+escolaridade_media_anos,anos,razão,média simulada
+distancia_capital_km,km,razão,distância simulada
+populacao,pessoas,razão,população simulada
+equipamentos_culturais_100mil,equipamentos/100 mil,razão,resposta contínua
+biblioteca_publica,sim/não,binária,resposta binária

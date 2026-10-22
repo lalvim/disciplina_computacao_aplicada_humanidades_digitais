@@ -1,4 +1,4 @@
-"""Valida links e células de preparação para uso das Unidades 1–5 no Colab."""
+"""Valida links e células de preparação para uso das unidades no Colab."""
 
 from __future__ import annotations
 
@@ -37,6 +37,20 @@ DEPENDENTES_DO_REPOSITORIO = {
         "03_representacao_vetorial_de_textos.ipynb",
         "04_similaridade_documentos_e_versoes.ipynb",
     },
+    "unidade_06": {
+        "00_guia_da_unidade.ipynb",
+        "01_associacao_variaveis_categoricas.ipynb",
+        "02_correlacao_variaveis_numericas.ipynb",
+        "03_coocorrencia_e_matrizes_relacionais.ipynb",
+        "04_grafos_centralidade_e_comunidades.ipynb",
+    },
+    "unidade_07": {
+        "00_guia_da_unidade.ipynb",
+        "01_regressao_linear_simples.ipynb",
+        "02_regressao_multipla_e_categorias.ipynb",
+        "03_interacoes_residuos_e_qualidade.ipynb",
+        "04_regressao_logistica.ipynb",
+    },
 }
 
 
@@ -52,7 +66,7 @@ def main() -> None:
     for unidade, dependentes in DEPENDENTES_DO_REPOSITORIO.items():
         pasta = RAIZ / unidade
         notebooks = sorted(pasta.glob("*.ipynb"))
-        esperados = 6 if unidade in {"unidade_02", "unidade_05"} else 5
+        esperados = 6 if unidade in {"unidade_02", "unidade_05", "unidade_06", "unidade_07"} else 5
         assert len(notebooks) == esperados, (
             f"{unidade}: esperados {esperados} notebooks"
         )
@@ -87,8 +101,8 @@ def main() -> None:
                 assert f"PASTA_UNIDADE = REPOSITORIO / {unidade!r}" in codigo
                 compile(codigo, str(caminho), "exec")
 
-    assert total == 27
-    assert preparacoes == 19
+    assert total == 39
+    assert preparacoes == 29
     print(f"OK Colab: {total} links e {preparacoes} preparações seletivas")
 
 

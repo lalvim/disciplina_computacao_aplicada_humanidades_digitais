@@ -295,7 +295,8 @@ Quais fatores estão associados a determinado resultado quando outras caracterí
 
 ### Produto da unidade
 
-Modelo explicativo básico e interpretação substantiva de seus resultados.
+Modelo básico de associação condicionada, diagnóstico e interpretação substantiva
+de seus resultados, com limites causais explícitos.
 
 ---
 

@@ -301,7 +301,8 @@ Quais fatores estão associados a determinado resultado quando outras caracterí
 
 ### Produto da unidade
 
-Modelo explicativo básico e interpretação substantiva de seus resultados.
+Modelo básico de associação condicionada, diagnóstico e interpretação substantiva
+de seus resultados, com limites causais explícitos.
 
 ---
 
@@ -767,6 +768,28 @@ somente se necessário e posiciona a execução na unidade correta.
 | 03 — Representação vetorial de textos | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_05/03_representacao_vetorial_de_textos.ipynb) |
 | 04 — Similaridade, documentos e versões | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_05/04_similaridade_documentos_e_versoes.ipynb) |
 | 05 — Oficina da análise comparativa | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_05/05_oficina_analise_comparativa.ipynb) |
+
+### Unidade 6
+
+| Notebook | Google Colab |
+|---|---|
+| 00 — Guia da unidade | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_06/00_guia_da_unidade.ipynb) |
+| 01 — Associação entre variáveis categóricas | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_06/01_associacao_variaveis_categoricas.ipynb) |
+| 02 — Correlação entre variáveis numéricas | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_06/02_correlacao_variaveis_numericas.ipynb) |
+| 03 — Coocorrência e matrizes relacionais | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_06/03_coocorrencia_e_matrizes_relacionais.ipynb) |
+| 04 — Grafos, centralidade e comunidades | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_06/04_grafos_centralidade_e_comunidades.ipynb) |
+| 05 — Oficina de associação ou rede | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_06/05_oficina_associacao_ou_rede.ipynb) |
+
+### Unidade 7
+
+| Notebook | Google Colab |
+|---|---|
+| 00 — Guia da unidade | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_07/00_guia_da_unidade.ipynb) |
+| 01 — Regressão linear simples | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_07/01_regressao_linear_simples.ipynb) |
+| 02 — Regressão múltipla e categorias | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_07/02_regressao_multipla_e_categorias.ipynb) |
+| 03 — Interações, resíduos e qualidade | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_07/03_interacoes_residuos_e_qualidade.ipynb) |
+| 04 — Regressão logística | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_07/04_regressao_logistica.ipynb) |
+| 05 — Oficina do modelo associativo | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_07/05_oficina_modelo_associativo.ipynb) |
 
 Os notebooks discursivos não possuem célula de clonagem. Nos demais, a célula
 operacional é separada dos experimentos e não faz parte da avaliação. O

@@ -7,6 +7,10 @@
 **Natureza:** Teórico-prática
 **Pré-requisitos:** Não há. Conhecimentos básicos de programação e estatística serão desenvolvidos ao longo da disciplina.
 
+**Apresentações:** consulte o [guia dos slides](slides/README.md). As
+apresentações seguem uma sequência baseada em exemplos, aplicações visuais,
+atividades e referências acadêmicas.
+
 ## 1. Ementa
 
 Formulação e resolução de problemas de pesquisa em Humanidades Digitais por meio de métodos computacionais e quantitativos. Construção, organização, documentação e preparação de bases constituídas por textos, metadados, indicadores e registros estruturados. Análise exploratória, visualização, comparação de grupos e documentos, investigação de associações, classificação, agrupamento, extração de informações e análise de relações. Introdução a modelos estatísticos, aprendizado de máquina, representações vetoriais de texto e redes. Integração entre evidências quantitativas e interpretação humanística. Avaliação de resultados, incerteza, validade, viés, ética, reprodutibilidade e comunicação científica.

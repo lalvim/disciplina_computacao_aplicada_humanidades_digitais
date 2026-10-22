@@ -1,0 +1,164 @@
+/* @theme humanidades */
+
+@import 'default';
+
+:root {
+  --creme: #f7f1e3;
+  --papel: #fffdf7;
+  --navy: #17324d;
+  --teal: #176b68;
+  --ferrugem: #a84f2a;
+  --ameixa: #69445f;
+  --cinza: #4b5563;
+  --linha: #d8cdbb;
+}
+
+section {
+  background: var(--papel);
+  color: #202a33;
+  font-family: "Aptos", "Source Sans 3", "Noto Sans", sans-serif;
+  font-size: 28px;
+  line-height: 1.28;
+  padding: 54px 66px 46px;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--navy);
+  font-family: "Aptos Display", "Source Sans 3", "Noto Sans", sans-serif;
+}
+
+h1 {
+  border-bottom: 4px solid var(--teal);
+  font-size: 1.55em;
+  margin-bottom: 0.55em;
+  padding-bottom: 0.16em;
+}
+
+h2 {
+  color: var(--teal);
+}
+
+strong {
+  color: var(--navy);
+}
+
+em {
+  color: var(--ameixa);
+}
+
+a {
+  color: var(--teal);
+}
+
+blockquote {
+  background: #eef6f3;
+  border-left: 8px solid var(--teal);
+  color: var(--navy);
+  font-size: 1.08em;
+  margin: 0.6em 0;
+  padding: 0.35em 0.7em;
+}
+
+table {
+  font-size: 0.72em;
+}
+
+th {
+  background: var(--navy);
+  color: white;
+}
+
+tr:nth-child(even) td {
+  background: #f2eee5;
+}
+
+code {
+  background: #ece8df;
+  color: #242c35;
+}
+
+section::after {
+  color: var(--cinza);
+  font-size: 0.55em;
+}
+
+section.capa,
+section.divisor {
+  align-items: center;
+  background: var(--creme);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+section.capa h1,
+section.divisor h1 {
+  border: 0;
+  font-size: 2em;
+}
+
+section.capa h2,
+section.divisor h2 {
+  color: var(--ferrugem);
+}
+
+section.exemplo {
+  background: #f4f0e7;
+  border-left: 14px solid var(--ferrugem);
+}
+
+section.atividade {
+  background: #edf6f4;
+  border-left: 14px solid var(--teal);
+}
+
+section.alerta {
+  background: #fbf0eb;
+  border-left: 14px solid var(--ferrugem);
+}
+
+section.referencias {
+  font-size: 19px;
+}
+
+.duas-colunas {
+  display: grid;
+  gap: 34px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.tres-colunas {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.cartao {
+  background: #f2eee5;
+  border-radius: 12px;
+  padding: 16px 20px;
+}
+
+.pergunta {
+  color: var(--ferrugem);
+  font-size: 1.12em;
+  font-weight: 700;
+}
+
+.fonte {
+  color: var(--cinza);
+  font-size: 0.55em;
+}
+
+.menor {
+  font-size: 0.76em;
+}
+
+img[alt~="centralizada"] {
+  display: block;
+  margin: 0 auto;
+}
+

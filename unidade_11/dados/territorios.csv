@@ -1,0 +1,17 @@
+codigo,territorio,x,y,populacao,prop_jovens,prop_idosos,ocorrencias,equipamentos
+T01,Território Fictício 01,0,0,8283,0.22,0.08,22,1
+T02,Território Fictício 02,1,0,12882,0.22,0.08,29,2
+T03,Território Fictício 03,2,0,15282,0.22,0.08,38,3
+T04,Território Fictício 04,3,0,20284,0.22,0.08,50,7
+T05,Território Fictício 05,0,1,11032,0.2,0.115,28,1
+T06,Território Fictício 06,1,1,15396,0.2,0.115,42,3
+T07,Território Fictício 07,2,1,17516,0.2,0.115,48,5
+T08,Território Fictício 08,3,1,21016,0.2,0.115,59,5
+T09,Território Fictício 09,0,2,13750,0.18,0.15,39,1
+T10,Território Fictício 10,1,2,17709,0.18,0.15,56,3
+T11,Território Fictício 11,2,2,20567,0.18,0.15,61,3
+T12,Território Fictício 12,3,2,24876,0.18,0.15,77,6
+T13,Território Fictício 13,0,3,15980,0.16,0.185,55,2
+T14,Território Fictício 14,1,3,19624,0.16,0.185,62,4
+T15,Território Fictício 15,2,3,21914,0.16,0.185,67,6
+T16,Território Fictício 16,3,3,26404,0.16,0.185,86,6

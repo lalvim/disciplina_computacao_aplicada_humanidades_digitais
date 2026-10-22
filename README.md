@@ -824,6 +824,17 @@ somente se necessário e posiciona a execução na unidade correta.
 | 04 — Avaliação, validação e rede | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_10/04_avaliacao_validacao_e_rede.ipynb) |
 | 05 — Oficina | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_10/05_oficina_base_derivada_de_textos.ipynb) |
 
+### Unidade 11
+
+| Notebook | Google Colab |
+|---|---|
+| 00 — Guia | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_11/00_guia_da_unidade.ipynb) |
+| 01 — Datas, taxas e séries | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_11/01_datas_taxas_e_series.ipynb) |
+| 02 — Tendências, médias móveis e rupturas | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_11/02_tendencias_medias_moveis_e_rupturas.ipynb) |
+| 03 — Temas e palavras no tempo | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_11/03_temas_e_palavras_no_tempo.ipynb) |
+| 04 — Distribuição espacial e taxas | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_11/04_distribuicao_espacial_e_taxas.ipynb) |
+| 05 — Oficina | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_11/05_oficina_tempo_ou_espaco.ipynb) |
+
 Os notebooks discursivos não possuem célula de clonagem. Nos demais, a célula
 operacional é separada dos experimentos e não faz parte da avaliação. O
 diretório `/content` é temporário: respostas e alterações desaparecem ao fim da

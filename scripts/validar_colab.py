@@ -70,6 +70,11 @@ DEPENDENTES_DO_REPOSITORIO = {
         "02_desambiguacao_e_vinculacao.ipynb", "03_relacoes_eventos_e_tabelas.ipynb",
         "04_avaliacao_validacao_e_rede.ipynb",
     },
+    "unidade_11": {
+        "00_guia_da_unidade.ipynb", "01_datas_taxas_e_series.ipynb",
+        "02_tendencias_medias_moveis_e_rupturas.ipynb", "03_temas_e_palavras_no_tempo.ipynb",
+        "04_distribuicao_espacial_e_taxas.ipynb",
+    },
 }
 
 
@@ -85,7 +90,7 @@ def main() -> None:
     for unidade, dependentes in DEPENDENTES_DO_REPOSITORIO.items():
         pasta = RAIZ / unidade
         notebooks = sorted(pasta.glob("*.ipynb"))
-        esperados = 6 if unidade in {"unidade_02", "unidade_05", "unidade_06", "unidade_07", "unidade_08", "unidade_09", "unidade_10"} else 5
+        esperados = 6 if unidade in {"unidade_02", "unidade_05", "unidade_06", "unidade_07", "unidade_08", "unidade_09", "unidade_10", "unidade_11"} else 5
         assert len(notebooks) == esperados, (
             f"{unidade}: esperados {esperados} notebooks"
         )
@@ -120,8 +125,8 @@ def main() -> None:
                 assert f"PASTA_UNIDADE = REPOSITORIO / {unidade!r}" in codigo
                 compile(codigo, str(caminho), "exec")
 
-    assert total == 57
-    assert preparacoes == 44
+    assert total == 63
+    assert preparacoes == 49
     print(f"OK Colab: {total} links e {preparacoes} preparações seletivas")
 
 

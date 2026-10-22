@@ -1,0 +1,33 @@
+id_documento,texto,anotador_a,anotador_b,decisao_adjudicada
+D001,jornal publica anúncio de remédio ao lado da programação cultural salubridade pública registro 1,relevante,relevante,relevante
+D002,biblioteca recebe coleção de romances e periódicos registro 2,não relevante,não relevante,não relevante
+D003,médicos orientam famílias sobre higiene e prevenção salubridade pública registro 3,relevante,relevante,relevante
+D004,associação promove concerto e exposição de pintura registro 4,não relevante,relevante,não relevante
+D005,hospital debate prevenção e cuidado coletivo salubridade pública registro 5,relevante,relevante,relevante
+D006,escola organiza festa literária e concurso de poesia registro 6,relevante,não relevante,não relevante
+D007,boletim registra casos de febre e medidas sanitárias salubridade pública registro 7,relevante,relevante,relevante
+D008,companhia anuncia espetáculo de teatro no centro registro 8,não relevante,não relevante,não relevante
+D009,conselho discute acesso à saúde e novos postos salubridade pública registro 9,relevante,relevante,relevante
+D010,companhia anuncia espetáculo de teatro no centro registro 10,não relevante,não relevante,não relevante
+D011,conselho discute acesso à saúde e novos postos salubridade pública registro 11,relevante,relevante,relevante
+D012,jornal publica anúncio de remédio ao lado da programação cultural registro 12,não relevante,não relevante,não relevante
+D013,boletim registra casos de febre e medidas sanitárias salubridade pública registro 13,relevante,relevante,relevante
+D014,associação promove concerto e exposição de pintura registro 14,não relevante,não relevante,não relevante
+D015,médicos orientam famílias sobre higiene e prevenção salubridade pública registro 15,relevante,relevante,relevante
+D016,associação promove concerto e exposição de pintura registro 16,não relevante,não relevante,não relevante
+D017,médicos orientam famílias sobre higiene e prevenção salubridade pública registro 17,relevante,relevante,relevante
+D018,associação promove concerto e exposição de pintura registro 18,não relevante,não relevante,não relevante
+D019,campanha de vacinação amplia atendimento nos bairros salubridade pública registro 19,não relevante,não relevante,relevante
+D020,escola organiza festa literária e concurso de poesia registro 20,não relevante,não relevante,não relevante
+D021,conselho discute acesso à saúde e novos postos salubridade pública registro 21,relevante,relevante,relevante
+D022,companhia anuncia espetáculo de teatro no centro registro 22,não relevante,não relevante,não relevante
+D023,escola recebe palestra sobre higiene durante festa comunitária salubridade pública registro 23,relevante,não relevante,relevante
+D024,escola organiza festa literária e concurso de poesia registro 24,não relevante,não relevante,não relevante
+D025,conselho discute acesso à saúde e novos postos salubridade pública registro 25,relevante,relevante,relevante
+D026,biblioteca recebe coleção de romances e periódicos registro 26,não relevante,não relevante,não relevante
+D027,boletim registra casos de febre e medidas sanitárias salubridade pública registro 27,relevante,relevante,relevante
+D028,companhia anuncia espetáculo de teatro no centro registro 28,relevante,não relevante,não relevante
+D029,boletim registra casos de febre e medidas sanitárias salubridade pública registro 29,relevante,relevante,relevante
+D030,biblioteca recebe coleção de romances e periódicos registro 30,não relevante,não relevante,não relevante
+D031,médicos orientam famílias sobre higiene e prevenção salubridade pública registro 31,relevante,não relevante,relevante
+D032,jornal comenta eleição e reunião do conselho municipal registro 32,não relevante,não relevante,não relevante

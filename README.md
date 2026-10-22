@@ -791,6 +791,17 @@ somente se necessário e posiciona a execução na unidade correta.
 | 04 — Regressão logística | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_07/04_regressao_logistica.ipynb) |
 | 05 — Oficina do modelo associativo | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_07/05_oficina_modelo_associativo.ipynb) |
 
+### Unidade 8
+
+| Notebook | Google Colab |
+|---|---|
+| 00 — Guia da unidade | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_08/00_guia_da_unidade.ipynb) |
+| 01 — Categorias, anotação e concordância | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_08/01_categorias_anotacao_e_concordancia.ipynb) |
+| 02 — Treinamento, teste e linha de base | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_08/02_treinamento_teste_e_linha_de_base.ipynb) |
+| 03 — Modelos, métricas e erros | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_08/03_modelos_metricas_e_erros.ipynb) |
+| 04 — Classificação textual | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_08/04_classificacao_textual_tfidf_e_embeddings.ipynb) |
+| 05 — Oficina de classificação | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_08/05_oficina_classificacao.ipynb) |
+
 Os notebooks discursivos não possuem célula de clonagem. Nos demais, a célula
 operacional é separada dos experimentos e não faz parte da avaliação. O
 diretório `/content` é temporário: respostas e alterações desaparecem ao fim da

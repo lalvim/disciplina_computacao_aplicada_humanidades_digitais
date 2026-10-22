@@ -1,0 +1,161 @@
+id_documento,periodo,origem,texto,classe_alvo
+D001,1890–1899,Interior,jornal publica anúncio de remédio ao lado da programação cultural salubridade pública registro 1,relevante
+D002,1890–1899,Capital,biblioteca recebe coleção de romances e periódicos registro 2,não relevante
+D003,1890–1899,Capital,médicos orientam famílias sobre higiene e prevenção salubridade pública registro 3,relevante
+D004,1890–1899,Interior,associação promove concerto e exposição de pintura registro 4,não relevante
+D005,1890–1899,Capital,hospital debate prevenção e cuidado coletivo salubridade pública registro 5,relevante
+D006,1890–1899,Capital,escola organiza festa literária e concurso de poesia registro 6,não relevante
+D007,1890–1899,Interior,boletim registra casos de febre e medidas sanitárias salubridade pública registro 7,relevante
+D008,1890–1899,Capital,companhia anuncia espetáculo de teatro no centro registro 8,não relevante
+D009,1890–1899,Capital,conselho discute acesso à saúde e novos postos salubridade pública registro 9,relevante
+D010,1890–1899,Interior,companhia anuncia espetáculo de teatro no centro registro 10,não relevante
+D011,1890–1899,Capital,conselho discute acesso à saúde e novos postos salubridade pública registro 11,relevante
+D012,1890–1899,Capital,jornal publica anúncio de remédio ao lado da programação cultural registro 12,não relevante
+D013,1890–1899,Interior,boletim registra casos de febre e medidas sanitárias salubridade pública registro 13,relevante
+D014,1890–1899,Capital,associação promove concerto e exposição de pintura registro 14,não relevante
+D015,1890–1899,Capital,médicos orientam famílias sobre higiene e prevenção salubridade pública registro 15,relevante
+D016,1890–1899,Interior,associação promove concerto e exposição de pintura registro 16,não relevante
+D017,1890–1899,Capital,médicos orientam famílias sobre higiene e prevenção salubridade pública registro 17,relevante
+D018,1890–1899,Capital,associação promove concerto e exposição de pintura registro 18,não relevante
+D019,1890–1899,Interior,campanha de vacinação amplia atendimento nos bairros salubridade pública registro 19,relevante
+D020,1890–1899,Capital,escola organiza festa literária e concurso de poesia registro 20,não relevante
+D021,1890–1899,Capital,conselho discute acesso à saúde e novos postos salubridade pública registro 21,relevante
+D022,1890–1899,Interior,companhia anuncia espetáculo de teatro no centro registro 22,não relevante
+D023,1890–1899,Capital,escola recebe palestra sobre higiene durante festa comunitária salubridade pública registro 23,relevante
+D024,1890–1899,Capital,escola organiza festa literária e concurso de poesia registro 24,não relevante
+D025,1890–1899,Interior,conselho discute acesso à saúde e novos postos salubridade pública registro 25,relevante
+D026,1890–1899,Capital,biblioteca recebe coleção de romances e periódicos registro 26,não relevante
+D027,1890–1899,Capital,boletim registra casos de febre e medidas sanitárias salubridade pública registro 27,relevante
+D028,1890–1899,Interior,companhia anuncia espetáculo de teatro no centro registro 28,não relevante
+D029,1890–1899,Capital,boletim registra casos de febre e medidas sanitárias salubridade pública registro 29,relevante
+D030,1890–1899,Capital,biblioteca recebe coleção de romances e periódicos registro 30,não relevante
+D031,1890–1899,Interior,médicos orientam famílias sobre higiene e prevenção salubridade pública registro 31,relevante
+D032,1890–1899,Capital,jornal comenta eleição e reunião do conselho municipal registro 32,não relevante
+D033,1890–1899,Capital,boletim registra casos de febre e medidas sanitárias salubridade pública registro 33,relevante
+D034,1890–1899,Interior,jornal publica anúncio de remédio ao lado da programação cultural registro 34,não relevante
+D035,1890–1899,Capital,campanha de vacinação amplia atendimento nos bairros salubridade pública registro 35,relevante
+D036,1890–1899,Capital,escola organiza festa literária e concurso de poesia registro 36,não relevante
+D037,1890–1899,Interior,campanha de vacinação amplia atendimento nos bairros salubridade pública registro 37,relevante
+D038,1890–1899,Capital,associação promove concerto e exposição de pintura registro 38,não relevante
+D039,1890–1899,Capital,boletim registra casos de febre e medidas sanitárias salubridade pública registro 39,relevante
+D040,1890–1899,Interior,biblioteca recebe coleção de romances e periódicos registro 40,não relevante
+D041,1890–1899,Capital,médicos orientam famílias sobre higiene e prevenção salubridade pública registro 41,relevante
+D042,1890–1899,Capital,escola organiza festa literária e concurso de poesia registro 42,não relevante
+D043,1890–1899,Interior,médicos orientam famílias sobre higiene e prevenção salubridade pública registro 43,relevante
+D044,1890–1899,Capital,escola organiza festa literária e concurso de poesia registro 44,não relevante
+D045,1890–1899,Capital,jornal publica anúncio de remédio ao lado da programação cultural salubridade pública registro 45,relevante
+D046,1890–1899,Interior,escola organiza festa literária e concurso de poesia registro 46,não relevante
+D047,1890–1899,Capital,boletim registra casos de febre e medidas sanitárias salubridade pública registro 47,relevante
+D048,1890–1899,Capital,associação promove concerto e exposição de pintura registro 48,não relevante
+D049,1890–1899,Interior,boletim registra casos de febre e medidas sanitárias salubridade pública registro 49,relevante
+D050,1890–1899,Capital,companhia anuncia espetáculo de teatro no centro registro 50,não relevante
+D051,1890–1899,Capital,boletim registra casos de febre e medidas sanitárias salubridade pública registro 51,relevante
+D052,1890–1899,Interior,biblioteca recebe coleção de romances e periódicos registro 52,não relevante
+D053,1890–1899,Capital,boletim registra casos de febre e medidas sanitárias salubridade pública registro 53,relevante
+D054,1890–1899,Capital,biblioteca recebe coleção de romances e periódicos registro 54,não relevante
+D055,1890–1899,Interior,hospital debate prevenção e cuidado coletivo salubridade pública registro 55,relevante
+D056,1890–1899,Capital,teatro beneficente arrecada recursos para o hospital registro 56,não relevante
+D057,1890–1899,Capital,boletim registra casos de febre e medidas sanitárias salubridade pública registro 57,relevante
+D058,1890–1899,Interior,escola organiza festa literária e concurso de poesia registro 58,não relevante
+D059,1890–1899,Capital,médicos orientam famílias sobre higiene e prevenção salubridade pública registro 59,relevante
+D060,1890–1899,Capital,biblioteca recebe coleção de romances e periódicos registro 60,não relevante
+D061,1890–1899,Interior,médicos orientam famílias sobre higiene e prevenção salubridade pública registro 61,relevante
+D062,1890–1899,Capital,companhia anuncia espetáculo de teatro no centro registro 62,não relevante
+D063,1890–1899,Capital,médicos orientam famílias sobre higiene e prevenção salubridade pública registro 63,relevante
+D064,1890–1899,Interior,biblioteca recebe coleção de romances e periódicos registro 64,não relevante
+D065,1890–1899,Capital,campanha de vacinação amplia atendimento nos bairros salubridade pública registro 65,relevante
+D066,1890–1899,Capital,biblioteca recebe coleção de romances e periódicos registro 66,não relevante
+D067,1890–1899,Interior,conselho debate orçamento da biblioteca e do posto de saúde salubridade pública registro 67,relevante
+D068,1890–1899,Capital,associação promove concerto e exposição de pintura registro 68,não relevante
+D069,1890–1899,Capital,boletim registra casos de febre e medidas sanitárias salubridade pública registro 69,relevante
+D070,1890–1899,Interior,associação promove concerto e exposição de pintura registro 70,não relevante
+D071,1890–1899,Capital,campanha de vacinação amplia atendimento nos bairros salubridade pública registro 71,relevante
+D072,1890–1899,Capital,jornal comenta eleição e reunião do conselho municipal registro 72,não relevante
+D073,1890–1899,Interior,conselho discute acesso à saúde e novos postos salubridade pública registro 73,relevante
+D074,1890–1899,Capital,jornal comenta eleição e reunião do conselho municipal registro 74,não relevante
+D075,1890–1899,Capital,conselho discute acesso à saúde e novos postos salubridade pública registro 75,relevante
+D076,1890–1899,Interior,escola organiza festa literária e concurso de poesia registro 76,não relevante
+D077,1890–1899,Capital,conselho discute acesso à saúde e novos postos salubridade pública registro 77,relevante
+D078,1890–1899,Capital,conselho debate orçamento da biblioteca e do posto de saúde registro 78,não relevante
+D079,1890–1899,Interior,boletim registra casos de febre e medidas sanitárias salubridade pública registro 79,relevante
+D080,1890–1899,Capital,biblioteca recebe coleção de romances e periódicos registro 80,não relevante
+D081,1900–1909,Capital,hospital debate prevenção e cuidado coletivo serviço sanitário registro 81,relevante
+D082,1900–1909,Interior,jornal comenta eleição e reunião do conselho municipal registro 82,não relevante
+D083,1900–1909,Capital,boletim registra casos de febre e medidas sanitárias serviço sanitário registro 83,relevante
+D084,1900–1909,Capital,jornal comenta eleição e reunião do conselho municipal registro 84,não relevante
+D085,1900–1909,Interior,médicos orientam famílias sobre higiene e prevenção serviço sanitário registro 85,relevante
+D086,1900–1909,Capital,escola organiza festa literária e concurso de poesia registro 86,não relevante
+D087,1900–1909,Capital,conselho discute acesso à saúde e novos postos serviço sanitário registro 87,relevante
+D088,1900–1909,Interior,companhia anuncia espetáculo de teatro no centro registro 88,não relevante
+D089,1900–1909,Capital,teatro beneficente arrecada recursos para o hospital serviço sanitário registro 89,relevante
+D090,1900–1909,Capital,escola organiza festa literária e concurso de poesia registro 90,não relevante
+D091,1900–1909,Interior,conselho discute acesso à saúde e novos postos serviço sanitário registro 91,relevante
+D092,1900–1909,Capital,escola organiza festa literária e concurso de poesia registro 92,não relevante
+D093,1900–1909,Capital,hospital debate prevenção e cuidado coletivo serviço sanitário registro 93,relevante
+D094,1900–1909,Interior,associação promove concerto e exposição de pintura registro 94,não relevante
+D095,1900–1909,Capital,campanha de vacinação amplia atendimento nos bairros serviço sanitário registro 95,relevante
+D096,1900–1909,Capital,biblioteca recebe coleção de romances e periódicos registro 96,não relevante
+D097,1900–1909,Interior,médicos orientam famílias sobre higiene e prevenção serviço sanitário registro 97,relevante
+D098,1900–1909,Capital,biblioteca recebe coleção de romances e periódicos registro 98,não relevante
+D099,1900–1909,Capital,boletim registra casos de febre e medidas sanitárias serviço sanitário registro 99,relevante
+D100,1900–1909,Interior,conselho debate orçamento da biblioteca e do posto de saúde registro 100,não relevante
+D101,1900–1909,Capital,boletim registra casos de febre e medidas sanitárias serviço sanitário registro 101,relevante
+D102,1900–1909,Capital,jornal comenta eleição e reunião do conselho municipal registro 102,não relevante
+D103,1900–1909,Interior,campanha de vacinação amplia atendimento nos bairros serviço sanitário registro 103,relevante
+D104,1900–1909,Capital,escola organiza festa literária e concurso de poesia registro 104,não relevante
+D105,1900–1909,Capital,hospital debate prevenção e cuidado coletivo serviço sanitário registro 105,relevante
+D106,1900–1909,Interior,associação promove concerto e exposição de pintura registro 106,não relevante
+D107,1900–1909,Capital,hospital debate prevenção e cuidado coletivo serviço sanitário registro 107,relevante
+D108,1900–1909,Capital,associação promove concerto e exposição de pintura registro 108,não relevante
+D109,1900–1909,Interior,conselho discute acesso à saúde e novos postos serviço sanitário registro 109,relevante
+D110,1900–1909,Capital,companhia anuncia espetáculo de teatro no centro registro 110,não relevante
+D111,1900–1909,Capital,teatro beneficente arrecada recursos para o hospital serviço sanitário registro 111,relevante
+D112,1900–1909,Interior,jornal comenta eleição e reunião do conselho municipal registro 112,não relevante
+D113,1900–1909,Capital,conselho discute acesso à saúde e novos postos serviço sanitário registro 113,relevante
+D114,1900–1909,Capital,companhia anuncia espetáculo de teatro no centro registro 114,não relevante
+D115,1900–1909,Interior,campanha de vacinação amplia atendimento nos bairros serviço sanitário registro 115,relevante
+D116,1900–1909,Capital,escola organiza festa literária e concurso de poesia registro 116,não relevante
+D117,1900–1909,Capital,campanha de vacinação amplia atendimento nos bairros serviço sanitário registro 117,relevante
+D118,1900–1909,Interior,associação promove concerto e exposição de pintura registro 118,não relevante
+D119,1900–1909,Capital,conselho discute acesso à saúde e novos postos serviço sanitário registro 119,relevante
+D120,1900–1909,Capital,associação promove concerto e exposição de pintura registro 120,não relevante
+D121,1900–1909,Interior,médicos orientam famílias sobre higiene e prevenção serviço sanitário registro 121,relevante
+D122,1900–1909,Capital,jornal publica anúncio de remédio ao lado da programação cultural registro 122,não relevante
+D123,1900–1909,Capital,médicos orientam famílias sobre higiene e prevenção serviço sanitário registro 123,relevante
+D124,1900–1909,Interior,biblioteca recebe coleção de romances e periódicos registro 124,não relevante
+D125,1900–1909,Capital,médicos orientam famílias sobre higiene e prevenção serviço sanitário registro 125,relevante
+D126,1900–1909,Capital,companhia anuncia espetáculo de teatro no centro registro 126,não relevante
+D127,1900–1909,Interior,conselho discute acesso à saúde e novos postos serviço sanitário registro 127,relevante
+D128,1900–1909,Capital,associação promove concerto e exposição de pintura registro 128,não relevante
+D129,1900–1909,Capital,campanha de vacinação amplia atendimento nos bairros serviço sanitário registro 129,relevante
+D130,1900–1909,Interior,associação promove concerto e exposição de pintura registro 130,não relevante
+D131,1900–1909,Capital,boletim registra casos de febre e medidas sanitárias serviço sanitário registro 131,relevante
+D132,1900–1909,Capital,companhia anuncia espetáculo de teatro no centro registro 132,não relevante
+D133,1900–1909,Interior,jornal publica anúncio de remédio ao lado da programação cultural serviço sanitário registro 133,relevante
+D134,1900–1909,Capital,biblioteca recebe coleção de romances e periódicos registro 134,não relevante
+D135,1900–1909,Capital,hospital debate prevenção e cuidado coletivo serviço sanitário registro 135,relevante
+D136,1900–1909,Interior,associação promove concerto e exposição de pintura registro 136,não relevante
+D137,1900–1909,Capital,médicos orientam famílias sobre higiene e prevenção serviço sanitário registro 137,relevante
+D138,1900–1909,Capital,associação promove concerto e exposição de pintura registro 138,não relevante
+D139,1900–1909,Interior,hospital debate prevenção e cuidado coletivo serviço sanitário registro 139,relevante
+D140,1900–1909,Capital,escola organiza festa literária e concurso de poesia registro 140,não relevante
+D141,1900–1909,Capital,campanha de vacinação amplia atendimento nos bairros serviço sanitário registro 141,relevante
+D142,1900–1909,Interior,biblioteca recebe coleção de romances e periódicos registro 142,não relevante
+D143,1900–1909,Capital,campanha de vacinação amplia atendimento nos bairros serviço sanitário registro 143,relevante
+D144,1900–1909,Capital,jornal publica anúncio de remédio ao lado da programação cultural registro 144,não relevante
+D145,1900–1909,Interior,campanha de vacinação amplia atendimento nos bairros serviço sanitário registro 145,relevante
+D146,1900–1909,Capital,biblioteca recebe coleção de romances e periódicos registro 146,não relevante
+D147,1900–1909,Capital,campanha de vacinação amplia atendimento nos bairros serviço sanitário registro 147,relevante
+D148,1900–1909,Interior,jornal comenta eleição e reunião do conselho municipal registro 148,não relevante
+D149,1900–1909,Capital,boletim registra casos de febre e medidas sanitárias serviço sanitário registro 149,relevante
+D150,1900–1909,Capital,companhia anuncia espetáculo de teatro no centro registro 150,não relevante
+D151,1900–1909,Interior,campanha de vacinação amplia atendimento nos bairros serviço sanitário registro 151,relevante
+D152,1900–1909,Capital,escola organiza festa literária e concurso de poesia registro 152,não relevante
+D153,1900–1909,Capital,hospital debate prevenção e cuidado coletivo serviço sanitário registro 153,relevante
+D154,1900–1909,Interior,escola organiza festa literária e concurso de poesia registro 154,não relevante
+D155,1900–1909,Capital,conselho debate orçamento da biblioteca e do posto de saúde serviço sanitário registro 155,relevante
+D156,1900–1909,Capital,escola organiza festa literária e concurso de poesia registro 156,não relevante
+D157,1900–1909,Interior,médicos orientam famílias sobre higiene e prevenção serviço sanitário registro 157,relevante
+D158,1900–1909,Capital,companhia anuncia espetáculo de teatro no centro registro 158,não relevante
+D159,1900–1909,Capital,boletim registra casos de febre e medidas sanitárias serviço sanitário registro 159,relevante
+D160,1900–1909,Interior,escola organiza festa literária e concurso de poesia registro 160,não relevante

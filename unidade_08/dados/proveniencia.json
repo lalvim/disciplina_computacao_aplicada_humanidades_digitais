@@ -1,0 +1,7 @@
+{
+  "natureza": "dados inteiramente fictícios",
+  "semente": 20261023,
+  "finalidade": "classificação textual supervisionada",
+  "limite": "os textos não são fontes históricas e as métricas não descrevem sistemas reais",
+  "alerta": "padrões de vocabulário por período foram inseridos deliberadamente para auditoria"
+}

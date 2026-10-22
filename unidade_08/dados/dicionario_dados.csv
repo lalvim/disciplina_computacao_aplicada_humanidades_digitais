@@ -1,0 +1,6 @@
+variavel,tipo,descricao
+id_documento,nominal,identificador fictício
+periodo,ordinal,grupo temporal
+origem,nominal,grupo de origem
+texto,texto,excerto sintético
+classe_alvo,binária,relevância temática adjudicada

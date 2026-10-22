@@ -1,0 +1,25 @@
+id_documento,ano,local,entidades,nota
+D001,1895,Capital,Ana F.;Liga Aurora;Escola Livre,documento fictício para demonstração de coocorrência
+D002,1896,Interior,Bento R.;Liga Aurora;Sindicato Norte,documento fictício para demonstração de coocorrência
+D003,1897,Capital,Ana F.;Jornal Horizonte;Escola Livre,documento fictício para demonstração de coocorrência
+D004,1898,Interior,Caio M.;Sindicato Norte;Jornal Horizonte,documento fictício para demonstração de coocorrência
+D005,1899,Capital,Bento R.;Biblioteca Popular;Escola Livre,documento fictício para demonstração de coocorrência
+D006,1900,Interior,Dora S.;Biblioteca Popular;Círculo Sul,documento fictício para demonstração de coocorrência
+D007,1901,Capital,Eva L.;Círculo Sul;Teatro União,documento fictício para demonstração de coocorrência
+D008,1902,Interior,Dora S.;Jornal Horizonte;Teatro União,documento fictício para demonstração de coocorrência
+D009,1903,Capital,Fábio C.;Cooperativa Leste;Teatro União,documento fictício para demonstração de coocorrência
+D010,1904,Interior,Eva L.;Cooperativa Leste;Círculo Sul,documento fictício para demonstração de coocorrência
+D011,1905,Capital,Ana F.;Liga Aurora;Biblioteca Popular,documento fictício para demonstração de coocorrência
+D012,1894,Interior,Caio M.;Sindicato Norte;Escola Livre,documento fictício para demonstração de coocorrência
+D013,1895,Capital,Bento R.;Jornal Horizonte;Liga Aurora,documento fictício para demonstração de coocorrência
+D014,1896,Interior,Dora S.;Círculo Sul;Biblioteca Popular,documento fictício para demonstração de coocorrência
+D015,1897,Capital,Eva L.;Teatro União;Jornal Horizonte,documento fictício para demonstração de coocorrência
+D016,1898,Interior,Fábio C.;Cooperativa Leste;Círculo Sul,documento fictício para demonstração de coocorrência
+D017,1899,Capital,Ana F.;Escola Livre;Sindicato Norte,documento fictício para demonstração de coocorrência
+D018,1900,Interior,Caio M.;Jornal Horizonte;Liga Aurora,documento fictício para demonstração de coocorrência
+D019,1901,Capital,Dora S.;Biblioteca Popular;Jornal Horizonte,documento fictício para demonstração de coocorrência
+D020,1902,Interior,Fábio C.;Teatro União;Cooperativa Leste,documento fictício para demonstração de coocorrência
+D021,1903,Capital,Bento R.;Liga Aurora;Escola Livre,documento fictício para demonstração de coocorrência
+D022,1904,Interior,Eva L.;Círculo Sul;Jornal Horizonte,documento fictício para demonstração de coocorrência
+D023,1905,Capital,Caio M.;Sindicato Norte;Liga Aurora,documento fictício para demonstração de coocorrência
+D024,1894,Interior,Fábio C.;Cooperativa Leste;Biblioteca Popular,documento fictício para demonstração de coocorrência

@@ -1,0 +1,7 @@
+{
+  "natureza": "dados inteiramente fictícios",
+  "registros_associacao.csv": "80 registros simulados para associação categórica e numérica",
+  "documentos_entidades.csv": "24 documentos inventados com entidades separadas por ponto e vírgula",
+  "correspondencia_direta.csv": "12 relações dirigidas inventadas para distinguir vínculo observado de coocorrência",
+  "limite": "não sustenta afirmações históricas, sociais ou institucionais reais"
+}

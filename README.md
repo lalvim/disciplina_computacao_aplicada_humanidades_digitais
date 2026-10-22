@@ -685,6 +685,7 @@ A disciplina pode ser realizada prioritariamente em Python, utilizando notebooks
 * pandas;
 * NumPy;
 * matplotlib;
+* NetworkX;
 * scikit-learn.
 
 ## Texto

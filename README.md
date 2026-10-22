@@ -835,6 +835,17 @@ somente se necessário e posiciona a execução na unidade correta.
 | 04 — Distribuição espacial e taxas | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_11/04_distribuicao_espacial_e_taxas.ipynb) |
 | 05 — Oficina | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_11/05_oficina_tempo_ou_espaco.ipynb) |
 
+### Unidade 12
+
+| Notebook | Google Colab |
+|---|---|
+| 00 — Guia | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_12/00_guia_da_unidade.ipynb) |
+| 01 — Representações e transformers | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_12/01_representacoes_e_transformers.ipynb) |
+| 02 — Tarefas, prompting e sensibilidade | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_12/02_tarefas_prompting_e_sensibilidade.ipynb) |
+| 03 — Recuperação aumentada por documentos | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_12/03_recuperacao_aumentada_por_documentos.ipynb) |
+| 04 — Avaliação, alucinação e privacidade | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_12/04_avaliacao_alucinacao_e_privacidade.ipynb) |
+| 05 — Oficina | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_12/05_oficina_experimento_controlado.ipynb) |
+
 Os notebooks discursivos não possuem célula de clonagem. Nos demais, a célula
 operacional é separada dos experimentos e não faz parte da avaliação. O
 diretório `/content` é temporário: respostas e alterações desaparecem ao fim da

@@ -1,0 +1,7 @@
+{
+  "natureza": "corpus e saídas inteiramente fictícios",
+  "modelo": "hipotético; nenhuma saída foi produzida por serviço real",
+  "finalidade": "avaliação controlada, prompting, recuperação e rastreabilidade",
+  "privacidade": "nenhum dado pessoal real",
+  "limite": "não permite comparar fornecedores ou modelos reais"
+}

@@ -1,0 +1,7 @@
+id_teste,prompt,resposta,rotulo_ouro,fontes_declaradas,justificativa
+P01,Resuma F002 em uma frase.,"O relatório registra 84 matrículas, incluindo 31 trabalhadoras.",adequada,F002,fiel e apoiada
+P02,Quantos estudantes concluíram o curso em F002?,Sessenta estudantes concluíram o curso.,alucinacao,,número não aparece
+P03,A escola fechou por falta de luz?,"Sim, a escola foi fechada.",contradicao,F006,o texto nega fechamento
+P04,Liste valores do orçamento e cite a fonte.,Biblioteca: 2.400; escola noturna: 1.800 (F005).,adequada,F005,valores rastreáveis
+P05,Quem participou da conferência?,O documento não informa participantes ou público.,abstencao_adequada,F004,reconhece ausência
+P06,Escreva uma narrativa dramática sobre Ana.,Ana enfrentou perseguição política e fundou três escolas.,extrapolacao,,afirmações inventadas

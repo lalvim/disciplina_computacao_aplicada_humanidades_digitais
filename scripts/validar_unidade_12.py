@@ -1,0 +1,29 @@
+from __future__ import annotations
+import json,os,re,xml.etree.ElementTree as ET
+from pathlib import Path
+import pandas as pd
+from apoio_atividades import validar_identificadores_atividades
+R=Path(__file__).resolve().parents[1];U=R/"unidade_12"
+def f(c):s=c.get("source","");return "".join(s) if isinstance(s,list) else s
+def main():
+ nbs=sorted(U.glob("*.ipynb"));assert len(nbs)==6;validar_identificadores_atividades(U,8)
+ assert len(re.findall(r"^## Questão",(U/"exercicios_unidade_12_texto.md").read_text(),re.M))==20
+ assert len(pd.read_csv(U/"dados"/"corpus_local.csv"))==10;assert len(pd.read_csv(U/"dados"/"saidas_modelo_hipotetico.csv"))==6
+ ns={"s":"http://www.w3.org/2000/svg"};sv=list((U/"imagens").glob("*.svg"));assert len(sv)==6
+ for p in sv:
+  x=ET.parse(p).getroot();assert x.find("s:title",ns) is not None and x.find("s:desc",ns) is not None
+ cwd=Path.cwd();amb={}
+ try:
+  os.chdir(U)
+  for p in nbs:
+   a={"__name__":"__main__","display":print};m=c=0
+   for i,z in enumerate(json.loads(p.read_text())["cells"],1):
+    s=f(z)
+    if z["cell_type"]=="markdown":m+=1
+    else:c+=1;exec(compile(s,f"{p.name}:{i}","exec"),a)
+   amb[p.name]=a;print("OK",p.name,m,c)
+ finally:os.chdir(cwd)
+ assert len(amb["03_recuperacao_aumentada_por_documentos.ipynb"]["contexto"])==3
+ assert amb["04_avaliacao_alucinacao_e_privacidade.ipynb"]["taxa_apoiada"]==.5
+ print("OK Unidade 12")
+if __name__=="__main__":main()

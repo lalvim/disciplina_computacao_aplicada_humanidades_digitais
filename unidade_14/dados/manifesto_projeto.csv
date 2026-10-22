@@ -1,0 +1,8 @@
+caminho,papel,acesso,justificativa
+README.md,documentação,aberto,"descreve pergunta, execução e limites"
+relatorio.ipynb,análise,aberto,"narrativa, código e resultados"
+dados/processados.csv,dados derivados,restrito,contém quase-identificadores
+dados/dicionario.csv,documentação,aberto,define campos e ausências
+dados/proveniencia.json,documentação,aberto,origem e transformações
+requirements.txt,ambiente,aberto,dependências versionadas
+LICENSE,licença,aberto,condições do código

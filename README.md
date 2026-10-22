@@ -857,6 +857,17 @@ somente se necessário e posiciona a execução na unidade correta.
 | 04 — Vieses e mudança de contexto | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_13/04_vieses_e_mudanca_de_contexto.ipynb) |
 | 05 — Oficina | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_13/05_oficina_validade_e_limitacoes.ipynb) |
 
+### Unidade 14
+
+| Notebook | Google Colab |
+|---|---|
+| 00 — Guia | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_14/00_guia_da_unidade.ipynb) |
+| 01 — Documentação e versionamento | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_14/01_documentacao_e_versionamento.ipynb) |
+| 02 — Execução e verificações | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_14/02_execucao_e_verificacoes.ipynb) |
+| 03 — Visualização, incerteza e linguagem | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_14/03_visualizacao_incerteza_e_linguagem.ipynb) |
+| 04 — Proteção, direitos e compartilhamento | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_14/04_protecao_direitos_e_compartilhamento.ipynb) |
+| 05 — Oficina final | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_14/05_oficina_projeto_final.ipynb) |
+
 Os notebooks discursivos não possuem célula de clonagem. Nos demais, a célula
 operacional é separada dos experimentos e não faz parte da avaliação. O
 diretório `/content` é temporário: respostas e alterações desaparecem ao fim da

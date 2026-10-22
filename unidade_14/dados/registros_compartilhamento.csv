@@ -1,0 +1,9 @@
+id_pesquisa,faixa_etaria,local,tema,documentos
+R001,40–49,Capital,tema A,3
+R002,30–39,Interior,tema B,1
+R003,40–49,Capital,tema A,2
+R004,60–69,Interior,tema raro,1
+R005,30–39,Capital,tema B,4
+R006,50–59,Interior,tema A,2
+R007,60–69,Capital,tema C,1
+R008,40–49,Interior,tema B,3

@@ -1,0 +1,13 @@
+id_documento,mencao,id_entidade,tipo
+D001,Ana Ferreira,P001,PESSOA
+D001,Liga Aurora,O001,ORGANIZACAO
+D001,Porto Claro,L001,LUGAR
+D002,Liga Aurora,O001,ORGANIZACAO
+D002,Escola Livre,O002,ORGANIZACAO
+D002,Porto Claro,L001,LUGAR
+D002,Bento Reis,P002,PESSOA
+D007,Ana F.,P001,PESSOA
+D007,Liga Aurora,O001,ORGANIZACAO
+D007,Teatro União,O004,ORGANIZACAO
+D008,Santa Rita,,OUTRO
+D008,Porto Claro,L001,LUGAR

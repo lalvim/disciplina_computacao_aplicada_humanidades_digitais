@@ -813,6 +813,17 @@ somente se necessário e posiciona a execução na unidade correta.
 | 04 — Modelagem de tópicos e tempo | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_09/04_modelagem_de_topicos_e_tempo.ipynb) |
 | 05 — Oficina de agrupamentos e temas | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_09/05_oficina_agrupamentos_e_temas.ipynb) |
 
+### Unidade 10
+
+| Notebook | Google Colab |
+|---|---|
+| 00 — Guia | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_10/00_guia_da_unidade.ipynb) |
+| 01 — Reconhecimento de entidades | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_10/01_reconhecimento_de_entidades.ipynb) |
+| 02 — Desambiguação e vinculação | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_10/02_desambiguacao_e_vinculacao.ipynb) |
+| 03 — Relações, eventos e tabelas | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_10/03_relacoes_eventos_e_tabelas.ipynb) |
+| 04 — Avaliação, validação e rede | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_10/04_avaliacao_validacao_e_rede.ipynb) |
+| 05 — Oficina | [Abrir no Colab](https://colab.research.google.com/github/lalvim/disciplina_computacao_aplicada_humanidades_digitais/blob/main/unidade_10/05_oficina_base_derivada_de_textos.ipynb) |
+
 Os notebooks discursivos não possuem célula de clonagem. Nos demais, a célula
 operacional é separada dos experimentos e não faz parte da avaliação. O
 diretório `/content` é temporário: respostas e alterações desaparecem ao fim da

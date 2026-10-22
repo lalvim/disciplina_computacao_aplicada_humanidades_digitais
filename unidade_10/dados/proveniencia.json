@@ -1,0 +1,6 @@
+{
+  "natureza": "dados inteiramente fictícios",
+  "finalidade": "NER, vinculação, relações e eventos",
+  "ambiguidade": "Santa Rita é cidade em D004/D005 e nome de embarcação em D008",
+  "limite": "não sustenta afirmações históricas reais"
+}

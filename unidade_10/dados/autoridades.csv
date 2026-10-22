@@ -1,0 +1,13 @@
+id_entidade,nome_canonico,tipo,variantes
+P001,Ana Ferreira,PESSOA,Ana F.;Dra. Ana Ferreira
+P002,Bento Reis,PESSOA,Bento R.
+P003,Caio Martins,PESSOA,Caio M.
+P004,Dora Silva,PESSOA,Dora S.
+P005,Eva Lima,PESSOA,Eva L.
+O001,Liga Aurora,ORGANIZACAO,Associação Aurora
+O002,Escola Livre,ORGANIZACAO,
+O003,Hospital Central,ORGANIZACAO,
+O004,Teatro União,ORGANIZACAO,
+O005,Biblioteca Popular,ORGANIZACAO,
+L001,Porto Claro,LUGAR,
+L002,Santa Rita,LUGAR,cidade de Santa Rita

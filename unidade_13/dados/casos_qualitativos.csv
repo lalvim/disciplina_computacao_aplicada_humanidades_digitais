@@ -1,0 +1,5 @@
+id_caso,descricao,erro,hipotese
+C001,trecho ambíguo com termo fora de contexto,falso positivo,operacionalização lexical
+C008,grafia histórica não reconhecida,falso negativo,mudança linguística
+C121,novo vocabulário institucional,falso negativo,mudança temporal
+C180,metadado de origem incorreto,falso positivo,qualidade da base

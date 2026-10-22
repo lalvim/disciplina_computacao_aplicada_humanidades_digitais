@@ -1,0 +1,6 @@
+analise,representacao,semente,f1
+especificação principal,TF-IDF 1–2 gramas,42,0.742
+sem bigramas,TF-IDF unigramas,42,0.721
+outra semente,TF-IDF 1–2 gramas,17,0.713
+sem casos ambíguos,TF-IDF 1–2 gramas,42,0.781
+teste temporal,treino antigo; teste recente,42,0.648

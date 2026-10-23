@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="590" viewBox="0 0 1100 590" role="img">
+<title>Auditoria das seis saídas hipotéticas</title>
+<desc>Seis cartões mostram duas saídas adequadas, uma abstinência adequada e três tipos de erro.</desc>
+<rect width="1100" height="590" fill="#fffdf7"/>
+<style>text{font-family:Aptos,Arial,sans-serif}.title{font-size:28px;font-weight:700;fill:#17324d}.label{font-size:19px;fill:#202a33}.small{font-size:16px;fill:#4b5563}.value{font-size:21px;font-weight:700;fill:#17324d}</style>
+<text x="550" y="38" text-anchor="middle" class="title">Metade das saídas simuladas tem apoio adequado</text>
+<rect x="55" y="90" width="320" height="155" rx="14" fill="#f2eee5" stroke="#176b68" stroke-width="5"/>
+<text x="83" y="129" class="value">P01</text>
+<text x="347" y="129" text-anchor="end" class="small">F002</text>
+<text x="215" y="176" text-anchor="middle" font-size="22" font-weight="700" fill="#176b68">adequada</text>
+<text x="215" y="214" text-anchor="middle" class="small">fiel e apoiada</text>
+<rect x="405" y="90" width="320" height="155" rx="14" fill="#f2eee5" stroke="#a84f2a" stroke-width="5"/>
+<text x="433" y="129" class="value">P02</text>
+<text x="697" y="129" text-anchor="end" class="small">sem fonte</text>
+<text x="565" y="176" text-anchor="middle" font-size="22" font-weight="700" fill="#a84f2a">alucinação</text>
+<text x="565" y="214" text-anchor="middle" class="small">número não aparece</text>
+<rect x="755" y="90" width="320" height="155" rx="14" fill="#f2eee5" stroke="#69445f" stroke-width="5"/>
+<text x="783" y="129" class="value">P03</text>
+<text x="1047" y="129" text-anchor="end" class="small">F006</text>
+<text x="915" y="176" text-anchor="middle" font-size="22" font-weight="700" fill="#69445f">contradição</text>
+<text x="915" y="214" text-anchor="middle" class="small">o texto nega fechamento</text>
+<rect x="55" y="280" width="320" height="155" rx="14" fill="#f2eee5" stroke="#176b68" stroke-width="5"/>
+<text x="83" y="319" class="value">P04</text>
+<text x="347" y="319" text-anchor="end" class="small">F005</text>
+<text x="215" y="366" text-anchor="middle" font-size="22" font-weight="700" fill="#176b68">adequada</text>
+<text x="215" y="404" text-anchor="middle" class="small">valores rastreáveis</text>
+<rect x="405" y="280" width="320" height="155" rx="14" fill="#f2eee5" stroke="#17324d" stroke-width="5"/>
+<text x="433" y="319" class="value">P05</text>
+<text x="697" y="319" text-anchor="end" class="small">F004</text>
+<text x="565" y="366" text-anchor="middle" font-size="22" font-weight="700" fill="#17324d">abstinência</text>
+<text x="565" y="404" text-anchor="middle" class="small">reconhece ausência</text>
+<rect x="755" y="280" width="320" height="155" rx="14" fill="#f2eee5" stroke="#bd7b2c" stroke-width="5"/>
+<text x="783" y="319" class="value">P06</text>
+<text x="1047" y="319" text-anchor="end" class="small">sem fonte</text>
+<text x="915" y="366" text-anchor="middle" font-size="22" font-weight="700" fill="#bd7b2c">extrapolação</text>
+<text x="915" y="404" text-anchor="middle" class="small">afirmações inventadas</text>
+<rect x="235" y="500" width="630" height="54" rx="10" fill="#176b68"/>
+<text x="550" y="535" text-anchor="middle" font-size="22" font-weight="700" fill="white">taxa apoiada = 3/6 = 0.50</text>
+</svg>

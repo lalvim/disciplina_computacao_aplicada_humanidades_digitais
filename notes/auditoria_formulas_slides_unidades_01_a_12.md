@@ -1,4 +1,4 @@
-# Auditoria das fórmulas nos slides — Unidades 1 a 11
+# Auditoria das fórmulas nos slides — Unidades 1 a 12
 
 ## Critério
 
@@ -12,7 +12,7 @@ Cada slide de fórmula foi verificado quanto a três apoios:
 2. exemplo numérico ou aplicação concreta;
 3. gráfico, diagrama ou representação visual no próprio slide.
 
-Após a revisão, os 68 slides de fórmula das Unidades 1 a 11 atendem aos três
+Após a revisão, os 70 slides de fórmula das Unidades 1 a 12 atendem aos três
 critérios. Imagens laterais marcadas com `bg right` são apoios didáticos e possuem
 texto alternativo; não são decoração.
 
@@ -31,7 +31,8 @@ texto alternativo; não são decoração.
 | 9 | 4 | linguagem comum, exemplo e visual presentes |
 | 10 | 3 | linguagem comum, exemplo e visual presentes |
 | 11 | 5 | linguagem comum, exemplo e visual presentes |
-| **Total** | **68** | **conforme** |
+| 12 | 2 | linguagem comum, exemplo e visual presentes |
+| **Total** | **70** | **conforme** |
 
 ## Verificação individual
 
@@ -157,6 +158,13 @@ texto alternativo; não são decoração.
 | 22 | média móvel de três anos | taxas de 1989–1991 e comparação entre janelas |
 | 32 | menções por 100 documentos | 7 menções em 80 documentos e curvas lexicais |
 | 44 | padronização direta | pesos 70%/30%, taxas 120/650 e grades territoriais |
+
+### Unidade 12
+
+| Slide | Fórmula ou medida | Apoio visual e exemplo |
+|---:|---|---|
+| 16 | combinação ponderada na atenção | pesos 0,60, 0,30 e 0,10 e diagrama dos tokens |
+| 44 | taxa de saídas apoiadas | 2 respostas adequadas, 1 abstinência e auditoria dos 6 casos |
 
 ## Uso nas próximas unidades
 

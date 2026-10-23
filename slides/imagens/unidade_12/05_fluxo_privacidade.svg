@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="590" viewBox="0 0 1100 590" role="img">
+<title>Decisão de envio e minimização</title>
+<desc>Fluxo de decisão verifica sensibilidade, necessidade de serviço externo, termos, minimização e revisão antes do uso.</desc>
+<rect width="1100" height="590" fill="#fffdf7"/>
+<style>text{font-family:Aptos,Arial,sans-serif}.title{font-size:28px;font-weight:700;fill:#17324d}.label{font-size:19px;fill:#202a33}.small{font-size:16px;fill:#4b5563}.value{font-size:21px;font-weight:700;fill:#17324d}</style>
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#17324d"/></marker></defs>
+<text x="550" y="38" text-anchor="middle" class="title">O primeiro controle ocorre antes do envio</text>
+<rect x="90" y="100" width="260" height="115" rx="15" fill="#f2eee5" stroke="#a84f2a" stroke-width="4"/>
+<text x="220" y="147" text-anchor="middle" class="label">Há dados pessoais,</text>
+<text x="220" y="176" text-anchor="middle" class="label">sigilosos ou restritos?</text>
+<rect x="440" y="100" width="260" height="115" rx="15" fill="#f2eee5" stroke="#176b68" stroke-width="4"/>
+<text x="570" y="147" text-anchor="middle" class="label">A tarefa pode</text>
+<text x="570" y="176" text-anchor="middle" class="label">ser local?</text>
+<rect x="790" y="100" width="260" height="115" rx="15" fill="#f2eee5" stroke="#69445f" stroke-width="4"/>
+<text x="920" y="147" text-anchor="middle" class="label">Termos, retenção</text>
+<text x="920" y="176" text-anchor="middle" class="label">e finalidade são aceitáveis?</text>
+<rect x="265" y="345" width="260" height="115" rx="15" fill="#f2eee5" stroke="#17324d" stroke-width="4"/>
+<text x="395" y="392" text-anchor="middle" class="label">Minimizar dados</text>
+<text x="395" y="421" text-anchor="middle" class="label">e registrar versão</text>
+<rect x="615" y="345" width="260" height="115" rx="15" fill="#f2eee5" stroke="#176b68" stroke-width="4"/>
+<text x="745" y="392" text-anchor="middle" class="label">Revisar, contestar</text>
+<text x="745" y="421" text-anchor="middle" class="label">e poder interromper</text>
+<line x1="350" y1="158" x2="430" y2="158" stroke="#17324d" stroke-width="4" marker-end="url(#a)"/>
+<line x1="700" y1="158" x2="780" y2="158" stroke="#17324d" stroke-width="4" marker-end="url(#a)"/>
+<line x1="920" y1="220" x2="745" y2="340" stroke="#17324d" stroke-width="4" marker-end="url(#a)"/>
+<line x1="525" y1="402" x2="605" y2="402" stroke="#17324d" stroke-width="4" marker-end="url(#a)"/>
+<text x="550" y="520" text-anchor="middle" class="label">Se a proteção não puder ser demonstrada, não enviar é uma decisão válida.</text>
+<text x="550" y="558" text-anchor="middle" class="small">Risco, benefício e reversibilidade devem ser avaliados para a tarefa concreta.</text>
+</svg>

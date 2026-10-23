@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="590" viewBox="0 0 1100 590" role="img">
+<title>Atenção como combinação contextual</title>
+<desc>Exemplo didático atribui pesos diferentes a três tokens e os combina para representar o contexto.</desc>
+<rect width="1100" height="590" fill="#fffdf7"/>
+<style>text{font-family:Aptos,Arial,sans-serif}.title{font-size:28px;font-weight:700;fill:#17324d}.label{font-size:19px;fill:#202a33}.small{font-size:16px;fill:#4b5563}.value{font-size:21px;font-weight:700;fill:#17324d}</style>
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#17324d"/></marker></defs>
+<text x="550" y="38" text-anchor="middle" class="title">Atenção pondera sinais conforme o contexto da sequência</text>
+<rect x="85" y="110" width="220" height="92" rx="14" fill="#f2eee5" stroke="#176b68" stroke-width="4"/>
+<text x="195" y="148" text-anchor="middle" class="value">matrículas</text>
+<text x="195" y="181" text-anchor="middle" class="label">peso 0.60</text>
+<line x1="195" y1="208" x2="550" y2="355" stroke="#176b68" stroke-width="6.8" marker-end="url(#a)"/>
+<rect x="360" y="110" width="220" height="92" rx="14" fill="#f2eee5" stroke="#a84f2a" stroke-width="4"/>
+<text x="470" y="148" text-anchor="middle" class="value">escola</text>
+<text x="470" y="181" text-anchor="middle" class="label">peso 0.30</text>
+<line x1="470" y1="208" x2="550" y2="355" stroke="#a84f2a" stroke-width="4.4" marker-end="url(#a)"/>
+<rect x="635" y="110" width="220" height="92" rx="14" fill="#f2eee5" stroke="#69445f" stroke-width="4"/>
+<text x="745" y="148" text-anchor="middle" class="value">noturna</text>
+<text x="745" y="181" text-anchor="middle" class="label">peso 0.10</text>
+<line x1="745" y1="208" x2="550" y2="355" stroke="#69445f" stroke-width="2.8" marker-end="url(#a)"/>
+<rect x="405" y="370" width="290" height="100" rx="16" fill="white" stroke="#17324d" stroke-width="4"/>
+<text x="550" y="410" text-anchor="middle" class="value">representação contextual</text>
+<text x="550" y="445" text-anchor="middle" class="small">combinação ponderada dos sinais</text>
+<text x="550" y="525" text-anchor="middle" class="label">Exemplo conceitual: os pesos reais dependem do modelo, da camada e do token</text>
+<text x="550" y="560" text-anchor="middle" class="small">0,60 + 0,30 + 0,10 = 1,00</text>
+</svg>

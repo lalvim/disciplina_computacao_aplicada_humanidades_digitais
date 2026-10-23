@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="590" viewBox="0 0 1100 590" role="img">
+<title>Recuperação para pergunta respondível e ausente</title>
+<desc>Um painel recupera F009 e F002 com pontuações positivas; no outro todos os documentos têm pontuação zero.</desc>
+<rect width="1100" height="590" fill="#fffdf7"/>
+<style>text{font-family:Aptos,Arial,sans-serif}.title{font-size:28px;font-weight:700;fill:#17324d}.label{font-size:19px;fill:#202a33}.small{font-size:16px;fill:#4b5563}.value{font-size:21px;font-weight:700;fill:#17324d}</style>
+<text x="550" y="38" text-anchor="middle" class="title">Recuperar bem e reconhecer ausência são tarefas diferentes</text>
+<rect x="70" y="85" width="455" height="420" rx="16" fill="#f2eee5" stroke="#176b68" stroke-width="4"/>
+<text x="298" y="125" text-anchor="middle" class="value">Pergunta respondível</text>
+<text x="298" y="158" text-anchor="middle" class="small">Quantas matrículas foram registradas e quantas prese</text>
+<text x="138" y="234" text-anchor="end" class="label">F009</text>
+<rect x="155" y="205" width="226.8" height="46" rx="6" fill="#176b68"/>
+<text x="396.8" y="234" class="small">0.544</text>
+<text x="138" y="322" text-anchor="end" class="label">F002</text>
+<rect x="155" y="293" width="121.0" height="46" rx="6" fill="#176b68"/>
+<text x="291.0" y="322" class="small">0.290</text>
+<text x="138" y="410" text-anchor="end" class="label">F010</text>
+<rect x="155" y="381" width="2.0" height="46" rx="6" fill="#176b68"/>
+<text x="172.0" y="410" class="small">0.000</text>
+<text x="298" y="475" text-anchor="middle" class="label">responder com F009 e F002</text>
+<rect x="590" y="85" width="455" height="420" rx="16" fill="#f2eee5" stroke="#a84f2a" stroke-width="4"/>
+<text x="818" y="125" text-anchor="middle" class="value">Pergunta ausente</text>
+<text x="818" y="158" text-anchor="middle" class="small">Quem concluiu o curso?</text>
+<text x="658" y="234" text-anchor="end" class="label">F010</text>
+<rect x="675" y="205" width="2.0" height="46" rx="6" fill="#a84f2a"/>
+<text x="692.0" y="234" class="small">0.000</text>
+<text x="658" y="322" text-anchor="end" class="label">F009</text>
+<rect x="675" y="293" width="2.0" height="46" rx="6" fill="#a84f2a"/>
+<text x="692.0" y="322" class="small">0.000</text>
+<text x="658" y="410" text-anchor="end" class="label">F008</text>
+<rect x="675" y="381" width="2.0" height="46" rx="6" fill="#a84f2a"/>
+<text x="692.0" y="410" class="small">0.000</text>
+<text x="818" y="475" text-anchor="middle" class="label">abster: nenhuma evidência lexical</text>
+<text x="550" y="557" text-anchor="middle" class="small">Pontuação zero não prova ausência no mundo; indica ausência de apoio nesta representação e neste corpus.</text>
+</svg>

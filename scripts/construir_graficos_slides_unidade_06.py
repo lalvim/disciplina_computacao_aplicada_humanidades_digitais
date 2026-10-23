@@ -137,8 +137,8 @@ def network_chart() -> None:
         strength[row.origem] += row.peso
         strength[row.destino] += row.peso
     lines = svg_open(
-        "Rede projetada de coocorrência",
-        "Rede de quatorze entidades e quarenta e duas arestas; espessura representa coocorrências.",
+        "Grafo projetado de coocorrência",
+        "Grafo de quatorze entidades e quarenta e duas arestas; espessura representa coocorrências.",
     )
     lines.append('<text x="550" y="38" text-anchor="middle" class="title">Uma projeção torna relações visíveis — e perde contexto</text>')
     for row in edges.itertuples(index=False):

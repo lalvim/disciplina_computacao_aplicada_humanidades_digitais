@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1100" height="590" viewBox="0 0 1100 590" role="img">
-<title>Rede projetada de coocorrência</title>
-<desc>Rede de quatorze entidades e quarenta e duas arestas; espessura representa coocorrências.</desc>
+<title>Grafo projetado de coocorrência</title>
+<desc>Grafo de quatorze entidades e quarenta e duas arestas; espessura representa coocorrências.</desc>
 <rect width="1100" height="590" fill="#fffdf7"/>
 <style>text{font-family:Aptos,Arial,sans-serif}.title{font-size:28px;font-weight:700;fill:#17324d}.label{font-size:20px;fill:#202a33}.small{font-size:16px;fill:#4b5563}.value{font-size:19px;font-weight:700;fill:#17324d}</style>
 <text x="550" y="38" text-anchor="middle" class="title">Uma projeção torna relações visíveis — e perde contexto</text>

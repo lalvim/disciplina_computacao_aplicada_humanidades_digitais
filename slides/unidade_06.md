@@ -13,7 +13,7 @@ footer: "Computação Aplicada a Problemas em Humanidades Digitais · Unidade 6"
 
 # Unidade 6
 
-## Associações e redes
+## Associações e grafos
 
 **Problema orientador:** quando um padrão entre dados sustenta uma relação — e
 quando ele é apenas efeito da forma de observar?
@@ -40,7 +40,7 @@ Ao projetar as menções, aparecem três pares:
 
 # O dado permite uma afirmação mais limitada
 
-![w:1050 centralizada Documentos e entidades formam uma rede bipartida; a projeção cria ligações entre entidades mencionadas no mesmo documento.](../unidade_06/imagens/03_projecao_bipartida.svg)
+![w:1050 centralizada Documentos e entidades formam um grafo bipartido; a projeção cria ligações entre entidades mencionadas no mesmo documento.](../unidade_06/imagens/03_projecao_bipartida.svg)
 
 A projeção registra **contexto documental compartilhado**. A natureza da relação
 social ainda precisa ser investigada nas fontes.
@@ -61,7 +61,7 @@ Uma aresta não possui significado antes dessas decisões.
 
 # Agenda
 
-1. Distinguir associação, correlação, coocorrência e rede
+1. Distinguir associação, correlação, coocorrência e grafo
 2. Comparar categorias com denominadores explícitos
 3. Investigar correlações e explicações alternativas
 4. Transformar documentos em matrizes relacionais
@@ -78,7 +78,7 @@ Uma aresta não possui significado antes dessas decisões.
 - explicar a projeção de uma matriz bipartida;
 - distinguir grau, força e intermediação;
 - testar sensibilidade e retornar às fontes;
-- justificar o uso — ou a não adoção — de uma rede.
+- justificar o uso — ou a não adoção — de um grafo.
 
 ---
 
@@ -488,7 +488,8 @@ que relacione cada aresta às fontes que a produziram.
 | “aparecem no mesmo contexto” | “A enviou carta a B” |
 | depende da janela | depende do evento documentado |
 
-As duas podem ser redes, mas suas arestas possuem ontologias diferentes.
+As duas podem ser representadas como grafos, mas suas arestas possuem ontologias
+diferentes.
 
 ---
 
@@ -526,7 +527,7 @@ Peso alto não equivale automaticamente a vínculo social intenso.
 
 <!-- _class: divisor -->
 
-# 4 · O que a estrutura da rede mostra?
+# 4 · O que a estrutura do grafo mostra?
 
 ## Nós, arestas, centralidades e comunidades
 
@@ -548,9 +549,9 @@ Antes de calcular, traduza cada elemento para o domínio histórico.
 
 <!-- _class: exemplo -->
 
-# Uma rede projetada da base fictícia
+# Um grafo projetado da base fictícia
 
-![w:1050 centralizada Rede de coocorrência com quatorze entidades, quarenta e duas arestas e nós dimensionados pela soma dos pesos.](imagens/unidade_06/03_rede_coocorrencia.svg)
+![w:1050 centralizada Grafo de coocorrência com quatorze entidades, quarenta e duas arestas e nós dimensionados pela soma dos pesos.](imagens/unidade_06/03_rede_coocorrencia.svg)
 
 A posição organiza o desenho. O tamanho representa força; a espessura representa
 coocorrências. Nenhuma coordenada equivale a lugar ou proximidade histórica.
@@ -560,7 +561,7 @@ coocorrências. Nenhuma coordenada equivale a lugar ou proximidade histórica.
 # Visualização não é medida
 
 Um algoritmo de layout aproxima nós conectados para reduzir sobreposição e tornar
-a rede legível. Alterar a inicialização pode mudar o desenho sem mudar uma aresta.
+o grafo legível. Alterar a inicialização pode mudar o desenho sem mudar uma aresta.
 
 Não conclua que:
 
@@ -573,7 +574,7 @@ Não conclua que:
 
 # Grau: quantos vizinhos?
 
-Para rede simples não dirigida:
+Para um grafo simples não dirigido:
 
 $$
 C_D(v)=\frac{\deg(v)}{n-1}
@@ -616,14 +617,14 @@ que a entidade controlava fluxos históricos reais.
 
 # Medidas respondem a perguntas diferentes
 
-![w:1000 centralizada Grau, força e intermediação destacam diferentes sentidos de centralidade em uma rede.](../unidade_06/imagens/04_centralidades.svg)
+![w:1000 centralizada Grau, força e intermediação destacam diferentes sentidos de centralidade em um grafo.](../unidade_06/imagens/04_centralidades.svg)
 
 Não procure “o nó mais importante” sem declarar qual conceito de importância e
 qual evidência sustentam essa tradução.
 
 ---
 
-# Redes dirigidas preservam assimetria
+# Grafos dirigidos preservam assimetria
 
 Em correspondência:
 
@@ -659,7 +660,7 @@ um critério. O resultado pode variar com:
 - pesos e direção;
 - resolução escolhida;
 - nós ou arestas ausentes;
-- regra que construiu a rede.
+- regra que construiu o grafo.
 
 “Comunidade detectada” não é sinônimo automático de grupo social autoconsciente.
 
@@ -684,7 +685,7 @@ um critério. O resultado pode variar com:
 
 # 5 · Oficina
 
-## Associação, rede ou não adoção justificada
+## Associação, grafo ou não adoção justificada
 
 ---
 
@@ -699,7 +700,7 @@ o argumento do projeto.
 
 <!-- _class: atividade -->
 
-# U06-A06 · Oficina de associação ou rede
+# U06-A06 · Oficina de associação ou grafo
 
 **Modalidade:** equipes do projeto · **Tempo:** 55 minutos  
 **Produto:** nova seção no mesmo relatório-notebook cumulativo
@@ -707,7 +708,7 @@ o argumento do projeto.
 Escolham uma trilha:
 
 - **A — associação:** duas variáveis categóricas ou numéricas;
-- **B — rede:** relação documental com nós e arestas definidos;
+- **B — grafo:** relação documental com nós e arestas definidos;
 - **C — não adoção:** demonstração de por que esses métodos não são pertinentes.
 
 Não entreguem um notebook separado.
@@ -729,7 +730,7 @@ O coeficiente deve responder à pergunta, não apenas estar disponível na bibli
 
 ---
 
-# Trilha B · Rede
+# Trilha B · Grafo
 
 Incluam no relatório:
 
@@ -740,7 +741,7 @@ Incluam no relatório:
 5. uma ou duas medidas justificadas;
 6. retorno a casos e limites documentais.
 
-Uma imagem de rede sem interpretação não constitui análise.
+Uma imagem de grafo sem interpretação não constitui análise.
 
 ---
 
@@ -767,7 +768,7 @@ Testem pelo menos uma decisão que poderia mudar o resultado:
 - inclusão ou exclusão de caso influente;
 - janela de coocorrência;
 - aresta binária versus ponderada;
-- rede bipartida versus projetada;
+- grafo bipartido versus projetado;
 - inclusão de laços ou entidades muito frequentes.
 
 Registrem o que mudou e por quê.
@@ -781,7 +782,7 @@ Registrem o que mudou e por quê.
 | texto | formular pergunta e interpretar |
 | código | tornar transformação reproduzível |
 | tabela | mostrar valores e denominadores |
-| gráfico/rede | tornar padrão inspecionável |
+| gráfico/grafo | tornar padrão inspecionável |
 | retorno à fonte | recuperar contexto e casos |
 | limite | restringir o alcance da afirmação |
 
@@ -800,7 +801,7 @@ Verifiquem:
 
 - unidade e denominador estão explícitos?
 - relação observada e inferência estão separadas?
-- gráfico ou rede pode ser auditado nos dados?
+- gráfico ou grafo pode ser auditado nos dados?
 - há análise de sensibilidade e retorno a casos?
 - o limite modifica concretamente a conclusão?
 

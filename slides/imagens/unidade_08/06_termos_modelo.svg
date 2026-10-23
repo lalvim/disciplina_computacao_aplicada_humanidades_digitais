@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="590" viewBox="0 0 1100 590" role="img">
+<title>Termos associados às classes</title>
+<desc>Barras à esquerda se associam a não relevante; barras à direita, a relevante.</desc>
+<rect width="1100" height="590" fill="#fffdf7"/>
+<style>text{font-family:Aptos,Arial,sans-serif}.title{font-size:28px;font-weight:700;fill:#17324d}.label{font-size:19px;fill:#202a33}.small{font-size:16px;fill:#4b5563}.value{font-size:20px;font-weight:700;fill:#17324d}</style>
+<text x="550" y="40" text-anchor="middle" class="title">O modelo aprende associações — inclusive atalhos</text>
+<line x1="555" y1="75" x2="555" y2="520" stroke="#17324d" stroke-width="2"/>
+<rect x="368.9" y="90" width="186.1" height="32" fill="#69445f" rx="4"/>
+<text x="356.9" y="113" text-anchor="end" class="small">biblioteca recebe</text>
+<rect x="368.9" y="145" width="186.1" height="32" fill="#69445f" rx="4"/>
+<text x="356.9" y="168" text-anchor="end" class="small">coleção</text>
+<rect x="368.9" y="200" width="186.1" height="32" fill="#69445f" rx="4"/>
+<text x="356.9" y="223" text-anchor="end" class="small">coleção de</text>
+<rect x="368.9" y="255" width="186.1" height="32" fill="#69445f" rx="4"/>
+<text x="356.9" y="278" text-anchor="end" class="small">de romances</text>
+<rect x="555.0" y="310" width="330.0" height="32" fill="#176b68" rx="4"/>
+<text x="897.0" y="333" text-anchor="start" class="small">pública</text>
+<rect x="555.0" y="365" width="330.0" height="32" fill="#176b68" rx="4"/>
+<text x="897.0" y="388" text-anchor="start" class="small">pública registro</text>
+<rect x="555.0" y="420" width="330.0" height="32" fill="#176b68" rx="4"/>
+<text x="897.0" y="443" text-anchor="start" class="small">salubridade</text>
+<rect x="555.0" y="475" width="330.0" height="32" fill="#176b68" rx="4"/>
+<text x="897.0" y="498" text-anchor="start" class="small">salubridade pública</text>
+<text x="210" y="555" text-anchor="middle" class="small">associado a “não relevante”</text>
+<text x="890" y="555" text-anchor="middle" class="small">associado a “relevante”</text>
+</svg>

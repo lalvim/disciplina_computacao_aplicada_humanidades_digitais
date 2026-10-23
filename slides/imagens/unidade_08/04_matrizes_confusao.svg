@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="590" viewBox="0 0 1100 590" role="img">
+<title>Matrizes de confusão</title>
+<desc>Duas matrizes comparam árvore por metadados e TF-IDF com regressão logística.</desc>
+<rect width="1100" height="590" fill="#fffdf7"/>
+<style>text{font-family:Aptos,Arial,sans-serif}.title{font-size:28px;font-weight:700;fill:#17324d}.label{font-size:19px;fill:#202a33}.small{font-size:16px;fill:#4b5563}.value{font-size:20px;font-weight:700;fill:#17324d}</style>
+<text x="550" y="40" text-anchor="middle" class="title">A mesma acurácia pode esconder erros muito diferentes</text>
+<text x="355" y="92" text-anchor="middle" class="value">Árvore · metadados</text>
+<text x="355" y="125" text-anchor="middle" class="small">previsto → não / sim</text>
+<text x="212" y="212.5" text-anchor="end" class="small">não</text>
+<rect x="230" y="145" width="125" height="125" fill="#176b68" fill-opacity="0.78" stroke="white" stroke-width="4"/>
+<text x="292.5" y="217.5" text-anchor="middle" font-size="32" font-weight="700" fill="#17324d">9</text>
+<rect x="355" y="145" width="125" height="125" fill="#a84f2a" fill-opacity="0.90" stroke="white" stroke-width="4"/>
+<text x="417.5" y="217.5" text-anchor="middle" font-size="32" font-weight="700" fill="#17324d">11</text>
+<text x="212" y="337.5" text-anchor="end" class="small">sim</text>
+<rect x="230" y="270" width="125" height="125" fill="#a84f2a" fill-opacity="0.84" stroke="white" stroke-width="4"/>
+<text x="292.5" y="342.5" text-anchor="middle" font-size="32" font-weight="700" fill="#17324d">10</text>
+<rect x="355" y="270" width="125" height="125" fill="#176b68" fill-opacity="0.84" stroke="white" stroke-width="4"/>
+<text x="417.5" y="342.5" text-anchor="middle" font-size="32" font-weight="700" fill="#17324d">10</text>
+<text x="148" y="270" text-anchor="middle" class="small" transform="rotate(-90 148 270)">real</text>
+<text x="890" y="92" text-anchor="middle" class="value">TF-IDF + logística</text>
+<text x="890" y="125" text-anchor="middle" class="small">previsto → não / sim</text>
+<text x="747" y="212.5" text-anchor="end" class="small">não</text>
+<rect x="765" y="145" width="125" height="125" fill="#176b68" fill-opacity="0.90" stroke="white" stroke-width="4"/>
+<text x="827.5" y="217.5" text-anchor="middle" font-size="32" font-weight="700" fill="#17324d">20</text>
+<rect x="890" y="145" width="125" height="125" fill="#a84f2a" fill-opacity="0.25" stroke="white" stroke-width="4"/>
+<text x="952.5" y="217.5" text-anchor="middle" font-size="32" font-weight="700" fill="#17324d">0</text>
+<text x="747" y="337.5" text-anchor="end" class="small">sim</text>
+<rect x="765" y="270" width="125" height="125" fill="#a84f2a" fill-opacity="0.32" stroke="white" stroke-width="4"/>
+<text x="827.5" y="342.5" text-anchor="middle" font-size="32" font-weight="700" fill="#17324d">2</text>
+<rect x="890" y="270" width="125" height="125" fill="#176b68" fill-opacity="0.84" stroke="white" stroke-width="4"/>
+<text x="952.5" y="342.5" text-anchor="middle" font-size="32" font-weight="700" fill="#17324d">18</text>
+<text x="683" y="270" text-anchor="middle" class="small" transform="rotate(-90 683 270)">real</text>
+<rect x="340" y="490" width="20" height="20" fill="#176b68"/><text x="370" y="507" class="small">acerto</text>
+<rect x="520" y="490" width="20" height="20" fill="#a84f2a"/><text x="550" y="507" class="small">erro</text>
+<text x="550" y="552" text-anchor="middle" class="small">ordem das células: verdadeiros negativos, falsos positivos, falsos negativos, verdadeiros positivos</text>
+</svg>

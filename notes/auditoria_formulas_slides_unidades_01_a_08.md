@@ -1,4 +1,4 @@
-# Auditoria das fórmulas nos slides — Unidades 1 a 7
+# Auditoria das fórmulas nos slides — Unidades 1 a 8
 
 ## Critério
 
@@ -12,7 +12,7 @@ Cada slide de fórmula foi verificado quanto a três apoios:
 2. exemplo numérico ou aplicação concreta;
 3. gráfico, diagrama ou representação visual no próprio slide.
 
-Após a revisão, os 50 slides de fórmula das Unidades 1 a 7 atendem aos três
+Após a revisão, os 56 slides de fórmula das Unidades 1 a 8 atendem aos três
 critérios. Imagens laterais marcadas com `bg right` são apoios didáticos e possuem
 texto alternativo; não são decoração.
 
@@ -27,7 +27,8 @@ texto alternativo; não são decoração.
 | 5 | 12 | linguagem comum, exemplo e visual presentes |
 | 6 | 10 | linguagem comum, exemplo e visual presentes |
 | 7 | 12 | linguagem comum, exemplo e visual presentes |
-| **Total** | **50** | **conforme** |
+| 8 | 6 | linguagem comum, exemplo e visual presentes |
+| **Total** | **56** | **conforme** |
 
 ## Verificação individual
 
@@ -115,6 +116,17 @@ texto alternativo; não são decoração.
 | 47 | modelo logístico | logito zero, probabilidade 0,50 e curva logística |
 | 48 | razão de chances | exponenciação de 0,480 e curva logística |
 | 49 | padronização | renda 2.434 → z = 1 e diagrama de escalas |
+
+### Unidade 8
+
+| Slide | Fórmula ou medida | Apoio visual e exemplo |
+|---:|---|---|
+| 16 | acordo bruto | 27 de 32 casos e matriz dos anotadores |
+| 17 | kappa de Cohen | acordo observado e esperado com matriz |
+| 30 | acurácia | 20 acertos em 40 casos e matriz de confusão |
+| 39 | precisão | 10 de 21 positivos previstos e matriz da árvore |
+| 40 | revocação | 10 de 20 relevantes encontrados e matriz da árvore |
+| 41 | F1 | precisão e revocação da árvore e gráfico comparativo |
 
 ## Uso nas próximas unidades
 

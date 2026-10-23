@@ -77,6 +77,7 @@ Antes de usar em aula, confira:
 | 5 | Comparação quantitativa e textual | [`unidade_05.md`](unidade_05.md) |
 | 6 | Associações e grafos | [`unidade_06.md`](unidade_06.md) |
 | 7 | Modelos de associação condicionada | [`unidade_07.md`](unidade_07.md) |
+| 8 | Classificação supervisionada | [`unidade_08.md`](unidade_08.md) |
 
 As demais unidades serão acrescentadas conforme as etapas definidas no plano.
 

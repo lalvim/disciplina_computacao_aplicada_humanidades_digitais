@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="590" viewBox="0 0 1100 590" role="img">
+<title>Divisão estratificada entre treino e teste</title>
+<desc>Cento e vinte documentos de treino e quarenta de teste, ambos equilibrados entre classes.</desc>
+<rect width="1100" height="590" fill="#fffdf7"/>
+<style>text{font-family:Aptos,Arial,sans-serif}.title{font-size:28px;font-weight:700;fill:#17324d}.label{font-size:19px;fill:#202a33}.small{font-size:16px;fill:#4b5563}.value{font-size:20px;font-weight:700;fill:#17324d}</style>
+<text x="550" y="42" text-anchor="middle" class="title">O teste fica reservado antes das escolhas</text>
+<text x="180" y="192" text-anchor="end" class="label">Treino: n=120</text>
+<rect x="210" y="150" width="360.0" height="70" fill="#69445f" rx="7"/>
+<rect x="570.0" y="150" width="360.0" height="70" fill="#176b68" rx="7"/>
+<text x="390.0" y="194" text-anchor="middle" fill="white" font-size="20" font-weight="700">não: 60</text>
+<text x="750.0" y="194" text-anchor="middle" fill="white" font-size="20" font-weight="700">sim: 60</text>
+<text x="180" y="377" text-anchor="end" class="label">Teste: n=40</text>
+<rect x="210" y="335" width="360.0" height="70" fill="#69445f" rx="7"/>
+<rect x="570.0" y="335" width="360.0" height="70" fill="#176b68" rx="7"/>
+<text x="390.0" y="379" text-anchor="middle" fill="white" font-size="20" font-weight="700">não: 20</text>
+<text x="750.0" y="379" text-anchor="middle" fill="white" font-size="20" font-weight="700">sim: 20</text>
+<rect x="300" y="500" width="22" height="22" fill="#69445f"/><text x="334" y="518" class="small">não relevante</text>
+<rect x="540" y="500" width="22" height="22" fill="#176b68"/><text x="574" y="518" class="small">relevante</text>
+</svg>

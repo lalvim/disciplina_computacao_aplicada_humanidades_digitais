@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="590" viewBox="0 0 1100 590" role="img">
+<title>Concordância entre anotadores</title>
+<desc>Matriz dois por dois com vinte e sete acordos e cinco desacordos.</desc>
+<rect width="1100" height="590" fill="#fffdf7"/>
+<style>text{font-family:Aptos,Arial,sans-serif}.title{font-size:28px;font-weight:700;fill:#17324d}.label{font-size:19px;fill:#202a33}.small{font-size:16px;fill:#4b5563}.value{font-size:20px;font-weight:700;fill:#17324d}</style>
+<text x="550" y="42" text-anchor="middle" class="title">Concordar não elimina os casos difíceis</text>
+<text x="460" y="92" text-anchor="middle" class="label">Anotador B</text>
+<text x="165" y="285" text-anchor="middle" class="label" transform="rotate(-90 165 285)">Anotador A</text>
+<text x="387.5" y="120" text-anchor="middle" class="small">não</text>
+<text x="532.5" y="120" text-anchor="middle" class="small">sim</text>
+<text x="295" y="208.5" text-anchor="end" class="small">não</text>
+<rect x="315" y="130" width="145" height="145" fill="#176b68" fill-opacity="0.90" stroke="white" stroke-width="4"/>
+<text x="387.5" y="212.5" text-anchor="middle" font-size="34" font-weight="700" fill="#17324d">14</text>
+<rect x="460" y="130" width="145" height="145" fill="#a84f2a" fill-opacity="0.32" stroke="white" stroke-width="4"/>
+<text x="532.5" y="212.5" text-anchor="middle" font-size="34" font-weight="700" fill="#17324d">1</text>
+<text x="295" y="353.5" text-anchor="end" class="small">sim</text>
+<rect x="315" y="275" width="145" height="145" fill="#a84f2a" fill-opacity="0.46" stroke="white" stroke-width="4"/>
+<text x="387.5" y="357.5" text-anchor="middle" font-size="34" font-weight="700" fill="#17324d">4</text>
+<rect x="460" y="275" width="145" height="145" fill="#176b68" fill-opacity="0.86" stroke="white" stroke-width="4"/>
+<text x="532.5" y="357.5" text-anchor="middle" font-size="34" font-weight="700" fill="#17324d">13</text>
+<text x="680" y="190" class="value">Acordo: 84.4%</text>
+<text x="680" y="240" class="value">Kappa: 0.690</text>
+<text x="680" y="310" class="small">27 coincidências</text>
+<text x="680" y="340" class="small">5 discordâncias</text>
+<text x="550" y="535" text-anchor="middle" class="small">Fonte: amostra_anotacao.csv · dados fictícios</text>
+</svg>

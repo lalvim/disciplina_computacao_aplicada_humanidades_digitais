@@ -504,7 +504,7 @@ Nenhum novo indicador foi calculado; a unidade da linha foi explicitada.
 
 ---
 
-# Preserve o original; crie uma chave
+# Preserve o original; crie uma chave de comparação
 
 | Campo original | Chave normalizada |
 |---|---|
@@ -512,8 +512,9 @@ Nenhum novo indicador foi calculado; a unidade da linha foi explicitada.
 | `JORNAL AURORA` | `jornal aurora` |
 | `São  Paulo` | `sao paulo` |
 
-A chave facilita comparação. Ela não deve substituir automaticamente a grafia
-de apresentação nem apagar distinções relevantes.
+A chave normalizada facilita comparação de grafias. Ela não é necessariamente a
+chave identificadora de uma tabela e não deve substituir automaticamente o valor
+original nem apagar distinções relevantes.
 
 <p class="fonte">Rawson e Muñoz (2019); Van Hooland, Verborgh e De Wilde (2013).</p>
 
@@ -621,6 +622,128 @@ decisão.
 # 3 · Integrar sem fabricar casos
 
 ## Chaves, cardinalidades e auditoria
+
+---
+
+# Antes de juntar: o que é uma tabela?
+
+Uma tabela organiza observações segundo um modelo explícito:
+
+| `id_documento` | `titulo` | `codigo_municipio` |
+|---|---|---|
+| D001 | Jornal Aurora | 3550308 |
+| D002 | Gazeta Popular | 3304557 |
+| D003 | Correio do Vale | 9999999 |
+
+- cada **linha** representa um documento;
+- cada **coluna** representa uma característica;
+- cada **célula** associa um documento a um valor.
+
+Antes de juntar, complete: “uma linha desta tabela representa…”.
+
+---
+
+# Uma chave identifica uma linha
+
+Na tabela de documentos, `id_documento` é uma **chave primária** quando:
+
+- cada documento possui um valor;
+- o valor não se repete;
+- o identificador permanece estável;
+- duas pessoas não recebem o mesmo código por engano.
+
+| `id_documento` | Situação |
+|---|---|
+| D001 | identificador válido |
+| D002 | identificador válido |
+| D002 | duplicação: exige investigação |
+
+Título ou nome raramente é uma boa chave: pode variar, repetir ou mudar.
+
+---
+
+# “Chave” pode nomear funções diferentes
+
+| Tipo | Exemplo | Função |
+|---|---|---|
+| chave de comparação | `jornal aurora` | aproximar grafias normalizadas |
+| chave primária | `D001` | identificar uma linha da tabela |
+| chave estrangeira | `3550308` | apontar para uma linha em outra tabela |
+| chave composta | `D001` + `educação` | identificar uma relação documento–tema |
+
+Uma forma textual normalizada pode ajudar a encontrar candidatos, mas não deve ser
+tratada automaticamente como identidade histórica.
+
+---
+
+# A chave estrangeira cria a ligação
+
+**Documentos** — uma linha por documento
+
+| `id_documento` | `codigo_municipio` |
+|---|---|
+| D001 | 3550308 |
+| D002 | 3304557 |
+| D003 | 9999999 |
+
+**Municípios** — uma linha por município
+
+| `codigo_municipio` | `nome_oficial` |
+|---|---|
+| 3550308 | São Paulo |
+| 3304557 | Rio de Janeiro |
+
+`codigo_municipio` liga as tabelas sem transformar município em atributo repetido.
+
+---
+
+<!-- _class: exemplo -->
+
+# Junção: procurar a chave e acrescentar colunas
+
+Uma junção à esquerda parte de cada documento, procura o mesmo código na tabela de
+municípios e acrescenta o nome encontrado:
+
+| `id_documento` | `codigo_municipio` | `nome_oficial` | resultado |
+|---|---|---|---|
+| D001 | 3550308 | São Paulo | correspondência |
+| D002 | 3304557 | Rio de Janeiro | correspondência |
+| D003 | 9999999 | ausente | sem correspondência |
+
+D003 permanece porque a tabela da esquerda define as unidades preservadas. A
+ausência torna-se uma questão para auditoria, não uma linha descartada em silêncio.
+
+---
+
+# A junção não descobre identidades
+
+O procedimento compara valores de chave; a pesquisa sustenta seu significado.
+
+```text
+documentos.codigo_municipio = municipios.codigo_municipio
+                3550308     =     3550308
+```
+
+Antes da operação, precisamos afirmar:
+
+- os dois campos usam o mesmo sistema de códigos;
+- o código possui a mesma granularidade e período;
+- cada código da referência identifica um município;
+- uma ausência será preservada e examinada.
+
+---
+
+# O tipo de junção responde “o que preservar?”
+
+| Tipo | Mantém | No exemplo |
+|---|---|---|
+| `left` | todas as linhas de documentos | mantém D003 sem nome |
+| `inner` | somente chaves presentes nos dois lados | remove D003 |
+| `right` | todas as linhas de municípios | pode incluir município sem documento |
+| `outer` | todas as linhas dos dois lados | explicita todas as não correspondências |
+
+Não escolha pelo resultado mais “limpo”. Escolha pelas unidades que a pergunta e o
+desenho exigem preservar.
 
 ---
 

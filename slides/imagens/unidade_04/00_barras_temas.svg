@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" role="img" aria-labelledby="titulo descricao">
+<title id="titulo">Documentos por tema (n = 24)</title>
+<desc id="descricao">Quatro barras de mesma altura mostram seis documentos em cada tema.</desc>
+<style>
+text { font-family: system-ui, sans-serif; fill: #17324d; }
+.titulo { font-size: 19px; font-weight: 700; }
+.eixo { font-size: 13px; }
+.rotulo { font-size: 12px; }
+.grade { stroke: #c7cfd3; stroke-width: 1; }
+.linha { stroke: #17324d; stroke-width: 2; fill: none; }
+</style>
+<rect width="760" height="430" fill="#fffdf8"/>
+<text x="90" y="28" class="titulo">Documentos por tema (n = 24)</text><path d="M90,55 V350 H710" class="linha"/><text x="400.0" y="410" class="eixo" text-anchor="middle">Tema atribuído</text><text x="20" y="202.5" class="eixo" text-anchor="middle" transform="rotate(-90 20 202.5)">Número de documentos</text><rect x="125.0" y="102.17391304347825" width="100.0" height="247.82608695652175" fill="#256b6b" stroke="#17324d"/><text x="175.0" y="94.17391304347825" class="rotulo" text-anchor="middle">6</text><text x="175.0" y="375" class="rotulo" text-anchor="middle">educação</text><rect x="250.0" y="102.17391304347825" width="100.0" height="247.82608695652175" fill="#256b6b" stroke="#17324d"/><text x="300.0" y="94.17391304347825" class="rotulo" text-anchor="middle">6</text><text x="300.0" y="375" class="rotulo" text-anchor="middle">progresso</text><rect x="375.0" y="102.17391304347825" width="100.0" height="247.82608695652175" fill="#256b6b" stroke="#17324d"/><text x="425.0" y="94.17391304347825" class="rotulo" text-anchor="middle">6</text><text x="425.0" y="375" class="rotulo" text-anchor="middle">saúde</text><rect x="500.0" y="102.17391304347825" width="100.0" height="247.82608695652175" fill="#256b6b" stroke="#17324d"/><text x="550.0" y="94.17391304347825" class="rotulo" text-anchor="middle">6</text><text x="550.0" y="375" class="rotulo" text-anchor="middle">trabalho</text><line x1="85" y1="350.0" x2="710" y2="350.0" class="grade"/><text x="78" y="354.0" class="rotulo" text-anchor="end">0</text><line x1="85" y1="267.39130434782606" x2="710" y2="267.39130434782606" class="grade"/><text x="78" y="271.39130434782606" class="rotulo" text-anchor="end">2</text><line x1="85" y1="184.78260869565216" x2="710" y2="184.78260869565216" class="grade"/><text x="78" y="188.78260869565216" class="rotulo" text-anchor="end">4</text><line x1="85" y1="102.17391304347825" x2="710" y2="102.17391304347825" class="grade"/><text x="78" y="106.17391304347825" class="rotulo" text-anchor="end">6</text>
+</svg>

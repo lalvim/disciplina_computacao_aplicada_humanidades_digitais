@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" role="img" aria-labelledby="titulo descricao">
+<title id="titulo">Termos frequentes após stopwords (Nc = 600)</title>
+<desc id="descricao">Dez barras horizontais ordenadas mostram frequências absolutas dos tokens de conteúdo.</desc>
+<style>
+text { font-family: system-ui, sans-serif; fill: #17324d; }
+.titulo { font-size: 19px; font-weight: 700; }
+.eixo { font-size: 13px; }
+.rotulo { font-size: 12px; }
+.grade { stroke: #c7cfd3; stroke-width: 1; }
+.linha { stroke: #17324d; stroke-width: 2; fill: none; }
+</style>
+<rect width="760" height="430" fill="#fffdf8"/>
+<text x="75" y="28" class="titulo">Termos frequentes após stopwords (Nc = 600)</text><text x="120" y="72" class="rotulo" text-anchor="end">escola</text><rect x="135" y="55" width="500.0" height="22" fill="#69445f" stroke="#17324d"/><text x="645.0" y="72" class="rotulo">24</text><text x="120" y="106" class="rotulo" text-anchor="end">noturna</text><rect x="135" y="89" width="500.0" height="22" fill="#69445f" stroke="#17324d"/><text x="645.0" y="106" class="rotulo">24</text><text x="120" y="140" class="rotulo" text-anchor="end">amplia</text><rect x="135" y="123" width="500.0" height="22" fill="#69445f" stroke="#17324d"/><text x="645.0" y="140" class="rotulo">24</text><text x="120" y="174" class="rotulo" text-anchor="end">instrução</text><rect x="135" y="157" width="500.0" height="22" fill="#69445f" stroke="#17324d"/><text x="645.0" y="174" class="rotulo">24</text><text x="120" y="208" class="rotulo" text-anchor="end">pública</text><rect x="135" y="191" width="500.0" height="22" fill="#69445f" stroke="#17324d"/><text x="645.0" y="208" class="rotulo">24</text><text x="120" y="242" class="rotulo" text-anchor="end">ensino</text><rect x="135" y="225" width="500.0" height="22" fill="#69445f" stroke="#17324d"/><text x="645.0" y="242" class="rotulo">24</text><text x="120" y="276" class="rotulo" text-anchor="end">social</text><rect x="135" y="259" width="500.0" height="22" fill="#69445f" stroke="#17324d"/><text x="645.0" y="276" class="rotulo">24</text><text x="120" y="310" class="rotulo" text-anchor="end">trabalho</text><rect x="135" y="293" width="500.0" height="22" fill="#69445f" stroke="#17324d"/><text x="645.0" y="310" class="rotulo">24</text><text x="120" y="344" class="rotulo" text-anchor="end">oficinas</text><rect x="135" y="327" width="500.0" height="22" fill="#69445f" stroke="#17324d"/><text x="645.0" y="344" class="rotulo">24</text><text x="120" y="378" class="rotulo" text-anchor="end">reúne</text><rect x="135" y="361" width="500.0" height="22" fill="#69445f" stroke="#17324d"/><text x="645.0" y="378" class="rotulo">24</text><text x="390" y="410" class="eixo" text-anchor="middle">Frequência absoluta</text>
+</svg>

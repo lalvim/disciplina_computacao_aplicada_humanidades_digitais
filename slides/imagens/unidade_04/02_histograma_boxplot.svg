@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 410" role="img" aria-labelledby="titulo descricao">
+<title id="titulo">Histograma e boxplot da extensão</title>
+<desc id="descricao">O histograma usa cinco intervalos. O boxplot mostra Q1 459, mediana 621.5, Q3 848.75, whiskers de 320 a 1072 e D023 separado em 2100 palavras.</desc>
+<style>
+text { font-family: system-ui, sans-serif; fill: #17324d; }
+.titulo { font-size: 19px; font-weight: 700; }
+.eixo { font-size: 13px; }
+.rotulo { font-size: 12px; }
+.grade { stroke: #c7cfd3; stroke-width: 1; }
+.linha { stroke: #17324d; stroke-width: 2; fill: none; }
+</style>
+<rect width="760" height="410" fill="#fffdf8"/>
+<text x="65" y="28" class="titulo">Distribuição e boxplot da extensão</text><path d="M90,55 V245 H710" class="linha"/><rect x="115" y="187.93478260869566" width="90" height="57.065217391304344" fill="#d8ebe7" stroke="#17324d"/><text x="160" y="180.93478260869566" class="rotulo" text-anchor="middle">3</text><text x="160" y="265" class="rotulo" text-anchor="middle">0–400</text><rect x="225" y="92.82608695652172" width="90" height="152.17391304347828" fill="#d8ebe7" stroke="#17324d"/><text x="270" y="85.82608695652172" class="rotulo" text-anchor="middle">8</text><text x="270" y="265" class="rotulo" text-anchor="middle">400–600</text><rect x="335" y="130.8695652173913" width="90" height="114.13043478260869" fill="#d8ebe7" stroke="#17324d"/><text x="380" y="123.86956521739131" class="rotulo" text-anchor="middle">6</text><text x="380" y="265" class="rotulo" text-anchor="middle">600–800</text><rect x="445" y="168.91304347826087" width="90" height="76.08695652173913" fill="#d8ebe7" stroke="#17324d"/><text x="490" y="161.91304347826087" class="rotulo" text-anchor="middle">4</text><text x="490" y="265" class="rotulo" text-anchor="middle">800–1000</text><rect x="555" y="187.93478260869566" width="90" height="57.065217391304344" fill="#d8ebe7" stroke="#17324d"/><text x="600" y="180.93478260869566" class="rotulo" text-anchor="middle">3</text><text x="600" y="265" class="rotulo" text-anchor="middle">1000–2200</text><text x="400" y="292" class="eixo" text-anchor="middle">Palavras por documento</text><line x1="105.0" y1="345" x2="356.37078651685397" y2="345" stroke="#17324d" stroke-width="3"/><rect x="151.4634831460674" y="320" width="130.28160112359552" height="50" fill="#f2ddd2" stroke="#17324d" stroke-width="2"/><line x1="205.7823033707865" y1="320" x2="205.7823033707865" y2="370" stroke="#69445f" stroke-width="4"/><polygon points="700.0,335 708.0,345 700.0,355 692.0,345" fill="#a44f32" stroke="#17324d"/><text x="690.0" y="325" class="rotulo" text-anchor="end" font-weight="700">D023</text>
+</svg>

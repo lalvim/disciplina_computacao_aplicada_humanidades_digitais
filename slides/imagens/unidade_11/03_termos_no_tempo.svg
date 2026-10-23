@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="590" viewBox="0 0 1100 590" role="img">
+<title>Menções normalizadas ao longo do tempo</title>
+<desc>Curvas mostram médias móveis de menções de patrimônio e digital por cem documentos.</desc>
+<rect width="1100" height="590" fill="#fffdf7"/>
+<style>text{font-family:Aptos,Arial,sans-serif}.title{font-size:28px;font-weight:700;fill:#17324d}.label{font-size:19px;fill:#202a33}.small{font-size:16px;fill:#4b5563}.value{font-size:20px;font-weight:700;fill:#17324d}</style>
+<text x="550" y="38" text-anchor="middle" class="title">Normalizar o volume não resolve a mudança de significado</text>
+<rect x="100" y="90" width="880" height="380" fill="#f2eee5" stroke="#d8cdbb"/>
+<polyline points="129.3,350.6 144.0,350.1 158.7,341.5 173.3,338.9 188.0,336.4 202.7,330.4 217.3,326.2 232.0,324.1 246.7,311.3 261.3,300.8 276.0,304.1 290.7,293.4 305.3,292.8 320.0,295.0 334.7,289.2 349.3,283.2 364.0,285.6 378.7,276.0 393.3,276.1 408.0,282.1 422.7,278.8 437.3,283.9 452.0,280.3 466.7,269.2 481.3,264.2 496.0,258.6 510.7,242.9 525.3,243.5 540.0,244.3 554.7,239.0 569.3,239.6 584.0,246.0 598.7,240.0 613.3,229.8 628.0,225.9 642.7,211.9 657.3,206.3 672.0,205.3 686.7,208.6 701.3,207.6 716.0,212.9 730.7,206.1 745.3,205.2 760.0,206.2 774.7,189.2 789.3,184.5 804.0,186.0 818.7,179.5 833.3,163.1 848.0,169.1 862.7,166.6 877.3,160.0 892.0,157.6 906.7,159.5 921.3,162.9 936.0,162.6 950.7,151.0" fill="none" stroke="#176b68" stroke-width="5" stroke-linejoin="round"/>
+<polyline points="129.3,470.0 144.0,470.0 158.7,470.0 173.3,470.0 188.0,470.0 202.7,470.0 217.3,470.0 232.0,470.0 246.7,470.0 261.3,470.0 276.0,470.0 290.7,470.0 305.3,470.0 320.0,470.0 334.7,470.0 349.3,470.0 364.0,470.0 378.7,470.0 393.3,470.0 408.0,470.0 422.7,470.0 437.3,470.0 452.0,470.0 466.7,470.0 481.3,470.0 496.0,470.0 510.7,470.0 525.3,470.0 540.0,470.0 554.7,470.0 569.3,468.1 584.0,468.1 598.7,468.1 613.3,468.1 628.0,468.1 642.7,470.0 657.3,470.0 672.0,466.0 686.7,462.1 701.3,462.1 716.0,462.1 730.7,462.1 745.3,464.2 760.0,464.4 774.7,460.2 789.3,453.9 804.0,449.8 818.7,439.5 833.3,431.1 848.0,431.4 862.7,429.8 877.3,428.1 892.0,434.5 906.7,439.0 921.3,437.3 936.0,435.9 950.7,427.0" fill="none" stroke="#a84f2a" stroke-width="5" stroke-linejoin="round"/>
+<line x1="100" y1="470.0" x2="980" y2="470.0" stroke="#d8cdbb"/>
+<text x="82" y="475.0" text-anchor="end" class="small">0</text>
+<line x1="100" y1="343.33333333333337" x2="980" y2="343.33333333333337" stroke="#d8cdbb"/>
+<text x="82" y="348.33333333333337" text-anchor="end" class="small">15</text>
+<line x1="100" y1="216.66666666666669" x2="980" y2="216.66666666666669" stroke="#d8cdbb"/>
+<text x="82" y="221.66666666666669" text-anchor="end" class="small">30</text>
+<line x1="100" y1="90.0" x2="980" y2="90.0" stroke="#d8cdbb"/>
+<text x="82" y="95.0" text-anchor="end" class="small">45</text>
+<text x="100.0" y="500" text-anchor="middle" class="small">1960</text>
+<text x="246.66666666666666" y="500" text-anchor="middle" class="small">1970</text>
+<text x="393.3333333333333" y="500" text-anchor="middle" class="small">1980</text>
+<text x="540.0" y="500" text-anchor="middle" class="small">1990</text>
+<text x="686.6666666666666" y="500" text-anchor="middle" class="small">2000</text>
+<text x="833.3333333333334" y="500" text-anchor="middle" class="small">2010</text>
+<text x="980.0" y="500" text-anchor="middle" class="small">2020</text>
+<line x1="300" y1="535" x2="345" y2="535" stroke="#176b68" stroke-width="5"/><text x="355" y="541" class="small">patrimônio</text>
+<line x1="595" y1="535" x2="640" y2="535" stroke="#a84f2a" stroke-width="5"/><text x="650" y="541" class="small">digital</text>
+<text x="550" y="575" text-anchor="middle" class="small">menções por 100 documentos · média móvel centrada de 5 anos</text>
+</svg>

@@ -1,4 +1,4 @@
-# Auditoria das fórmulas nos slides — Unidades 1 a 10
+# Auditoria das fórmulas nos slides — Unidades 1 a 11
 
 ## Critério
 
@@ -12,7 +12,7 @@ Cada slide de fórmula foi verificado quanto a três apoios:
 2. exemplo numérico ou aplicação concreta;
 3. gráfico, diagrama ou representação visual no próprio slide.
 
-Após a revisão, os 63 slides de fórmula das Unidades 1 a 10 atendem aos três
+Após a revisão, os 68 slides de fórmula das Unidades 1 a 11 atendem aos três
 critérios. Imagens laterais marcadas com `bg right` são apoios didáticos e possuem
 texto alternativo; não são decoração.
 
@@ -30,7 +30,8 @@ texto alternativo; não são decoração.
 | 8 | 6 | linguagem comum, exemplo e visual presentes |
 | 9 | 4 | linguagem comum, exemplo e visual presentes |
 | 10 | 3 | linguagem comum, exemplo e visual presentes |
-| **Total** | **63** | **conforme** |
+| 11 | 5 | linguagem comum, exemplo e visual presentes |
+| **Total** | **68** | **conforme** |
 
 ## Verificação individual
 
@@ -146,6 +147,16 @@ texto alternativo; não são decoração.
 | 42 | precisão | 11 acertos e 1 falso positivo no diagrama de avaliação |
 | 43 | revocação | 11 acertos e 1 falso negativo no diagrama de avaliação |
 | 44 | F1 | precisão e revocação de 0,917 e diagrama dos componentes |
+
+### Unidade 11
+
+| Slide | Fórmula ou medida | Apoio visual e exemplo |
+|---:|---|---|
+| 12 | taxa por 100 mil | 41 eventos, população de 71.727 e curvas de contagem/taxa |
+| 14 | crescimento percentual | passagem de 35 para 41 eventos e curva de contagens |
+| 22 | média móvel de três anos | taxas de 1989–1991 e comparação entre janelas |
+| 32 | menções por 100 documentos | 7 menções em 80 documentos e curvas lexicais |
+| 44 | padronização direta | pesos 70%/30%, taxas 120/650 e grades territoriais |
 
 ## Uso nas próximas unidades
 

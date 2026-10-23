@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="590" viewBox="0 0 1100 590" role="img">
+<title>Contagem e taxa no tempo</title>
+<desc>Dois painéis mostram eventos e taxa por cem mil habitantes, com ruptura de definição em 1990.</desc>
+<rect width="1100" height="590" fill="#fffdf7"/>
+<style>text{font-family:Aptos,Arial,sans-serif}.title{font-size:28px;font-weight:700;fill:#17324d}.label{font-size:19px;fill:#202a33}.small{font-size:16px;fill:#4b5563}.value{font-size:20px;font-weight:700;fill:#17324d}</style>
+<text x="550" y="38" text-anchor="middle" class="title">A curva muda quando a medida e a definição mudam</text>
+<rect x="75" y="100" width="420" height="350" fill="#f2eee5" stroke="#d8cdbb"/>
+<text x="285.0" y="78" text-anchor="middle" class="value">Contagem de eventos</text>
+<polyline points="75.0,399.4 82.0,364.4 89.0,364.4 96.0,348.9 103.0,356.7 110.0,360.6 117.0,345.0 124.0,356.7 131.0,337.2 138.0,333.3 145.0,337.2 152.0,337.2 159.0,360.6 166.0,333.3 173.0,333.3 180.0,352.8 187.0,321.7 194.0,333.3 201.0,321.7 208.0,352.8 215.0,333.3 222.0,345.0 229.0,345.0 236.0,345.0 243.0,368.3 250.0,325.6 257.0,341.1 264.0,333.3 271.0,333.3 278.0,313.9 285.0,290.6 292.0,263.3 299.0,259.4 306.0,243.9 313.0,255.6 320.0,251.7 327.0,247.8 334.0,224.4 341.0,228.3 348.0,228.3 355.0,224.4 362.0,232.2 369.0,243.9 376.0,232.2 383.0,240.0 390.0,232.2 397.0,236.1 404.0,232.2 411.0,216.7 418.0,243.9 425.0,224.4 432.0,228.3 439.0,220.6 446.0,228.3 453.0,243.9 460.0,232.2 467.0,224.4 474.0,208.9 481.0,228.3 488.0,236.1 495.0,212.8" fill="none" stroke="#a84f2a" stroke-width="4" stroke-linejoin="round"/>
+<line x1="285.0" y1="100" x2="285.0" y2="450" stroke="#17324d" stroke-width="3" stroke-dasharray="8 6"/>
+<text x="293.0" y="124" class="small">1990</text>
+<text x="75.0" y="480" text-anchor="middle" class="small">1960</text>
+<text x="215.0" y="480" text-anchor="middle" class="small">1980</text>
+<text x="355.0" y="480" text-anchor="middle" class="small">2000</text>
+<text x="495.0" y="480" text-anchor="middle" class="small">2020</text>
+<rect x="600" y="100" width="420" height="350" fill="#f2eee5" stroke="#d8cdbb"/>
+<text x="810.0" y="78" text-anchor="middle" class="value">Taxa por 100 mil</text>
+<polyline points="600.0,386.1 607.0,266.5 614.0,271.9 621.0,224.4 628.0,256.3 635.0,274.5 642.0,229.7 649.0,272.5 656.0,217.5 663.0,211.8 670.0,229.7 677.0,235.7 684.0,308.8 691.0,236.3 698.0,242.1 705.0,301.0 712.0,222.2 719.0,259.0 726.0,234.2 733.0,319.3 740.0,275.1 747.0,308.8 754.0,313.4 761.0,317.9 768.0,376.6 775.0,282.1 782.0,322.1 789.0,309.3 796.0,313.8 803.0,276.9 810.0,233.2 817.0,183.2 824.0,182.1 831.0,158.1 838.0,188.0 845.0,187.3 852.0,186.7 859.0,150.3 866.0,164.8 873.0,171.9 880.0,172.0 887.0,192.4 894.0,218.7 901.0,205.5 908.0,224.5 915.0,218.2 922.0,230.4 929.0,230.4 936.0,212.8 943.0,259.5 950.0,236.5 957.0,247.9 964.0,242.6 971.0,259.1 978.0,285.7 985.0,275.1 992.0,270.0 999.0,255.2 1006.0,285.4 1013.0,300.0 1020.0,276.2" fill="none" stroke="#176b68" stroke-width="4" stroke-linejoin="round"/>
+<line x1="810.0" y1="100" x2="810.0" y2="450" stroke="#17324d" stroke-width="3" stroke-dasharray="8 6"/>
+<text x="818.0" y="124" class="small">1990</text>
+<text x="600.0" y="480" text-anchor="middle" class="small">1960</text>
+<text x="740.0" y="480" text-anchor="middle" class="small">1980</text>
+<text x="880.0" y="480" text-anchor="middle" class="small">2000</text>
+<text x="1020.0" y="480" text-anchor="middle" class="small">2020</text>
+<text x="550" y="525" text-anchor="middle" class="label">linha tracejada = definição ampliada do registro</text>
+<text x="550" y="558" text-anchor="middle" class="small">O salto observado combina processo substantivo, população e mudança administrativa.</text>
+</svg>

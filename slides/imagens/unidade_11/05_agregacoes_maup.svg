@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="590" viewBox="0 0 1100 590" role="img">
+<title>Efeito de duas agregações territoriais</title>
+<desc>Barras comparam taxas agregadas por linhas e quadrantes da mesma grade.</desc>
+<rect width="1100" height="590" fill="#fffdf7"/>
+<style>text{font-family:Aptos,Arial,sans-serif}.title{font-size:28px;font-weight:700;fill:#17324d}.label{font-size:19px;fill:#202a33}.small{font-size:16px;fill:#4b5563}.value{font-size:20px;font-weight:700;fill:#17324d}</style>
+<text x="550" y="38" text-anchor="middle" class="title">As mesmas células formam padrões diferentes quando as fronteiras mudam</text>
+<text x="285" y="85" text-anchor="middle" class="value">Agregação por linhas</text>
+<text x="95" y="149" class="small">linha 1</text>
+<rect x="210" y="120" width="101.3" height="48" rx="6" fill="#176b68"/>
+<text x="321.3" y="151" class="small">245.0</text>
+<text x="95" y="244" class="small">linha 2</text>
+<rect x="210" y="215" width="163.1" height="48" rx="6" fill="#176b68"/>
+<text x="383.1" y="246" class="small">272.5</text>
+<text x="95" y="339" class="small">linha 3</text>
+<rect x="210" y="310" width="231.7" height="48" rx="6" fill="#176b68"/>
+<text x="451.7" y="341" class="small">303.0</text>
+<text x="95" y="434" class="small">linha 4</text>
+<rect x="210" y="405" width="273.9" height="48" rx="6" fill="#176b68"/>
+<text x="493.9" y="436" class="small">321.7</text>
+<text x="805" y="85" text-anchor="middle" class="value">Agregação por quadrantes</text>
+<text x="615" y="149" class="small">sul-oeste</text>
+<rect x="730" y="120" width="122.0" height="48" rx="6" fill="#a84f2a"/>
+<text x="862.0" y="151" class="small">254.2</text>
+<text x="615" y="244" class="small">sul-leste</text>
+<rect x="730" y="215" width="142.1" height="48" rx="6" fill="#a84f2a"/>
+<text x="882.1" y="246" class="small">263.2</text>
+<text x="615" y="339" class="small">norte-leste</text>
+<rect x="730" y="310" width="248.3" height="48" rx="6" fill="#a84f2a"/>
+<text x="988.3" y="341" class="small">310.4</text>
+<text x="615" y="434" class="small">norte-oeste</text>
+<rect x="730" y="405" width="261.3" height="48" rx="6" fill="#a84f2a"/>
+<text x="1001.3" y="436" class="small">316.1</text>
+<text x="550" y="530" text-anchor="middle" class="label">agrupar não apenas resume: também redefine vizinhanças e contrastes</text>
+<text x="550" y="567" text-anchor="middle" class="small">Exemplo de MAUP em grade fictícia; não infira características individuais.</text>
+</svg>

@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="590" viewBox="0 0 1100 590" role="img">
+<title>Contagem e taxa em uma grade territorial</title>
+<desc>Duas grades comparam ocorrências e taxas por cem mil; T16 lidera em contagem e T13 em taxa.</desc>
+<rect width="1100" height="590" fill="#fffdf7"/>
+<style>text{font-family:Aptos,Arial,sans-serif}.title{font-size:28px;font-weight:700;fill:#17324d}.label{font-size:19px;fill:#202a33}.small{font-size:16px;fill:#4b5563}.value{font-size:20px;font-weight:700;fill:#17324d}</style>
+<text x="550" y="38" text-anchor="middle" class="title">Trocar o denominador altera a geografia aparente</text>
+<text x="304" y="85" text-anchor="middle" class="value">Contagem</text>
+<rect x="120" y="440" width="92" height="92" fill="#f2eee5" stroke="white" stroke-width="4"/>
+<text x="166.0" y="479" text-anchor="middle" font-size="18" font-weight="700" fill="#17324d">T01</text>
+<text x="166.0" y="506" text-anchor="middle" font-size="16" fill="#17324d">22</text>
+<rect x="212" y="440" width="92" height="92" fill="#dae0d7" stroke="white" stroke-width="4"/>
+<text x="258.0" y="479" text-anchor="middle" font-size="18" font-weight="700" fill="#17324d">T02</text>
+<text x="258.0" y="506" text-anchor="middle" font-size="16" fill="#17324d">29</text>
+<rect x="304" y="440" width="92" height="92" fill="#bbcdc6" stroke="white" stroke-width="4"/>
+<text x="350.0" y="479" text-anchor="middle" font-size="18" font-weight="700" fill="#17324d">T03</text>
+<text x="350.0" y="506" text-anchor="middle" font-size="16" fill="#17324d">38</text>
+<rect x="396" y="440" width="92" height="92" fill="#92b5ae" stroke="white" stroke-width="4"/>
+<text x="442.0" y="479" text-anchor="middle" font-size="18" font-weight="700" fill="#17324d">T04</text>
+<text x="442.0" y="506" text-anchor="middle" font-size="16" fill="#17324d">50</text>
+<rect x="120" y="348" width="92" height="92" fill="#dde2d9" stroke="white" stroke-width="4"/>
+<text x="166.0" y="387" text-anchor="middle" font-size="18" font-weight="700" fill="#17324d">T05</text>
+<text x="166.0" y="414" text-anchor="middle" font-size="16" fill="#17324d">28</text>
+<rect x="212" y="348" width="92" height="92" fill="#aec5be" stroke="white" stroke-width="4"/>
+<text x="258.0" y="387" text-anchor="middle" font-size="18" font-weight="700" fill="#17324d">T06</text>
+<text x="258.0" y="414" text-anchor="middle" font-size="16" fill="#17324d">42</text>
+<rect x="304" y="348" width="92" height="92" fill="#99b9b2" stroke="white" stroke-width="4"/>
+<text x="350.0" y="387" text-anchor="middle" font-size="18" font-weight="700" fill="#17324d">T07</text>
+<text x="350.0" y="414" text-anchor="middle" font-size="16" fill="#17324d">48</text>
+<rect x="396" y="348" width="92" height="92" fill="#73a29d" stroke="white" stroke-width="4"/>
+<text x="442.0" y="387" text-anchor="middle" font-size="18" font-weight="700" fill="white">T08</text>
+<text x="442.0" y="414" text-anchor="middle" font-size="16" fill="white">59</text>
+<rect x="120" y="256" width="92" height="92" fill="#b8cbc4" stroke="white" stroke-width="4"/>
+<text x="166.0" y="295" text-anchor="middle" font-size="18" font-weight="700" fill="#17324d">T09</text>
+<text x="166.0" y="322" text-anchor="middle" font-size="16" fill="#17324d">39</text>
+<rect x="212" y="256" width="92" height="92" fill="#7ea8a3" stroke="white" stroke-width="4"/>
+<text x="258.0" y="295" text-anchor="middle" font-size="18" font-weight="700" fill="#17324d">T10</text>
+<text x="258.0" y="322" text-anchor="middle" font-size="16" fill="#17324d">56</text>
+<rect x="304" y="256" width="92" height="92" fill="#6d9e99" stroke="white" stroke-width="4"/>
+<text x="350.0" y="295" text-anchor="middle" font-size="18" font-weight="700" fill="white">T11</text>
+<text x="350.0" y="322" text-anchor="middle" font-size="16" fill="white">61</text>
+<rect x="396" y="256" width="92" height="92" fill="#367d7a" stroke="white" stroke-width="4"/>
+<text x="442.0" y="295" text-anchor="middle" font-size="18" font-weight="700" fill="white">T12</text>
+<text x="442.0" y="322" text-anchor="middle" font-size="16" fill="white">77</text>
+<rect x="120" y="164" width="92" height="92" fill="#81aaa5" stroke="white" stroke-width="4"/>
+<text x="166.0" y="203" text-anchor="middle" font-size="18" font-weight="700" fill="#17324d">T13</text>
+<text x="166.0" y="230" text-anchor="middle" font-size="16" fill="#17324d">55</text>
+<rect x="212" y="164" width="92" height="92" fill="#699c97" stroke="white" stroke-width="4"/>
+<text x="258.0" y="203" text-anchor="middle" font-size="18" font-weight="700" fill="white">T14</text>
+<text x="258.0" y="230" text-anchor="middle" font-size="16" fill="white">62</text>
+<rect x="304" y="164" width="92" height="92" fill="#58928d" stroke="white" stroke-width="4"/>
+<text x="350.0" y="203" text-anchor="middle" font-size="18" font-weight="700" fill="white">T15</text>
+<text x="350.0" y="230" text-anchor="middle" font-size="16" fill="white">67</text>
+<rect x="396" y="164" width="92" height="92" fill="#176b68" stroke="white" stroke-width="4"/>
+<text x="442.0" y="203" text-anchor="middle" font-size="18" font-weight="700" fill="white">T16</text>
+<text x="442.0" y="230" text-anchor="middle" font-size="16" fill="white">86</text>
+<text x="824" y="85" text-anchor="middle" class="value">Taxa por 100 mil</text>
+<rect x="640" y="440" width="92" height="92" fill="#a8c1ba" stroke="white" stroke-width="4"/>
+<text x="686.0" y="479" text-anchor="middle" font-size="18" font-weight="700" fill="#17324d">T01</text>
+<text x="686.0" y="506" text-anchor="middle" font-size="16" fill="#17324d">266</text>
+<rect x="732" y="440" width="92" height="92" fill="#f2eee5" stroke="white" stroke-width="4"/>
+<text x="778.0" y="479" text-anchor="middle" font-size="18" font-weight="700" fill="#17324d">T02</text>
+<text x="778.0" y="506" text-anchor="middle" font-size="16" fill="#17324d">225</text>
+<rect x="824" y="440" width="92" height="92" fill="#c7d4cc" stroke="white" stroke-width="4"/>
+<text x="870.0" y="479" text-anchor="middle" font-size="18" font-weight="700" fill="#17324d">T03</text>
+<text x="870.0" y="506" text-anchor="middle" font-size="16" fill="#17324d">249</text>
+<rect x="916" y="440" width="92" height="92" fill="#cbd6cf" stroke="white" stroke-width="4"/>
+<text x="962.0" y="479" text-anchor="middle" font-size="18" font-weight="700" fill="#17324d">T04</text>
+<text x="962.0" y="506" text-anchor="middle" font-size="16" fill="#17324d">246</text>
+<rect x="640" y="348" width="92" height="92" fill="#bdcec7" stroke="white" stroke-width="4"/>
+<text x="686.0" y="387" text-anchor="middle" font-size="18" font-weight="700" fill="#17324d">T05</text>
+<text x="686.0" y="414" text-anchor="middle" font-size="16" fill="#17324d">254</text>
+<rect x="732" y="348" width="92" height="92" fill="#9abab3" stroke="white" stroke-width="4"/>
+<text x="778.0" y="387" text-anchor="middle" font-size="18" font-weight="700" fill="#17324d">T06</text>
+<text x="778.0" y="414" text-anchor="middle" font-size="16" fill="#17324d">273</text>
+<rect x="824" y="348" width="92" height="92" fill="#98b8b2" stroke="white" stroke-width="4"/>
+<text x="870.0" y="387" text-anchor="middle" font-size="18" font-weight="700" fill="#17324d">T07</text>
+<text x="870.0" y="414" text-anchor="middle" font-size="16" fill="#17324d">274</text>
+<rect x="916" y="348" width="92" height="92" fill="#8cb1ab" stroke="white" stroke-width="4"/>
+<text x="962.0" y="387" text-anchor="middle" font-size="18" font-weight="700" fill="#17324d">T08</text>
+<text x="962.0" y="414" text-anchor="middle" font-size="16" fill="#17324d">281</text>
+<rect x="640" y="256" width="92" height="92" fill="#86aea8" stroke="white" stroke-width="4"/>
+<text x="686.0" y="295" text-anchor="middle" font-size="18" font-weight="700" fill="#17324d">T09</text>
+<text x="686.0" y="322" text-anchor="middle" font-size="16" fill="#17324d">284</text>
+<rect x="732" y="256" width="92" height="92" fill="#4a8a85" stroke="white" stroke-width="4"/>
+<text x="778.0" y="295" text-anchor="middle" font-size="18" font-weight="700" fill="white">T10</text>
+<text x="778.0" y="322" text-anchor="middle" font-size="16" fill="white">316</text>
+<rect x="824" y="256" width="92" height="92" fill="#6f9f9a" stroke="white" stroke-width="4"/>
+<text x="870.0" y="295" text-anchor="middle" font-size="18" font-weight="700" fill="white">T11</text>
+<text x="870.0" y="322" text-anchor="middle" font-size="16" fill="white">297</text>
+<rect x="916" y="256" width="92" height="92" fill="#57918c" stroke="white" stroke-width="4"/>
+<text x="962.0" y="295" text-anchor="middle" font-size="18" font-weight="700" fill="white">T12</text>
+<text x="962.0" y="322" text-anchor="middle" font-size="16" fill="white">310</text>
+<rect x="640" y="164" width="92" height="92" fill="#176b68" stroke="white" stroke-width="4"/>
+<text x="686.0" y="203" text-anchor="middle" font-size="18" font-weight="700" fill="white">T13</text>
+<text x="686.0" y="230" text-anchor="middle" font-size="16" fill="white">344</text>
+<rect x="732" y="164" width="92" height="92" fill="#4b8a86" stroke="white" stroke-width="4"/>
+<text x="778.0" y="203" text-anchor="middle" font-size="18" font-weight="700" fill="white">T14</text>
+<text x="778.0" y="230" text-anchor="middle" font-size="16" fill="white">316</text>
+<rect x="824" y="164" width="92" height="92" fill="#5e9590" stroke="white" stroke-width="4"/>
+<text x="870.0" y="203" text-anchor="middle" font-size="18" font-weight="700" fill="white">T15</text>
+<text x="870.0" y="230" text-anchor="middle" font-size="16" fill="white">306</text>
+<rect x="916" y="164" width="92" height="92" fill="#397f7b" stroke="white" stroke-width="4"/>
+<text x="962.0" y="203" text-anchor="middle" font-size="18" font-weight="700" fill="white">T16</text>
+<text x="962.0" y="230" text-anchor="middle" font-size="16" fill="white">326</text>
+<text x="304" y="525" text-anchor="middle" class="label">máximo: T16 = 86</text>
+<text x="824" y="525" text-anchor="middle" class="label">máximo: T13 = 344</text>
+<text x="550" y="570" text-anchor="middle" class="small">Grade abstrata 4 × 4 — não representa território real</text>
+</svg>

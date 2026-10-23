@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="590" viewBox="0 0 1100 590" role="img">
+<title>Rede projetada de coocorrência</title>
+<desc>Rede de quatorze entidades e quarenta e duas arestas; espessura representa coocorrências.</desc>
+<rect width="1100" height="590" fill="#fffdf7"/>
+<style>text{font-family:Aptos,Arial,sans-serif}.title{font-size:28px;font-weight:700;fill:#17324d}.label{font-size:20px;fill:#202a33}.small{font-size:16px;fill:#4b5563}.value{font-size:19px;font-weight:700;fill:#17324d}</style>
+<text x="550" y="38" text-anchor="middle" class="title">Uma projeção torna relações visíveis — e perde contexto</text>
+<line x1="195" y1="125" x2="890" y2="485" stroke="#9ba7ad" stroke-width="4.0" stroke-opacity="0.55"/>
+<line x1="490" y1="95" x2="665" y2="370" stroke="#9ba7ad" stroke-width="3.2" stroke-opacity="0.55"/>
+<line x1="810" y1="90" x2="720" y2="190" stroke="#9ba7ad" stroke-width="3.2" stroke-opacity="0.55"/>
+<line x1="330" y1="205" x2="145" y2="485" stroke="#9ba7ad" stroke-width="3.2" stroke-opacity="0.55"/>
+<line x1="970" y1="205" x2="865" y2="330" stroke="#9ba7ad" stroke-width="3.2" stroke-opacity="0.55"/>
+<line x1="405" y1="405" x2="520" y2="500" stroke="#9ba7ad" stroke-width="3.2" stroke-opacity="0.55"/>
+<line x1="490" y1="95" x2="720" y2="190" stroke="#9ba7ad" stroke-width="2.4" stroke-opacity="0.55"/>
+<line x1="810" y1="90" x2="665" y2="370" stroke="#9ba7ad" stroke-width="2.4" stroke-opacity="0.55"/>
+<line x1="330" y1="205" x2="405" y2="405" stroke="#9ba7ad" stroke-width="2.4" stroke-opacity="0.55"/>
+<line x1="970" y1="205" x2="535" y2="260" stroke="#9ba7ad" stroke-width="2.4" stroke-opacity="0.55"/>
+<line x1="970" y1="205" x2="720" y2="190" stroke="#9ba7ad" stroke-width="2.4" stroke-opacity="0.55"/>
+<line x1="195" y1="125" x2="405" y2="405" stroke="#9ba7ad" stroke-width="2.4" stroke-opacity="0.55"/>
+<line x1="195" y1="125" x2="210" y2="365" stroke="#9ba7ad" stroke-width="2.4" stroke-opacity="0.55"/>
+<line x1="405" y1="405" x2="145" y2="485" stroke="#9ba7ad" stroke-width="2.4" stroke-opacity="0.55"/>
+<line x1="145" y1="485" x2="535" y2="260" stroke="#9ba7ad" stroke-width="2.4" stroke-opacity="0.55"/>
+<line x1="665" y1="370" x2="720" y2="190" stroke="#9ba7ad" stroke-width="2.4" stroke-opacity="0.55"/>
+<line x1="665" y1="370" x2="865" y2="330" stroke="#9ba7ad" stroke-width="2.4" stroke-opacity="0.55"/>
+<line x1="520" y1="500" x2="535" y2="260" stroke="#9ba7ad" stroke-width="2.4" stroke-opacity="0.55"/>
+<line x1="520" y1="500" x2="210" y2="365" stroke="#9ba7ad" stroke-width="2.4" stroke-opacity="0.55"/>
+<line x1="890" y1="485" x2="210" y2="365" stroke="#9ba7ad" stroke-width="2.4" stroke-opacity="0.55"/>
+<line x1="535" y1="260" x2="720" y2="190" stroke="#9ba7ad" stroke-width="2.4" stroke-opacity="0.55"/>
+<line x1="535" y1="260" x2="210" y2="365" stroke="#9ba7ad" stroke-width="2.4" stroke-opacity="0.55"/>
+<line x1="720" y1="190" x2="865" y2="330" stroke="#9ba7ad" stroke-width="2.4" stroke-opacity="0.55"/>
+<line x1="490" y1="95" x2="330" y2="205" stroke="#9ba7ad" stroke-width="1.6" stroke-opacity="0.55"/>
+<line x1="490" y1="95" x2="535" y2="260" stroke="#9ba7ad" stroke-width="1.6" stroke-opacity="0.55"/>
+<line x1="490" y1="95" x2="865" y2="330" stroke="#9ba7ad" stroke-width="1.6" stroke-opacity="0.55"/>
+<line x1="810" y1="90" x2="330" y2="205" stroke="#9ba7ad" stroke-width="1.6" stroke-opacity="0.55"/>
+<line x1="810" y1="90" x2="535" y2="260" stroke="#9ba7ad" stroke-width="1.6" stroke-opacity="0.55"/>
+<line x1="810" y1="90" x2="865" y2="330" stroke="#9ba7ad" stroke-width="1.6" stroke-opacity="0.55"/>
+<line x1="330" y1="205" x2="195" y2="125" stroke="#9ba7ad" stroke-width="1.6" stroke-opacity="0.55"/>
+<line x1="330" y1="205" x2="665" y2="370" stroke="#9ba7ad" stroke-width="1.6" stroke-opacity="0.55"/>
+<line x1="330" y1="205" x2="890" y2="485" stroke="#9ba7ad" stroke-width="1.6" stroke-opacity="0.55"/>
+<line x1="330" y1="205" x2="535" y2="260" stroke="#9ba7ad" stroke-width="1.6" stroke-opacity="0.55"/>
+<line x1="330" y1="205" x2="720" y2="190" stroke="#9ba7ad" stroke-width="1.6" stroke-opacity="0.55"/>
+<line x1="970" y1="205" x2="665" y2="370" stroke="#9ba7ad" stroke-width="1.6" stroke-opacity="0.55"/>
+<line x1="195" y1="125" x2="520" y2="500" stroke="#9ba7ad" stroke-width="1.6" stroke-opacity="0.55"/>
+<line x1="405" y1="405" x2="890" y2="485" stroke="#9ba7ad" stroke-width="1.6" stroke-opacity="0.55"/>
+<line x1="405" y1="405" x2="535" y2="260" stroke="#9ba7ad" stroke-width="1.6" stroke-opacity="0.55"/>
+<line x1="405" y1="405" x2="210" y2="365" stroke="#9ba7ad" stroke-width="1.6" stroke-opacity="0.55"/>
+<line x1="145" y1="485" x2="210" y2="365" stroke="#9ba7ad" stroke-width="1.6" stroke-opacity="0.55"/>
+<line x1="665" y1="370" x2="535" y2="260" stroke="#9ba7ad" stroke-width="1.6" stroke-opacity="0.55"/>
+<line x1="535" y1="260" x2="865" y2="330" stroke="#9ba7ad" stroke-width="1.6" stroke-opacity="0.55"/>
+<circle cx="490" cy="95" r="18.0" fill="#69445f" fill-opacity="0.9" stroke="white" stroke-width="2"/>
+<text x="490" y="131.0" text-anchor="middle" class="small">Ana F.</text>
+<circle cx="810" cy="90" r="18.0" fill="#69445f" fill-opacity="0.9" stroke="white" stroke-width="2"/>
+<text x="810" y="126.0" text-anchor="middle" class="small">Bento R.</text>
+<circle cx="330" cy="205" r="21.0" fill="#176b68" fill-opacity="0.9" stroke="white" stroke-width="2"/>
+<text x="330" y="244.0" text-anchor="middle" class="small">Biblioteca Popular</text>
+<circle cx="970" cy="205" r="18.0" fill="#69445f" fill-opacity="0.9" stroke="white" stroke-width="2"/>
+<text x="970" y="241.0" text-anchor="middle" class="small">Caio M.</text>
+<circle cx="195" cy="125" r="19.5" fill="#176b68" fill-opacity="0.9" stroke="white" stroke-width="2"/>
+<text x="195" y="162.5" text-anchor="middle" class="small">Cooperativa Leste</text>
+<circle cx="405" cy="405" r="21.0" fill="#176b68" fill-opacity="0.9" stroke="white" stroke-width="2"/>
+<text x="405" y="444.0" text-anchor="middle" class="small">Círculo Sul</text>
+<circle cx="145" cy="485" r="18.0" fill="#69445f" fill-opacity="0.9" stroke="white" stroke-width="2"/>
+<text x="145" y="521.0" text-anchor="middle" class="small">Dora S.</text>
+<circle cx="665" cy="370" r="21.0" fill="#176b68" fill-opacity="0.9" stroke="white" stroke-width="2"/>
+<text x="665" y="409.0" text-anchor="middle" class="small">Escola Livre</text>
+<circle cx="520" cy="500" r="18.0" fill="#69445f" fill-opacity="0.9" stroke="white" stroke-width="2"/>
+<text x="520" y="536.0" text-anchor="middle" class="small">Eva L.</text>
+<circle cx="890" cy="485" r="18.0" fill="#69445f" fill-opacity="0.9" stroke="white" stroke-width="2"/>
+<text x="890" y="521.0" text-anchor="middle" class="small">Fábio C.</text>
+<circle cx="535" cy="260" r="24.0" fill="#a84f2a" fill-opacity="0.9" stroke="white" stroke-width="2"/>
+<text x="535" y="302.0" text-anchor="middle" class="small">Jornal Horizonte</text>
+<circle cx="720" cy="190" r="22.5" fill="#176b68" fill-opacity="0.9" stroke="white" stroke-width="2"/>
+<text x="720" y="230.5" text-anchor="middle" class="small">Liga Aurora</text>
+<circle cx="865" cy="330" r="19.5" fill="#176b68" fill-opacity="0.9" stroke="white" stroke-width="2"/>
+<text x="865" y="367.5" text-anchor="middle" class="small">Sindicato Norte</text>
+<circle cx="210" cy="365" r="19.5" fill="#176b68" fill-opacity="0.9" stroke="white" stroke-width="2"/>
+<text x="210" y="402.5" text-anchor="middle" class="small">Teatro União</text>
+<text x="840" y="555" class="small">nó maior = maior força (soma dos pesos)</text>
+<text x="65" y="555" class="small">posição = recurso visual, não localização geográfica</text>
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="590" viewBox="0 0 1100 590" role="img">
+<title>Perfis padronizados dos grupos</title>
+<desc>Mapa de calor mostra médias padronizadas de quatro variáveis em três grupos.</desc>
+<rect width="1100" height="590" fill="#fffdf7"/>
+<style>text{font-family:Aptos,Arial,sans-serif}.title{font-size:28px;font-weight:700;fill:#17324d}.label{font-size:19px;fill:#202a33}.small{font-size:16px;fill:#4b5563}.value{font-size:20px;font-weight:700;fill:#17324d}</style>
+<text x="550" y="40" text-anchor="middle" class="title">Descreva os perfis antes de nomeá-los</text>
+<text x="372.5" y="100" text-anchor="middle" class="small">acervo</text>
+<text x="527.5" y="100" text-anchor="middle" class="small">eventos</text>
+<text x="682.5" y="100" text-anchor="middle" class="small">público</text>
+<text x="837.5" y="100" text-anchor="middle" class="small">orçamento</text>
+<text x="270" y="181.0" text-anchor="end" class="label">Grupo 0</text>
+<rect x="295" y="120" width="155" height="110" fill="#69445f" fill-opacity="0.42" stroke="white" stroke-width="3"/>
+<text x="372.5" y="183.0" text-anchor="middle" font-size="24" font-weight="700" fill="#17324d">-0.35</text>
+<rect x="450" y="120" width="155" height="110" fill="#176b68" fill-opacity="0.93" stroke="white" stroke-width="3"/>
+<text x="527.5" y="183.0" text-anchor="middle" font-size="24" font-weight="700" fill="#17324d">+1.13</text>
+<rect x="605" y="120" width="155" height="110" fill="#69445f" fill-opacity="0.23" stroke="white" stroke-width="3"/>
+<text x="682.5" y="183.0" text-anchor="middle" font-size="24" font-weight="700" fill="#17324d">-0.08</text>
+<rect x="760" y="120" width="155" height="110" fill="#69445f" fill-opacity="0.24" stroke="white" stroke-width="3"/>
+<text x="837.5" y="183.0" text-anchor="middle" font-size="24" font-weight="700" fill="#17324d">-0.09</text>
+<text x="270" y="291.0" text-anchor="end" class="label">Grupo 1</text>
+<rect x="295" y="230" width="155" height="110" fill="#69445f" fill-opacity="0.78" stroke="white" stroke-width="3"/>
+<text x="372.5" y="293.0" text-anchor="middle" font-size="24" font-weight="700" fill="#17324d">-0.91</text>
+<rect x="450" y="230" width="155" height="110" fill="#69445f" fill-opacity="0.96" stroke="white" stroke-width="3"/>
+<text x="527.5" y="293.0" text-anchor="middle" font-size="24" font-weight="700" fill="#17324d">-1.17</text>
+<rect x="605" y="230" width="155" height="110" fill="#69445f" fill-opacity="0.91" stroke="white" stroke-width="3"/>
+<text x="682.5" y="293.0" text-anchor="middle" font-size="24" font-weight="700" fill="#17324d">-1.10</text>
+<rect x="760" y="230" width="155" height="110" fill="#69445f" fill-opacity="0.88" stroke="white" stroke-width="3"/>
+<text x="837.5" y="293.0" text-anchor="middle" font-size="24" font-weight="700" fill="#17324d">-1.06</text>
+<text x="270" y="401.0" text-anchor="end" class="label">Grupo 2</text>
+<rect x="295" y="340" width="155" height="110" fill="#176b68" fill-opacity="1.00" stroke="white" stroke-width="3"/>
+<text x="372.5" y="403.0" text-anchor="middle" font-size="24" font-weight="700" fill="#17324d">+1.26</text>
+<rect x="450" y="340" width="155" height="110" fill="#176b68" fill-opacity="0.20" stroke="white" stroke-width="3"/>
+<text x="527.5" y="403.0" text-anchor="middle" font-size="24" font-weight="700" fill="#17324d">+0.04</text>
+<rect x="605" y="340" width="155" height="110" fill="#176b68" fill-opacity="0.97" stroke="white" stroke-width="3"/>
+<text x="682.5" y="403.0" text-anchor="middle" font-size="24" font-weight="700" fill="#17324d">+1.18</text>
+<rect x="760" y="340" width="155" height="110" fill="#176b68" fill-opacity="0.95" stroke="white" stroke-width="3"/>
+<text x="837.5" y="403.0" text-anchor="middle" font-size="24" font-weight="700" fill="#17324d">+1.15</text>
+<rect x="330" y="500" width="22" height="22" fill="#69445f" fill-opacity=".65"/><text x="363" y="518" class="small">abaixo da média</text>
+<rect x="590" y="500" width="22" height="22" fill="#176b68" fill-opacity=".65"/><text x="623" y="518" class="small">acima da média</text>
+</svg>

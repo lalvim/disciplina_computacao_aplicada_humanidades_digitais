@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="590" viewBox="0 0 1100 590" role="img">
+<title>Mistura média de tópicos por período</title>
+<desc>Três linhas mostram proporções médias de componentes probabilísticos em três períodos.</desc>
+<rect width="1100" height="590" fill="#fffdf7"/>
+<style>text{font-family:Aptos,Arial,sans-serif}.title{font-size:28px;font-weight:700;fill:#17324d}.label{font-size:19px;fill:#202a33}.small{font-size:16px;fill:#4b5563}.value{font-size:20px;font-weight:700;fill:#17324d}</style>
+<text x="550" y="40" text-anchor="middle" class="title">Uma curva temporal descreve a composição do corpus</text>
+<line x1="120" y1="480" x2="940" y2="480" stroke="#d8cdbb"/>
+<text x="95" y="485" text-anchor="end" class="small">0.00</text>
+<line x1="120" y1="382.5" x2="940" y2="382.5" stroke="#d8cdbb"/>
+<text x="95" y="387.5" text-anchor="end" class="small">0.25</text>
+<line x1="120" y1="285.0" x2="940" y2="285.0" stroke="#d8cdbb"/>
+<text x="95" y="290.0" text-anchor="end" class="small">0.50</text>
+<line x1="120" y1="187.5" x2="940" y2="187.5" stroke="#d8cdbb"/>
+<text x="95" y="192.5" text-anchor="end" class="small">0.75</text>
+<line x1="120" y1="90" x2="940" y2="90" stroke="#d8cdbb"/>
+<text x="95" y="95" text-anchor="end" class="small">1.00</text>
+<polyline points="120.0,295.6 530.0,333.4 940.0,275.5" fill="none" stroke="#176b68" stroke-width="4"/>
+<circle cx="120.0" cy="295.6" r="7" fill="#176b68"/>
+<text x="120.0" y="283.6" text-anchor="middle" class="small">0.473</text>
+<circle cx="530.0" cy="333.4" r="7" fill="#176b68"/>
+<text x="530.0" y="321.4" text-anchor="middle" class="small">0.376</text>
+<circle cx="940.0" cy="275.5" r="7" fill="#176b68"/>
+<text x="940.0" y="263.5" text-anchor="middle" class="small">0.524</text>
+<polyline points="120.0,394.3 530.0,381.7 940.0,406.8" fill="none" stroke="#a84f2a" stroke-width="4"/>
+<circle cx="120.0" cy="394.3" r="7" fill="#a84f2a"/>
+<text x="120.0" y="382.3" text-anchor="middle" class="small">0.220</text>
+<circle cx="530.0" cy="381.7" r="7" fill="#a84f2a"/>
+<text x="530.0" y="369.7" text-anchor="middle" class="small">0.252</text>
+<circle cx="940.0" cy="406.8" r="7" fill="#a84f2a"/>
+<text x="940.0" y="394.8" text-anchor="middle" class="small">0.188</text>
+<polyline points="120.0,360.1 530.0,335.0 940.0,367.7" fill="none" stroke="#69445f" stroke-width="4"/>
+<circle cx="120.0" cy="360.1" r="7" fill="#69445f"/>
+<text x="120.0" y="348.1" text-anchor="middle" class="small">0.307</text>
+<circle cx="530.0" cy="335.0" r="7" fill="#69445f"/>
+<text x="530.0" y="323.0" text-anchor="middle" class="small">0.372</text>
+<circle cx="940.0" cy="367.7" r="7" fill="#69445f"/>
+<text x="940.0" y="355.7" text-anchor="middle" class="small">0.288</text>
+<text x="120.0" y="510" text-anchor="middle" class="small">1890–1899</text>
+<text x="530.0" y="510" text-anchor="middle" class="small">1900–1909</text>
+<text x="940.0" y="510" text-anchor="middle" class="small">1910–1919</text>
+<line x1="965" y1="145" x2="1010" y2="145" stroke="#176b68" stroke-width="5"/>
+<text x="1020" y="151" class="small">Tópico 0</text>
+<line x1="965" y1="187" x2="1010" y2="187" stroke="#a84f2a" stroke-width="5"/>
+<text x="1020" y="193" class="small">Tópico 1</text>
+<line x1="965" y1="229" x2="1010" y2="229" stroke="#69445f" stroke-width="5"/>
+<text x="1020" y="235" class="small">Tópico 2</text>
+<text x="550" y="560" text-anchor="middle" class="small">Mudança na média não demonstra mudança histórica sem inspeção das fontes e da composição</text>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="590" viewBox="0 0 1100 590" role="img">
+<title>Inércia e silhueta por número de grupos</title>
+<desc>A inércia cai continuamente; a silhueta atinge maior valor em três grupos.</desc>
+<rect width="1100" height="590" fill="#fffdf7"/>
+<style>text{font-family:Aptos,Arial,sans-serif}.title{font-size:28px;font-weight:700;fill:#17324d}.label{font-size:19px;fill:#202a33}.small{font-size:16px;fill:#4b5563}.value{font-size:20px;font-weight:700;fill:#17324d}</style>
+<text x="550" y="38" text-anchor="middle" class="title">Nenhuma curva escolhe a interpretação por nós</text>
+<rect x="90" y="100" width="390" height="350" fill="#f5f0e6" stroke="#d8cdbb"/>
+<text x="285.0" y="82" text-anchor="middle" class="value">Inércia</text>
+<polyline points="90.0,137.5 187.5,344.1 285.0,359.9 382.5,372.1 480.0,382.7" fill="none" stroke="#a84f2a" stroke-width="4"/>
+<circle cx="90.0" cy="137.5" r="7" fill="#a84f2a"/>
+<text x="90.0" y="480" text-anchor="middle" class="small">2</text>
+<text x="90.0" y="125.5" text-anchor="middle" class="small">209.793</text>
+<circle cx="187.5" cy="344.1" r="7" fill="#a84f2a"/>
+<text x="187.5" y="480" text-anchor="middle" class="small">3</text>
+<text x="187.5" y="332.1" text-anchor="middle" class="small">71.099</text>
+<circle cx="285.0" cy="359.9" r="7" fill="#a84f2a"/>
+<text x="285.0" y="480" text-anchor="middle" class="small">4</text>
+<text x="285.0" y="347.9" text-anchor="middle" class="small">60.509</text>
+<circle cx="382.5" cy="372.1" r="7" fill="#a84f2a"/>
+<text x="382.5" y="480" text-anchor="middle" class="small">5</text>
+<text x="382.5" y="360.1" text-anchor="middle" class="small">52.304</text>
+<circle cx="480.0" cy="382.7" r="7" fill="#a84f2a"/>
+<text x="480.0" y="480" text-anchor="middle" class="small">6</text>
+<text x="480.0" y="370.7" text-anchor="middle" class="small">45.184</text>
+<text x="285.0" y="520" text-anchor="middle" class="small">número de grupos k</text>
+<rect x="610" y="100" width="390" height="350" fill="#f5f0e6" stroke="#d8cdbb"/>
+<text x="805.0" y="82" text-anchor="middle" class="value">Silhueta</text>
+<polyline points="610.0,191.7 707.5,145.2 805.0,192.6 902.5,239.7 1000.0,235.8" fill="none" stroke="#176b68" stroke-width="4"/>
+<circle cx="610.0" cy="191.7" r="7" fill="#176b68"/>
+<text x="610.0" y="480" text-anchor="middle" class="small">2</text>
+<text x="610.0" y="179.7" text-anchor="middle" class="small">0.554</text>
+<circle cx="707.5" cy="145.2" r="7" fill="#176b68"/>
+<text x="707.5" y="480" text-anchor="middle" class="small">3</text>
+<text x="707.5" y="133.2" text-anchor="middle" class="small">0.653</text>
+<circle cx="805.0" cy="192.6" r="7" fill="#176b68"/>
+<text x="805.0" y="480" text-anchor="middle" class="small">4</text>
+<text x="805.0" y="180.6" text-anchor="middle" class="small">0.552</text>
+<circle cx="902.5" cy="239.7" r="7" fill="#176b68"/>
+<text x="902.5" y="480" text-anchor="middle" class="small">5</text>
+<text x="902.5" y="227.7" text-anchor="middle" class="small">0.451</text>
+<circle cx="1000.0" cy="235.8" r="7" fill="#176b68"/>
+<text x="1000.0" y="480" text-anchor="middle" class="small">6</text>
+<text x="1000.0" y="223.8" text-anchor="middle" class="small">0.459</text>
+<text x="805.0" y="520" text-anchor="middle" class="small">número de grupos k</text>
+</svg>

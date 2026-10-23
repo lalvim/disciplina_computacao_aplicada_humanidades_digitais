@@ -1,4 +1,4 @@
-# Auditoria das fórmulas nos slides — Unidades 1 a 8
+# Auditoria das fórmulas nos slides — Unidades 1 a 9
 
 ## Critério
 
@@ -12,7 +12,7 @@ Cada slide de fórmula foi verificado quanto a três apoios:
 2. exemplo numérico ou aplicação concreta;
 3. gráfico, diagrama ou representação visual no próprio slide.
 
-Após a revisão, os 56 slides de fórmula das Unidades 1 a 8 atendem aos três
+Após a revisão, os 60 slides de fórmula das Unidades 1 a 9 atendem aos três
 critérios. Imagens laterais marcadas com `bg right` são apoios didáticos e possuem
 texto alternativo; não são decoração.
 
@@ -28,7 +28,8 @@ texto alternativo; não são decoração.
 | 6 | 10 | linguagem comum, exemplo e visual presentes |
 | 7 | 12 | linguagem comum, exemplo e visual presentes |
 | 8 | 6 | linguagem comum, exemplo e visual presentes |
-| **Total** | **56** | **conforme** |
+| 9 | 4 | linguagem comum, exemplo e visual presentes |
+| **Total** | **60** | **conforme** |
 
 ## Verificação individual
 
@@ -127,6 +128,15 @@ texto alternativo; não são decoração.
 | 39 | precisão | 10 de 21 positivos previstos e matriz da árvore |
 | 40 | revocação | 10 de 20 relevantes encontrados e matriz da árvore |
 | 41 | F1 | precisão e revocação da árvore e gráfico comparativo |
+
+### Unidade 9
+
+| Slide | Fórmula ou medida | Apoio visual e exemplo |
+|---:|---|---|
+| 12 | padronização | orçamento de 900 mil, média de 600 mil, desvio de 150 mil e escala visual |
+| 14 | distância euclidiana | deslocamentos 3 e 4, distância 5 e escala visual |
+| 19 | silhueta | distâncias médias 2 e 5, resultado 0,60 e curvas de diagnóstico |
+| 48 | mistura de tópicos | proporções 0,60, 0,30 e 0,10 e esquema do LDA |
 
 ## Uso nas próximas unidades
 

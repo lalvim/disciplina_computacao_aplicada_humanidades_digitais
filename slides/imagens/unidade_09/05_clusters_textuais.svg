@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="590" viewBox="0 0 1100 590" role="img">
+<title>Termos característicos dos agrupamentos textuais</title>
+<desc>Três cartões apresentam termos associados a educação, saúde e cultura.</desc>
+<rect width="1100" height="590" fill="#fffdf7"/>
+<style>text{font-family:Aptos,Arial,sans-serif}.title{font-size:28px;font-weight:700;fill:#17324d}.label{font-size:19px;fill:#202a33}.small{font-size:16px;fill:#4b5563}.value{font-size:20px;font-weight:700;fill:#17324d}</style>
+<text x="550" y="40" text-anchor="middle" class="title">Os termos sugerem nomes; os documentos podem contestá-los</text>
+<rect x="65" y="100" width="310" height="385" rx="14" fill="#f2eee5" stroke="#176b68" stroke-width="5"/>
+<text x="220" y="148" text-anchor="middle" class="value">Grupo 0 · n=60</text>
+<text x="220" y="184" text-anchor="middle" class="small">hipótese: educação</text>
+<text x="100" y="235" class="label">• educação</text>
+<text x="100" y="274" class="label">• ensino</text>
+<text x="100" y="313" class="label">• escolar ensino</text>
+<text x="100" y="352" class="label">• escolar</text>
+<text x="100" y="391" class="label">• educação escolar</text>
+<text x="100" y="430" class="label">• ensino biblioteca</text>
+<rect x="410" y="100" width="310" height="385" rx="14" fill="#f2eee5" stroke="#a84f2a" stroke-width="5"/>
+<text x="565" y="148" text-anchor="middle" class="value">Grupo 1 · n=66</text>
+<text x="565" y="184" text-anchor="middle" class="small">hipótese: saúde</text>
+<text x="445" y="235" class="label">• sanitária</text>
+<text x="445" y="274" class="label">• cuidado</text>
+<text x="445" y="313" class="label">• saúde</text>
+<text x="445" y="352" class="label">• sanitária cuidado</text>
+<text x="445" y="391" class="label">• saúde sanitária</text>
+<text x="445" y="430" class="label">• posto prevenção</text>
+<rect x="755" y="100" width="310" height="385" rx="14" fill="#f2eee5" stroke="#69445f" stroke-width="5"/>
+<text x="910" y="148" text-anchor="middle" class="value">Grupo 2 · n=54</text>
+<text x="910" y="184" text-anchor="middle" class="small">hipótese: cultura</text>
+<text x="790" y="235" class="label">• cultura</text>
+<text x="790" y="274" class="label">• patrimônio</text>
+<text x="790" y="313" class="label">• artística patrimônio</text>
+<text x="790" y="352" class="label">• cultura artística</text>
+<text x="790" y="391" class="label">• artística</text>
+<text x="790" y="430" class="label">• exposição artista</text>
+<text x="550" y="545" text-anchor="middle" class="small">Silhueta cosseno = 0,434 · nomes são interpretações provisórias</text>
+</svg>

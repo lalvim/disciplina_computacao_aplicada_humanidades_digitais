@@ -78,6 +78,7 @@ Antes de usar em aula, confira:
 | 6 | Associações e grafos | [`unidade_06.md`](unidade_06.md) |
 | 7 | Modelos de associação condicionada | [`unidade_07.md`](unidade_07.md) |
 | 8 | Classificação supervisionada | [`unidade_08.md`](unidade_08.md) |
+| 9 | Agrupamentos e temas | [`unidade_09.md`](unidade_09.md) |
 
 As demais unidades serão acrescentadas conforme as etapas definidas no plano.
 

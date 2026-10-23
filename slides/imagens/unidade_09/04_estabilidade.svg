@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="590" viewBox="0 0 1100 590" role="img">
+<title>Estabilidade em vinte subamostras</title>
+<desc>Vinte barras atingem ARI igual a um na base sintética.</desc>
+<rect width="1100" height="590" fill="#fffdf7"/>
+<style>text{font-family:Aptos,Arial,sans-serif}.title{font-size:28px;font-weight:700;fill:#17324d}.label{font-size:19px;fill:#202a33}.small{font-size:16px;fill:#4b5563}.value{font-size:20px;font-weight:700;fill:#17324d}</style>
+<text x="550" y="40" text-anchor="middle" class="title">Estabilidade perfeita também precisa de contexto</text>
+<rect x="95.0" y="100.0" width="39.0" height="350.0" fill="#176b68" rx="3"/>
+<rect x="140.0" y="100.0" width="39.0" height="350.0" fill="#176b68" rx="3"/>
+<rect x="185.0" y="100.0" width="39.0" height="350.0" fill="#176b68" rx="3"/>
+<rect x="230.0" y="100.0" width="39.0" height="350.0" fill="#176b68" rx="3"/>
+<rect x="275.0" y="100.0" width="39.0" height="350.0" fill="#176b68" rx="3"/>
+<rect x="320.0" y="100.0" width="39.0" height="350.0" fill="#176b68" rx="3"/>
+<rect x="365.0" y="100.0" width="39.0" height="350.0" fill="#176b68" rx="3"/>
+<rect x="410.0" y="100.0" width="39.0" height="350.0" fill="#176b68" rx="3"/>
+<rect x="455.0" y="100.0" width="39.0" height="350.0" fill="#176b68" rx="3"/>
+<rect x="500.0" y="100.0" width="39.0" height="350.0" fill="#176b68" rx="3"/>
+<rect x="545.0" y="100.0" width="39.0" height="350.0" fill="#176b68" rx="3"/>
+<rect x="590.0" y="100.0" width="39.0" height="350.0" fill="#176b68" rx="3"/>
+<rect x="635.0" y="100.0" width="39.0" height="350.0" fill="#176b68" rx="3"/>
+<rect x="680.0" y="100.0" width="39.0" height="350.0" fill="#176b68" rx="3"/>
+<rect x="725.0" y="100.0" width="39.0" height="350.0" fill="#176b68" rx="3"/>
+<rect x="770.0" y="100.0" width="39.0" height="350.0" fill="#176b68" rx="3"/>
+<rect x="815.0" y="100.0" width="39.0" height="350.0" fill="#176b68" rx="3"/>
+<rect x="860.0" y="100.0" width="39.0" height="350.0" fill="#176b68" rx="3"/>
+<rect x="905.0" y="100.0" width="39.0" height="350.0" fill="#176b68" rx="3"/>
+<rect x="950.0" y="100.0" width="39.0" height="350.0" fill="#176b68" rx="3"/>
+<line x1="95" y1="100" x2="995" y2="100" stroke="#17324d" stroke-dasharray="7 5"/>
+<text x="70" y="106" text-anchor="end" class="small">1,0</text>
+<text x="550" y="500" text-anchor="middle" class="small">20 subamostras de 80% dos casos</text>
+<text x="550" y="545" text-anchor="middle" class="label">Resultado esperado de perfis didáticos muito separados — não garantia externa</text>
+</svg>

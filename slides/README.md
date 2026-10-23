@@ -74,6 +74,7 @@ Antes de usar em aula, confira:
 | 2 | Construção e documentação da base | [`unidade_02.md`](unidade_02.md) |
 | 3 | Transformação de fontes em dados analisáveis | [`unidade_03.md`](unidade_03.md) |
 | 4 | Exploração quantitativa, textual e visual | [`unidade_04.md`](unidade_04.md) |
+| 5 | Comparação quantitativa e textual | [`unidade_05.md`](unidade_05.md) |
 
 As demais unidades serão acrescentadas conforme as etapas definidas no plano.
 

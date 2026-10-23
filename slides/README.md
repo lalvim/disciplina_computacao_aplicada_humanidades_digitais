@@ -83,6 +83,7 @@ Antes de usar em aula, confira:
 | 11 | Tempo e espaço | [`unidade_11.md`](unidade_11.md) |
 | 12 | Modelos de linguagem responsáveis | [`unidade_12.md`](unidade_12.md) |
 | 13 | Validade, robustez e vieses | [`unidade_13.md`](unidade_13.md) |
+| 14 | Documentar e comunicar | [`unidade_14.md`](unidade_14.md) |
 
-As demais unidades serão acrescentadas conforme as etapas definidas no plano.
+As apresentações das 14 unidades previstas no plano estão disponíveis.
 

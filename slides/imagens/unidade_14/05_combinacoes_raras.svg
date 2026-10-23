@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="590" viewBox="0 0 1100 590" role="img">
+<title>Combinações raras após remoção de nomes</title>
+<desc>Oito registros são mostrados; seis possuem combinação única de idade, local e tema, e dois formam um par.</desc>
+<rect width="1100" height="590" fill="#fffdf7"/>
+<style>text{font-family:Aptos,Arial,sans-serif}.title{font-size:28px;font-weight:700;fill:#17324d}.label{font-size:19px;fill:#202a33}.small{font-size:16px;fill:#4b5563}.value{font-size:21px;font-weight:700;fill:#17324d}.mono{font-family:monospace;font-size:16px;fill:#17324d}</style>
+<text x="550" y="38" text-anchor="middle" class="title">Remover o nome não elimina combinações identificáveis</text>
+<text x="80" y="88" class="value">registro</text>
+<text x="230" y="88" class="value">faixa</text>
+<text x="385" y="88" class="value">local</text>
+<text x="570" y="88" class="value">tema</text>
+<text x="790" y="88" class="value">k</text>
+<text x="900" y="88" class="value">leitura</text>
+<rect x="55" y="97" width="990" height="42" fill="#176b68" fill-opacity=".10"/>
+<text x="80" y="125" class="small">R001</text>
+<text x="230" y="125" class="small">40–49</text>
+<text x="385" y="125" class="small">Capital</text>
+<text x="570" y="125" class="small">tema A</text>
+<text x="800" y="125" text-anchor="middle" font-size="20" font-weight="700" fill="#176b68">2</text>
+<text x="900" y="125" class="small">repetida</text>
+<rect x="55" y="147" width="990" height="42" fill="#a84f2a" fill-opacity=".10"/>
+<text x="80" y="175" class="small">R002</text>
+<text x="230" y="175" class="small">30–39</text>
+<text x="385" y="175" class="small">Interior</text>
+<text x="570" y="175" class="small">tema B</text>
+<text x="800" y="175" text-anchor="middle" font-size="20" font-weight="700" fill="#a84f2a">1</text>
+<text x="900" y="175" class="small">única</text>
+<rect x="55" y="197" width="990" height="42" fill="#176b68" fill-opacity=".10"/>
+<text x="80" y="225" class="small">R003</text>
+<text x="230" y="225" class="small">40–49</text>
+<text x="385" y="225" class="small">Capital</text>
+<text x="570" y="225" class="small">tema A</text>
+<text x="800" y="225" text-anchor="middle" font-size="20" font-weight="700" fill="#176b68">2</text>
+<text x="900" y="225" class="small">repetida</text>
+<rect x="55" y="247" width="990" height="42" fill="#a84f2a" fill-opacity=".10"/>
+<text x="80" y="275" class="small">R004</text>
+<text x="230" y="275" class="small">60–69</text>
+<text x="385" y="275" class="small">Interior</text>
+<text x="570" y="275" class="small">tema raro</text>
+<text x="800" y="275" text-anchor="middle" font-size="20" font-weight="700" fill="#a84f2a">1</text>
+<text x="900" y="275" class="small">única</text>
+<rect x="55" y="297" width="990" height="42" fill="#a84f2a" fill-opacity=".10"/>
+<text x="80" y="325" class="small">R005</text>
+<text x="230" y="325" class="small">30–39</text>
+<text x="385" y="325" class="small">Capital</text>
+<text x="570" y="325" class="small">tema B</text>
+<text x="800" y="325" text-anchor="middle" font-size="20" font-weight="700" fill="#a84f2a">1</text>
+<text x="900" y="325" class="small">única</text>
+<rect x="55" y="347" width="990" height="42" fill="#a84f2a" fill-opacity=".10"/>
+<text x="80" y="375" class="small">R006</text>
+<text x="230" y="375" class="small">50–59</text>
+<text x="385" y="375" class="small">Interior</text>
+<text x="570" y="375" class="small">tema A</text>
+<text x="800" y="375" text-anchor="middle" font-size="20" font-weight="700" fill="#a84f2a">1</text>
+<text x="900" y="375" class="small">única</text>
+<rect x="55" y="397" width="990" height="42" fill="#a84f2a" fill-opacity=".10"/>
+<text x="80" y="425" class="small">R007</text>
+<text x="230" y="425" class="small">60–69</text>
+<text x="385" y="425" class="small">Capital</text>
+<text x="570" y="425" class="small">tema C</text>
+<text x="800" y="425" text-anchor="middle" font-size="20" font-weight="700" fill="#a84f2a">1</text>
+<text x="900" y="425" class="small">única</text>
+<rect x="55" y="447" width="990" height="42" fill="#a84f2a" fill-opacity=".10"/>
+<text x="80" y="475" class="small">R008</text>
+<text x="230" y="475" class="small">40–49</text>
+<text x="385" y="475" class="small">Interior</text>
+<text x="570" y="475" class="small">tema B</text>
+<text x="800" y="475" text-anchor="middle" font-size="20" font-weight="700" fill="#a84f2a">1</text>
+<text x="900" y="475" class="small">única</text>
+<text x="550" y="545" text-anchor="middle" class="label">6 de 8 registros têm k = 1 nesta combinação didática</text>
+<text x="550" y="575" text-anchor="middle" class="small">k-anonimato descritivo não resolve atributos sensíveis, ligação auxiliar ou finalidade indevida.</text>
+</svg>

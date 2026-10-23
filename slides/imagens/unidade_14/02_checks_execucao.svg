@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="590" viewBox="0 0 1100 590" role="img">
+<title>Verificações da execução</title>
+<desc>Quatro verificações passam e um hash SHA-256 identifica os bytes do arquivo de resultados.</desc>
+<rect width="1100" height="590" fill="#fffdf7"/>
+<style>text{font-family:Aptos,Arial,sans-serif}.title{font-size:28px;font-weight:700;fill:#17324d}.label{font-size:19px;fill:#202a33}.small{font-size:16px;fill:#4b5563}.value{font-size:21px;font-weight:700;fill:#17324d}.mono{font-family:monospace;font-size:16px;fill:#17324d}</style>
+<text x="550" y="38" text-anchor="middle" class="title">Uma execução reprodutível produz resultados verificáveis</text>
+<circle cx="150" cy="100" r="24" fill="#176b68"/>
+<text x="150" y="108" text-anchor="middle" font-size="25" font-weight="700" fill="white">✓</text>
+<text x="200" y="107" class="label">3 linhas esperadas</text>
+<text x="900" y="107" text-anchor="end" class="value">PASSOU</text>
+<circle cx="150" cy="182" r="24" fill="#176b68"/>
+<text x="150" y="190" text-anchor="middle" font-size="25" font-weight="700" fill="white">✓</text>
+<text x="200" y="189" class="label">5 colunas na ordem</text>
+<text x="900" y="189" text-anchor="end" class="value">PASSOU</text>
+<circle cx="150" cy="264" r="24" fill="#176b68"/>
+<text x="150" y="272" text-anchor="middle" font-size="25" font-weight="700" fill="white">✓</text>
+<text x="200" y="271" class="label">limite inferior ≤ estimativa</text>
+<text x="900" y="271" text-anchor="end" class="value">PASSOU</text>
+<circle cx="150" cy="346" r="24" fill="#176b68"/>
+<text x="150" y="354" text-anchor="middle" font-size="25" font-weight="700" fill="white">✓</text>
+<text x="200" y="353" class="label">estimativa ≤ limite superior</text>
+<text x="900" y="353" text-anchor="end" class="value">PASSOU</text>
+<rect x="90" y="445" width="920" height="72" rx="12" fill="#f2eee5" stroke="#17324d" stroke-width="3"/>
+<text x="120" y="474" class="small">SHA-256 do arquivo:</text>
+<text x="120" y="502" class="mono">5da4bf2466f4e2482433e095862500c7a0f5d302b9c1ad50e30350a9cc945a81</text>
+<text x="550" y="558" text-anchor="middle" class="small">O hash detecta mudança de bytes; não garante qualidade, autenticidade ou interpretação correta.</text>
+</svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="590" viewBox="0 0 1100 590" role="img">
+<title>Manifesto de artefatos e acesso</title>
+<desc>Sete cartões apresentam seis artefatos abertos e um conjunto de dados derivados restrito.</desc>
+<rect width="1100" height="590" fill="#fffdf7"/>
+<style>text{font-family:Aptos,Arial,sans-serif}.title{font-size:28px;font-weight:700;fill:#17324d}.label{font-size:19px;fill:#202a33}.small{font-size:16px;fill:#4b5563}.value{font-size:21px;font-weight:700;fill:#17324d}.mono{font-family:monospace;font-size:16px;fill:#17324d}</style>
+<text x="550" y="38" text-anchor="middle" class="title">Reproduzir não exige abrir tudo do mesmo modo</text>
+<rect x="45" y="90" width="235" height="145" rx="14" fill="#f2eee5" stroke="#176b68" stroke-width="4"/>
+<text x="163" y="128" text-anchor="middle" class="mono">README.md</text>
+<text x="163" y="167" text-anchor="middle" class="small">documentação</text>
+<text x="163" y="206" text-anchor="middle" font-size="19" font-weight="700" fill="#176b68">aberto</text>
+<rect x="310" y="90" width="235" height="145" rx="14" fill="#f2eee5" stroke="#176b68" stroke-width="4"/>
+<text x="428" y="128" text-anchor="middle" class="mono">relatorio.ipynb</text>
+<text x="428" y="167" text-anchor="middle" class="small">análise</text>
+<text x="428" y="206" text-anchor="middle" font-size="19" font-weight="700" fill="#176b68">aberto</text>
+<rect x="575" y="90" width="235" height="145" rx="14" fill="#f2eee5" stroke="#a84f2a" stroke-width="4"/>
+<text x="693" y="128" text-anchor="middle" class="mono">dados/processados.csv</text>
+<text x="693" y="167" text-anchor="middle" class="small">dados derivados</text>
+<text x="693" y="206" text-anchor="middle" font-size="19" font-weight="700" fill="#a84f2a">restrito</text>
+<rect x="840" y="90" width="235" height="145" rx="14" fill="#f2eee5" stroke="#176b68" stroke-width="4"/>
+<text x="958" y="128" text-anchor="middle" class="mono">dados/dicionario.csv</text>
+<text x="958" y="167" text-anchor="middle" class="small">documentação</text>
+<text x="958" y="206" text-anchor="middle" font-size="19" font-weight="700" fill="#176b68">aberto</text>
+<rect x="45" y="280" width="235" height="145" rx="14" fill="#f2eee5" stroke="#176b68" stroke-width="4"/>
+<text x="163" y="318" text-anchor="middle" class="mono">dados/proveniencia.json</text>
+<text x="163" y="357" text-anchor="middle" class="small">documentação</text>
+<text x="163" y="396" text-anchor="middle" font-size="19" font-weight="700" fill="#176b68">aberto</text>
+<rect x="310" y="280" width="235" height="145" rx="14" fill="#f2eee5" stroke="#176b68" stroke-width="4"/>
+<text x="428" y="318" text-anchor="middle" class="mono">requirements.txt</text>
+<text x="428" y="357" text-anchor="middle" class="small">ambiente</text>
+<text x="428" y="396" text-anchor="middle" font-size="19" font-weight="700" fill="#176b68">aberto</text>
+<rect x="575" y="280" width="235" height="145" rx="14" fill="#f2eee5" stroke="#176b68" stroke-width="4"/>
+<text x="693" y="318" text-anchor="middle" class="mono">LICENSE</text>
+<text x="693" y="357" text-anchor="middle" class="small">licença</text>
+<text x="693" y="396" text-anchor="middle" font-size="19" font-weight="700" fill="#176b68">aberto</text>
+<text x="550" y="500" text-anchor="middle" class="label">6 abertos · 1 restrito · 7 com justificativa de acesso</text>
+<text x="550" y="545" text-anchor="middle" class="small">Código e documentação podem ser abertos enquanto dados derivados permanecem protegidos.</text>
+</svg>

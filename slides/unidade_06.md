@@ -167,6 +167,8 @@ Associação não explica por que a distribuição mudou.
 
 # O que esperaríamos sem associação?
 
+![bg right:40% contain A tabela condicional mostra totais de linha e coluna usados para calcular a frequência esperada.](../unidade_06/imagens/01_tabela_condicional.svg)
+
 Se período e tema fossem independentes, a frequência esperada na célula $(i,j)$
 seria:
 
@@ -197,6 +199,8 @@ O padrão é simétrico porque os dois períodos têm o mesmo tamanho nesta base
 
 # Qui-quadrado reúne os desvios
 
+![bg right:40% contain As proporções por período tornam visíveis as diferenças entre frequências observadas e esperadas.](imagens/unidade_06/01_proporcao_tema_periodo.svg)
+
 $$
 \chi^2=\sum_{i,j}\frac{(O_{ij}-E_{ij})^2}{E_{ij}}
 $$
@@ -207,12 +211,17 @@ $$
 \chi^2\approx 7{,}22
 $$
 
+**Uma célula:** $(27-21)^2/21\approx1{,}71$; a soma das quatro contribuições
+produz 7,22.
+
 A estatística cresce quando observado e esperado se afastam, mas também depende
 do tamanho da base. Ela não informa sozinha a importância histórica da diferença.
 
 ---
 
 # V de Cramér expressa a intensidade
+
+![bg right:40% contain Barras proporcionais mostram a associação cuja intensidade é resumida pelo V de Cramér.](imagens/unidade_06/01_proporcao_tema_periodo.svg)
 
 $$
 V=\sqrt{\frac{\chi^2}{n(k-1)}}
@@ -224,6 +233,8 @@ $$
 
 Aqui, $V\approx0{,}30$. A interpretação deve considerar categorias, qualidade da
 codificação e problema substantivo — não apenas um rótulo de intensidade.
+
+**Substituição:** $V=\sqrt{7{,}22/[80(2-1)]}\approx0{,}30$.
 
 ---
 
@@ -279,6 +290,8 @@ resume esses aspectos de maneira incompleta.
 
 # Correlação de Pearson
 
+![bg right:43% contain A nuvem de pontos mostra extensão e referências institucionais, com cores para Capital e Interior.](imagens/unidade_06/02_dispersao_estratificada.svg)
+
 $$
 r=\frac{\sum_i(x_i-\bar{x})(y_i-\bar{y})}
 {\sqrt{\sum_i(x_i-\bar{x})^2\sum_i(y_i-\bar{y})^2}}
@@ -286,6 +299,8 @@ $$
 
 $r$ mede direção e intensidade da associação **linear** entre duas variáveis
 numéricas. Nesta base, extensão e referências têm $r\approx0{,}53$.
+
+**Exemplo:** os 80 pares `(extensão, referências)` da figura produzem 0,53.
 
 Ele não mede tamanho de efeito em unidades originais nem prova causalidade.
 
@@ -306,6 +321,8 @@ $r=0$ ainda pode coexistir com relação curva ou estrutura por subgrupos.
 
 # Spearman observa a ordem
 
+![bg right:43% contain A nuvem de pontos permite observar a ordem crescente usada pela correlação de Spearman.](imagens/unidade_06/02_dispersao_estratificada.svg)
+
 A correlação de Spearman é a correlação de Pearson aplicada aos **postos**:
 
 $$
@@ -316,6 +333,8 @@ Ela é útil quando a relação é monotônica, mas não necessariamente linear,
 quando valores extremos afetam a escala. Aqui, $\rho_s\approx0{,}51$.
 
 Pearson e Spearman próximos não eliminam a necessidade de olhar o gráfico.
+
+**Exemplo pequeno:** postos $(1,2,3)$ e $(1,3,2)$ produzem $\rho_s=0{,}50$.
 
 ---
 
@@ -411,6 +430,8 @@ Registre quais relações foram tentadas e separe exploração de confirmação.
 
 # Uma janela produz pares
 
+![bg right:40% contain Um grafo bipartido é projetado em pares de entidades que compartilham documentos.](../unidade_06/imagens/03_projecao_bipartida.svg)
+
 Se um documento contém $m$ entidades distintas, ele pode gerar:
 
 $$
@@ -455,6 +476,8 @@ Cada célula informa se a entidade foi registrada naquele documento.
 
 # A projeção multiplica incidências
 
+![bg right:40% contain Documentos e entidades de um grafo bipartido produzem um grafo projetado entre entidades.](../unidade_06/imagens/03_projecao_bipartida.svg)
+
 $$
 W=B^{\mathsf T}B
 $$
@@ -464,6 +487,9 @@ $$
 - fora da diagonal: peso da coocorrência.
 
 Para gerar arestas entre entidades, removemos a diagonal e registramos a regra.
+
+**Exemplo:** no quadro anterior, Ana F. e Liga Aurora compartilham D01; portanto,
+$W_{Ana,Liga}=1$.
 
 ---
 
@@ -574,6 +600,8 @@ Não conclua que:
 
 # Grau: quantos vizinhos?
 
+![bg right:40% contain O diagrama contrasta grau, força e intermediação em pequenos grafos.](../unidade_06/imagens/04_centralidades.svg)
+
 Para um grafo simples não dirigido:
 
 $$
@@ -582,12 +610,16 @@ $$
 
 Na projeção fictícia, Jornal Horizonte possui grau 11 entre 13 vizinhos possíveis.
 
+**Exemplo:** $C_D=11/13\approx0{,}846$.
+
 Grau alto significa muitos parceiros registrados segundo a regra de aresta — não
 necessariamente influência ou prestígio.
 
 ---
 
 # Força: quanto peso incidente?
+
+![bg right:40% contain A espessura das arestas permite comparar grau e soma dos pesos incidentes.](../unidade_06/imagens/04_centralidades.svg)
 
 $$
 s(v)=\sum_u w_{vu}
@@ -596,12 +628,16 @@ $$
 Jornal Horizonte tem força 16; Liga Aurora, 14. A força distingue um nó com muitas
 ligações fracas de outro com ligações repetidas.
 
+**Exemplo:** pesos 3, 2 e 1 produzem força $s(v)=3+2+1=6$.
+
 Sua interpretação depende do peso: documentos compartilhados, cartas, citações ou
 outra quantidade.
 
 ---
 
 # Intermediação: quantos caminhos passam pelo nó?
+
+![bg right:40% contain Um nó de ponte participa de caminhos mínimos entre diferentes partes do grafo.](../unidade_06/imagens/04_centralidades.svg)
 
 $$
 C_B(v)=\sum_{s\ne v\ne t}\frac{\sigma_{st}(v)}{\sigma_{st}}
@@ -612,6 +648,9 @@ $$
 
 Intermediação alta indica posição estrutural de ponte no grafo modelado. Não prova
 que a entidade controlava fluxos históricos reais.
+
+**Exemplo da projeção:** Jornal Horizonte tem intermediação normalizada aproximada
+de 0,311; o diagrama mostra a ideia de ponte que a medida resume.
 
 ---
 

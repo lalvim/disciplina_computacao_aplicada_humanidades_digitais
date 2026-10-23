@@ -352,6 +352,8 @@ precisa estar ligada à imagem, ferramenta, parâmetros e avaliação.
 
 # Como quantificar o erro de OCR?
 
+![bg right:40% contain A imagem de uma página passa por OCR e produz texto que deve ser comparado à transcrição de referência.](../unidade_03/imagens/01_pdf_texto_imagem_ocr.svg)
+
 $$
 \mathrm{CER}=\frac{S_c+D_c+I_c}{N_c}
 \qquad

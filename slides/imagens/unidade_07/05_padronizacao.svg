@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="590" viewBox="0 0 1100 590" role="img">
+<title>Padronização da renda</title>
+<desc>Três valores da renda são convertidos para menos um, zero e mais um desvio-padrão.</desc>
+<rect width="1100" height="590" fill="#fffdf7"/>
+<style>text{font-family:Aptos,Arial,sans-serif}.title{font-size:28px;font-weight:700;fill:#17324d}.label{font-size:19px;fill:#202a33}.small{font-size:16px;fill:#4b5563}.value{font-size:18px;font-weight:700;fill:#17324d}</style>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#4b5563"/></marker></defs>
+<text x="550" y="48" text-anchor="middle" class="title">A escala muda; a posição relativa permanece</text>
+<line x1="150" y1="210" x2="950" y2="210" stroke="#17324d" stroke-width="4"/>
+<text x="550" y="155" text-anchor="middle" class="label">renda per capita simulada</text>
+<line x1="150" y1="420" x2="950" y2="420" stroke="#176b68" stroke-width="4"/>
+<text x="550" y="365" text-anchor="middle" class="label">escala padronizada z</text>
+<circle cx="250" cy="210" r="12" fill="#a84f2a"/>
+<text x="250" y="250" text-anchor="middle" class="value">1.729</text>
+<line x1="250" y1="270" x2="250" y2="375" stroke="#4b5563" stroke-width="2" marker-end="url(#arrow)"/>
+<circle cx="250" cy="420" r="12" fill="#176b68"/>
+<text x="250" y="462" text-anchor="middle" class="value">z = -1</text>
+<circle cx="550" cy="210" r="12" fill="#a84f2a"/>
+<text x="550" y="250" text-anchor="middle" class="value">2.082</text>
+<line x1="550" y1="270" x2="550" y2="375" stroke="#4b5563" stroke-width="2" marker-end="url(#arrow)"/>
+<circle cx="550" cy="420" r="12" fill="#176b68"/>
+<text x="550" y="462" text-anchor="middle" class="value">z = +0</text>
+<circle cx="850" cy="210" r="12" fill="#a84f2a"/>
+<text x="850" y="250" text-anchor="middle" class="value">2.434</text>
+<line x1="850" y1="270" x2="850" y2="375" stroke="#4b5563" stroke-width="2" marker-end="url(#arrow)"/>
+<circle cx="850" cy="420" r="12" fill="#176b68"/>
+<text x="850" y="462" text-anchor="middle" class="value">z = +1</text>
+<text x="550" y="535" text-anchor="middle" class="small">média = 2082 · desvio-padrão = 352 · dados fictícios</text>
+</svg>

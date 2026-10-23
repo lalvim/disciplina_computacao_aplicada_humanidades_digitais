@@ -17,6 +17,25 @@ O princípio central é:
 > **Primeiro um caso que produza uma pergunta; depois os conceitos necessários para
 > investigá-la; por fim, aplicação, crítica e retorno ao caso.**
 
+### Público e mediação matemática
+
+O público principal é formado por estudantes das áreas de Humanidades. Não se deve
+pressupor familiaridade prévia com notação matemática, álgebra ou estatística. A
+formalização será introduzida como uma forma compacta de expressar uma operação que
+o estudante já compreendeu por meio de um problema concreto.
+
+Sempre que houver fórmula, a apresentação deverá oferecer três apoios articulados:
+
+1. **leitura em linguagem comum**, explicando o que a operação faz;
+2. **exemplo numérico resolvido**, com substituição dos símbolos por valores;
+3. **gráfico, diagrama ou representação visual**, mostrando as quantidades e a
+   relação expressa pela fórmula.
+
+Os três elementos devem aparecer no mesmo slide ou, quando isso prejudicar a
+legibilidade, em uma sequência explícita de no máximo dois slides. Nesse caso, o
+segundo slide deverá retomar o nome da medida e os mesmos valores do exemplo. Uma
+fórmula nunca será apresentada isoladamente para memorização.
+
 ## 2. Formato técnico
 
 Os slides serão escritos em Markdown compatível com **Marp**, usando:
@@ -196,6 +215,12 @@ Regras:
 
 - não apresentar símbolos antes de defini-los;
 - usar no máximo uma fórmula principal por slide;
+- traduzir a fórmula em uma frase operacional, sem depender da notação;
+- incluir um exemplo numérico resolvido, mostrando a substituição dos valores;
+- incluir um gráfico, diagrama ou representação visual diretamente relacionado ao
+  exemplo;
+- quando fórmula e apoios não couberem com legibilidade, usar dois slides contíguos:
+  `operação e exemplo` e `leitura visual`;
 - destacar a unidade de cada quantidade;
 - mostrar ao menos um exemplo numérico simples;
 - evitar derivações algébricas longas;

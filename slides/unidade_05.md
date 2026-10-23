@@ -168,6 +168,8 @@ uma simples tabela de médias.
 
 # Defina a quantidade antes de calcular
 
+![bg right:40% contain Pontos e médias mostram a diferença entre Capital e Interior e a influência de um caso extremo.](imagens/unidade_05/01_estimativas_grupos.svg)
+
 Se $\hat{\theta}_A$ e $\hat{\theta}_B$ estimam a mesma quantidade nos grupos:
 
 $$
@@ -199,6 +201,8 @@ educação em cada texto.
 
 # Diferença absoluta e relativa
 
+![bg right:40% contain Duas distribuições mostram as médias usadas na diferença relativa entre Capital e Interior.](imagens/unidade_05/01_estimativas_grupos.svg)
+
 Tomando $B$ como referência:
 
 $$
@@ -212,9 +216,14 @@ A diferença relativa:
 - pode esconder a unidade substantiva;
 - deve acompanhar, não substituir, a diferença absoluta.
 
+**Exemplo:** tomando Interior como referência,
+$\Delta_{rel}=-203{,}17/803{,}17\approx-25{,}3\%$.
+
 ---
 
 # Uma diferença padronizada
+
+![bg right:40% contain Duas distribuições permitem comparar a distância entre médias com a dispersão interna.](imagens/unidade_05/01_estimativas_grupos.svg)
 
 $$
 d=\frac{\bar{x}_A-\bar{x}_B}{s_p}
@@ -321,6 +330,9 @@ $$
 \Delta_b=\bar{x}_{A,b}-\bar{x}_{B,b}
 $$
 
+**Exemplo de uma repetição:** médias 620 e 780 produzem
+$\Delta_b=620-780=-160$ palavras.
+
 <p class="fonte">Efron e Tibshirani (1993).</p>
 
 ---
@@ -335,6 +347,8 @@ sobre os dados observados.
 ---
 
 # Intervalo percentil introdutório
+
+![bg right:40% contain A distribuição bootstrap marca os percentis de 2,5 e 97,5 por cento.](imagens/unidade_05/02_distribuicao_bootstrap.svg)
 
 $$
 IC_{95\%}=\left[Q_{0{,}025}(\Delta_b),Q_{0{,}975}(\Delta_b)\right]
@@ -401,6 +415,8 @@ Com 5.000 permutações, obtemos $p\approx0{,}1982$ para o teste bilateral.
 
 # Valor de *p* com correção finita
 
+![bg right:40% contain A distribuição de permutação destaca resultados tão ou mais extremos que o observado.](imagens/unidade_05/03_distribuicao_permutacao.svg)
+
 $$
 p=\frac{1+\sum_{m=1}^{M}\mathbf{1}(|T_m|\ge|T_{obs}|)}{M+1}
 $$
@@ -409,6 +425,9 @@ O valor informa a proporção de resultados simulados tão ou mais extremos que 
 observado, sob $H_0$ e o procedimento especificado.
 
 Ele não informa a probabilidade de $H_0$ ser verdadeira.
+
+**Exemplo:** se 47 de 1.000 permutações são tão extremas,
+$p=(1+47)/(1000+1)\approx0{,}048$.
 
 ---
 
@@ -478,6 +497,8 @@ Preserve texto e identificador para poder retornar à fonte.
 
 # Matriz documento-termo
 
+![bg right:42% contain Uma matriz colore células conforme a frequência de cada termo em cada documento.](imagens/unidade_05/04_matriz_documento_termo.svg)
+
 Se $c(t,d)$ é a contagem do termo $t$ no documento $d$:
 
 $$
@@ -490,6 +511,8 @@ $$
 - zero: ausência segundo as regras adotadas.
 
 Zero não significa irrelevância histórica.
+
+**Exemplo:** $X_{D01,\,escola}=3$ indica três ocorrências de “escola” em D01.
 
 ---
 
@@ -504,6 +527,8 @@ continuar disponíveis em tabela.
 
 # Frequência documental e IDF
 
+![bg right:40% contain O diagrama mostra frequência no documento, raridade na coleção e combinação no TF-IDF.](../unidade_05/imagens/03_anatomia_tfidf.svg)
+
 $$
 df(t)=\sum_{d=1}^{N}\mathbf{1}(X_{d,t}>0)
 $$
@@ -516,6 +541,9 @@ $$
 
 Termos presentes em muitos documentos recebem IDF menor.
 
+**Exemplo:** com $N=6$ e $df(t)=2$,
+$idf(t)=\log(7/3)+1\approx1{,}85$.
+
 ---
 
 # TF-IDF combina frequência e raridade
@@ -523,6 +551,9 @@ Termos presentes em muitos documentos recebem IDF menor.
 $$
 tfidf(t,d)=X_{d,t}\times idf(t)
 $$
+
+**Exemplo:** frequência 3 e IDF 1,85 produzem peso
+$3\times1{,}85=5{,}55$.
 
 ![w:1030 centralizada TF mede frequência no documento, IDF mede raridade na coleção e o produto gera peso.](../unidade_05/imagens/03_anatomia_tfidf.svg)
 
@@ -605,6 +636,8 @@ Não existe “a” similaridade do texto.
 
 # Jaccard: vocabulário compartilhado
 
+![bg right:38% contain Um diagrama compara interseção e união para escolher uma métrica de similaridade.](../unidade_05/imagens/04_escolha_metrica.svg)
+
 $$
 J(A,B)=\frac{|A\cap B|}{|A\cup B|}
 $$
@@ -621,6 +654,8 @@ Repetir `escola` dez vezes não muda Jaccard nesta definição.
 
 # Cosseno: direção dos vetores
 
+![bg right:40% contain Vetores documentais permitem comparar direção apesar de magnitudes diferentes.](../unidade_05/imagens/04_vizinhos_documentais.svg)
+
 $$
 \cos(\mathbf{x},\mathbf{y})=
 \frac{\mathbf{x}\cdot\mathbf{y}}
@@ -633,6 +668,9 @@ Em vetores não negativos:
 - 0 indica ausência de componentes compartilhados;
 - magnitude total tem efeito reduzido;
 - vocabulário, pesos e pré-processamento continuam decisivos.
+
+**Exemplo:** para $\mathbf{x}=(1,1)$ e $\mathbf{y}=(1,0)$,
+$\cos(\mathbf{x},\mathbf{y})=1/\sqrt{2}\approx0{,}707$.
 
 ---
 
@@ -660,6 +698,8 @@ semelhantes.
 
 # Para versões, ordem importa
 
+![bg right:40% contain Uma sequência de inserções, exclusões e substituições transforma uma versão textual em outra.](../unidade_05/imagens/04_distancia_edicao.svg)
+
 A distância de Levenshtein calcula o menor número de operações:
 
 $$
@@ -672,6 +712,8 @@ $$
 
 A unidade pode ser caractere ou token. Declare também qualquer normalização por
 comprimento.
+
+**Exemplo:** `casa` → `caso` custa uma substituição; distância igual a 1.
 
 ---
 

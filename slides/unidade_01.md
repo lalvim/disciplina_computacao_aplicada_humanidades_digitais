@@ -372,6 +372,8 @@ Podemos observar:
 
 # Um indicador de extensão
 
+![bg right:38% contain Representações distintas do mesmo tema ajudam a interpretar a proporção de parágrafos.](../unidade_01/imagens/02_representacoes_temas.svg)
+
 Se um documento tem 20 parágrafos e 5 discutem educação:
 
 $$

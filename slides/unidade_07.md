@@ -142,6 +142,8 @@ varia com a renda per capita nesta base fictícia?
 
 # A reta é uma hipótese de forma
 
+![bg right:42% contain A dispersão mostra os pontos, a reta estimada e um caso afastado.](imagens/unidade_07/01_regressao_simples.svg)
+
 $$
 Y_i=\beta_0+\beta_1X_i+\varepsilon_i
 $$
@@ -151,6 +153,9 @@ $$
 - $\varepsilon_i$: diferença que a reta não descreve para o caso $i$.
 
 Escolher uma reta supõe que uma inclinação constante é uma aproximação útil.
+
+**Exemplo:** sem o resíduo, renda 2.000 produz
+$\hat Y=1{,}238+0{,}001406(2000)\approx4{,}05$.
 
 ---
 
@@ -169,6 +174,8 @@ Mas a renda observada varia de 1.158 a 2.933 unidades. Logo:
 ---
 
 # Reexpresse a inclinação
+
+![bg right:42% contain A reta permite ler a mudança vertical prevista quando a renda aumenta quinhentas unidades.](imagens/unidade_07/01_regressao_simples.svg)
 
 A inclinação por uma unidade monetária é aproximadamente 0,001406. Para uma escala
 mais compreensível:
@@ -192,9 +199,13 @@ $$
 
 Resíduo positivo: observado acima da previsão. Resíduo negativo: abaixo.
 
+**Exemplo:** para M150, $e=8{,}40-4{,}357\approx4{,}043$.
+
 ---
 
 # $R^2$ responde a uma pergunta limitada
+
+![bg right:42% contain A dispersão ao redor da reta mostra a parcela resumida e a variação ainda não descrita.](imagens/unidade_07/01_regressao_simples.svg)
 
 $$
 R^2=1-\frac{\sum_i(y_i-\hat y_i)^2}{\sum_i(y_i-\bar y)^2}
@@ -204,6 +215,9 @@ Aqui, $R^2\approx0{,}412$: a reta resume cerca de 41,2% da variação observada 
 resposta **nesta base**.
 
 Isso não significa que renda “causa 41,2%” dos equipamentos.
+
+**Leitura numérica:** a reta resume 41,2% da variação observada; 58,8% permanece
+nos resíduos.
 
 ---
 
@@ -275,6 +289,8 @@ Isso não torna a segunda especificação automaticamente correta ou causal.
 
 # Várias explicativas na mesma expressão
 
+![bg right:42% contain Renda, urbanização, escolaridade e distância entram juntas no modelo da resposta.](../unidade_07/imagens/02_controle_referencia.svg)
+
 $$
 Y_i=\beta_0+\beta_1R_i+\beta_2U_i+\beta_3E_i+\beta_4D_i+\varepsilon_i
 $$
@@ -285,6 +301,9 @@ $$
 - $D$: distância da capital.
 
 Cada coeficiente é interpretado mantendo matematicamente fixos os outros termos.
+
+**Exemplo:** para renda, +500 unidades correspondem a
+$500\times0{,}001148\approx+0{,}574$ equipamento, condicionadas aos demais termos.
 
 ---
 
@@ -327,6 +346,8 @@ vieses ou instabilidade.
 
 # Categorias não são números ordenados
 
+![bg right:42% contain A categoria Centro-Oeste ancora os contrastes com as demais regiões.](../unidade_07/imagens/02_controle_referencia.svg)
+
 Codificar regiões como 1, 2, 3, 4 e 5 imporia distâncias e ordem inexistentes.
 Usamos indicadores:
 
@@ -335,6 +356,9 @@ I_{Sudeste,i}=\begin{cases}1,&\text{se o caso }i\text{ é Sudeste}\\0,&\text{cas
 $$
 
 Com cinco regiões e intercepto, entram quatro indicadores; uma região é referência.
+
+**Exemplo:** para um caso do Sudeste, $I_{Sudeste}=1$; para um caso do Nordeste,
+$I_{Sudeste}=0$.
 
 ---
 
@@ -432,6 +456,8 @@ Em vez de perguntar apenas “urbanização está associada a equipamentos?”, 
 
 # Centralizar torna o ponto de comparação legível
 
+![bg right:42% contain Três retas condicionais mostram valores abaixo, próximos e acima da escolaridade média.](imagens/unidade_07/02_interacao.svg)
+
 $$
 U_c=U-\bar U \qquad E_c=E-\bar E
 $$
@@ -445,9 +471,13 @@ Assim:
 
 Centralizar muda a parametrização, não as previsões.
 
+**Exemplo:** $U=80$ e $\bar U=74{,}16$ produzem $U_c=5{,}84$ pontos percentuais.
+
 ---
 
 # O modelo de interação
+
+![bg right:42% contain Três retas mostram que a inclinação da urbanização varia com a escolaridade.](imagens/unidade_07/02_interacao.svg)
 
 $$
 Y_i=\beta_0+\beta_1U_{ci}+\beta_2E_{ci}+\beta_3(U_{ci}E_{ci})+\varepsilon_i
@@ -460,6 +490,9 @@ $$
 $$
 
 Não existe uma única inclinação de urbanização quando $\beta_3\neq0$.
+
+**Exemplo:** em 12 anos de escolaridade, a inclinação estimada é
+$0{,}0195+0{,}00340(12-9{,}96)\approx0{,}0264$.
 
 ---
 
@@ -569,6 +602,8 @@ A logística modela uma transformação da probabilidade entre 0 e 1.
 
 # Probabilidade e chance
 
+![bg right:40% contain O diagrama transforma probabilidade em chance e depois em logito.](../unidade_07/imagens/04_probabilidade_chance.svg)
+
 $$
 \operatorname{chance}=\frac{p}{1-p}
 $$
@@ -594,6 +629,8 @@ probabilidades fora do intervalo válido.
 
 # O modelo logístico
 
+![bg right:42% contain A curva logística converte a combinação linear em probabilidades entre zero e um.](imagens/unidade_07/04_curva_logistica.svg)
+
 $$
 \log\left(\frac{p_i}{1-p_i}\right)
 =\beta_0+\beta_1X_{1i}+\cdots+\beta_kX_{ki}
@@ -607,9 +644,13 @@ $$
 
 em que $\eta_i$ é a combinação linear das explicativas.
 
+**Exemplo:** se $\eta=0$, então $p=1/(1+e^0)=0{,}50$.
+
 ---
 
 # Exponenciar produz razão de chances
+
+![bg right:42% contain A curva mostra que multiplicar chances produz mudanças de probabilidade diferentes conforme o ponto inicial.](imagens/unidade_07/04_curva_logistica.svg)
 
 Para uma mudança de uma unidade em $X_j$:
 
@@ -624,9 +665,14 @@ $$
 
 Razão de chances 2 não significa “probabilidade duas vezes maior”.
 
+**Exemplo:** para urbanização padronizada, $\beta=0{,}480$ e
+$OR=e^{0{,}480}\approx1{,}62$.
+
 ---
 
 # Por que padronizar?
+
+![bg right:42% contain Valores na média e a um desvio-padrão de distância são transformados em z igual a zero, menos um e mais um.](imagens/unidade_07/05_padronizacao.svg)
 
 Renda, porcentagem, anos e quilômetros têm escalas muito diferentes. Nesta
 demonstração, cada variável numérica foi transformada em:
@@ -637,6 +683,9 @@ $$
 
 Cada razão de chances descreve então um aumento de **um desvio-padrão**. A
 padronização também estabiliza a otimização didática usada no notebook.
+
+**Exemplo:** com média 2.082 e desvio 352, renda 2.434 produz
+$z=(2434-2082)/352=1$.
 
 ---
 

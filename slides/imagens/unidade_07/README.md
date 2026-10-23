@@ -8,6 +8,7 @@ a partir da base inteiramente fictícia `unidade_07/dados/municipios_culturais.c
 - `02_interacao.svg`: previsões por urbanização em três níveis de escolaridade;
 - `03_diagnostico_residuos.svg`: resíduos e destaque do caso M150;
 - `04_curva_logistica.svg`: probabilidades previstas por urbanização.
+- `05_padronizacao.svg`: transformação da renda para unidades de desvio-padrão.
 
 Para reproduzir, execute na raiz do repositório:
 

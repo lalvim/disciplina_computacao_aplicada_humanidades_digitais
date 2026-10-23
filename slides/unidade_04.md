@@ -228,6 +228,8 @@ igualdade não demonstra equilíbrio histórico.
 
 # Frequência e proporção
 
+![bg right:38% contain Barras mostram seis documentos sobre educação entre vinte e quatro documentos.](imagens/unidade_04/00_barras_temas.svg)
+
 Se $x_i$ é a categoria do documento $i$:
 
 $$
@@ -261,6 +263,8 @@ D023 desloca a média para a direita. A mediana responde menos ao caso extremo.
 
 # Média: equilíbrio do total
 
+![bg right:38% contain Pontos mostram valores concentrados e um valor extremo deslocando a média.](imagens/unidade_04/01_centro_e_extremo.svg)
+
 $$
 \bar{x}=\frac{1}{n}\sum_{i=1}^{n}x_i
 $$
@@ -274,9 +278,13 @@ Na base:
 
 A média faz sentido quando somar e redistribuir igualmente possui interpretação.
 
+**Exemplo menor:** $(500+700+900)/3=700$ palavras.
+
 ---
 
 # Mediana: centro da ordenação
+
+![bg right:38% contain Pontos ordenados mostram a mediana no centro e a média sensível ao valor extremo.](imagens/unidade_04/01_centro_e_extremo.svg)
 
 $$
 \widetilde{x}=
@@ -288,6 +296,8 @@ $$
 
 Na base, $\widetilde{x}=621{,}5$ palavras. A mediana depende da posição ordenada,
 não da distância de todos os valores ao centro.
+
+**Exemplo:** em 300, 600 e 1.500, a mediana é 600.
 
 ---
 
@@ -333,6 +343,8 @@ afastamento entre os valores.
 
 # Amplitude e intervalo interquartil
 
+![bg right:40% contain Histograma e boxplot mostram extremos e a metade central da distribuição.](imagens/unidade_04/02_histograma_boxplot.svg)
+
 $$
 A=x_{\max}-x_{\min}
 $$
@@ -346,11 +358,14 @@ $$
 - IQR é mais resistente a extremos;
 - convenções de quartis podem produzir resultados diferentes.
 
-Nesta unidade, os quartis usam interpolação linear do pandas.
+**Exemplo da base:** $A=2100-320=1780$ e
+$IQR=848{,}75-459=389{,}75$ palavras.
 
 ---
 
 # Variância e desvio-padrão amostrais
+
+![bg right:40% contain Pontos e marcadores de centro mostram distâncias diferentes em relação à média.](imagens/unidade_04/01_centro_e_extremo.svg)
 
 $$
 s^2=\frac{1}{n-1}\sum_{i=1}^{n}(x_i-\bar{x})^2,
@@ -363,7 +378,8 @@ $$
 - ambos respondem fortemente a extremos;
 - $n-1$ corresponde a `ddof=1` no pandas.
 
-Para descrever uma população integral com denominador $n$, documente `ddof=0`.
+**Exemplo da base:** $s=372{,}54$ palavras; a variância correspondente é
+$s^2\approx138.787$ palavras².
 
 ---
 
@@ -383,6 +399,8 @@ distribuição e os casos.
 ---
 
 # Um boxplot sinaliza; não condena
+
+![bg right:40% contain O boxplot destaca D023 além do limite superior sem classificá-lo automaticamente como erro.](imagens/unidade_04/02_histograma_boxplot.svg)
 
 $$
 L_{\mathrm{inf}}=Q_1-1{,}5\,IQR,
@@ -408,6 +426,8 @@ Sem esse contexto, poderíamos interpretar incorretamente sua origem.
 
 # Duas categóricas: contingência
 
+![bg right:38% contain Barras por categoria ajudam a comparar contagens e proporções condicionais.](imagens/unidade_04/00_barras_temas.svg)
+
 Se $A$ é gênero e $B$ é tema:
 
 $$
@@ -420,6 +440,8 @@ $$
 - $p_{j\mid i}$ divide pelo total do gênero $i$;
 - contagem e proporção por linha respondem perguntas diferentes;
 - padrão descritivo não é teste ou explicação causal.
+
+**Exemplo:** 2 das 8 cartas tratam de educação; logo, $p=2/8=25\%$.
 
 ---
 
@@ -484,6 +506,8 @@ Preserve o texto original e registre a transformação.
 
 # Frequência absoluta e relativa
 
+![bg right:38% contain Barras exibem frequências de termos e tornam visível a diferença entre contagem e proporção.](imagens/unidade_04/05_frequencias_textuais.svg)
+
 $$
 f(w)=\sum_{i=1}^{N}\mathbf{1}(t_i=w),
 \qquad
@@ -497,6 +521,8 @@ O denominador pode ser:
 
 Retirar termos do numerador e manter o denominador responde a outra pergunta que
 recalcular a proporção no vocabulário filtrado.
+
+**Exemplo:** se “escola” aparece 24 vezes em 912 tokens, $p\approx2{,}6\%$.
 
 ---
 
@@ -540,6 +566,8 @@ causalidade ou importância histórica.
 
 # Informação mútua pontual
 
+![bg right:40% contain O diagrama mostra frequência conjunta comparada às frequências marginais de um bigrama.](../unidade_04/imagens/02_anatomia_pmi.svg)
+
 $$
 PMI(a,b)=\log_2\!\left(\frac{P(a,b)}{P_L(a)P_R(b)}\right)
 =\log_2\!\left(\frac{c(a,b)N_b}{c_L(a)c_R(b)}\right)
@@ -551,11 +579,16 @@ $$
 
 A medida favorece eventos raros. Exija frequência mínima e examine concordâncias.
 
+**Exemplo didático:** com $c(a,b)=3$, $N_b=10$ e marginais 3 e 3,
+$PMI=\log_2(30/9)\approx1{,}74$.
+
 ---
 
 <!-- _class: exemplo -->
 
 # Diversidade depende do tamanho
+
+![bg right:40% contain Dois painéis mostram que a TTR bruta cai com a extensão do texto.](imagens/unidade_04/06_ttr_bruta_padronizada.svg)
 
 $$
 TTR(d)=\frac{V_d}{N_d}
@@ -566,6 +599,8 @@ $$
 
 Textos maiores tendem a repetir palavras e apresentar TTR menor. Comparar valores
 brutos pode confundir diversidade com extensão.
+
+**Exemplo:** 5 formas distintas em 8 tokens produzem $TTR=5/8=0{,}625$.
 
 ---
 
@@ -580,6 +615,9 @@ $$
 
 Usar os primeiros $m$ tokens controla tamanho, mas pode depender da posição do
 trecho. O protocolo deve declarar a amostragem.
+
+**Exemplo:** em um trecho de $m=100$ tokens com 70 formas distintas,
+$TTR_{100}=70/100=0{,}70$.
 
 ---
 
@@ -650,11 +688,15 @@ Na base fictícia, quatro barras iguais são uma propriedade construída.
 
 # Histograma: a forma depende dos intervalos
 
+![bg right:40% contain Histograma e boxplot representam a mesma distribuição de extensões com resumos diferentes.](imagens/unidade_04/02_histograma_boxplot.svg)
+
 $$
 h_j=\sum_{i=1}^{n}\mathbf{1}(b_{j-1}<x_i\le b_j)
 $$
 
 Alterar os limites $b_j$ muda a forma visível sem mudar os documentos.
+
+**Exemplo:** no intervalo $300<x\leq500$, a base contém 8 documentos.
 
 O histograma mostra concentração e caudas; o boxplot resume quartis e sinaliza
 casos. Juntos, eles ajudam a selecionar documentos para inspeção.
@@ -680,6 +722,9 @@ $$
 
 Cada ano contém apenas dois documentos. A linha representa a composição do corpus,
 não uma mudança histórica contínua comprovada.
+
+**Exemplo:** em 1900, D011 e D023 têm 790 e 2.100 palavras;
+$\bar{x}_{1900}=(790+2100)/2=1445$.
 
 ---
 

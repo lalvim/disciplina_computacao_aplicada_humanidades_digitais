@@ -164,12 +164,42 @@ def logistic(data: pd.DataFrame) -> None:
     save("04_curva_logistica.svg", lines)
 
 
+def standardization(data: pd.DataFrame) -> None:
+    mean = data["renda_pc"].mean()
+    std = data["renda_pc"].std(ddof=0)
+    values = [mean - std, mean, mean + std]
+    lines = svg_open(
+        "Padronização da renda",
+        "Três valores da renda são convertidos para menos um, zero e mais um desvio-padrão.",
+    )
+    lines.insert(5, f'<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="{GRAY}"/></marker></defs>')
+    lines.append('<text x="550" y="48" text-anchor="middle" class="title">A escala muda; a posição relativa permanece</text>')
+    lines += [
+        f'<line x1="150" y1="210" x2="950" y2="210" stroke="{NAVY}" stroke-width="4"/>',
+        '<text x="550" y="155" text-anchor="middle" class="label">renda per capita simulada</text>',
+        f'<line x1="150" y1="420" x2="950" y2="420" stroke="{TEAL}" stroke-width="4"/>',
+        '<text x="550" y="365" text-anchor="middle" class="label">escala padronizada z</text>',
+    ]
+    for pos, value, z in zip([250, 550, 850], values, [-1, 0, 1]):
+        value_label = f"{value:,.0f}".replace(",", ".")
+        lines += [
+            f'<circle cx="{pos}" cy="210" r="12" fill="{RUST}"/>',
+            f'<text x="{pos}" y="250" text-anchor="middle" class="value">{value_label}</text>',
+            f'<line x1="{pos}" y1="270" x2="{pos}" y2="375" stroke="{GRAY}" stroke-width="2" marker-end="url(#arrow)"/>',
+            f'<circle cx="{pos}" cy="420" r="12" fill="{TEAL}"/>',
+            f'<text x="{pos}" y="462" text-anchor="middle" class="value">z = {z:+d}</text>',
+        ]
+    lines.append(f'<text x="550" y="535" text-anchor="middle" class="small">média = {mean:.0f} · desvio-padrão = {std:.0f} · dados fictícios</text>')
+    save("05_padronizacao.svg", lines)
+
+
 def main() -> None:
     data = pd.read_csv(DATA)
     simple_regression(data)
     interaction(data)
     diagnostics(data)
     logistic(data)
+    standardization(data)
     print(f"Gráficos gravados em {OUT.relative_to(ROOT)}")
 
 

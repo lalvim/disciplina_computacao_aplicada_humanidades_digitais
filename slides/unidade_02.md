@@ -334,6 +334,8 @@ população, desde que seu alcance seja explicitado.
 
 # Uma razão de cobertura local
 
+![bg right:40% contain O catálogo contém duas ocorrências do grupo trabalhadores e o corpus retém uma delas.](../unidade_02/imagens/02_cobertura_catalogo_corpus.svg)
+
 Para um grupo $g$, podemos comparar catálogo e corpus:
 
 $$

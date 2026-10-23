@@ -71,6 +71,7 @@ Antes de usar em aula, confira:
 | Unidade | Tema | Arquivo |
 |---|---|---|
 | 1 | Questões das Humanidades e problemas computacionais | [`unidade_01.md`](unidade_01.md) |
+| 2 | Construção e documentação da base | [`unidade_02.md`](unidade_02.md) |
 
 As demais unidades serão acrescentadas conforme as etapas definidas no plano.
 

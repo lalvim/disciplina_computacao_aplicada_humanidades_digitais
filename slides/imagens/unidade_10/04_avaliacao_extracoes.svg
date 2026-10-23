@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="590" viewBox="0 0 1100 590" role="img">
+<title>Comparação entre predições e anotação de referência</title>
+<desc>Diagrama mostra onze verdadeiros positivos, um falso positivo e um falso negativo.</desc>
+<rect width="1100" height="590" fill="#fffdf7"/>
+<style>text{font-family:Aptos,Arial,sans-serif}.title{font-size:28px;font-weight:700;fill:#17324d}.label{font-size:19px;fill:#202a33}.small{font-size:16px;fill:#4b5563}.value{font-size:22px;font-weight:700;fill:#17324d}.mono{font-family:monospace;font-size:18px;fill:#17324d}</style>
+<text x="550" y="42" text-anchor="middle" class="title">A avaliação localiza acertos e erros — não apenas uma nota</text>
+<rect x="70" y="105" width="305" height="210" rx="16" fill="#f2eee5" stroke="#176b68" stroke-width="5"/>
+<text x="222" y="160" text-anchor="middle" class="value">VP</text>
+<text x="222" y="235" text-anchor="middle" font-size="58" font-weight="700" fill="#176b68">11</text>
+<text x="222" y="283" text-anchor="middle" class="small">extração coincide com o ouro</text>
+<rect x="415" y="105" width="305" height="210" rx="16" fill="#f2eee5" stroke="#a84f2a" stroke-width="5"/>
+<text x="567" y="160" text-anchor="middle" class="value">FP</text>
+<text x="567" y="235" text-anchor="middle" font-size="58" font-weight="700" fill="#a84f2a">1</text>
+<text x="567" y="283" text-anchor="middle" class="small">sistema propõe; ouro rejeita</text>
+<rect x="760" y="105" width="305" height="210" rx="16" fill="#f2eee5" stroke="#69445f" stroke-width="5"/>
+<text x="912" y="160" text-anchor="middle" class="value">FN</text>
+<text x="912" y="235" text-anchor="middle" font-size="58" font-weight="700" fill="#69445f">1</text>
+<text x="912" y="283" text-anchor="middle" class="small">ouro registra; sistema perde</text>
+<rect x="160" y="365" width="780" height="110" rx="14" fill="white" stroke="#d8cdbb"/>
+<text x="550" y="405" text-anchor="middle" class="label">D008 · “Santa Rita”</text>
+<text x="550" y="440" text-anchor="middle" class="small">FP: L002/LUGAR · FN: entidade vazia/OUTRO</text>
+<text x="550" y="535" text-anchor="middle" class="label">Precisão = revocação = F1 = 11/12 = 0,917</text>
+</svg>

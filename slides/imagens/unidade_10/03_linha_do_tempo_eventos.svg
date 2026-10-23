@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="590" viewBox="0 0 1100 590" role="img">
+<title>Eventos extraídos ao longo do tempo</title>
+<desc>Linha do tempo apresenta quatro alegações extraídas por regras em 1901, 1902, 1909 e 1912.</desc>
+<rect width="1100" height="590" fill="#fffdf7"/>
+<style>text{font-family:Aptos,Arial,sans-serif}.title{font-size:28px;font-weight:700;fill:#17324d}.label{font-size:19px;fill:#202a33}.small{font-size:16px;fill:#4b5563}.value{font-size:22px;font-weight:700;fill:#17324d}.mono{font-family:monospace;font-size:18px;fill:#17324d}</style>
+<text x="550" y="42" text-anchor="middle" class="title">Quatro regras produzem quatro alegações rastreáveis</text>
+<line x1="115" y1="300" x2="985" y2="300" stroke="#17324d" stroke-width="5"/>
+<line x1="150" y1="300" x2="150" y2="230" stroke="#176b68" stroke-width="4"/>
+<circle cx="150" cy="300" r="12" fill="#176b68"/>
+<rect x="45" y="95" width="210" height="130" rx="12" fill="#f2eee5" stroke="#176b68" stroke-width="3"/>
+<text x="150" y="127" text-anchor="middle" class="value">1901 · D001</text>
+<text x="150" y="159" text-anchor="middle" class="small">fundação</text>
+<text x="150" y="189" text-anchor="middle" class="small">Ana Ferreira</text>
+<text x="150" y="212" text-anchor="middle" class="small">→ Liga Aurora</text>
+<line x1="385" y1="300" x2="385" y2="345" stroke="#a84f2a" stroke-width="4"/>
+<circle cx="385" cy="300" r="12" fill="#a84f2a"/>
+<rect x="280" y="345" width="210" height="130" rx="12" fill="#f2eee5" stroke="#a84f2a" stroke-width="3"/>
+<text x="385" y="377" text-anchor="middle" class="value">1902 · D002</text>
+<text x="385" y="409" text-anchor="middle" class="small">inauguração</text>
+<text x="385" y="439" text-anchor="middle" class="small">Liga Aurora</text>
+<text x="385" y="462" text-anchor="middle" class="small">→ Escola Livre</text>
+<line x1="700" y1="300" x2="700" y2="230" stroke="#69445f" stroke-width="4"/>
+<circle cx="700" cy="300" r="12" fill="#69445f"/>
+<rect x="595" y="95" width="210" height="130" rx="12" fill="#f2eee5" stroke="#69445f" stroke-width="3"/>
+<text x="700" y="127" text-anchor="middle" class="value">1909 · D009</text>
+<text x="700" y="159" text-anchor="middle" class="small">ingresso</text>
+<text x="700" y="189" text-anchor="middle" class="small">Dora Silva</text>
+<text x="700" y="212" text-anchor="middle" class="small">→ Liga Aurora</text>
+<line x1="940" y1="300" x2="940" y2="345" stroke="#17324d" stroke-width="4"/>
+<circle cx="940" cy="300" r="12" fill="#17324d"/>
+<rect x="835" y="345" width="210" height="130" rx="12" fill="#f2eee5" stroke="#17324d" stroke-width="3"/>
+<text x="940" y="377" text-anchor="middle" class="value">1912 · D012</text>
+<text x="940" y="409" text-anchor="middle" class="small">contratação</text>
+<text x="940" y="439" text-anchor="middle" class="small">Escola Livre</text>
+<text x="940" y="462" text-anchor="middle" class="small">→ Eva Lima</text>
+<text x="550" y="555" text-anchor="middle" class="label">A linha organiza alegações da base; não comprova os acontecimentos</text>
+</svg>

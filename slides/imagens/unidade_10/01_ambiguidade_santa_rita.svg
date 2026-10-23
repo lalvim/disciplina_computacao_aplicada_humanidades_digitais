@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="590" viewBox="0 0 1100 590" role="img">
+<title>Uma menção, dois referentes possíveis</title>
+<desc>O contexto de D008 distingue a embarcação Santa Rita da cidade homônima.</desc>
+<rect width="1100" height="590" fill="#fffdf7"/>
+<style>text{font-family:Aptos,Arial,sans-serif}.title{font-size:28px;font-weight:700;fill:#17324d}.label{font-size:19px;fill:#202a33}.small{font-size:16px;fill:#4b5563}.value{font-size:22px;font-weight:700;fill:#17324d}.mono{font-family:monospace;font-size:18px;fill:#17324d}</style>
+<defs><marker id="seta" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#17324d"/></marker></defs>
+<text x="550" y="42" text-anchor="middle" class="title">A cadeia “Santa Rita” não determina sozinha a entidade</text>
+<rect x="80" y="82" width="940" height="100" rx="12" fill="#f2eee5" stroke="#d8cdbb"/>
+<text x="550" y="124" text-anchor="middle" class="label">O vapor Santa Rita chegou a Porto Claro; não se trata da cidade homôni</text>
+<text x="550" y="155" text-anchor="middle" class="label">ma.</text>
+<line x1="550" y1="185" x2="550" y2="235" stroke="#17324d" stroke-width="4" marker-end="url(#seta)"/>
+<rect x="410" y="240" width="280" height="72" rx="12" fill="white" stroke="#a84f2a" stroke-width="4"/>
+<text x="550" y="285" text-anchor="middle" class="value">menção: Santa Rita</text>
+<line x1="470" y1="316" x2="300" y2="370" stroke="#17324d" stroke-width="4" marker-end="url(#seta)"/>
+<line x1="630" y1="316" x2="800" y2="370" stroke="#17324d" stroke-width="4" marker-end="url(#seta)"/>
+<rect x="105" y="375" width="390" height="120" rx="14" fill="#f2eee5" stroke="#69445f" stroke-width="4"/>
+<text x="300" y="417" text-anchor="middle" class="value">L002 · cidade</text>
+<text x="300" y="454" text-anchor="middle" class="small">candidato do catálogo de autoridade</text>
+<rect x="605" y="375" width="390" height="120" rx="14" fill="#f2eee5" stroke="#176b68" stroke-width="4"/>
+<text x="800" y="417" text-anchor="middle" class="value">OUTRO · embarcação</text>
+<text x="800" y="454" text-anchor="middle" class="small">contexto: “o vapor” + negação explícita</text>
+<text x="550" y="548" text-anchor="middle" class="label">Decisão auditável: não vincular a L002</text>
+</svg>

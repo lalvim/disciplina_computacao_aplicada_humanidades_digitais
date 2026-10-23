@@ -79,6 +79,7 @@ Antes de usar em aula, confira:
 | 7 | Modelos de associação condicionada | [`unidade_07.md`](unidade_07.md) |
 | 8 | Classificação supervisionada | [`unidade_08.md`](unidade_08.md) |
 | 9 | Agrupamentos e temas | [`unidade_09.md`](unidade_09.md) |
+| 10 | Extração estruturada de textos | [`unidade_10.md`](unidade_10.md) |
 
 As demais unidades serão acrescentadas conforme as etapas definidas no plano.
 

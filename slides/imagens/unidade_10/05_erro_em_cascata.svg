@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="590" viewBox="0 0 1100 590" role="img">
+<title>Erro em cascata da extração ao grafo</title>
+<desc>Dois percursos contrastam a interpretação contextual correta com uma vinculação equivocada de Santa Rita à cidade.</desc>
+<rect width="1100" height="590" fill="#fffdf7"/>
+<style>text{font-family:Aptos,Arial,sans-serif}.title{font-size:28px;font-weight:700;fill:#17324d}.label{font-size:19px;fill:#202a33}.small{font-size:16px;fill:#4b5563}.value{font-size:22px;font-weight:700;fill:#17324d}.mono{font-family:monospace;font-size:18px;fill:#17324d}</style>
+<defs><marker id="seta" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#17324d"/></marker></defs>
+<text x="550" y="42" text-anchor="middle" class="title">Uma ligação equivocada muda a estrutura analisada</text>
+<rect x="65" y="85" width="460" height="415" rx="16" fill="#f2eee5" stroke="#176b68" stroke-width="4"/>
+<text x="295" y="125" text-anchor="middle" class="value">com contexto</text>
+<rect x="575" y="85" width="460" height="415" rx="16" fill="#f2eee5" stroke="#a84f2a" stroke-width="4"/>
+<text x="805" y="125" text-anchor="middle" class="value">sem contexto</text>
+<circle cx="150" cy="205" r="62" fill="white" stroke="#17324d" stroke-width="4"/>
+<text x="150" y="201" text-anchor="middle" class="label">vapor</text>
+<text x="150" y="227" text-anchor="middle" class="small">Santa Rita</text>
+<circle cx="405" cy="205" r="62" fill="white" stroke="#17324d" stroke-width="4"/>
+<text x="405" y="201" text-anchor="middle" class="label">Porto</text>
+<text x="405" y="227" text-anchor="middle" class="small">Claro</text>
+<circle cx="660" cy="205" r="62" fill="white" stroke="#17324d" stroke-width="4"/>
+<text x="660" y="201" text-anchor="middle" class="label">L002</text>
+<text x="660" y="227" text-anchor="middle" class="small">cidade</text>
+<circle cx="915" cy="205" r="62" fill="white" stroke="#17324d" stroke-width="4"/>
+<text x="915" y="201" text-anchor="middle" class="label">Porto</text>
+<text x="915" y="227" text-anchor="middle" class="small">Claro</text>
+<line x1="215" y1="205" x2="338" y2="205" stroke="#17324d" stroke-width="4" marker-end="url(#seta)"/>
+<line x1="725" y1="205" x2="848" y2="205" stroke="#17324d" stroke-width="4" marker-end="url(#seta)"/>
+<text x="276" y="185" text-anchor="middle" class="small">chegou a</text>
+<text x="786" y="185" text-anchor="middle" class="small" fill="#a84f2a">ligação espacial falsa</text>
+<text x="295" y="330" text-anchor="middle" class="label">registro: embarcação</text>
+<text x="805" y="330" text-anchor="middle" class="label">registro: lugar</text>
+<text x="295" y="382" text-anchor="middle" class="small">preserva a negação do texto</text>
+<text x="805" y="382" text-anchor="middle" class="small">cria nó e aresta espúrios</text>
+<text x="550" y="548" text-anchor="middle" class="label">Centralidade mede o grafo recebido; não corrige sua proveniência</text>
+</svg>

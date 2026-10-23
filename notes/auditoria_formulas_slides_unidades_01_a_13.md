@@ -1,4 +1,4 @@
-# Auditoria das fórmulas nos slides — Unidades 1 a 12
+# Auditoria das fórmulas nos slides — Unidades 1 a 13
 
 ## Critério
 
@@ -12,7 +12,7 @@ Cada slide de fórmula foi verificado quanto a três apoios:
 2. exemplo numérico ou aplicação concreta;
 3. gráfico, diagrama ou representação visual no próprio slide.
 
-Após a revisão, os 70 slides de fórmula das Unidades 1 a 12 atendem aos três
+Após a revisão, os 72 slides de fórmula das Unidades 1 a 13 atendem aos três
 critérios. Imagens laterais marcadas com `bg right` são apoios didáticos e possuem
 texto alternativo; não são decoração.
 
@@ -32,7 +32,8 @@ texto alternativo; não são decoração.
 | 10 | 3 | linguagem comum, exemplo e visual presentes |
 | 11 | 5 | linguagem comum, exemplo e visual presentes |
 | 12 | 2 | linguagem comum, exemplo e visual presentes |
-| **Total** | **70** | **conforme** |
+| 13 | 2 | linguagem comum, exemplo e visual presentes |
+| **Total** | **72** | **conforme** |
 
 ## Verificação individual
 
@@ -165,6 +166,13 @@ texto alternativo; não são decoração.
 |---:|---|---|
 | 16 | combinação ponderada na atenção | pesos 0,60, 0,30 e 0,10 e diagrama dos tokens |
 | 44 | taxa de saídas apoiadas | 2 respostas adequadas, 1 abstinência e auditoria dos 6 casos |
+
+### Unidade 13
+
+| Slide | Fórmula ou medida | Apoio visual e exemplo |
+|---:|---|---|
+| 23 | acurácia | 83 verdadeiros positivos, 84 verdadeiros negativos e matriz de confusão |
+| 47 | lacuna de F1 | F1 0,713 na Capital, 0,659 no Interior e barras por contexto |
 
 ## Uso nas próximas unidades
 

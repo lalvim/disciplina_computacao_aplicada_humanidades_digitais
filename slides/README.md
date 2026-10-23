@@ -82,6 +82,7 @@ Antes de usar em aula, confira:
 | 10 | Extração estruturada de textos | [`unidade_10.md`](unidade_10.md) |
 | 11 | Tempo e espaço | [`unidade_11.md`](unidade_11.md) |
 | 12 | Modelos de linguagem responsáveis | [`unidade_12.md`](unidade_12.md) |
+| 13 | Validade, robustez e vieses | [`unidade_13.md`](unidade_13.md) |
 
 As demais unidades serão acrescentadas conforme as etapas definidas no plano.
 

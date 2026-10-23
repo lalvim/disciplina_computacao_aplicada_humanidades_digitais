@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="590" viewBox="0 0 1100 590" role="img">
+<title>Desempenho por período e origem</title>
+<desc>Barras mostram F1 de 0,650 no período antigo, 0,741 no recente, 0,713 na Capital e 0,659 no Interior.</desc>
+<rect width="1100" height="590" fill="#fffdf7"/>
+<style>text{font-family:Aptos,Arial,sans-serif}.title{font-size:28px;font-weight:700;fill:#17324d}.label{font-size:19px;fill:#202a33}.small{font-size:16px;fill:#4b5563}.value{font-size:21px;font-weight:700;fill:#17324d}</style>
+<text x="550" y="38" text-anchor="middle" class="title">A média geral oculta diferenças entre contextos</text>
+<line x1="300" y1="90" x2="300" y2="490" stroke="#d8cdbb"/>
+<text x="300" y="520" text-anchor="middle" class="small">0.00</text>
+<line x1="462.5" y1="90" x2="462.5" y2="490" stroke="#d8cdbb"/>
+<text x="462.5" y="520" text-anchor="middle" class="small">0.25</text>
+<line x1="625.0" y1="90" x2="625.0" y2="490" stroke="#d8cdbb"/>
+<text x="625.0" y="520" text-anchor="middle" class="small">0.50</text>
+<line x1="787.5" y1="90" x2="787.5" y2="490" stroke="#d8cdbb"/>
+<text x="787.5" y="520" text-anchor="middle" class="small">0.75</text>
+<line x1="950" y1="90" x2="950" y2="490" stroke="#d8cdbb"/>
+<text x="950" y="520" text-anchor="middle" class="small">1.00</text>
+<text x="275" y="145" text-anchor="end" class="label">antigo · n=120</text>
+<rect x="300" y="115" width="422.8" height="50" rx="6" fill="#a84f2a"/>
+<text x="734.8" y="146" class="small">F1 = 0.650</text>
+<text x="275" y="235" text-anchor="end" class="label">recente · n=120</text>
+<rect x="300" y="205" width="481.9" height="50" rx="6" fill="#176b68"/>
+<text x="793.9" y="236" class="small">F1 = 0.741</text>
+<text x="275" y="325" text-anchor="end" class="label">Capital · n=160</text>
+<rect x="300" y="295" width="463.7" height="50" rx="6" fill="#176b68"/>
+<text x="775.7" y="326" class="small">F1 = 0.713</text>
+<text x="275" y="415" text-anchor="end" class="label">Interior · n=80</text>
+<rect x="300" y="385" width="428.0" height="50" rx="6" fill="#a84f2a"/>
+<text x="740.0" y="416" class="small">F1 = 0.659</text>
+<text x="550" y="565" text-anchor="middle" class="small">Diferença observada orienta investigação; não identifica sozinha o mecanismo causal.</text>
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="590" viewBox="0 0 1100 590" role="img">
+<title>Baseline e modelo em quatro métricas</title>
+<desc>Barras mostram baseline com acurácia 0,5 e F1 zero, e modelo com métricas próximas de 0,70.</desc>
+<rect width="1100" height="590" fill="#fffdf7"/>
+<style>text{font-family:Aptos,Arial,sans-serif}.title{font-size:28px;font-weight:700;fill:#17324d}.label{font-size:19px;fill:#202a33}.small{font-size:16px;fill:#4b5563}.value{font-size:21px;font-weight:700;fill:#17324d}</style>
+<text x="550" y="38" text-anchor="middle" class="title">O modelo supera o baseline — mas a métrica escolhida muda a escala</text>
+<line x1="170" y1="100" x2="170" y2="480" stroke="#d8cdbb"/>
+<text x="170" y="512" text-anchor="middle" class="small">0.00</text>
+<line x1="360.0" y1="100" x2="360.0" y2="480" stroke="#d8cdbb"/>
+<text x="360.0" y="512" text-anchor="middle" class="small">0.25</text>
+<line x1="550.0" y1="100" x2="550.0" y2="480" stroke="#d8cdbb"/>
+<text x="550.0" y="512" text-anchor="middle" class="small">0.50</text>
+<line x1="740.0" y1="100" x2="740.0" y2="480" stroke="#d8cdbb"/>
+<text x="740.0" y="512" text-anchor="middle" class="small">0.75</text>
+<line x1="930" y1="100" x2="930" y2="480" stroke="#d8cdbb"/>
+<text x="930" y="512" text-anchor="middle" class="small">1.00</text>
+<text x="150" y="154" text-anchor="end" class="label">Acurácia</text>
+<rect x="170" y="120" width="380.0" height="25" rx="4" fill="#4b5563"/>
+<text x="560.0" y="139" class="small">0.500</text>
+<rect x="170" y="151" width="528.8" height="25" rx="4" fill="#176b68"/>
+<text x="708.8" y="170" class="small">0.696</text>
+<text x="150" y="242" text-anchor="end" class="label">Precisão</text>
+<rect x="170" y="208" width="2.0" height="25" rx="4" fill="#4b5563"/>
+<text x="182.0" y="227" class="small">0.000</text>
+<rect x="170" y="239" width="530.1" height="25" rx="4" fill="#176b68"/>
+<text x="710.1" y="258" class="small">0.697</text>
+<text x="150" y="330" text-anchor="end" class="label">Revocação</text>
+<rect x="170" y="296" width="2.0" height="25" rx="4" fill="#4b5563"/>
+<text x="182.0" y="315" class="small">0.000</text>
+<rect x="170" y="327" width="525.7" height="25" rx="4" fill="#176b68"/>
+<text x="705.7" y="346" class="small">0.692</text>
+<text x="150" y="418" text-anchor="end" class="label">F1</text>
+<rect x="170" y="384" width="2.0" height="25" rx="4" fill="#4b5563"/>
+<text x="182.0" y="403" class="small">0.000</text>
+<rect x="170" y="415" width="527.9" height="25" rx="4" fill="#176b68"/>
+<text x="707.9" y="434" class="small">0.695</text>
+<rect x="275" y="540" width="24" height="16" fill="#4b5563"/><text x="310" y="554" class="small">baseline</text>
+<rect x="510" y="540" width="24" height="16" fill="#176b68"/><text x="545" y="554" class="small">modelo</text>
+<text x="815" y="554" text-anchor="middle" class="small">n = 240 · classes balanceadas</text>
+</svg>

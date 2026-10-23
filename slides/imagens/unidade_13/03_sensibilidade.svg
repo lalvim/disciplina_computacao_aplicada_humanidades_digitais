@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="590" viewBox="0 0 1100 590" role="img">
+<title>Sensibilidade das especificações</title>
+<desc>Barras mostram F1 entre 0,648 no teste temporal e 0,781 sem casos ambíguos.</desc>
+<rect width="1100" height="590" fill="#fffdf7"/>
+<style>text{font-family:Aptos,Arial,sans-serif}.title{font-size:28px;font-weight:700;fill:#17324d}.label{font-size:19px;fill:#202a33}.small{font-size:16px;fill:#4b5563}.value{font-size:21px;font-weight:700;fill:#17324d}</style>
+<text x="550" y="38" text-anchor="middle" class="title">A conclusão depende de representação, semente, casos e tempo</text>
+<line x1="410.0" y1="90" x2="410.0" y2="500" stroke="#d8cdbb"/>
+<text x="410.0" y="530" text-anchor="middle" class="small">0.60</text>
+<line x1="552.5000000000001" y1="90" x2="552.5000000000001" y2="500" stroke="#d8cdbb"/>
+<text x="552.5000000000001" y="530" text-anchor="middle" class="small">0.65</text>
+<line x1="695.0" y1="90" x2="695.0" y2="500" stroke="#d8cdbb"/>
+<text x="695.0" y="530" text-anchor="middle" class="small">0.70</text>
+<line x1="837.5" y1="90" x2="837.5" y2="500" stroke="#d8cdbb"/>
+<text x="837.5" y="530" text-anchor="middle" class="small">0.75</text>
+<line x1="980.0000000000001" y1="90" x2="980.0000000000001" y2="500" stroke="#d8cdbb"/>
+<text x="980.0000000000001" y="530" text-anchor="middle" class="small">0.80</text>
+<text x="390" y="140" text-anchor="end" class="label">teste temporal</text>
+<rect x="410" y="112" width="136.8" height="48" rx="6" fill="#a84f2a"/>
+<text x="556.8" y="142" class="small">0.648</text>
+<text x="390" y="216" text-anchor="end" class="label">outra semente</text>
+<rect x="410" y="188" width="322.0" height="48" rx="6" fill="#176b68"/>
+<text x="742.0" y="218" class="small">0.713</text>
+<text x="390" y="292" text-anchor="end" class="label">sem bigramas</text>
+<rect x="410" y="264" width="344.8" height="48" rx="6" fill="#176b68"/>
+<text x="764.8" y="294" class="small">0.721</text>
+<text x="390" y="368" text-anchor="end" class="label">especificação principal</text>
+<rect x="410" y="340" width="404.7" height="48" rx="6" fill="#176b68"/>
+<text x="824.7" y="370" class="small">0.742</text>
+<text x="390" y="444" text-anchor="end" class="label">sem casos ambíguos</text>
+<rect x="410" y="416" width="515.9" height="48" rx="6" fill="#176b68"/>
+<text x="935.9" y="446" class="small">0.781</text>
+<text x="550" y="568" text-anchor="middle" class="small">Faixa observada: 0,648–0,781 · cada especificação responde a uma condição diferente</text>
+</svg>

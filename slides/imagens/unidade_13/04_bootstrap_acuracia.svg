@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="590" viewBox="0 0 1100 590" role="img">
+<title>Distribuição bootstrap da acurácia</title>
+<desc>Histograma de mil reamostragens mostra mediana 0,696 e intervalo percentil de 0,633 a 0,750.</desc>
+<rect width="1100" height="590" fill="#fffdf7"/>
+<style>text{font-family:Aptos,Arial,sans-serif}.title{font-size:28px;font-weight:700;fill:#17324d}.label{font-size:19px;fill:#202a33}.small{font-size:16px;fill:#4b5563}.value{font-size:21px;font-weight:700;fill:#17324d}</style>
+<text x="550" y="38" text-anchor="middle" class="title">A incerteza amostral produz uma faixa, não um ponto exato</text>
+<rect x="110.0" y="460.0" width="38.0" height="0.0" fill="#176b68"/>
+<rect x="150.0" y="460.0" width="38.0" height="0.0" fill="#176b68"/>
+<rect x="190.0" y="457.7" width="38.0" height="2.3" fill="#176b68"/>
+<rect x="230.0" y="453.1" width="38.0" height="6.9" fill="#176b68"/>
+<rect x="270.0" y="416.2" width="38.0" height="43.8" fill="#176b68"/>
+<rect x="310.0" y="411.5" width="38.0" height="48.5" fill="#176b68"/>
+<rect x="350.0" y="404.6" width="38.0" height="55.4" fill="#176b68"/>
+<rect x="390.0" y="319.2" width="38.0" height="140.8" fill="#176b68"/>
+<rect x="430.0" y="303.1" width="38.0" height="156.9" fill="#176b68"/>
+<rect x="470.0" y="176.2" width="38.0" height="283.8" fill="#176b68"/>
+<rect x="510.0" y="208.5" width="38.0" height="251.5" fill="#176b68"/>
+<rect x="550.0" y="222.3" width="38.0" height="237.7" fill="#176b68"/>
+<rect x="590.0" y="100.0" width="38.0" height="360.0" fill="#176b68"/>
+<rect x="630.0" y="263.8" width="38.0" height="196.2" fill="#176b68"/>
+<rect x="670.0" y="183.1" width="38.0" height="276.9" fill="#176b68"/>
+<rect x="710.0" y="367.7" width="38.0" height="92.3" fill="#176b68"/>
+<rect x="750.0" y="372.3" width="38.0" height="87.7" fill="#176b68"/>
+<rect x="790.0" y="418.5" width="38.0" height="41.5" fill="#176b68"/>
+<rect x="830.0" y="448.5" width="38.0" height="11.5" fill="#176b68"/>
+<rect x="870.0" y="448.5" width="38.0" height="11.5" fill="#176b68"/>
+<rect x="910.0" y="457.7" width="38.0" height="2.3" fill="#176b68"/>
+<rect x="950.0" y="460.0" width="38.0" height="0.0" fill="#176b68"/>
+<line x1="323.3" y1="100" x2="323.3" y2="460" stroke="#a84f2a" stroke-width="4"/>
+<text x="323.3" y="88" text-anchor="middle" class="small">2,5%: 0.633</text>
+<line x1="573.3" y1="100" x2="573.3" y2="460" stroke="#17324d" stroke-width="4"/>
+<text x="573.3" y="88" text-anchor="middle" class="small">mediana: 0.696</text>
+<line x1="790.0" y1="100" x2="790.0" y2="460" stroke="#a84f2a" stroke-width="4"/>
+<text x="790.0" y="88" text-anchor="middle" class="small">97,5%: 0.750</text>
+<text x="550" y="505" text-anchor="middle" class="label">intervalo percentil descritivo: 0,633–0,750</text>
+<text x="550" y="548" text-anchor="middle" class="small">1.000 reamostragens dos 240 casos observados · não corrige viés de seleção</text>
+</svg>

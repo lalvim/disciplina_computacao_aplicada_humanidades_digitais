@@ -20,6 +20,38 @@ representam adequadamente o fenômeno investigado?
 
 ---
 
+# Agenda
+
+1. Delimitar população, fontes e corpus
+2. Tornar a seleção explícita e reproduzível
+3. Examinar cobertura, vieses e silêncios
+4. Documentar campos, identificadores e proveniência
+5. Relacionar FAIR, CARE e *datasheets*
+6. Construir o protocolo da base do projeto
+
+---
+
+# Ao final, você deverá conseguir…
+
+- distinguir população de interesse, população acessível e corpus;
+- classificar fontes em relação à pergunta;
+- justificar inclusão, exclusão e casos limítrofes;
+- avaliar cobertura sem prometer representatividade automática;
+- documentar metadados, identificadores e proveniência;
+- discutir acesso, autoridade, benefício e responsabilidade;
+- produzir um protocolo de base auditável e viável.
+
+---
+
+# Um percurso cumulativo
+
+![w:1110 centralizada Percurso dos Notebooks 00 a 05: diagnóstico, seleção, cobertura, documentação, governança e oficina conduzem a um protocolo defensável.](../unidade_02/imagens/00_percurso_unidade.svg)
+
+Uma lacuna percebida adiante pode exigir retorno às fontes ou aos critérios de
+seleção.
+
+---
+
 <!-- _class: exemplo -->
 
 # Catálogo fictício usado na unidade
@@ -149,38 +181,6 @@ Antes de escolher, precisamos saber:
 </div>
 
 <p class="pergunta">Uma base é adequada em relação a uma pergunta e a condições de uso.</p>
-
----
-
-# Agenda
-
-1. Delimitar população, fontes e corpus
-2. Tornar a seleção explícita e reproduzível
-3. Examinar cobertura, vieses e silêncios
-4. Documentar campos, identificadores e proveniência
-5. Relacionar FAIR, CARE e *datasheets*
-6. Construir o protocolo da base do projeto
-
----
-
-# Ao final, você deverá conseguir…
-
-- distinguir população de interesse, população acessível e corpus;
-- classificar fontes em relação à pergunta;
-- justificar inclusão, exclusão e casos limítrofes;
-- avaliar cobertura sem prometer representatividade automática;
-- documentar metadados, identificadores e proveniência;
-- discutir acesso, autoridade, benefício e responsabilidade;
-- produzir um protocolo de base auditável e viável.
-
----
-
-# Um percurso cumulativo
-
-![w:1110 centralizada Percurso dos Notebooks 00 a 05: diagnóstico, seleção, cobertura, documentação, governança e oficina conduzem a um protocolo defensável.](../unidade_02/imagens/00_percurso_unidade.svg)
-
-Uma lacuna percebida adiante pode exigir retorno às fontes ou aos critérios de
-seleção.
 
 ---
 

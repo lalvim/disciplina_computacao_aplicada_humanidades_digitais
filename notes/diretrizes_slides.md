@@ -84,14 +84,17 @@ Cada apresentação seguirá esta macroestrutura.
 ### 3.1 Abertura
 
 1. título da unidade e problema orientador;
-2. apresentação breve da base fictícia, quando o exemplo depender dela;
-3. exemplo concreto, situação-problema ou documento;
-4. pergunta provocada pelo exemplo;
-5. agenda da apresentação;
-6. objetivos de aprendizagem em linguagem observável.
+2. agenda da apresentação;
+3. objetivos de aprendizagem em linguagem observável;
+4. percurso visual ou lógico da unidade;
+5. apresentação breve da base fictícia, quando o exemplo depender dela;
+6. amostras dos arquivos de dados mencionados;
+7. exemplo concreto, situação-problema ou documento;
+8. pergunta provocada pelo exemplo.
 
-O exemplo deve aparecer **antes da exposição teórica**. A agenda pode vir depois do
-exemplo, pois assim seus tópicos respondem a uma dúvida já criada.
+Agenda, objetivos e percurso devem aparecer antes da base e do caso inicial. O
+exemplo continua **antes da exposição teórica**: esses três slides introdutórios
+orientam a aula, mas ainda não apresentam conceitos ou métodos.
 
 ### 3.2 Apresentação de bases fictícias
 

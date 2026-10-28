@@ -20,6 +20,39 @@ uma base antes de aplicar modelos?
 
 ---
 
+# Agenda
+
+1. Classificar variáveis e denominadores
+2. Descrever centro, dispersão e distribuição
+3. Explorar frequências e contextos textuais
+4. Escolher gráficos segundo a pergunta
+5. Retornar dos agregados aos documentos
+6. Produzir um relatório exploratório auditável
+
+---
+
+# Ao final, você deverá conseguir…
+
+- distinguir variáveis categóricas, numéricas e temporais;
+- calcular e interpretar frequências, centro e dispersão;
+- inspecionar distribuições sem excluir casos automaticamente;
+- documentar tokenização, concordâncias, colocações e diversidade;
+- escolher visualizações coerentes e acessíveis;
+- separar descrição, interpretação, hipótese e limite;
+- produzir um relatório que prepare comparações futuras.
+
+---
+
+# O percurso da unidade
+
+![w:1110 centralizada Cinco etapas ligam base documentada, descrição, visualização, leitura próxima e formulação de hipóteses, com retorno às decisões.](../unidade_04/imagens/00_percurso_exploracao.svg)
+
+Explorar formula hipóteses; não confirma retrospectivamente o que foi encontrado.
+
+<p class="fonte">Tukey (1977); Arnold e Tilton (2019).</p>
+
+---
+
 <!-- _class: exemplo -->
 
 # Base fictícia usada na exploração
@@ -107,39 +140,6 @@ A média não mostra:
 </div>
 
 </div>
-
----
-
-# Agenda
-
-1. Classificar variáveis e denominadores
-2. Descrever centro, dispersão e distribuição
-3. Explorar frequências e contextos textuais
-4. Escolher gráficos segundo a pergunta
-5. Retornar dos agregados aos documentos
-6. Produzir um relatório exploratório auditável
-
----
-
-# Ao final, você deverá conseguir…
-
-- distinguir variáveis categóricas, numéricas e temporais;
-- calcular e interpretar frequências, centro e dispersão;
-- inspecionar distribuições sem excluir casos automaticamente;
-- documentar tokenização, concordâncias, colocações e diversidade;
-- escolher visualizações coerentes e acessíveis;
-- separar descrição, interpretação, hipótese e limite;
-- produzir um relatório que prepare comparações futuras.
-
----
-
-# O percurso da unidade
-
-![w:1110 centralizada Cinco etapas ligam base documentada, descrição, visualização, leitura próxima e formulação de hipóteses, com retorno às decisões.](../unidade_04/imagens/00_percurso_exploracao.svg)
-
-Explorar formula hipóteses; não confirma retrospectivamente o que foi encontrado.
-
-<p class="fonte">Tukey (1977); Arnold e Tilton (2019).</p>
 
 ---
 

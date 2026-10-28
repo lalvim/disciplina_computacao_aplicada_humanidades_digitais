@@ -20,6 +20,37 @@ apresentam diferenças relevantes?
 
 ---
 
+# Agenda
+
+1. Estimar magnitude e tamanho de efeito
+2. Avaliar sensibilidade e relevância
+3. Situar bootstrap, intervalos e permutação
+4. Representar documentos como vetores
+5. Comparar vocabulário, perfis e versões
+6. Construir uma análise comparativa defensável
+
+---
+
+# Ao final, você deverá conseguir…
+
+- declarar unidades, grupos e quantidade de interesse;
+- distinguir diferença bruta, relativa e padronizada;
+- interpretar intervalo e valor de *p* sem atalhos binários;
+- construir matriz documento-termo e TF-IDF;
+- comparar Jaccard, cosseno e distância de edição;
+- realizar análise de sensibilidade;
+- retornar aos documentos e limitar a conclusão.
+
+---
+
+# Dois percursos, a mesma exigência
+
+![w:1110 centralizada Seis etapas ligam pergunta, estimativa, incerteza, representação textual, comparação e interpretação, com retorno às decisões.](../unidade_05/imagens/00_percurso_comparacao.svg)
+
+Toda medida precisa retornar aos casos e ao contexto.
+
+---
+
 <!-- _class: exemplo -->
 
 # Bases fictícias usadas nas comparações
@@ -144,37 +175,6 @@ Comparar não é apenas:
 - escolher a métrica que confirma uma expectativa.
 
 <p class="pergunta">Como construir uma comparação que conecte medida, pressuposto, caso e argumento?</p>
-
----
-
-# Agenda
-
-1. Estimar magnitude e tamanho de efeito
-2. Avaliar sensibilidade e relevância
-3. Situar bootstrap, intervalos e permutação
-4. Representar documentos como vetores
-5. Comparar vocabulário, perfis e versões
-6. Construir uma análise comparativa defensável
-
----
-
-# Ao final, você deverá conseguir…
-
-- declarar unidades, grupos e quantidade de interesse;
-- distinguir diferença bruta, relativa e padronizada;
-- interpretar intervalo e valor de *p* sem atalhos binários;
-- construir matriz documento-termo e TF-IDF;
-- comparar Jaccard, cosseno e distância de edição;
-- realizar análise de sensibilidade;
-- retornar aos documentos e limitar a conclusão.
-
----
-
-# Dois percursos, a mesma exigência
-
-![w:1110 centralizada Seis etapas ligam pergunta, estimativa, incerteza, representação textual, comparação e interpretação, com retorno às decisões.](../unidade_05/imagens/00_percurso_comparacao.svg)
-
-Toda medida precisa retornar aos casos e ao contexto.
 
 ---
 

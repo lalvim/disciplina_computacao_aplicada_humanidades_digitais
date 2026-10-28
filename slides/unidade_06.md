@@ -20,6 +20,37 @@ quando ele é apenas efeito da forma de observar?
 
 ---
 
+# Agenda
+
+1. Distinguir associação, correlação, coocorrência e grafo
+2. Comparar categorias com denominadores explícitos
+3. Investigar correlações e explicações alternativas
+4. Transformar documentos em matrizes relacionais
+5. Interpretar centralidade, comunidades e direção
+6. Construir uma análise defensável para o projeto
+
+---
+
+# Ao final, você deverá conseguir…
+
+- formular uma pergunta relacional com unidade definida;
+- construir e interpretar uma tabela de contingência;
+- ler correlações sem convertê-las em causalidade;
+- explicar a projeção de uma matriz bipartida;
+- distinguir grau, força e intermediação;
+- testar sensibilidade e retornar às fontes;
+- justificar o uso — ou a não adoção — de um grafo.
+
+---
+
+# O percurso da unidade
+
+![w:1100 centralizada O percurso liga associação categórica, correlação, coocorrência, matrizes, grafos e retorno aos documentos.](../unidade_06/imagens/00_percurso_associacao.svg)
+
+O método muda; a obrigação de documentar unidades, regras e limites permanece.
+
+---
+
 <!-- _class: exemplo -->
 
 # Base fictícia: registros e documentos
@@ -163,37 +194,6 @@ social ainda precisa ser investigada nas fontes.
 - Que casos concretos produziram o resultado?
 
 Uma aresta não possui significado antes dessas decisões.
-
----
-
-# Agenda
-
-1. Distinguir associação, correlação, coocorrência e grafo
-2. Comparar categorias com denominadores explícitos
-3. Investigar correlações e explicações alternativas
-4. Transformar documentos em matrizes relacionais
-5. Interpretar centralidade, comunidades e direção
-6. Construir uma análise defensável para o projeto
-
----
-
-# Ao final, você deverá conseguir…
-
-- formular uma pergunta relacional com unidade definida;
-- construir e interpretar uma tabela de contingência;
-- ler correlações sem convertê-las em causalidade;
-- explicar a projeção de uma matriz bipartida;
-- distinguir grau, força e intermediação;
-- testar sensibilidade e retornar às fontes;
-- justificar o uso — ou a não adoção — de um grafo.
-
----
-
-# O percurso da unidade
-
-![w:1100 centralizada O percurso liga associação categórica, correlação, coocorrência, matrizes, grafos e retorno aos documentos.](../unidade_06/imagens/00_percurso_associacao.svg)
-
-O método muda; a obrigação de documentar unidades, regras e limites permanece.
 
 ---
 

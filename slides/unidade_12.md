@@ -20,6 +20,37 @@ pesquisa sem confundir fluência com evidência, fidelidade ou decisão ética?
 
 ---
 
+# Agenda
+
+1. Compreender representações e atenção
+2. Transformar tarefas em protocolos de prompt
+3. Separar recuperação, geração e verificação
+4. Auditar erros, citações e abstinência
+5. Avaliar privacidade, risco e baselines
+6. Realizar um experimento controlado
+
+---
+
+# Ao final, você deverá conseguir…
+
+- distinguir TF-IDF, projeção densa e embedding contextual;
+- explicar atenção sem atribuir compreensão garantida ao modelo;
+- registrar tarefa, prompt, configuração, versão e saída;
+- avaliar recuperação separadamente da resposta;
+- identificar alucinação, contradição e extrapolação;
+- projetar rubrica e baseline para uma tarefa concreta;
+- decidir adoção, uso condicionado ou recusa.
+
+---
+
+# O percurso da unidade
+
+![w:1070 centralizada Tarefa, referência, avaliação e decisão formam um percurso no qual fluência não substitui evidência.](../unidade_12/imagens/00_percurso_responsavel.svg)
+
+O modelo é apenas uma parte do sistema de pesquisa.
+
+---
+
 <!-- _class: exemplo -->
 
 # Ambiente fictício e controlado
@@ -63,37 +94,6 @@ A frase é curta, clara e gramaticalmente correta.
 | tipo de erro | contradição |
 
 Uma citação presente pode não sustentar a afirmação.
-
----
-
-# Uso responsável é um percurso verificável
-
-![w:1070 centralizada Tarefa, referência, avaliação e decisão formam um percurso no qual fluência não substitui evidência.](../unidade_12/imagens/00_percurso_responsavel.svg)
-
-O modelo é apenas uma parte do sistema de pesquisa.
-
----
-
-# Agenda
-
-1. Compreender representações e atenção
-2. Transformar tarefas em protocolos de prompt
-3. Separar recuperação, geração e verificação
-4. Auditar erros, citações e abstinência
-5. Avaliar privacidade, risco e baselines
-6. Realizar um experimento controlado
-
----
-
-# Ao final, você deverá conseguir…
-
-- distinguir TF-IDF, projeção densa e embedding contextual;
-- explicar atenção sem atribuir compreensão garantida ao modelo;
-- registrar tarefa, prompt, configuração, versão e saída;
-- avaliar recuperação separadamente da resposta;
-- identificar alucinação, contradição e extrapolação;
-- projetar rubrica e baseline para uma tarefa concreta;
-- decidir adoção, uso condicionado ou recusa.
 
 ---
 

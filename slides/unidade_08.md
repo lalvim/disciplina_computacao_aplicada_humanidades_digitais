@@ -20,6 +20,38 @@ as decisões humanas, os erros e os limites da coleção?
 
 ---
 
+# Agenda
+
+1. Transformar conceitos em guias de anotação
+2. Medir concordância e revisar desacordos
+3. Separar treino, teste e linha de base
+4. Interpretar métricas e matrizes de confusão
+5. Classificar textos com TF-IDF e discutir embeddings
+6. Construir um protótipo — ou justificar a não adoção
+
+---
+
+# Ao final, você deverá conseguir…
+
+- definir uma categoria com inclusões, exclusões e casos limítrofes;
+- distinguir consistência entre anotadores de validade do construto;
+- proteger o conjunto de teste contra vazamento;
+- explicar acurácia, precisão, revocação e F1;
+- analisar erros e diferenças entre grupos;
+- inspecionar termos usados por um modelo textual;
+- limitar a generalização do protótipo.
+
+---
+
+# O percurso da unidade
+
+![w:1090 centralizada O percurso liga definição da categoria, anotação, divisão dos dados, linha de base, modelo, avaliação e retorno aos documentos.](../unidade_08/imagens/00_percurso_classificacao.svg)
+
+O retorno aos documentos não é uma etapa opcional depois da métrica: ele faz parte
+da avaliação.
+
+---
+
 <!-- _class: exemplo -->
 
 # Corpus fictício de classificação
@@ -86,38 +118,6 @@ Precisamos tornar auditáveis:
 - o que foi reservado para avaliação;
 - quais erros o modelo comete;
 - para quais grupos e contextos ele falha.
-
----
-
-# Agenda
-
-1. Transformar conceitos em guias de anotação
-2. Medir concordância e revisar desacordos
-3. Separar treino, teste e linha de base
-4. Interpretar métricas e matrizes de confusão
-5. Classificar textos com TF-IDF e discutir embeddings
-6. Construir um protótipo — ou justificar a não adoção
-
----
-
-# Ao final, você deverá conseguir…
-
-- definir uma categoria com inclusões, exclusões e casos limítrofes;
-- distinguir consistência entre anotadores de validade do construto;
-- proteger o conjunto de teste contra vazamento;
-- explicar acurácia, precisão, revocação e F1;
-- analisar erros e diferenças entre grupos;
-- inspecionar termos usados por um modelo textual;
-- limitar a generalização do protótipo.
-
----
-
-# O percurso da unidade
-
-![w:1090 centralizada O percurso liga definição da categoria, anotação, divisão dos dados, linha de base, modelo, avaliação e retorno aos documentos.](../unidade_08/imagens/00_percurso_classificacao.svg)
-
-O retorno aos documentos não é uma etapa opcional depois da métrica: ele faz parte
-da avaliação.
 
 ---
 

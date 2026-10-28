@@ -20,6 +20,37 @@ formatos diferentes sem apagar sua origem, incerteza e estrutura?
 
 ---
 
+# Agenda
+
+1. Reconhecer formatos e possibilidades de ação
+2. Distinguir extração textual e OCR
+3. Organizar unidades, tabelas e representações
+4. Normalizar sem sobrescrever os originais
+5. Integrar tabelas com chaves e cardinalidades
+6. Produzir uma base processável e reproduzível
+
+---
+
+# Ao final, você deverá conseguir…
+
+- inventariar formato, estrutura, versão e proveniência;
+- importar CSV, XLSX, JSON, XML, TXT e PDF de modo consciente;
+- avaliar OCR em relação a uma finalidade;
+- distinguir tabelas largas e longas;
+- representar datas, códigos, ausências e duplicatas;
+- declarar e auditar chaves, junções e cardinalidades;
+- entregar uma base processável ligada aos dados brutos.
+
+---
+
+# O percurso da unidade
+
+![w:1110 centralizada Fontes e formatos passam por estruturação, transformação e integração até formar uma base processável, com retorno por auditoria.](../unidade_03/imagens/00_percurso_unidade.svg)
+
+Auditar pode obrigar a retornar à importação, à regra ou até à fonte.
+
+---
+
 <!-- _class: exemplo -->
 
 # Conjunto fictício: fontes e formatos
@@ -228,37 +259,6 @@ Precisamos:
 </div>
 
 </div>
-
----
-
-# Agenda
-
-1. Reconhecer formatos e possibilidades de ação
-2. Distinguir extração textual e OCR
-3. Organizar unidades, tabelas e representações
-4. Normalizar sem sobrescrever os originais
-5. Integrar tabelas com chaves e cardinalidades
-6. Produzir uma base processável e reproduzível
-
----
-
-# Ao final, você deverá conseguir…
-
-- inventariar formato, estrutura, versão e proveniência;
-- importar CSV, XLSX, JSON, XML, TXT e PDF de modo consciente;
-- avaliar OCR em relação a uma finalidade;
-- distinguir tabelas largas e longas;
-- representar datas, códigos, ausências e duplicatas;
-- declarar e auditar chaves, junções e cardinalidades;
-- entregar uma base processável ligada aos dados brutos.
-
----
-
-# O percurso da unidade
-
-![w:1110 centralizada Fontes e formatos passam por estruturação, transformação e integração até formar uma base processável, com retorno por auditoria.](../unidade_03/imagens/00_percurso_unidade.svg)
-
-Auditar pode obrigar a retornar à importação, à regra ou até à fonte.
 
 ---
 

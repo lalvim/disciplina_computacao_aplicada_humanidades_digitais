@@ -20,6 +20,38 @@ espaciais sem naturalizar períodos, denominadores e fronteiras?
 
 ---
 
+# Agenda
+
+1. Distinguir contagem, taxa e crescimento
+2. Comparar tendência, médias móveis e rupturas
+3. Acompanhar palavras e temas no tempo
+4. Ler mapas com denominadores explícitos
+5. Discutir falácia ecológica e MAUP
+6. Integrar um percurso ao projeto cumulativo
+
+---
+
+# Ao final, você deverá conseguir…
+
+- definir a unidade temporal ou territorial analisada;
+- calcular e interpretar taxa e crescimento;
+- explicar o efeito da janela de uma média móvel;
+- marcar rupturas de cobertura ou definição;
+- normalizar contagens textuais pelo tamanho do corpus;
+- comparar contagens, taxas brutas e taxas padronizadas;
+- reconhecer falácia ecológica e MAUP;
+- produzir visualização autônoma, sensibilidade e limites.
+
+---
+
+# O percurso da unidade
+
+![w:1080 centralizada Unidades e denominadores orientam a visualização, que conduz à interpretação crítica e aos limites.](../unidade_11/imagens/00_percurso_tempo_espaco.svg)
+
+Comparabilidade vem antes de interpretação.
+
+---
+
 <!-- _class: exemplo -->
 
 # Séries fictícias usadas na unidade
@@ -139,38 +171,6 @@ Uma coluna `território` também:
 - qual fronteira e versão?
 - lugar mencionado, produzido ou arquivado?
 - área administrativa ou recorte analítico?
-
----
-
-# Agenda
-
-1. Distinguir contagem, taxa e crescimento
-2. Comparar tendência, médias móveis e rupturas
-3. Acompanhar palavras e temas no tempo
-4. Ler mapas com denominadores explícitos
-5. Discutir falácia ecológica e MAUP
-6. Integrar um percurso ao projeto cumulativo
-
----
-
-# Ao final, você deverá conseguir…
-
-- definir a unidade temporal ou territorial analisada;
-- calcular e interpretar taxa e crescimento;
-- explicar o efeito da janela de uma média móvel;
-- marcar rupturas de cobertura ou definição;
-- normalizar contagens textuais pelo tamanho do corpus;
-- comparar contagens, taxas brutas e taxas padronizadas;
-- reconhecer falácia ecológica e MAUP;
-- produzir visualização autônoma, sensibilidade e limites.
-
----
-
-# O percurso da unidade
-
-![w:1080 centralizada Unidades e denominadores orientam a visualização, que conduz à interpretação crítica e aos limites.](../unidade_11/imagens/00_percurso_tempo_espaco.svg)
-
-Comparabilidade vem antes de interpretação.
 
 ---
 

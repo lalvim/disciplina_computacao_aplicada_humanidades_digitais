@@ -42,7 +42,7 @@ texto alternativo; não são decoração.
 
 | Slide | Fórmula ou medida | Apoio visual e exemplo |
 |---:|---|---|
-| 28 | proporção de extensão temática | 5 de 20 parágrafos e representações do tema |
+| 29 | proporção de extensão temática | 5 de 20 parágrafos e representações do tema |
 
 ### Unidade 2
 
@@ -172,8 +172,8 @@ texto alternativo; não são decoração.
 
 | Slide | Fórmula ou medida | Apoio visual e exemplo |
 |---:|---|---|
-| 24 | acurácia | 83 verdadeiros positivos, 84 verdadeiros negativos e matriz de confusão |
-| 48 | lacuna de F1 | F1 0,713 na Capital, 0,659 no Interior e barras por contexto |
+| 25 | acurácia | 83 verdadeiros positivos, 84 verdadeiros negativos e matriz de confusão |
+| 49 | lacuna de F1 | F1 0,713 na Capital, 0,659 no Interior e barras por contexto |
 
 ### Unidade 14
 

@@ -20,6 +20,37 @@ algorítmicos em grupos naturais ou temas autoevidentes?
 
 ---
 
+# Agenda
+
+1. Definir semelhança, escala e distância
+2. Compreender K-means e escolher soluções plausíveis
+3. Ler hierarquia, perfis e estabilidade
+4. Agrupar documentos por vocabulário
+5. Interpretar tópicos como misturas probabilísticas
+6. Integrar uma exploração prudente ao projeto
+
+---
+
+# Ao final, você deverá conseguir…
+
+- explicar por que escala e representação mudam vizinhanças;
+- interpretar distância euclidiana e padronização;
+- comparar inércia e silhueta sem procurar um número mágico;
+- ler um dendrograma como sequência de fusões;
+- caracterizar grupos por perfis e casos;
+- distinguir cluster textual de tópico;
+- tratar nomes e padrões como hipóteses revisáveis.
+
+---
+
+# O percurso da unidade
+
+![w:1080 centralizada O percurso liga representação, distância, agrupamento, caracterização, estabilidade, casos e interpretação.](../unidade_09/imagens/00_percurso_descoberta.svg)
+
+Descobrir, nesta unidade, significa organizar uma hipótese para retornar às fontes.
+
+---
+
 <!-- _class: exemplo -->
 
 # Base fictícia de instituições
@@ -80,37 +111,6 @@ casos → variáveis → escala → distância → algoritmo → número de grup
 
 O algoritmo organiza padrões segundo essa cadeia. Ele não elimina as escolhas
 anteriores nem produz sozinho uma explicação.
-
----
-
-# Agenda
-
-1. Definir semelhança, escala e distância
-2. Compreender K-means e escolher soluções plausíveis
-3. Ler hierarquia, perfis e estabilidade
-4. Agrupar documentos por vocabulário
-5. Interpretar tópicos como misturas probabilísticas
-6. Integrar uma exploração prudente ao projeto
-
----
-
-# Ao final, você deverá conseguir…
-
-- explicar por que escala e representação mudam vizinhanças;
-- interpretar distância euclidiana e padronização;
-- comparar inércia e silhueta sem procurar um número mágico;
-- ler um dendrograma como sequência de fusões;
-- caracterizar grupos por perfis e casos;
-- distinguir cluster textual de tópico;
-- tratar nomes e padrões como hipóteses revisáveis.
-
----
-
-# O percurso da unidade
-
-![w:1080 centralizada O percurso liga representação, distância, agrupamento, caracterização, estabilidade, casos e interpretação.](../unidade_09/imagens/00_percurso_descoberta.svg)
-
-Descobrir, nesta unidade, significa organizar uma hipótese para retornar às fontes.
 
 ---
 

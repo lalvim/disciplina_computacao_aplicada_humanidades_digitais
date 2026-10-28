@@ -20,6 +20,38 @@ quando outras diferenças observadas são consideradas?
 
 ---
 
+# Agenda
+
+1. Construir e interpretar uma regressão linear simples
+2. Condicionar associações e representar categorias
+3. Investigar interações, resíduos e casos influentes
+4. Modelar respostas binárias com regressão logística
+5. Traduzir coeficientes em previsões compreensíveis
+6. Integrar um modelo — ou sua não adoção — ao projeto
+
+---
+
+# Ao final, você deverá conseguir…
+
+- definir resposta, explicativas e unidade de análise;
+- interpretar inclinações em escala substantiva;
+- explicar controle estatístico e categoria de referência;
+- ler uma interação por previsões condicionais;
+- usar resíduos para retornar aos casos;
+- distinguir probabilidade, chance e razão de chances;
+- limitar a linguagem causal em dados observacionais.
+
+---
+
+# O percurso da unidade
+
+![w:1100 centralizada O percurso começa na pergunta, passa por especificação, estimação, diagnóstico e casos, e termina em uma afirmação limitada.](../unidade_07/imagens/00_percurso_modelo.svg)
+
+O modelo é uma compressão argumentativa. A crítica das fontes permanece antes,
+durante e depois do cálculo.
+
+---
+
 <!-- _class: exemplo -->
 
 # Base fictícia de municípios
@@ -112,38 +144,6 @@ variáveis incluídas.
 - A conclusão permanece quando uma decisão muda?
 
 Modelar é explicitar comparações e também suas condições.
-
----
-
-# Agenda
-
-1. Construir e interpretar uma regressão linear simples
-2. Condicionar associações e representar categorias
-3. Investigar interações, resíduos e casos influentes
-4. Modelar respostas binárias com regressão logística
-5. Traduzir coeficientes em previsões compreensíveis
-6. Integrar um modelo — ou sua não adoção — ao projeto
-
----
-
-# Ao final, você deverá conseguir…
-
-- definir resposta, explicativas e unidade de análise;
-- interpretar inclinações em escala substantiva;
-- explicar controle estatístico e categoria de referência;
-- ler uma interação por previsões condicionais;
-- usar resíduos para retornar aos casos;
-- distinguir probabilidade, chance e razão de chances;
-- limitar a linguagem causal em dados observacionais.
-
----
-
-# O percurso da unidade
-
-![w:1100 centralizada O percurso começa na pergunta, passa por especificação, estimação, diagnóstico e casos, e termina em uma afirmação limitada.](../unidade_07/imagens/00_percurso_modelo.svg)
-
-O modelo é uma compressão argumentativa. A crítica das fontes permanece antes,
-durante e depois do cálculo.
 
 ---
 

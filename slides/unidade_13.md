@@ -20,6 +20,43 @@ seu alcance muda diante de outras medidas, especificações, grupos e contextos?
 
 ---
 
+# Agenda
+
+1. Auditar validade de construto, interna e externa
+2. Combinar baseline, métricas e leitura de casos
+3. Examinar robustez, sensibilidade e incerteza
+4. Investigar diferenças entre grupos e contextos
+5. Transformar ameaças em verificações e ações
+6. Reescrever o alcance das conclusões
+
+---
+
+# Ao final, você deverá conseguir…
+
+- mapear conceito, indicador, transformação e inferência;
+- distinguir validade de construto, interna e externa;
+- comparar um modelo a um baseline informativo;
+- interpretar matriz de confusão e amostra qualitativa;
+- planejar uma análise de sensibilidade;
+- separar incerteza amostral de viés de seleção;
+- investigar lacunas por grupo sem atribuir causa automaticamente;
+- priorizar ameaças e revisar conclusões.
+
+---
+
+# O percurso da unidade
+
+| Etapa | Pergunta de auditoria |
+|---|---|
+| conceito → medida | o indicador representa o construto? |
+| dados → resultado | escolhas e erros alteram a estimativa? |
+| resultado → conclusão | a inferência resiste a alternativas? |
+| conclusão → contexto | até onde ela pode ser transportada? |
+
+Validar é percorrer esses elos e revisar o alcance quando algum deles enfraquece.
+
+---
+
 <!-- _class: exemplo -->
 
 # Base fictícia de auditoria
@@ -65,30 +102,6 @@ representa e se a conclusão substantiva resiste a elas.
 
 Um método ou conjunto de dados não recebe um selo universal de “válido”. Avaliamos
 uma inferência específica, apoiada por evidências específicas.
-
----
-
-# Agenda
-
-1. Auditar validade de construto, interna e externa
-2. Combinar baseline, métricas e leitura de casos
-3. Examinar robustez, sensibilidade e incerteza
-4. Investigar diferenças entre grupos e contextos
-5. Transformar ameaças em verificações e ações
-6. Reescrever o alcance das conclusões
-
----
-
-# Ao final, você deverá conseguir…
-
-- mapear conceito, indicador, transformação e inferência;
-- distinguir validade de construto, interna e externa;
-- comparar um modelo a um baseline informativo;
-- interpretar matriz de confusão e amostra qualitativa;
-- planejar uma análise de sensibilidade;
-- separar incerteza amostral de viés de seleção;
-- investigar lacunas por grupo sem atribuir causa automaticamente;
-- priorizar ameaças e revisar conclusões.
 
 ---
 

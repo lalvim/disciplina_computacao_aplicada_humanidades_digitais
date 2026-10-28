@@ -20,6 +20,46 @@ projeto compreensível, verificável, compartilhável e intelectualmente honesto
 
 ---
 
+# Agenda
+
+1. Organizar documentação e histórico de decisões
+2. Preparar ambiente e execução verificável
+3. Comunicar resultados, intervalos e limites
+4. Definir acesso, direitos e proteção
+5. Consolidar o relatório-notebook e o pacote
+6. Ensaiar a apresentação final do projeto
+
+---
+
+# Ao final, você deverá conseguir…
+
+- distinguir reprodução, replicação e reutilização;
+- distribuir funções entre README, notebook, dicionário e proveniência;
+- registrar ambiente, sementes, caminhos e versões;
+- criar verificações substantivas de entradas e saídas;
+- produzir figura autônoma e alegação calibrada;
+- planejar acesso sem presumir abertura irrestrita;
+- identificar combinações raras e limites do k-anonimato;
+- entregar e apresentar o mesmo projeto cumulativo.
+
+---
+
+# Todas as unidades convergem aqui
+
+O relatório-notebook final reúne:
+
+1. pergunta humanística e operacionalização;
+2. fontes, corpus, ética e proveniência;
+3. preparação e exploração;
+4. método e resultados;
+5. avaliação, sensibilidade e vieses;
+6. conclusão, limites e contribuição;
+7. ambiente, referências e execução.
+
+Não é um projeto novo: é a versão consolidada do mesmo percurso.
+
+---
+
 <!-- _class: exemplo -->
 
 # Projeto fictício usado no fechamento
@@ -139,46 +179,6 @@ Se um elo não pode ser compreendido ou verificado, a pessoa leitora não sabe:
 ![w:1070 centralizada Pergunta, dados, código, ambiente, resultados e limites formam o projeto reprodutível.](../unidade_14/imagens/00_projeto_reprodutivel.svg)
 
 Reprodutibilidade combina materiais, instruções, decisões, verificações e limites.
-
----
-
-# Agenda
-
-1. Organizar documentação e histórico de decisões
-2. Preparar ambiente e execução verificável
-3. Comunicar resultados, intervalos e limites
-4. Definir acesso, direitos e proteção
-5. Consolidar o relatório-notebook e o pacote
-6. Ensaiar a apresentação final do projeto
-
----
-
-# Ao final, você deverá conseguir…
-
-- distinguir reprodução, replicação e reutilização;
-- distribuir funções entre README, notebook, dicionário e proveniência;
-- registrar ambiente, sementes, caminhos e versões;
-- criar verificações substantivas de entradas e saídas;
-- produzir figura autônoma e alegação calibrada;
-- planejar acesso sem presumir abertura irrestrita;
-- identificar combinações raras e limites do k-anonimato;
-- entregar e apresentar o mesmo projeto cumulativo.
-
----
-
-# Todas as unidades convergem aqui
-
-O relatório-notebook final reúne:
-
-1. pergunta humanística e operacionalização;
-2. fontes, corpus, ética e proveniência;
-3. preparação e exploração;
-4. método e resultados;
-5. avaliação, sensibilidade e vieses;
-6. conclusão, limites e contribuição;
-7. ambiente, referências e execução.
-
-Não é um projeto novo: é a versão consolidada do mesmo percurso.
 
 ---
 

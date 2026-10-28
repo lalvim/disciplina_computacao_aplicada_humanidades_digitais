@@ -20,6 +20,39 @@ linguístico ou cultural sem reduzir indevidamente sua complexidade?
 
 ---
 
+# Agenda
+
+1. Partir de uma questão humanística
+2. Distinguir finalidade e estrutura da pergunta
+3. Passar da pergunta à tarefa computacional
+4. Operacionalizar conceitos e unidades
+5. Delimitar corpus, dados e metadados
+6. Construir e limitar uma evidência
+7. Esboçar a proposta inicial do projeto
+
+---
+
+# Ao final, você deverá conseguir…
+
+- formular uma pergunta delimitada e relevante;
+- distinguir finalidade e estrutura analítica;
+- propor mais de uma representação para um conceito;
+- definir unidade de análise, população e corpus;
+- reconhecer dados, documentos e metadados;
+- justificar o alcance de uma evidência computacional;
+- registrar a formulação inicial do projeto cumulativo.
+
+---
+
+# O percurso da unidade
+
+![w:1100 centralizada Fluxo dos Notebooks 00 a 04: diagnóstico, pergunta reformulada, mapa de operacionalização, ficha do corpus e proposta inicial.](../unidade_01/imagens/00_percurso_unidade.svg)
+
+Cada etapa explicita uma decisão que poderá ser revista quando novas evidências ou
+limitações aparecerem.
+
+---
+
 <!-- _class: exemplo -->
 
 # Base fictícia usada nos exemplos
@@ -152,30 +185,6 @@ Precisamos decidir:
 - até onde o resultado permite concluir.
 
 <p class="pergunta">Como ligar pergunta, fonte, representação, operação e interpretação?</p>
-
----
-
-# Agenda
-
-1. Partir de uma questão humanística
-2. Distinguir finalidade e estrutura da pergunta
-3. Passar da pergunta à tarefa computacional
-4. Operacionalizar conceitos e unidades
-5. Delimitar corpus, dados e metadados
-6. Construir e limitar uma evidência
-7. Esboçar a proposta inicial do projeto
-
----
-
-# Ao final, você deverá conseguir…
-
-- formular uma pergunta delimitada e relevante;
-- distinguir finalidade e estrutura analítica;
-- propor mais de uma representação para um conceito;
-- definir unidade de análise, população e corpus;
-- reconhecer dados, documentos e metadados;
-- justificar o alcance de uma evidência computacional;
-- registrar a formulação inicial do projeto cumulativo.
 
 ---
 

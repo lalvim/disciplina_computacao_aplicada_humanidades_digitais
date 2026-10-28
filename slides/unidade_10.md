@@ -20,6 +20,37 @@ analisáveis sem apagar ambiguidade, contexto e proveniência?
 
 ---
 
+# Agenda
+
+1. Localizar e tipificar menções
+2. Normalizar, desambiguar e vincular entidades
+3. Representar relações e eventos
+4. Avaliar extrações e examinar erros
+5. Observar a propagação de erros até um grafo
+6. Integrar uma base derivada ao projeto
+
+---
+
+# Ao final, você deverá conseguir…
+
+- distinguir menção, entidade, alegação e registro;
+- comparar regras, dicionários e modelos de NER;
+- justificar uma vinculação ou a decisão “não resolvido”;
+- modelar relações e eventos com evidência textual;
+- interpretar precisão, revocação e F1;
+- rastrear erros de uma extração até o grafo derivado;
+- decidir se o método é adequado ao próprio corpus.
+
+---
+
+# O percurso da unidade
+
+![w:1080 centralizada O percurso liga texto, reconhecimento de menções, vinculação, relações, eventos, avaliação e retorno às fontes.](../unidade_10/imagens/00_percurso_extracao.svg)
+
+Cada transformação deve conservar um caminho de volta ao documento.
+
+---
+
 <!-- _class: exemplo -->
 
 # Corpus fictício de extração
@@ -67,37 +98,6 @@ permitiu rejeitar esse candidato.
 | registro | `D008`, posição, tipo `OUTRO` | representação criada pela pesquisa |
 
 O texto não entrega uma tabela pronta. A tabela materializa decisões.
-
----
-
-# Agenda
-
-1. Localizar e tipificar menções
-2. Normalizar, desambiguar e vincular entidades
-3. Representar relações e eventos
-4. Avaliar extrações e examinar erros
-5. Observar a propagação de erros até um grafo
-6. Integrar uma base derivada ao projeto
-
----
-
-# Ao final, você deverá conseguir…
-
-- distinguir menção, entidade, alegação e registro;
-- comparar regras, dicionários e modelos de NER;
-- justificar uma vinculação ou a decisão “não resolvido”;
-- modelar relações e eventos com evidência textual;
-- interpretar precisão, revocação e F1;
-- rastrear erros de uma extração até o grafo derivado;
-- decidir se o método é adequado ao próprio corpus.
-
----
-
-# O percurso da unidade
-
-![w:1080 centralizada O percurso liga texto, reconhecimento de menções, vinculação, relações, eventos, avaliação e retorno às fontes.](../unidade_10/imagens/00_percurso_extracao.svg)
-
-Cada transformação deve conservar um caminho de volta ao documento.
 
 ---
 

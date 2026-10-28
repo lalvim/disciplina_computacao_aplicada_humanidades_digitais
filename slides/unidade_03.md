@@ -51,6 +51,120 @@ Cada transformação deve permitir retorno ao arquivo e ao valor de origem.
 
 <!-- _class: exemplo -->
 
+# Entradas brutas: catálogo e texto
+
+<div class="duas-colunas">
+
+<div>
+
+### `catalogo_messy.csv` / `.xlsx`
+
+| id | título | data | gênero |
+|---|---|---|---|
+| D001 | ` Jornal Aurora ` | 1890-01-05 | Editorial |
+| D002 | gazeta popular | 06/02/1891 | notícia |
+| D003 | Correio do Vale | 1892 | Carta |
+
+Cada linha é um documento; quatro das sete colunas são mostradas. CSV e XLSX
+contêm o mesmo catálogo inconsistente.
+
+</div>
+
+<div>
+
+### `D001.txt`
+
+| Unidade | Conteúdo |
+|---|---|
+| documento D001 | “A escola noturna foi apresentada como sinal de progresso.” |
+
+O TXT não possui campos tabulares: o quadro explicita sua unidade de conteúdo.
+
+</div>
+
+</div>
+
+---
+
+<!-- _class: exemplo -->
+
+# Da tabela intermediária à processável
+
+<div class="duas-colunas">
+
+<div>
+
+### `catalogo_normalizado.csv`
+
+| id | município_chave | gênero_padronizado | ano |
+|---|---|---|---:|
+| D001 | sao paulo | editorial | 1890 |
+| D002 | sao paulo | notícia | 1891 |
+| D003 | belo horizonte | carta | 1892 |
+
+É uma tabela intermediária: preserva valores originais e acrescenta campos
+normalizados.
+
+</div>
+
+<div>
+
+### `documentos_processaveis.csv`
+
+| id | município IBGE | UF | texto abreviado |
+|---|---|---|---|
+| D001 | São Paulo | SP | “A escola noturna…” |
+| D002 | São Paulo | SP | “O jornal discutiu…” |
+| D003 | Belo Horizonte | MG | — |
+
+É um derivado integrado; quatro das 21 colunas são mostradas.
+
+</div>
+
+</div>
+
+---
+
+<!-- _class: exemplo -->
+
+# Dois derivados, duas unidades de observação
+
+<div class="duas-colunas">
+
+<div>
+
+### `documentos_temas.csv`
+
+| id_documento | tema |
+|---|---|
+| D001 | educação |
+| D001 | progresso |
+| D002 | trabalho |
+
+Cada linha representa uma relação documento–tema.
+
+</div>
+
+<div>
+
+### `indicadores_longos.csv`
+
+| id_documento | tema | período | ocorrências |
+|---|---|---:|---:|
+| D001 | educacao | 1890 | 3 |
+| D002 | educacao | 1890 | 0 |
+| D003 | educacao | 1890 | 2 |
+
+Cada linha representa um indicador de tema em um documento e período.
+
+</div>
+
+</div>
+
+---
+
+<!-- _class: exemplo -->
+
 # Antes da teoria: a mesma informação?
 
 <div class="tres-colunas">
@@ -281,6 +395,23 @@ A cópia permite repetir a aula; a proveniência permite compreender e atualizar
 a cópia.
 
 <p class="fonte">IBGE, Códigos dos Municípios.</p>
+
+---
+
+<!-- _class: exemplo -->
+
+# Como é o extrato local do IBGE?
+
+### `extrato_codigos_municipios_ibge.csv`
+
+| codigo_municipio | nome_municipio_ibge | UF |
+|---|---|---|
+| 3550308 | São Paulo | SP |
+| 3106200 | Belo Horizonte | MG |
+| 3304557 | Rio de Janeiro | RJ |
+
+Cada linha representa um município. O código parece número, mas funciona como
+**identificador** e deve ser lido como texto.
 
 ---
 

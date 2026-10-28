@@ -36,6 +36,60 @@ inferência sobre grupos, autores ou textos reais.
 
 <!-- _class: exemplo -->
 
+# Documentos e versões de comparação
+
+<div class="duas-colunas">
+
+<div>
+
+### `documentos.csv`
+
+| id | ano | local | tema | palavras |
+|---|---:|---|---|---:|
+| D001 | 1890 | Capital | educação | 320 |
+| D002 | 1891 | Capital | trabalho | 367 |
+| D003 | 1892 | Capital | progresso | 414 |
+
+Cada linha representa um documento; cinco das nove colunas são mostradas.
+
+</div>
+
+<div>
+
+### `documentos_comparacao.csv`
+
+| id | texto | texto_comparacao |
+|---|---|---|
+| D001 | “A escola noturna…” | “A escola noturna… A direção argumenta…” |
+| D002 | “O trabalho nas oficinas…” | “O trabalho… A notícia descreve…” |
+
+Cada linha mantém o documento e acrescenta uma versão para comparação.
+
+</div>
+
+</div>
+
+---
+
+<!-- _class: exemplo -->
+
+# Pares de versões textuais
+
+### `versoes_textuais.csv`
+
+| id_versao | id_documento | tipo_versao | texto |
+|---|---|---|---|
+| V001 | D001 | transcrição A | “A escola noturna amplia a instrução pública.” |
+| V002 | D001 | transcrição B | “A escola noturna amplia instrução pública.” |
+| V003 | D002 | OCR bruto | “O trabalho nas oficinas reune jornada salario…” |
+
+Cada linha representa uma versão. `id_documento` permite reunir as versões do mesmo
+documento sem tratá-las como documentos independentes.
+
+---
+
+<!-- _class: exemplo -->
+
 # Antes da teoria: a diferença mudou
 
 Na base fictícia, a extensão média dos documentos é:

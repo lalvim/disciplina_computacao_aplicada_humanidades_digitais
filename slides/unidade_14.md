@@ -33,14 +33,70 @@ participantes ou desempenho reais.
 
 ---
 
+<!-- _class: exemplo -->
+
+# Manifesto e resultados do projeto
+
+<div class="duas-colunas">
+
+<div>
+
+### `manifesto_projeto.csv`
+
+| caminho | papel | acesso |
+|---|---|---|
+| README.md | documentação | aberto |
+| relatorio.ipynb | análise | aberto |
+| dados/processados.csv | dados derivados | restrito |
+
+Cada linha representa um artefato; a justificativa foi omitida no quadro.
+
+</div>
+
+<div>
+
+### `resultados_comunicacao.csv`
+
+| análise | estimativa | intervalo | alcance |
+|---|---:|---|---|
+| modelo principal | 0,71 | 0,64–0,77 | associação condicionada |
+| sensibilidade | 0,68 | 0,59–0,75 | parcialmente sensível |
+| baseline | 0,50 | 0,42–0,58 | referência simples |
+
+Cada linha representa um resultado que deverá ser comunicado com limites.
+
+</div>
+
+</div>
+
+---
+
 # Registros fictícios de compartilhamento
 
+- **Arquivo:** `registros_compartilhamento.csv`.
 - **Unidade de observação:** oito registros com faixa etária, local, tema e documentos.
 - Seis registros têm combinação única de quase-identificadores no exemplo.
 - **Finalidade:** demonstrar risco de ligação e limites do k-anonimato.
 - **Limite:** não há pessoas reais nem avaliação completa de anonimização.
 
 As decisões de proteção são exemplos pedagógicos, não parecer jurídico ou ético.
+
+---
+
+<!-- _class: exemplo -->
+
+# Como são os registros de compartilhamento?
+
+### `registros_compartilhamento.csv`
+
+| id_pesquisa | faixa etária | local | tema | documentos |
+|---|---|---|---|---:|
+| R001 | 40–49 | Capital | tema A | 3 |
+| R002 | 30–39 | Interior | tema B | 1 |
+| R003 | 40–49 | Capital | tema A | 2 |
+
+Cada linha representa um registro fictício. A combinação das colunas pode ser rara
+mesmo quando nenhuma delas identifica uma pessoa isoladamente.
 
 ---
 
@@ -53,6 +109,8 @@ Um colega recebe o notebook final e encontra:
 ```python
 dados = pd.read_csv("/home/ana/Desktop/base_final_agora_v3.csv")
 ```
+
+<p class="fonte">Caminho fictício usado apenas como antipadrão; o arquivo não integra a base da unidade.</p>
 
 Também faltam versões, dicionário, instruções e explicação sobre qual célula executar.
 
@@ -345,6 +403,8 @@ from pathlib import Path
 BASE = Path.cwd()
 pd.read_csv(BASE / "dados" / "base.csv")
 ```
+
+<p class="fonte">Os dois caminhos são exemplos de sintaxe, não arquivos da base fictícia.</p>
 
 O projeto não deve depender do nome do usuário ou da pasta pessoal.
 

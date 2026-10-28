@@ -36,6 +36,46 @@ distribuições não representam municípios brasileiros reais.
 
 <!-- _class: exemplo -->
 
+# Arquivos da simulação municipal
+
+<div class="duas-colunas">
+
+<div>
+
+### `municipios_culturais.csv`
+
+| id | região | renda | urbanização | equipamentos |
+|---|---|---:|---:|---:|
+| M001 | Centro-Oeste | 1.673,64 | 65,3% | 3,46 |
+| M002 | Nordeste | 1.836,91 | 72,8% | 3,08 |
+| M003 | Norte | 2.056,98 | 71,0% | 3,70 |
+
+Cada linha representa um município fictício; cinco das dez colunas são mostradas.
+
+</div>
+
+<div>
+
+### `proveniencia.json`
+
+| Campo lógico | Valor abreviado |
+|---|---|
+| natureza | dados inteiramente fictícios |
+| geração | simulação com semente 20261022 |
+| caso_atipico | M150 alterado deliberadamente |
+| limite | não representa municípios reais |
+
+O JSON registra como interpretar e limitar a base; não é uma segunda tabela de
+municípios.
+
+</div>
+
+</div>
+
+---
+
+<!-- _class: exemplo -->
+
 # Antes da teoria: a associação mudou
 
 Na base de municípios fictícios, para cada **+500 unidades de renda**, a mudança

@@ -36,6 +36,63 @@ representa acervos ou instituições reais.
 
 <!-- _class: exemplo -->
 
+# Catálogo e dicionário: duas unidades distintas
+
+<div class="duas-colunas">
+
+<div>
+
+### `catalogo_fontes.csv`
+
+| id | instituição | tipo | ano | acesso |
+|---|---|---|---:|---|
+| A001 | Arquivo Municipal | ata | 1890 | público |
+| A002 | Arquivo Municipal | ata | 1891 | público |
+| A003 | Arquivo Municipal | requerimento | 1892 | restrito |
+
+Cada linha representa uma fonte catalogada; cinco de dez campos são mostrados.
+
+</div>
+
+<div>
+
+### `dicionario_dados.csv`
+
+| campo | tipo | regra |
+|---|---|---|
+| id_fonte | texto | único e não vazio |
+| instituicao | categoria | quatro valores previstos |
+| tipo_documental | categoria | vocabulário controlado |
+
+Cada linha descreve um campo do catálogo.
+
+</div>
+
+</div>
+
+---
+
+<!-- _class: exemplo -->
+
+# A proveniência também possui registros
+
+### `proveniencia_catalogo.json`
+
+| Campo lógico | Valor de exemplo |
+|---|---|
+| título | Catálogo didático de fontes |
+| natureza | dados inteiramente fictícios |
+| responsável | equipe docente |
+| finalidade | demonstrar seleção, cobertura, metadados e proveniência |
+| transformação[0] | atribuição manual de identificadores |
+
+O JSON não é uma planilha: a tabela apresenta uma visão lógica de alguns campos e
+de um item da lista de transformações.
+
+---
+
+<!-- _class: exemplo -->
+
 # Antes da teoria: duas bases plausíveis
 
 <div class="duas-colunas">

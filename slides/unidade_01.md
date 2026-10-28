@@ -36,6 +36,58 @@ pessoas ou processos históricos reais.
 
 <!-- _class: exemplo -->
 
+# Arquivo tabular da base
+
+### `documentos_exemplo.csv`
+
+| id | ano | periódico | gênero | local | tema | palavras |
+|---|---:|---|---|---|---|---:|
+| D001 | 1890 | Jornal Aurora | editorial | Capital | progresso | 860 |
+| D002 | 1891 | Jornal Aurora | carta | Interior | trabalho | 420 |
+| D003 | 1892 | Gazeta Popular | notícia | Capital | educação | 610 |
+
+Cada linha representa um documento jornalístico fictício.
+
+---
+
+<!-- _class: exemplo -->
+
+# Metadados e texto também precisam ser vistos
+
+<div class="duas-colunas">
+
+<div>
+
+### `metadados_exemplo.json`
+
+| Campo lógico | Valor de exemplo |
+|---|---|
+| título | Coleção didática de periódicos |
+| natureza | dados fictícios para ensino |
+| cobertura.início | 1890 |
+| cobertura.fim | 1905 |
+
+</div>
+
+<div>
+
+### `texto_exemplo.txt`
+
+| Unidade | Conteúdo abreviado |
+|---|---|
+| fragmento | “Nesta edição fictícia, o periódico debate a abertura de uma escola noturna…” |
+
+</div>
+
+</div>
+
+JSON e TXT não são originalmente tabelas: os quadros apenas tornam visíveis seus
+campos lógicos e sua unidade de conteúdo.
+
+---
+
+<!-- _class: exemplo -->
+
 # Antes da teoria: um caso
 
 ![w:1080 centralizada Ilustração conceitual em que fontes em papel passam por anotação e organização tabular, produzem redes e gráficos e retornam às fontes.](../unidade_01/imagens/00_abertura_conceitual.png)

@@ -33,8 +33,47 @@ As curvas foram construídas para ensino e não descrevem transformação cultur
 
 ---
 
+<!-- _class: exemplo -->
+
+# Como são os arquivos temporais?
+
+<div class="duas-colunas">
+
+<div>
+
+### `serie_cultural.csv`
+
+| ano | população | eventos | taxa_100mil | definição |
+|---:|---:|---:|---:|---|
+| 1960 | 42.000 | 13 | 30,95 | registro A |
+| 1961 | 42.756 | 22 | 51,45 | registro A |
+| 1962 | 43.526 | 22 | 50,54 | registro A |
+
+Cada linha representa um ano da série.
+
+</div>
+
+<div>
+
+### `termos_por_ano.csv`
+
+| ano | documentos | menções patrimônio | menções digital |
+|---:|---:|---:|---:|
+| 1960 | 80 | 12 | 0 |
+| 1961 | 81 | 10 | 0 |
+| 1962 | 82 | 11 | 0 |
+
+Cada linha agrega o corpus documental de um ano.
+
+</div>
+
+</div>
+
+---
+
 # Geografia fictícia usada nos mapas
 
+- **Arquivo:** `territorios.csv`.
 - **Unidade de observação:** 16 territórios organizados em grade abstrata 4 × 4.
 - **Campos:** população, composição etária, ocorrências e equipamentos.
 - **Finalidade:** comparar contagem, taxa, padronização e agregações alternativas.
@@ -42,6 +81,23 @@ As curvas foram construídas para ensino e não descrevem transformação cultur
 
 As diferenças espaciais foram inseridas para discutir denominadores, falácia
 ecológica e MAUP.
+
+---
+
+<!-- _class: exemplo -->
+
+# Como é o arquivo espacial?
+
+### `territorios.csv`
+
+| código | território | x | y | população | ocorrências | equipamentos |
+|---|---|---:|---:|---:|---:|---:|
+| T01 | Território Fictício 01 | 0 | 0 | 8.283 | 22 | 1 |
+| T02 | Território Fictício 02 | 1 | 0 | 12.882 | 29 | 2 |
+| T03 | Território Fictício 03 | 2 | 0 | 15.282 | 38 | 3 |
+
+Cada linha representa um território. As coordenadas `x` e `y` apenas posicionam a
+grade abstrata; não são longitude e latitude.
 
 ---
 

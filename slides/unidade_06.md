@@ -33,6 +33,46 @@ descrevem periódicos, entidades ou relações históricas reais.
 
 ---
 
+<!-- _class: exemplo -->
+
+# Como são os dois arquivos de origem?
+
+<div class="duas-colunas">
+
+<div>
+
+### `registros_associacao.csv`
+
+| id | período | local | tema | extensão |
+|---|---|---|---|---:|
+| R001 | 1890–1899 | Capital | não | 506 |
+| R002 | 1890–1899 | Capital | sim | 438 |
+| R003 | 1890–1899 | Interior | não | 356 |
+
+Cada linha é um **registro documental** usado para comparar variáveis. A tabela
+mostra apenas cinco das onze colunas.
+
+</div>
+
+<div>
+
+### `documentos_entidades.csv`
+
+| id | ano | local | entidades mencionadas |
+|---|---:|---|---|
+| D001 | 1895 | Capital | Ana F.; Liga Aurora; Escola Livre |
+| D002 | 1896 | Interior | Bento R.; Liga Aurora; Sindicato Norte |
+| D003 | 1897 | Capital | Ana F.; Jornal Horizonte; Escola Livre |
+
+Cada linha é um **documento** com a lista de entidades que servirá para construir
+as coocorrências.
+
+</div>
+
+</div>
+
+---
+
 # Tabelas derivadas para os grafos
 
 - `arestas_coocorrencia.csv`: 42 pares formados por menções no mesmo documento.
@@ -46,19 +86,62 @@ As duas tabelas não são equivalentes: proximidade textual não prova vínculo 
 
 <!-- _class: exemplo -->
 
-# Antes da teoria: duas entidades juntas
+# Como são as duas tabelas?
 
-Um documento menciona:
+<div class="duas-colunas">
 
-> **Ana F.**, a **Liga Aurora** e a **Escola Livre**.
+<div>
 
-Ao projetar as menções, aparecem três pares:
+### `arestas_coocorrencia.csv`
+
+| origem | destino | peso |
+|---|---|---:|
+| Ana F. | Escola Livre | 3 |
+| Bento R. | Liga Aurora | 3 |
+| Ana F. | Liga Aurora | 2 |
+
+O peso conta documentos compartilhados. A ordem das duas entidades **não indica
+direção**.
+
+</div>
+
+<div>
+
+### `correspondencia_direta.csv`
+
+| remetente | destinatário | ano | cartas |
+|---|---|---:|---:|
+| Ana F. | Bento R. | 1895 | 1 |
+| Bento R. | Dora S. | 1896 | 2 |
+| Caio M. | Fábio C. | 1897 | 3 |
+
+Remetente e destinatário definem uma relação **direcionada**, registrada pela
+correspondência.
+
+</div>
+
+</div>
+
+---
+
+<!-- _class: exemplo -->
+
+# Antes da teoria: como uma linha vira três pares
+
+Veja uma linha de `documentos_entidades.csv`:
+
+| Documento | Ano | Local | Entidades mencionadas |
+|---|---:|---|---|
+| D001 | 1895 | Capital | Ana F.; Liga Aurora; Escola Livre |
+
+Aqui, **entidade** é uma pessoa, organização ou lugar identificado no documento.
+Como a janela escolhida é o documento inteiro, as três menções geram três pares:
 
 - Ana F. — Liga Aurora;
 - Ana F. — Escola Livre;
 - Liga Aurora — Escola Livre.
 
-<p class="pergunta">Isso prova que Ana F. pertencia à Liga ou à Escola?</p>
+<p class="pergunta">Compartilhar D001 prova que Ana F. pertencia à Liga ou à Escola?</p>
 
 ---
 
@@ -490,11 +573,13 @@ Seja $B$ a matriz documento × entidade:
 
 | Documento | Ana F. | Liga Aurora | Escola Livre |
 |---|---:|---:|---:|
-| D01 | 1 | 1 | 1 |
-| D02 | 0 | 1 | 1 |
-| D03 | 1 | 0 | 0 |
+| D001 | 1 | 1 | 1 |
+| D003 | 1 | 0 | 1 |
+| D011 | 1 | 1 | 0 |
 
-Cada célula informa se a entidade foi registrada naquele documento.
+Cada célula informa se a entidade foi registrada naquele documento. As três linhas
+foram retiradas da base fictícia; outras entidades desses documentos foram omitidas
+apenas para simplificar o quadro.
 
 ---
 
@@ -512,8 +597,8 @@ $$
 
 Para gerar arestas entre entidades, removemos a diagonal e registramos a regra.
 
-**Exemplo:** no quadro anterior, Ana F. e Liga Aurora compartilham D01; portanto,
-$W_{Ana,Liga}=1$.
+**Exemplo:** no quadro anterior, Ana F. e Liga Aurora compartilham D001 e D011;
+portanto, $W_{Ana,Liga}=2$ nesse recorte de três documentos.
 
 ---
 

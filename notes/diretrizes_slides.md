@@ -112,7 +112,31 @@ dois slides ou declarar claramente que não podem ser integrados linha a linha. 
 apresentação antecede o primeiro uso dos dados e não precisa ser repetida antes de cada
 visualização.
 
-### 3.3 Desenvolvimento de cada conceito
+### 3.3 Arquivos mencionados e amostras tabulares
+
+Todo arquivo de dados mencionado nominalmente na apresentação deve ser acompanhado
+por uma pequena amostra em forma de tabela. A amostra deve aparecer no mesmo slide
+da primeira menção ou imediatamente depois dela, antes que resultados derivados do
+arquivo sejam interpretados.
+
+A tabela de exemplo deverá:
+
+- usar de duas a três linhas reais da base didática, quando o arquivo existir;
+- preservar os nomes dos campos relevantes;
+- informar quando somente parte das colunas estiver sendo mostrada;
+- explicitar a unidade de observação de cada linha;
+- representar JSON, XML ou TXT como uma tabela lógica de campos e valores, sem
+  sugerir que o formato original seja tabular;
+- distinguir arquivos de entrada, intermediários e derivados;
+- permanecer legível, dividindo a apresentação em dois slides quando necessário.
+
+Não basta apenas listar o nome e a finalidade do arquivo. O estudante deve conseguir
+ver concretamente **como um registro se apresenta** antes de acompanhar operações,
+gráficos ou interpretações baseadas nele. Caminhos genéricos usados exclusivamente
+para ensinar sintaxe devem ser identificados como exemplos de caminho, e não como
+arquivos integrantes da base da unidade.
+
+### 3.4 Desenvolvimento de cada conceito
 
 Cada bloco conceitual seguirá, sempre que pertinente, o ciclo:
 
@@ -127,7 +151,7 @@ Cada bloco conceitual seguirá, sempre que pertinente, o ciclo:
 Evitar sequências longas de slides apenas conceituais. Depois de dois ou três slides
 de explicação, inserir um exemplo, comparação, interpretação de saída ou decisão.
 
-### 3.4 Fechamento
+### 3.5 Fechamento
 
 Cada unidade terminará com:
 

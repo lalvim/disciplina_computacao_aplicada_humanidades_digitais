@@ -42,19 +42,19 @@ texto alternativo; não são decoração.
 
 | Slide | Fórmula ou medida | Apoio visual e exemplo |
 |---:|---|---|
-| 26 | proporção de extensão temática | 5 de 20 parágrafos e representações do tema |
+| 28 | proporção de extensão temática | 5 de 20 parágrafos e representações do tema |
 
 ### Unidade 2
 
 | Slide | Fórmula ou medida | Apoio visual e exemplo |
 |---:|---|---|
-| 24 | cobertura local | 1 de 2 registros e diagrama catálogo–corpus |
+| 26 | cobertura local | 1 de 2 registros e diagrama catálogo–corpus |
 
 ### Unidade 3
 
 | Slide | Fórmula ou medida | Apoio visual e exemplo |
 |---:|---|---|
-| 24 | CER e WER | 3 erros em 6 palavras e fluxo imagem–OCR–texto |
+| 28 | CER e WER | 3 erros em 6 palavras e fluxo imagem–OCR–texto |
 
 ### Unidade 4
 
@@ -78,50 +78,50 @@ texto alternativo; não são decoração.
 
 | Slide | Fórmula ou medida | Apoio visual e exemplo |
 |---:|---|---|
-| 14 | diferença de estimativas | Capital − Interior e gráfico dos grupos |
-| 16 | diferença relativa | −203,17/803,17 e gráfico dos grupos |
-| 17 | diferença padronizada | resultado em desvios-padrão e distribuições |
-| 24 | estatística bootstrap | uma reamostragem numérica e fluxo de reamostragem |
-| 26 | intervalo percentil | limites calculados e distribuição bootstrap |
-| 31 | valor de p por permutação | 47 em 1.000 e caudas da distribuição nula |
-| 38 | matriz documento-termo | frequência de “escola” em D01 e mapa da matriz |
-| 40 | frequência documental e IDF | 2 de 6 documentos e anatomia do TF-IDF |
-| 41 | TF-IDF | 3 × 1,85 e diagrama dos componentes |
-| 48 | Jaccard | dois conjuntos de palavras e diagrama de métricas |
-| 49 | cosseno | dois vetores simples e vizinhança vetorial |
-| 52 | Levenshtein | `casa` → `caso` e fluxo de edição |
+| 16 | diferença de estimativas | Capital − Interior e gráfico dos grupos |
+| 18 | diferença relativa | −203,17/803,17 e gráfico dos grupos |
+| 19 | diferença padronizada | resultado em desvios-padrão e distribuições |
+| 26 | estatística bootstrap | uma reamostragem numérica e fluxo de reamostragem |
+| 28 | intervalo percentil | limites calculados e distribuição bootstrap |
+| 33 | valor de p por permutação | 47 em 1.000 e caudas da distribuição nula |
+| 40 | matriz documento-termo | frequência de “escola” em D01 e mapa da matriz |
+| 42 | frequência documental e IDF | 2 de 6 documentos e anatomia do TF-IDF |
+| 43 | TF-IDF | 3 × 1,85 e diagrama dos componentes |
+| 50 | Jaccard | dois conjuntos de palavras e diagrama de métricas |
+| 51 | cosseno | dois vetores simples e vizinhança vetorial |
+| 54 | Levenshtein | `casa` → `caso` e fluxo de edição |
 
 ### Unidade 6
 
 | Slide | Fórmula ou medida | Apoio visual e exemplo |
 |---:|---|---|
-| 16 | frequência esperada | célula 1890–1899 × sim e tabela condicional |
-| 18 | qui-quadrado | contribuição de uma célula e barras proporcionais |
-| 19 | V de Cramér | substituição completa e barras proporcionais |
-| 24 | Pearson | 80 pares, resultado 0,53 e dispersão |
-| 26 | Spearman | três postos, resultado 0,50 e dispersão |
-| 34 | combinações de pares | 3 e 10 entidades e projeção bipartida |
-| 37 | projeção matricial | uma coocorrência e diagrama de projeção |
-| 46 | grau normalizado | 11 de 13 vizinhos e diagrama de centralidades |
-| 47 | força | pesos 3 + 2 + 1 e diagrama de centralidades |
-| 48 | intermediação | resultado 0,311 e nó de ponte |
+| 18 | frequência esperada | célula 1890–1899 × sim e tabela condicional |
+| 20 | qui-quadrado | contribuição de uma célula e barras proporcionais |
+| 21 | V de Cramér | substituição completa e barras proporcionais |
+| 26 | Pearson | 80 pares, resultado 0,53 e dispersão |
+| 28 | Spearman | três postos, resultado 0,50 e dispersão |
+| 36 | combinações de pares | 3 e 10 entidades e projeção bipartida |
+| 39 | projeção matricial | uma coocorrência e diagrama de projeção |
+| 48 | grau normalizado | 11 de 13 vizinhos e diagrama de centralidades |
+| 49 | força | pesos 3 + 2 + 1 e diagrama de centralidades |
+| 50 | intermediação | resultado 0,311 e nó de ponte |
 
 ### Unidade 7
 
 | Slide | Fórmula ou medida | Apoio visual e exemplo |
 |---:|---|---|
-| 13 | regressão linear | previsão para renda 2.000 e reta ajustada |
-| 15 | reexpressão da inclinação | aumento de 500 e reta ajustada |
-| 16 | resíduo | cálculo de M150 e diagrama reta–resíduo |
-| 17 | R² | 41,2% e dispersão ao redor da reta |
-| 23 | regressão múltipla | aumento de 500 e diagrama de condicionamento |
-| 27 | indicador categórico | Sudeste = 1/0 e referência regional |
-| 35 | centralização | 80 − 74,16 e curvas de interação |
-| 36 | interação | inclinação em 12 anos e curvas condicionais |
-| 46 | probabilidade e chance | três probabilidades e diagrama de transformação |
-| 48 | modelo logístico | logito zero, probabilidade 0,50 e curva logística |
-| 49 | razão de chances | exponenciação de 0,480 e curva logística |
-| 50 | padronização | renda 2.434 → z = 1 e diagrama de escalas |
+| 14 | regressão linear | previsão para renda 2.000 e reta ajustada |
+| 16 | reexpressão da inclinação | aumento de 500 e reta ajustada |
+| 17 | resíduo | cálculo de M150 e diagrama reta–resíduo |
+| 18 | R² | 41,2% e dispersão ao redor da reta |
+| 24 | regressão múltipla | aumento de 500 e diagrama de condicionamento |
+| 28 | indicador categórico | Sudeste = 1/0 e referência regional |
+| 36 | centralização | 80 − 74,16 e curvas de interação |
+| 37 | interação | inclinação em 12 anos e curvas condicionais |
+| 47 | probabilidade e chance | três probabilidades e diagrama de transformação |
+| 49 | modelo logístico | logito zero, probabilidade 0,50 e curva logística |
+| 50 | razão de chances | exponenciação de 0,480 e curva logística |
+| 51 | padronização | renda 2.434 → z = 1 e diagrama de escalas |
 
 ### Unidade 8
 
@@ -155,11 +155,11 @@ texto alternativo; não são decoração.
 
 | Slide | Fórmula ou medida | Apoio visual e exemplo |
 |---:|---|---|
-| 14 | taxa por 100 mil | 41 eventos, população de 71.727 e curvas de contagem/taxa |
-| 16 | crescimento percentual | passagem de 35 para 41 eventos e curva de contagens |
-| 24 | média móvel de três anos | taxas de 1989–1991 e comparação entre janelas |
-| 34 | menções por 100 documentos | 7 menções em 80 documentos e curvas lexicais |
-| 46 | padronização direta | pesos 70%/30%, taxas 120/650 e grades territoriais |
+| 16 | taxa por 100 mil | 41 eventos, população de 71.727 e curvas de contagem/taxa |
+| 18 | crescimento percentual | passagem de 35 para 41 eventos e curva de contagens |
+| 26 | média móvel de três anos | taxas de 1989–1991 e comparação entre janelas |
+| 36 | menções por 100 documentos | 7 menções em 80 documentos e curvas lexicais |
+| 48 | padronização direta | pesos 70%/30%, taxas 120/650 e grades territoriais |
 
 ### Unidade 12
 
@@ -179,7 +179,7 @@ texto alternativo; não são decoração.
 
 | Slide | Fórmula ou medida | Apoio visual e exemplo |
 |---:|---|---|
-| 49 | tamanho do grupo equivalente $k$ | combinação repetida duas vezes e tabela visual dos oito registros |
+| 51 | tamanho do grupo equivalente $k$ | combinação repetida duas vezes e tabela visual dos oito registros |
 
 ## Uso nas próximas unidades
 

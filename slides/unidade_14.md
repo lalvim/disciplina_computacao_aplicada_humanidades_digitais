@@ -22,6 +22,30 @@ projeto compreensível, verificável, compartilhável e intelectualmente honesto
 
 <!-- _class: exemplo -->
 
+# Projeto fictício usado no fechamento
+
+- `manifesto_projeto.csv`: sete artefatos, seus papéis e níveis de acesso.
+- `resultados_comunicacao.csv`: três estimativas acompanhadas por intervalos.
+- **Finalidade:** testar documentação, execução, checks e comunicação visual.
+
+O projeto e seus resultados foram criados para ensino. Não correspondem a pesquisa,
+participantes ou desempenho reais.
+
+---
+
+# Registros fictícios de compartilhamento
+
+- **Unidade de observação:** oito registros com faixa etária, local, tema e documentos.
+- Seis registros têm combinação única de quase-identificadores no exemplo.
+- **Finalidade:** demonstrar risco de ligação e limites do k-anonimato.
+- **Limite:** não há pessoas reais nem avaliação completa de anonimização.
+
+As decisões de proteção são exemplos pedagógicos, não parecer jurídico ou ético.
+
+---
+
+<!-- _class: exemplo -->
+
 # Antes da teoria: “aqui funciona”
 
 Um colega recebe o notebook final e encontra:

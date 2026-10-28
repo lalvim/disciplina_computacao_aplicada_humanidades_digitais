@@ -22,6 +22,32 @@ algorítmicos em grupos naturais ou temas autoevidentes?
 
 <!-- _class: exemplo -->
 
+# Base fictícia de instituições
+
+- **Unidade de observação:** 120 instituições simuladas, 24 por região.
+- **Variáveis:** acervo, eventos anuais, público e orçamento.
+- **Estrutura didática:** três perfis deliberadamente separados, com variação interna.
+- **Finalidade:** comparar escala, distância, K-means, hierarquia e estabilidade.
+
+Os grupos foram construídos para ensino e não representam tipos naturais de
+instituição cultural.
+
+---
+
+# Corpus textual fictício da unidade
+
+- **Unidade de observação:** 180 documentos simulados em três períodos.
+- **Conteúdo:** vocabulários associados a educação, saúde e cultura, com mistura.
+- **Finalidade:** comparar agrupamento por TF-IDF e tópicos probabilísticos.
+- **Ligação entre bases:** os documentos não são registros das 120 instituições.
+
+Clusters, tópicos e evolução temporal são resultados didáticos; não descrevem
+discursos ou mudanças históricas reais.
+
+---
+
+<!-- _class: exemplo -->
+
 # Antes da teoria: os grupos mudaram
 
 As mesmas 120 instituições fictícias foram agrupadas duas vezes:

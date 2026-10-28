@@ -22,6 +22,31 @@ espaciais sem naturalizar períodos, denominadores e fronteiras?
 
 <!-- _class: exemplo -->
 
+# Séries fictícias usadas na unidade
+
+- `serie_cultural.csv`: 61 anos, de 1960 a 2020, com população, eventos e taxa.
+- Em 1990, a definição de evento é ampliada deliberadamente.
+- `termos_por_ano.csv`: documentos e menções de “patrimônio” e “digital”.
+- **Finalidade:** estudar crescimento, janelas, rupturas e normalização textual.
+
+As curvas foram construídas para ensino e não descrevem transformação cultural real.
+
+---
+
+# Geografia fictícia usada nos mapas
+
+- **Unidade de observação:** 16 territórios organizados em grade abstrata 4 × 4.
+- **Campos:** população, composição etária, ocorrências e equipamentos.
+- **Finalidade:** comparar contagem, taxa, padronização e agregações alternativas.
+- **Limite:** códigos e posições não correspondem a nenhum território real.
+
+As diferenças espaciais foram inseridas para discutir denominadores, falácia
+ecológica e MAUP.
+
+---
+
+<!-- _class: exemplo -->
+
 # Antes da teoria: houve uma transformação em 1990?
 
 | Ano | Eventos | População | Taxa por 100 mil |

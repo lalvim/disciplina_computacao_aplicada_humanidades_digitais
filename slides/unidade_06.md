@@ -22,6 +22,30 @@ quando ele é apenas efeito da forma de observar?
 
 <!-- _class: exemplo -->
 
+# Base fictícia: registros e documentos
+
+- `registros_associacao.csv`: 80 registros, 1890–1909, em dois períodos e locais.
+- `documentos_entidades.csv`: 24 documentos com listas de entidades mencionadas.
+- Variáveis permitem estudar tema, ilustração, extensão, circulação e OCR.
+
+Os padrões foram construídos para demonstrar associação e confundimento. Não
+descrevem periódicos, entidades ou relações históricas reais.
+
+---
+
+# Tabelas derivadas para os grafos
+
+- `arestas_coocorrencia.csv`: 42 pares formados por menções no mesmo documento.
+- `correspondencia_direta.csv`: 12 relações remetente–destinatário.
+- **Unidade da coocorrência:** par de entidades dentro de uma janela documental.
+- **Unidade da correspondência:** fluxo explicitamente registrado entre dois atores.
+
+As duas tabelas não são equivalentes: proximidade textual não prova vínculo social.
+
+---
+
+<!-- _class: exemplo -->
+
 # Antes da teoria: duas entidades juntas
 
 Um documento menciona:

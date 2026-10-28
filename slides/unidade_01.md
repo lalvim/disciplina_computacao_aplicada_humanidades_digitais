@@ -22,6 +22,20 @@ linguístico ou cultural sem reduzir indevidamente sua complexidade?
 
 <!-- _class: exemplo -->
 
+# Base fictícia usada nos exemplos
+
+- **Unidade de observação:** 12 documentos jornalísticos simulados.
+- **Cobertura:** 1890–1905; três periódicos, três gêneros e dois locais.
+- **Campos principais:** ano, periódico, gênero, local, tema e número de palavras.
+- **Finalidade:** praticar perguntas, operacionalização, corpus e cadeia de evidência.
+
+Os documentos e metadados foram criados para ensino. Não descrevem periódicos,
+pessoas ou processos históricos reais.
+
+---
+
+<!-- _class: exemplo -->
+
 # Antes da teoria: um caso
 
 ![w:1080 centralizada Ilustração conceitual em que fontes em papel passam por anotação e organização tabular, produzem redes e gráficos e retornam às fontes.](../unidade_01/imagens/00_abertura_conceitual.png)

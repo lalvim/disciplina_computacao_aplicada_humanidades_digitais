@@ -22,6 +22,20 @@ uma base antes de aplicar modelos?
 
 <!-- _class: exemplo -->
 
+# Base fictícia usada na exploração
+
+- **Unidade de observação:** 24 documentos simulados, de 1890 a 1901.
+- **Estratos equilibrados:** Capital/Interior e três gêneros documentais.
+- **Temas:** educação, trabalho, progresso e saúde.
+- **Variáveis:** palavras, pessoas, páginas e texto preservado.
+
+A base contém padrões e um caso extremo inseridos para ensino. Os resultados não
+descrevem coleções históricas reais.
+
+---
+
+<!-- _class: exemplo -->
+
 # Antes da teoria: a mesma média
 
 <div class="duas-colunas">

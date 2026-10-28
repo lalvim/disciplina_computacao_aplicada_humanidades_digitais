@@ -22,6 +22,20 @@ representam adequadamente o fenômeno investigado?
 
 <!-- _class: exemplo -->
 
+# Catálogo fictício usado na unidade
+
+- **Unidade de observação:** 16 fontes catalogadas entre 1890 e 1904.
+- **Cobertura:** quatro instituições, seis tipos documentais, Capital e Interior.
+- **Campos principais:** localização, digitalização, acesso e qualidade dos metadados.
+- **Arquivos de apoio:** dicionário de dados e registro de proveniência.
+
+A distribuição foi construída para discutir seleção, ausências e cobertura. Não
+representa acervos ou instituições reais.
+
+---
+
+<!-- _class: exemplo -->
+
 # Antes da teoria: duas bases plausíveis
 
 <div class="duas-colunas">

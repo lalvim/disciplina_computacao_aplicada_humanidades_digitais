@@ -22,6 +22,20 @@ quando outras diferenças observadas são consideradas?
 
 <!-- _class: exemplo -->
 
+# Base fictícia de municípios
+
+- **Unidade de observação:** 150 municípios simulados, 30 por região.
+- **Resultado principal:** equipamentos culturais por 100 mil habitantes.
+- **Explicativas:** renda, urbanização, escolaridade, distância e população.
+- **Outro resultado:** presença de biblioteca pública.
+
+As associações e o caso atípico foram gerados para ensino. Os nomes, coeficientes e
+distribuições não representam municípios brasileiros reais.
+
+---
+
+<!-- _class: exemplo -->
+
 # Antes da teoria: a associação mudou
 
 Na base de municípios fictícios, para cada **+500 unidades de renda**, a mudança

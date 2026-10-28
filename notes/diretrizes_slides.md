@@ -84,15 +84,35 @@ Cada apresentação seguirá esta macroestrutura.
 ### 3.1 Abertura
 
 1. título da unidade e problema orientador;
-2. exemplo concreto, situação-problema ou documento;
-3. pergunta provocada pelo exemplo;
-4. agenda da apresentação;
-5. objetivos de aprendizagem em linguagem observável.
+2. apresentação breve da base fictícia, quando o exemplo depender dela;
+3. exemplo concreto, situação-problema ou documento;
+4. pergunta provocada pelo exemplo;
+5. agenda da apresentação;
+6. objetivos de aprendizagem em linguagem observável.
 
 O exemplo deve aparecer **antes da exposição teórica**. A agenda pode vir depois do
 exemplo, pois assim seus tópicos respondem a uma dúvida já criada.
 
-### 3.2 Desenvolvimento de cada conceito
+### 3.2 Apresentação de bases fictícias
+
+Antes do primeiro gráfico, tabela, resultado ou situação-problema que dependa de uma
+base fictícia, incluir um ou dois slides breves de contextualização. O resumo deve
+informar, conforme pertinente:
+
+- unidade de observação e quantidade de casos;
+- cobertura temporal, espacial ou documental;
+- principais variáveis, estratos ou arquivos;
+- relação entre bases distintas usadas na mesma unidade;
+- finalidade didática dos padrões simulados;
+- limite explícito: os dados não sustentam afirmações sobre pessoas, instituições,
+  grupos ou processos históricos reais.
+
+Quando a unidade usar conjuntos com unidades de observação diferentes, separá-los em
+dois slides ou declarar claramente que não podem ser integrados linha a linha. Essa
+apresentação antecede o primeiro uso dos dados e não precisa ser repetida antes de cada
+visualização.
+
+### 3.3 Desenvolvimento de cada conceito
 
 Cada bloco conceitual seguirá, sempre que pertinente, o ciclo:
 
@@ -107,7 +127,7 @@ Cada bloco conceitual seguirá, sempre que pertinente, o ciclo:
 Evitar sequências longas de slides apenas conceituais. Depois de dois ou três slides
 de explicação, inserir um exemplo, comparação, interpretação de saída ou decisão.
 
-### 3.3 Fechamento
+### 3.4 Fechamento
 
 Cada unidade terminará com:
 

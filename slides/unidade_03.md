@@ -22,6 +22,35 @@ formatos diferentes sem apagar sua origem, incerteza e estrutura?
 
 <!-- _class: exemplo -->
 
+# Conjunto fictício: fontes e formatos
+
+- **Oito registros documentais** aparecem em CSV, XLSX, JSON e XML.
+- Dois textos, um PDF textual e páginas digitalizadas permitem experimentar OCR.
+- Uma tabela larga contém indicadores por tema e período.
+- Um extrato didático de códigos municipais apoia a integração de tabelas.
+
+Os conteúdos documentais são simulados. Os formatos e problemas técnicos são reais;
+os casos não constituem evidência histórica.
+
+---
+
+# Como os arquivos se relacionam
+
+```text
+dados/brutos → dados/intermediarios → dados/derivados
+```
+
+- `catalogo_messy.*`: entrada deliberadamente inconsistente;
+- `catalogo_normalizado.csv`: limpeza preservando valores originais;
+- `documentos_processaveis.csv`: oito registros integrados;
+- `documentos_temas.csv` e `indicadores_longos.csv`: tabelas derivadas.
+
+Cada transformação deve permitir retorno ao arquivo e ao valor de origem.
+
+---
+
+<!-- _class: exemplo -->
+
 # Antes da teoria: a mesma informação?
 
 <div class="tres-colunas">

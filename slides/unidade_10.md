@@ -22,6 +22,20 @@ analisáveis sem apagar ambiguidade, contexto e proveniência?
 
 <!-- _class: exemplo -->
 
+# Corpus fictício de extração
+
+- **Corpus:** 12 documentos simulados, de 1901 a 1912, em três jornais.
+- **Catálogo de autoridade:** 12 pessoas, organizações e lugares com variantes.
+- **Referência anotada:** 12 menções em quatro documentos para avaliação.
+- **Finalidade:** praticar NER, vinculação, eventos e grafos derivados.
+
+“Santa Rita” e todas as demais pessoas, instituições e ocorrências são didáticas.
+Nenhuma linha sustenta afirmações históricas reais.
+
+---
+
+<!-- _class: exemplo -->
+
 # Antes da teoria: quem é “Santa Rita”?
 
 > “O vapor **Santa Rita** chegou a Porto Claro; não se trata da cidade

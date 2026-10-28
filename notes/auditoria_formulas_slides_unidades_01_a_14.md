@@ -42,144 +42,144 @@ texto alternativo; não são decoração.
 
 | Slide | Fórmula ou medida | Apoio visual e exemplo |
 |---:|---|---|
-| 25 | proporção de extensão temática | 5 de 20 parágrafos e representações do tema |
+| 26 | proporção de extensão temática | 5 de 20 parágrafos e representações do tema |
 
 ### Unidade 2
 
 | Slide | Fórmula ou medida | Apoio visual e exemplo |
 |---:|---|---|
-| 23 | cobertura local | 1 de 2 registros e diagrama catálogo–corpus |
+| 24 | cobertura local | 1 de 2 registros e diagrama catálogo–corpus |
 
 ### Unidade 3
 
 | Slide | Fórmula ou medida | Apoio visual e exemplo |
 |---:|---|---|
-| 22 | CER e WER | 3 erros em 6 palavras e fluxo imagem–OCR–texto |
+| 24 | CER e WER | 3 erros em 6 palavras e fluxo imagem–OCR–texto |
 
 ### Unidade 4
 
 | Slide | Fórmula ou medida | Apoio visual e exemplo |
 |---:|---|---|
-| 16 | frequência e proporção | 6 de 24 documentos e barras temáticas |
-| 18 | média | três valores e gráfico de centro/extremo |
-| 19 | mediana | três valores ordenados e gráfico de centro/extremo |
-| 23 | amplitude e IQR | valores da base e histograma/boxplot |
-| 24 | variância e desvio-padrão | resultado da base e afastamentos do centro |
-| 26 | limites do boxplot | D023 e histograma/boxplot |
-| 28 | contingência | 2 de 8 cartas e barras por categoria |
-| 34 | frequência textual | 24 de 912 tokens e barras de termos |
-| 38 | PMI | bigrama didático e anatomia das frequências |
-| 39 | TTR | 5 de 8 tokens e relação diversidade–tamanho |
-| 40 | TTR em tamanho fixo | 70 de 100 tokens e comparação visual |
-| 46 | histograma | 8 documentos no intervalo e distribuição |
-| 48 | média anual | dois documentos de 1900 e série temporal |
+| 17 | frequência e proporção | 6 de 24 documentos e barras temáticas |
+| 19 | média | três valores e gráfico de centro/extremo |
+| 20 | mediana | três valores ordenados e gráfico de centro/extremo |
+| 24 | amplitude e IQR | valores da base e histograma/boxplot |
+| 25 | variância e desvio-padrão | resultado da base e afastamentos do centro |
+| 27 | limites do boxplot | D023 e histograma/boxplot |
+| 29 | contingência | 2 de 8 cartas e barras por categoria |
+| 35 | frequência textual | 24 de 912 tokens e barras de termos |
+| 39 | PMI | bigrama didático e anatomia das frequências |
+| 40 | TTR | 5 de 8 tokens e relação diversidade–tamanho |
+| 41 | TTR em tamanho fixo | 70 de 100 tokens e comparação visual |
+| 47 | histograma | 8 documentos no intervalo e distribuição |
+| 49 | média anual | dois documentos de 1900 e série temporal |
 
 ### Unidade 5
 
 | Slide | Fórmula ou medida | Apoio visual e exemplo |
 |---:|---|---|
-| 13 | diferença de estimativas | Capital − Interior e gráfico dos grupos |
-| 15 | diferença relativa | −203,17/803,17 e gráfico dos grupos |
-| 16 | diferença padronizada | resultado em desvios-padrão e distribuições |
-| 23 | estatística bootstrap | uma reamostragem numérica e fluxo de reamostragem |
-| 25 | intervalo percentil | limites calculados e distribuição bootstrap |
-| 30 | valor de p por permutação | 47 em 1.000 e caudas da distribuição nula |
-| 37 | matriz documento-termo | frequência de “escola” em D01 e mapa da matriz |
-| 39 | frequência documental e IDF | 2 de 6 documentos e anatomia do TF-IDF |
-| 40 | TF-IDF | 3 × 1,85 e diagrama dos componentes |
-| 47 | Jaccard | dois conjuntos de palavras e diagrama de métricas |
-| 48 | cosseno | dois vetores simples e vizinhança vetorial |
-| 51 | Levenshtein | `casa` → `caso` e fluxo de edição |
+| 14 | diferença de estimativas | Capital − Interior e gráfico dos grupos |
+| 16 | diferença relativa | −203,17/803,17 e gráfico dos grupos |
+| 17 | diferença padronizada | resultado em desvios-padrão e distribuições |
+| 24 | estatística bootstrap | uma reamostragem numérica e fluxo de reamostragem |
+| 26 | intervalo percentil | limites calculados e distribuição bootstrap |
+| 31 | valor de p por permutação | 47 em 1.000 e caudas da distribuição nula |
+| 38 | matriz documento-termo | frequência de “escola” em D01 e mapa da matriz |
+| 40 | frequência documental e IDF | 2 de 6 documentos e anatomia do TF-IDF |
+| 41 | TF-IDF | 3 × 1,85 e diagrama dos componentes |
+| 48 | Jaccard | dois conjuntos de palavras e diagrama de métricas |
+| 49 | cosseno | dois vetores simples e vizinhança vetorial |
+| 52 | Levenshtein | `casa` → `caso` e fluxo de edição |
 
 ### Unidade 6
 
 | Slide | Fórmula ou medida | Apoio visual e exemplo |
 |---:|---|---|
-| 14 | frequência esperada | célula 1890–1899 × sim e tabela condicional |
-| 16 | qui-quadrado | contribuição de uma célula e barras proporcionais |
-| 17 | V de Cramér | substituição completa e barras proporcionais |
-| 22 | Pearson | 80 pares, resultado 0,53 e dispersão |
-| 24 | Spearman | três postos, resultado 0,50 e dispersão |
-| 32 | combinações de pares | 3 e 10 entidades e projeção bipartida |
-| 35 | projeção matricial | uma coocorrência e diagrama de projeção |
-| 44 | grau normalizado | 11 de 13 vizinhos e diagrama de centralidades |
-| 45 | força | pesos 3 + 2 + 1 e diagrama de centralidades |
-| 46 | intermediação | resultado 0,311 e nó de ponte |
+| 16 | frequência esperada | célula 1890–1899 × sim e tabela condicional |
+| 18 | qui-quadrado | contribuição de uma célula e barras proporcionais |
+| 19 | V de Cramér | substituição completa e barras proporcionais |
+| 24 | Pearson | 80 pares, resultado 0,53 e dispersão |
+| 26 | Spearman | três postos, resultado 0,50 e dispersão |
+| 34 | combinações de pares | 3 e 10 entidades e projeção bipartida |
+| 37 | projeção matricial | uma coocorrência e diagrama de projeção |
+| 46 | grau normalizado | 11 de 13 vizinhos e diagrama de centralidades |
+| 47 | força | pesos 3 + 2 + 1 e diagrama de centralidades |
+| 48 | intermediação | resultado 0,311 e nó de ponte |
 
 ### Unidade 7
 
 | Slide | Fórmula ou medida | Apoio visual e exemplo |
 |---:|---|---|
-| 12 | regressão linear | previsão para renda 2.000 e reta ajustada |
-| 14 | reexpressão da inclinação | aumento de 500 e reta ajustada |
-| 15 | resíduo | cálculo de M150 e diagrama reta–resíduo |
-| 16 | R² | 41,2% e dispersão ao redor da reta |
-| 22 | regressão múltipla | aumento de 500 e diagrama de condicionamento |
-| 26 | indicador categórico | Sudeste = 1/0 e referência regional |
-| 34 | centralização | 80 − 74,16 e curvas de interação |
-| 35 | interação | inclinação em 12 anos e curvas condicionais |
-| 45 | probabilidade e chance | três probabilidades e diagrama de transformação |
-| 47 | modelo logístico | logito zero, probabilidade 0,50 e curva logística |
-| 48 | razão de chances | exponenciação de 0,480 e curva logística |
-| 49 | padronização | renda 2.434 → z = 1 e diagrama de escalas |
+| 13 | regressão linear | previsão para renda 2.000 e reta ajustada |
+| 15 | reexpressão da inclinação | aumento de 500 e reta ajustada |
+| 16 | resíduo | cálculo de M150 e diagrama reta–resíduo |
+| 17 | R² | 41,2% e dispersão ao redor da reta |
+| 23 | regressão múltipla | aumento de 500 e diagrama de condicionamento |
+| 27 | indicador categórico | Sudeste = 1/0 e referência regional |
+| 35 | centralização | 80 − 74,16 e curvas de interação |
+| 36 | interação | inclinação em 12 anos e curvas condicionais |
+| 46 | probabilidade e chance | três probabilidades e diagrama de transformação |
+| 48 | modelo logístico | logito zero, probabilidade 0,50 e curva logística |
+| 49 | razão de chances | exponenciação de 0,480 e curva logística |
+| 50 | padronização | renda 2.434 → z = 1 e diagrama de escalas |
 
 ### Unidade 8
 
 | Slide | Fórmula ou medida | Apoio visual e exemplo |
 |---:|---|---|
-| 16 | acordo bruto | 27 de 32 casos e matriz dos anotadores |
-| 17 | kappa de Cohen | acordo observado e esperado com matriz |
-| 30 | acurácia | 20 acertos em 40 casos e matriz de confusão |
-| 39 | precisão | 10 de 21 positivos previstos e matriz da árvore |
-| 40 | revocação | 10 de 20 relevantes encontrados e matriz da árvore |
-| 41 | F1 | precisão e revocação da árvore e gráfico comparativo |
+| 17 | acordo bruto | 27 de 32 casos e matriz dos anotadores |
+| 18 | kappa de Cohen | acordo observado e esperado com matriz |
+| 31 | acurácia | 20 acertos em 40 casos e matriz de confusão |
+| 40 | precisão | 10 de 21 positivos previstos e matriz da árvore |
+| 41 | revocação | 10 de 20 relevantes encontrados e matriz da árvore |
+| 42 | F1 | precisão e revocação da árvore e gráfico comparativo |
 
 ### Unidade 9
 
 | Slide | Fórmula ou medida | Apoio visual e exemplo |
 |---:|---|---|
-| 12 | padronização | orçamento de 900 mil, média de 600 mil, desvio de 150 mil e escala visual |
-| 14 | distância euclidiana | deslocamentos 3 e 4, distância 5 e escala visual |
-| 19 | silhueta | distâncias médias 2 e 5, resultado 0,60 e curvas de diagnóstico |
-| 48 | mistura de tópicos | proporções 0,60, 0,30 e 0,10 e esquema do LDA |
+| 14 | padronização | orçamento de 900 mil, média de 600 mil, desvio de 150 mil e escala visual |
+| 16 | distância euclidiana | deslocamentos 3 e 4, distância 5 e escala visual |
+| 21 | silhueta | distâncias médias 2 e 5, resultado 0,60 e curvas de diagnóstico |
+| 50 | mistura de tópicos | proporções 0,60, 0,30 e 0,10 e esquema do LDA |
 
 ### Unidade 10
 
 | Slide | Fórmula ou medida | Apoio visual e exemplo |
 |---:|---|---|
-| 42 | precisão | 11 acertos e 1 falso positivo no diagrama de avaliação |
-| 43 | revocação | 11 acertos e 1 falso negativo no diagrama de avaliação |
-| 44 | F1 | precisão e revocação de 0,917 e diagrama dos componentes |
+| 43 | precisão | 11 acertos e 1 falso positivo no diagrama de avaliação |
+| 44 | revocação | 11 acertos e 1 falso negativo no diagrama de avaliação |
+| 45 | F1 | precisão e revocação de 0,917 e diagrama dos componentes |
 
 ### Unidade 11
 
 | Slide | Fórmula ou medida | Apoio visual e exemplo |
 |---:|---|---|
-| 12 | taxa por 100 mil | 41 eventos, população de 71.727 e curvas de contagem/taxa |
-| 14 | crescimento percentual | passagem de 35 para 41 eventos e curva de contagens |
-| 22 | média móvel de três anos | taxas de 1989–1991 e comparação entre janelas |
-| 32 | menções por 100 documentos | 7 menções em 80 documentos e curvas lexicais |
-| 44 | padronização direta | pesos 70%/30%, taxas 120/650 e grades territoriais |
+| 14 | taxa por 100 mil | 41 eventos, população de 71.727 e curvas de contagem/taxa |
+| 16 | crescimento percentual | passagem de 35 para 41 eventos e curva de contagens |
+| 24 | média móvel de três anos | taxas de 1989–1991 e comparação entre janelas |
+| 34 | menções por 100 documentos | 7 menções em 80 documentos e curvas lexicais |
+| 46 | padronização direta | pesos 70%/30%, taxas 120/650 e grades territoriais |
 
 ### Unidade 12
 
 | Slide | Fórmula ou medida | Apoio visual e exemplo |
 |---:|---|---|
-| 16 | combinação ponderada na atenção | pesos 0,60, 0,30 e 0,10 e diagrama dos tokens |
-| 44 | taxa de saídas apoiadas | 2 respostas adequadas, 1 abstinência e auditoria dos 6 casos |
+| 17 | combinação ponderada na atenção | pesos 0,60, 0,30 e 0,10 e diagrama dos tokens |
+| 45 | taxa de saídas apoiadas | 2 respostas adequadas, 1 abstinência e auditoria dos 6 casos |
 
 ### Unidade 13
 
 | Slide | Fórmula ou medida | Apoio visual e exemplo |
 |---:|---|---|
-| 23 | acurácia | 83 verdadeiros positivos, 84 verdadeiros negativos e matriz de confusão |
-| 47 | lacuna de F1 | F1 0,713 na Capital, 0,659 no Interior e barras por contexto |
+| 24 | acurácia | 83 verdadeiros positivos, 84 verdadeiros negativos e matriz de confusão |
+| 48 | lacuna de F1 | F1 0,713 na Capital, 0,659 no Interior e barras por contexto |
 
 ### Unidade 14
 
 | Slide | Fórmula ou medida | Apoio visual e exemplo |
 |---:|---|---|
-| 47 | tamanho do grupo equivalente $k$ | combinação repetida duas vezes e tabela visual dos oito registros |
+| 49 | tamanho do grupo equivalente $k$ | combinação repetida duas vezes e tabela visual dos oito registros |
 
 ## Uso nas próximas unidades
 

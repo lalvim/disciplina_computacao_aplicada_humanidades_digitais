@@ -22,6 +22,20 @@ seu alcance muda diante de outras medidas, especificações, grupos e contextos?
 
 <!-- _class: exemplo -->
 
+# Base fictícia de auditoria
+
+- **Predições:** 240 casos; períodos antigo/recente e origens Capital/Interior.
+- **Referência:** classes balanceadas, 205 casos claros e 35 ambíguos.
+- **Sensibilidade:** cinco especificações com representação, semente e F1.
+- **Casos qualitativos:** quatro erros com hipóteses de mecanismo.
+
+Quedas no período antigo e no Interior foram inseridas deliberadamente. Os dados não
+descrevem pessoas, grupos, contextos ou sistemas reais.
+
+---
+
+<!-- _class: exemplo -->
+
 # Antes da teoria: 0,742 parece um bom resultado?
 
 A especificação principal de um classificador fictício obteve:

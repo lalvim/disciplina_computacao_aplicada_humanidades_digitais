@@ -22,6 +22,20 @@ as decisões humanas, os erros e os limites da coleção?
 
 <!-- _class: exemplo -->
 
+# Corpus fictício de classificação
+
+- **Unidade de observação:** 160 documentos simulados.
+- **Estratos:** dois períodos; Capital e Interior.
+- **Rótulo:** 80 relevantes e 80 não relevantes segundo regra didática.
+- **Amostra de anotação:** 32 textos julgados por dois anotadores e adjudicados.
+
+O corpus foi gerado para produzir erros e diferenças de desempenho investigáveis.
+Não avalia grupos sociais, acervos ou classificadores reais.
+
+---
+
+<!-- _class: exemplo -->
+
 # Antes da teoria: saúde é o assunto?
 
 > “Jornal publica anúncio de remédio ao lado da programação cultural.”

@@ -22,6 +22,20 @@ pesquisa sem confundir fluência com evidência, fidelidade ou decisão ética?
 
 <!-- _class: exemplo -->
 
+# Ambiente fictício e controlado
+
+- **Corpus local:** dez documentos simulados, de 1901 a 1910.
+- **Saídas:** seis respostas atribuídas a um modelo hipotético.
+- **Rótulos:** adequada, abstinência, alucinação, contradição e extrapolação.
+- **Privacidade:** nenhum dado pessoal real e nenhuma chamada a serviço externo.
+
+Os exemplos servem para desenhar avaliação e auditoria. Não comparam produtos,
+fornecedores ou modelos reais.
+
+---
+
+<!-- _class: exemplo -->
+
 # Antes da teoria: uma resposta convincente
 
 **Pergunta:** A escola fechou por falta de luz?

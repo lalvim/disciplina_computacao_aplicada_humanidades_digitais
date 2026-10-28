@@ -22,6 +22,20 @@ apresentam diferenças relevantes?
 
 <!-- _class: exemplo -->
 
+# Bases fictícias usadas nas comparações
+
+- `documentos.csv`: 24 documentos simulados, 1890–1901, com Capital e Interior.
+- `documentos_comparacao.csv`: 12 documentos com uma segunda versão textual.
+- `versoes_textuais.csv`: seis pares ligados por identificador.
+- **Finalidade:** comparar grupos, reamostrar, permutar e medir proximidade textual.
+
+Um caso extremo e diferenças entre versões foram inseridos deliberadamente. Não há
+inferência sobre grupos, autores ou textos reais.
+
+---
+
+<!-- _class: exemplo -->
+
 # Antes da teoria: a diferença mudou
 
 Na base fictícia, a extensão média dos documentos é:

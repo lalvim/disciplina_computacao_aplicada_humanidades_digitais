@@ -297,6 +297,20 @@ registrem:
 
 ---
 
+<!-- _class: exemplo -->
+
+# Gabarito U06-A01 · Duas respostas possíveis
+
+| Frase | Unidade e evidência | Conclusão permitida | Conclusão excessiva |
+|---|---|---|---|
+| circulação correlacionada à extensão | documento; dispersão e coeficientes entre palavras e tiragem estimada | as duas medidas variam juntas nesta base | textos longos causam maior circulação |
+| entidades conectadas | par de entidades; documentos compartilhados segundo uma janela | o par compartilha contextos documentais | as entidades mantinham contato ou colaboração |
+
+Nos dois casos, a relação precisa ser traduzida em **unidade**, **regra observável** e
+**limite** antes de qualquer cálculo.
+
+---
+
 <!-- _class: divisor -->
 
 # 1 · Categorias aparecem juntas?
@@ -513,6 +527,25 @@ Um cálculo correto não repara categorias instáveis ou corpus enviesado.
 
 ---
 
+<!-- _class: exemplo -->
+
+# Gabarito U06-A02 · Local × ilustração
+
+| Local | Sem ilustração | Com ilustração | % com ilustração |
+|---|---:|---:|---:|
+| Capital | 20 | 20 | 50,0% |
+| Interior | 18 | 22 | 55,0% |
+
+- unidade: documento; denominador: 40 documentos dentro de cada local;
+- $\chi^2\approx0{,}05$ e $V\approx0{,}03$;
+- diferença descritiva: 5 pontos percentuais.
+
+**Conclusão-modelo:** as distribuições são muito semelhantes nesta base. O resultado
+não demonstra igualdade universal; classificação de ilustrações, preservação e
+composição documental continuam sendo riscos de viés.
+
+---
+
 <!-- _class: divisor -->
 
 # 2 · Duas medidas variam juntas?
@@ -662,6 +695,26 @@ Registre quais relações foram tentadas e separe exploração de confirmação.
 
 ---
 
+<!-- _class: exemplo -->
+
+# Gabarito U06-A03 · Extensão × circulação estimada
+
+| Especificação | Pearson | Spearman |
+|---|---:|---:|
+| 80 documentos | 0,745 | 0,747 |
+| Capital | 0,757 | 0,791 |
+| Interior | 0,779 | 0,802 |
+| sem R013, maior circulação | 0,733 | 0,737 |
+
+**Conclusão-modelo:** há associação positiva e relativamente estável neste corpus
+simulado. Isso não demonstra que textos longos aumentem a tiragem: local, período,
+gênero e a própria regra de geração podem afetar as duas medidas.
+
+R013 tem 586 palavras e tiragem estimada de 2.137 exemplares; sua retirada é uma
+análise de sensibilidade, não autorização para excluí-lo da pesquisa.
+
+---
+
 <!-- _class: divisor -->
 
 # 3 · Como documentos viram relações?
@@ -794,6 +847,24 @@ Peso alto não equivale automaticamente a vínculo social intenso.
 3. Projetem $W=B^{\mathsf T}B$ e retirem a diagonal.
 4. Escolham uma aresta e recuperem os documentos que a geraram.
 5. Expliquem o que a aresta significa — e o que não significa.
+
+---
+
+<!-- _class: exemplo -->
+
+# Gabarito U06-A04 · Projeção auditável
+
+No recorte D001, D003 e D011, a janela é o documento inteiro:
+
+| Aresta projetada | Peso | Documentos de origem |
+|---|---:|---|
+| Ana F. — Liga Aurora | 2 | D001, D011 |
+| Ana F. — Escola Livre | 2 | D001, D003 |
+| Liga Aurora — Escola Livre | 1 | D001 |
+
+**Resposta-modelo:** o peso informa em quantos documentos do recorte o par foi
+mencionado. A ligação é simétrica e documental; não comprova contato, filiação ou
+colaboração. Preservar os IDs permite retornar da aresta às fontes que a produziram.
 
 ---
 
@@ -966,6 +1037,25 @@ um critério. O resultado pode variar com:
 
 ---
 
+<!-- _class: exemplo -->
+
+# Gabarito U06-A05 · Centro e periferia do modelo
+
+| Nó | Grau | Força | Intermediação |
+|---|---:|---:|---:|
+| Jornal Horizonte | 11 | 16 | 0,311 |
+| Caio M. | 4 | 8 | 0,000 |
+
+Jornal Horizonte aparece em oito documentos, entre eles D003, D013 e D019; Caio M.
+aparece em quatro, entre eles D004 e D018.
+
+**Resposta-modelo:** Jornal Horizonte ocupa posição mais central no grafo documental
+e conecta mais vizinhos. Isso orienta a leitura dos documentos, mas não autoriza
+chamá-lo de ator dominante: sua centralidade depende da seleção, da janela e da
+projeção adotadas.
+
+---
+
 <!-- _class: divisor -->
 
 # 5 · Oficina
@@ -1075,6 +1165,44 @@ Código e imagem apoiam o argumento; não o substituem.
 
 ---
 
+<!-- _class: exemplo -->
+
+# Gabarito U06-A06 · Exemplo de percurso — 1/2
+
+**Trilha escolhida:** associação numérica.
+
+**Pergunta:** a extensão do documento e a tiragem estimada da edição variam juntas
+neste corpus fictício?
+
+| Elemento | Resolução possível |
+|---|---|
+| unidade | documento |
+| variáveis | palavras; tiragem estimada em exemplares |
+| evidência | dispersão, Pearson 0,745 e Spearman 0,747 |
+| sensibilidade | sem R013, Pearson 0,733 |
+| retorno aos casos | comparar R013 com documentos de extensão semelhante |
+
+---
+
+<!-- _class: exemplo -->
+
+# Gabarito U06-A06 · Exemplo de percurso — 2/2
+
+**Conclusão-modelo:**
+
+> A extensão e a circulação estimada apresentam associação positiva na base
+> simulada. O resultado muda pouco sem R013 e permanece nos recortes por local.
+> Entretanto, não permite afirmar que textos longos causam maior circulação, pois
+> período, local, gênero e a regra de construção da base podem afetar ambas.
+
+A seção acrescentada ao relatório deve conservar pergunta, definição das variáveis,
+código executável, gráfico, coeficientes, sensibilidade, leitura de casos e limite.
+
+Uma resposta pela trilha B ou C também é válida se cumprir a mesma cadeia de
+justificação.
+
+---
+
 <!-- _class: atividade -->
 
 # U06-A07 · Revisão por pares
@@ -1089,6 +1217,24 @@ Verifiquem:
 - gráfico ou grafo pode ser auditado nos dados?
 - há análise de sensibilidade e retorno a casos?
 - o limite modifica concretamente a conclusão?
+
+---
+
+<!-- _class: exemplo -->
+
+# Gabarito U06-A07 · Exemplo de parecer
+
+**Força:** a unidade é o documento, e a regra de construção do resultado está
+declarada.
+
+**Revisão 1:** o gráfico diferencia Capital e Interior apenas por cor; acrescentar
+legenda clara e tabela equivalente para não depender da percepção cromática.
+
+**Revisão 2:** apresentar os coeficientes por período e explicar se a conclusão
+permanece após a estratificação.
+
+**Parecer-modelo:** “O resultado é reproduzível e a afirmação evita causalidade, mas
+a acessibilidade do gráfico e a sensibilidade temporal precisam ser demonstradas.”
 
 ---
 

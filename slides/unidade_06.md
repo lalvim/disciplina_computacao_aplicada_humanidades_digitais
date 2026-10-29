@@ -305,57 +305,73 @@ registrem:
 
 ---
 
+# Como investigar uma associação categórica?
+
+Duas variáveis categóricas apresentam **associação descritiva** quando a distribuição
+de uma varia entre as categorias da outra.
+
+Procedimento:
+
+1. coloque uma variável nas linhas e outra nas colunas;
+2. conte os casos em cada combinação;
+3. escolha o denominador segundo a pergunta;
+4. compare proporções condicionais;
+5. examine casos, categorias e possíveis vieses.
+
+Associação descreve uma distribuição; não demonstra causa.
+
+---
+
+# Comece pela tabela de contingência
+
+| Período | Educação: não | Educação: sim | Total da linha |
+|---|---:|---:|---:|
+| 1890–1899 | 27 | 13 | **40** |
+| 1900–1909 | 15 | 25 | **40** |
+| **Total da coluna** | **42** | **38** | **80** |
+
+Para perguntar se o tema varia entre períodos, calculamos as proporções **dentro de
+cada período**. O denominador é, portanto, o total da linha: 40 documentos.
+
+Exemplo: no segundo período, $25/40=62{,}5\%$ têm o tema educação.
+
+---
+
 <!-- _class: exemplo -->
 
-# Primeiro, compare proporções
+# Caso 1 · Há associação descritiva
 
-Na base fictícia, cada período possui 40 documentos:
+| Período | Educação: não | Educação: sim |
+|---|---:|---:|
+| 1890–1899 | 67,5% | **32,5%** |
+| 1900–1909 | 37,5% | **62,5%** |
 
-| Período | Educação: sim | Educação: não | % “sim” |
+A proporção de documentos com o tema aumenta **30 pontos percentuais**. As
+distribuições são diferentes, o que constitui evidência descritiva de associação
+entre período e tema nesta base.
+
+Ainda não sabemos por que a diferença ocorreu nem se o período a causou.
+
+---
+
+<!-- _class: exemplo -->
+
+# Caso 2 · Quase não há associação descritiva
+
+| Período | Carta | Editorial | Notícia |
 |---|---:|---:|---:|
-| 1890–1899 | 13 | 27 | 32,5% |
-| 1900–1909 | 25 | 15 | 62,5% |
+| 1890–1899 | 32,5% | 35,0% | 32,5% |
+| 1900–1909 | 32,5% | 32,5% | 35,0% |
 
-O segundo período tem **30 pontos percentuais** a mais de documentos classificados
-com o tema educação.
+As distribuições de gênero diferem no máximo **2,5 pontos percentuais**. Nesta base,
+período informa muito pouco sobre gênero documental.
 
----
-
-# O denominador faz parte do resultado
-
-![w:1000 centralizada Barras de cem por cento mostram 32,5 por cento e 62,5 por cento de documentos com tema educação, ambas com quarenta documentos.](imagens/unidade_06/01_proporcao_tema_periodo.svg)
-
-Aqui os grupos têm o mesmo tamanho. Se fossem diferentes, comparar somente 13 e
-25 poderia induzir uma leitura errada.
+“Quase não há associação” não significa provar igualdade universal: é uma descrição
+destes 80 documentos e destas categorias.
 
 ---
 
-# Uma tabela condicional responde “dentro de quê?”
-
-![w:1030 centralizada Uma tabela de contingência é lida por linha para comparar a distribuição do tema dentro de cada período.](../unidade_06/imagens/01_tabela_condicional.svg)
-
-“62,5%” significa: entre os documentos de 1900–1909, 62,5% foram classificados
-com o tema — não 62,5% de todos os documentos.
-
----
-
-# Associação categórica
-
-Duas variáveis categóricas estão associadas quando a distribuição de uma varia
-entre as categorias da outra.
-
-Neste exemplo:
-
-- variável 1: período;
-- variável 2: presença do tema educação;
-- unidade: documento;
-- evidência descritiva: diferença entre proporções condicionais.
-
-Associação não explica por que a distribuição mudou.
-
----
-
-# O que esperaríamos sem associação?
+# Voltando ao caso 1: o que esperaríamos sem associação?
 
 ![bg right:40% contain A tabela condicional mostra totais de linha e coluna usados para calcular a frequência esperada.](../unidade_06/imagens/01_tabela_condicional.svg)
 
@@ -425,6 +441,44 @@ Aqui, $V\approx0{,}30$. A interpretação deve considerar categorias, qualidade 
 codificação e problema substantivo — não apenas um rótulo de intensidade.
 
 **Substituição:** $V=\sqrt{7{,}22/[80(2-1)]}\approx0{,}30$.
+
+---
+
+<!-- _class: exemplo -->
+
+# Exemplo · V próximo de zero
+
+Na base fictícia, período e gênero documental apresentam:
+
+| Período | Carta | Editorial | Notícia |
+|---|---:|---:|---:|
+| 1890–1899 | 32,5% | 35,0% | 32,5% |
+| 1900–1909 | 32,5% | 32,5% | 35,0% |
+
+O cálculo produz $V\approx0{,}03$. As distribuições são quase iguais: conhecer o
+período oferece pouquíssima informação sobre o gênero do documento nesta base.
+
+Próximo de zero não prova ausência universal de relação; descreve estas categorias,
+estes documentos e esta forma de agrupamento.
+
+---
+
+<!-- _class: exemplo -->
+
+# Exemplo hipotético · V igual a 1
+
+Imagine uma tabela construída apenas para mostrar uma correspondência perfeita:
+
+| Período | Educação: não | Educação: sim |
+|---|---:|---:|
+| 1890–1899 | 40 | 0 |
+| 1900–1909 | 0 | 40 |
+
+Aqui, $V=1$: ao conhecer o período, determinamos completamente a categoria do tema
+na tabela.
+
+Isso representa associação máxima, mas **não demonstra causalidade** nem explica por
+que o padrão existiria em uma pesquisa real.
 
 ---
 

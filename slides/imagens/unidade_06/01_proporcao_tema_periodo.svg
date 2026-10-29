@@ -3,7 +3,7 @@
 <desc>Duas barras de cem por cento com 32,5 por cento no primeiro período e 62,5 no segundo.</desc>
 <rect width="1100" height="590" fill="#fffdf7"/>
 <style>text{font-family:Aptos,Arial,sans-serif}.title{font-size:28px;font-weight:700;fill:#17324d}.label{font-size:20px;fill:#202a33}.small{font-size:16px;fill:#4b5563}.value{font-size:19px;font-weight:700;fill:#17324d}</style>
-<text x="550" y="48" text-anchor="middle" class="title">O denominador muda a leitura</text>
+<text x="550" y="48" text-anchor="middle" class="title">Cada barra representa 40 documentos</text>
 <text x="220" y="172" text-anchor="end" class="label">1890–1899</text>
 <rect x="245" y="135" width="700" height="62" rx="6" fill="#e7e0d4"/>
 <rect x="245" y="135" width="227.5" height="62" rx="6" fill="#176b68"/>

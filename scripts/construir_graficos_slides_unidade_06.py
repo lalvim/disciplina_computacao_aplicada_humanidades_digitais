@@ -48,7 +48,7 @@ def categorical_chart(df: pd.DataFrame) -> None:
         "Proporção de documentos com tema educação por período",
         "Duas barras de cem por cento com 32,5 por cento no primeiro período e 62,5 no segundo.",
     )
-    lines.append('<text x="550" y="48" text-anchor="middle" class="title">O denominador muda a leitura</text>')
+    lines.append('<text x="550" y="48" text-anchor="middle" class="title">Cada barra representa 40 documentos</text>')
     x0, width = 245, 700
     for i, period in enumerate(tab.index):
         y = 135 + i * 165

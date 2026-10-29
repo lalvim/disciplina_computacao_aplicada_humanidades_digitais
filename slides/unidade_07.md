@@ -163,6 +163,26 @@ Para “municípios com maior renda possuem mais equipamentos culturais”:
 
 ---
 
+<!-- _class: exemplo -->
+
+# Gabarito U07-A01 · Três níveis de afirmação
+
+- **Resposta:** equipamentos culturais por 100 mil habitantes.
+- **Explicativa:** renda per capita.
+- **Alternativas:** urbanização pode estar associada às duas; políticas regionais
+  podem afetar renda e oferta cultural.
+
+| Nível | Formulação possível |
+|---|---|
+| descrição | municípios de maior renda tendem a registrar mais equipamentos nesta base |
+| associação condicionada | renda permanece associada ao resultado ao considerar urbanização, escolaridade e distância |
+| hipótese causal | aumentar a renda produziria mais equipamentos |
+
+Os dados observacionais sustentam os dois primeiros níveis, com limites. Não
+identificam a hipótese causal.
+
+---
+
 <!-- _class: divisor -->
 
 # 1 · Uma resposta, uma explicativa
@@ -316,6 +336,26 @@ O bom ajuste médio pode coexistir com falhas sistemáticas em partes do corpus.
 3. Inspecionem dois casos distantes da reta.
 4. Incluam um limite causal.
 5. Na troca, circulem palavras fortes demais: “causa”, “prova”, “determina”.
+
+---
+
+<!-- _class: exemplo -->
+
+# Gabarito U07-A02 · Regressão simples
+
+| Elemento | Resultado |
+|---|---:|
+| intercepto | 1,238 |
+| mudança para +500 de renda | +0,703 equipamento por 100 mil |
+| $R^2$ | 0,412 |
+| RMSE | 0,591 equipamento por 100 mil |
+
+M150 está 3,18 equipamentos acima da previsão; M067 está 1,32 abaixo. M150 foi
+alterado deliberadamente e não deve ser removido sem registrar a sensibilidade.
+
+**Conclusão-modelo:** renda apresenta associação positiva com a oferta cultural na
+base fictícia, mas a dispersão e os resíduos mostram que renda sozinha não descreve
+todos os casos. O ajuste não demonstra causalidade.
 
 ---
 
@@ -490,6 +530,25 @@ Prefira:
 
 ---
 
+<!-- _class: exemplo -->
+
+# Gabarito U07-A03 · Condicionamento e referência
+
+| Comparação | Modelo simples | Modelo múltiplo |
+|---|---:|---:|
+| renda: mudança para +500 | +0,703 | +0,574 |
+| $R^2$ | 0,412 | 0,551 |
+| RMSE | 0,591 | 0,517 |
+
+Centro-Oeste é a referência. `regiao_Sudeste = +0,346` compara Sudeste a
+Centro-Oeste, mantendo os termos numéricos fixos; a referência continua no ajuste.
+
+Os perfis A e B produzem 3,23 e 4,45 equipamentos por 100 mil, diferença de 1,22.
+São cenários condicionais, não efeitos de uma intervenção nem municípios que
+necessariamente existam com exatamente esses valores.
+
+---
+
 <!-- _class: divisor -->
 
 # 3 · A inclinação depende do contexto?
@@ -628,6 +687,25 @@ A ação depende da fonte e do desenho, não apenas do efeito sobre $R^2$.
 3. Inspecionem o maior resíduo e a proveniência.
 4. Comparem o modelo completo e a sensibilidade.
 5. Preparem uma decisão que outra dupla consiga reconstruir.
+
+---
+
+<!-- _class: exemplo -->
+
+# Gabarito U07-A04 · Interação e diagnóstico
+
+- a inclinação da urbanização é $\beta_1+\beta_3E_c$ e varia com a escolaridade;
+- as curvas para 8, 10 e 12 anos devem ser comparadas por previsões;
+- M150 tem resíduo aproximado de 4,043 no modelo de interação;
+- a proveniência informa que esse caso foi alterado para fins didáticos.
+
+| Especificação | $R^2$ | RMSE | interação aproximada |
+|---|---:|---:|---:|
+| completa | 0,314 | 0,639 | 0,003 |
+| sem M150 | 0,372 | 0,547 | 0,004 |
+
+**Conclusão-modelo:** há heterogeneidade associativa sugerida pelo modelo, mas o
+resultado é parcialmente sensível a M150 e não identifica um efeito causal.
 
 ---
 
@@ -809,6 +887,28 @@ Treino, teste e métricas preditivas pertencem à Unidade 8.
 
 ---
 
+<!-- _class: exemplo -->
+
+# Gabarito U07-A05 · Chances e probabilidades
+
+| Probabilidade | Chance | Leitura |
+|---:|---:|---|
+| 0,20 | $0{,}20/0{,}80=0{,}25$ | 1 ocorrência para 4 não ocorrências |
+| 0,75 | $0{,}75/0{,}25=3$ | 3 ocorrências para 1 não ocorrência |
+
+Para urbanização padronizada, a razão de chances é aproximadamente 1,616 por um
+desvio-padrão adicional, mantendo os demais termos fixos.
+
+| Urbanização | Probabilidade prevista de biblioteca |
+|---:|---:|
+| 50% | 0,443 |
+| 90% | 0,820 |
+
+**Formulação adequada:** maior urbanização está associada a maior probabilidade
+prevista de biblioteca nesta base; não se conclui que urbanizar cause bibliotecas.
+
+---
+
 <!-- _class: divisor -->
 
 # 5 · Oficina
@@ -929,6 +1029,45 @@ sozinha, não oferece.
 
 ---
 
+<!-- _class: exemplo -->
+
+# Gabarito U07-A06 · Exemplo de incremento — 1/2
+
+**Caminho:** regressão linear múltipla.
+
+**Pergunta:** a renda permanece associada aos equipamentos culturais por 100 mil
+habitantes quando urbanização, escolaridade e distância são consideradas?
+
+| Decisão | Registro possível |
+|---|---|
+| unidade | município fictício |
+| resposta | equipamentos culturais por 100 mil |
+| explicativa principal | renda per capita; interpretar em blocos de 500 |
+| condicionantes | urbanização, escolaridade e distância |
+| diagnóstico | resíduos, RMSE e inspeção de M150 |
+
+---
+
+<!-- _class: exemplo -->
+
+# Gabarito U07-A06 · Exemplo de incremento — 2/2
+
+**Evidência:** no modelo simples, +500 de renda correspondem a +0,703 equipamento;
+no múltiplo, a +0,574. O $R^2$ passa de 0,412 para 0,551, mas M150 permanece um
+caso que exige inspeção e sensibilidade.
+
+**Conclusão-modelo:**
+
+> A renda permanece positivamente associada à oferta cultural prevista após
+> considerar os termos incluídos. A mudança do coeficiente mostra que a associação
+> depende da especificação. O modelo não controla variáveis ausentes nem identifica
+> o efeito de uma intervenção sobre renda.
+
+Uma não adoção também seria correta se demonstrasse falta de casos comparáveis,
+resposta mal definida ou especificação excessiva para a base disponível.
+
+---
+
 <!-- _class: atividade -->
 
 # U07-A07 · Afirmação, evidência e limite
@@ -945,6 +1084,25 @@ Sem explicação oral, localizem no trabalho do colega:
 - limite causal.
 
 O autor implementa a revisão ou justifica sua decisão.
+
+---
+
+<!-- _class: exemplo -->
+
+# Gabarito U07-A07 · Exemplo de revisão
+
+- **Ponto claro:** unidade, resposta e escala de +500 unidades aparecem antes dos
+  coeficientes.
+- **Dúvida:** o gráfico não informa quais variáveis foram mantidas constantes.
+- **Mudança prioritária:** acrescentar legenda com os condicionantes e explicar o
+  comportamento de M150.
+
+**Parecer-modelo:** “A afirmação usa linguagem associativa compatível com o desenho,
+mas precisa ligar o coeficiente ao modelo específico e mostrar como o caso M150 afeta
+o diagnóstico.”
+
+**Decisão do autor:** incorporar a legenda e a nota de sensibilidade, registrando a
+mudança no relatório-notebook.
 
 ---
 

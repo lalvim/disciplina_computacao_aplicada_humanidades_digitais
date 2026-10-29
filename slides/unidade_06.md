@@ -925,6 +925,9 @@ $$
 C_D(v)=\frac{\deg(v)}{n-1}
 $$
 
+**$C_D(v)$ é a centralidade de grau normalizada do nó $v$.** Ela transforma o
+número de vizinhos em uma proporção dos vizinhos possíveis.
+
 Na projeção fictícia, Jornal Horizonte possui grau 11 entre 13 vizinhos possíveis.
 
 **Exemplo:** $C_D=11/13\approx0{,}846$.
@@ -941,6 +944,9 @@ necessariamente influência ou prestígio.
 $$
 s(v)=\sum_u w_{vu}
 $$
+
+**$s(v)$ é a força do nó $v$.** Para calculá-la, somamos $w_{vu}$, o peso da
+ligação entre $v$ e cada vizinho $u$.
 
 Jornal Horizonte tem força 16; Liga Aurora, 14. A força distingue um nó com muitas
 ligações fracas de outro com ligações repetidas.

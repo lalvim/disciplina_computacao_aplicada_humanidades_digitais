@@ -966,6 +966,8 @@ $$
 C_B(v)=\sum_{s\ne v\ne t}\frac{\sigma_{st}(v)}{\sigma_{st}}
 $$
 
+- $s$ e $t$: nós de origem e destino de cada par considerado;
+- $v$: nó cuja centralidade de intermediação está sendo calculada;
 - $\sigma_{st}$: caminhos mínimos entre $s$ e $t$;
 - $\sigma_{st}(v)$: aqueles que passam por $v$.
 

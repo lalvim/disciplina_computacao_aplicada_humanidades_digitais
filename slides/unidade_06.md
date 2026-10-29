@@ -157,7 +157,7 @@ correspondência.
 
 <!-- _class: exemplo -->
 
-# Antes da teoria: como uma linha vira três pares
+# Antes da teoria: de uma linha à coocorrência
 
 Veja uma linha de `documentos_entidades.csv`:
 
@@ -166,34 +166,55 @@ Veja uma linha de `documentos_entidades.csv`:
 | D001 | 1895 | Capital | Ana F.; Liga Aurora; Escola Livre |
 
 Aqui, **entidade** é uma pessoa, organização ou lugar identificado no documento.
-Como a janela escolhida é o documento inteiro, as três menções geram três pares:
+O arquivo registra três menções; ele ainda **não contém relações entre elas**.
+
+Ao escolher o documento inteiro como janela, o método cria três pares:
 
 - Ana F. — Liga Aurora;
 - Ana F. — Escola Livre;
 - Liga Aurora — Escola Livre.
 
-<p class="pergunta">Compartilhar D001 prova que Ana F. pertencia à Liga ou à Escola?</p>
+<p class="pergunta">O que esses pares permitem afirmar — e o que acrescentamos por interpretação?</p>
 
 ---
 
-# O dado permite uma afirmação mais limitada
+# Fonte, operação e interpretação não são a mesma coisa
 
-![w:1050 centralizada Documentos e entidades formam um grafo bipartido; a projeção cria ligações entre entidades mencionadas no mesmo documento.](../unidade_06/imagens/03_projecao_bipartida.svg)
+<div class="duas-colunas">
 
-A projeção registra **contexto documental compartilhado**. A natureza da relação
-social ainda precisa ser investigada nas fontes.
+<div>
+
+![w:530 centralizada Documentos e entidades formam um grafo bipartido; a projeção cria ligações entre entidades mencionadas no mesmo documento.](../unidade_06/imagens/03_projecao_bipartida.svg)
+
+</div>
+
+<div>
+
+| Nível | O que sabemos? |
+|---|---|
+| fonte | D001 menciona as três entidades |
+| operação | o método forma pares porque a janela é o documento |
+| resultado | cada par compartilha um contexto documental |
+
+**Ainda não sabemos** se houve filiação, colaboração, contato ou qualquer outro
+vínculo social.
+
+</div>
+
+</div>
 
 ---
 
-# O que falta saber?
+# A unidade estudará três sentidos de “relação”
 
-- Qual é a unidade observada: documento, pessoa, par ou evento?
-- O que conta como ocorrência conjunta?
-- A relação foi registrada na fonte ou construída pelo método?
-- O padrão persiste com outra regra ou estratificação?
-- Que casos concretos produziram o resultado?
+| Tipo | Exemplo na unidade | Pergunta em linguagem comum |
+|---|---|---|
+| associação categórica | período × tema educação | a proporção muda entre os períodos? |
+| correlação numérica | extensão × circulação | valores altos de uma tendem a acompanhar valores altos da outra? |
+| coocorrência | entidade × entidade | as duas são mencionadas nos mesmos documentos? |
 
-Uma aresta não possui significado antes dessas decisões.
+São relações diferentes e exigem evidências diferentes. Em todas, precisamos
+declarar a **unidade observada**, a **regra de construção** e o **limite da conclusão**.
 
 ---
 
@@ -204,13 +225,21 @@ Uma aresta não possui significado antes dessas decisões.
 **Modalidade:** duplas · **Tempo:** 12 minutos  
 **Produto:** quadro com hipótese, unidade e limite
 
-Escolham uma frase: “tema associado ao período”, “circulação correlacionada à
-extensão” ou “entidades conectadas”. Registrem:
+**Exemplo resolvido:** “tema associado ao período”.
 
-1. qual relação a frase parece afirmar;
-2. qual unidade seria observada;
-3. que evidência seria necessária;
-4. que conclusão ainda seria excessiva.
+| Item | Resposta possível |
+|---|---|
+| unidade | documento |
+| evidência | comparar a proporção do tema em cada período |
+| limite | a diferença não prova que o período causou o tema |
+
+Agora escolham “circulação correlacionada à extensão” ou “entidades conectadas” e
+registrem:
+
+1. a unidade observada;
+2. a evidência necessária;
+3. uma conclusão permitida;
+4. uma conclusão ainda excessiva.
 
 ---
 

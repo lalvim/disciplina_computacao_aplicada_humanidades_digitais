@@ -95,16 +95,16 @@ texto alternativo; não são decoração.
 
 | Slide | Fórmula ou medida | Apoio visual e exemplo |
 |---:|---|---|
-| 18 | frequência esperada | célula 1890–1899 × sim e tabela condicional |
-| 20 | qui-quadrado | contribuição de uma célula e barras proporcionais |
-| 21 | V de Cramér | substituição completa e barras proporcionais |
-| 26 | Pearson | 80 pares, resultado 0,53 e dispersão |
-| 28 | Spearman | três postos, resultado 0,50 e dispersão |
-| 36 | combinações de pares | 3 e 10 entidades e projeção bipartida |
-| 39 | projeção matricial | uma coocorrência e diagrama de projeção |
-| 48 | grau normalizado | 11 de 13 vizinhos e diagrama de centralidades |
-| 49 | força | pesos 3 + 2 + 1 e diagrama de centralidades |
-| 50 | intermediação | resultado 0,311 e nó de ponte |
+| 19 | frequência esperada | célula 1890–1899 × sim e tabela condicional |
+| 21 | qui-quadrado | contribuição de uma célula e barras proporcionais |
+| 22 | V de Cramér | substituição completa e barras proporcionais |
+| 27 | Pearson | 80 pares, resultado 0,53 e dispersão |
+| 29 | Spearman | três postos, resultado 0,50 e dispersão |
+| 37 | combinações de pares | 3 e 10 entidades e projeção bipartida |
+| 40 | projeção matricial | uma coocorrência e diagrama de projeção |
+| 49 | grau normalizado | 11 de 13 vizinhos e diagrama de centralidades |
+| 50 | força | pesos 3 + 2 + 1 e diagrama de centralidades |
+| 51 | intermediação | resultado 0,311 e nó de ponte |
 
 ### Unidade 7
 

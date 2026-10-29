@@ -51,6 +51,19 @@ O método muda; a obrigação de documentar unidades, regras e limites permanece
 
 ---
 
+# A unidade estudará três sentidos de “relação”
+
+| Tipo | Exemplo na unidade | Pergunta em linguagem comum |
+|---|---|---|
+| associação categórica | período × tema educação | a proporção muda entre os períodos? |
+| correlação numérica | extensão × circulação | valores altos de uma tendem a acompanhar valores altos da outra? |
+| coocorrência | entidade × entidade | as duas são mencionadas nos mesmos documentos? |
+
+São relações diferentes e exigem evidências diferentes. Em todas, precisamos
+declarar a **unidade observada**, a **regra de construção** e o **limite da conclusão**.
+
+---
+
 <!-- _class: exemplo -->
 
 # Base fictícia: registros e documentos
@@ -205,16 +218,57 @@ vínculo social.
 
 ---
 
-# A unidade estudará três sentidos de “relação”
+<!-- _class: exemplo -->
 
-| Tipo | Exemplo na unidade | Pergunta em linguagem comum |
-|---|---|---|
-| associação categórica | período × tema educação | a proporção muda entre os períodos? |
-| correlação numérica | extensão × circulação | valores altos de uma tendem a acompanhar valores altos da outra? |
-| coocorrência | entidade × entidade | as duas são mencionadas nos mesmos documentos? |
+# Da incidência às arestas: um exemplo completo
 
-São relações diferentes e exigem evidências diferentes. Em todas, precisamos
-declarar a **unidade observada**, a **regra de construção** e o **limite da conclusão**.
+<div class="tres-colunas">
+
+<div>
+
+### 1 · Incidência
+
+| doc. | Ana | Liga | Escola |
+|---|---:|---:|---:|
+| D001 | 1 | 1 | 1 |
+| D003 | 1 | 0 | 1 |
+| D011 | 1 | 1 | 0 |
+
+`1` significa que a entidade foi mencionada no documento.
+
+</div>
+
+<div>
+
+### 2 · Projeção
+
+| par | documentos compartilhados |
+|---|---|
+| Ana–Liga | D001, D011 |
+| Ana–Escola | D001, D003 |
+| Liga–Escola | D001 |
+
+Comparamos as colunas e contamos os documentos em comum.
+
+</div>
+
+<div>
+
+### 3 · Arestas
+
+| origem | destino | peso |
+|---|---|---:|
+| Ana | Liga | 2 |
+| Ana | Escola | 2 |
+| Liga | Escola | 1 |
+
+Cada par vira uma ligação; o peso guarda a contagem.
+
+</div>
+
+</div>
+
+<p class="fonte">Recorte didático de D001, D003 e D011; “Liga” e “Escola” abreviam Liga Aurora e Escola Livre.</p>
 
 ---
 

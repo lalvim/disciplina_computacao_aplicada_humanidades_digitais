@@ -410,21 +410,6 @@ controla o processo histórico, a produção da fonte ou variáveis não observa
 
 ---
 
-# “Iguais nos outros termos” é uma construção
-
-Para interpretar renda, imaginamos dois municípios com os mesmos valores de:
-
-- urbanização;
-- escolaridade;
-- distância da capital;
-
-mas com rendas diferentes.
-
-A comparação só é substantivamente plausível se a base contiver combinações
-suficientemente semelhantes. A equação pode criar perfis raros ou inexistentes.
-
----
-
 # Variável omitida pode alterar o coeficiente
 
 Uma característica omitida é especialmente problemática quando:

@@ -502,6 +502,9 @@ Escolha a referência por pertinência interpretativa, não para obter sinais de
 
 # Perfis tornam o modelo legível
 
+Um **perfil** é uma combinação hipotética de valores das variáveis usada para pedir
+ao modelo uma previsão. Não é necessariamente um município existente na base.
+
 Mantendo Centro-Oeste como referência:
 
 | Perfil | Renda | Urbanização | Escolaridade | Distância | Previsão |
@@ -509,8 +512,9 @@ Mantendo Centro-Oeste como referência:
 | A | 1.500 | 60% | 9 anos | 250 km | 3,23 |
 | B | 2.200 | 85% | 11 anos | 250 km | 4,45 |
 
-A diferença prevista é 1,22 equipamento por 100 mil. Os perfis são cenários do
-modelo, não trajetórias inevitáveis.
+A diferença prevista é 1,22 equipamento por 100 mil. Ela combina as mudanças de
+renda, urbanização e escolaridade; não pode ser atribuída a apenas uma delas. Os
+perfis são cenários do modelo, não casos observados nem trajetórias inevitáveis.
 
 ---
 

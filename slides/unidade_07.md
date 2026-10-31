@@ -202,6 +202,25 @@ o resumo e os casos precisam aparecer juntos.
 
 ---
 
+# O que é regressão linear?
+
+É um método que usa uma **reta** para resumir como o valor médio previsto de uma
+resposta numérica varia quando uma ou mais características mudam.
+
+Nesta unidade:
+
+| Papel | Variável |
+|---|---|
+| caso observado | município fictício |
+| resposta numérica | equipamentos culturais por 100 mil habitantes |
+| explicativa inicial | renda per capita |
+| resultado do modelo | valor previsto para cada nível de renda |
+
+A reta não precisa atravessar todos os pontos: as distâncias entre observado e
+previsto são os resíduos. Regressão resume associação; sozinha, não demonstra causa.
+
+---
+
 # Da pergunta às variáveis
 
 **Pergunta:** como a quantidade de equipamentos culturais por 100 mil habitantes
@@ -714,6 +733,40 @@ Para `biblioteca_publica`, a resposta é 0 ou 1. Uma regressão linear poderia:
 - representar mal a variância de uma resposta binária.
 
 A logística modela uma transformação da probabilidade entre 0 e 1.
+
+---
+
+# O que é regressão logística?
+
+É um método usado quando a resposta possui duas categorias, como **sim/não**. Em vez
+de prever uma quantidade de bibliotecas, estima a probabilidade de ocorrência.
+
+Nesta unidade:
+
+| Papel | Variável |
+|---|---|
+| caso observado | município fictício |
+| resposta binária | possui biblioteca pública: sim ou não |
+| explicativas | renda, urbanização, escolaridade e distância |
+| resultado do modelo | probabilidade prevista entre 0 e 1 |
+
+Uma previsão de 0,82 significa probabilidade estimada de 82% no cenário do modelo;
+não significa “0,82 biblioteca” nem garante que o município possua biblioteca.
+
+---
+
+# Linear e logística: o que muda?
+
+| Aspecto | Regressão linear | Regressão logística |
+|---|---|---|
+| resposta | quantidade numérica | ocorrência sim/não |
+| exemplo | equipamentos por 100 mil | presença de biblioteca |
+| saída | valor previsto | probabilidade prevista |
+| forma | reta ou plano | curva em S após transformação |
+| coeficiente | mudança prevista na resposta | mudança no logaritmo das chances |
+
+Ambas relacionam uma resposta a explicativas e podem incluir categorias, interações
+e condicionantes. O tipo da resposta determina qual modelo é pertinente.
 
 ---
 

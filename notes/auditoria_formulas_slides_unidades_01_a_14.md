@@ -110,18 +110,18 @@ texto alternativo; não são decoração.
 
 | Slide | Fórmula ou medida | Apoio visual e exemplo |
 |---:|---|---|
-| 15 | regressão linear | previsão para renda 2.000 e reta ajustada |
-| 17 | reexpressão da inclinação | aumento de 500 e reta ajustada |
-| 18 | resíduo | cálculo de M150 e diagrama reta–resíduo |
-| 19 | R² | 41,2% e dispersão ao redor da reta |
-| 26 | regressão múltipla | aumento de 500 e diagrama de condicionamento |
+| 16 | regressão linear | previsão para renda 2.000 e reta ajustada |
+| 18 | reexpressão da inclinação | aumento de 500 e reta ajustada |
+| 19 | resíduo | cálculo de M150 e diagrama reta–resíduo |
+| 20 | R² | 41,2% e dispersão ao redor da reta |
+| 27 | regressão múltipla | aumento de 500 e diagrama de condicionamento |
 | 30 | indicador categórico | Sudeste = 1/0 e referência regional |
 | 39 | centralização | 80 − 74,16 e curvas de interação |
 | 40 | interação | inclinação em 12 anos e curvas condicionais |
-| 51 | probabilidade e chance | três probabilidades e diagrama de transformação |
-| 53 | modelo logístico | logito zero, probabilidade 0,50 e curva logística |
-| 54 | razão de chances | exponenciação de 0,480 e curva logística |
-| 55 | padronização | renda 2.434 → z = 1 e diagrama de escalas |
+| 53 | probabilidade e chance | três probabilidades e diagrama de transformação |
+| 55 | modelo logístico | logito zero, probabilidade 0,50 e curva logística |
+| 56 | razão de chances | exponenciação de 0,480 e curva logística |
+| 57 | padronização | renda 2.434 → z = 1 e diagrama de escalas |
 
 ### Unidade 8
 

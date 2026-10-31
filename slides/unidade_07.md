@@ -153,7 +153,7 @@ Modelar é explicitar comparações e também suas condições.
 
 # U07-A01 · Graduar a afirmação
 
-**Modalidade:** duplas · **Tempo:** 15 minutos  
+**Modalidade:** duplas · **Em aula:** 8 min · **Versão completa:** 15 min
 **Produto:** três versões da mesma afirmação
 
 Para “municípios com maior renda possuem mais equipamentos culturais”:
@@ -183,13 +183,16 @@ Para “municípios com maior renda possuem mais equipamentos culturais”:
 Os dados observacionais sustentam os dois primeiros níveis, com limites. Não
 identificam a hipótese causal.
 
+Para compreender de onde vem uma associação condicionada, começaremos pelo modelo
+mais simples: uma resposta numérica e uma única explicativa.
+
 ---
 
 <!-- _class: divisor -->
 
 # 1 · Uma resposta, uma explicativa
 
-## Regressão linear simples
+## Primeiro, aprender a ler uma associação antes de condicioná-la
 
 ---
 
@@ -294,7 +297,8 @@ $$
 
 Resíduo positivo: observado acima da previsão. Resíduo negativo: abaixo.
 
-**Exemplo:** para M150, $e=8{,}40-4{,}357\approx4{,}043$.
+**Exemplo no modelo simples:** para M150,
+$e=8{,}40-5{,}225\approx3{,}175$.
 
 ---
 
@@ -349,8 +353,8 @@ O bom ajuste médio pode coexistir com falhas sistemáticas em partes do corpus.
 
 # U07-A02 · Ler uma regressão simples
 
-**Modalidade:** individual e revisão em dupla · **Tempo:** 25 minutos  
-**Produto:** conclusão de até 90 palavras
+**Modalidade:** individual e revisão em dupla · **Em aula:** 8 min (itens 1, 2 e 5)
+**Versão completa:** 25 min no notebook · **Produto:** conclusão de até 90 palavras
 
 1. Declarem unidade, resposta e explicativa.
 2. Interpretem a inclinação para +500 de renda e o $R^2$.
@@ -378,13 +382,16 @@ alterado deliberadamente e não deve ser removido sem registrar a sensibilidade.
 base fictícia, mas a dispersão e os resíduos mostram que renda sozinha não descreve
 todos os casos. O ajuste não demonstra causalidade.
 
+Renda sozinha deixou variação sem descrição. O próximo passo é perguntar o que muda
+quando outras diferenças observadas entram no mesmo modelo.
+
 ---
 
 <!-- _class: divisor -->
 
 # 2 · Condicionar uma associação
 
-## Regressão múltipla e categorias
+## Da comparação bruta à comparação entre perfis
 
 ---
 
@@ -441,6 +448,9 @@ Uma característica omitida é especialmente problemática quando:
 
 Adicionar muitas colunas sem teoria não resolve o problema e pode introduzir novos
 vieses ou instabilidade.
+
+Até aqui, tratamos explicativas numéricas. Região também pode integrar a comparação,
+mas precisa ser representada sem inventar uma ordem entre categorias.
 
 ---
 
@@ -525,8 +535,8 @@ Prefira:
 
 # U07-A03 · Controle e referência
 
-**Modalidade:** grupos de 3 · **Tempo:** 30 minutos  
-**Produto:** comparação de modelos e dois perfis previstos
+**Modalidade:** grupos de 3 · **Em aula:** 8 min (itens 1–3)
+**Versão completa:** 30 min no notebook · **Produto:** comparação e dois perfis
 
 1. Comparem o coeficiente da renda nos dois modelos.
 2. Interpretem um termo numérico e um regional.
@@ -553,13 +563,16 @@ Os perfis A e B produzem 3,23 e 4,45 equipamentos por 100 mil, diferença de 1,2
 São cenários condicionais, não efeitos de uma intervenção nem municípios que
 necessariamente existam com exatamente esses valores.
 
+Esse modelo ainda pressupõe a mesma inclinação para todos os contextos. A seguir,
+testaremos essa suposição com uma interação.
+
 ---
 
 <!-- _class: divisor -->
 
 # 3 · A inclinação depende do contexto?
 
-## Interação, resíduos e sensibilidade
+## Depois de condicionar, perguntar se a associação varia
 
 ---
 
@@ -621,6 +634,9 @@ $0{,}0195+0{,}00340(12-9{,}96)\approx0{,}0264$.
 
 O gráfico traduz a interação para três valores compreensíveis de escolaridade. As
 linhas são cenários condicionais, não trajetórias causais.
+
+Interpretar as linhas responde **como** a associação varia. Ainda precisamos verificar
+**onde** esse resumo descreve mal os municípios observados.
 
 ---
 
@@ -685,8 +701,8 @@ A ação depende da fonte e do desenho, não apenas do efeito sobre $R^2$.
 
 # U07-A04 · Interação e diagnóstico
 
-**Modalidade:** duplas · **Tempo:** 35 minutos  
-**Produto:** figura comentada e parágrafo de cautela
+**Modalidade:** duplas · **Em aula:** 8 min (itens 1, 3 e 5)
+**Versão completa:** 35 min no notebook · **Produto:** figura e parágrafo de cautela
 
 1. Expliquem por que a inclinação depende da escolaridade.
 2. Leiam as três linhas previstas.
@@ -713,13 +729,16 @@ A ação depende da fonte e do desenho, não apenas do efeito sobre $R^2$.
 **Conclusão-modelo:** há heterogeneidade associativa sugerida pelo modelo, mas o
 resultado é parcialmente sensível a M150 e não identifica um efeito causal.
 
+Até agora, a resposta foi uma quantidade. O próximo bloco preserva a lógica de
+condicionamento, mas muda a pergunta para uma ocorrência: biblioteca, sim ou não.
+
 ---
 
 <!-- _class: divisor -->
 
 # 4 · Quando a resposta é sim ou não
 
-## Introdução à regressão logística
+## A mesma lógica associativa, agora para probabilidades
 
 ---
 
@@ -917,8 +936,8 @@ Treino, teste e métricas preditivas pertencem à Unidade 8.
 
 # U07-A05 · Interpretar ocorrência
 
-**Modalidade:** individual e revisão em dupla · **Tempo:** 30 minutos  
-**Produto:** tradução de chances para probabilidades
+**Modalidade:** individual e revisão em dupla · **Em aula:** 8 min (itens 1, 2 e 4)
+**Versão completa:** 30 min no notebook · **Produto:** tradução para probabilidades
 
 1. Convertam 0,20 e 0,75 em chances.
 2. Interpretem uma razão de chances, mencionando a padronização.
@@ -947,13 +966,16 @@ desvio-padrão adicional, mantendo os demais termos fixos.
 **Formulação adequada:** maior urbanização está associada a maior probabilidade
 prevista de biblioteca nesta base; não se conclui que urbanizar cause bibliotecas.
 
+Já temos duas famílias de modelos. O passo final é decidir se alguma delas é
+pertinente ao projeto e transformar saída estatística em argumento auditável.
+
 ---
 
 <!-- _class: divisor -->
 
 # 5 · Oficina
 
-## Modelo associativo ou não adoção fundamentada
+## Reunir pergunta, modelo, diagnóstico, casos e limite
 
 ---
 
@@ -985,8 +1007,8 @@ Não fabrique observações apenas para usar a técnica.
 
 # U07-A06 · Incremento do relatório-notebook
 
-**Modalidade:** equipes do projeto · **Tempo:** 70 minutos  
-**Produto:** nova seção no mesmo relatório-notebook cumulativo
+**Modalidade:** equipes · **Em aula:** 40 min · **Versão completa:** 70 min
+**Produto:** seção iniciada em aula e concluída no relatório-notebook cumulativo
 
 Incluam:
 
@@ -1112,7 +1134,7 @@ resposta mal definida ou especificação excessiva para a base disponível.
 
 # U07-A07 · Afirmação, evidência e limite
 
-**Modalidade:** revisão por pares · **Tempo:** 20 minutos  
+**Modalidade:** revisão por pares · **Em aula:** 10 min · **Versão completa:** 20 min
 **Produto:** um ponto claro, uma dúvida e uma mudança prioritária
 
 Sem explicação oral, localizem no trabalho do colega:

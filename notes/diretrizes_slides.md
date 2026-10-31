@@ -167,6 +167,42 @@ Cada unidade terminará com:
 O último slide da unidade será sempre **Referências**. Quando a bibliografia não
 couber com legibilidade, usar `Referências — 1/2` e `Referências — 2/2`.
 
+### 3.6 Encadeamento entre slides e blocos
+
+Uma sequência correta de conceitos pode continuar difícil se a relação entre um
+slide e o seguinte depender apenas de improvisação. Cada apresentação deverá possuir
+um **mapa de dependências narrativas**: o que a turma já compreendeu, qual problema
+permanece aberto e por que o próximo conceito é necessário.
+
+Nas mudanças de bloco, a fala ou o próprio slide deve cumprir três movimentos:
+
+1. **retomar:** nomear em uma frase o resultado alcançado;
+2. **mostrar a insuficiência:** formular o limite ou a pergunta ainda aberta;
+3. **projetar:** anunciar o que o próximo bloco acrescentará.
+
+Exemplo:
+
+> A regressão simples resumiu a associação entre renda e equipamentos. Porém,
+> municípios também diferem em urbanização e escolaridade. Agora veremos como o
+> coeficiente da renda muda quando essas diferenças entram na comparação.
+
+Regras de encadeamento:
+
+- não introduzir uma variável, arquivo, medida ou gráfico antes de apresentá-lo;
+- fazer o slide seguinte responder a uma pergunta deixada pelo anterior;
+- explicar mudanças de unidade de análise, tipo de resposta ou escala;
+- ao passar de exemplo para fórmula, conservar os mesmos casos e valores;
+- ao passar de fórmula para resultado, traduzir novamente para o problema;
+- após uma atividade, usar o gabarito para preparar o bloco seguinte;
+- usar divisores com uma frase de ponte, e não apenas o nome do tópico;
+- registrar no roteiro docente a última frase de cada slide e a abertura do próximo;
+- retirar repetições que não acrescentem uma nova operação, contraste ou decisão.
+
+Antes de publicar, aplicar o **teste da retirada da fala**: lendo apenas títulos,
+figuras e frases de transição, uma pessoa deve conseguir reconstruir por que cada
+slide vem depois do anterior. O roteiro oral complementa esse percurso, mas não deve
+corrigir uma ordem intrinsecamente confusa.
+
 ## 4. Agenda obrigatória
 
 Toda apresentação terá um slide intitulado `Agenda`. A agenda deverá:
@@ -360,6 +396,16 @@ slides**, incluindo:
 
 O número é uma faixa, não uma meta mecânica. Atividades, discussão e demonstrações
 devem ocupar parte substantiva da aula.
+
+Quando a versão completa das atividades ultrapassar o encontro de quatro horas, a
+apresentação e o roteiro deverão distinguir explicitamente:
+
+- **recorte em aula**, com pergunta e tempo executáveis;
+- **versão completa**, realizada no notebook ou no projeto;
+- **atividade opcional ou de reserva**, usada conforme o ritmo da turma.
+
+O cronograma deve incluir transições, discussão dos gabaritos e ao menos um intervalo;
+somar apenas os tempos declarados das atividades não é suficiente.
 
 ## 13. Critérios de revisão
 

@@ -52,11 +52,15 @@ gere novamente a saída.
 
 ## Convenções didáticas
 
-Cada apresentação começa com um exemplo ou uma situação-problema antes da
-agenda e da teoria. Os slides marcados como atividade informam modalidade,
+Cada apresentação situa agenda, objetivos e percurso e, antes da teoria, apresenta
+um exemplo ou uma situação-problema. Os slides marcados como atividade informam modalidade,
 tempo e produto. A implementação completa dos experimentos permanece nos
 notebooks; os slides mostram apenas a entrada, a operação essencial, a saída e
 sua interpretação.
+
+Os roteiros de fala e as orientações de uso ficam em
+[`roteiros_professor/`](roteiros_professor/). Eles registram as pontes entre slides,
+mas não substituem a necessidade de uma sequência visual compreensível.
 
 Antes de usar em aula, confira:
 

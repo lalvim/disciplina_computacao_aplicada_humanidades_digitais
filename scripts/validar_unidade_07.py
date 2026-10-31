@@ -64,14 +64,18 @@ def validar_conteudo(notebooks: list[Path]) -> None:
 
 
 def validar_resultados(ambientes: dict[str, dict]) -> None:
-    simples = ambientes["01_regressao_linear_simples.ipynb"]["simples"]
+    simples_ambiente = ambientes["01_regressao_linear_simples.ipynb"]
+    simples = simples_ambiente["simples"]
     assert len(simples["previstos"]) == 150
     assert 0 < simples["r2"] < 1 and simples["rmse"] > 0
+    assert len(simples_ambiente["casos_residuos"]) == 150
+    assert simples_ambiente["casos_residuos"]["residuo_absoluto"].max() > 2
 
     multiplo = ambientes["02_regressao_multipla_e_categorias.ipynb"]
     assert multiplo["referencia"] == "Centro-Oeste"
     assert len(multiplo["com_regiao"]["coeficientes"]) == 9
     assert multiplo["cenarios"]["previsao"].notna().all()
+    assert set(multiplo["cenarios_exibicao"]["regiao"]) == {"Centro-Oeste"}
 
     diag = ambientes["03_interacoes_residuos_e_qualidade.ipynb"]
     assert len(diag["modelo_interacao"]["coeficientes"]) == 4

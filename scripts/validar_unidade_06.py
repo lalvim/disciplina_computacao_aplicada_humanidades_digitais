@@ -55,7 +55,7 @@ def validar_conteudo(notebooks: list[Path]) -> None:
         "tabela cruzada", "proporções condicionais", "v de cramér",
         "correlação de pearson", "spearman", "correlação não estabelece",
         "confundimento", "coocorrência", "matriz documento-entidade",
-        "rede bipartida", "nós e arestas", "grau", "força",
+        "grafo bipartido", "nós e arestas", "grau", "força",
         "intermediação", "comunidades", "mesmo relatório-notebook",
     ]
     ausentes = [t for t in termos if t not in texto]
@@ -71,6 +71,7 @@ def validar_resultados(ambientes: dict[str, dict]) -> None:
 
     cor = ambientes["02_correlacao_variaveis_numericas.ipynb"]
     assert -1 <= cor["pearson"] <= 1 and -1 <= cor["spearman"] <= 1
+    assert -1 <= cor["pearson_circulacao"] <= 1
     assert len(cor["sem_extremo"]) == 79
     assert set(cor["por_local"].index) == {"Capital", "Interior"}
 
@@ -78,6 +79,10 @@ def validar_resultados(ambientes: dict[str, dict]) -> None:
     assert coo["incidencia"].shape[0] == 24
     assert (coo["matriz_coocorrencia"].values.diagonal() == 0).all()
     assert len(coo["arestas"]) > 10
+    assert {"origem", "destino", "peso", "documentos"} == set(
+        coo["fontes_arestas"].columns
+    )
+    assert coo["fontes_arestas"]["documentos"].str.len().gt(0).all()
 
     gra = ambientes["04_grafos_centralidade_e_comunidades.ipynb"]
     assert gra["grafo"].number_of_nodes() >= 10
@@ -85,6 +90,8 @@ def validar_resultados(ambientes: dict[str, dict]) -> None:
     assert not gra["metricas"].isna().any().any()
     assert len(gra["comunidades"]) >= 2
     assert gra["grafo_dirigido"].is_directed()
+    assert gra["correspondencia_agregada"]["cartas"].sum() == gra["correspondencia"]["cartas"].sum()
+    assert len(gra["correspondencia_agregada"]) == 6
     assert {"entrada", "saída", "cartas_enviadas", "cartas_recebidas"} == set(
         gra["graus_dirigidos"].columns
     )

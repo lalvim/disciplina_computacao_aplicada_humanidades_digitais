@@ -23,8 +23,10 @@ Verificar se os slides:
 5. `05_diretora_de_aula_e_roteiro_oral.md`: testa tempo, atividades e condução oral;
 6. coordenação: consolida os achados com `modelo_de_parecer.md`.
 
-O parecer consolidado da Unidade 7 está em
-[`pareceres/unidade_07.md`](pareceres/unidade_07.md).
+Pareceres consolidados disponíveis:
+
+- [`Unidade 6`](pareceres/unidade_06.md);
+- [`Unidade 7`](pareceres/unidade_07.md).
 
 ## Escala
 

@@ -10,6 +10,7 @@ ritmo e vocabulário às respostas da turma sem perder a lógica do percurso.
 ## Arquivos
 
 - [`diretrizes.md`](diretrizes.md): padrão para todos os roteiros;
+- [`unidade_06.md`](unidade_06.md): roteiro completo da Unidade 6;
 - [`unidade_07.md`](unidade_07.md): roteiro completo da Unidade 7.
 
 ## Convenção de prioridade

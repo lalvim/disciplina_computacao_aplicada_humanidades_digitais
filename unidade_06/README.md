@@ -1,4 +1,4 @@
-# Unidade 6 — Associações e redes
+# Unidade 6 — Associações e grafos
 
 ## Ordem de estudo
 
@@ -19,7 +19,8 @@ Nos Notebooks 00 a 04, execute primeiro **Preparação do ambiente**. A oficina 
 
 ## Entrega incremental
 
-A Unidade 6 não exige outro relatório. O estudante atualiza o mesmo notebook do projeto e incorpora uma associação, uma rede ou uma não adoção fundamentada.
+A Unidade 6 não exige outro relatório. O estudante atualiza o mesmo notebook do
+projeto e incorpora uma associação, um grafo ou uma não adoção fundamentada.
 
 ## Materiais
 

@@ -62,6 +62,9 @@ O método muda; a obrigação de documentar unidades, regras e limites permanece
 São relações diferentes e exigem evidências diferentes. Em todas, precisamos
 declarar a **unidade observada**, a **regra de construção** e o **limite da conclusão**.
 
+O **grafo não será um quarto tipo de evidência**: será uma representação de relações
+já definidas, como coocorrências documentais ou correspondências dirigidas.
+
 ---
 
 <!-- _class: exemplo -->
@@ -276,7 +279,7 @@ Cada par vira uma ligação; o peso guarda a contagem.
 
 # U06-A01 · Que relação está sendo afirmada?
 
-**Modalidade:** duplas · **Tempo:** 12 minutos  
+**Modalidade:** duplas · **Em aula:** 8 min · **Versão completa:** 12 min<br>
 **Produto:** quadro com hipótese, unidade e limite
 
 **Exemplo resolvido:** “tema associado ao período”.
@@ -309,13 +312,16 @@ registrem:
 Nos dois casos, a relação precisa ser traduzida em **unidade**, **regra observável** e
 **limite** antes de qualquer cálculo.
 
+Começaremos pelas relações entre categorias. Nesse caso, o denominador e a distribuição
+condicional vêm antes de qualquer medida de intensidade.
+
 ---
 
 <!-- _class: divisor -->
 
 # 1 · Categorias aparecem juntas?
 
-## Contagens, proporções e associação
+## Primeiro, comparar distribuições com denominadores explícitos
 
 ---
 
@@ -516,8 +522,8 @@ Um cálculo correto não repara categorias instáveis ou corpus enviesado.
 
 # U06-A02 · Associação categórica documentada
 
-**Modalidade:** grupos de 3 · **Tempo:** 20 minutos  
-**Produto:** tabela, medida e parágrafo interpretativo
+**Modalidade:** grupos de 3 · **Em aula:** 8 min (itens 1–3)<br>
+**Versão completa:** 20 min no notebook · **Produto:** tabela, medida e interpretação
 
 1. Escolham duas variáveis categóricas da base.
 2. Declarem unidade e denominador.
@@ -537,12 +543,15 @@ Um cálculo correto não repara categorias instáveis ou corpus enviesado.
 | Interior | 18 | 22 | 55,0% |
 
 - unidade: documento; denominador: 40 documentos dentro de cada local;
-- $\chi^2\approx0{,}05$ e $V\approx0{,}03$;
+- $\chi^2\approx0{,}20$ e $V\approx0{,}05$, sem correção de continuidade;
 - diferença descritiva: 5 pontos percentuais.
 
 **Conclusão-modelo:** as distribuições são muito semelhantes nesta base. O resultado
 não demonstra igualdade universal; classificação de ilustrações, preservação e
 composição documental continuam sendo riscos de viés.
+
+Categorias exigem proporções condicionais. Quando ambas as variáveis são numéricas,
+precisamos observar forma, ordem, estratos e valores extremos antes de resumir a relação.
 
 ---
 
@@ -550,7 +559,7 @@ composição documental continuam sendo riscos de viés.
 
 # 2 · Duas medidas variam juntas?
 
-## Correlação, forma e explicações alternativas
+## Da distribuição entre categorias à covariação entre quantidades
 
 ---
 
@@ -684,8 +693,8 @@ Registre quais relações foram tentadas e separe exploração de confirmação.
 
 # U06-A03 · Correlação com auditoria
 
-**Modalidade:** duplas · **Tempo:** 25 minutos  
-**Produto:** gráfico, dois coeficientes e nota de sensibilidade
+**Modalidade:** duplas · **Em aula:** 8 min (itens 1–3)<br>
+**Versão completa:** 25 min no notebook · **Produto:** gráfico, coeficientes e sensibilidade
 
 1. Escolham duas variáveis numéricas e justifiquem a pergunta.
 2. Inspecionem o diagrama de dispersão.
@@ -713,13 +722,16 @@ gênero e a própria regra de geração podem afetar as duas medidas.
 R013 tem 586 palavras e tiragem estimada de 2.137 exemplares; sua retirada é uma
 análise de sensibilidade, não autorização para excluí-lo da pesquisa.
 
+Até aqui, as relações já existiam como colunas da tabela. Agora veremos uma mudança
+mais profunda: relações entre entidades serão **construídas** a partir dos documentos.
+
 ---
 
 <!-- _class: divisor -->
 
 # 3 · Como documentos viram relações?
 
-## Coocorrência, incidência e projeção
+## Da tabela de registros à construção de arestas documentais
 
 ---
 
@@ -816,6 +828,8 @@ que relacione cada aresta às fontes que a produziram.
 As duas podem ser representadas como grafos, mas suas arestas possuem ontologias
 diferentes.
 
+Somente depois de definir essa ontologia faz sentido calcular a estrutura do grafo.
+
 ---
 
 <!-- _class: alerta -->
@@ -839,8 +853,8 @@ Peso alto não equivale automaticamente a vínculo social intenso.
 
 # U06-A04 · Matriz relacional auditável
 
-**Modalidade:** grupos de 3 · **Tempo:** 25 minutos  
-**Produto:** matriz, lista de arestas e trilha de fonte
+**Modalidade:** grupos de 3 · **Em aula:** 8 min (itens 1, 2 e 5)<br>
+**Versão completa:** 25 min no notebook · **Produto:** matriz, arestas e trilha de fonte
 
 1. Definam a unidade e a janela de coocorrência.
 2. Construam uma pequena matriz documento–entidade.
@@ -866,13 +880,16 @@ No recorte D001, D003 e D011, a janela é o documento inteiro:
 mencionado. A ligação é simétrica e documental; não comprova contato, filiação ou
 colaboração. Preservar os IDs permite retornar da aresta às fontes que a produziram.
 
+Com nós e arestas agora definidos, podemos perguntar o que grau, força,
+intermediação e comunidades revelam sobre **esse grafo modelado**.
+
 ---
 
 <!-- _class: divisor -->
 
 # 4 · O que a estrutura do grafo mostra?
 
-## Nós, arestas, centralidades e comunidades
+## Medidas estruturais somente depois da definição das arestas
 
 ---
 
@@ -1034,8 +1051,8 @@ um critério. O resultado pode variar com:
 
 # U06-A05 · Estrutura e retorno aos casos
 
-**Modalidade:** grupos de 3 · **Tempo:** 25 minutos  
-**Produto:** duas medidas e auditoria de um nó
+**Modalidade:** grupos de 3 · **Em aula:** 8 min (itens 1–3)<br>
+**Versão completa:** 25 min no notebook · **Produto:** medidas e auditoria de um nó
 
 1. Escolham dois nós com perfis estruturais distintos.
 2. Comparem grau, força ou intermediação.
@@ -1062,13 +1079,16 @@ e conecta mais vizinhos. Isso orienta a leitura dos documentos, mas não autoriz
 chamá-lo de ator dominante: sua centralidade depende da seleção, da janela e da
 projeção adotadas.
 
+As medidas só se tornam resultado quando voltam às arestas e aos documentos. A oficina
+reunirá esse princípio com as análises categórica e numérica.
+
 ---
 
 <!-- _class: divisor -->
 
 # 5 · Oficina
 
-## Associação, grafo ou não adoção justificada
+## Escolher um método pertinente e fechar a cadeia argumentativa
 
 ---
 
@@ -1085,8 +1105,8 @@ o argumento do projeto.
 
 # U06-A06 · Oficina de associação ou grafo
 
-**Modalidade:** equipes do projeto · **Tempo:** 55 minutos  
-**Produto:** nova seção no mesmo relatório-notebook cumulativo
+**Modalidade:** equipes · **Em aula:** 35 min · **Versão completa:** 55 min<br>
+**Produto:** seção iniciada em aula e concluída no relatório-notebook cumulativo
 
 Escolham uma trilha:
 
@@ -1215,7 +1235,7 @@ justificação.
 
 # U06-A07 · Revisão por pares
 
-**Modalidade:** troca entre equipes · **Tempo:** 18 minutos  
+**Modalidade:** troca entre equipes · **Em aula:** 10 min · **Versão completa:** 18 min<br>
 **Produto:** parecer curto com uma força e duas revisões
 
 Verifiquem:

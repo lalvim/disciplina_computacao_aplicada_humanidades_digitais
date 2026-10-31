@@ -76,13 +76,15 @@ distribuições não representam municípios brasileiros reais.
 
 ### `municipios_culturais.csv`
 
-| id | região | renda | urbanização | equipamentos |
-|---|---|---:|---:|---:|
-| M001 | Centro-Oeste | 1.673,64 | 65,3% | 3,46 |
-| M002 | Nordeste | 1.836,91 | 72,8% | 3,08 |
-| M003 | Norte | 2.056,98 | 71,0% | 3,70 |
+| id | região | renda (R$) | urbanização | escolaridade (anos) | equipamentos¹ |
+|---|---|---:|---:|---:|---:|
+| M001 | Centro-Oeste | 1.673,64 | 65,3% | 9,8 | 3,46 |
+| M002 | Nordeste | 1.836,91 | 72,8% | 10,0 | 3,08 |
+| M003 | Norte | 2.056,98 | 71,0% | 10,4 | 3,70 |
 
-Cada linha representa um município fictício; cinco das dez colunas são mostradas.
+¹ Número de equipamentos culturais por 100 mil habitantes.
+
+Cada linha representa um município fictício; seis das dez colunas são mostradas.
 
 </div>
 
